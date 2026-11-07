@@ -243,6 +243,14 @@ for pn,p in enumerate(pages,1):
 
 all_records=frq_records+mcq_records
 all_records.sort(key=lambda q:(q["pages"][0],q["type"],q["number"]))
+# Ship a lossless subset containing the pages that back catalog entries. This
+# keeps answer-key-only pages out of the practice viewer and maps compact asset
+# pages back to their original page numbers in the compiled source PDF.
+included_pages=sorted({p for q in all_records for p in q["pages"]})
+page_map={source_page:i+1 for i,source_page in enumerate(included_pages)}
+for q in all_records:
+    q["sourcePagesOriginal"]=q["pages"]
+    q["pages"]=[page_map[p] for p in q["pages"]]
 out_path.parent.mkdir(parents=True,exist_ok=True)
-out_path.write_text(json.dumps({"units":UNITS,"questions":all_records,"sourcePages":len(pages),"stats":{"questions":len(all_records),"frq":len(frq_records),"mcq":len(mcq_records),"review":sum(q["status"]=="review" for q in all_records),"multiConceptFrq":sum(q["type"]=="FRQ" and q["multiConcept"] for q in all_records)}},ensure_ascii=False,separators=(",",":")))
+out_path.write_text(json.dumps({"units":UNITS,"questions":all_records,"sourcePages":len(pages),"includedSourcePages":included_pages,"stats":{"questions":len(all_records),"frq":len(frq_records),"mcq":len(mcq_records),"review":sum(q["status"]=="review" for q in all_records),"multiConceptFrq":sum(q["type"]=="FRQ" and q["multiConcept"] for q in all_records)}},ensure_ascii=False,separators=(",",":")))
 print(json.dumps({"sourcePages":len(pages),"questions":len(all_records),"frq":len(frq_records),"mcq":len(mcq_records),"review":sum(q["status"]=="review" for q in all_records),"multiConceptFrq":sum(q["type"]=="FRQ" and q["multiConcept"] for q in all_records)}))

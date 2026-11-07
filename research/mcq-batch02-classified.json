@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mcq-1984-80-133",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.5",
+      "2.6"
+    ],
+    "rationale": "Identify a molecule that requires resonance structures to represent its bonding.",
+    "status": "classified",
+    "evidencePages": [
+      133
+    ]
+  },
+  {
+    "id": "mcq-1984-81-134",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "The prompt centers on transition-metal coordination-complex formation, which is not a dedicated current CED learning objective.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "coordination-complex chemistry"
+    ],
+    "reviewReason": "Legacy coordination-complex chemistry; retain original image without forcing a current topic.",
+    "evidencePages": [
+      134
+    ]
+  },
+  {
+    "id": "mcq-1984-84-135",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Boiling-point elevation comparison is a colligative-property question outside the current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "colligative properties / boiling-point elevation"
+    ],
+    "reviewReason": "Current CED excludes colligative properties; original question image is retained.",
+    "evidencePages": [
+      135
+    ]
+  },
+  {
+    "id": "mcq-1984-85-135",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Use the balanced metal–acid reaction and ideal-gas molar volume to calculate hydrogen yield from aluminum mass.",
+    "status": "classified",
+    "evidencePages": [
+      135
+    ]
+  }
+]

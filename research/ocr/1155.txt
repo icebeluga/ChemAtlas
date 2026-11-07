@@ -1,0 +1,40 @@
+H,0,(aq) + OCI-(aq) > H,O(/) + Cl-(aq) + 0,(g)
+
+2. A student investigates the reaction between H,0,(aq) and NaOCl(aq), which is represented by the net-ionic
+equation shown above.
+
+(a) Is the reaction represented above a redox reaction? Justify your answer.
+
+To better understand the reaction, the student looks up thermodynamic data for the reaction. For the reaction
+
+represented above, the value of AG5og is —197 kJ/mol,.,,, and the value of ASSog is 144 J/(K- mol,
+
+ran ran)
+
+(b) Calculate the value of AH5og for the reaction in kJ/mol
+
+nxn?
+
+(c) Does the temperature inside the flask increase, decrease, or remain the same as the reaction proceeds?
+Justify your answer.
+
+(d) Calculate the value of the equilibrium constant, K, for the reaction at 298 K.
+
+The student decides to produce 40.0 mL of O,(g) at a pressure of 0.988 atm and a temperature of 298 K using
+the reaction represented above. The student uses the equipment shown below. The student sets up a 250 mL
+Erlenmeyer flask fitted with a one-hole stopper. The flask is connected to a 50 mL gas-cellection tube that
+initially is completely filled with water.
+
+0.800 M H,0,(aq)
+
+Gas Collection Tube
+
+Excess NaOCl(aq)
+
+(e) Calculate the volume of 0.800 M H,0,(aq) that the student should add to excess NaOCl(aq) to produce
+40.0 mL of O,(g) at 0.988 atm and 298 K
+
+Unauthorized copying or reuse of|
+
+[any part of this page is illegal. GO ON TO THE NEXT PAGE.
+

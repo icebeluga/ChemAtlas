@@ -1,0 +1,45 @@
+03(g) + O(g) > 203(g)
+
+32. The decomposition of O3(g) in the upper atmosphere is
+represented by the equation above. The potential energy
+
+diagram for the decomposition of O3(g) in the presence
+and absence of NO(g) is given below.
+
+Potential Energy
+
+Unauthorized copying or reuse of
+any part of this page is illegal.
+
+— In the absence of NO(g)
+-- In the presence of NO(g)
+
+Products
+
+Progress of Reaction
+
+Which of the following mechanisms for the catalyzed reaction
+is consistent with the equation and diagram above?
+
+(A) 2 O3(g) + 2 NO(g) > 4 O2(g) + No(g)
+
+(B) 03(g) + NO(g)  NO,(g) + Ong)
+NO,(g) + O(g) + NO(g) + O3(g)
+
+(C) NO,(g) + O3(g) + NO(g) + 2 03(g)
+NO(g) + O(g) > NO,(g)
+
+(D) NO,(g) + O(g) > NO3(g)
+NO,(g) + O3(g) > NO,(g) + 2 0,(g)
+
+slow
+
+slow
+fast
+slow
+fast
+
+slow
+fast
+
+GO ON TO THE NEXT PAGE.

@@ -1,0 +1,24 @@
+import json
+from pathlib import Path
+R=Path(__file__).parent;cor=json.load(open(R/'apchem-corpus-staged.json'));out=[]
+def put(id,t,why,parts,legacy=None):
+ q=next((q for q in cor if q['id']==id),None);out.append({'id':id,'primaryTopic':t[0],'relatedTopics':t,'rationale':why,'parts':[{'label':a,'topics':b,'rationale':c,'textPreview':c} for a,b,c in parts],'status':'classified','legacyConcepts':legacy or [],'evidencePages':q['sourcePagesOriginal'] if q else []})
+put('frq-2023-3-448',['5.1','4.5','4.2'],'Study CaCO3 reaction rate using acid concentration/amount and reaction evidence.',[('(a)',['4.2'],'Write a net ionic equation.'),('(b–d)',['5.1'],'Interpret rate data and controlled variables.'),('(e–g)',['4.5'],'Use reaction stoichiometry and limiting amounts.')])
+put('frq-2023-4-452',['8.8','8.9','4.5'],'Prepare and analyze a methylamine buffer.',[('(a)',['4.5'],'Calculate salt mass from mole amount.'),('(b–c)',['8.8','8.9'],'Prepare buffer and calculate buffer pH from component ratio.'),('(d–f)',['8.10'],'Assess buffer response/capacity.')])
+put('frq-2023-5-454',['3.4','8.1','8.2'],'Analyze HCl gas behavior and its acid properties in water.',[('(a–b)',['3.4'],'Use ideal-gas law for pressure/temperature changes.'),('(c–e)',['8.1','8.2'],'Relate dissolved HCl to strong-acid pH.')])
+put('frq-2023-6-456',['3.1','6.5'],'Compare intermolecular forces and enthalpy of vaporization for hydrogen halides.',[('(a–c)',['3.1'],'Compare hydrogen bonding, dipole, and dispersion forces.'),('(d–e)',['6.5'],'Relate phase-change energy to molecular amounts.')])
+put('frq-2023-7-458',['7.11','7.12','8.11'],'Analyze Sr(OH)2 solubility equilibrium and effects of solution conditions.',[('(a–c)',['7.11'],'Use Ksp and ion concentrations.'),('(d–f)',['7.12'],'Assess common-ion effect.'),('(g)',['8.11'],'Relate pH to solubility.')])
+put('frq-2024-1-464',['1.4','1.5','3.7'],'Apply atomic structure and mixture/solution measurement in a lab context.',[('(a–b)',['1.5'],'Interpret electron arrangement/atomic data.'),('(c–e)',['3.7'],'Prepare and analyze a solution.')])
+put('frq-2024-2-468',['4.2','4.5','8.4','3.4'],'Analyze acid–carbonate reaction stoichiometry and gas formation.',[('(a–b)',['4.2','8.4'],'Represent acid–base reaction as net ionic.'),('(c–e)',['4.5','3.4'],'Use mole ratios and gas laws to quantify products.')])
+put('frq-2024-3-471',['1.4','4.5','4.9'],'Analyze tarnishing of sterling silver using composition and redox stoichiometry.',[('(a–b)',['1.4'],'Use mass composition of an alloy.'),('(c–e)',['4.9','4.5'],'Explain redox and quantify reaction products.')])
+put('frq-2024-4-474',['6.4'],'Measure specific heat by calorimetry.',[('(a–d)',['6.4'],'Use heat transfer and temperature change to determine specific heat.')])
+put('frq-2024-5-476',['7.3','7.9','6.6'],'Analyze hydrogen–iodine equilibrium and its response to conditions.',[('(a–b)',['7.3'],'Write Kc and equilibrium expressions.'),('(c–e)',['7.7','7.9'],'Use concentration data and predict shifts.'),('(f)',['6.6'],'Relate reaction heat to direction/temperature.')])
+put('frq-2024-6-478',['5.2','5.3'],'Analyze NO2 decomposition rate from concentration/time data.',[('(a–c)',['5.2'],'Determine rate law and rate constant.'),('(d–f)',['5.3'],'Use integrated rate behavior and half-life.')])
+put('frq-2024-1-480',['3.7'],'Prepare a sodium chloride solution with a target concentration.',[('(a–b)',['3.7'],'Calculate solute amount and describe solution preparation.')])
+put('frq-2024-3-480',['3.7'],'Prepare a sodium chloride solution to specified concentration.',[('(a–b)',['3.7'],'Dissolve and dilute a measured amount of solute.')])
+put('frq-2024-5-480',['3.9','3.1'],'Use chromatography to separate compounds based on interactions with mobile and stationary phases.',[('(a–c)',['3.9','3.1'],'Interpret chromatography migration using intermolecular interactions.')])
+put('frq-2024-7-480',['3.7','3.9'],'Prepare NaCl solution and apply it as a chromatography solvent.',[('(a–b)',['3.7'],'Calculate amount and prepare a solution.'),('(c–e)',['3.9'],'Interpret chromatographic separation.')])
+put('frq-2024-1-484',['1.2','1.3'],'Use magnesium isotope abundances and average atomic mass.',[('(a)',['1.2'],'Complete isotope mass spectrum.'),('(b–d)',['1.2','1.3'],'Calculate average mass and composition.')])
+put('frq-2024-2-487',['1.3','4.5'],'Determine ascorbic acid composition from combustion products.',[('(a–c)',['1.3'],'Use combustion data to determine elemental ratios.'),('(d)',['4.5'],'Apply mole ratios to determine formula.')])
+put('frq-2024-3-489',['2.5','2.6','2.7'],'Analyze P4 Lewis structure, resonance/bonding representations, and molecular geometry.',[('(A)',['2.5'],'Complete the Lewis structure.'),('(B–C)',['2.7'],'Relate geometry to bonding and molecular properties.')])
+(R/'frq-batch04-classified.json').write_text(json.dumps(out,ensure_ascii=False,indent=1));print(len(out))

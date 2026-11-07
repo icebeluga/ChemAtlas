@@ -1,0 +1,616 @@
+[
+  {
+    "id": "mcq-2016-1-1053",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Identify dipole–dipole attractions from molecular polarity.",
+    "status": "classified",
+    "evidencePages": [
+      1053
+    ]
+  },
+  {
+    "id": "mcq-2016-2-1053",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5"
+    ],
+    "rationale": "Explain the temperature dependence of reaction rate through collision energies.",
+    "status": "classified",
+    "evidencePages": [
+      1053
+    ]
+  },
+  {
+    "id": "mcq-2016-3-1053",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "2.1"
+    ],
+    "rationale": "Infer an ionic solid from hardness and conductivity in solid versus aqueous states.",
+    "status": "classified",
+    "evidencePages": [
+      1053
+    ]
+  },
+  {
+    "id": "mcq-2016-4-1053",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9"
+    ],
+    "rationale": "Predict which change shifts an ammonia equilibrium toward products.",
+    "status": "classified",
+    "evidencePages": [
+      1053
+    ]
+  },
+  {
+    "id": "mcq-2016-5-1053",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2"
+    ],
+    "rationale": "Rank diatomic bond strengths using bond multiplicity.",
+    "status": "classified",
+    "evidencePages": [
+      1053
+    ]
+  },
+  {
+    "id": "mcq-2016-6-1054",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare ion–dipole attractions using ionic charge and radius.",
+    "status": "classified",
+    "evidencePages": [
+      1054
+    ]
+  },
+  {
+    "id": "mcq-2016-7-1054",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Rank bond polarity from electronegativity differences.",
+    "status": "classified",
+    "evidencePages": [
+      1054
+    ]
+  },
+  {
+    "id": "mcq-2016-8-1055",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain a large successive-ionization-energy jump using core versus valence electrons.",
+    "status": "classified",
+    "evidencePages": [
+      1055
+    ]
+  },
+  {
+    "id": "mcq-2016-9-1056",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5"
+    ],
+    "rationale": "Interpret a titration curve and its equivalence-point pH.",
+    "status": "classified",
+    "evidencePages": [
+      1056
+    ]
+  },
+  {
+    "id": "mcq-2016-10-1057",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "5.5"
+    ],
+    "rationale": "Explain how exposed solid surface area changes initial reaction rate.",
+    "status": "classified",
+    "evidencePages": [
+      1057
+    ]
+  },
+  {
+    "id": "mcq-2016-11-1058",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Determine empirical formula from elemental masses.",
+    "status": "classified",
+    "evidencePages": [
+      1058
+    ]
+  },
+  {
+    "id": "mcq-2016-12-1058",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Relate solubility-product constants and dissolution stoichiometry to chloride concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1058
+    ]
+  },
+  {
+    "id": "mcq-2016-13-1058",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare molecular-speed distributions at equal temperature for different molar masses.",
+    "status": "classified",
+    "evidencePages": [
+      1058
+    ]
+  },
+  {
+    "id": "mcq-2016-14-1059",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Calculate an unknown half-cell reduction potential from the overall cell potential.",
+    "status": "classified",
+    "evidencePages": [
+      1059
+    ]
+  },
+  {
+    "id": "mcq-2016-15-1059",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.9",
+      "9.5"
+    ],
+    "rationale": "Connect cell-potential sign with standard free energy and equilibrium constant.",
+    "status": "classified",
+    "evidencePages": [
+      1059
+    ]
+  },
+  {
+    "id": "mcq-2016-16-1060",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11"
+    ],
+    "rationale": "Recognize how a heterogeneous catalyst increases reaction rate.",
+    "status": "classified",
+    "evidencePages": [
+      1060
+    ]
+  },
+  {
+    "id": "mcq-2016-17-1060",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10"
+    ],
+    "rationale": "Predict molecular solubility in water from structure and intermolecular interactions.",
+    "status": "classified",
+    "evidencePages": [
+      1060
+    ]
+  },
+  {
+    "id": "mcq-2016-18-1060",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2"
+    ],
+    "rationale": "Explain electrical conductivity and other properties of a molecular solid.",
+    "status": "classified",
+    "evidencePages": [
+      1060
+    ]
+  },
+  {
+    "id": "mcq-2016-19-1060",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Relate dispersion-force strength to vapor pressure and boiling point.",
+    "status": "classified",
+    "evidencePages": [
+      1060
+    ]
+  },
+  {
+    "id": "mcq-2016-20-1061",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4"
+    ],
+    "rationale": "Infer relative acid strength from the direction favored in a proton-transfer equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1061
+    ]
+  },
+  {
+    "id": "mcq-2016-21-1061",
+    "primaryTopic": "1.4",
+    "relatedTopics": [
+      "1.4"
+    ],
+    "rationale": "Evaluate a gravimetric-analysis error caused by contamination of a collected precipitate.",
+    "status": "classified",
+    "evidencePages": [
+      1061
+    ]
+  },
+  {
+    "id": "mcq-2016-22-1062",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5"
+    ],
+    "rationale": "Determine the species remaining at a labeled position on an acid–base titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1062
+    ]
+  },
+  {
+    "id": "mcq-2016-23-1062",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5"
+    ],
+    "rationale": "Predict how titrant concentration changes the titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1062
+    ]
+  },
+  {
+    "id": "mcq-2016-24-1063",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "4.5"
+    ],
+    "rationale": "Compare reaction heat using the reacting amounts and limiting reactant.",
+    "status": "classified",
+    "evidencePages": [
+      1063
+    ]
+  },
+  {
+    "id": "mcq-2016-25-1063",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.6"
+    ],
+    "rationale": "Use calorimetry and reacted moles to calculate molar reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1063
+    ]
+  },
+  {
+    "id": "mcq-2016-26-1064",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.8"
+    ],
+    "rationale": "Choose an elementary rate-determining step consistent with an observed rate law.",
+    "status": "classified",
+    "evidencePages": [
+      1064
+    ]
+  },
+  {
+    "id": "mcq-2016-27-1064",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Use electron-domain geometry to compare bond angles.",
+    "status": "classified",
+    "evidencePages": [
+      1064
+    ]
+  },
+  {
+    "id": "mcq-2016-28-1065",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9",
+      "3.1"
+    ],
+    "rationale": "Explain distillation separation through molecular structure and dispersion forces.",
+    "status": "classified",
+    "evidencePages": [
+      1065
+    ]
+  },
+  {
+    "id": "mcq-2016-29-1066",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "3.13"
+    ],
+    "rationale": "Infer reaction progress over time from absorbance proportional to concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1066
+    ]
+  },
+  {
+    "id": "mcq-2016-30-1066",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Predict how dilution changes rate for a first-order reactant.",
+    "status": "classified",
+    "evidencePages": [
+      1066
+    ]
+  },
+  {
+    "id": "mcq-2016-31-1067",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13"
+    ],
+    "rationale": "Choose a spectrophotometric wavelength that selectively measures the absorbing reactant.",
+    "status": "classified",
+    "evidencePages": [
+      1067
+    ]
+  },
+  {
+    "id": "mcq-2016-32-1068",
+    "primaryTopic": "7.5",
+    "relatedTopics": [
+      "7.5"
+    ],
+    "rationale": "Use the magnitude of an equilibrium constant to compare equilibrium abundances.",
+    "status": "classified",
+    "evidencePages": [
+      1068
+    ]
+  },
+  {
+    "id": "mcq-2016-33-1069",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Compare ion products with solubility-product constants to predict precipitation.",
+    "status": "classified",
+    "evidencePages": [
+      1069
+    ]
+  },
+  {
+    "id": "mcq-2016-34-1069",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Estimate weak-acid pH from its analytical concentration and acid dissociation constant.",
+    "status": "classified",
+    "evidencePages": [
+      1069
+    ]
+  },
+  {
+    "id": "mcq-2016-35-1069",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.6"
+    ],
+    "rationale": "Interpret photoelectron binding energies for isoelectronic species using nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      1069
+    ]
+  },
+  {
+    "id": "mcq-2016-36-1069",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6"
+    ],
+    "rationale": "Explain nonideal gas pressure through finite particle volume at high pressure.",
+    "status": "classified",
+    "evidencePages": [
+      1069
+    ]
+  },
+  {
+    "id": "mcq-2016-37-1070",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "6.6"
+    ],
+    "rationale": "Identify a limiting reactant and scale reaction heat by reacting moles.",
+    "status": "classified",
+    "evidencePages": [
+      1070
+    ]
+  },
+  {
+    "id": "mcq-2016-38-1070",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify reduction by changes in oxidation state and electron gain.",
+    "status": "classified",
+    "evidencePages": [
+      1070
+    ]
+  },
+  {
+    "id": "mcq-2016-39-1070",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3"
+    ],
+    "rationale": "Determine thermodynamic favorability from enthalpy and entropy contributions.",
+    "status": "classified",
+    "evidencePages": [
+      1070
+    ]
+  },
+  {
+    "id": "mcq-2016-40-1071",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.2"
+    ],
+    "rationale": "Use bond energies to select an energy diagram with the correct reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1071
+    ]
+  },
+  {
+    "id": "mcq-2016-41-1071",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.8"
+    ],
+    "rationale": "Use successive ionization energies to infer cation charge and oxide stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1071
+    ]
+  },
+  {
+    "id": "mcq-2016-42-1072",
+    "primaryTopic": "7.2",
+    "relatedTopics": [
+      "7.2"
+    ],
+    "rationale": "Compare initial reaction quotient with equilibrium constant to infer the direction and relative concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      1072
+    ]
+  },
+  {
+    "id": "mcq-2016-43-1072",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "9.1"
+    ],
+    "rationale": "Connect a heating-curve phase change with enthalpy and entropy signs.",
+    "status": "classified",
+    "evidencePages": [
+      1072
+    ]
+  },
+  {
+    "id": "mcq-2016-44-1073",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1"
+    ],
+    "rationale": "Relate endothermic reaction energy absorption to temperature change in an insulated vessel.",
+    "status": "classified",
+    "evidencePages": [
+      1073
+    ]
+  },
+  {
+    "id": "mcq-2016-45-1073",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Relate stoichiometric change in gas moles to pressure at constant temperature and volume.",
+    "status": "classified",
+    "evidencePages": [
+      1073
+    ]
+  },
+  {
+    "id": "mcq-2016-46-1073",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3"
+    ],
+    "rationale": "Infer entropy sign from favorable free energy despite positive reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1073
+    ]
+  },
+  {
+    "id": "mcq-2016-47-1073",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7"
+    ],
+    "rationale": "Compare total bond enthalpies in reactants and products for an endothermic reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1073
+    ]
+  },
+  {
+    "id": "mcq-2016-48-1074",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Compare acid dissociation using measured pH and starting acid concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      1074
+    ]
+  },
+  {
+    "id": "mcq-2016-49-1074",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8"
+    ],
+    "rationale": "Predict related oxide formulas from recurring valence-electron patterns within an element group.",
+    "status": "classified",
+    "evidencePages": [
+      1074
+    ]
+  },
+  {
+    "id": "mcq-2016-50-1074",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Determine limiting reactant, excess material and gas yield from reaction stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1074
+    ]
+  }
+]

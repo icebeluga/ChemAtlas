@@ -1,0 +1,359 @@
+[
+  {
+    "id": "frq-2003-4-869",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set covers redox, acid-base, decomposition, precipitation, and combination reactions.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write products/net changes for the listed laboratory reactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      869
+    ]
+  },
+  {
+    "id": "frq-2003-5-870",
+    "primaryTopic": "4.6",
+    "relatedTopics": [
+      "4.6",
+      "4.9",
+      "4.5",
+      "5.1"
+    ],
+    "rationale": "Standardizes permanganate through oxalic-acid redox titration and analyzes concentration-time reaction progress.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "4.6",
+          "4.9",
+          "4.5",
+          "5.1"
+        ],
+        "rationale": "Use redox stoichiometry and titration data to calculate concentration, then interpret reaction completion/rate from the graph."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      870
+    ]
+  },
+  {
+    "id": "frq-2003-6-871",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10"
+    ],
+    "rationale": "Selects the cell with greatest positive standard potential and identifies the anode/cell reaction.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Write the spontaneous cell reaction, calculate E°cell, and identify the anode."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      871
+    ]
+  },
+  {
+    "id": "frq-2003-7-872",
+    "primaryTopic": "9.10",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10"
+    ],
+    "rationale": "Continuation of the preceding galvanic-cell question: evaluates salt-bridge electrolyte choices and concentration effects on potential.",
+    "parts": [
+      {
+        "label": "(d)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Choose an inert salt bridge electrolyte based on ion migration/reactivity."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "9.10",
+          "9.9"
+        ],
+        "rationale": "Predict cell-potential change from nonstandard Zn2+ concentration."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      872,
+      873
+    ]
+  },
+  {
+    "id": "frq-2003-8-873",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Radioactive nuclear decay is outside the current AP Chemistry CED. The graph also uses first-order kinetics, but the question’s central tested content is nuclear chemistry.",
+    "parts": [
+      {
+        "label": "(a)–(e)",
+        "topics": [],
+        "rationale": "Nuclear equation, beta-particle origin, and isotope half-life/decay; retain as historical material rather than force into a current chemistry topic."
+      }
+    ],
+    "status": "legacy",
+    "legacyConcepts": [
+      "nuclear chemistry / radioactive decay"
+    ],
+    "evidencePages": [
+      873
+    ]
+  },
+  {
+    "id": "frq-2004-1-879",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.7",
+      "4.5",
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Equilibrium composition and calculation are central; related quantities connect stoichiometry to thermodynamic/equilibrium reasoning.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "7.4",
+          "7.7",
+          "4.5"
+        ],
+        "rationale": "Calculate equilibrium composition/constant from an initial mixture using reaction stoichiometry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      879
+    ]
+  },
+  {
+    "id": "frq-2004-2-880",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "1.3",
+      "4.5"
+    ],
+    "rationale": "Determines hydrocarbon empirical/molecular formula from mass percentage and gas density, then analyzes connected-gas pressure.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.3",
+          "3.4"
+        ],
+        "rationale": "Use elemental composition and gas density/ideal gas law to determine empirical and molecular formula."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use gas laws and particle amount conservation when connected flasks are opened."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      880
+    ]
+  },
+  {
+    "id": "frq-2004-3-881",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3",
+      "4.5"
+    ],
+    "rationale": "Uses concentration-versus-time data for hydrogen peroxide decomposition to determine rate law, half-life, rate constant, and later concentration.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Calculate initial peroxide amount and oxygen yield using stoichiometry."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.2",
+          "5.3"
+        ],
+        "rationale": "Infer rate law/order from graphs; calculate half-life, k, and concentration over time."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      881
+    ]
+  },
+  {
+    "id": "frq-2004-4-882",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set across single replacement, acid-base, precipitation, and redox chemistry.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write products and net ionic changes for laboratory reaction scenarios."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      882
+    ]
+  },
+  {
+    "id": "frq-2004-5-883",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "4.6",
+      "4.5",
+      "8.3"
+    ],
+    "rationale": "Determines molar mass of a monoprotic acid by titration with standardized strong base.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "8.5",
+          "4.6",
+          "4.5"
+        ],
+        "rationale": "Measure titrant amount and use equivalence-point stoichiometry to determine moles and molar mass of HA."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      883
+    ]
+  },
+  {
+    "id": "frq-2004-6-884",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10",
+      "7.11"
+    ],
+    "rationale": "Analyzes a galvanic cell’s reaction, standard potential and concentration effects; KI changes silver-ion availability through precipitation.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Write spontaneous cell reaction, calculate E°, and label electrodes/standard concentrations."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.10",
+          "7.11"
+        ],
+        "rationale": "Assess how iodide precipitation of Ag+ changes the reaction quotient and cell potential."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      884
+    ]
+  },
+  {
+    "id": "frq-2004-7-885",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.2",
+      "6.7",
+      "9.5"
+    ],
+    "rationale": "Uses ΔH° and ΔS° to judge reaction favorability and compare reactant/product bond strengths.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.7",
+          "6.1"
+        ],
+        "rationale": "Connect reaction enthalpy with relative bond strengths."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Use entropy and Gibbs energy to judge thermodynamic favorability."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "9.5"
+        ],
+        "rationale": "Relate free energy, temperature, and equilibrium direction where requested."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      885
+    ]
+  }
+]

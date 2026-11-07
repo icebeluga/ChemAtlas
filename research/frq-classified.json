@@ -1,0 +1,2279 @@
+[
+  {
+    "id": "frq-2005-1-6",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "3.7",
+      "8.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write acid dissociation expression"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Calculate weak-acid pH"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Calculate conjugate-base molarity"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "8.9"
+        ],
+        "rationale": "Calculate acidity of acid/conjugate-base buffer"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Determine Kb and conjugate Ka"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Compare acid strength using Ka"
+      }
+    ],
+    "rationale": "Weak-acid/base equilibrium governs most parts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      6,
+      7
+    ]
+  },
+  {
+    "id": "frq-2005-2-7",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "8.6"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Determine elemental masses and empirical formula from combustion"
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "Freezing-point depression and molality are legacy content"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Determine molecular formula"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.6"
+        ],
+        "rationale": "Identify structural group responsible for acidity"
+      }
+    ],
+    "rationale": "Composition analysis dominates current-course portions.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Colligative properties and molality",
+      "Organic functional-group identification"
+    ],
+    "evidencePages": [
+      7
+    ]
+  },
+  {
+    "id": "frq-2005-3-8",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3",
+      "5.11"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Infer reaction orders from initial-rate data"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Write rate law and calculate rate constant"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Identify linearized first-order plot"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Determine first-order rate constant units"
+      },
+      {
+        "label": "(c)(iii)",
+        "topics": [
+          "5.3",
+          "5.11"
+        ],
+        "rationale": "Compare catalyzed and uncatalyzed plots"
+      }
+    ],
+    "rationale": "Rate law determination dominates.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "id": "frq-2005-4-10",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.9",
+      "4.7",
+      "4.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent metal displacement"
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "Predict amphoteric hydroxide complex formation"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent combustion"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent carbonate-acid reaction"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent metal nitride synthesis"
+      },
+      {
+        "label": "(f)",
+        "topics": [],
+        "rationale": "Predict Lewis acid-base adduct"
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent acidic oxide and base reaction"
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent precipitation"
+      }
+    ],
+    "rationale": "Writing net ionic reaction representations is the common task.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Complex-ion prediction",
+      "Lewis acid-base adduct prediction"
+    ],
+    "evidencePages": [
+      10,
+      11
+    ]
+  },
+  {
+    "id": "frq-2005-5-11",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "4.1",
+      "8.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.1"
+        ],
+        "rationale": "Use combustion observations to distinguish gases"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Predict acid/base behavior of oxides in water"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Identify solutions from precipitation observations"
+      }
+    ],
+    "rationale": "Identification relies on observable reactions and precipitation.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      11
+    ]
+  },
+  {
+    "id": "frq-2005-6-12",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5",
+      "2.6"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw Lewis structures"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict tetrahedral angle"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [],
+        "rationale": "d-orbital hybridization is excluded legacy content"
+      },
+      {
+        "label": "(b)(iii)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict molecular geometry"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Count sigma and pi bonds"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "2.6"
+        ],
+        "rationale": "Compare formal charges"
+      }
+    ],
+    "rationale": "Bonding representations assess geometry Lewis structures and formal charge.",
+    "status": "classified",
+    "legacyConcepts": [
+      "d-orbital hybridization"
+    ],
+    "evidencePages": [
+      12,
+      13
+    ]
+  },
+  {
+    "id": "frq-2005-7-13",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.1",
+      "2.2",
+      "1.5",
+      "1.7",
+      "1.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare forces and boiling points"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "2.1"
+        ],
+        "rationale": "Identify ionic bonding"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Explain lattice strength using ionic size"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Identify valence shell"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain ionization-energy trend"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.2"
+        ],
+        "rationale": "Infer isotope identity and abundance"
+      }
+    ],
+    "rationale": "Independent comparison parts; intermolecular-force comparison leads.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      13,
+      14
+    ]
+  },
+  {
+    "id": "frq-2005-8-14",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "9.1",
+      "7.9",
+      "9.3",
+      "9.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.6"
+        ],
+        "rationale": "Relate dissolution favorability to free energy"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.1"
+        ],
+        "rationale": "Predict entropy of dissolution"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "7.9"
+        ],
+        "rationale": "Infer dissolution enthalpy from temperature dependence"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "9.3",
+          "9.6"
+        ],
+        "rationale": "Check consistency of enthalpy entropy and free energy"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Identify electrolytic half reactions electrodes and nonspontaneity"
+      }
+    ],
+    "rationale": "Dissolution thermodynamics governs the main sequence.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      14
+    ]
+  },
+  {
+    "id": "frq-2006-1-20",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12",
+      "3.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Relate saturated-ion concentrations to Ksp"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Explain concentration independence from volume"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.12"
+        ],
+        "rationale": "Predict common-ion effect"
+      },
+      {
+        "label": "(d)(i)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Calculate concentrations after mixing"
+      },
+      {
+        "label": "(d)(ii)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Compare ion product with Ksp"
+      }
+    ],
+    "rationale": "Solubility equilibrium dominates.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      20,
+      21
+    ]
+  },
+  {
+    "id": "frq-2006-2-21",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "6.9",
+      "9.2",
+      "9.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.9"
+        ],
+        "rationale": "Combine reactions for combustion enthalpy"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.2"
+        ],
+        "rationale": "Calculate entropy change"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Calculate standard Gibbs energy"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Assess favorability"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "9.5"
+        ],
+        "rationale": "Calculate equilibrium constant from Gibbs energy"
+      }
+    ],
+    "rationale": "Gibbs energy connects thermochemistry to favorability and equilibrium.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      21,
+      22
+    ]
+  },
+  {
+    "id": "frq-2006-3-22",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "3.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Use elemental and combustion data for empirical formula"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Determine molar mass from gas density"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Determine molecular formula"
+      }
+    ],
+    "rationale": "Composition and formula determination are central.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      22,
+      23
+    ]
+  },
+  {
+    "id": "frq-2006-4-23",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent thermal decomposition"
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "Predict silver complex formation"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent neutralization"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent proton transfer"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent metal displacement"
+      },
+      {
+        "label": "(f)",
+        "topics": [],
+        "rationale": "Predict Lewis acid-base adduct"
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent precipitation"
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent combustion"
+      }
+    ],
+    "rationale": "Writing net ionic equations is the common task.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Complex-ion prediction",
+      "Lewis acid-base adduct prediction"
+    ],
+    "evidencePages": [
+      23,
+      24
+    ]
+  },
+  {
+    "id": "frq-2006-5-24",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "8.3",
+      "3.7",
+      "3.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Identify salts from reaction observations"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Identify precipitate"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Explain basic salt hydrolysis"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Design volumetric dilution"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Distinguish salts by solubility"
+      }
+    ],
+    "rationale": "Precipitation and reaction identification lead.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      24,
+      25
+    ]
+  },
+  {
+    "id": "frq-2006-6-25",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.10",
+      "2.1",
+      "4.4",
+      "5.11",
+      "5.6"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Identify intermolecular forces"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Explain differential solubility"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "3.1",
+          "2.1"
+        ],
+        "rationale": "Distinguish attractions from covalent bonds"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "4.4"
+        ],
+        "rationale": "Distinguish vaporization from decomposition"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.11",
+          "5.6"
+        ],
+        "rationale": "Interpret catalyzed energy pathways"
+      }
+    ],
+    "rationale": "Forces and physical properties lead; catalysis is distinct.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      25,
+      26,
+      27
+    ]
+  },
+  {
+    "id": "frq-2006-7-27",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5",
+      "4.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)(i)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw cation Lewis diagram"
+      },
+      {
+        "label": "(a)(ii)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Identify sulfur hybridization"
+      },
+      {
+        "label": "(a)(iii)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Determine molecular geometry"
+      },
+      {
+        "label": "(a)(iv)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Explain angle distortion"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw anion Lewis diagram"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [],
+        "rationale": "d-orbital hybridization is legacy"
+      },
+      {
+        "label": "(b)(iii)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Determine anion geometry"
+      },
+      {
+        "label": "(b)(iv)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Assign oxidation state"
+      }
+    ],
+    "rationale": "Geometry dominates assessed subparts.",
+    "status": "classified",
+    "legacyConcepts": [
+      "d-orbital hybridization"
+    ],
+    "evidencePages": [
+      27,
+      28
+    ]
+  },
+  {
+    "id": "frq-2006-8-28",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5",
+      "1.8",
+      "4.9",
+      "3.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Predict valence configuration"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Infer metallic character"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain atomic-size trend"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.8"
+        ],
+        "rationale": "Predict ion charge"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Represent alkali-metal reaction with water"
+      },
+      {
+        "label": "(f)(i)",
+        "topics": [
+          "1.8"
+        ],
+        "rationale": "Construct ionic formula"
+      },
+      {
+        "label": "(f)(ii)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Predict salt solubility"
+      }
+    ],
+    "rationale": "Periodic position and electronic structure determine properties.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      28
+    ]
+  },
+  {
+    "id": "frq-2008-1-56",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.3",
+      "3.4",
+      "7.1",
+      "5.11",
+      "7.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.3"
+        ],
+        "rationale": "Write Kp expression"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Calculate initial gas amount"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Determine partial pressure from total pressure"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Calculate Kp from equilibrium pressures"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "7.1",
+          "5.11"
+        ],
+        "rationale": "Explain why catalyst leaves equilibrium unchanged"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "7.10"
+        ],
+        "rationale": "Predict direction by calculating Q and comparing K"
+      }
+    ],
+    "rationale": "Equilibrium constant and reaction quotient anchor the problem.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      56,
+      57,
+      58
+    ]
+  },
+  {
+    "id": "frq-2008-2-58",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "3.9",
+      "4.5",
+      "1.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Use constant mass to verify dehydration"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Determine hydrate formula from mass loss"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Analyze spattering error in composition analysis"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.9"
+        ],
+        "rationale": "Describe quantitative isolation drying and weighing of precipitate"
+      },
+      {
+        "label": "(e)(i)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Convert AgCl mass to original salt amount"
+      },
+      {
+        "label": "(e)(ii)",
+        "topics": [
+          "1.4"
+        ],
+        "rationale": "Determine mixture mass percent"
+      }
+    ],
+    "rationale": "Gravimetric composition of a hydrate dominates with a separate mixture analysis.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      58,
+      59
+    ]
+  },
+  {
+    "id": "frq-2008-3-59",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "9.9",
+      "9.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Determine unknown standard reduction potential"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Calculate Gibbs energy from cell potential"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.1"
+        ],
+        "rationale": "Predict sign of entropy change"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Infer reaction orders from initial-rate data"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Write experimental rate law"
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Calculate rate constant and units"
+      }
+    ],
+    "rationale": "Initial-rate analysis dominates the later sequence; electrochemistry is separately assessed.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      59,
+      60,
+      61
+    ]
+  },
+  {
+    "id": "frq-2008-4-61",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "7.9",
+      "4.9",
+      "4.5",
+      "4.8",
+      "8.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)(i)",
+        "topics": [],
+        "rationale": "Predict aluminum complex ion"
+      },
+      {
+        "label": "(a)(ii)",
+        "topics": [
+          "7.9"
+        ],
+        "rationale": "Explain shift after acidification"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Balance oxidation reaction"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Identify excess reactant"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent oxide-water reaction"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Explain indicator color of basic solution"
+      }
+    ],
+    "rationale": "Balanced reaction writing is common to all three situations.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Complex-ion formation"
+    ],
+    "evidencePages": [
+      61,
+      62,
+      63
+    ]
+  },
+  {
+    "id": "frq-2008-5-63",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.5",
+      "2.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Represent first ionization"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain across-period ionization-energy difference"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Compare ionization energies across shells"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw Lewis diagrams"
+      },
+      {
+        "label": "(e)(i)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict geometry"
+      },
+      {
+        "label": "(e)(ii)",
+        "topics": [],
+        "rationale": "d-orbital hybridization is legacy content"
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict molecular polarity"
+      }
+    ],
+    "rationale": "Ionization-energy reasoning dominates initial parts.",
+    "status": "classified",
+    "legacyConcepts": [
+      "d-orbital hybridization"
+    ],
+    "evidencePages": [
+      63,
+      64,
+      65
+    ]
+  },
+  {
+    "id": "frq-2008-6-65",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.10",
+      "3.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Explain differential solubility using interactions"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare hydrogen bonding and boiling points"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.2"
+        ],
+        "rationale": "Contrast molecular and network solids"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare dispersion and dipolar forces"
+      }
+    ],
+    "rationale": "Intermolecular-force explanations dominate property comparisons.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      65
+    ]
+  },
+  {
+    "id": "frq-2004-1-292",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Write Ksp expression"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Calculate saturated ion concentration"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Calculate mass solubility"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "7.12"
+        ],
+        "rationale": "Predict common-ion effect"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Represent dissolution equilibrium"
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Calculate Ksp"
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Explain saturation under evaporation"
+      }
+    ],
+    "rationale": "Solubility equilibrium is directly tested throughout.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      292,
+      293
+    ]
+  },
+  {
+    "id": "frq-2004-2-293",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "1.1",
+      "3.4",
+      "9.3",
+      "6.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)(i)",
+        "topics": [
+          "1.1"
+        ],
+        "rationale": "Convert iron mass to moles"
+      },
+      {
+        "label": "(a)(ii)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Calculate oxygen amount from gas data"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Identify limiting reactant"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Calculate product amount"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Relate entropy enthalpy and Gibbs energy to favorability"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "6.8"
+        ],
+        "rationale": "Determine formation enthalpy"
+      }
+    ],
+    "rationale": "Limiting-reactant calculation is the main quantitative sequence; thermodynamics follows.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      293,
+      294
+    ]
+  },
+  {
+    "id": "frq-2004-3-294",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "3.13"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.13"
+        ],
+        "rationale": "Determine concentration from absorbance"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Calculate first-order rate constant"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Calculate elapsed time"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Calculate half-life"
+      },
+      {
+        "label": "(e)",
+        "topics": [],
+        "rationale": "Quantitative Arrhenius plot analysis is legacy content"
+      }
+    ],
+    "rationale": "First-order time dependence governs most parts.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Quantitative Arrhenius equation"
+    ],
+    "evidencePages": [
+      294,
+      295
+    ]
+  },
+  {
+    "id": "frq-2004-4-295",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.9",
+      "4.7",
+      "4.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent metal displacement"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent combustion"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent neutralization"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent carbonate protonation"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent dichromate redox"
+      },
+      {
+        "label": "(f)",
+        "topics": [],
+        "rationale": "Predict nickel ammine complex"
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent precipitation"
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent sulfide protonation"
+      }
+    ],
+    "rationale": "Writing net ionic equations is the common task.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Complex-ion prediction"
+    ],
+    "evidencePages": [
+      295,
+      296
+    ]
+  },
+  {
+    "id": "frq-2004-5-296",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Identify salt and precipitates from observed reactions"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Infer remaining solution identities"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Design precipitation tests for solution identification"
+      }
+    ],
+    "rationale": "All parts use precipitation behavior for qualitative identification.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      296,
+      297
+    ]
+  },
+  {
+    "id": "frq-2004-6-297",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "4.9",
+      "9.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Identify cathode from mass gain"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Show electron flow"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Determine reduction potential from cell potential"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Identify metal using reduction potential"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "9.8",
+          "4.9"
+        ],
+        "rationale": "Balance overall electrochemical reaction"
+      },
+      {
+        "label": "(f)(i)",
+        "topics": [],
+        "rationale": "Quantitative Nernst substitution is legacy content"
+      },
+      {
+        "label": "(f)(ii)",
+        "topics": [
+          "9.10"
+        ],
+        "rationale": "Predict concentration effect on cell potential"
+      }
+    ],
+    "rationale": "Electrochemical cell operation dominates.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Quantitative Nernst equation"
+    ],
+    "evidencePages": [
+      297,
+      298
+    ]
+  },
+  {
+    "id": "frq-2004-7-298",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.2",
+      "2.7",
+      "3.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Explain phases using dispersion forces"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Compare ionic lattice strengths"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Explain distinct molecular geometries"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Explain solubility using hydrogen bonding"
+      }
+    ],
+    "rationale": "Independent physical-property comparisons; intermolecular forces lead.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      298,
+      299
+    ]
+  },
+  {
+    "id": "frq-2004-8-299",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5",
+      "2.5",
+      "2.7",
+      "8.1",
+      "3.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw Lewis structures"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Identify molecular shape"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Represent acid formation in water"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Sketch constant-pressure volume-temperature relation"
+      },
+      {
+        "label": "(e)(i)",
+        "topics": [
+          "3.5"
+        ],
+        "rationale": "Compare mean kinetic energies"
+      },
+      {
+        "label": "(e)(ii)",
+        "topics": [
+          "3.5"
+        ],
+        "rationale": "Compare molecular speeds"
+      },
+      {
+        "label": "(e)(iii)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Compare molecule counts using gas conditions"
+      }
+    ],
+    "rationale": "Gas behavior and kinetic theory govern the later multi-part sequence.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      299
+    ]
+  },
+  {
+    "id": "frq-2008-1-305",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.3",
+      "3.4",
+      "7.1",
+      "5.11",
+      "7.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.3"
+        ],
+        "rationale": "Write Kp expression"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Calculate initial gas amount"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Determine partial pressure from total pressure"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Calculate Kp from equilibrium pressures"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "7.1",
+          "5.11"
+        ],
+        "rationale": "Explain why catalyst leaves equilibrium unchanged"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "7.10"
+        ],
+        "rationale": "Predict direction by calculating Q and comparing K"
+      }
+    ],
+    "rationale": "Equilibrium constant and reaction quotient anchor the problem.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      305,
+      306,
+      307
+    ]
+  },
+  {
+    "id": "frq-2008-2-307",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "3.9",
+      "4.5",
+      "1.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Use constant mass to verify dehydration"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Determine hydrate formula from mass loss"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Analyze spattering error in composition analysis"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.9"
+        ],
+        "rationale": "Describe quantitative isolation drying and weighing of precipitate"
+      },
+      {
+        "label": "(e)(i)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Convert AgCl mass to original salt amount"
+      },
+      {
+        "label": "(e)(ii)",
+        "topics": [
+          "1.4"
+        ],
+        "rationale": "Determine mixture mass percent"
+      }
+    ],
+    "rationale": "Gravimetric composition of a hydrate dominates with a separate mixture analysis.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      307,
+      308
+    ]
+  },
+  {
+    "id": "frq-2008-3-308",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "9.9",
+      "9.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Determine unknown standard reduction potential"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Calculate Gibbs energy from cell potential"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.1"
+        ],
+        "rationale": "Predict sign of entropy change"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Infer reaction orders from initial-rate data"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Write experimental rate law"
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Calculate rate constant and units"
+      }
+    ],
+    "rationale": "Initial-rate analysis dominates the later sequence; electrochemistry is separately assessed.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      308,
+      309,
+      310
+    ]
+  },
+  {
+    "id": "frq-2008-4-310",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "7.9",
+      "4.9",
+      "4.5",
+      "4.8",
+      "8.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)(i)",
+        "topics": [],
+        "rationale": "Predict aluminum complex ion"
+      },
+      {
+        "label": "(a)(ii)",
+        "topics": [
+          "7.9"
+        ],
+        "rationale": "Explain shift after acidification"
+      },
+      {
+        "label": "(b)(i)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Balance oxidation reaction"
+      },
+      {
+        "label": "(b)(ii)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Identify excess reactant"
+      },
+      {
+        "label": "(c)(i)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Represent oxide-water reaction"
+      },
+      {
+        "label": "(c)(ii)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Explain indicator color of basic solution"
+      }
+    ],
+    "rationale": "Balanced reaction writing is common to all three situations.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Complex-ion formation"
+    ],
+    "evidencePages": [
+      310,
+      311,
+      312
+    ]
+  },
+  {
+    "id": "frq-2008-5-312",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.5",
+      "2.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Represent first ionization"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain across-period ionization-energy difference"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Compare ionization energies across shells"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw Lewis diagrams"
+      },
+      {
+        "label": "(e)(i)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict geometry"
+      },
+      {
+        "label": "(e)(ii)",
+        "topics": [],
+        "rationale": "d-orbital hybridization is legacy content"
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict molecular polarity"
+      }
+    ],
+    "rationale": "Ionization-energy reasoning dominates initial parts.",
+    "status": "classified",
+    "legacyConcepts": [
+      "d-orbital hybridization"
+    ],
+    "evidencePages": [
+      312,
+      313,
+      314
+    ]
+  },
+  {
+    "id": "frq-2008-6-314",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.10",
+      "3.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.10"
+        ],
+        "rationale": "Explain differential solubility using interactions"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare hydrogen bonding and boiling points"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.2"
+        ],
+        "rationale": "Contrast molecular and network solids"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare dispersion and dipolar forces"
+      }
+    ],
+    "rationale": "Intermolecular-force explanations dominate property comparisons.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      314
+    ]
+  },
+  {
+    "id": "frq-2009-1-320",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "2.5",
+      "8.6",
+      "8.1",
+      "8.2",
+      "8.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)(i)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Compare acid strength from Ka"
+      },
+      {
+        "label": "(a)(ii)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw acid Lewis structure"
+      },
+      {
+        "label": "(a)(iii)",
+        "topics": [
+          "8.6"
+        ],
+        "rationale": "Predict oxoacid strength from bonding"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Represent acid ionization"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write Kb and calculate hydrolysis equilibrium"
+      },
+      {
+        "label": "(d)(i)",
+        "topics": [
+          "8.2"
+        ],
+        "rationale": "Convert pH to hydronium concentration"
+      },
+      {
+        "label": "(d)(ii)",
+        "topics": [
+          "8.9"
+        ],
+        "rationale": "Compare buffer components quantitatively"
+      }
+    ],
+    "rationale": "Weak-acid/base equilibria dominate; molecular structure and buffer balance are explicit.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      320,
+      321,
+      322
+    ]
+  },
+  {
+    "id": "frq-2009-3-322",
+    "primaryTopic": "5.9",
+    "relatedTopics": [
+      "5.9",
+      "4.5",
+      "1.1",
+      "3.12",
+      "5.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Determine limiting reactant and product amount"
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.1"
+        ],
+        "rationale": "Convert molar bond energy to energy per bond"
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.12"
+        ],
+        "rationale": "Calculate threshold photon wavelength"
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.7"
+        ],
+        "rationale": "Identify reaction intermediate"
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "5.9"
+        ],
+        "rationale": "Derive reaction orders from a fast pre-equilibrium mechanism"
+      }
+    ],
+    "rationale": "Mechanistic pre-equilibrium reasoning is the culminating concept; stoichiometry and photons are separate tasks.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      322,
+      323
+    ]
+  }
+]

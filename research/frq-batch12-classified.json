@@ -1,0 +1,446 @@
+[
+  {
+    "id": "frq-2004-8-886",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.10",
+      "7.9",
+      "9.3"
+    ],
+    "rationale": "Uses K, Q, temperature response, and thermodynamic reasoning for cis/trans butene equilibrium.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "7.4",
+          "7.10"
+        ],
+        "rationale": "Interpret equilibrium composition from K and direction from Q versus K."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.9"
+        ],
+        "rationale": "Infer endo/exothermic direction from temperature dependence of K."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Relate thermodynamic stability to the equilibrium of isomers."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      886
+    ]
+  },
+  {
+    "id": "frq-2008-1-892",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.7",
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Calculates initial gas concentration/pressure, then equilibrium concentrations, Kc, and mole fraction for AsF5 decomposition.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Convert the initial AsF5 amount to concentration and pressure."
+      },
+      {
+        "label": "(b)–(d)",
+        "topics": [
+          "7.4",
+          "7.7",
+          "3.4"
+        ],
+        "rationale": "Write Kc, calculate equilibrium composition and constant, and determine mole fraction."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      892
+    ]
+  },
+  {
+    "id": "frq-2008-2-893",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.1"
+    ],
+    "rationale": "Determines reaction orders and rate expression from initial-rate experiments.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "5.2",
+          "5.1"
+        ],
+        "rationale": "Compare initial rates at controlled concentrations to determine reactant orders, rate law, and rate constant."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      893
+    ]
+  },
+  {
+    "id": "frq-2008-4-896",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.8",
+      "7.11",
+      "9.2"
+    ],
+    "rationale": "Three reaction scenarios require equations and concepts including entropy, acid-base stoichiometry, precipitation, pH, and equilibrium.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "9.2"
+        ],
+        "rationale": "Write a reaction equation and infer entropy sign from physical states/particles."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "4.5",
+          "4.8"
+        ],
+        "rationale": "Neutralize nitric acid with strontium hydroxide and calculate stoichiometric amount."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "7.11",
+          "8.11"
+        ],
+        "rationale": "Precipitate barium carbonate and explain pH change as carbonate is removed."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      896,
+      897
+    ]
+  },
+  {
+    "id": "frq-2008-5-898",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.9",
+      "3.7",
+      "4.2"
+    ],
+    "rationale": "Identifies unknown salts by designing/interpreting solubility and qualitative chemical tests.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "3.10",
+          "3.9",
+          "3.7",
+          "4.2"
+        ],
+        "rationale": "Use solubility, separation/testing, solution observations, and ionic reactions to identify the salts."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      898,
+      899
+    ]
+  },
+  {
+    "id": "frq-2008-6-900",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.2",
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Connects entropy/enthalpy signs and temperature-dependent Gibbs energy with equilibrium response to added heat.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Infer ΔH° and ΔS° and select the correct ΔG°-versus-temperature graph."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "7.9",
+          "7.10",
+          "9.3"
+        ],
+        "rationale": "Predict equilibrium response to heating and relate it to Q/K and thermodynamic favorability."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      900
+    ]
+  },
+  {
+    "id": "frq-2009-3-908",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "4.9"
+    ],
+    "rationale": "Determines hydrogen peroxide amount by gas collection over water, mass percentage, and oxygen oxidation state.",
+    "parts": [
+      {
+        "label": "(a)–(d)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Correct gas pressure for water vapor, use ideal gas law, and apply stoichiometry to sample composition."
+      },
+      {
+        "label": "(e onward)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Assign oxidation numbers in peroxide decomposition."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      908
+    ]
+  },
+  {
+    "id": "frq-2009-4-909",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.9",
+      "8.3"
+    ],
+    "rationale": "Reaction scenarios include limiting reagent, metal displacement redox, and sulfide hydrolysis/pH.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.5"
+        ],
+        "rationale": "Write reaction equation and determine limiting reactant for mixed salts."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Predict visible changes in cadmium/copper redox displacement."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "8.3"
+        ],
+        "rationale": "Represent sulfide hydrolysis and determine resulting solution basicity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      909,
+      910
+    ]
+  },
+  {
+    "id": "frq-2009-5-911",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.2",
+      "2.5",
+      "4.5"
+    ],
+    "rationale": "Combines Lewis structures for nitrogen species with ammonia synthesis Gibbs-energy and stoichiometric calculations.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw complete Lewis structures for N2 and NH3."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.3",
+          "4.5"
+        ],
+        "rationale": "Calculate Gibbs-energy change for the stated hydrogen amount using reaction stoichiometry."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Use thermodynamic information to reason about ammonia synthesis favorability."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      911
+    ]
+  },
+  {
+    "id": "frq-2009-6-912",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10"
+    ],
+    "rationale": "Determines galvanic-cell half-reactions, electron direction, standard potentials, and later cell comparisons.",
+    "parts": [
+      {
+        "label": "(a)–(e)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Analyze spontaneous cell reaction, electrodes, electron flow, and infer standard reduction potential."
+      },
+      {
+        "label": "(f onward)",
+        "topics": [
+          "9.9",
+          "9.10"
+        ],
+        "rationale": "Compare cell potentials and nonstandard conditions for the additional electrode combinations."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      912
+    ]
+  },
+  {
+    "id": "frq-2010-1-918",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4",
+      "7.10",
+      "3.4",
+      "2.5",
+      "3.1"
+    ],
+    "rationale": "Isomer structure/boiling point precedes gas-phase isomerization equilibrium calculations and a volume-change response.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.5",
+          "3.1"
+        ],
+        "rationale": "Draw butane isomers and compare boiling points using molecular shape and dispersion."
+      },
+      {
+        "label": "(c)–(f)",
+        "topics": [
+          "7.4",
+          "7.7",
+          "7.10",
+          "3.4"
+        ],
+        "rationale": "Calculate initial gas pressure, equilibrium composition/pressure, and response to volume change using Q/K and gas laws."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      918
+    ]
+  },
+  {
+    "id": "frq-2010-4-921",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "1.3",
+      "4.5",
+      "8.1",
+      "8.3"
+    ],
+    "rationale": "Reaction set includes hydrate formula composition, complex-ion formation/Lewis acid, and methylamine neutralization/basicity.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3",
+          "4.5"
+        ],
+        "rationale": "Use hydrate formula to calculate water content."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "8.1"
+        ],
+        "rationale": "Represent nickel-ammonia complex formation and identify the Lewis acid."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "8.1",
+          "8.3"
+        ],
+        "rationale": "Neutralize HCl with methylamine and characterize methylamine solution as basic."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      921,
+      922
+    ]
+  }
+]

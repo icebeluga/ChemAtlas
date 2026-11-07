@@ -1,0 +1,55 @@
+AP® CHEMISTRY
+2017 SCORING GUIDELINES
+
+Question 2
+
+H,0,(aq) + OCI(aq) > H,O() + Cl(aq) + O2(g)
+
+A student investigates the reaction between H,O,(aq) and NaOCI(aq), which is represented by the net-ionic
+equation shown above.
+
+(a) Is the reaction represented above a redox reaction? Justify your answer.
+
+The reaction is a redox reaction because the oxidation
+numbers of some atoms changed during the reaction (both
+oxygen and chlorine undergo changes in oxidation number).
+
+1 point is earned for the correct answer
+along with a valid justification.
+
+To better understand the reaction, the student looks up thermodynamic data for the reaction. For the reaction
+represented above, the value of AG3og is -197 kJ/mol,,,, and the value of AS39. is 144 J/(K- mol,,,,).
+
+(b) Calculate the value of AH3gg. for the reaction in KI/Mol,,,-
+
+AH? = AG° + TAS?
+
+= (_144)_ \ 1k } 1 point is earned for the
+=A TST ei sir O98 OE mol,,,, /\ 1000 3 correct calculation of AH?.
+
+=~—154 kJ/mol,
+
+nxn
+
+(c) Does the temperature inside the flask increase, decrease, or remain the same as the reaction proceeds?
+Justify your answer.
+
+The temperature increases because the 1 point is earned for indicating an increase in temperature
+reaction is exothermic (AH® < 0). with a valid justification.
+
+(d) Calculate the value of the equilibrium constant, K, for the reaction at 298 K.
+
+AG? =-RTInK — ;
+“Age (197,000 mol) 1 point is earned for the correct value
+
+Bags FAP a a) of K with evidence of calculation.
+Kae AT = e@3i4iMmoiK)Q%K) _ 795 ~ 3x 1034
+
+The student decides to produce 40.0 mL of O,(g) at a pressure of 0.988 atm and a temperature of 298 K using
+the reaction represented above. The student uses the equipment shown below. The student sets up a 250 mL
+Erlenmeyer flask fitted with a one-hole stopper. The flask is connected to a 50 mL gas-collection tube that
+initially is completely filled with water.
+
+© 2017 The College Board.
+Visit the College Board on the Web: www.collegeboard.org.
+

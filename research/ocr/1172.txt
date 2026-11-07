@@ -1,0 +1,47 @@
+AP® CHEMISTRY
+2017 SCORING GUIDELINES
+
+Question 4
+H H H H H H
+L to I 1
+re Os es
+OH OH OH cad ca cd
+Glycerol Trichloropropane
+Boiling point 290°C Boiling point 157°C
+
+The structural formulas of glycerol and trichloropropane are given above. Both compounds are liquids at 25°C.
+
+(a) For each compound, identify all types of intermolecular forces present in the liquid. Explain why glycerol
+has the higher boiling point in terms of the relative strengths of the intermolecular forces.
+
+Each substance has intermolecular London dispersion
+
+forces and dipole-dipole forces. Glycerol also has 1 point is earned for identifying
+hydrogen bonding. The presence of hydrogen bonding the IMFs in each liquid.
+
+in glycerol results in the total intermolecular forces in
+
+glycerol being stronger than the total intermolecular 1 point is earned for a correct explanation.
+
+forces in trichloropropane.
+
+(b) Glycerol (molar mass 92.09 g/mol) has been suggested for use as an alternative fuel. The enthalpy of
+
+combustion, AH, , of glycerol is —1654 kJ/mol. What mass of glycerol would need to be combusted
+to heat 500.0 g of water from 20.0°C to 100.0°C ? (The specific heat capacity of water is 4.184 J/(g- °C).
+
+Assume that all the heat released by the combustion reaction is absorbed by the water.)
+
+Mayo = MCAT = (500.0 g) x (4.184 J/(g°C)) x (100.0°C — 20.0°C)
+= 167,000J = 167kJ 1 point is earned for a
+correct calculation of q.
+—W0 = Icomb
+1 mol glycerol x 92.09 g glycerol
+—1654 kd 1 mol glycerol
+
+1 point is earned for the
+
+-167 kJ x = 9.30 g glycerol correct mass of glycerol.
+
+© 2017 The College Board.
+Visit the College Board on the Web: www.collegeboard.org.

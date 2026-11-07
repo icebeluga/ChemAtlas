@@ -1,0 +1,496 @@
+[
+  {
+    "id": "frq-2010-6-925",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.1"
+    ],
+    "rationale": "Determines orders for H2 and Cl2 from initial-rate data and constructs the rate law.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Compare initial-rate experiments to derive individual reaction orders and rate law."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "5.1",
+          "5.2"
+        ],
+        "rationale": "Use the derived rate law for rate/constant calculations as requested."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      925
+    ]
+  },
+  {
+    "id": "frq-2011-1-931",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12",
+      "8.2",
+      "7.4",
+      "9.5"
+    ],
+    "rationale": "Solubility and reaction behavior of M(OH)2/MCO3 using Ksp, pH, and equilibrium thermodynamics.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "7.11",
+          "7.12",
+          "8.2"
+        ],
+        "rationale": "Determine ionic charge, hydroxide concentration, Ksp, and carbonate solubility/common-ion behavior."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "7.4",
+          "9.5"
+        ],
+        "rationale": "Use Kp and relate equilibrium constant magnitude to ΔG° for carbonate decomposition."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      931
+    ]
+  },
+  {
+    "id": "frq-2011-2-932",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4",
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Calculates equilibrium amounts and gas pressure for methanol decomposition in a rigid tank.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.7",
+          "4.5",
+          "3.4"
+        ],
+        "rationale": "Use reaction stoichiometry to derive equilibrium moles, mole fraction, and total pressure."
+      },
+      {
+        "label": "(b onward)",
+        "topics": [
+          "7.4",
+          "7.7"
+        ],
+        "rationale": "Use equilibrium composition to calculate or interpret equilibrium constants."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      932
+    ]
+  },
+  {
+    "id": "frq-2011-3-933",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "1.3",
+      "4.5",
+      "6.1",
+      "4.7"
+    ],
+    "rationale": "Analyzes glucose composition, calorimetric combustion enthalpy, and fermentation reaction products.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3"
+        ],
+        "rationale": "Write empirical formula from molecular formula."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "6.4",
+          "6.1",
+          "4.5"
+        ],
+        "rationale": "Use calorimetric heat and amount to calculate molar combustion enthalpy."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "4.7",
+          "4.5"
+        ],
+        "rationale": "Represent fermentation products and apply reaction stoichiometry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      933
+    ]
+  },
+  {
+    "id": "frq-2011-4-934",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.8",
+      "7.11"
+    ],
+    "rationale": "Reaction scenarios require equations, acid-base stoichiometry and precipitation/solubility reasoning.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "4.2",
+          "4.5",
+          "4.7",
+          "4.8",
+          "7.11"
+        ],
+        "rationale": "Predict products, compute neutralization amounts, and explain precipitate behavior with acid."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      934,
+      935
+    ]
+  },
+  {
+    "id": "frq-2011-6-937",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5",
+      "3.1",
+      "4.7"
+    ],
+    "rationale": "Uses organic molecular geometry/hybridization, Lewis structure, esterification, and intermolecular forces.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Identify carbon hybridization and estimate bond angle using electron-domain geometry."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.5",
+          "4.7"
+        ],
+        "rationale": "Draw methanoic acid Lewis structure and represent ester synthesis."
+      },
+      {
+        "label": "remaining visible parts",
+        "topics": [
+          "3.1",
+          "5.5"
+        ],
+        "rationale": "Question heading specifies intermolecular forces and kinetic molecular theory; classify visible prompt content accordingly."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      937
+    ]
+  },
+  {
+    "id": "frq-2011-1-944",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4",
+      "8.8",
+      "8.9"
+    ],
+    "rationale": "Lactic-acid weak-acid equilibrium and pH, buffer formation with lactate, and response to added strong acid.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Calculate Ka and pH from percent ionization."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "8.4",
+          "8.8",
+          "8.9"
+        ],
+        "rationale": "Calculate pH and lactate concentration in buffer mixtures after adding conjugate base or strong acid."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      944
+    ]
+  },
+  {
+    "id": "frq-2011-3-946",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5",
+      "4.9",
+      "7.4"
+    ],
+    "rationale": "Analyzes pollutant redox reaction through oxidation states, Kp, and Gibbs energy/equilibrium relationship.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Balance redox reaction and determine carbon oxidation."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Write Kp for the gas reaction."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "9.3",
+          "9.5"
+        ],
+        "rationale": "Use formation Gibbs energies to calculate ΔG° and relate it to equilibrium/favorability."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      946
+    ]
+  },
+  {
+    "id": "frq-2011-4-947",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set ranges across combustion, precipitation, redox, complexation, acid-base, and gas reactions.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.5",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write net reaction changes for each given laboratory scenario."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      947
+    ]
+  },
+  {
+    "id": "frq-2011-5-948",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.9",
+      "3.7",
+      "4.2"
+    ],
+    "rationale": "Identifies unknown salts from appearance and systematic solution tests, using precipitation/solubility and qualitative observations.",
+    "parts": [
+      {
+        "label": "(a)–(e)",
+        "topics": [
+          "3.10",
+          "3.9",
+          "3.7",
+          "4.2"
+        ],
+        "rationale": "Select separation/identification tests and interpret precipitate/solution evidence."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      948
+    ]
+  },
+  {
+    "id": "frq-2011-6-949",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5",
+      "2.6",
+      "2.1",
+      "8.6"
+    ],
+    "rationale": "Compares resonance bond lengths, polarity, molecular planarity/geometry, and oxyacid strength from molecular structure.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.6"
+        ],
+        "rationale": "Explain nitrite/nitrate bond lengths using resonance and bond order."
+      },
+      {
+        "label": "(b)–(d)",
+        "topics": [
+          "2.1",
+          "2.7"
+        ],
+        "rationale": "Explain polarity, molecular geometry, and planarity with VSEPR and bond dipoles."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "8.6"
+        ],
+        "rationale": "Relate oxyacid strength to molecular structure and atom electronegativity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      949
+    ]
+  },
+  {
+    "id": "frq-2011-7-950",
+    "primaryTopic": "9.10",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10"
+    ],
+    "rationale": "Analyzes a standard Zn/Ni galvanic cell and effects of concentration or salt-bridge removal on voltage.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Identify half-cell species, standard conditions, cathode and reduction reaction."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "9.10",
+          "9.9"
+        ],
+        "rationale": "Predict nonstandard concentration and salt-bridge effects on cell voltage."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      950
+    ]
+  },
+  {
+    "id": "frq-2011-8-951",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3",
+      "8.7"
+    ],
+    "rationale": "Interprets weak-acid/strong-base titration curve, extracts Ka, and compares equivalence behavior under different concentrations.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "8.5",
+          "8.3"
+        ],
+        "rationale": "Identify weak-acid titration features and determine Ka from the curve."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.5",
+          "8.7"
+        ],
+        "rationale": "Calculate equivalence volume and compare equivalence-point pH."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      951
+    ]
+  },
+  {
+    "id": "frq-2011-1-1081",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.1",
+      "4.5",
+      "9.2",
+      "9.3"
+    ],
+    "rationale": "Designs a CaO hydration heating pack using heat capacity, reaction enthalpy, stoichiometry, entropy, and Gibbs-energy reasoning.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.4",
+          "6.1",
+          "4.5"
+        ],
+        "rationale": "Calculate heat absorbed by water and CaO mass needed from reaction enthalpy/stoichiometry."
+      },
+      {
+        "label": "(b onward)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Calculate reaction entropy and use thermodynamic quantities to assess feasibility/temperature effects."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1081
+    ]
+  }
+]

@@ -1,0 +1,439 @@
+[
+  {
+    "id": "frq-2005-7-846",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "9.2",
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Uses combustion enthalpies to obtain reaction enthalpy and combines thermodynamic data to assess spontaneity/equilibrium.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "6.9"
+        ],
+        "rationale": "Use Hess’s law and combustion enthalpies to calculate reaction enthalpy."
+      },
+      {
+        "label": "remaining thermodynamics parts",
+        "topics": [
+          "9.2",
+          "9.3",
+          "9.5"
+        ],
+        "rationale": "Analyze entropy, Gibbs energy, and temperature dependence of equilibrium/favorability."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      846
+    ]
+  },
+  {
+    "id": "frq-2005-8-847",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.1",
+      "2.2",
+      "2.5",
+      "2.7"
+    ],
+    "rationale": "Covers Lewis structure, bond length/energy trends, molecular geometry, and intermolecular forces for molecular substances.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw the complete Lewis structure for CS2."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "2.1",
+          "2.2"
+        ],
+        "rationale": "Compare bond length and bond energy using atomic size and bond strength."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "3.1",
+          "2.7"
+        ],
+        "rationale": "Identify intermolecular forces and relate structures/geometries to physical properties."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      847
+    ]
+  },
+  {
+    "id": "frq-2006-1-853",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.7",
+      "8.8"
+    ],
+    "rationale": "Benzoic acid weak-acid equilibrium, pH and titration/buffer reasoning.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "8.3",
+          "8.5",
+          "8.7",
+          "8.8"
+        ],
+        "rationale": "Use Ka, pH, weak-acid titration, and buffer behavior for benzoic acid/benzoate."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      853
+    ]
+  },
+  {
+    "id": "frq-2006-2-854",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.8",
+      "9.9",
+      "9.10",
+      "9.3"
+    ],
+    "rationale": "Voltaic-cell reaction, standard potential and Gibbs energy, plus concentration effects on cell potential.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.8",
+          "9.9",
+          "9.3"
+        ],
+        "rationale": "Write spontaneous cell reaction and calculate E° and ΔG°."
+      },
+      {
+        "label": "(b onward)",
+        "topics": [
+          "9.10",
+          "9.9"
+        ],
+        "rationale": "Analyze changes in concentrations and nonstandard cell potential."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      854
+    ]
+  },
+  {
+    "id": "frq-2006-3-854",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5",
+      "9.2",
+      "7.9"
+    ],
+    "rationale": "Compares standard Gibbs energy, equilibrium constants, temperature-dependent equilibrium, and entropy across reactions.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Calculate ΔG° and assess standard-state spontaneity."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "9.5",
+          "7.9"
+        ],
+        "rationale": "Relate ΔG° to Keq and predict temperature effects on K."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Explain entropy and temperature dependence of thermodynamic favorability."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      854
+    ]
+  },
+  {
+    "id": "frq-2006-4-855",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set spans thermal decomposition, precipitation, acid-base, and redox reactions.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Predict products and net changes in the listed laboratory reactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      855
+    ]
+  },
+  {
+    "id": "frq-2006-6-858",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.5",
+      "2.6",
+      "2.7"
+    ],
+    "rationale": "Draws Lewis structures and uses VSEPR, lone pairs, polarity, and hybridization for four central-atom species.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.6"
+        ],
+        "rationale": "Draw Lewis structures including valence electrons/formal charges."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Determine bond angle, molecular polarity, hybridization, and molecular geometry using VSEPR."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      858
+    ]
+  },
+  {
+    "id": "frq-2006-7-859",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5",
+      "2.7",
+      "3.11"
+    ],
+    "rationale": "Explains periodic trends, molecular geometry, and line emission from quantized atomic energy levels.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain atomic-size trend across a period."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Explain trigonal-planar molecular structure using electron domains."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7",
+          "1.5"
+        ],
+        "rationale": "Explain ionization-energy trend using electron arrangement and effective nuclear attraction."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.11",
+          "1.5"
+        ],
+        "rationale": "Connect unique emission spectra to quantized atomic energy-level transitions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      859
+    ]
+  },
+  {
+    "id": "frq-2006-8-859",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "3.3",
+      "6.5",
+      "8.4",
+      "4.8"
+    ],
+    "rationale": "Explains metal displacement corrosion, steam condensation pressure change, evaporative cooling, and acid neutralization.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Redox displacement of copper by aluminum."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.3",
+          "6.5"
+        ],
+        "rationale": "Steam condenses during cooling, reducing gas pressure and causing implosion."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.5"
+        ],
+        "rationale": "Evaporation absorbs energy from skin, producing cooling."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.4",
+          "4.8"
+        ],
+        "rationale": "Bicarbonate neutralizes formic acid."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      859
+    ]
+  },
+  {
+    "id": "frq-2003-1-865",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4",
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Tracks HI decomposition equilibrium in a rigid container from initial amount through equilibrium composition and K.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "7.7",
+          "7.4",
+          "4.5",
+          "3.4"
+        ],
+        "rationale": "Use initial/equilibrium quantities, reaction stoichiometry and gas relationships to calculate equilibrium concentrations and constant."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      865,
+      866
+    ]
+  },
+  {
+    "id": "frq-2003-2-867",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "4.2",
+      "4.7",
+      "4.9"
+    ],
+    "rationale": "Combines limiting-reactant stoichiometry for iron oxide reduction with reaction prediction/equation analysis.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5",
+          "3.4",
+          "4.9"
+        ],
+        "rationale": "Use ideal gas law and reaction stoichiometry to find limiting reactant and iron produced in a redox reaction."
+      },
+      {
+        "label": "(b onward)",
+        "topics": [
+          "4.2",
+          "4.5",
+          "4.7"
+        ],
+        "rationale": "Analyze the specified aqueous reaction and determine products/amounts."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      867
+    ]
+  },
+  {
+    "id": "frq-2003-3-868",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "3.4",
+      "4.5",
+      "6.8"
+    ],
+    "rationale": "Determines hydrocarbon formulas from composition and gas density, then calculates formation enthalpy from combustion data.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.3",
+          "3.4"
+        ],
+        "rationale": "Determine empirical and molecular formulas using elemental analysis and gas density/ideal gas relationships."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.5",
+          "6.8"
+        ],
+        "rationale": "Use combustion enthalpy and formation-enthalpy data to calculate ΔH°f."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      868
+    ]
+  }
+]

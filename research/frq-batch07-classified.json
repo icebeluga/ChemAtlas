@@ -1,0 +1,469 @@
+[
+  {
+    "id": "frq-2001-1-571",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12",
+      "4.2"
+    ],
+    "rationale": "Compares chloride solubility using solubility equilibria and precipitation/common-ion reasoning.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "7.11",
+          "7.12",
+          "4.2"
+        ],
+        "rationale": "Write Ksp relationships, compare saturated concentrations, and predict precipitation from mixed-ion solutions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      571
+    ]
+  },
+  {
+    "id": "frq-2001-2-572",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5",
+      "6.1",
+      "4.5"
+    ],
+    "rationale": "Combines reaction heat by stoichiometry with Gibbs energy and equilibrium constant temperature dependence.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5",
+          "6.1"
+        ],
+        "rationale": "Use reaction enthalpy and stoichiometry to calculate heat released."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.3",
+          "9.5"
+        ],
+        "rationale": "Calculate Keq from ΔG° and assess how ΔG° changes with temperature from ΔH° and ΔS°."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      572
+    ]
+  },
+  {
+    "id": "frq-2001-3-573",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "1.4",
+      "4.5",
+      "4.6",
+      "8.3",
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Analyzes aspirin mixture composition, elemental analysis, formula/molar mass, titration, and acid-base behavior.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.4"
+        ],
+        "rationale": "Calculate active-ingredient mass percent in a tablet mixture."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.3",
+          "4.5"
+        ],
+        "rationale": "Use combustion products to determine elemental composition of the sample."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.6",
+          "8.5"
+        ],
+        "rationale": "Use equivalence-point titration stoichiometry to calculate molar mass."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.3",
+          "8.5",
+          "8.7"
+        ],
+        "rationale": "Use weak-acid titration data to calculate Ka and pH at a specified titration volume."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      573
+    ]
+  },
+  {
+    "id": "frq-2001-4-574",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set assesses equations and net ionic representations across acid-base, precipitation, and redox reactions.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Identify products and represent net changes for the listed aqueous/gas reactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      574
+    ]
+  },
+  {
+    "id": "frq-2001-5-575",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1",
+      "7.11",
+      "4.2",
+      "4.9",
+      "3.7"
+    ],
+    "rationale": "Compares aqueous solutions by boiling point, pH, precipitation, and likely acid-base/solubility behavior; boiling-point elevation is outside the current CED.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [],
+        "rationale": "Boiling-point ranking uses colligative properties, outside the current CED."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.1",
+          "8.3"
+        ],
+        "rationale": "Identify the most basic solution from the aqueous species/equilibrium."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.11",
+          "4.2"
+        ],
+        "rationale": "Predict precipitation from solution composition and solubility."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Choose a solution that oxidizes chloride and identify the redox product."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Compare solution composition and conductivity/ion content."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [
+      "colligative properties / boiling-point ranking (part a)"
+    ],
+    "evidencePages": [
+      575
+    ]
+  },
+  {
+    "id": "frq-2001-6-576",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "5.2",
+      "4.5",
+      "4.9"
+    ],
+    "rationale": "Uses stoichiometry to identify reaction completion and graph slopes to analyze rate for an oxidation-reduction process.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Identify redox and choose an oxidizing agent."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.5",
+          "5.1"
+        ],
+        "rationale": "Determine completion from limiting stoichiometry and product concentration-time data."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "5.1",
+          "5.2"
+        ],
+        "rationale": "Interpret instantaneous rate from tangent slope and analyze rate behavior."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      576
+    ]
+  },
+  {
+    "id": "frq-2001-7-577",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.9",
+      "9.8",
+      "9.10"
+    ],
+    "rationale": "Analyzes a galvanic cell, half-reactions, standard potential, and concentration effects on cell potential.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Identify anode, write cell reaction, and calculate E°cell."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.10"
+        ],
+        "rationale": "Predict how nonstandard ion concentrations affect cell potential."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      577
+    ]
+  },
+  {
+    "id": "frq-2001-8-578",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.2",
+      "2.2",
+      "2.3"
+    ],
+    "rationale": "Compares boiling/melting behavior using intermolecular forces, covalent-network solids, and ionic lattice attraction.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Explain molecular phase/boiling differences using intermolecular forces."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.2",
+          "3.2"
+        ],
+        "rationale": "Compare covalent-network silicon with molecular chlorine using bonding and solid properties."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.2",
+          "2.3",
+          "3.2"
+        ],
+        "rationale": "Compare ionic solid melting points through lattice energy and Coulomb attraction."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      578
+    ]
+  },
+  {
+    "id": "frq-2001-1-584",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.7"
+    ],
+    "rationale": "Analyzes hypobromous acid ionization and weak-acid equilibrium.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Use Ka and equilibrium/pH relationships for HOBr and OBr−."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      584
+    ]
+  },
+  {
+    "id": "frq-2001-2-585",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.9",
+      "9.8",
+      "9.9",
+      "9.10",
+      "9.3"
+    ],
+    "rationale": "Combines limiting-reactant and concentration calculations with redox/electrochemical analysis of silver and zinc.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Determine limiting reactant and product-ion concentration from reaction stoichiometry."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.9",
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Use redox half-reactions and reduction potentials to calculate standard cell potential."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.3",
+          "9.9"
+        ],
+        "rationale": "Calculate ΔG° from cell potential."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "9.10",
+          "9.9"
+        ],
+        "rationale": "Calculate nonstandard cell potential and assess spontaneity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      585,
+      586
+    ]
+  },
+  {
+    "id": "frq-2001-3-586",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "6.1",
+      "5.5",
+      "2.5"
+    ],
+    "rationale": "Combines combustion equation and stoichiometry, gas volume, molar enthalpy, molecular effusion, and structural isomers.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "4.5",
+          "3.4"
+        ],
+        "rationale": "Balance combustion and calculate CO2 volume using stoichiometry and ideal gas law."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.5",
+          "6.1"
+        ],
+        "rationale": "Calculate molar enthalpy of combustion from measured heat and amount."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Use kinetic molecular theory/Graham’s law to relate effusion rate and molar mass."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw structural isomers from molecular formula."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      586
+    ]
+  },
+  {
+    "id": "frq-2001-4-587",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set tests precipitation, redox, acid-base, and synthesis patterns.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write products/net ionic changes for the given reaction scenarios."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      587
+    ]
+  }
+]

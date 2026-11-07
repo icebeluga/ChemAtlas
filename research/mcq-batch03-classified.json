@@ -1,0 +1,229 @@
+[
+  {
+    "id": "mcq-2002-1-606",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Ground-state atomic electron arrangement predicts unpaired electrons and paramagnetism.",
+    "status": "classified",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-2-606",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Electron diffraction tests wave-particle duality, outside current AP Chemistry CED scope.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "quantum wave behavior / electron diffraction"
+    ],
+    "reviewReason": "Historical quantum-physics content outside the current CED.",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-3-606",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Applies electron occupancy rules to the maximum number of electrons in an orbital.",
+    "status": "classified",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-4-606",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "The uncertainty principle is outside current AP Chemistry CED scope.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "Heisenberg uncertainty principle"
+    ],
+    "reviewReason": "Retain as historical physics/quantum content without a current AP Chemistry topic.",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-5-606",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Reads a pressure-temperature phase diagram, content excluded from current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "phase diagrams"
+    ],
+    "reviewReason": "Current CED does not assess phase-diagram interpretation.",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-6-606",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Reads a pressure-temperature phase diagram, content excluded from current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "phase diagrams"
+    ],
+    "reviewReason": "Current CED does not assess phase-diagram interpretation.",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-7-606",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Reads a pressure-temperature phase diagram, content excluded from current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "phase diagrams"
+    ],
+    "reviewReason": "Current CED does not assess phase-diagram interpretation.",
+    "evidencePages": [
+      606
+    ]
+  },
+  {
+    "id": "mcq-2002-8-607",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Compare diatomic bond strengths using bond order and bond type; verify whether the item relies on excluded MO theory before treating it as current practice.",
+    "status": "legacy",
+    "reviewReason": "The original prompt depends on molecular-orbital theory or d-orbital hybridization, which the current CED excludes.",
+    "evidencePages": [
+      607
+    ],
+    "legacyConcepts": [
+      "molecular-orbital theory / d-orbital hybridization"
+    ]
+  },
+  {
+    "id": "mcq-2002-9-607",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Bond order assignment among diatomic species relies on molecular-orbital theory, excluded from current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "molecular-orbital bond-order calculation"
+    ],
+    "reviewReason": "Legacy content; retain without assigning an in-scope unit topic.",
+    "evidencePages": [
+      607
+    ]
+  },
+  {
+    "id": "mcq-2002-10-607",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Identifies sigma and pi covalent bonds in a diatomic molecule.",
+    "status": "classified",
+    "evidencePages": [
+      607
+    ]
+  },
+  {
+    "id": "mcq-2002-11-607",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "2.4"
+    ],
+    "rationale": "Identifies a metal used to protect iron from corrosion through sacrificial oxidation.",
+    "status": "classified",
+    "evidencePages": [
+      607
+    ]
+  },
+  {
+    "id": "mcq-2002-12-607",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Semiconductor doping/application is not a dedicated current AP Chemistry learning objective.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "semiconductor doping"
+    ],
+    "reviewReason": "Keep as historical application; no current CED topic directly matches the tested demand.",
+    "evidencePages": [
+      607
+    ]
+  },
+  {
+    "id": "mcq-2002-13-607",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Radiation shielding relies on nuclear/radiation content outside the current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "nuclear radiation shielding"
+    ],
+    "reviewReason": "Historical application outside the current AP Chemistry topic map.",
+    "evidencePages": [
+      607
+    ]
+  },
+  {
+    "id": "mcq-2002-14-608",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Vapor-pressure lowering and freezing-point depression are colligative properties excluded from current CED.",
+    "status": "legacy",
+    "legacyConcepts": [
+      "colligative properties"
+    ],
+    "reviewReason": "Keep as historical source material, not a current CED question.",
+    "evidencePages": [
+      608
+    ]
+  },
+  {
+    "id": "mcq-2002-17-608",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify the electron-domain geometry corresponding to six electron groups.",
+    "status": "legacy",
+    "evidencePages": [
+      608
+    ],
+    "legacyConcepts": [
+      "molecular-orbital theory / d-orbital hybridization"
+    ],
+    "reviewReason": "The original prompt depends on molecular-orbital theory or d-orbital hybridization, which the current CED excludes."
+  },
+  {
+    "id": "mcq-2002-19-609",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify the species reduced in an oxidation-reduction reaction from the balanced reaction.",
+    "status": "classified",
+    "evidencePages": [
+      609
+    ]
+  },
+  {
+    "id": "mcq-2002-24-610",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use the combined gas law at constant volume and amount to compare pressures at two temperatures.",
+    "status": "classified",
+    "evidencePages": [
+      610
+    ]
+  }
+]

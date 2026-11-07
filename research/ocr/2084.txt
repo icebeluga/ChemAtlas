@@ -1,0 +1,30 @@
+200 1
+150
+100
+50.
+
+0
+
+Potential Energy
+(kJ/mol)
+
+a=
+
+0 200 400 600 800
+Internuclear Distance (pm)
+
+12. The graph shows the potential energy of two atoms as a function of internuclear distance. What is the
+approximate bond energy?
+
+(A) 140kJ/mol
+(B) 170kJ/mol
+(C) 200kJ/mol
+(D) 270kJ/mol
+
+[Bratt coping sre“ soaring eae “10- GO ON TO THE NEX}
+
+messages.pdf_cover_qr_code_label
+© studocu
+
+messages.downloaded_by
+

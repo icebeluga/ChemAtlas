@@ -1,0 +1,21 @@
+NO,(g) + CO(g) + NO(g) + CO,(g)
+
+28. The reaction between NO,(g) and CO(g) is represented above. The elementary steps of a proposed reaction
+mechanism are represented below.
+
+Step 1: 2NO,(g) + NO(g) + NO3(g) (slow)
+Step 2: NO3(g) + CO(g) + NO,(g) + CO,(g) (fast)
+
+Which of the following is the rate law for the overall reaction that is consistent with the proposed mechanism?
+(A) Rate = k [NO,][CO]
+
+(B) Rate = k [NO,}?
+
+(C) Rate = k [NO,][CO]
+
+(D) Rate = k [NO,][NO;][CO]
+
+Unauthorized copying or reuse of
+any part of this page is illegal.
+
+GO ON TO THE NEXT PAGE.

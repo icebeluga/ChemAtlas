@@ -1,0 +1,44 @@
+7. A new element with atomic number 116 was discovered in 2000. In 2012 it was named livermorium, Lv.
+Although Ly is radioactive and short-lived, its chemical properties and reactivity should follow periodic trends.
+
+(a) Write the electron configuration for the valence electrons of Lv in the ground state.
+
+(b) According to periodic properties, what would be the most likely formula for the product obtained when Lv
+reacts with H3(g)?
+
+(c) The first ionization energy of polonium, Po, is 812 kJ/mol. Is the first ionization energy of Lv expected to
+be greater than, less than, or equal to that of Po? Justify your answer in terms of Coulomb’s law.
+
+(d) Shown below is a hypothetical mass spectrum for a sample of Lv containing 10 atoms.
+
+10
+
+293.2
+
+292.2
+
+Number of Atoms
+
+291.2
+
+9
+8
+ei
+6
+5
+4
+a
+2:
+1
+0
+
+289.0 290.0 291.0 292.0 293.0 294.0
+Atomic Mass (amu)
+
+Using the information in the graph, determine the average atomic mass of Lv in the sample to four
+significant figures.
+
+Unauthorized copying or reuse of|
+
+any part of this page is illegal. GO ON TO THE NEXT PAGE.
+

@@ -1,0 +1,420 @@
+[
+  {
+    "id": "frq-2001-6-589",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.2",
+      "3.1"
+    ],
+    "rationale": "Explains periodic radius and ionization-energy trends, bond-strength differences from bond order, and boiling-point differences from dispersion forces.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Apply periodic trends and electron configurations to radius and second ionization energy."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Compare C–C bond energy based on single versus double bond order."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare London dispersion forces for Cl2 and Br2."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      589
+    ]
+  },
+  {
+    "id": "frq-2001-7-589",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.7",
+      "5.8",
+      "5.11"
+    ],
+    "rationale": "Analyzes a catalytic reaction mechanism for ozone depletion, identifies catalyst/intermediate, and derives rate behavior.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.7",
+          "5.11"
+        ],
+        "rationale": "Combine elementary steps and identify catalyst/intermediate."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "5.8"
+        ],
+        "rationale": "Use the observed rate law to determine reaction order and mechanism implications."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      589
+    ]
+  },
+  {
+    "id": "frq-2001-8-590",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.2",
+      "9.3",
+      "7.9",
+      "5.6"
+    ],
+    "rationale": "Interprets entropy and temperature-dependent equilibrium to infer thermodynamic signs and complete an energy diagram.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.2"
+        ],
+        "rationale": "Predict entropy change from changes in gaseous particle count."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.9",
+          "9.3"
+        ],
+        "rationale": "Use temperature shift in equilibrium composition to infer enthalpy and thermodynamic favorability."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "5.6"
+        ],
+        "rationale": "Complete a reaction energy profile with relative energies/activation barrier as requested."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      590
+    ]
+  },
+  {
+    "id": "frq-2001-1-596",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.8",
+      "8.9"
+    ],
+    "rationale": "Weak-acid pH and equilibrium, titration with strong base, and buffer composition calculations.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Use pH and Ka to determine hydronium and equilibrium acid concentrations."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.5"
+        ],
+        "rationale": "Calculate equivalence volume and pH for weak-acid/strong-base titration."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "8.8",
+          "8.9"
+        ],
+        "rationale": "Calculate a buffer composition using weak acid and conjugate-base amounts."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      596
+    ]
+  },
+  {
+    "id": "frq-2001-2-597",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.9",
+      "9.8",
+      "9.9",
+      "9.10",
+      "9.3"
+    ],
+    "rationale": "Duplicate print of the 2001 silver/zinc stoichiometry and electrochemistry question; tags follow the same subpart structure.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Determine limiting reactant and product-ion concentration from stoichiometry."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.9",
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Use redox and standard cell potential."
+      },
+      {
+        "label": "(c)–(e)",
+        "topics": [
+          "9.3",
+          "9.9",
+          "9.10"
+        ],
+        "rationale": "Relate cell potential, Gibbs energy, nonstandard potential, and spontaneity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      597,
+      598
+    ]
+  },
+  {
+    "id": "frq-2001-3-598",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "6.1",
+      "5.5",
+      "2.5"
+    ],
+    "rationale": "Duplicate print of the 2001 pentane combustion and gas-behavior question; same content mapping as the earlier copy.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "4.5",
+          "3.4",
+          "6.1"
+        ],
+        "rationale": "Combustion stoichiometry, CO2 gas volume, and molar enthalpy."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Relate effusion rate to molar mass using Graham’s law."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw structural isomers."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      598
+    ]
+  },
+  {
+    "id": "frq-2001-4-599",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set includes precipitation, combustion, acid-base, decomposition, complex-ion formation, and redox.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Identify products and represent reaction changes for each laboratory scenario."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      599
+    ]
+  },
+  {
+    "id": "frq-2001-6-601",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.2",
+      "3.1"
+    ],
+    "rationale": "Duplicate print of the atomic trends, bond energy, and intermolecular-force comparison question; same subpart mapping as page 589.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain periodic trends in atomic radius and second ionization energy."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Compare bond energies by bond order."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare dispersion forces and boiling points."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      601
+    ]
+  },
+  {
+    "id": "frq-2001-7-601",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.7",
+      "5.8",
+      "5.11"
+    ],
+    "rationale": "Duplicate print of the ozone depletion mechanism question; same mapping as page 589.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.7",
+          "5.11"
+        ],
+        "rationale": "Identify catalyst/intermediate and combine elementary steps."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "5.8"
+        ],
+        "rationale": "Analyze the rate law and reaction orders."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      601
+    ]
+  },
+  {
+    "id": "frq-2001-8-602",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.2",
+      "9.3",
+      "7.9",
+      "5.6"
+    ],
+    "rationale": "Duplicate print of the carbon/CO equilibrium and energy-diagram question; same mapping as page 590.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.2"
+        ],
+        "rationale": "Infer entropy change from gas particle formation."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.9",
+          "9.3"
+        ],
+        "rationale": "Infer enthalpy and favorability from temperature-dependent equilibrium composition."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "5.6"
+        ],
+        "rationale": "Complete the energy diagram."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      602
+    ]
+  },
+  {
+    "id": "frq-2001-1-772",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.8",
+      "8.9"
+    ],
+    "rationale": "Duplicate copy of the HOBr weak-acid titration and buffer question on page 596.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Use pH and Ka for weak-acid equilibrium."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.5"
+        ],
+        "rationale": "Analyze equivalence point for weak-acid titration."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "8.8",
+          "8.9"
+        ],
+        "rationale": "Calculate buffer composition."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      772
+    ]
+  }
+]

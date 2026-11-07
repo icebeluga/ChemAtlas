@@ -1,0 +1,1916 @@
+{
+  "version": "College Board AP Chemistry CED effective Fall 2024; June 2026 clarifications checked",
+  "reviewedAt": "2026-11-07",
+  "sources": [
+    "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf",
+    "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description-clarifications.pdf",
+    "https://apcentral.collegeboard.org/courses/how-ap-develops-courses-and-exams/course-changes-overview"
+  ],
+  "units": [
+    {
+      "id": "u1",
+      "name": "Atomic Structure and Properties",
+      "topics": [
+        [
+          "1.1",
+          "Moles and Molar Mass"
+        ],
+        [
+          "1.2",
+          "Mass Spectra of Elements"
+        ],
+        [
+          "1.3",
+          "Elemental Composition of Pure Substances"
+        ],
+        [
+          "1.4",
+          "Composition of Mixtures"
+        ],
+        [
+          "1.5",
+          "Atomic Structure and Electron Configuration"
+        ],
+        [
+          "1.6",
+          "Photoelectron Spectroscopy"
+        ],
+        [
+          "1.7",
+          "Periodic Trends"
+        ],
+        [
+          "1.8",
+          "Valence Electrons and Ionic Compounds"
+        ]
+      ]
+    },
+    {
+      "id": "u2",
+      "name": "Compound Structure and Properties",
+      "topics": [
+        [
+          "2.1",
+          "Types of Chemical Bonds"
+        ],
+        [
+          "2.2",
+          "Intramolecular Force and Potential Energy"
+        ],
+        [
+          "2.3",
+          "Structure of Ionic Solids"
+        ],
+        [
+          "2.4",
+          "Structure of Metals and Alloys"
+        ],
+        [
+          "2.5",
+          "Lewis Diagrams"
+        ],
+        [
+          "2.6",
+          "Resonance and Formal Charge"
+        ],
+        [
+          "2.7",
+          "VSEPR and Hybridization"
+        ]
+      ]
+    },
+    {
+      "id": "u3",
+      "name": "Properties of Substances and Mixtures",
+      "topics": [
+        [
+          "3.1",
+          "Intermolecular and Interparticle Forces"
+        ],
+        [
+          "3.2",
+          "Properties of Solids"
+        ],
+        [
+          "3.3",
+          "Solids, Liquids, and Gases"
+        ],
+        [
+          "3.4",
+          "Ideal Gas Law"
+        ],
+        [
+          "3.5",
+          "Kinetic Molecular Theory"
+        ],
+        [
+          "3.6",
+          "Deviation from Ideal Gas Law"
+        ],
+        [
+          "3.7",
+          "Solutions and Mixtures"
+        ],
+        [
+          "3.8",
+          "Representations of Solutions"
+        ],
+        [
+          "3.9",
+          "Separation of Solutions and Mixtures"
+        ],
+        [
+          "3.10",
+          "Solubility"
+        ],
+        [
+          "3.11",
+          "Spectroscopy and the Electromagnetic Spectrum"
+        ],
+        [
+          "3.12",
+          "Properties of Photons"
+        ],
+        [
+          "3.13",
+          "Beer-Lambert Law"
+        ]
+      ]
+    },
+    {
+      "id": "u4",
+      "name": "Chemical Reactions",
+      "topics": [
+        [
+          "4.1",
+          "Introduction for Reactions"
+        ],
+        [
+          "4.2",
+          "Net Ionic Equations"
+        ],
+        [
+          "4.3",
+          "Representations of Reactions"
+        ],
+        [
+          "4.4",
+          "Physical and Chemical Changes"
+        ],
+        [
+          "4.5",
+          "Stoichiometry"
+        ],
+        [
+          "4.6",
+          "Introduction to Titration"
+        ],
+        [
+          "4.7",
+          "Types of Chemical Reactions"
+        ],
+        [
+          "4.8",
+          "Introduction to Acid-Base Reactions"
+        ],
+        [
+          "4.9",
+          "Oxidation-Reduction (Redox) Reactions"
+        ]
+      ]
+    },
+    {
+      "id": "u5",
+      "name": "Kinetics",
+      "topics": [
+        [
+          "5.1",
+          "Reaction Rates"
+        ],
+        [
+          "5.2",
+          "Introduction to Rate Law"
+        ],
+        [
+          "5.3",
+          "Concentration Changes Over Time"
+        ],
+        [
+          "5.4",
+          "Elementary Reactions"
+        ],
+        [
+          "5.5",
+          "Collision Model"
+        ],
+        [
+          "5.6",
+          "Reaction Energy Profile"
+        ],
+        [
+          "5.7",
+          "Introduction to Reaction Mechanisms"
+        ],
+        [
+          "5.8",
+          "Reaction Mechanism and Rate Law"
+        ],
+        [
+          "5.9",
+          "Pre-Equilibrium Approximation"
+        ],
+        [
+          "5.10",
+          "Multistep Reaction Energy Profile"
+        ],
+        [
+          "5.11",
+          "Catalysis"
+        ]
+      ]
+    },
+    {
+      "id": "u6",
+      "name": "Thermochemistry",
+      "topics": [
+        [
+          "6.1",
+          "Endothermic and Exothermic Processes"
+        ],
+        [
+          "6.2",
+          "Energy Diagrams"
+        ],
+        [
+          "6.3",
+          "Heat Transfer and Thermal Equilibrium"
+        ],
+        [
+          "6.4",
+          "Heat Capacity and Calorimetry"
+        ],
+        [
+          "6.5",
+          "Energy of Phase Changes"
+        ],
+        [
+          "6.6",
+          "Introduction to Enthalpy of Reaction"
+        ],
+        [
+          "6.7",
+          "Bond Enthalpies"
+        ],
+        [
+          "6.8",
+          "Enthalpy of Formation"
+        ],
+        [
+          "6.9",
+          "Hess’s Law"
+        ]
+      ]
+    },
+    {
+      "id": "u7",
+      "name": "Equilibrium",
+      "topics": [
+        [
+          "7.1",
+          "Introduction to Equilibrium"
+        ],
+        [
+          "7.2",
+          "Direction of Reversible Reactions"
+        ],
+        [
+          "7.3",
+          "Reaction Quotient and Equilibrium Constant"
+        ],
+        [
+          "7.4",
+          "Calculating the Equilibrium Constant"
+        ],
+        [
+          "7.5",
+          "Magnitude of the Equilibrium Constant"
+        ],
+        [
+          "7.6",
+          "Properties of the Equilibrium Constant"
+        ],
+        [
+          "7.7",
+          "Calculating Equilibrium Concentrations"
+        ],
+        [
+          "7.8",
+          "Representations of Equilibrium"
+        ],
+        [
+          "7.9",
+          "Introduction to Le Châtelier’s Principle"
+        ],
+        [
+          "7.10",
+          "Reaction Quotient and Le Châtelier’s Principle"
+        ],
+        [
+          "7.11",
+          "Introduction to Solubility Equilibria"
+        ],
+        [
+          "7.12",
+          "Common-Ion Effect"
+        ]
+      ]
+    },
+    {
+      "id": "u8",
+      "name": "Acids and Bases",
+      "topics": [
+        [
+          "8.1",
+          "Introduction to Acids and Bases"
+        ],
+        [
+          "8.2",
+          "pH and pOH of Strong Acids and Bases"
+        ],
+        [
+          "8.3",
+          "Weak Acid and Base Equilibria"
+        ],
+        [
+          "8.4",
+          "Acid-Base Reactions and Buffers"
+        ],
+        [
+          "8.5",
+          "Acid-Base Titrations"
+        ],
+        [
+          "8.6",
+          "Molecular Structure of Acids and Bases"
+        ],
+        [
+          "8.7",
+          "pH and pKa"
+        ],
+        [
+          "8.8",
+          "Properties of Buffers"
+        ],
+        [
+          "8.9",
+          "Henderson-Hasselbalch Equation"
+        ],
+        [
+          "8.10",
+          "Buffer Capacity"
+        ],
+        [
+          "8.11",
+          "pH and Solubility"
+        ]
+      ]
+    },
+    {
+      "id": "u9",
+      "name": "Thermodynamics and Electrochemistry",
+      "topics": [
+        [
+          "9.1",
+          "Introduction to Entropy"
+        ],
+        [
+          "9.2",
+          "Absolute Entropy and Entropy Change"
+        ],
+        [
+          "9.3",
+          "Gibbs Free Energy and Thermodynamic Favorability"
+        ],
+        [
+          "9.4",
+          "Thermodynamic and Kinetic Control"
+        ],
+        [
+          "9.5",
+          "Free Energy and Equilibrium"
+        ],
+        [
+          "9.6",
+          "Free Energy of Dissolution"
+        ],
+        [
+          "9.7",
+          "Coupled Reactions"
+        ],
+        [
+          "9.8",
+          "Galvanic (Voltaic) and Electrolytic Cells"
+        ],
+        [
+          "9.9",
+          "Cell Potential and Free Energy"
+        ],
+        [
+          "9.10",
+          "Cell Potential Under Nonstandard Conditions"
+        ],
+        [
+          "9.11",
+          "Electrolysis and Faraday’s Law"
+        ]
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "1.1",
+      "name": "Moles and Molar Mass",
+      "unit": "u1",
+      "description": "Convert mass, moles, and numbers of particles for a substance.",
+      "learningObjectives": [
+        "1.1.A"
+      ],
+      "pdfPages": [
+        37
+      ],
+      "printedPages": [
+        30
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=37"
+    },
+    {
+      "id": "1.2",
+      "name": "Mass Spectra of Elements",
+      "unit": "u1",
+      "description": "Use isotope masses and abundances to interpret an elemental mass spectrum or find average atomic mass.",
+      "learningObjectives": [
+        "1.2.A"
+      ],
+      "pdfPages": [
+        38
+      ],
+      "printedPages": [
+        31
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=38"
+    },
+    {
+      "id": "1.3",
+      "name": "Elemental Composition of Pure Substances",
+      "unit": "u1",
+      "description": "Determine composition and empirical or molecular formulas for a pure compound.",
+      "learningObjectives": [
+        "1.3.A"
+      ],
+      "pdfPages": [
+        39
+      ],
+      "printedPages": [
+        32
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=39"
+    },
+    {
+      "id": "1.4",
+      "name": "Composition of Mixtures",
+      "unit": "u1",
+      "description": "Determine component proportions or purity in a mixture from composition data.",
+      "learningObjectives": [
+        "1.4.A"
+      ],
+      "pdfPages": [
+        40
+      ],
+      "printedPages": [
+        33
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=40"
+    },
+    {
+      "id": "1.5",
+      "name": "Atomic Structure and Electron Configuration",
+      "unit": "u1",
+      "description": "Describe atomic particles and write ground-state electron configurations of atoms and ions.",
+      "learningObjectives": [
+        "1.5.A"
+      ],
+      "pdfPages": [
+        41,
+        42
+      ],
+      "printedPages": [
+        34,
+        35
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=41"
+    },
+    {
+      "id": "1.6",
+      "name": "Photoelectron Spectroscopy",
+      "unit": "u1",
+      "description": "Read photoelectron peak energies and intensities to infer electron arrangement and attraction.",
+      "learningObjectives": [
+        "1.6.A"
+      ],
+      "pdfPages": [
+        43
+      ],
+      "printedPages": [
+        36
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=43"
+    },
+    {
+      "id": "1.7",
+      "name": "Periodic Trends",
+      "unit": "u1",
+      "description": "Explain atomic or ionic size, ionization energy, electron affinity, and electronegativity trends.",
+      "learningObjectives": [
+        "1.7.A"
+      ],
+      "pdfPages": [
+        44
+      ],
+      "printedPages": [
+        37
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=44"
+    },
+    {
+      "id": "1.8",
+      "name": "Valence Electrons and Ionic Compounds",
+      "unit": "u1",
+      "description": "Use valence electrons and periodic position to predict ion charges, reactivity, and ionic formulas.",
+      "learningObjectives": [
+        "1.8.A"
+      ],
+      "pdfPages": [
+        45
+      ],
+      "printedPages": [
+        38
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=45"
+    },
+    {
+      "id": "2.1",
+      "name": "Types of Chemical Bonds",
+      "unit": "u2",
+      "description": "Distinguish ionic, covalent, and metallic bonding and relate bond polarity to electronegativity.",
+      "learningObjectives": [
+        "2.1.A"
+      ],
+      "pdfPages": [
+        51,
+        52
+      ],
+      "printedPages": [
+        44,
+        45
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=51"
+    },
+    {
+      "id": "2.2",
+      "name": "Intramolecular Force and Potential Energy",
+      "unit": "u2",
+      "description": "Relate internuclear distance and charge to interaction energy, bond length, bond strength, or lattice strength.",
+      "learningObjectives": [
+        "2.2.A"
+      ],
+      "pdfPages": [
+        53
+      ],
+      "printedPages": [
+        46
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=53"
+    },
+    {
+      "id": "2.3",
+      "name": "Structure of Ionic Solids",
+      "unit": "u2",
+      "description": "Represent the arrangement of cations and anions in an ionic solid.",
+      "learningObjectives": [
+        "2.3.A"
+      ],
+      "pdfPages": [
+        54
+      ],
+      "printedPages": [
+        47
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=54"
+    },
+    {
+      "id": "2.4",
+      "name": "Structure of Metals and Alloys",
+      "unit": "u2",
+      "description": "Represent metallic bonding, delocalized electrons, and substitutional or interstitial alloys.",
+      "learningObjectives": [
+        "2.4.A"
+      ],
+      "pdfPages": [
+        55
+      ],
+      "printedPages": [
+        48
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=55"
+    },
+    {
+      "id": "2.5",
+      "name": "Lewis Diagrams",
+      "unit": "u2",
+      "description": "Construct or interpret Lewis diagrams using valence electrons and octet constraints.",
+      "learningObjectives": [
+        "2.5.A"
+      ],
+      "pdfPages": [
+        56
+      ],
+      "printedPages": [
+        49
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=56"
+    },
+    {
+      "id": "2.6",
+      "name": "Resonance and Formal Charge",
+      "unit": "u2",
+      "description": "Use resonance and formal charge to compare Lewis structures or explain equivalent bonds.",
+      "learningObjectives": [
+        "2.6.A"
+      ],
+      "pdfPages": [
+        57
+      ],
+      "printedPages": [
+        50
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=57"
+    },
+    {
+      "id": "2.7",
+      "name": "VSEPR and Hybridization",
+      "unit": "u2",
+      "description": "Use electron domains to infer geometry, angles, polarity, hybridization, or sigma/pi bonding.",
+      "learningObjectives": [
+        "2.7.A"
+      ],
+      "pdfPages": [
+        58,
+        59
+      ],
+      "printedPages": [
+        51,
+        52
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=58"
+    },
+    {
+      "id": "3.1",
+      "name": "Intermolecular and Interparticle Forces",
+      "unit": "u3",
+      "description": "Explain intermolecular attraction, boiling points, vapor pressure, or related properties from molecular interactions.",
+      "learningObjectives": [
+        "3.1.A"
+      ],
+      "pdfPages": [
+        65,
+        66
+      ],
+      "printedPages": [
+        58,
+        59
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=65"
+    },
+    {
+      "id": "3.2",
+      "name": "Properties of Solids",
+      "unit": "u3",
+      "description": "Explain macroscopic solid properties from ionic, metallic, molecular, or network structures.",
+      "learningObjectives": [
+        "3.2.A"
+      ],
+      "pdfPages": [
+        67,
+        68
+      ],
+      "printedPages": [
+        60,
+        61
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=67"
+    },
+    {
+      "id": "3.3",
+      "name": "Solids, Liquids, and Gases",
+      "unit": "u3",
+      "description": "Represent particle spacing, arrangement, and motion in solid, liquid, and gas phases.",
+      "learningObjectives": [
+        "3.3.A"
+      ],
+      "pdfPages": [
+        69
+      ],
+      "printedPages": [
+        62
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=69"
+    },
+    {
+      "id": "3.4",
+      "name": "Ideal Gas Law",
+      "unit": "u3",
+      "description": "Relate gas pressure, volume, temperature, and amount, including mixtures and partial pressures.",
+      "learningObjectives": [
+        "3.4.A"
+      ],
+      "pdfPages": [
+        70
+      ],
+      "printedPages": [
+        63
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=70"
+    },
+    {
+      "id": "3.5",
+      "name": "Kinetic Molecular Theory",
+      "unit": "u3",
+      "description": "Use particle motion and speed distributions to explain gas properties or temperature effects.",
+      "learningObjectives": [
+        "3.5.A"
+      ],
+      "pdfPages": [
+        71
+      ],
+      "printedPages": [
+        64
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=71"
+    },
+    {
+      "id": "3.6",
+      "name": "Deviation from Ideal Gas Law",
+      "unit": "u3",
+      "description": "Explain real-gas departures from ideal behavior using particle volume and attractions.",
+      "learningObjectives": [
+        "3.6.A"
+      ],
+      "pdfPages": [
+        72
+      ],
+      "printedPages": [
+        65
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=72"
+    },
+    {
+      "id": "3.7",
+      "name": "Solutions and Mixtures",
+      "unit": "u3",
+      "description": "Calculate solution molarity, amount, volume, or dilution.",
+      "learningObjectives": [
+        "3.7.A"
+      ],
+      "pdfPages": [
+        73
+      ],
+      "printedPages": [
+        66
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=73"
+    },
+    {
+      "id": "3.8",
+      "name": "Representations of Solutions",
+      "unit": "u3",
+      "description": "Interpret or draw particle diagrams of solutions, including concentration and solute-solvent orientation.",
+      "learningObjectives": [
+        "3.8.A"
+      ],
+      "pdfPages": [
+        74
+      ],
+      "printedPages": [
+        67
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=74"
+    },
+    {
+      "id": "3.9",
+      "name": "Separation of Solutions and Mixtures",
+      "unit": "u3",
+      "description": "Explain separation methods using differences in intermolecular interactions.",
+      "learningObjectives": [
+        "3.9.A"
+      ],
+      "pdfPages": [
+        75
+      ],
+      "printedPages": [
+        68
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=75"
+    },
+    {
+      "id": "3.10",
+      "name": "Solubility",
+      "unit": "u3",
+      "description": "Explain which solutes dissolve in which solvents using competing intermolecular interactions.",
+      "learningObjectives": [
+        "3.10.A"
+      ],
+      "pdfPages": [
+        76
+      ],
+      "printedPages": [
+        69
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=76"
+    },
+    {
+      "id": "3.11",
+      "name": "Spectroscopy and the Electromagnetic Spectrum",
+      "unit": "u3",
+      "description": "Connect spectral regions with rotational, vibrational, and electronic transitions.",
+      "learningObjectives": [
+        "3.11.A"
+      ],
+      "pdfPages": [
+        77
+      ],
+      "printedPages": [
+        70
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=77"
+    },
+    {
+      "id": "3.12",
+      "name": "Properties of Photons",
+      "unit": "u3",
+      "description": "Relate photon energy, frequency, wavelength, and electronic transitions.",
+      "learningObjectives": [
+        "3.12.A"
+      ],
+      "pdfPages": [
+        78
+      ],
+      "printedPages": [
+        71
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=78"
+    },
+    {
+      "id": "3.13",
+      "name": "Beer-Lambert Law",
+      "unit": "u3",
+      "description": "Use absorbance, path length, and concentration relationships, including calibration curves.",
+      "learningObjectives": [
+        "3.13.A"
+      ],
+      "pdfPages": [
+        79
+      ],
+      "printedPages": [
+        72
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=79"
+    },
+    {
+      "id": "4.1",
+      "name": "Introduction for Reactions",
+      "unit": "u4",
+      "description": "Identify observations that are evidence of a physical or chemical change.",
+      "learningObjectives": [
+        "4.1.A"
+      ],
+      "pdfPages": [
+        85
+      ],
+      "printedPages": [
+        78
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=85"
+    },
+    {
+      "id": "4.2",
+      "name": "Net Ionic Equations",
+      "unit": "u4",
+      "description": "Write or balance molecular, ionic, or net ionic equations and omit spectators.",
+      "learningObjectives": [
+        "4.2.A"
+      ],
+      "pdfPages": [
+        86
+      ],
+      "printedPages": [
+        79
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=86"
+    },
+    {
+      "id": "4.3",
+      "name": "Representations of Reactions",
+      "unit": "u4",
+      "description": "Translate between reaction equations and particulate representations.",
+      "learningObjectives": [
+        "4.3.A"
+      ],
+      "pdfPages": [
+        87
+      ],
+      "printedPages": [
+        80
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=87"
+    },
+    {
+      "id": "4.4",
+      "name": "Physical and Chemical Changes",
+      "unit": "u4",
+      "description": "Explain physical versus chemical changes by which interactions or bonds change.",
+      "learningObjectives": [
+        "4.4.A"
+      ],
+      "pdfPages": [
+        88
+      ],
+      "printedPages": [
+        81
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=88"
+    },
+    {
+      "id": "4.5",
+      "name": "Stoichiometry",
+      "unit": "u4",
+      "description": "Use reaction coefficients to calculate reactant/product quantities, limiting reagents, or yield.",
+      "learningObjectives": [
+        "4.5.A"
+      ],
+      "pdfPages": [
+        89
+      ],
+      "printedPages": [
+        82
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=89"
+    },
+    {
+      "id": "4.6",
+      "name": "Introduction to Titration",
+      "unit": "u4",
+      "description": "Use titration equivalence and reaction stoichiometry to determine amounts or concentration.",
+      "learningObjectives": [
+        "4.6.A"
+      ],
+      "pdfPages": [
+        90
+      ],
+      "printedPages": [
+        83
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=90"
+    },
+    {
+      "id": "4.7",
+      "name": "Types of Chemical Reactions",
+      "unit": "u4",
+      "description": "Identify precipitation, acid-base, or redox reactions and oxidation-state changes.",
+      "learningObjectives": [
+        "4.7.A"
+      ],
+      "pdfPages": [
+        91,
+        92
+      ],
+      "printedPages": [
+        84,
+        85
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=91"
+    },
+    {
+      "id": "4.8",
+      "name": "Introduction to Acid-Base Reactions",
+      "unit": "u4",
+      "description": "Identify proton donors/acceptors and conjugate acid-base pairs.",
+      "learningObjectives": [
+        "4.8.A"
+      ],
+      "pdfPages": [
+        93
+      ],
+      "printedPages": [
+        86
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=93"
+    },
+    {
+      "id": "4.9",
+      "name": "Oxidation-Reduction (Redox) Reactions",
+      "unit": "u4",
+      "description": "Construct balanced redox equations using half-reactions and electron conservation.",
+      "learningObjectives": [
+        "4.9.A"
+      ],
+      "pdfPages": [
+        94
+      ],
+      "printedPages": [
+        87
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=94"
+    },
+    {
+      "id": "5.1",
+      "name": "Reaction Rates",
+      "unit": "u5",
+      "description": "Relate reaction rates to measured changes, stoichiometry, concentration, or experimental conditions.",
+      "learningObjectives": [
+        "5.1.A"
+      ],
+      "pdfPages": [
+        101
+      ],
+      "printedPages": [
+        94
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=101"
+    },
+    {
+      "id": "5.2",
+      "name": "Introduction to Rate Law",
+      "unit": "u5",
+      "description": "Infer rate laws, reaction orders, and rate constants from initial-rate data.",
+      "learningObjectives": [
+        "5.2.A"
+      ],
+      "pdfPages": [
+        102
+      ],
+      "printedPages": [
+        95
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=102"
+    },
+    {
+      "id": "5.3",
+      "name": "Concentration Changes Over Time",
+      "unit": "u5",
+      "description": "Use time-dependent concentration plots, integrated laws, or chemical half-lives.",
+      "learningObjectives": [
+        "5.3.A"
+      ],
+      "pdfPages": [
+        103,
+        104
+      ],
+      "printedPages": [
+        96,
+        97
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=103"
+    },
+    {
+      "id": "5.4",
+      "name": "Elementary Reactions",
+      "unit": "u5",
+      "description": "Derive the rate law of a single elementary step from its molecularity.",
+      "learningObjectives": [
+        "5.4.A"
+      ],
+      "pdfPages": [
+        105
+      ],
+      "printedPages": [
+        98
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=105"
+    },
+    {
+      "id": "5.5",
+      "name": "Collision Model",
+      "unit": "u5",
+      "description": "Explain reaction rates through collision frequency, orientation, and sufficient collision energy.",
+      "learningObjectives": [
+        "5.5.A"
+      ],
+      "pdfPages": [
+        106
+      ],
+      "printedPages": [
+        99
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=106"
+    },
+    {
+      "id": "5.6",
+      "name": "Reaction Energy Profile",
+      "unit": "u5",
+      "description": "Interpret activation energy and overall energy change on a single-step reaction profile.",
+      "learningObjectives": [
+        "5.6.A"
+      ],
+      "pdfPages": [
+        107
+      ],
+      "printedPages": [
+        100
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=107"
+    },
+    {
+      "id": "5.7",
+      "name": "Introduction to Reaction Mechanisms",
+      "unit": "u5",
+      "description": "Identify intermediates, catalysts, and net reactions in a multistep mechanism.",
+      "learningObjectives": [
+        "5.7.A"
+      ],
+      "pdfPages": [
+        108
+      ],
+      "printedPages": [
+        101
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=108"
+    },
+    {
+      "id": "5.8",
+      "name": "Reaction Mechanism and Rate Law",
+      "unit": "u5",
+      "description": "Derive or test rate laws for mechanisms with the first step rate-limiting.",
+      "learningObjectives": [
+        "5.8.A"
+      ],
+      "pdfPages": [
+        109
+      ],
+      "printedPages": [
+        102
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=109"
+    },
+    {
+      "id": "5.9",
+      "name": "Pre-Equilibrium Approximation",
+      "unit": "u5",
+      "description": "Derive rate laws when a fast reversible step precedes the slow step.",
+      "learningObjectives": [
+        "5.9.A"
+      ],
+      "pdfPages": [
+        110
+      ],
+      "printedPages": [
+        103
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=110"
+    },
+    {
+      "id": "5.10",
+      "name": "Multistep Reaction Energy Profile",
+      "unit": "u5",
+      "description": "Interpret intermediates and activation barriers on multistep reaction profiles.",
+      "learningObjectives": [
+        "5.10.A"
+      ],
+      "pdfPages": [
+        111
+      ],
+      "printedPages": [
+        104
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=111"
+    },
+    {
+      "id": "5.11",
+      "name": "Catalysis",
+      "unit": "u5",
+      "description": "Explain how catalysts provide a different mechanism and alter reaction rates.",
+      "learningObjectives": [
+        "5.11.A"
+      ],
+      "pdfPages": [
+        112
+      ],
+      "printedPages": [
+        105
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=112"
+    },
+    {
+      "id": "6.1",
+      "name": "Endothermic and Exothermic Processes",
+      "unit": "u6",
+      "description": "Infer endothermic/exothermic behavior and energy direction from observations.",
+      "learningObjectives": [
+        "6.1.A"
+      ],
+      "pdfPages": [
+        119
+      ],
+      "printedPages": [
+        112
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=119"
+    },
+    {
+      "id": "6.2",
+      "name": "Energy Diagrams",
+      "unit": "u6",
+      "description": "Represent relative reactant/product energies for physical or chemical processes.",
+      "learningObjectives": [
+        "6.2.A"
+      ],
+      "pdfPages": [
+        120
+      ],
+      "printedPages": [
+        113
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=120"
+    },
+    {
+      "id": "6.3",
+      "name": "Heat Transfer and Thermal Equilibrium",
+      "unit": "u6",
+      "description": "Explain heat transfer through collisions until thermal equilibrium is reached.",
+      "learningObjectives": [
+        "6.3.A"
+      ],
+      "pdfPages": [
+        121
+      ],
+      "printedPages": [
+        114
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=121"
+    },
+    {
+      "id": "6.4",
+      "name": "Heat Capacity and Calorimetry",
+      "unit": "u6",
+      "description": "Calculate heating/cooling energy from heat capacity, mass, and temperature change; analyze calorimetry.",
+      "learningObjectives": [
+        "6.4.A"
+      ],
+      "pdfPages": [
+        122,
+        123
+      ],
+      "printedPages": [
+        115,
+        116
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=122"
+    },
+    {
+      "id": "6.5",
+      "name": "Energy of Phase Changes",
+      "unit": "u6",
+      "description": "Calculate phase-transition energy using amount and fusion/vaporization enthalpy; interpret heating curves.",
+      "learningObjectives": [
+        "6.5.A"
+      ],
+      "pdfPages": [
+        124
+      ],
+      "printedPages": [
+        117
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=124"
+    },
+    {
+      "id": "6.6",
+      "name": "Introduction to Enthalpy of Reaction",
+      "unit": "u6",
+      "description": "Relate reaction heat to molar reaction enthalpy and reacting amount.",
+      "learningObjectives": [
+        "6.6.A"
+      ],
+      "pdfPages": [
+        125
+      ],
+      "printedPages": [
+        118
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=125"
+    },
+    {
+      "id": "6.7",
+      "name": "Bond Enthalpies",
+      "unit": "u6",
+      "description": "Calculate reaction enthalpy using energies of bonds broken and formed.",
+      "learningObjectives": [
+        "6.7.A"
+      ],
+      "pdfPages": [
+        126
+      ],
+      "printedPages": [
+        119
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=126"
+    },
+    {
+      "id": "6.8",
+      "name": "Enthalpy of Formation",
+      "unit": "u6",
+      "description": "Calculate reaction enthalpy using standard formation enthalpies.",
+      "learningObjectives": [
+        "6.8.A"
+      ],
+      "pdfPages": [
+        127
+      ],
+      "printedPages": [
+        120
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=127"
+    },
+    {
+      "id": "6.9",
+      "name": "Hess’s Law",
+      "unit": "u6",
+      "description": "Combine or reverse reaction steps and add their enthalpy changes using Hess's law.",
+      "learningObjectives": [
+        "6.9.A",
+        "6.9.B"
+      ],
+      "pdfPages": [
+        128
+      ],
+      "printedPages": [
+        121
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=128"
+    },
+    {
+      "id": "7.1",
+      "name": "Introduction to Equilibrium",
+      "unit": "u7",
+      "description": "Describe dynamic equilibrium and connect reversibility to observations.",
+      "learningObjectives": [
+        "7.1.A"
+      ],
+      "pdfPages": [
+        135
+      ],
+      "printedPages": [
+        128
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=135"
+    },
+    {
+      "id": "7.2",
+      "name": "Direction of Reversible Reactions",
+      "unit": "u7",
+      "description": "Predict net reaction direction from forward and reverse rates.",
+      "learningObjectives": [
+        "7.2.A"
+      ],
+      "pdfPages": [
+        136
+      ],
+      "printedPages": [
+        129
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=136"
+    },
+    {
+      "id": "7.3",
+      "name": "Reaction Quotient and Equilibrium Constant",
+      "unit": "u7",
+      "description": "Write and interpret K or Q expressions; omit pure solids and liquids.",
+      "learningObjectives": [
+        "7.3.A"
+      ],
+      "pdfPages": [
+        137,
+        138
+      ],
+      "printedPages": [
+        130,
+        131
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=137"
+    },
+    {
+      "id": "7.4",
+      "name": "Calculating the Equilibrium Constant",
+      "unit": "u7",
+      "description": "Calculate equilibrium constants from measured equilibrium concentrations or pressures.",
+      "learningObjectives": [
+        "7.4.A"
+      ],
+      "pdfPages": [
+        139
+      ],
+      "printedPages": [
+        132
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=139"
+    },
+    {
+      "id": "7.5",
+      "name": "Magnitude of the Equilibrium Constant",
+      "unit": "u7",
+      "description": "Use the size of K to infer whether reactants or products predominate.",
+      "learningObjectives": [
+        "7.5.A"
+      ],
+      "pdfPages": [
+        140
+      ],
+      "printedPages": [
+        133
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=140"
+    },
+    {
+      "id": "7.6",
+      "name": "Properties of the Equilibrium Constant",
+      "unit": "u7",
+      "description": "Transform K when reversing, scaling, or adding chemical equations.",
+      "learningObjectives": [
+        "7.6.A"
+      ],
+      "pdfPages": [
+        141
+      ],
+      "printedPages": [
+        134
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=141"
+    },
+    {
+      "id": "7.7",
+      "name": "Calculating Equilibrium Concentrations",
+      "unit": "u7",
+      "description": "Calculate equilibrium concentrations or pressures from initial conditions and K.",
+      "learningObjectives": [
+        "7.7.A"
+      ],
+      "pdfPages": [
+        142
+      ],
+      "printedPages": [
+        135
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=142"
+    },
+    {
+      "id": "7.8",
+      "name": "Representations of Equilibrium",
+      "unit": "u7",
+      "description": "Interpret or construct particulate representations of equilibrium composition.",
+      "learningObjectives": [
+        "7.8.A"
+      ],
+      "pdfPages": [
+        143
+      ],
+      "printedPages": [
+        136
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=143"
+    },
+    {
+      "id": "7.9",
+      "name": "Introduction to Le Châtelier’s Principle",
+      "unit": "u7",
+      "description": "Predict equilibrium shifts due to concentration, temperature, or volume changes.",
+      "learningObjectives": [
+        "7.9.A"
+      ],
+      "pdfPages": [
+        144
+      ],
+      "printedPages": [
+        137
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=144"
+    },
+    {
+      "id": "7.10",
+      "name": "Reaction Quotient and Le Châtelier’s Principle",
+      "unit": "u7",
+      "description": "Use comparison of Q with K to predict or explain reaction direction after disturbance.",
+      "learningObjectives": [
+        "7.10.A"
+      ],
+      "pdfPages": [
+        145
+      ],
+      "printedPages": [
+        138
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=145"
+    },
+    {
+      "id": "7.11",
+      "name": "Introduction to Solubility Equilibria",
+      "unit": "u7",
+      "description": "Relate molar solubility and Ksp; analyze precipitation using ionic concentration products.",
+      "learningObjectives": [
+        "7.11.A"
+      ],
+      "pdfPages": [
+        146
+      ],
+      "printedPages": [
+        139
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=146"
+    },
+    {
+      "id": "7.12",
+      "name": "Common-Ion Effect",
+      "unit": "u7",
+      "description": "Explain or calculate how a common ion changes salt solubility.",
+      "learningObjectives": [
+        "7.12.A"
+      ],
+      "pdfPages": [
+        147
+      ],
+      "printedPages": [
+        140
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=147"
+    },
+    {
+      "id": "8.1",
+      "name": "Introduction to Acids and Bases",
+      "unit": "u8",
+      "description": "Relate water autoionization, Kw, pH, pOH, and neutral conditions.",
+      "learningObjectives": [
+        "8.1.A"
+      ],
+      "pdfPages": [
+        153
+      ],
+      "printedPages": [
+        146
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=153"
+    },
+    {
+      "id": "8.2",
+      "name": "pH and pOH of Strong Acids and Bases",
+      "unit": "u8",
+      "description": "Calculate pH or pOH for strong-acid or strong-base solutions.",
+      "learningObjectives": [
+        "8.2.A"
+      ],
+      "pdfPages": [
+        154
+      ],
+      "printedPages": [
+        147
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=154"
+    },
+    {
+      "id": "8.3",
+      "name": "Weak Acid and Base Equilibria",
+      "unit": "u8",
+      "description": "Use Ka or Kb to find weak-acid/base equilibrium composition, pH, or percent ionization.",
+      "learningObjectives": [
+        "8.3.A"
+      ],
+      "pdfPages": [
+        155,
+        156
+      ],
+      "printedPages": [
+        148,
+        149
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=155"
+    },
+    {
+      "id": "8.4",
+      "name": "Acid-Base Reactions and Buffers",
+      "unit": "u8",
+      "description": "Determine major species and concentrations after mixing strong/weak acids and bases, including buffer formation.",
+      "learningObjectives": [
+        "8.4.A"
+      ],
+      "pdfPages": [
+        157,
+        158
+      ],
+      "printedPages": [
+        150,
+        151
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=157"
+    },
+    {
+      "id": "8.5",
+      "name": "Acid-Base Titrations",
+      "unit": "u8",
+      "description": "Interpret acid-base titration curves, equivalence points, half-equivalence, indicators, and species present.",
+      "learningObjectives": [
+        "8.5.A"
+      ],
+      "pdfPages": [
+        159,
+        160
+      ],
+      "printedPages": [
+        152,
+        153
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=159"
+    },
+    {
+      "id": "8.6",
+      "name": "Molecular Structure of Acids and Bases",
+      "unit": "u8",
+      "description": "Explain acid/base strength using molecular structure, bonds, polarity, or resonance.",
+      "learningObjectives": [
+        "8.6.A"
+      ],
+      "pdfPages": [
+        161
+      ],
+      "printedPages": [
+        154
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=161"
+    },
+    {
+      "id": "8.7",
+      "name": "pH and pKa",
+      "unit": "u8",
+      "description": "Use pH relative to pKa to identify the predominant protonation state.",
+      "learningObjectives": [
+        "8.7.A"
+      ],
+      "pdfPages": [
+        162
+      ],
+      "printedPages": [
+        155
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=162"
+    },
+    {
+      "id": "8.8",
+      "name": "Properties of Buffers",
+      "unit": "u8",
+      "description": "Explain how a conjugate acid-base pair resists pH change through reactions with added acid/base.",
+      "learningObjectives": [
+        "8.8.A"
+      ],
+      "pdfPages": [
+        163
+      ],
+      "printedPages": [
+        156
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=163"
+    },
+    {
+      "id": "8.9",
+      "name": "Henderson-Hasselbalch Equation",
+      "unit": "u8",
+      "description": "Determine buffer pH from pKa and conjugate-pair concentrations.",
+      "learningObjectives": [
+        "8.9.A"
+      ],
+      "pdfPages": [
+        164
+      ],
+      "printedPages": [
+        157
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=164"
+    },
+    {
+      "id": "8.10",
+      "name": "Buffer Capacity",
+      "unit": "u8",
+      "description": "Compare buffer capacities using amounts and ratios of acid/base components.",
+      "learningObjectives": [
+        "8.10.A"
+      ],
+      "pdfPages": [
+        165
+      ],
+      "printedPages": [
+        158
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=165"
+    },
+    {
+      "id": "8.11",
+      "name": "pH and Solubility",
+      "unit": "u8",
+      "description": "Predict qualitatively how pH changes the solubility of a salt with acid/base-active ions.",
+      "learningObjectives": [
+        "8.11.A"
+      ],
+      "pdfPages": [
+        166
+      ],
+      "printedPages": [
+        159
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=166"
+    },
+    {
+      "id": "9.1",
+      "name": "Introduction to Entropy",
+      "unit": "u9",
+      "description": "Predict entropy trends or signs of entropy changes from particle dispersal.",
+      "learningObjectives": [
+        "9.1.A"
+      ],
+      "pdfPages": [
+        173
+      ],
+      "printedPages": [
+        166
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=173"
+    },
+    {
+      "id": "9.2",
+      "name": "Absolute Entropy and Entropy Change",
+      "unit": "u9",
+      "description": "Calculate reaction entropy using standard molar entropies.",
+      "learningObjectives": [
+        "9.2.A"
+      ],
+      "pdfPages": [
+        174
+      ],
+      "printedPages": [
+        167
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=174"
+    },
+    {
+      "id": "9.3",
+      "name": "Gibbs Free Energy and Thermodynamic Favorability",
+      "unit": "u9",
+      "description": "Use Gibbs free energy, enthalpy, entropy, and temperature to determine thermodynamic favorability.",
+      "learningObjectives": [
+        "9.3.A"
+      ],
+      "pdfPages": [
+        175,
+        176
+      ],
+      "printedPages": [
+        168,
+        169
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=175"
+    },
+    {
+      "id": "9.4",
+      "name": "Thermodynamic and Kinetic Control",
+      "unit": "u9",
+      "description": "Distinguish thermodynamic favorability from the kinetic rate of a process.",
+      "learningObjectives": [
+        "9.4.A"
+      ],
+      "pdfPages": [
+        177
+      ],
+      "printedPages": [
+        170
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=177"
+    },
+    {
+      "id": "9.5",
+      "name": "Free Energy and Equilibrium",
+      "unit": "u9",
+      "description": "Relate standard Gibbs free energy to equilibrium constant and equilibrium composition.",
+      "learningObjectives": [
+        "9.5.A"
+      ],
+      "pdfPages": [
+        178
+      ],
+      "printedPages": [
+        171
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=178"
+    },
+    {
+      "id": "9.6",
+      "name": "Free Energy of Dissolution",
+      "unit": "u9",
+      "description": "Explain salt dissolution favorability using competing enthalpy and entropy contributions.",
+      "learningObjectives": [
+        "9.6.A"
+      ],
+      "pdfPages": [
+        179
+      ],
+      "printedPages": [
+        172
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=179"
+    },
+    {
+      "id": "9.7",
+      "name": "Coupled Reactions",
+      "unit": "u9",
+      "description": "Explain how coupling or external energy drives a thermodynamically unfavorable process.",
+      "learningObjectives": [
+        "9.7.A"
+      ],
+      "pdfPages": [
+        180
+      ],
+      "printedPages": [
+        173
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=180"
+    },
+    {
+      "id": "9.8",
+      "name": "Galvanic (Voltaic) and Electrolytic Cells",
+      "unit": "u9",
+      "description": "Analyze electrochemical cell components, half-cell reactions, electron/ion flow, and operation.",
+      "learningObjectives": [
+        "9.8.A"
+      ],
+      "pdfPages": [
+        181
+      ],
+      "printedPages": [
+        174
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=181"
+    },
+    {
+      "id": "9.9",
+      "name": "Cell Potential and Free Energy",
+      "unit": "u9",
+      "description": "Relate standard cell potential, Gibbs free energy, and electrochemical favorability.",
+      "learningObjectives": [
+        "9.9.A"
+      ],
+      "pdfPages": [
+        182
+      ],
+      "printedPages": [
+        175
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=182"
+    },
+    {
+      "id": "9.10",
+      "name": "Cell Potential Under Nonstandard Conditions",
+      "unit": "u9",
+      "description": "Explain qualitative concentration and nonstandard-condition effects on cell potential.",
+      "learningObjectives": [
+        "9.10.A"
+      ],
+      "pdfPages": [
+        183,
+        184
+      ],
+      "printedPages": [
+        176,
+        177
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=183"
+    },
+    {
+      "id": "9.11",
+      "name": "Electrolysis and Faraday’s Law",
+      "unit": "u9",
+      "description": "Calculate charge, current, time, or deposited amount in electrolysis using electron stoichiometry.",
+      "learningObjectives": [
+        "9.11.A"
+      ],
+      "pdfPages": [
+        185
+      ],
+      "printedPages": [
+        178
+      ],
+      "sourceUrl": "https://apcentral.collegeboard.org/media/pdf/ap-chemistry-course-and-exam-description.pdf#page=185"
+    }
+  ]
+}

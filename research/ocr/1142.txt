@@ -1,0 +1,52 @@
+Questions 36-38 refer to the following information.
+
+H H O H H O H H O H H oO
+1 tl I tod I | dt t tod
+-o-§ + y-F-§ —o V9 SEN ee + H—O—H
+hoi hoon hon h O—w
+Peptide Bond
+
+Two molecules of the amino acid glycine join through the formation of a peptide bond, as shown above. The
+thermodynamic data for the reaction are listed in the following table.
+
+AG 55 AA 359 AS3o
++15 ki/mol,,, | +12kI/mol,,, | —10JAK mol,,,,)
+36. Under which of the following temperature 38. Based on the thermodynamic data, which of the
+
+conditions is the reaction thermodynamically following is true at 298 K?
+
+2
+favored? (A) K,,=0
+(A) It is only favored at high temperatures. (B) 0<K,, <1
+(B) Itis only favored at low temperatures. © K,,= H
+(C) Itis favored at all temperatures. D n. 1
+(D) It is not favored at any temperature. @) Keq>
+
+Bond Bond Energy (kJ/mol)
+
+cD 360 Solution | Solute | K,, at 25°C
+
+N-H 390 x AgBr | 5.0 1078
+
+O-H 460 Y AgCl 1.8 x 101°
+
+Zz Agl 8.3 x 1077
+37. Based on the bond energies listed in the table
+
+above, which of the following is closest to the 39. Three saturated solutions (X, Y, and Z) are
+bond energy of the C-N bond? prepared at 25°C. Based on the information in
+(A) 200 kJ/mol the table above, which of the following lists the
+(B) 300 kJ/mol solutions in order of increasing [Ag*] ?
+
+(C) 400 kJ/mol
+
+(D) 500 kJ/mol (A)X<Z<Y
+
+(B) Y<X<Z
+()Z<Y<X
+OZ 2k ='¥
+
+Unauthorized copying or reuse of
+any part of this page is illegal.
+
+GO ON TO THE NEXT PAGE.

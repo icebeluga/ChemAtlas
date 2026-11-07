@@ -1,0 +1,20 @@
+Container A B c D
+
+Pressure 2.0 atm 1.0 atm 1.5 atm 3.0 atm
+Temperature 200K 300K 300K 200K
+Volume 1.0L 2.0L 10L 0.50L
+
+39. Four containers each hold a sample of O>(g). Based on the information in the table, which container has the
+largest number of O2(g) molecules?
+
+(A) A
+(B) B
+Oc
+(@) D
+
+ey al -26- GO ON TO THE NEXT PAGE.
+
+I
+© studocu messages.pdf_cover_qr_code_label
+
+messages.downloaded_by

@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "mcq-2008-1-29",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Compare ease of removing electrons across periodic families.",
+    "status": "classified",
+    "evidencePages": [
+      29
+    ]
+  },
+  {
+    "id": "mcq-2008-2-29",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify the element family whose members are radioactive.",
+    "status": "legacy",
+    "evidencePages": [
+      29
+    ],
+    "legacyConcepts": [
+      "Nuclear chemistry"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Nuclear chemistry."
+  },
+  {
+    "id": "mcq-2008-3-29",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8"
+    ],
+    "rationale": "Use valence-shell patterns to identify elements likely to gain electrons and form anions.",
+    "status": "classified",
+    "evidencePages": [
+      29
+    ]
+  },
+  {
+    "id": "mcq-2008-4-31",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5"
+    ],
+    "rationale": "Locate the equivalence point on a weak-acid/strong-base titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-5-31",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5"
+    ],
+    "rationale": "Identify the excess-titrant region where pH approaches the added strong base.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-6-31",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Locate half-equivalence where weak acid and conjugate base concentrations are equal.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-7-31",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Infer molecular geometry from bonding and lone pairs.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-8-31",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1"
+    ],
+    "rationale": "Recognize complete ionization of a strong acid among molecular gases dissolved in water.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-9-31",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare molecular speeds and relative effusion rates using molecular masses at equal temperature.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-10-31",
+    "primaryTopic": "9.2",
+    "relatedTopics": [
+      "9.2"
+    ],
+    "rationale": "Apply the zero-entropy reference for a perfect crystal at absolute zero.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-11-31",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5"
+    ],
+    "rationale": "Connect temperature-dependent reaction rates to activation energy.",
+    "status": "classified",
+    "evidencePages": [
+      31
+    ]
+  },
+  {
+    "id": "mcq-2008-12-32",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3"
+    ],
+    "rationale": "Determine enthalpy and entropy signs that make Gibbs free energy negative at all temperatures.",
+    "status": "classified",
+    "evidencePages": [
+      32
+    ]
+  },
+  {
+    "id": "mcq-2008-13-32",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "9.1"
+    ],
+    "rationale": "Identify energy absorption and increased dispersal during liquid-to-gas phase change.",
+    "status": "classified",
+    "evidencePages": [
+      32
+    ]
+  },
+  {
+    "id": "mcq-2008-14-32",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "9.1"
+    ],
+    "rationale": "Identify heat release and the entropy trend for combustion producing gaseous products.",
+    "status": "classified",
+    "evidencePages": [
+      32
+    ]
+  },
+  {
+    "id": "mcq-2008-15-32",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Recognize precipitation as formation of an insoluble solid from aqueous ions.",
+    "status": "classified",
+    "evidencePages": [
+      32
+    ]
+  },
+  {
+    "id": "mcq-2008-16-32",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify a Lewis acid-base reaction forming a coordination complex.",
+    "status": "legacy",
+    "evidencePages": [
+      32
+    ],
+    "legacyConcepts": [
+      "Coordination chemistry and Lewis acid-base complexes"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Coordination chemistry and Lewis acid-base complexes."
+  },
+  {
+    "id": "mcq-2008-17-32",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify electron transfer in a synthesis reaction from oxidation-state changes.",
+    "status": "classified",
+    "evidencePages": [
+      32
+    ]
+  },
+  {
+    "id": "mcq-2008-19-33",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Count electrons in ions to identify isoelectronic species.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-20-33",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Identify dispersion forces between nonpolar methane molecules.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-21-33",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Distinguish an excited electron configuration from a ground-state configuration.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-22-33",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Combine polar bonds with molecular symmetry to determine overall polarity.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-23-33",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8"
+    ],
+    "rationale": "Recognize common charges of metal ions.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-24-33",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Determine protons, neutrons, and electrons from atomic number and isotope mass number.",
+    "status": "classified",
+    "evidencePages": [
+      33
+    ]
+  },
+  {
+    "id": "mcq-2008-25-34",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Set up pressure using PV=nRT and temperature in kelvin.",
+    "status": "classified",
+    "evidencePages": [
+      34
+    ]
+  },
+  {
+    "id": "mcq-2008-27-34",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Balance nuclear reactions by mass and atomic numbers.",
+    "status": "legacy",
+    "evidencePages": [
+      34
+    ],
+    "legacyConcepts": [
+      "Nuclear reaction balancing"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Nuclear reaction balancing."
+  },
+  {
+    "id": "mcq-2008-28-35",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5"
+    ],
+    "rationale": "Use molecular structures and valence to distinguish single from multiple covalent bonds.",
+    "status": "classified",
+    "evidencePages": [
+      35
+    ]
+  },
+  {
+    "id": "mcq-2008-29-35",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Calculate solute moles per kilogram of solvent.",
+    "status": "legacy",
+    "evidencePages": [
+      35
+    ],
+    "legacyConcepts": [
+      "Molality"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Molality."
+  },
+  {
+    "id": "mcq-2008-31-35",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Convert mass percentages into the simplest atom ratio of a compound.",
+    "status": "classified",
+    "evidencePages": [
+      35
+    ]
+  },
+  {
+    "id": "mcq-2008-32-35",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3"
+    ],
+    "rationale": "Determine first-order half-life from repeated fractional decreases in reactant pressure.",
+    "status": "classified",
+    "evidencePages": [
+      35
+    ]
+  },
+  {
+    "id": "mcq-2008-33-36",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Identify the limiting reactant and calculate excess reactant remaining.",
+    "status": "classified",
+    "evidencePages": [
+      36
+    ]
+  },
+  {
+    "id": "mcq-2008-36-36",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1"
+    ],
+    "rationale": "Convert sample mass to molecules and then number of carbon atoms.",
+    "status": "classified",
+    "evidencePages": [
+      36
+    ]
+  },
+  {
+    "id": "mcq-2008-37-36",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2"
+    ],
+    "rationale": "Recognize silicon dioxide as a covalent-network solid.",
+    "status": "classified",
+    "evidencePages": [
+      36
+    ]
+  },
+  {
+    "id": "mcq-2008-38-37",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Use conservation of solute during dilution to calculate stock solution volume.",
+    "status": "classified",
+    "evidencePages": [
+      37
+    ]
+  },
+  {
+    "id": "mcq-2008-39-37",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Use observed precipitation comparisons to identify the insoluble ionic product.",
+    "status": "classified",
+    "evidencePages": [
+      37
+    ]
+  },
+  {
+    "id": "mcq-2008-40-37",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare dispersion force strength to explain melting-point differences.",
+    "status": "classified",
+    "evidencePages": [
+      37
+    ]
+  },
+  {
+    "id": "mcq-2008-42-39",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Calculate mole fractions and partial pressures in an ideal-gas mixture.",
+    "status": "classified",
+    "evidencePages": [
+      39
+    ]
+  },
+  {
+    "id": "mcq-2008-43-39",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3"
+    ],
+    "rationale": "Relate boiling to equality of vapor pressure and external pressure.",
+    "status": "classified",
+    "evidencePages": [
+      39
+    ]
+  },
+  {
+    "id": "mcq-2008-46-39",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Express solution composition as solute mole fraction.",
+    "status": "classified",
+    "evidencePages": [
+      39
+    ]
+  },
+  {
+    "id": "mcq-2008-47-40",
+    "primaryTopic": "6.3",
+    "relatedTopics": [
+      "6.3"
+    ],
+    "rationale": "Explain dilution safety through heat transfer into the larger water sample.",
+    "status": "classified",
+    "evidencePages": [
+      40
+    ]
+  },
+  {
+    "id": "mcq-2008-48-40",
+    "primaryTopic": "4.8",
+    "relatedTopics": [
+      "4.8"
+    ],
+    "rationale": "Identify a conjugate acid by addition of a proton.",
+    "status": "classified",
+    "evidencePages": [
+      40
+    ]
+  },
+  {
+    "id": "mcq-2008-49-40",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10"
+    ],
+    "rationale": "Identify relative solubility of ionic salts in water.",
+    "status": "classified",
+    "evidencePages": [
+      40
+    ]
+  },
+  {
+    "id": "mcq-2008-51-40",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6"
+    ],
+    "rationale": "Identify conditions minimizing intermolecular attraction and finite-particle-volume deviations.",
+    "status": "classified",
+    "evidencePages": [
+      40
+    ]
+  },
+  {
+    "id": "mcq-2008-52-40",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Distinguish volume-dependent molarity from other composition measures.",
+    "status": "classified",
+    "evidencePages": [
+      40
+    ]
+  },
+  {
+    "id": "mcq-2008-53-41",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Identify the volume measurement needed to determine solution molarity.",
+    "status": "classified",
+    "evidencePages": [
+      41
+    ]
+  },
+  {
+    "id": "mcq-2008-54-41",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Calculate solvent vapor-pressure lowering from solute mole fraction.",
+    "status": "legacy",
+    "evidencePages": [
+      41
+    ],
+    "legacyConcepts": [
+      "Colligative properties and Raoult’s law"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Colligative properties and Raoult’s law."
+  },
+  {
+    "id": "mcq-2008-56-41",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare polarizability and dispersion-force strength of gaseous species.",
+    "status": "classified",
+    "evidencePages": [
+      41
+    ]
+  },
+  {
+    "id": "mcq-2008-58-41",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Calculate solution molarity and recognize it is unchanged in a smaller aliquot.",
+    "status": "classified",
+    "evidencePages": [
+      41
+    ]
+  },
+  {
+    "id": "mcq-2008-60-42",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Explain precipitate dissolution through formation of an ammine complex.",
+    "status": "legacy",
+    "evidencePages": [
+      42
+    ],
+    "legacyConcepts": [
+      "Coordination complex formation"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Coordination complex formation."
+  },
+  {
+    "id": "mcq-2008-62-42",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Choose volumetric glassware for an accurate solution aliquot.",
+    "status": "classified",
+    "evidencePages": [
+      42
+    ]
+  },
+  {
+    "id": "mcq-2008-63-42",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Explain ionic radius differences in an isoelectronic series using nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      42
+    ]
+  },
+  {
+    "id": "mcq-2008-64-42",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Determine whether dissolved ions hydrolyze to give a basic solution.",
+    "status": "classified",
+    "evidencePages": [
+      42
+    ]
+  },
+  {
+    "id": "mcq-2008-66-43",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5"
+    ],
+    "rationale": "Apply collision frequency, energy, and orientation requirements for reaction.",
+    "status": "classified",
+    "evidencePages": [
+      43
+    ]
+  },
+  {
+    "id": "mcq-2008-68-44",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "3.7"
+    ],
+    "rationale": "Calculate pH of a strong base after dilution with water; the complete source page supplies the truncated concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      44
+    ]
+  },
+  {
+    "id": "mcq-2008-69-44",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Recognize equal average molecular kinetic energies at equal temperature.",
+    "status": "classified",
+    "evidencePages": [
+      44
+    ]
+  },
+  {
+    "id": "mcq-2008-70-44",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recall the typical elements present in amino acids.",
+    "status": "legacy",
+    "evidencePages": [
+      44
+    ],
+    "legacyConcepts": [
+      "Biochemical composition recall"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Biochemical composition recall."
+  },
+  {
+    "id": "mcq-2008-71-44",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Compare bond polarity using electronegativity differences.",
+    "status": "classified",
+    "evidencePages": [
+      44
+    ]
+  },
+  {
+    "id": "mcq-2008-72-44",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1",
+      "4.7"
+    ],
+    "rationale": "Predict visible evidence of gas formation or precipitation when reactants are mixed.",
+    "status": "classified",
+    "evidencePages": [
+      44
+    ]
+  },
+  {
+    "id": "mcq-2008-74-45",
+    "primaryTopic": "9.11",
+    "relatedTopics": [
+      "9.11"
+    ],
+    "rationale": "Relate current and time to electron moles and nickel deposited.",
+    "status": "classified",
+    "evidencePages": [
+      45
+    ]
+  },
+  {
+    "id": "mcq-2008-75-45",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.7"
+    ],
+    "rationale": "Identify a molecule satisfying both resonance and bent molecular geometry.",
+    "status": "classified",
+    "evidencePages": [
+      45
+    ]
+  },
+  {
+    "id": "mcq-1984-1-119",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8"
+    ],
+    "rationale": "Use periodic family valence to identify a common monatomic anion charge.",
+    "status": "classified",
+    "evidencePages": [
+      119
+    ]
+  },
+  {
+    "id": "mcq-1984-2-119",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Use oxidation-state requirements of an oxoanion to identify its central element.",
+    "status": "classified",
+    "evidencePages": [
+      119
+    ]
+  },
+  {
+    "id": "mcq-1984-3-119",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recall which element forms common acidic pollutant oxides.",
+    "status": "legacy",
+    "evidencePages": [
+      119
+    ],
+    "legacyConcepts": [
+      "Descriptive chemistry of air pollutants"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Descriptive chemistry of air pollutants."
+  },
+  {
+    "id": "mcq-1984-4-120",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Recognize an oxidizing agent among common substances.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-5-120",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recall the reagent used to chemically etch glass.",
+    "status": "legacy",
+    "evidencePages": [
+      120
+    ],
+    "legacyConcepts": [
+      "Descriptive industrial chemistry"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Descriptive industrial chemistry."
+  },
+  {
+    "id": "mcq-1984-6-120",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recall the substance used extensively in fertilizer manufacture.",
+    "status": "legacy",
+    "evidencePages": [
+      120
+    ],
+    "legacyConcepts": [
+      "Descriptive industrial chemistry"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Descriptive industrial chemistry."
+  },
+  {
+    "id": "mcq-1984-7-120",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recognize amphoteric behavior of aluminum hydroxide in an older descriptive-chemistry question.",
+    "status": "legacy",
+    "evidencePages": [
+      120
+    ],
+    "legacyConcepts": [
+      "Amphoteric metal hydroxide chemistry"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Amphoteric metal hydroxide chemistry."
+  },
+  {
+    "id": "mcq-1984-8-120",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "3.1"
+    ],
+    "rationale": "Classify an ethanol molecular solid by its hydrogen-bonding interactions.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-9-120",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2"
+    ],
+    "rationale": "Classify silicon dioxide as a covalent-network solid.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-10-120",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify ions by characteristic solution color without spectroscopic data.",
+    "status": "legacy",
+    "evidencePages": [
+      120
+    ],
+    "legacyConcepts": [
+      "Memorized colors of aqueous ions"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Memorized colors of aqueous ions."
+  },
+  {
+    "id": "mcq-1984-11-120",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Use absence of gas-producing reaction with acid to eliminate carbonate.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-12-120",
+    "primaryTopic": "4.8",
+    "relatedTopics": [
+      "4.8"
+    ],
+    "rationale": "Use proton transfer to predict ammonia production from ammonium and hydroxide.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-13-120",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Use absence of sulfate precipitation to eliminate an insoluble-sulfate cation.",
+    "status": "classified",
+    "evidencePages": [
+      120
+    ]
+  },
+  {
+    "id": "mcq-1984-14-121",
+    "primaryTopic": "9.10",
+    "relatedTopics": [
+      "9.10"
+    ],
+    "rationale": "Predict cell-potential change after changing ion concentration.",
+    "status": "classified",
+    "evidencePages": [
+      121
+    ]
+  },
+  {
+    "id": "mcq-1984-15-121",
+    "primaryTopic": "9.10",
+    "relatedTopics": [
+      "9.10"
+    ],
+    "rationale": "Recognize that changing the amount of a pure solid electrode does not change reaction quotient or voltage.",
+    "status": "classified",
+    "evidencePages": [
+      121
+    ]
+  },
+  {
+    "id": "mcq-1984-16-121",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Explain the salt bridge role in maintaining ionic charge balance.",
+    "status": "classified",
+    "evidencePages": [
+      121
+    ]
+  },
+  {
+    "id": "mcq-1984-17-121",
+    "primaryTopic": "9.10",
+    "relatedTopics": [
+      "9.10"
+    ],
+    "rationale": "Relate running a galvanic cell to changing concentrations and decreasing potential.",
+    "status": "classified",
+    "evidencePages": [
+      121
+    ]
+  },
+  {
+    "id": "mcq-1984-19-122",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Recognize isotopes by common atomic number and differing mass numbers.",
+    "status": "classified",
+    "evidencePages": [
+      122
+    ]
+  },
+  {
+    "id": "mcq-1984-21-123",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Relate pressure to absolute temperature at constant gas amount and volume.",
+    "status": "classified",
+    "evidencePages": [
+      123
+    ]
+  },
+  {
+    "id": "mcq-1984-23-123",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Calculate gas molar mass from density, pressure, and temperature.",
+    "status": "classified",
+    "evidencePages": [
+      123
+    ]
+  },
+  {
+    "id": "mcq-1984-24-123",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Translate a coordination-complex name into its chemical formula.",
+    "status": "legacy",
+    "evidencePages": [
+      123
+    ],
+    "legacyConcepts": [
+      "Coordination-compound nomenclature"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Coordination-compound nomenclature."
+  },
+  {
+    "id": "mcq-1984-25-123",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Read reaction order for iodide from an experimental rate law.",
+    "status": "classified",
+    "evidencePages": [
+      123
+    ]
+  },
+  {
+    "id": "mcq-1984-26-123",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Predict rate changes from a concentration change using the rate law.",
+    "status": "classified",
+    "evidencePages": [
+      123
+    ]
+  },
+  {
+    "id": "mcq-1984-27-123",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify the critical temperature definition, beyond current AP phase coverage.",
+    "status": "legacy",
+    "evidencePages": [
+      123
+    ],
+    "legacyConcepts": [
+      "Critical-point phase behavior"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Critical-point phase behavior."
+  },
+  {
+    "id": "mcq-1984-30-124",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Track alpha and beta emissions to identify the resulting nucleus.",
+    "status": "legacy",
+    "evidencePages": [
+      124
+    ],
+    "legacyConcepts": [
+      "Nuclear decay"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Nuclear decay."
+  },
+  {
+    "id": "mcq-1984-31-124",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Recall the orange color of an aqueous ion.",
+    "status": "legacy",
+    "evidencePages": [
+      124
+    ],
+    "legacyConcepts": [
+      "Memorized colors of coordination ions"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Memorized colors of coordination ions."
+  },
+  {
+    "id": "mcq-1984-32-125",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2"
+    ],
+    "rationale": "Select the net ionic equation retaining reacting solids, aqueous ions, and gaseous products.",
+    "status": "classified",
+    "evidencePages": [
+      125
+    ]
+  },
+  {
+    "id": "mcq-1984-33-125",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Estimate pH of an aqueous weak-base solution.",
+    "status": "classified",
+    "evidencePages": [
+      125
+    ]
+  },
+  {
+    "id": "mcq-1984-35-125",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify a halide using memorized oxidation and solvent-extraction color observations.",
+    "status": "legacy",
+    "evidencePages": [
+      125
+    ],
+    "legacyConcepts": [
+      "Descriptive qualitative ion analysis"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Descriptive qualitative ion analysis."
+  },
+  {
+    "id": "mcq-1984-37-126",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify density as information needed to convert molarity into molality.",
+    "status": "legacy",
+    "evidencePages": [
+      126
+    ],
+    "legacyConcepts": [
+      "Molality"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Molality."
+  },
+  {
+    "id": "mcq-1984-38-126",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Identify beta emission in carbon-14 decay.",
+    "status": "legacy",
+    "evidencePages": [
+      126
+    ],
+    "legacyConcepts": [
+      "Nuclear decay"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Nuclear decay."
+  },
+  {
+    "id": "mcq-1984-39-126",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Relate partial pressure to amount of gas and molar mass in an equal-mass mixture.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-40-126",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Determine sulfur trioxide molecular geometry from electron domains.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-41-126",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2"
+    ],
+    "rationale": "Compare covalent bond lengths from atom size and bond multiplicity.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-42-126",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify oxidation-reduction products of copper with concentrated sulfuric acid.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-43-126",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Compare atomic-radius patterns across rows and down groups.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-44-126",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry to convert product mass into required oxygen moles.",
+    "status": "classified",
+    "evidencePages": [
+      126
+    ]
+  },
+  {
+    "id": "mcq-1984-45-127",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Use the supplied hydrocarbon formula ratio and combustion stoichiometry to calculate water yield.",
+    "status": "classified",
+    "evidencePages": [
+      127
+    ]
+  },
+  {
+    "id": "mcq-1984-46-127",
+    "primaryTopic": "9.11",
+    "relatedTopics": [
+      "9.11"
+    ],
+    "rationale": "Convert electrical charge into electron moles and deposited indium.",
+    "status": "classified",
+    "evidencePages": [
+      127
+    ]
+  },
+  {
+    "id": "mcq-1984-48-127",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Compare electron-pair-accepting ability of ions using the Lewis acid model.",
+    "status": "legacy",
+    "evidencePages": [
+      127
+    ],
+    "legacyConcepts": [
+      "Lewis acid strength"
+    ],
+    "reviewReason": "Legacy content outside the current AP Chemistry framework: Lewis acid strength."
+  },
+  {
+    "id": "mcq-1984-49-127",
+    "primaryTopic": "4.8",
+    "relatedTopics": [
+      "4.8"
+    ],
+    "rationale": "Determine whether each species can donate and accept a proton.",
+    "status": "classified",
+    "evidencePages": [
+      127
+    ]
+  }
+]

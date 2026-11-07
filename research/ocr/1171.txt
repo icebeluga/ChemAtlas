@@ -1,0 +1,70 @@
+AP® CHEMISTRY
+2017 SCORING GUIDELINES
+
+Question 3 (continued)
+
+A solution is prepared in which the initial concentration of HSO; (aq) (6.4 x 1074 M) is much larger than that
+of O,(ag) (1.0 x 1075 M). The concentration of O,(aq) is monitored as the reaction proceeds, and the data
+
+are plotted in the graph below.
+
+10% 105 Como + 7
+soxio-*f\ — |
+— 60x 10°. \ : | =
+$ [hI
+40x 10% :
+20x 10°. NS
+: =a
+
+Time (s)
+
+(d) The data are consistent with the following rate law: rate = k,[O3] .
+
+0.
+0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.10
+
+(i) Based on the graph on the previous page, determine the half-life of the reaction.
+
+Half-life = 0.010 s
+
+1 point is earned for the correct answer.
+
+(ii) Determine the value of the rate constant, k,, for the rate law. Include units with your answer.
+
+— 0.693 _ 0.693 0.693
+
+ha= Eb = ols
+
+= 69s!
+
+1 point is earned for the correct value.
+
+1 point is earned for the correct unit.
+
+(iii) Considering the relative concentrations of the reactants, briefly explain why the data in the graph are
+also consistent with the following rate law: rate = k,[O3][HSO, ] .
+
+The data are consistent with rate = k,[O][HSO,"] because
+[HSO,"] remains essentially constant during the experiment.
+([HSO, ] can be contained in the rate constant k,.)
+
+1 point is earned for
+a correct explanation.
+
+(iv) Briefly describe an experiment that could provide evidence to
+
+support the rate law given in part (d)(i
+
+iii).
+
+Repeat the experiment with a different initial concentration of
+HSO,_. (If the change in the rate of the reaction is directly
+proportional to the change in [HSO, ], then the reaction is first
+order with respect to HSO;.)
+
+1 point is earned for describing
+a valid experiment.
+
+© 2017 The College Board.
+
+Visit the College Board on the Web: www.collegeboard.org.

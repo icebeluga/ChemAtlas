@@ -1,0 +1,21 @@
+Overall reaction: =Pb(s) + PbO,(s) + 2 H*(aq) + 2 HSO, (aq) — 2 PbSO,(s) + 2 H,O(D)
+Cathode half-cell reaction: PbO,(s) + 3 H*(aq) + HSO, (aq) +2 € — PbSO,(s) + 2 H,0()
+5. The equations above represent reactions associated with the operation of a lead storage battery. The first is the
+
+overall reaction that occurs as the battery produces an electrical current, and the second is the half-reaction that
+occurs at the cathode.
+
+(a) Determine the oxidation number of sulfur in the overall reaction.
+
+(b) Write the equation for the half-reaction that occurs at the anode as the battery operates.
+
+After the battery has operated for some time, it can be recharged by applying a current to reverse the overall
+reaction.
+
+(c) Calculate the time, in seconds, needed to regenerate 100. g of Pb(s) in the battery by applying a current of
+5.00 amp.
+
+Unauthorized copying or reuse of|
+any part of this page is illegal.
+
+GO ON TO THE NEXT PAGE.

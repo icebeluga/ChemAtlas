@@ -1,0 +1,538 @@
+[
+  {
+    "id": "frq-2024-5-493",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.7",
+      "3.4"
+    ],
+    "rationale": "Combines VSEPR geometry, intermolecular-force explanations of boiling point and vapor pressure, and an ideal-gas calculation.",
+    "parts": [
+      {
+        "label": "A",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict molecular geometry from VSEPR."
+      },
+      {
+        "label": "B–C",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare London dispersion with other intermolecular forces to explain boiling point and vapor pressure."
+      },
+      {
+        "label": "D",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Use the ideal gas law to calculate gas amount from total pressure, volume, and temperature."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      493
+    ]
+  },
+  {
+    "id": "frq-2024-7-496",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1",
+      "5.7"
+    ],
+    "rationale": "Glycolate is treated as a Brønsted base with weak-base equilibrium calculations; later parts analyze a reaction mechanism for ester hydrolysis.",
+    "parts": [
+      {
+        "label": "A–B",
+        "topics": [
+          "8.1",
+          "8.3"
+        ],
+        "rationale": "Identify the proton-accepting atom and calculate Kb and conjugate-acid Ka."
+      },
+      {
+        "label": "C onward",
+        "topics": [
+          "5.7"
+        ],
+        "rationale": "Analyze the proposed elementary steps/mechanism for methyl glycolate hydrolysis."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      496,
+      497,
+      498
+    ]
+  },
+  {
+    "id": "frq-2024-2-501",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "2.5",
+      "2.6",
+      "2.7",
+      "4.8",
+      "4.9",
+      "7.4",
+      "9.3",
+      "9.8",
+      "9.9",
+      "9.11"
+    ],
+    "rationale": "Broad integrated item: chromate Lewis structure and geometry; acid-driven interconversion; chromium redox and plating; thermodynamic favorability; first-order kinetics; electrolysis.",
+    "parts": [
+      {
+        "label": "A",
+        "topics": [
+          "2.5",
+          "2.6",
+          "2.7"
+        ],
+        "rationale": "Use Lewis diagrams, resonance/formal charges, and VSEPR geometry."
+      },
+      {
+        "label": "B",
+        "topics": [
+          "4.8",
+          "4.9",
+          "7.4"
+        ],
+        "rationale": "Balance acid-driven chromate/dichromate chemistry, assess oxidation-state change, and use equilibrium information."
+      },
+      {
+        "label": "C",
+        "topics": [
+          "9.3",
+          "9.9"
+        ],
+        "rationale": "Calculate standard Gibbs energy and judge thermodynamic favorability."
+      },
+      {
+        "label": "D",
+        "topics": [
+          "9.8",
+          "9.11"
+        ],
+        "rationale": "Calculate chromium deposited from current and time using electrolysis stoichiometry."
+      },
+      {
+        "label": "E–G",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Use concentration-time/ln concentration plots to identify first-order behavior and obtain the rate constant."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      501,
+      502,
+      503,
+      504
+    ]
+  },
+  {
+    "id": "frq-2024-3-505",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.7",
+      "7.6"
+    ],
+    "rationale": "Weak-acid ionization, pH and equilibrium calculations, titration-curve interpretation, and equilibrium-constant combination.",
+    "parts": [
+      {
+        "label": "A–C",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Identify conjugate pairs, calculate equilibrium concentrations/Ka, and infer temperature effect from Ka."
+      },
+      {
+        "label": "D–F",
+        "topics": [
+          "8.5"
+        ],
+        "rationale": "Analyze weak-acid/strong-base titration and locate a composition point on its titration curve."
+      },
+      {
+        "label": "G",
+        "topics": [
+          "7.6"
+        ],
+        "rationale": "Combine equilibrium reactions/constants to obtain the neutralization constant."
+      },
+      {
+        "label": "H",
+        "topics": [
+          "8.5",
+          "8.7"
+        ],
+        "rationale": "Select an indicator based on the equivalence-point pH and transition range."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      505,
+      506,
+      507
+    ]
+  },
+  {
+    "id": "frq-2024-4-508",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "2.2",
+      "6.1",
+      "9.3"
+    ],
+    "rationale": "Relates bond order/length to bonding, calculates Kp, and uses temperature-dependent Gibbs energy and entropy to reason about thermodynamic favorability.",
+    "parts": [
+      {
+        "label": "A",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Explain bond length difference using bond order and potential-energy/bonding ideas."
+      },
+      {
+        "label": "B",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Calculate Kp from equilibrium partial pressures."
+      },
+      {
+        "label": "C",
+        "topics": [
+          "6.1",
+          "9.3"
+        ],
+        "rationale": "Use ΔG° = ΔH° − TΔS° and favorability at high temperature to assess thermodynamic signs."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      508
+    ]
+  },
+  {
+    "id": "frq-2024-5-509",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Tests bond polarity, VSEPR bond-angle differences, and intermolecular forces as explanations for boiling-point differences.",
+    "parts": [
+      {
+        "label": "A",
+        "topics": [
+          "2.1"
+        ],
+        "rationale": "Compare bond polarity using electronegativity difference."
+      },
+      {
+        "label": "B",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Explain bond-angle differences using molecular geometry and electron-domain repulsions."
+      },
+      {
+        "label": "C",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Identify intermolecular forces and compare their strengths to explain boiling points."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      509
+    ]
+  },
+  {
+    "id": "frq-2024-7-512",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "4.5",
+      "6.1"
+    ],
+    "rationale": "Calculates standard enthalpy of formation and heat released from a limiting-reactant stoichiometry calculation.",
+    "parts": [
+      {
+        "label": "A",
+        "topics": [
+          "6.8"
+        ],
+        "rationale": "Use reaction enthalpy and formation enthalpies to calculate ΔH°f."
+      },
+      {
+        "label": "B",
+        "topics": [
+          "4.5",
+          "6.1"
+        ],
+        "rationale": "Determine limiting reactant/extent and heat released from reaction stoichiometry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      512
+    ]
+  },
+  {
+    "id": "frq-2003-1-519",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5"
+    ],
+    "rationale": "Weak-base equilibrium, pH, and titration of aniline with a strong acid.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write Kb and calculate it from equilibrium pH/concentration."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "8.5",
+          "8.3"
+        ],
+        "rationale": "Calculate pH during and at the equivalence point of a weak-base/strong-acid titration."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      519
+    ]
+  },
+  {
+    "id": "frq-2003-3-521",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "9.9"
+    ],
+    "rationale": "Determines reaction orders, rate law, rate constant, and standard cell potential from half-reaction data.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Determine orders and calculate rate law and specific rate constant from initial-rate data."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.9"
+        ],
+        "rationale": "Calculate standard cell potential from standard reduction potentials."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      521
+    ]
+  },
+  {
+    "id": "frq-2003-4-522",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set spans precipitation, acid-carbonate, decomposition, acid-base neutralization, complex-ion formation, combustion, single replacement, and acid anhydride reactions.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Predict precipitation and represent the net ionic change."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "4.8"
+        ],
+        "rationale": "Acid-carbonate reaction with gas formation."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.7"
+        ],
+        "rationale": "Predict peroxide photodecomposition products."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.5",
+          "4.8"
+        ],
+        "rationale": "Neutralization after mixing specified volumes and concentrations."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.2"
+        ],
+        "rationale": "Aqueous ammonia forms a silver ammine complex; identify net reacting species."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Combustion/oxidation of magnesium."
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Single-replacement redox reaction of strontium with copper(II)."
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "4.8",
+          "4.7"
+        ],
+        "rationale": "Acid anhydride reacts with water to produce an acid."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      522
+    ]
+  },
+  {
+    "id": "frq-2003-6-525",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.3",
+      "4.8",
+      "6.5"
+    ],
+    "rationale": "Includes acid attack on limestone, gas nonideality, and condensation/phase-change reasoning; the boiling-point elevation comparison relies on colligative-property content outside the current CED.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.8"
+        ],
+        "rationale": "Acid reacts with carbonate limestone, causing dissolution/chemical change."
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "Boiling-point elevation is a colligative property excluded from the current AP Chemistry CED; retained for legacy review."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.6"
+        ],
+        "rationale": "Explain nonideal-gas behavior at low temperature and high pressure."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.3",
+          "6.5"
+        ],
+        "rationale": "Explain condensation as a gas-to-liquid phase change and energy transfer."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [
+      "colligative properties / boiling-point elevation (part b)"
+    ],
+    "evidencePages": [
+      525
+    ]
+  },
+  {
+    "id": "frq-2003-7-526",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "6.7",
+      "9.2",
+      "9.4"
+    ],
+    "rationale": "Uses bond enthalpy, reaction entropy, and Gibbs-energy temperature dependence to distinguish thermodynamic favorability from slow kinetics.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.7"
+        ],
+        "rationale": "Calculate reaction enthalpy using average bond enthalpies."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.2"
+        ],
+        "rationale": "Infer the sign of entropy change from the reaction and particle counts."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.3"
+        ],
+        "rationale": "Explain temperature-dependent ΔG° using enthalpy and entropy."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.4"
+        ],
+        "rationale": "Distinguish thermodynamic favorability from kinetic accessibility at low temperature."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      526
+    ]
+  }
+]

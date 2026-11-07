@@ -1,0 +1,622 @@
+[
+ {
+  "id": "frq-2023-3-448",
+  "primaryTopic": "5.1",
+  "relatedTopics": [
+   "5.1",
+   "4.5",
+   "4.2"
+  ],
+  "rationale": "Study CaCO3 reaction rate using acid concentration/amount and reaction evidence.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "4.2"
+    ],
+    "rationale": "Write a net ionic equation.",
+    "textPreview": "Write a net ionic equation."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "5.1"
+    ],
+    "rationale": "Interpret rate data and controlled variables.",
+    "textPreview": "Interpret rate data and controlled variables."
+   },
+   {
+    "label": "(e–g)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry and limiting amounts.",
+    "textPreview": "Use reaction stoichiometry and limiting amounts."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   448,
+   449,
+   450,
+   451
+  ]
+ },
+ {
+  "id": "frq-2023-4-452",
+  "primaryTopic": "8.8",
+  "relatedTopics": [
+   "8.8",
+   "8.9",
+   "4.5"
+  ],
+  "rationale": "Prepare and analyze a methylamine buffer.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Calculate salt mass from mole amount.",
+    "textPreview": "Calculate salt mass from mole amount."
+   },
+   {
+    "label": "(b–c)",
+    "topics": [
+     "8.8",
+     "8.9"
+    ],
+    "rationale": "Prepare buffer and calculate buffer pH from component ratio.",
+    "textPreview": "Prepare buffer and calculate buffer pH from component ratio."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "8.10"
+    ],
+    "rationale": "Assess buffer response/capacity.",
+    "textPreview": "Assess buffer response/capacity."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   452,
+   453
+  ]
+ },
+ {
+  "id": "frq-2023-5-454",
+  "primaryTopic": "3.4",
+  "relatedTopics": [
+   "3.4",
+   "8.1",
+   "8.2"
+  ],
+  "rationale": "Analyze HCl gas behavior and its acid properties in water.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.4"
+    ],
+    "rationale": "Use ideal-gas law for pressure/temperature changes.",
+    "textPreview": "Use ideal-gas law for pressure/temperature changes."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "8.1",
+     "8.2"
+    ],
+    "rationale": "Relate dissolved HCl to strong-acid pH.",
+    "textPreview": "Relate dissolved HCl to strong-acid pH."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   454,
+   455
+  ]
+ },
+ {
+  "id": "frq-2023-6-456",
+  "primaryTopic": "3.1",
+  "relatedTopics": [
+   "3.1",
+   "6.5"
+  ],
+  "rationale": "Compare intermolecular forces and enthalpy of vaporization for hydrogen halides.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "3.1"
+    ],
+    "rationale": "Compare hydrogen bonding, dipole, and dispersion forces.",
+    "textPreview": "Compare hydrogen bonding, dipole, and dispersion forces."
+   },
+   {
+    "label": "(d–e)",
+    "topics": [
+     "6.5"
+    ],
+    "rationale": "Relate phase-change energy to molecular amounts.",
+    "textPreview": "Relate phase-change energy to molecular amounts."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   456,
+   457
+  ]
+ },
+ {
+  "id": "frq-2023-7-458",
+  "primaryTopic": "7.11",
+  "relatedTopics": [
+   "7.11",
+   "7.12",
+   "8.11"
+  ],
+  "rationale": "Analyze Sr(OH)2 solubility equilibrium and effects of solution conditions.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "7.11"
+    ],
+    "rationale": "Use Ksp and ion concentrations.",
+    "textPreview": "Use Ksp and ion concentrations."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "7.12"
+    ],
+    "rationale": "Assess common-ion effect.",
+    "textPreview": "Assess common-ion effect."
+   },
+   {
+    "label": "(g)",
+    "topics": [
+     "8.11"
+    ],
+    "rationale": "Relate pH to solubility.",
+    "textPreview": "Relate pH to solubility."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   458,
+   459,
+   460,
+   461,
+   462,
+   463
+  ]
+ },
+ {
+  "id": "frq-2024-1-464",
+  "primaryTopic": "1.4",
+  "relatedTopics": [
+   "1.4",
+   "1.5",
+   "3.7"
+  ],
+  "rationale": "Apply atomic structure and mixture/solution measurement in a lab context.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "1.5"
+    ],
+    "rationale": "Interpret electron arrangement/atomic data.",
+    "textPreview": "Interpret electron arrangement/atomic data."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "3.7"
+    ],
+    "rationale": "Prepare and analyze a solution.",
+    "textPreview": "Prepare and analyze a solution."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   464,
+   465,
+   466,
+   467
+  ]
+ },
+ {
+  "id": "frq-2024-2-468",
+  "primaryTopic": "4.2",
+  "relatedTopics": [
+   "4.2",
+   "4.5",
+   "8.4",
+   "3.4"
+  ],
+  "rationale": "Analyze acid–carbonate reaction stoichiometry and gas formation.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "4.2",
+     "8.4"
+    ],
+    "rationale": "Represent acid–base reaction as net ionic.",
+    "textPreview": "Represent acid–base reaction as net ionic."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "4.5",
+     "3.4"
+    ],
+    "rationale": "Use mole ratios and gas laws to quantify products.",
+    "textPreview": "Use mole ratios and gas laws to quantify products."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   468,
+   469,
+   470
+  ]
+ },
+ {
+  "id": "frq-2024-3-471",
+  "primaryTopic": "1.4",
+  "relatedTopics": [
+   "1.4",
+   "4.5",
+   "4.9"
+  ],
+  "rationale": "Analyze tarnishing of sterling silver using composition and redox stoichiometry.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "1.4"
+    ],
+    "rationale": "Use mass composition of an alloy.",
+    "textPreview": "Use mass composition of an alloy."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "4.9",
+     "4.5"
+    ],
+    "rationale": "Explain redox and quantify reaction products.",
+    "textPreview": "Explain redox and quantify reaction products."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   471,
+   472,
+   473
+  ]
+ },
+ {
+  "id": "frq-2024-4-474",
+  "primaryTopic": "6.4",
+  "relatedTopics": [
+   "6.4"
+  ],
+  "rationale": "Measure specific heat by calorimetry.",
+  "parts": [
+   {
+    "label": "(a–d)",
+    "topics": [
+     "6.4"
+    ],
+    "rationale": "Use heat transfer and temperature change to determine specific heat.",
+    "textPreview": "Use heat transfer and temperature change to determine specific heat."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   474,
+   475
+  ]
+ },
+ {
+  "id": "frq-2024-5-476",
+  "primaryTopic": "7.3",
+  "relatedTopics": [
+   "7.3",
+   "7.9",
+   "6.6"
+  ],
+  "rationale": "Analyze hydrogen–iodine equilibrium and its response to conditions.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "7.3"
+    ],
+    "rationale": "Write Kc and equilibrium expressions.",
+    "textPreview": "Write Kc and equilibrium expressions."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "7.7",
+     "7.9"
+    ],
+    "rationale": "Use concentration data and predict shifts.",
+    "textPreview": "Use concentration data and predict shifts."
+   },
+   {
+    "label": "(f)",
+    "topics": [
+     "6.6"
+    ],
+    "rationale": "Relate reaction heat to direction/temperature.",
+    "textPreview": "Relate reaction heat to direction/temperature."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   476,
+   477
+  ]
+ },
+ {
+  "id": "frq-2024-6-478",
+  "primaryTopic": "5.2",
+  "relatedTopics": [
+   "5.2",
+   "5.3"
+  ],
+  "rationale": "Analyze NO2 decomposition rate from concentration/time data.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "5.2"
+    ],
+    "rationale": "Determine rate law and rate constant.",
+    "textPreview": "Determine rate law and rate constant."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "5.3"
+    ],
+    "rationale": "Use integrated rate behavior and half-life.",
+    "textPreview": "Use integrated rate behavior and half-life."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   478,
+   479
+  ]
+ },
+ {
+  "id": "frq-2024-1-480",
+  "primaryTopic": "3.7",
+  "relatedTopics": [
+   "3.7"
+  ],
+  "rationale": "Prepare a sodium chloride solution with a target concentration.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.7"
+    ],
+    "rationale": "Calculate solute amount and describe solution preparation.",
+    "textPreview": "Calculate solute amount and describe solution preparation."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   480
+  ]
+ },
+ {
+  "id": "frq-2024-3-480",
+  "primaryTopic": "3.7",
+  "relatedTopics": [
+   "3.7"
+  ],
+  "rationale": "Prepare a sodium chloride solution to specified concentration.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.7"
+    ],
+    "rationale": "Dissolve and dilute a measured amount of solute.",
+    "textPreview": "Dissolve and dilute a measured amount of solute."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   480
+  ]
+ },
+ {
+  "id": "frq-2024-5-480",
+  "primaryTopic": "3.9",
+  "relatedTopics": [
+   "3.9",
+   "3.1"
+  ],
+  "rationale": "Use chromatography to separate compounds based on interactions with mobile and stationary phases.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "3.9",
+     "3.1"
+    ],
+    "rationale": "Interpret chromatography migration using intermolecular interactions.",
+    "textPreview": "Interpret chromatography migration using intermolecular interactions."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   480,
+   481,
+   482,
+   483
+  ]
+ },
+ {
+  "id": "frq-2024-7-480",
+  "primaryTopic": "3.7",
+  "relatedTopics": [
+   "3.7",
+   "3.9"
+  ],
+  "rationale": "Prepare NaCl solution and apply it as a chromatography solvent.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.7"
+    ],
+    "rationale": "Calculate amount and prepare a solution.",
+    "textPreview": "Calculate amount and prepare a solution."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "3.9"
+    ],
+    "rationale": "Interpret chromatographic separation.",
+    "textPreview": "Interpret chromatographic separation."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   480
+  ]
+ },
+ {
+  "id": "frq-2024-1-484",
+  "primaryTopic": "1.2",
+  "relatedTopics": [
+   "1.2",
+   "1.3"
+  ],
+  "rationale": "Use magnesium isotope abundances and average atomic mass.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.2"
+    ],
+    "rationale": "Complete isotope mass spectrum.",
+    "textPreview": "Complete isotope mass spectrum."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "1.2",
+     "1.3"
+    ],
+    "rationale": "Calculate average mass and composition.",
+    "textPreview": "Calculate average mass and composition."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   484,
+   485,
+   486
+  ]
+ },
+ {
+  "id": "frq-2024-2-487",
+  "primaryTopic": "1.3",
+  "relatedTopics": [
+   "1.3",
+   "4.5"
+  ],
+  "rationale": "Determine ascorbic acid composition from combustion products.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "1.3"
+    ],
+    "rationale": "Use combustion data to determine elemental ratios.",
+    "textPreview": "Use combustion data to determine elemental ratios."
+   },
+   {
+    "label": "(d)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Apply mole ratios to determine formula.",
+    "textPreview": "Apply mole ratios to determine formula."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   487,
+   488
+  ]
+ },
+ {
+  "id": "frq-2024-3-489",
+  "primaryTopic": "2.5",
+  "relatedTopics": [
+   "2.5",
+   "2.6",
+   "2.7"
+  ],
+  "rationale": "Analyze P4 Lewis structure, resonance/bonding representations, and molecular geometry.",
+  "parts": [
+   {
+    "label": "(A)",
+    "topics": [
+     "2.5"
+    ],
+    "rationale": "Complete the Lewis structure.",
+    "textPreview": "Complete the Lewis structure."
+   },
+   {
+    "label": "(B–C)",
+    "topics": [
+     "2.7"
+    ],
+    "rationale": "Relate geometry to bonding and molecular properties.",
+    "textPreview": "Relate geometry to bonding and molecular properties."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   489,
+   490,
+   491
+  ]
+ }
+]

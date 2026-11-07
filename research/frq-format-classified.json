@@ -1,0 +1,709 @@
+[
+  {
+    "id": "mcq-2014-2-204",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.6",
+      "4.5"
+    ],
+    "rationale": "Calorimetry experiment design and analysis for HCl–NaOH neutralization.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.4",
+          "6.6"
+        ],
+        "rationale": "Evaluate measurement precision and calculate reaction enthalpy using calorimetry."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "6.4",
+          "4.5",
+          "4.8"
+        ],
+        "rationale": "Calculate heat/enthalpy and reason about energy balance and completion of acid-base neutralization."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2014-3-208",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.9",
+      "3.4",
+      "6.1"
+    ],
+    "rationale": "Gas-phase SO2Cl2 decomposition tested through ideal gas quantities, equilibrium composition, and endothermic response.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Calculate initial gas pressure from mass, volume, and temperature."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "7.4",
+          "7.7"
+        ],
+        "rationale": "Write Kc and calculate equilibrium composition/constant."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "7.9",
+          "6.1"
+        ],
+        "rationale": "Relate endothermic decomposition to temperature effects on equilibrium."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2014-4-212",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.5",
+      "5.7",
+      "5.8"
+    ],
+    "rationale": "Analyze a proposed two-step mechanism, collision effectiveness, and rate-law implications.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "5.5",
+          "5.7",
+          "5.8"
+        ],
+        "rationale": "Use collision model and elementary-step mechanism to assess slow step and rate law."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2014-5-214",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.5",
+      "2.7"
+    ],
+    "rationale": "Draw Lewis structures and estimate bond angles using VSEPR.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw methanamide Lewis structure and explain its bond angles."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw a Lewis structure for CH2O2 with specified geometry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2014-6-216",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "2.3",
+      "3.1",
+      "3.7",
+      "3.8"
+    ],
+    "rationale": "Represent ionic crystal dissolution and particle interactions in aqueous LiCl.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "2.3",
+          "3.1",
+          "3.7",
+          "3.8"
+        ],
+        "rationale": "Use the solid particle diagram and water polarity to depict dissolved ions and ion-dipole interactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2014-7-218",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.7",
+      "3.7"
+    ],
+    "rationale": "Analyze a weak-acid indicator’s ionization and distribution between buffer water and nonpolar oil.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "8.3",
+          "8.7",
+          "3.7"
+        ],
+        "rationale": "Use acid-base equilibrium and pH-dependent species to explain indicator form/color and partition behavior."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2015-2-360",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.8",
+      "6.3",
+      "6.4"
+    ],
+    "rationale": "Study reaction stoichiometry, limiting reactant, gas formation, and temperature change when bicarbonate reacts with acetic acid.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "4.5",
+          "4.8"
+        ],
+        "rationale": "Classify acid-base reaction and determine limiting reactant/amounts."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "6.3",
+          "6.4"
+        ],
+        "rationale": "Explain cooling and analyze heat transfer/calorimetry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2015-3-361",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "1.1"
+    ],
+    "rationale": "Determine unknown metal molar mass from reaction stoichiometry and isolated-product mass.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "4.5",
+          "1.1"
+        ],
+        "rationale": "Use mole ratios and measured product mass to find the metal molar mass."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2015-4-363",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.7",
+      "8.9"
+    ],
+    "rationale": "Analyze phenol weak-acid equilibrium and required pH/speciation in a buffered solution.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Calculate weak-acid solution pH."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.7",
+          "8.9"
+        ],
+        "rationale": "Use pH/pKa and conjugate-base fraction to determine buffer conditions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2015-6-366",
+    "primaryTopic": "7.3",
+    "relatedTopics": [
+      "7.3",
+      "4.5"
+    ],
+    "rationale": "Analyze complex formation equilibrium for Ba2+ and EDTA4− using a large formation constant and mixture stoichiometry.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "7.3",
+          "4.5"
+        ],
+        "rationale": "Use equilibrium constant and limiting amounts for complex formation."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [
+      "Coordination-complex chemistry is not a dedicated current CED learning objective."
+    ]
+  },
+  {
+    "id": "mcq-2015-7-367",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "4.6",
+      "4.5"
+    ],
+    "rationale": "Measure NaOH delivered in a buret and use acid-base titration to determine unknown monoprotic-acid concentration.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "8.5",
+          "4.6",
+          "4.5"
+        ],
+        "rationale": "Read delivered volume and apply equivalence stoichiometry to calculate acid concentration."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-1-546",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Ammonia weak-base equilibrium and titration by strong acid.",
+    "parts": [
+      {
+        "label": "(a)–(d)",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Use Kb, pH, and percent ionization for ammonia."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "8.5",
+          "8.3"
+        ],
+        "rationale": "Analyze strong-acid titration of a weak base, including equivalence and after-equivalence pH."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-2-547",
+    "primaryTopic": "3.12",
+    "relatedTopics": [
+      "3.11",
+      "3.12",
+      "6.7"
+    ],
+    "rationale": "Calculates photon frequency/energy from wavelength, relates photon energy to bond breaking, and interprets atomic emission transitions.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.12",
+          "6.7"
+        ],
+        "rationale": "Convert wavelength to photon energy and compare it with a bond energy per mole."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.11",
+          "3.12"
+        ],
+        "rationale": "Analyze an electronic transition and calculate its radiation wavelength."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-3-548",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.1",
+      "5.2",
+      "5.7",
+      "5.8"
+    ],
+    "rationale": "Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.1",
+          "5.2"
+        ],
+        "rationale": "Use initial rate and concentration data to determine orders, rate law, and rate constant."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.7",
+          "5.8"
+        ],
+        "rationale": "Check mechanism consistency against the observed rate law."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-4-549",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Predict products and net changes across laboratory reaction scenarios.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write products/net ionic changes for the specified reactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-5-550",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Plans gas collection over water to determine an unknown gas molar mass.",
+    "parts": [
+      {
+        "label": "(a)–(e)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use ideal gas relationships, amount of gas, pressure correction, and sample mass to determine molar mass."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-6-551",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.2",
+      "9.3",
+      "9.4",
+      "5.6"
+    ],
+    "rationale": "Relates entropy and enthalpy to Gibbs energy, spontaneity, reaction rate, and catalysis.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Infer entropy sign and determine thermodynamic driving force/temperature dependence."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.4",
+          "5.6"
+        ],
+        "rationale": "Distinguish thermodynamic spontaneity from kinetic rate and explain catalyst effect on activation barrier."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-7-552",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "3.7",
+      "8.1"
+    ],
+    "rationale": "Compares conductivity and pH of electrolyte/non-electrolyte solutions; freezing-point and vapor-pressure comparisons include excluded colligative properties.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Compare electrolyte dissociation and conductivity."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [],
+        "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Compare solution acid-base character."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
+    ]
+  },
+  {
+    "id": "mcq-1999-8-552",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.5",
+      "2.6",
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Lewis structures, resonance/bond length, and molecular geometry/polarity.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.6",
+          "2.2"
+        ],
+        "rationale": "Draw CO2/carbonate Lewis structures and explain bond lengths using resonance and bond order."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.5",
+          "2.7",
+          "2.1"
+        ],
+        "rationale": "Compare Lewis structures, VSEPR geometries, and molecular polarity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-3-703",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.1",
+      "5.2",
+      "5.7",
+      "5.8"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.1",
+          "5.2"
+        ],
+        "rationale": "Use initial rate and concentration data to determine orders, rate law, and rate constant."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.7",
+          "5.8"
+        ],
+        "rationale": "Check mechanism consistency against the observed rate law."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-4-704",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Predict products and net changes across laboratory reaction scenarios.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Write products/net ionic changes for the specified reactions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-5-705",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Plans gas collection over water to determine an unknown gas molar mass.",
+    "parts": [
+      {
+        "label": "(a)–(e)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use ideal gas relationships, amount of gas, pressure correction, and sample mass to determine molar mass."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-6-706",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.2",
+      "9.3",
+      "9.4",
+      "5.6"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Relates entropy and enthalpy to Gibbs energy, spontaneity, reaction rate, and catalysis.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "rationale": "Infer entropy sign and determine thermodynamic driving force/temperature dependence."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.4",
+          "5.6"
+        ],
+        "rationale": "Distinguish thermodynamic spontaneity from kinetic rate and explain catalyst effect on activation barrier."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1999-7-707",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "3.7",
+      "8.1"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Compares conductivity and pH of electrolyte/non-electrolyte solutions; freezing-point and vapor-pressure comparisons include excluded colligative properties.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Compare electrolyte dissociation and conductivity."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [],
+        "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.1"
+        ],
+        "rationale": "Compare solution acid-base character."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
+    ]
+  },
+  {
+    "id": "mcq-1999-8-707",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.5",
+      "2.6",
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Duplicate appearance of the same 1999 Section II question; Lewis structures, resonance/bond length, and molecular geometry/polarity.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.6",
+          "2.2"
+        ],
+        "rationale": "Draw CO2/carbonate Lewis structures and explain bond lengths using resonance and bond order."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.5",
+          "2.7",
+          "2.1"
+        ],
+        "rationale": "Compare Lewis structures, VSEPR geometries, and molecular polarity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  }
+]

@@ -1,0 +1,51 @@
+Question 6
+
+Begin your response to QUESTION 6 on this page.
+
+6. Molten lithium chloride, LiCl(/), is electrolyzed using an external power supply and inert electrodes, as
+represented in the following diagram. Liquid lithium metal and chlorine gas are produced.
+
+Power
+
+Source
+
+Molten LiCl
+
+P Cl(s)
+
+The reduction potentials for the half-reactions associated with this process are shown in the following table.
+
+Half-Reaction
+
+E (Vv)
+
+Ch+2e 32Cr”
+
+—1.36
+
+Lit+e SLi
+
+—2.10
+
+(a) On the diagram, draw an arrow to show the direction of electron flow in the wire.
+
+(b) Use the half-reactions in the table to write the balanced net ionic equation for the reaction that occurs in the
+
+electrolytic cell.
+
+(c) Calculate the average current, in C/s, that must flow through the cell to produce 0.18 g of lithium metal in
+
+3200. seconds.
+
+Unauthorized copying or reuse of this page is illegal. Page 17
+
+GO ON TO THE NEXT PAGE.
+
+Use a pencil or a pen with black or dark blue ink. Do NOT write your name. Do NOT write outside the box.
+
+© studocu
+
+messages.pdf_cover_qr_code_label
+
+messages.downloaded by
+

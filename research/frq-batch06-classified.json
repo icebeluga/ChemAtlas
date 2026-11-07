@@ -1,0 +1,496 @@
+[
+  {
+    "id": "frq-2003-8-527",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.5",
+      "2.7",
+      "2.1",
+      "6.7"
+    ],
+    "rationale": "Organic structure questions connect Lewis structures and geometry to intermolecular forces, vaporization enthalpy, and bonding.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw a complete Lewis/structural formula and predict carbon geometry."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Explain vaporization enthalpy using London dispersion, dipole, and hydrogen-bonding forces."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.1",
+          "2.5"
+        ],
+        "rationale": "Draw a structural isomer."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.1"
+        ],
+        "rationale": "Identify hybridization and sigma/pi bonding in propyne; hybridization is included in the CED topic scope."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      527
+    ]
+  },
+  {
+    "id": "frq-2003-1-532",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "3.1",
+      "3.4",
+      "4.5",
+      "5.5",
+      "2.5",
+      "2.7"
+    ],
+    "rationale": "Calculates gas amount and reactant mass, explains collision-energy effects on rate, applies Lewis/VSEPR structure, and uses reaction stoichiometry.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use ideal gas law for chlorine amount and stoichiometry for the required CS2 mass."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Explain the effect of temperature on collision energies and reaction rate."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Complete the S2Cl2 Lewis diagram and predict bond angle using VSEPR."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Identify HCl intermolecular forces and compare intermolecular attractions from condensation behavior."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      532,
+      533
+    ]
+  },
+  {
+    "id": "frq-2003-2-534",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5",
+      "6.7"
+    ],
+    "rationale": "Compares Lewis representations by formal charge and calculates reaction enthalpy from bond enthalpies for an isomerization.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5",
+          "2.6"
+        ],
+        "rationale": "Choose the better Lewis structure using formal charges."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "6.7"
+        ],
+        "rationale": "Calculate reaction enthalpy from average bond enthalpies."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Use Lewis structures to represent isomeric bonding."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      534,
+      535
+    ]
+  },
+  {
+    "id": "frq-2003-3-536",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "8.4",
+      "8.9",
+      "4.8"
+    ],
+    "rationale": "Calculates Kp for gas-phase equilibrium and prepares a buffer by partial neutralization of a weak acid.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Write Kp and calculate it from equilibrium partial pressures."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.4",
+          "4.8"
+        ],
+        "rationale": "Explain buffer formation through weak-acid neutralization and write the net ionic equation."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "8.9"
+        ],
+        "rationale": "Set target pH using the weak-acid/conjugate-base ratio (Henderson–Hasselbalch relationship)."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      536
+    ]
+  },
+  {
+    "id": "frq-2003-6-539",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.5",
+      "2.2"
+    ],
+    "rationale": "Calculates solubility from Ksp and compares lattice energies using ionic size and Coulomb attraction.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "7.11",
+          "4.5"
+        ],
+        "rationale": "Use Ksp to determine saturated solubility and convert dissolved amount to mass."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Explain lattice-energy difference using ionic radius and Coulombic attraction."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      539
+    ]
+  },
+  {
+    "id": "frq-1999-1-558",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4",
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Tracks decomposition equilibrium in a rigid container using initial amounts, gas conditions, equilibrium amount, and Kc.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "7.7",
+          "7.4",
+          "4.5",
+          "3.4"
+        ],
+        "rationale": "Convert mass to concentration/pressure by stoichiometry and ideal gas relationships, then construct equilibrium amounts and calculate Kc."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      558
+    ]
+  },
+  {
+    "id": "frq-1999-2-559",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.9",
+      "9.3",
+      "9.5",
+      "9.8"
+    ],
+    "rationale": "Uses half-reactions and cell potentials, then relates ΔG°, E°, and equilibrium constant for electrochemical reactions.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Write oxidation and net ionic equations and calculate standard cell potential."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.3",
+          "9.5",
+          "9.9"
+        ],
+        "rationale": "Relate cell potential to standard Gibbs energy and equilibrium constant."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      559
+    ]
+  },
+  {
+    "id": "frq-1999-3-560",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "1.3",
+      "3.4",
+      "4.6",
+      "4.9"
+    ],
+    "rationale": "Covers hydrate composition, thermal decomposition stoichiometry and gas volume, and redox titration of oxalate.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.3",
+          "4.5"
+        ],
+        "rationale": "Calculate elemental mass percent from formula."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.5",
+          "3.4"
+        ],
+        "rationale": "Use reaction stoichiometry and ideal gas law for product mass and gas volume."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.6",
+          "4.9",
+          "4.5"
+        ],
+        "rationale": "Analyze a redox titration, identify the reducing agent, and infer composition from equivalence data."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      560
+    ]
+  },
+  {
+    "id": "frq-1999-4-561",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.5",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set includes synthesis, combustion, complex-ion formation, precipitation, acid-base reactions, and redox.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Metal reaction with water is a redox reaction."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Combustion of butanol."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2"
+        ],
+        "rationale": "Ammonia complexation of nickel ions."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Precipitation of an insoluble sulfide."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Redox reaction between tin(II) and silver(I)."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "4.8",
+          "4.2"
+        ],
+        "rationale": "Acid reacts with hydrogen carbonate, producing carbon dioxide."
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "4.7",
+          "4.8"
+        ],
+        "rationale": "Basic oxide reacts with water."
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "4.7",
+          "4.9"
+        ],
+        "rationale": "Carbon monoxide reduces iron(III) oxide."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      561
+    ]
+  },
+  {
+    "id": "frq-1999-5-562",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Determines molar mass by freezing-point depression, a colligative-property method outside the current AP Chemistry CED.",
+    "parts": [
+      {
+        "label": "(a)–(d)",
+        "topics": [],
+        "rationale": "Freezing-point depression, molality, and colligative-property analysis are outside the current CED; preserve as historical exam material."
+      }
+    ],
+    "status": "legacy",
+    "legacyConcepts": [
+      "colligative properties",
+      "freezing-point depression",
+      "molality"
+    ],
+    "evidencePages": [
+      562
+    ]
+  },
+  {
+    "id": "frq-1999-6-563",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8"
+    ],
+    "rationale": "Calculates standard reaction enthalpy from standard enthalpies of formation.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.8"
+        ],
+        "rationale": "Apply ΔH°rxn = ΣnΔH°f(products) − ΣnΔH°f(reactants)."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      563
+    ]
+  },
+  {
+    "id": "frq-1999-7-564",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.2",
+      "1.7",
+      "2.5",
+      "2.7"
+    ],
+    "rationale": "Connects isotope identity, electron configuration and unpaired electrons, periodic ionization-energy trends, and SeF4 Lewis/VSEPR structure.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.5",
+          "1.2"
+        ],
+        "rationale": "Describe isotopes by proton/neutron counts and mass."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Write ground-state electron configuration and count unpaired electrons."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain periodic ionization-energy trends."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw SeF4 Lewis structure and predict molecular geometry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      564
+    ]
+  }
+]

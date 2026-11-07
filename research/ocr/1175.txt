@@ -1,0 +1,71 @@
+AP® CHEMISTRY
+2017 SCORING GUIDELINES
+
+Question 7
+
+A new element with atomic number 116 was discovered in 2000. In 2012 it was named livermorium, Lv.
+Although Ly is radioactive and short-lived, its chemical properties and reactivity should follow periodic trends.
+
+(a) Write the electron configuration for the valence electrons of Lv in the ground state.
+
+7s? Tp*
+
+1 point is earned for the correct configuration.
+
+(b) According to periodic properties, what would
+reacts with H,(g)?
+
+be the most likely formula for the product obtained when Ly
+
+LvH, (or HjLv)
+
+1 point is earned for the correct formula.
+
+(c) The first ionization energy of polonium, Po, is 812 kJ/mol. Is the first ionization energy of Lv expected to
+be greater than, less than, or equal to that of Po? Justify your answer in terms of Coulomb’s law.
+
+Less than that of Po.
+
+The two atoms have comparable effective nuclear
+charges, but the valence electrons in Lv would be at
+
+By Coulomb’s law, the attractive force between the
+valence electrons and the nucleus decreases by the
+inverse square of the distance between them.
+
+a greater distance from the nucleus than those in Po.
+
+1 point is earned for a correct prediction
+with a valid justification.
+
+(d) Shown below is a hypothetical ma:
+
+Number of Atoms
+
+290.0
+
+291.0
+
+spectrum for a sample of Lv containing 10 atoms.
+
+292.0
+Atomic Mass (amu)
+
+293.0 294.0
+
+Using the information in the graph, determine the average atomic mass of Lv in the sample to four
+
+significant figures.
+
+Average atomic mass =
+
+2 3 5 _
+Jo (291-2) + To (292-2) + To (293-2) = 292.5 amu
+
+1 point is earned for
+the correct average
+atomic mass.
+
+© 2017 The College Board.
+Visit the College Board on the Web: www.collegeboard.org.
+

@@ -1,0 +1,29 @@
+Questions 42-43 refer to the following.
+H,(g) + Cl(g) = 2 HCI(g) K, = 2% 10° at 298 K
+
+HCI(g) can be synthesized from H,(g) and Cl,(g) as represented above. A student studying the kinetics of the
+reaction proposes the following mechanism.
+
+Step 1: Cl(g) > 2.Cl(g) (slow) AH? = 242 kI/mOl,.y
+Step 2: H,(g) + Cl(g) > HCI(g) + H(g) (fast) AH? = — 4 kI/M0l,.»
+Step 3: H(g) + Cl(g) — HCI(g) (fast) AH? = —432 kJ/mol,,.,,
+42. Which of the following statements identifies the 43. What is the value of the enthalpy change per mole
+greatest single reason that the value of K, for the of HCI(g) produced?
+overall reaction at 298 K has such a large (A) -93kI
+magnitude? (B) -121 kJ
+(A) The activation energy for step 1 of the (C) —186 kJ
+mechanism is large and positive. (D) -242 kJ
+
+(B) The activation energy for step 2 of the
+mechanism is small and positive.
+
+(C) The value of AS° for the overall reaction is
+small and positive.
+
+(D) The value of AH® for the overall reaction is
+large and negative.
+
+Unauthorized copying or reuse of
+
+any part of this page is illegal. GO ON TO THE NEXT PAGE.
+

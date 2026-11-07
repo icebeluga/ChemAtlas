@@ -1,0 +1,50 @@
+[
+  {
+    "url": "/source/bank-01.pdf",
+    "from": 1,
+    "to": 300,
+    "bytes": 4884275
+  },
+  {
+    "url": "/source/bank-02.pdf",
+    "from": 301,
+    "to": 600,
+    "bytes": 4363185
+  },
+  {
+    "url": "/source/bank-03.pdf",
+    "from": 601,
+    "to": 900,
+    "bytes": 13987593
+  },
+  {
+    "url": "/source/bank-04.pdf",
+    "from": 901,
+    "to": 1200,
+    "bytes": 7717854
+  },
+  {
+    "url": "/source/bank-05.pdf",
+    "from": 1201,
+    "to": 1500,
+    "bytes": 7166311
+  },
+  {
+    "url": "/source/bank-06.pdf",
+    "from": 1501,
+    "to": 1800,
+    "bytes": 11859257
+  },
+  {
+    "url": "/source/bank-07.pdf",
+    "from": 1801,
+    "to": 2100,
+    "bytes": 7632388
+  },
+  {
+    "url": "/source/bank-08.pdf",
+    "from": 2101,
+    "to": 2159,
+    "bytes": 4776764
+  }
+]

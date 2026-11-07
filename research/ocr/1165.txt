@@ -1,0 +1,62 @@
+AP® CHEMISTRY
+2017 SCORING GUIDELINES
+
+Question 1 (continued)
+
+(b) Using a pH probe, the student determines that the pH of 0.115 M HC,H,0,(aq) is 2.92.
+
+(i) Using the pH value, calculate the value of K, for HC,H,0,(aq).
+
+pH=2.92 = [H,0*] = 10% = 0.0012 M
+
+K. = 1H30°1IC,H30) 1
+“ [HCH303]
+
+Since [H,0*] = [C,H,O, ], then
+
+x, = 0.0012)(0.0012) _ (0.0012)*
+@ = (.115- 0.0012) ~ (0.114)
+
+= L3%105
+
+1 point is earned for correct conversion
+of pH to [H,0*].
+
+1 point is earned for a value of K,
+consistent with the student’s value
+of [H,0*].
+
+(ii) Calculate the percent dissociation of ethanoic acid in 0.115 M HC,H,0,(aq).
+
+[C>H;0.7] _ 0.0012
+
+Percent dissociation = [HCjH,0;], > ons
+
+x 100 = 1.0%
+
+1 point is earned for the correct
+percent dissociation.
+
+In a separate experimental procedure, the student titrates 10.0 mL of the 2.000 M HC,H,O,(aq) with an
+NaOH(aq) solution of unknown concentration. The student monitors the pH during the titration. The following
+titration curve was created using the experimental data presented in the table.
+
+Volume of 4
+NaOH(aq) | pH B
+Added (mL) 2 T
+0.00 2.23 1 |
+2,00] 3.99 10 i
+4.00 437 8 |
+6.00 4.65, 7 +
+8.00 4.90 6
+10.00 _| 5.17 :
+12.00__| 5.55 3
+14.00__| 9.35 2
+16.00 | 13.04 1
+18.00 13.31 0.0 4.00 8.00 12.00 16.00 20.00
+20.00 | 13.46
+Volume of NaOH(aq) Added (mL)
+
+© 2017 The College Board.
+Visit the College Board on the Web: www.collegeboard.org.
+

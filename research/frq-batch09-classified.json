@@ -1,0 +1,455 @@
+[
+  {
+    "id": "frq-2001-2-773",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.9",
+      "9.8",
+      "9.9",
+      "9.10",
+      "9.3"
+    ],
+    "rationale": "Duplicate print of the silver/zinc limiting-reactant and electrochemistry question previously seen in the 2001 bank.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Determine limiting reactant and product-ion concentration."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.9",
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Calculate standard potential for the redox cell."
+      },
+      {
+        "label": "(c)–(e)",
+        "topics": [
+          "9.3",
+          "9.9",
+          "9.10"
+        ],
+        "rationale": "Relate ΔG and cell potential; calculate nonstandard potential and spontaneity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      773,
+      774
+    ]
+  },
+  {
+    "id": "frq-2001-3-774",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "6.1",
+      "5.5",
+      "2.5"
+    ],
+    "rationale": "Duplicate print of the pentane combustion, gas law, effusion, and isomer question.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "4.5",
+          "3.4",
+          "6.1"
+        ],
+        "rationale": "Combustion stoichiometry, CO2 volume, and molar heat."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Use Graham’s law for effusion."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw structural isomers."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      774
+    ]
+  },
+  {
+    "id": "frq-2001-4-775",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Duplicate reaction-prediction set covering precipitation, combustion, acid-base, and redox changes.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Predict products and write net reaction changes for the given scenarios."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      775
+    ]
+  },
+  {
+    "id": "frq-2001-6-777",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.2",
+      "3.1"
+    ],
+    "rationale": "Duplicate periodic-trends, bond-energy, and London-force comparison question.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain atomic radius and ionization-energy trends."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.2"
+        ],
+        "rationale": "Compare bond energies by bond order."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare dispersion forces and boiling points."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      777
+    ]
+  },
+  {
+    "id": "frq-2001-7-777",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.7",
+      "5.8",
+      "5.11"
+    ],
+    "rationale": "Duplicate ozone-depletion mechanism question testing catalysis, intermediates, and rate-law consistency.",
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.7",
+          "5.11"
+        ],
+        "rationale": "Combine mechanism steps and identify catalyst/intermediate."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "5.8"
+        ],
+        "rationale": "Use observed rate law to assess rate-determining step and orders."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      777
+    ]
+  },
+  {
+    "id": "frq-2001-8-778",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10",
+      "9.2",
+      "9.3",
+      "5.6",
+      "7.7"
+    ],
+    "rationale": "Duplicate carbon/CO equilibrium question; includes entropy, temperature shift, energy profile, and equilibrium calculations.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.2"
+        ],
+        "rationale": "Infer entropy sign from changes in gas particle count."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.9",
+          "9.3"
+        ],
+        "rationale": "Use temperature-dependent equilibrium composition to infer enthalpy."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "5.6"
+        ],
+        "rationale": "Complete reaction energy profile."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "7.7",
+          "7.10"
+        ],
+        "rationale": "Calculate equilibrium composition or predict response to changed conditions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      778
+    ]
+  },
+  {
+    "id": "frq-2005-1-839",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.4"
+    ],
+    "rationale": "Weak-acid ionization, pH calculations, neutralization, and titration with strong base.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write weak-acid reaction and calculate pH from Ka and concentration."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.4",
+          "4.8"
+        ],
+        "rationale": "Write the net ionic neutralization equation."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "8.5",
+          "8.3"
+        ],
+        "rationale": "Analyze weak-acid/strong-base titration stoichiometry and pH."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      839
+    ]
+  },
+  {
+    "id": "frq-2005-2-840",
+    "primaryTopic": "9.11",
+    "relatedTopics": [
+      "9.11",
+      "9.8",
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Water electrolysis connects electrode half-reactions and Faraday charge-to-product calculations with gas measurements.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "9.8",
+          "9.11"
+        ],
+        "rationale": "Write the anode half-reaction for an electrolytic cell."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "9.11"
+        ],
+        "rationale": "Calculate charge from current and time."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "9.11",
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use electron stoichiometry and gas relationships to explain/product quantities."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      840
+    ]
+  },
+  {
+    "id": "frq-2005-3-841",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3",
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Uses concentration/time data and plots to infer reaction order, rate law, and rate constant, with stoichiometric product calculations.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Calculate initial moles and product molecules from reaction stoichiometry."
+      },
+      {
+        "label": "(c onward)",
+        "topics": [
+          "5.2",
+          "5.3"
+        ],
+        "rationale": "Determine order/rate law and use concentration-time/linearized plots to calculate k."
+      },
+      {
+        "label": "gas amount/volume parts",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Use ideal gas law if a product gas amount or volume is requested."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      841,
+      842
+    ]
+  },
+  {
+    "id": "frq-2005-4-843",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "4.8",
+      "4.9"
+    ],
+    "rationale": "Reaction-prediction set assesses net ionic equations and common reaction classes.",
+    "parts": [
+      {
+        "label": "(a)–(h)",
+        "topics": [
+          "4.2",
+          "4.7",
+          "4.8",
+          "4.9"
+        ],
+        "rationale": "Predict products and classify precipitation, acid-base, and redox processes."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      843
+    ]
+  },
+  {
+    "id": "frq-2005-5-844",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Synthesizes hydrated alum from aqueous reactants using solution preparation and reaction stoichiometry.",
+    "parts": [
+      {
+        "label": "all parts",
+        "topics": [
+          "4.5",
+          "3.7",
+          "1.1"
+        ],
+        "rationale": "Prepare solutions, determine reactant amounts/limiting reagent, and calculate product yield or composition."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      844
+    ]
+  },
+  {
+    "id": "frq-2005-6-845",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5",
+      "3.4",
+      "3.6"
+    ],
+    "rationale": "Applies ideal-gas relationships and kinetic molecular theory to pressure, average kinetic energy, molecular speed, and volume changes.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "3.4",
+          "3.5"
+        ],
+        "rationale": "Compare gas pressure and average kinetic energy at equal temperature and amount."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "3.5"
+        ],
+        "rationale": "Compare molecular speeds and relate average kinetic energy to temperature."
+      },
+      {
+        "label": "(e onward)",
+        "topics": [
+          "3.4",
+          "3.6"
+        ],
+        "rationale": "Predict gas-property changes under volume change; use ideal-gas model and assess assumptions."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      845
+    ]
+  }
+]

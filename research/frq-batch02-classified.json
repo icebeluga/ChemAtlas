@@ -1,0 +1,696 @@
+[
+ {
+  "id": "frq-2009-4-323",
+  "primaryTopic": "4.2",
+  "relatedTopics": [
+   "4.2",
+   "4.5",
+   "4.7",
+   "4.8",
+   "4.9"
+  ],
+  "rationale": "Write reaction equations for laboratory scenarios and identify reaction type/oxidation changes.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "4.2",
+     "4.9"
+    ],
+    "rationale": "Represent aqueous reaction and oxidation-state changes."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "4.2",
+     "4.7"
+    ],
+    "rationale": "Represent reaction products in solution and classify reaction."
+   },
+   {
+    "label": "(g–h)",
+    "topics": [
+     "4.2",
+     "4.8"
+    ],
+    "rationale": "Represent acid–base or precipitation reactions as net ionic equations."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   323,
+   324
+  ]
+ },
+ {
+  "id": "frq-2009-5-325",
+  "primaryTopic": "7.3",
+  "relatedTopics": [
+   "7.3",
+   "7.5",
+   "6.7",
+   "9.3"
+  ],
+  "rationale": "Interpret Kp, temperature dependence, bond energy, and thermodynamic data for a linked set of reactions.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "7.3",
+     "7.5"
+    ],
+    "rationale": "Write and interpret equilibrium constants using free-energy data."
+   },
+   {
+    "label": "(d)",
+    "topics": [
+     "6.7"
+    ],
+    "rationale": "Compare bond energies from reaction enthalpy."
+   },
+   {
+    "label": "(e–f)",
+    "topics": [
+     "9.3"
+    ],
+    "rationale": "Use thermodynamic quantities to judge favorability."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   325
+  ]
+ },
+ {
+  "id": "frq-2009-6-326",
+  "primaryTopic": "1.5",
+  "relatedTopics": [
+   "1.5",
+   "1.7",
+   "2.7",
+   "3.1"
+  ],
+  "rationale": "Relate sulfur electron structure to ion size, magnetic behavior, bonding, and intermolecular forces.",
+  "parts": [
+   {
+    "label": "(a)(i)",
+    "topics": [
+     "1.5"
+    ],
+    "rationale": "Write electron configurations."
+   },
+   {
+    "label": "(a)(ii–iii)",
+    "topics": [
+     "1.7"
+    ],
+    "rationale": "Explain ion size and electron arrangement."
+   },
+   {
+    "label": "(b)",
+    "topics": [
+     "1.7"
+    ],
+    "rationale": "Compare electron removal in isoelectronic species."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "2.7"
+    ],
+    "rationale": "Relate bond angle to orbital geometry."
+   },
+   {
+    "label": "(d)",
+    "topics": [
+     "3.1"
+    ],
+    "rationale": "Compare intermolecular-force types and strengths."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [
+   "Paramagnetism terminology"
+  ],
+  "evidencePages": [
+   326
+  ]
+ },
+ {
+  "id": "frq-2014-2-333",
+  "primaryTopic": "8.3",
+  "relatedTopics": [
+   "8.3",
+   "8.4",
+   "8.5"
+  ],
+  "rationale": "Weak-acid equilibrium and titration of propanoic acid.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "8.3",
+     "8.4"
+    ],
+    "rationale": "Identify conjugate pairs and calculate acid equilibrium."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "8.3"
+    ],
+    "rationale": "Reason about weak-acid equilibria and pH."
+   },
+   {
+    "label": "(d–e)",
+    "topics": [
+     "4.5",
+     "8.5"
+    ],
+    "rationale": "Use titration stoichiometry and curve interpretation."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   333
+  ]
+ },
+ {
+  "id": "frq-2014-4-336",
+  "primaryTopic": "5.1",
+  "relatedTopics": [
+   "5.1",
+   "7.7",
+   "7.9"
+  ],
+  "rationale": "Track pressure as a solid decomposition approaches equilibrium and respond to a disturbance.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.4",
+     "4.5"
+    ],
+    "rationale": "Use gas pressure and ideal-gas stoichiometry."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "7.7",
+     "7.9"
+    ],
+    "rationale": "Interpret equilibrium pressure and the effect of added product."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   336
+  ]
+ },
+ {
+  "id": "frq-2014-5-337",
+  "primaryTopic": "2.5",
+  "relatedTopics": [
+   "2.5",
+   "2.7"
+  ],
+  "rationale": "Use valence-electron patterns, Lewis structures, and molecular geometry to assess a halogen-fluoride hypothesis.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "1.8",
+     "2.5"
+    ],
+    "rationale": "Infer valence electron bonding and draw Lewis diagram."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "2.7"
+    ],
+    "rationale": "Relate molecular shape and bond polarity to dipole moment."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   337
+  ]
+ },
+ {
+  "id": "frq-2014-7-339",
+  "primaryTopic": "5.2",
+  "relatedTopics": [
+   "5.2",
+   "5.3",
+   "5.11"
+  ],
+  "rationale": "Use half-life data to infer a catalyzed gas-phase reaction rate law.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "5.3"
+    ],
+    "rationale": "Analyze half-life dependence on initial pressure."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "5.2",
+     "5.11"
+    ],
+    "rationale": "Determine rate law and catalyst effects."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   339
+  ]
+ },
+ {
+  "id": "frq-2015-1-344",
+  "primaryTopic": "9.8",
+  "relatedTopics": [
+   "9.8",
+   "9.9"
+  ],
+  "rationale": "Analyze metal–air galvanic-cell reactions and potentials.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "9.8"
+    ],
+    "rationale": "Identify cell components and half-reactions."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "9.9"
+    ],
+    "rationale": "Use cell potential and free-energy relationships."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   344,
+   345
+  ]
+ },
+ {
+  "id": "frq-2015-2-346",
+  "primaryTopic": "4.5",
+  "relatedTopics": [
+   "4.5",
+   "3.4",
+   "6.6",
+   "9.3"
+  ],
+  "rationale": "Analyze ethanol dehydration through product yield, gas collection, and thermodynamic conditions.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "4.5",
+     "3.4"
+    ],
+    "rationale": "Calculate theoretical gas, collected gas, and yield."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "6.6",
+     "9.3"
+    ],
+    "rationale": "Use enthalpy/free energy and equilibrium favorability."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   346,
+   347
+  ]
+ },
+ {
+  "id": "frq-2015-3-348",
+  "primaryTopic": "8.4",
+  "relatedTopics": [
+   "8.4",
+   "8.5",
+   "8.7"
+  ],
+  "rationale": "Titrate a weak-acid salt and interpret endpoint and half-equivalence pH.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "4.5",
+     "8.4"
+    ],
+    "rationale": "Write neutralization and use reaction stoichiometry."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "8.5",
+     "8.7"
+    ],
+    "rationale": "Choose indicator and analyze titration pH."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   348,
+   349
+  ]
+ },
+ {
+  "id": "frq-2015-4-350",
+  "primaryTopic": "7.11",
+  "relatedTopics": [
+   "7.11",
+   "7.12",
+   "3.1"
+  ],
+  "rationale": "Determine Ca(OH)2 solubility and depict hydration in the presence of a common ion.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "7.11",
+     "7.12"
+    ],
+    "rationale": "Write dissolution equilibrium and calculate common-ion solubility."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "3.1"
+    ],
+    "rationale": "Orient water molecules around an ion."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   350
+  ]
+ },
+ {
+  "id": "frq-2015-5-351",
+  "primaryTopic": "5.2",
+  "relatedTopics": [
+   "5.2",
+   "5.3",
+   "3.13"
+  ],
+  "rationale": "Measure bleaching kinetics using absorbance and a large-excess reactant.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "3.13"
+    ],
+    "rationale": "Use Beer–Lambert absorbance as concentration evidence."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "5.2",
+     "5.3"
+    ],
+    "rationale": "Infer rate law and concentration change over time."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   351
+  ]
+ },
+ {
+  "id": "frq-2015-7-353",
+  "primaryTopic": "6.4",
+  "relatedTopics": [
+   "6.4",
+   "6.5",
+   "6.6"
+  ],
+  "rationale": "Calculate heat for heating and melting aluminum, then compare recycling and extraction energy.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "6.4",
+     "6.5"
+    ],
+    "rationale": "Add sensible heating and enthalpy of fusion."
+   },
+   {
+    "label": "(b)",
+    "topics": [
+     "6.6"
+    ],
+    "rationale": "Compare reaction-energy requirements."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   353
+  ]
+ },
+ {
+  "id": "frq-2016-3-376",
+  "primaryTopic": "1.5",
+  "relatedTopics": [
+   "1.5",
+   "1.7",
+   "3.1"
+  ],
+  "rationale": "Explain Fe ion configurations, ionic radii, and hydration strengths.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "1.5",
+     "1.7"
+    ],
+    "rationale": "Use electron configuration and charge to explain ionic radii."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "3.1"
+    ],
+    "rationale": "Compare ion–dipole attraction strength."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   376
+  ]
+ },
+ {
+  "id": "frq-2016-4-377",
+  "primaryTopic": "3.1",
+  "relatedTopics": [
+   "3.1",
+   "3.4",
+   "7.7"
+  ],
+  "rationale": "Compare intermolecular forces in CS2 and COS and analyze their vapor equilibrium.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "3.1"
+    ],
+    "rationale": "Compare polarity and dispersion forces."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "3.4",
+     "7.7"
+    ],
+    "rationale": "Use gas pressure and equilibrium of vapor with liquid."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   377
+  ]
+ },
+ {
+  "id": "frq-2016-5-378",
+  "primaryTopic": "8.3",
+  "relatedTopics": [
+   "8.3",
+   "3.8"
+  ],
+  "rationale": "Interpret weak-acid HF ionization and particle-level representations; assess solution concentration effects.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "8.3"
+    ],
+    "rationale": "Relate percent ionization and acid equilibrium."
+   },
+   {
+    "label": "(d–e)",
+    "topics": [
+     "3.8",
+     "8.3"
+    ],
+    "rationale": "Interpret particulate solution changes and weak-acid behavior."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   378
+  ]
+ },
+ {
+  "id": "frq-2016-7-380",
+  "primaryTopic": "1.6",
+  "relatedTopics": [
+   "1.6"
+  ],
+  "rationale": "Interpret photoelectron spectrum; radioactive decay is outside the current AP framework.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.6"
+    ],
+    "rationale": "Use photoelectron spectrum to identify electron structure."
+   },
+   {
+    "label": "(b–c)",
+    "topics": [],
+    "rationale": "Radioactive decay half-life is legacy nuclear chemistry."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [
+   "Nuclear decay and radioactive half-life"
+  ],
+  "evidencePages": [
+   380
+  ]
+ },
+ {
+  "id": "frq-2016-1-385",
+  "primaryTopic": "2.1",
+  "relatedTopics": [
+   "2.1",
+   "3.1",
+   "4.5"
+  ],
+  "rationale": "Compare halogen bond lengths, use halogen displacement, and calculate solution quantities.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "2.1"
+    ],
+    "rationale": "Relate atomic size to diatomic bond length."
+   },
+   {
+    "label": "(b–c)",
+    "topics": [
+     "4.9"
+    ],
+    "rationale": "Analyze halogen displacement as a redox reaction."
+   },
+   {
+    "label": "(d–e)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Apply reaction stoichiometry."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   385,
+   386
+  ]
+ },
+ {
+  "id": "frq-2016-2-387",
+  "primaryTopic": "1.6",
+  "relatedTopics": [
+   "1.6",
+   "3.12"
+  ],
+  "rationale": "Use a photoelectron spectrum and photon energy to identify an element and remove a valence electron.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.6"
+    ],
+    "rationale": "Infer electron configuration from PES peaks."
+   },
+   {
+    "label": "(b)",
+    "topics": [
+     "3.12"
+    ],
+    "rationale": "Relate wavelength and photon energy."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   387
+  ]
+ },
+ {
+  "id": "frq-2016-5-391",
+  "primaryTopic": "1.6",
+  "relatedTopics": [
+   "1.6",
+   "3.12"
+  ],
+  "rationale": "Use photoelectron binding energies and photon wavelength to infer electron structure.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.6"
+    ],
+    "rationale": "Interpret peaks and infer electron configuration."
+   },
+   {
+    "label": "(b)",
+    "topics": [
+     "3.12"
+    ],
+    "rationale": "Calculate radiation wavelength from electron-removal energy."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   391
+  ]
+ }
+]

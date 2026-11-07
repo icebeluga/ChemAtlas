@@ -1,0 +1,350 @@
+33 18 Version A 4 Part B Directions: Each of the questions or incomplete statemen
+34 26 Version A 5 25. The pressure, in atm, exerted by 1.85 mol of an ideal gas p
+35 30 Version A 6 28. Which of the following molecules contains only single bonds
+36 34,35 Version A 7 33. If 0.40 mol of H2 and 0.15 mol of O2 were to react as compl
+37 100 Version A 8 38. How many mL of 10.0 M HC1 are needed to prepare 500.mL of 2
+38 41 Version A 9 41. The diagram above represnets H2(g) and N2(g) in a closed co
+39 44,45 Version A 10 42. Equal masses of He and Ne are placed in a sealed container
+40 50 Version A 11 47. When diluting concentrated H2SO4, one should slowly add ac
+41 55,57 Version A 12 53. A sample of 10.0 mol of butyric acid, HC4H7O2, a weak acid
+42 59,61 Version A 13 59. The diagram above represents a mixture of NO2(g) and N2O4(
+43 65,67 Version A 14 65. In a laboratory experiment, H2(g) is collected over water 
+44 10,73 Version A 15 68. The pH of a solution prepared by the addition of 10. mL of
+48 1,2,3 Section I Answer Key and Percent Answering Correctly (continued) Correct Pe
+66 1,2,3 ID: A 1 AP* Chemistry: 2008 Released Multiple Choice Exam Answer Section OT
+67 4,5 ID: A 2 4. ANS: C When moles added = moles initially present you have arriv
+68 6,7 ID: A 3 6. ANS: B Don’t forget that “conjugate base” is equivalent to “salt
+69 8,9,10,11,12,13 ID: A 4 8. ANS: E “Strong” electrolytes are like “strong” acids, both disso
+70 14,15,16,17,18 ID: A 5 14. ANS: C Clearly combustion reactions (fire!) give off heat energ
+71 19,20,21,22,23 ID: A 6 19. ANS: C The bromide ion has 36 electrons since Br has at atomic 
+72 24,79,25,26,27 ID: A 7 24. ANS: B So, you went directly to the periodic table, right? Cs h
+73 28,29,30,31,32 ID: A 8 28. ANS: C You know what I’m going to say, right? Draw the dang Lew
+74 33,34,35,36 ID: A 9 33. ANS: A The “trick” to getting this one correct is to recognize 
+75 37,38,39,40 ID: A 10 37. ANS: A Diamond and silicon dioxide are classic examples of net
+76 41,42,43,44 ID: A 11 41. ANS: E You have to pay attention to the initial drawing as wel
+77 45,46,47 ID: A 12 45. ANS: D Realize the “slants” represent temperature changes duri
+78 48,49,50,51,52 ID: A 13 48. ANS: B Conjugate acid-base pairs simply differ by a proton or 
+79 53,54,55,56,57,58 ID: A 14 53. ANS: D Since m = molsolute kg solvent and M = molsolute L of s
+80 59,60,61,62 ID: A 15 59. ANS: B Focus on the balanced equation to get the equilibrium e
+81 63,64,65,66 ID: A 16 63. ANS: B F and O lie next to each other in the periodic table, F
+82 67,68,69,70,71,72 ID: A 17 67. ANS: B This quesiton is a time bandit since its redox. Not har
+83 73,74,75 ID: A 18 73. ANS: E VP is dependent upon the average KE of the molecules, s
+122 18,20 Version A 4 Directions: Each of the questions or incomplete statements belo
+123 22 Version A 5 21. When a sample of oxygen gas in a closed container of consta
+124 28,29 Version A 6 28. 2 A(g) + B(g) p 2 C(g) When the concentration of substance 
+125 34,36 Version A 7 32. The net ionic equation for the reaction between silver carb
+127 47 Version A 9 45. The alkenes are compounds of carbon and hydrogen with the g
+128 52,20 Version A 10 51. Pi bonding occurs in each of the following species EXCEPT 
+130 63,66 Version A 12 63. Acid Acid Dissociation Constant, Ka H3PO4 7 × 10–3 H2PO4– 
+132 76 Version A 14 75. If the acid dissociation constant, Ka, for an acid HA is 8
+133 79 Version A 15 77. Which of the following compounds exhibits optical isomeris
+134 82,83 Version A 16 81. What is the net ionic equation for the reaction that occur
+137 1,2,3,4,5 ID: A 1 AP* Chemistry: 1984 Released Multiple Choice Exam Answer Section OT
+138 6,7,8,9,10 ID: A 2 6. ANS: D Ammonia contributes significantly to the nutritional need
+139 11,12,13,14,15 ID: A 3 11. ANS: A IF the carbonate ion (or bicarbonate ion) were present i
+140 16,17,18,19 ID: A 4 16. ANS: C Replacing the salt bridge with a platinum wire stops the
+141 20,21,22,23 ID: A 5 20. ANS: E Red: NO3¯(aq) + 10 H+(aq) + 8 e– → NH4+(aq) + 3 H2O(l) O
+142 24,25,26,27 ID: A 6 24. ANS: A Dissect the name starting at the back: (II) indicates th
+143 28,29,30,31,32 ID: A 7 28. ANS: C Your first inclination is to say that the reaction is ze
+144 33,34,35 ID: A 8 33. ANS: D Expect easy math! Realize that ammonia is a BASE! So it’
+145 36,37,38,39 ID: A 9 36. ANS: C A negative ΔH value indicates an exothermic reaction. So
+146 40,41,42,43,44 ID: A 10 40. ANS: A The structure of SO3 appears below (note it exhibits re
+147 45,46,47,48,49,50 ID: A 11 45. ANS: A Expect easy math! If you think of CnH2n as a “unit”, th
+148 51,52,53 ID: A 12 51. ANS: E In any multiple bond, a sigma bond is present. A pi bon
+149 54,55,56,57 ID: A 13 54. ANS: A Hopefully, this graph popped into your brain: Each soli
+150 58,59,60,61,62,63 ID: A 14 58. ANS: A Mn’s ground state atomic configuration is 1s2 2s2 2p6 3
+151 64,65,66,67,68 ID: A 15 64. ANS: E Nitrous acid is weak, so it does not dissociate and is 
+152 69,61,70,71,72,73,74 ID: A 16 69. ANS: C Expect easy math! 11.0 molal translates to 11 moles of 
+153 75,76,77,78,79 ID: A 17 75. ANS: E First, we need to know the [H+] at equilibrium...bring 
+154 80,81,82 ID: A 18 80. ANS: B Draw the Lewis structures! We use resonance to describe
+155 83,84,85 ID: A 19 83. ANS: A Peruse the answers...they all contain ΔE, so you are fo
+179 17 21 Chemistry Practice Exam GO ON TO THE NEXT PAGE. 16. At which point on th
+180 30,24 Chemistry Practice Exam 22 GO ON TO THE NEXT PAGE. Questions 18-20 refer to
+183 28 25 Chemistry Practice Exam GO ON TO THE NEXT PAGE. Ag+(aq) + Cl−(aq) Æ ¨ Ag
+200 1 Chemistry Practice Exam 42 GO ON TO THE NEXT PAGE. CHEMISTRY Section II 7 C
+281 1,2,3 123 Chemistry Practice Exam The sketch should clearly show: 1. a clear repr
+321 2 2009 AP® CHEMISTRY FREE-RESPONSE QUESTIONS © 2009 The College Board. All ri
+331 1 2014 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2014 The College Board. Visit
+334 3 2014 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2014 The College Board. Visit
+338 6 2014 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2014 The College Board. Visit
+339 100,100,100,50 7. The half-life (t1/2) of the catalyzed isomerization of cis-2-butene gas 
+352 6 2015 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2015 The College Board. Visit
+358 1 "1¥$)&.*453:'3&&3&410/4&26&45*0/4 © 2016 The College Board. Visit 
+364 5 "1¥$)&.*453:'3&&3&410/4&26&45*0/4 © 2016 The College Board. Visit 
+372 1 CHEMISTRY Section II Time—1 hour and 45 minutes 7 Questions YOU MAY USE YOU
+374 2 2 NO(g) + O2(g) → 2 NO2(g) 2. A student investigates the reactions of nitro
+379 6 6. A student sets up a galvanic cell at 298 K that has an electrode of Ag(s
+388 3 2019 AP® CHEMISTRY FREE-RESPONSE QUESTIONS GO ON TO THE NEXT PAGE. -8- 3. A
+390 4 2019 AP® CHEMISTRY FREE-RESPONSE QUESTIONS GO ON TO THE NEXT PAGE. -10- 4. 
+394 7 2019 AP® CHEMISTRY FREE-RESPONSE QUESTIONS -14- 6 H+(aq) + 2 MnO4 −(aq) + 5
+421 3 Continue your response to QUESTION 1 on this page. As part of the experimen
+423 3 Continue your response to QUESTION 1 on this page. (e) Using the informatio
+427 2 Begin your response to QUESTION 3 on this page. 3. Answer the following que
+436 4 Begin your response to QUESTION 7 on this page. 7. A Lewis electron-dot dia
+480 2,4 Begin your response to QUESTION 7 on this page. 7. A student conducts a chr
+492 4 Visit College Board on the web: collegeboard.org 11 © 2025 College Board. 
+494 6 Visit College Board on the web: collegeboard.org 13 © 2025 College Board. 
+499 1 Visit College Board on the web: collegeboard.org. 3 © 2026 College Board. 
+510 6 Visit College Board on the web: collegeboard.org. 14 © 2026 College Board.
+520 2 2003 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2003 by College Entr
+523 5 2003 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2003 by College Entr
+537 4 2017 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2017 The College Board. Visit
+538 5 2017 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2017 The College Board. Visit
+540 7 2017 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS © 2017 The College Board. Visit
+563 90 2000 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2000 College Entranc
+565 8 2000 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2000 College Entranc
+588 5 2002 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2002 by College Entr
+600 5 2002 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2002 by College Entr
+606 0 Note: For all questions involving solutions and/or chemical equations, assu
+607 0 Questions 8-10 refer to the following diatomic species. (A) Liz (B) I% (C) 
+609 20 18. 19. 20. 2 HZ0 + 4 Mn04- + 3 C102- + 4 MnOz + 3 ClOh- + 4 OH- Which spec
+610 22,23 2 1. Correct statements about alpha particles include which of the followin
+613 34 31. H2C204 + 2 Hz0 ti 2 H30+ + C20$- Oxalic acid, H2C204, is a diprotic aci
+614 36 35. For which of the following processes would OS have a negative value? I.
+616 48,51 45. A sample of an ideal gas is cooled from 50.0’ C to 25.0” C in a sealed 
+618 60,0 59. When a 1.00~gram sample of limestone was dissolved in acid, 0.38 gram o
+619 71 67. 68. 69. Substances X and Y that were in a solution were separated in th
+620 73 72. The nuclide 249 ,,Cm is radioactive and decays by the loss of one beta 
+621 24,16,19,31 m REVISED QUANTITATIVE ITEMS FROM THE 1994 CHEMISTRY EXAM 24R. A sample of 
+622 37,63,59,60,73,16,19,24,25,31,37,59,60,63,73 37R. A sample of 3.0 grams of an ideal gas at 127°C and 63R. Which of the f
+626 1 CHEMISTRY SECTION II Time-l hour and 30 minutes The percentages given for t
+629 4 Part C ( 15 percent) 4. Answer FIVE of the eight options in this part. (Ans
+631 6 SELECT TWO OF THE FOUR ESSAY QUESTIONS, NUMBERED 6 THROUGH 9. (Additional e
+651 1,2,3,4 Question 4 The ability to write the formulas of chemical species from their
+678 5,6,7,8,9,10,11,12 Questions 5-8 refer to atoms for which the occupied atomic orbitals are sho
+688 52 47. When hafnium metal is heated in an atmosphere of chlorine gas, the prod
+701 1 CHEMISTRY-SECTION (Total time-90 minutes) Part A Time-40 minutes II YOU MAY
+702 2 Part A I Answer EITHER Question 2 below OR Question 3 on the next page. Onl
+709 13,61 Section I: Multiple Choice Listed below are the correct answers to the mult
+732 58 Scoring Guidelines for Free-Response Question 5 G-9 W w (4 (e> Pressure wil
+754 18 Version A 3 Directions: Each of the questions or incomplete statements belo
+755 22,23,25 Version A 4 19. In which of the following species does sulfur have the same
+756 27 Version A 5 27. 2NO(g) + O2 →2 NO2(g) A possible mechanism for the overall 
+757 31 Version A 6 31. What volume of O2(g) is required to react with excess CS2(l
+758 37 Version A 7 36. A sample of a solution of an unknown was treated with dilut
+759 39 Version A 8 39. On the basis of the solubility curves shown above, the grea
+760 42 Version A 9 42. At a certain temperature, the value of the equilibrium cons
+761 49,51 Version A 10 49. . . . Cr2O7 2 −(aq) + . . . H2S(g) + . . . H+ (aq) → ⎯⎯ . 
+762 55,57 Version A 11 54. Which of the following must be true for a reaction for whi
+763 58,60 Version A 12 58. 2 N2H4(g) + N2O4(g) → 3 N2(g) + 4 H2O(g) When 8.0 g of N2H
+764 62 Version A 13 62. Which of the following structural formulas represents an i
+765 68 Version A 14 67. Which of the following describes the changes in forces of 
+766 73 Version A 15 72. A colorless solution is divided into three samples. The fo
+776 5 2002 AP® CHEMISTRY FREE-RESPONSE QUESTIONS Copyright © 2002 by College Entr
+779 1,2,3 ID: A 1 AP* Chemistry: 2002 Released Multiple Choice Exam Answer Section OT
+780 4,5,6 ID: A 2 4. ANS: B Carbon dioxide has 2 double bonds, is linear and is nonpo
+781 7,8,9,10,11,12 ID: A 3 7. ANS: D In solid form KMnO4 purple and FeCl3 is yellow to amber. 
+782 13,14,15 ID: A 4 13. ANS: C This is called a disproportionation reaction. Halogens d
+783 16,17,18 ID: A 5 16. ANS: A It is an equilibrium process between t4 and t5, but its 
+784 19,20,21,22 ID: A 6 19. ANS: E First calculate the oxidation number of sulfur in sulfur
+785 23,24,25,26,27 ID: A 7 23. ANS: D This is a transmutation reaction. In this reaction, neut
+786 28,29,30,31 ID: A 8 28. ANS: E Ionic compounds contain a metal-nonmetal combination. On
+787 32,33 ID: A 9 32. ANS: B Metal oxides are ionic solids at room temperature and ar
+788 34,35,36 ID: A 10 34. ANS: A The equivalence point occurs when 25 mL of NaOH has bee
+789 37,38,39,40,41 ID: A 11 37. ANS: A Since you were given a ratio of product over reactant (
+790 42,43,44,45,46 ID: A 12 42. ANS: B Never, ever, forget that generally K = products È ÎÍÍÍ 
+791 47,48,49,50,51 ID: A 13 47. ANS: C There can be fractional reaction orders. The reaction o
+792 52,53,54,55 ID: A 14 52. ANS: B The balanced equation is : C3H8 + 5 O2 → 3 CO2 + 4 H2O 
+793 56,57,58,59,60,61 ID: A 15 56. ANS: A For a substance to boil, the IMFs of the liquid state m
+794 62,63,64,65,66 ID: A 16 62. ANS: B An isomer has the same chemical formula, but a differen
+795 67,68,69 ID: A 17 67. ANS: B Phase changes are about IMFs not chemical bonds! The IM
+796 70,71,72,73 ID: A 18 70. ANS: C Silicon dioxide is a network covalent solid as are grap
+797 74,75 ID: A 19 74. ANS: B These are all white solids. Potassium nitrate is a neut
+828 1,2,3 14 Copyright © 2002 by the College Entrance Examination Board. All rights r
+841 10,20,30,50,70,100 2005 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) Copyright © 2005 by Co
+856 5 2006 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2006 The College Boa
+894 3 2008 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2008 The College Boa
+906 1 2009 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2009 The College Boar
+907 2 2009 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2009 The College Boar
+919 2 2010 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2010 The College Boar
+920 3 2010 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2010 The College Boar
+923 5 2010 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2010 The College Boar
+936 5 2011 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) © 2011 The College Boar
+945 2 2002 AP® CHEMISTRY FREE-RESPONSE QUESTIONS (Form B) Copyright © 2002 by Col
+958 15,16,17 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+964 50 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+997 4 B B B B B B B B B B B B B B Unauthorized copying or reuse of any part of th
+1014 1 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1016 2 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1018 3 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1020 4 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1022 5 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1025 6 AP® CHEMISTRY 2013 SCORING GUIDELINES © 2013 The College Board. Visit the C
+1045 1,2 Q. LANGUAGE — Do not complete this section unless instructed to do so. 1 2 
+1063 50,50,100,50 Trial Volume of 0.10 M HCl Volume of 0.10 M NaOH Amount of Heat Released 1 
+1070 30,30 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1081 70,40 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1105 70,40 Question 1 CaO(s) + H2O(l )  Ca(OH)2(s) AP® CHEMISTRY 2016 SCORING GUIDELI
+1200 30,60 Questions 15-19 are based on the information in the table below. Compound M
+1257 0,0,0,0 Question 20 Skill Learning Objective Topic 6.D ENE-4.C Gibbs Free-Energy an
+1273 100,100,100,100 Question 37 Skill Learning Objective Topic 5.F SPQ-3.A Solutions and Mixtur
+1303 1 1. The chemical reaction between and is represented above. A student combin
+1304 5,6 (A) The metallic bonds between atoms will break when the is exposed to the 
+1305 7,8 7. The graph above shows the changes in temperature recorded for the of sur
+1306 9,10 9. A student dissolves of in of in a coffee-cup calorimeter. Based on the i
+1307 11 (A) The amount of energy absorbed by one mole of water molecules as they es
+1308 12,13,14 12. The heating curve for 1.0 mole of , initially at , is shown above at th
+1309 15,16,17 15. The equation shown above represents an endothermic reaction between and
+1310 18,19,20 18. Bond Type Average Bond Enthalpy The formation of hydrogen chloride gas 
+1311 21,22 (A) (B) (C) (D) 21. Substance 0 Natural gas consists primarily of , which i
+1312 23,24 23. Reaction 1: Reaction 2: Overall reaction: The enthalpy of the overall r
+1315 4 (A) The value of the enthalpy change for the dissolution of cannot be predi
+1316 5 5. Time (min) Pressure ( ) 0.25 101 0.50 108 0.75 116 1.00 124 1.25 128 1.5
+1317 6,7 6. A sample of pure in a sealed tube at is placed in a temperature bath at 
+1318 8 (A) It is a good representation because it shows that the dipoles of the mo
+1319 9,10 9. The particle diagrams above show the changes that occurred after an equi
+1320 11,12 (A) , because . (B) , because . (C) , because . (D) , because . 11. reacts 
+1321 13,14,15 (A) Half the concentration of that in the first vessel (B) The same concent
+1322 16,17 (A) Almost all of the will still be in the beaker with no visible , because
+1323 18,19,20 18. Equation 1: Equation 2: In a large reaction vessel at a constant temper
+1324 21 21. The reaction of with is represented by the balanced equation above. A c
+1325 22,23 22. Substance Initial Concentration ( ) 0.10 0.10 0.10 The table lists the 
+1326 24,26,27 24. At a given temperature, the system represented by the chemical equation
+1327 28,29 (A) (B) (C) (D) 28. The equilibrium in a saturated solution of is represent
+1328 30 30. A student prepared a saturated aqueous solution of and measured its , a
+1329 31,32 31. dissolves in water according to the equation . The value of for the dis
+1330 33 (A) When the concentration of ions is increased, the solubility of increase
+1343 1,2 S. LANGUAGE — Do not complete this section unless instructed to do so. 1 2
+1389 4 B B B B B B B B B B B B B B Unauthorized copying or reuse of any part of th
+1433 1,2 P. LANGUAGE — Do not complete this section unless instructed to do so. 1 2 
+1473 1 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1491 100,100,100,50 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1510 1,2 (c) Two possible geometric shapes for the AP® CHEMISTRY 2014 SCORING GUIDEL
+1513 100,100,100,50,100 AP® CHEMISTRY 2014 SCORING GUIDELINES Question 7 (4 points) The half-life (
+1528 1,2 P. LANGUAGE — Do not complete this section unless instructed to do so. 1 2 
+1541 50 10. An acetate buffer solution is prepared by combining 50. mL of 0.20 M ac
+1545 20 21. Benzene, C6H6, has the structure shown above. Considering the observati
+1549 100 CaC ( )s (molar mass 64 g/mol) 2 Ca(OH)2 100. mL of NaOCl(aq) NaOCl(aq) 2 s
+1550 100,50,100,50,100,100,100,100 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1564 1 CHEMISTRY CHEMISTRY Section II 7 Questions Time—1 hour and 45 minutes YOU M
+1607 1 1. For parts of the free response question that require calculations, clear
+1608 2 2. For parts of the free response question that require calculations, clear
+1613 5 5. For parts of the free response question that require calculations, clear
+1615 7 7. For parts of the free response question that require calculations, clear
+1617 3,4 A quantity of of thermal energy is transferred to four different substances
+1618 5,6,7,8 5. A vessel initially contains at a partial pressure of , at a partial pres
+1619 9,11,12,10 9. in the equilibrium system represented by the Which of the following chan
+1620 14,15 The following balanced equation represents the decomposition of hydrogen pe
+1621 18,19 16. The student observes that under the same conditions, the reaction occur
+1623 23,24,25 23. A student prepared four solutions of known and measured the absorbance 
+1624 27,30 27. Acid Concentration of Acid Volume of Sample Volume of Standardized Adde
+1625 31,32 31. The mass spectrum of an element is represented above. Which of the foll
+1626 35,36,37 34. The value of for the salt is . The in a saturated solution of is approx
+1627 39,40,41 38. Which element, or , has the lower boiling point, and why? (A) , because
+1628 43,44 42. A student determines that an unknown compound contains percent by mass.
+1629 45,46,48 45. as a function of time at . The experimental data A student recorded the
+1630 51,52 49. Which of the following identifies the four species that are present in 
+1631 54,55 53. A student placed a piece of in a beaker containing . After 45 minutes, 
+1632 57 56. Which of the following molecules has the largest dipole moment? (A) (C)
+1669 3 1. A quantity of of thermal energy is transferred to four different substan
+1670 4,5,6 4. Acid Based on the values listed in the table above, equal volumes of whi
+1671 7,8,9 (A) (B) (C) (D) 7. A sample of and a sample of , both originally at , are c
+1672 11 The following balanced equation represents the decomposition of hydrogen pe
+1675 17,18,19 (A) Pentane, because it has greater London dispersion forces than propanoic
+1676 21 20. Which of the following correctly identifies a Brønsted-Lowry conjugate 
+1677 22 22. Acid Concentration of Acid Volume of Sample Volume of Standardized Adde
+1678 26,27 25. Which of the following pairs of diagrams represents the change with the
+1679 30 28. A sample of an ideal gas in a sealed container occupies a volume of at 
+1680 31,33 31. Based on the Maxwell-Boltzmann distributions at shown above, which of t
+1681 34,36 34. A solution of a weak acid is titrated with . Based on the titration cur
+1682 38 (A) (B) (C) (D) 37. A solid is tested in a laboratory to determine its prop
+1684 40,41,42 40. The pressure of a sample of was changed by adjusting the volume of the 
+1685 44 (A) (B) (C) (D) 44. At and , is a liquid and is a crystalline solid. Which 
+1686 45,46,47 45. Compound Which of the following ranks the compounds listed in the table
+1687 48,49 (A) (B) (C) (D) 48. Which of the following is true about the reaction repre
+1688 51 51. Compound Based on the information in the table above, the solubility of
+1689 54,55 54. When a stress is applied to an ionic crystal, the planes of the ions sl
+1690 56 56. The diagram above represents a solution of ions in water. Which of the 
+1706 61 61. For parts of the free response question that require calculations, clea
+1712 63 63. For parts of the free response question that require calculations, clea
+1714 64 64. For parts of the free response question that require calculations, clea
+1751 6 2023 AP Exam 6. A student sets up a galvanic cell with one half-cell made w
+1756 2,3,5 1. An atom of chlorine and an atom of which of the following elements will 
+1757 6,7,8,9 6. A student dissolves a quantity of in water. What information must the st
+1758 13 11. Which of the following best explains why behaves more ideally than most
+1759 14,15,16 14. The rate law for the reaction shown is . What is the overall order of t
+1760 17,18 17. Ionization Energy First Second Third Fourth Fifth Based on the successi
+1761 20 (A) will be less than only at high temperatures. (B) will be less than at a
+1762 23,24,25 23. Based on the mass spectrum of a sample of boron shown above, how many n
+1763 28 Students are asked to design an experiment to determine the molarity of a s
+1766 36 35. Which of the following identifies the hybridization of the valence orbi
+1767 38,39 (A) The pressure will remain constant because the number of gas particles i
+1768 41 (A) (B) (C) (D) 40. Which of the following correctly ranks the internuclear
+1769 42,43 (A) Increasing the temperature (B) Decreasing the volume of the reaction ve
+1770 44,45,46 44. Half-Reaction The standard reduction potentials of the half-reactions a
+1771 47 47. The potential energy diagram for the uncatalyzed decomposition of is sh
+1772 49,50 (A) (B) (C) (D) 49. Based on the information above, what is the value of fo
+1773 51,52 51. Which of the following is the best method for preparing of ? (A) Place 
+1774 53,54 53. The complete photoelectron spectrum of a pure element is represented ab
+1775 55 (A) of and of (B) of and of (C) of and of (D) of and of 55. The graph of po
+1777 56,57 56. A group of students studied the rate of the reaction represented above 
+1778 58 58. Half-Reaction A student sets up a standard galvanic cell, as shown in t
+1779 59 59. The preceding equation represents the equilibrium of a saturated soluti
+1780 60 60. A sample of is titrated with , and the data are shown in the graph abov
+1789 62 62. For parts of the free response question that require calculations, clea
+1795 63 63. For parts of the free response question that require calculations, clea
+1800 64 The response provides the correct answer. • The pH in D is significantly lo
+1802 65 65. For parts of the free response question that require calculations, clea
+1819 40 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1860 100 Overall reaction: Pb(s) + PbO2(s) + 2 H+(aq) + 2 HSO4 −(aq) → 2 PbSO4(s) + 
+1879 100 Question 5 Overall reaction: AP® CHEMISTRY 2017 SCORING GUIDELINES © 2017 T
+1893 1,2 Q. LANGUAGE — Do not complete this section unless instructed to do so. 1 2 
+1901 60,90 CHEMISTRY Section I Time—1 hour and 30 minutes 50 Questions CALCULATORS ARE
+1905 20 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1919 70 Unauthorized copying or reuse of any part of this page is illegal. GO ON TO
+1947 90 3 Ag(s) + 4 HNO3(aq) → 3 AgNO 3(aq) + NO(g) + 2 H2O(l) 5. A student investi
+1967 90 © 2018 The College Board. Visit the College Board on the Web: www.collegebo
+1992 100 17. An experiment is conducted to measure the properties of gases. The Maxw
+1996 44 26. A bowl containing soup is placed in a microwave, which emits microwave 
+1997 57,99 Molar Mass Boiling Point Melting Point Compound Color Compound X 102. g/mol
+2005 1,2 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2006 3,4 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2007 5,6 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2008 7 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2009 8,9 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2010 10 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2011 11,12 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2012 13 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2013 14 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2014 15 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2015 16 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2016 17,18 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2017 19,20 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2018 21,22 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2019 23 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2020 24 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2021 25,26 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2022 27 AP Chemistry Scoring Guide Unit 5 Progress Check: MCQ Copyright © 2017. The
+2024 1 1. Aluminum metal can be recycled from scrap metal by melting the metal to 
+2025 2 2. A student is asked to determine what mass of butane, C4H10(g), needs to 
+2027 4 4. Directions: For parts of the free-response question that require calcula
+2038 18,19,20,21,22 GO ON TO THE NEXT PAGE. Part B Directions: Each of the questions or incompl
+2059 4 GO ON TO THE NEXT PAGE. CHEMISTRY Part B Time—40 minutes NO CALCULATORS MAY
+2129 3,4 1. Which of the following numerical expressions gives the number of moles i
+2130 5,6 5. The mass spectrum represented above is most consistent with which of the
+2131 7,8,9,10 7. A student obtains a sample of a white powder labeled as . After complete
+2132 13 12. A vessel contains a mixture of gases. The mass of each gas used to make
+2133 16,17 16. The complete photoelectron spectrum of an element is given above. Which
+2134 18,19 18. The complete photoelectron spectrum of the element carbon is represente
+2135 23 (A) has a higher electronegativity than has. (B) The atom has a greater num
+2137 4 1. On the basis of electronegativity differences between atoms, which of th
+2138 5,6 5. The particulate-level diagram shown above best helps to explain which of
+2139 7 7. Which of the following indicates whether the solid substance represented
+2140 9 (A) (B) (C) (D) 9. The diagram above best illustrates which of the followin
+2141 10 (A) Electrical conductivity, because it shows a lattice of positive ions im
+2142 12,14 12. Which of the Lewis diagrams shown above is the more likely structure of
+2143 15 15. Based on the Lewis diagram for , shown above, the bond angle is closest
+2145 1,2 1. Which particle diagram shown above best represents the strongest intermo
+2146 3,4 3. A solid compound of a group 1 (alkali) metal and a group 17 (halogen) el
+2147 5,6 5. The crystal structure of is represented in the diagram above. Which stat
+2148 8,9 (A) About , because the initial volume of the gas mixture was 12 times larg
+2149 10,11 10. The diagrams above use arrows to represent the speed of a gas particle.
+2150 12 12. The diagram above shows the distribution of speeds for a sample of . Wh
+2152 15,17 14. The gases and can be liquefied at by compressing them to sufficiently h
+2153 19 (A) (B) (C) (D) 18. How many grams of are needed to prepare of a solution? 
+2154 21 21. The diagram above shows thin-layer chromatograms of the same mixture of
+2155 23 (A) (B) (C) (D) 23. A student adds a sample of an unknown, brittle solid to
+2156 24 (A) The increase in conductivity indicates that the unknown is an ionic sol
+2157 26,27 26. The infrared spectrum above represents the absorption of certain wavele
+2158 30 28. Electromagnetic radiation with a maximum wavelength of is needed for th
+2159 31 31. The absorption spectrum of a certain red dye is shown above. If a stude

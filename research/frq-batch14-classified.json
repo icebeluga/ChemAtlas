@@ -1,0 +1,208 @@
+[
+  {
+    "id": "frq-2011-1-1220",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "3.4",
+      "4.5",
+      "6.1",
+      "6.4",
+      "3.1"
+    ],
+    "rationale": "Ethanol combustion combines redox assignment, ideal-gas measurements, reaction stoichiometry, calorimetry, and intermolecular-force comparison.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Determine whether oxygen is oxidized or reduced from oxidation numbers."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use gas volume/pressure/temperature and reaction stoichiometry."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "6.1",
+          "6.4"
+        ],
+        "rationale": "Calculate combustion heat and resulting air temperature using heat capacity."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Explain boiling-point difference using hydrogen bonding/intermolecular forces."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1220
+    ]
+  },
+  {
+    "id": "frq-2011-1-1655",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.5",
+      "1.6",
+      "1.7"
+    ],
+    "rationale": "Ground-state bromine electron configuration and photoelectron-spectrum interpretation, including effective nuclear attraction comparison with krypton.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Write complete ground-state electron configuration."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.6",
+          "1.7"
+        ],
+        "rationale": "Identify PES peaks and compare binding energies using nuclear charge/effective attraction."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1655
+    ]
+  },
+  {
+    "id": "frq-2011-1-1743",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3",
+      "5.5",
+      "3.1"
+    ],
+    "rationale": "Question connects intermolecular forces between products with a first-order HBr decomposition rate study and temperature effects.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Identify intermolecular forces between ethanol and ethyl bromide."
+      },
+      {
+        "label": "(b)–(d)",
+        "topics": [
+          "5.2",
+          "5.3"
+        ],
+        "rationale": "Use concentration-time data to calculate first-order k and half-life."
+      },
+      {
+        "label": "(d)(i)–(ii)",
+        "topics": [
+          "5.5",
+          "5.2"
+        ],
+        "rationale": "Explain temperature effects on collisions and rate constant."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1743
+    ]
+  },
+  {
+    "id": "frq-2011-1-1846",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.5",
+      "8.7",
+      "3.7"
+    ],
+    "rationale": "Prepares ethanoic-acid solution by dilution, calculates Ka from pH, and interprets weak-acid titration data.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.7",
+          "4.5"
+        ],
+        "rationale": "Use solution dilution to prepare a target concentration."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.3",
+          "8.7"
+        ],
+        "rationale": "Calculate Ka and percent dissociation from pH."
+      },
+      {
+        "label": "titration parts",
+        "topics": [
+          "8.5",
+          "8.3"
+        ],
+        "rationale": "Analyze the weak-acid titration curve and equivalence behavior."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1846
+    ]
+  },
+  {
+    "id": "frq-2011-1-1933",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.5",
+      "2.7",
+      "1.5",
+      "1.6"
+    ],
+    "rationale": "Combines sulfur-ring Lewis structure and geometry with sulfur electron configuration and PES/binding-energy evidence.",
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Use bonding/lone pairs and VSEPR to determine S8 bond angle."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Write ground-state sulfur electron configuration."
+      },
+      {
+        "label": "(d onward)",
+        "topics": [
+          "1.6",
+          "1.7"
+        ],
+        "rationale": "Interpret chlorine/sulfur PES peaks and explain binding-energy differences using nuclear attraction."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1933
+    ]
+  }
+]

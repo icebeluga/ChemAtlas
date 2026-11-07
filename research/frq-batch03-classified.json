@@ -1,0 +1,673 @@
+[
+ {
+  "id": "frq-2016-6-392",
+  "primaryTopic": "5.3",
+  "relatedTopics": [
+   "5.3",
+   "5.2"
+  ],
+  "rationale": "Analyze NO2 concentration–time data to determine reaction order and rate behavior.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "5.3"
+    ],
+    "rationale": "Use concentration-versus-time plots to identify integrated-rate behavior.",
+    "textPreview": "Use concentration-versus-time plots to identify integrated-rate behavior."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "5.2"
+    ],
+    "rationale": "Determine rate constant/order from data.",
+    "textPreview": "Determine rate constant/order from data."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   392
+  ]
+ },
+ {
+  "id": "frq-2021-1-399",
+  "primaryTopic": "8.3",
+  "relatedTopics": [
+   "8.3",
+   "8.4",
+   "2.5",
+   "5.2"
+  ],
+  "rationale": "Methanoic acid equilibrium/acid-base reactions plus Lewis structure and catalyzed decomposition kinetics.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "8.3"
+    ],
+    "rationale": "Write Ka and calculate weak-acid pH.",
+    "textPreview": "Write Ka and calculate weak-acid pH."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "2.5"
+    ],
+    "rationale": "Complete a Lewis electron-dot structure.",
+    "textPreview": "Complete a Lewis electron-dot structure."
+   },
+   {
+    "label": "(d)",
+    "topics": [
+     "8.4"
+    ],
+    "rationale": "Analyze neutralization between weak acid and weak base.",
+    "textPreview": "Analyze neutralization between weak acid and weak base."
+   },
+   {
+    "label": "(e–g)",
+    "topics": [
+     "5.2",
+     "5.7"
+    ],
+    "rationale": "Interpret a catalyzed decomposition rate law and mechanism.",
+    "textPreview": "Interpret a catalyzed decomposition rate law and mechanism."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   399,
+   400,
+   401
+  ]
+ },
+ {
+  "id": "frq-2021-2-402",
+  "primaryTopic": "1.2",
+  "relatedTopics": [
+   "1.2",
+   "1.5",
+   "2.3",
+   "3.1"
+  ],
+  "rationale": "Relate silicon isotopes and electron configuration to its compounds and intermolecular properties.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.2",
+     "1.5"
+    ],
+    "rationale": "Interpret isotope mass spectrum and electron configuration.",
+    "textPreview": "Interpret isotope mass spectrum and electron configuration."
+   },
+   {
+    "label": "(b–c)",
+    "topics": [
+     "2.3",
+     "3.1"
+    ],
+    "rationale": "Explain bonding, structure, and properties of silicon compounds.",
+    "textPreview": "Explain bonding, structure, and properties of silicon compounds."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   402,
+   403,
+   404
+  ]
+ },
+ {
+  "id": "frq-2021-3-405",
+  "primaryTopic": "4.5",
+  "relatedTopics": [
+   "4.5",
+   "3.13"
+  ],
+  "rationale": "Determine CuSO4 concentration independently through precipitation stoichiometry and spectrophotometry.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Use precipitation and mole ratios to determine concentration.",
+    "textPreview": "Use precipitation and mole ratios to determine concentration."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "3.13"
+    ],
+    "rationale": "Use absorbance calibration to determine concentration.",
+    "textPreview": "Use absorbance calibration to determine concentration."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   405,
+   406,
+   407
+  ]
+ },
+ {
+  "id": "frq-2021-4-408",
+  "primaryTopic": "6.4",
+  "relatedTopics": [
+   "6.4",
+   "6.6",
+   "5.1"
+  ],
+  "rationale": "Measure exothermic hand-warmer heat and analyze temperature/rate data.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "6.4",
+     "6.6"
+    ],
+    "rationale": "Relate temperature change and reaction heat.",
+    "textPreview": "Relate temperature change and reaction heat."
+   },
+   {
+    "label": "(c–d)",
+    "topics": [
+     "5.1"
+    ],
+    "rationale": "Interpret reaction rate over time.",
+    "textPreview": "Interpret reaction rate over time."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   408,
+   409
+  ]
+ },
+ {
+  "id": "frq-2021-5-410",
+  "primaryTopic": "9.8",
+  "relatedTopics": [
+   "9.8",
+   "9.11"
+  ],
+  "rationale": "Analyze molten MgCl2 electrolysis and the charge needed to produce products.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "9.8"
+    ],
+    "rationale": "Identify electrode reactions and cell operation.",
+    "textPreview": "Identify electrode reactions and cell operation."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "9.11"
+    ],
+    "rationale": "Use Faraday stoichiometry to relate charge to amount of product.",
+    "textPreview": "Use Faraday stoichiometry to relate charge to amount of product."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   410,
+   411
+  ]
+ },
+ {
+  "id": "frq-2021-6-411",
+  "primaryTopic": "2.3",
+  "relatedTopics": [
+   "2.3",
+   "3.2",
+   "7.11"
+  ],
+  "rationale": "Compare solid ionic sulfates and use solubility equilibrium to distinguish them.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "2.3",
+     "3.2"
+    ],
+    "rationale": "Explain ionic crystal structure and solid conductivity.",
+    "textPreview": "Explain ionic crystal structure and solid conductivity."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "7.11"
+    ],
+    "rationale": "Use dissolution and Ksp evidence to distinguish salts.",
+    "textPreview": "Use dissolution and Ksp evidence to distinguish salts."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   411,
+   412,
+   413
+  ]
+ },
+ {
+  "id": "frq-2021-7-413",
+  "primaryTopic": "3.4",
+  "relatedTopics": [
+   "3.4",
+   "3.5"
+  ],
+  "rationale": "Use ideal-gas relationships and particle kinetic theory in a piston/cylinder.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "3.4"
+    ],
+    "rationale": "Apply gas laws to pressure, volume, temperature, and density.",
+    "textPreview": "Apply gas laws to pressure, volume, temperature, and density."
+   },
+   {
+    "label": "(d–e)",
+    "topics": [
+     "3.5"
+    ],
+    "rationale": "Explain particle motion/kinetic energy effects.",
+    "textPreview": "Explain particle motion/kinetic energy effects."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   413
+  ]
+ },
+ {
+  "id": "frq-2022-1-420",
+  "primaryTopic": "4.5",
+  "relatedTopics": [
+   "4.5",
+   "6.4",
+   "6.5"
+  ],
+  "rationale": "Calculate salicylic-acid yield and heat required for heating/melting.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Use mole ratios and percent yield.",
+    "textPreview": "Use mole ratios and percent yield."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "6.4",
+     "6.5"
+    ],
+    "rationale": "Sum heat for temperature change and fusion.",
+    "textPreview": "Sum heat for temperature change and fusion."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   420,
+   421,
+   422,
+   423
+  ]
+ },
+ {
+  "id": "frq-2022-2-424",
+  "primaryTopic": "4.9",
+  "relatedTopics": [
+   "4.9",
+   "6.6",
+   "7.7"
+  ],
+  "rationale": "Analyze methanol decomposition as a redox and thermochemical equilibrium reaction.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "4.9"
+    ],
+    "rationale": "Assign oxidation-state changes.",
+    "textPreview": "Assign oxidation-state changes."
+   },
+   {
+    "label": "(b–c)",
+    "topics": [
+     "6.6"
+    ],
+    "rationale": "Use thermochemical data.",
+    "textPreview": "Use thermochemical data."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "7.3",
+     "7.7"
+    ],
+    "rationale": "Relate equilibrium concentrations and K.",
+    "textPreview": "Relate equilibrium concentrations and K."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   424,
+   425,
+   426
+  ]
+ },
+ {
+  "id": "frq-2022-1-427",
+  "primaryTopic": "3.7",
+  "relatedTopics": [
+   "3.7",
+   "4.5",
+   "4.9"
+  ],
+  "rationale": "Prepare a silver-nitrate solution and use it in a metal-displacement investigation.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "3.7"
+    ],
+    "rationale": "Prepare a solution of specified concentration.",
+    "textPreview": "Prepare a solution of specified concentration."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "4.5",
+     "4.9"
+    ],
+    "rationale": "Use redox reaction stoichiometry and observations.",
+    "textPreview": "Use redox reaction stoichiometry and observations."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   427,
+   428,
+   429
+  ]
+ },
+ {
+  "id": "frq-2022-3-427",
+  "primaryTopic": "1.5",
+  "relatedTopics": [
+   "1.5",
+   "1.7",
+   "4.5",
+   "4.9"
+  ],
+  "rationale": "Aluminum electron structure and radius plus stoichiometry/redox with silver ions.",
+  "parts": [
+   {
+    "label": "(a–b)",
+    "topics": [
+     "1.5",
+     "1.7"
+    ],
+    "rationale": "Use electron configuration and charge to compare radii.",
+    "textPreview": "Use electron configuration and charge to compare radii."
+   },
+   {
+    "label": "(c–e)",
+    "topics": [
+     "4.5",
+     "4.9"
+    ],
+    "rationale": "Analyze aluminum displacement of silver by redox and mole ratios.",
+    "textPreview": "Analyze aluminum displacement of silver by redox and mole ratios."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   427
+  ]
+ },
+ {
+  "id": "frq-2022-4-430",
+  "primaryTopic": "2.5",
+  "relatedTopics": [
+   "2.5",
+   "3.1",
+   "3.10"
+  ],
+  "rationale": "Compare Lewis structures and water solubility of NH2Cl and NCl3.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "3.7",
+     "4.5"
+    ],
+    "rationale": "Calculate amount from mass concentration and volume.",
+    "textPreview": "Calculate amount from mass concentration and volume."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "2.5",
+     "3.1",
+     "3.10"
+    ],
+    "rationale": "Use structure, polarity, and intermolecular interactions to explain solubility.",
+    "textPreview": "Use structure, polarity, and intermolecular interactions to explain solubility."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   430,
+   431
+  ]
+ },
+ {
+  "id": "frq-2022-5-432",
+  "primaryTopic": "5.2",
+  "relatedTopics": [
+   "5.2",
+   "5.3"
+  ],
+  "rationale": "Analyze first-order N2O5 decomposition using concentration-over-time data.",
+  "parts": [
+   {
+    "label": "(a–c)",
+    "topics": [
+     "5.2"
+    ],
+    "rationale": "Determine rate constant and rate law.",
+    "textPreview": "Determine rate constant and rate law."
+   },
+   {
+    "label": "(d–f)",
+    "topics": [
+     "5.3"
+    ],
+    "rationale": "Interpret concentration change and half-life.",
+    "textPreview": "Interpret concentration change and half-life."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   432,
+   433
+  ]
+ },
+ {
+  "id": "frq-2022-6-434",
+  "primaryTopic": "3.13",
+  "relatedTopics": [
+   "3.13"
+  ],
+  "rationale": "Use absorbance/wavelength data to design colorimetric concentration measurements.",
+  "parts": [
+   {
+    "label": "(a–d)",
+    "topics": [
+     "3.13"
+    ],
+    "rationale": "Select an analytical wavelength and connect absorbance to concentration.",
+    "textPreview": "Select an analytical wavelength and connect absorbance to concentration."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   434,
+   435
+  ]
+ },
+ {
+  "id": "frq-2022-7-436",
+  "primaryTopic": "2.7",
+  "relatedTopics": [
+   "2.7",
+   "7.11"
+  ],
+  "rationale": "Relate oxalate structure to hybridization and silver oxalate solubility equilibrium.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "2.7"
+    ],
+    "rationale": "Infer carbon hybridization from geometry.",
+    "textPreview": "Infer carbon hybridization from geometry."
+   },
+   {
+    "label": "(b–d)",
+    "topics": [
+     "7.11"
+    ],
+    "rationale": "Use dissolution equilibrium and Ksp.",
+    "textPreview": "Use dissolution equilibrium and Ksp."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   436
+  ]
+ },
+ {
+  "id": "frq-2023-1-442",
+  "primaryTopic": "1.5",
+  "relatedTopics": [
+   "1.5",
+   "1.3",
+   "4.5"
+  ],
+  "rationale": "Determine manganese electron structure and empirical formula from mass data.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "1.5"
+    ],
+    "rationale": "Write configuration and identify electrons removed from cations.",
+    "textPreview": "Write configuration and identify electrons removed from cations."
+   },
+   {
+    "label": "(b–e)",
+    "topics": [
+     "1.3",
+     "4.5"
+    ],
+    "rationale": "Use mass and mole ratios to determine empirical formula.",
+    "textPreview": "Use mass and mole ratios to determine empirical formula."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   442,
+   443,
+   444
+  ]
+ },
+ {
+  "id": "frq-2023-2-445",
+  "primaryTopic": "4.5",
+  "relatedTopics": [
+   "4.5",
+   "6.9",
+   "2.2",
+   "2.5",
+   "2.7",
+   "7.3"
+  ],
+  "rationale": "Use Hess’s law/bond potential-energy concepts, molecular geometry, and gas equilibrium for AlCl3.",
+  "parts": [
+   {
+    "label": "(a)",
+    "topics": [
+     "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry to find product mass.",
+    "textPreview": "Use reaction stoichiometry to find product mass."
+   },
+   {
+    "label": "(b)",
+    "topics": [
+     "6.9"
+    ],
+    "rationale": "Combine thermochemical equations by Hess’s law.",
+    "textPreview": "Combine thermochemical equations by Hess’s law."
+   },
+   {
+    "label": "(c)",
+    "topics": [
+     "2.2"
+    ],
+    "rationale": "Read bond length/energy from potential-energy diagrams.",
+    "textPreview": "Read bond length/energy from potential-energy diagrams."
+   },
+   {
+    "label": "(d)",
+    "topics": [
+     "2.5",
+     "2.7"
+    ],
+    "rationale": "Compare Lewis structures, formal charge, and VSEPR.",
+    "textPreview": "Compare Lewis structures, formal charge, and VSEPR."
+   },
+   {
+    "label": "(e–f)",
+    "topics": [
+     "7.3"
+    ],
+    "rationale": "Write and calculate Kp from equilibrium representations.",
+    "textPreview": "Write and calculate Kp from equilibrium representations."
+   }
+  ],
+  "status": "classified",
+  "legacyConcepts": [],
+  "evidencePages": [
+   445,
+   446,
+   447
+  ]
+ }
+]

@@ -107,7 +107,12 @@ export default function Home() {
     fetch("/questions.json").then(r => r.json()).then((data: Catalog) => setCatalog(data)).catch(() => setNotice("Question catalog could not be loaded."));
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
-      setProgress(saved.progress || {}); setOverrides(saved.overrides || {}); setSessions(saved.sessions || 0);
+      const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
+      const migrated = Object.fromEntries(Object.entries(prior.progress || {}).map(([id,p]) => [id, {
+        attempts:p.attempts || 0, wrong:p.wrong || 0, correct:p.correct || 0, last:p.last || "",
+        history:(p.history || []).map(h=>({date:h.date,result:h.correct ? "correct" as const : "missed" as const}))
+      }]));
+      setProgress({ ...migrated, ...(saved.progress || {}) }); setOverrides(saved.overrides || {}); setSessions(saved.sessions || 0);
       if (saved.banks?.length) setBanks([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }, ...saved.banks.filter(b => b.id !== "mega")]);
       if (saved.questions?.length) setCatalog(old => ({ ...old, questions: [...old.questions, ...saved.questions!.filter(q => q.sourceBank)] }));
     } catch { /* keep the bundled bank usable if browser storage is damaged */ }

@@ -43,3 +43,6 @@ yarn-error.log*
 
 # OS metadata
 .DS_Store
+
+# Large source PDF is delivered in the built Site archive, not the Git source repo.
+/public/ap-chemistry-mega.pdf

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AP Chemistry Practice Studio",
-  description: "Build reusable AP Chemistry practice sessions, review explanations, and track concepts to revisit.",
+  title: "AP Chemistry Question Catalog",
+  description: "Browse AP Chemistry source questions by College Board unit and topic.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

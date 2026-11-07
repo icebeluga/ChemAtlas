@@ -135,6 +135,21 @@ def classify(s):
 
 def clean(s): return re.sub(r"\s+"," ",s).strip()
 
+def frq_parts(body):
+    """Split FRQ text into labeled lettered parts and infer each part's topics."""
+    matches=list(re.finditer(r"(?<![A-Za-z])\(([a-z])\)(?=\s)",body,re.I))
+    if not matches: return []
+    out=[]
+    for i,m in enumerate(matches):
+        end=matches[i+1].start() if i+1<len(matches) else len(body)
+        block=body[m.end():end].strip()
+        if len(block)<18: continue
+        tid,secondary,confidence=classify(block)
+        topics=([tid] if tid and confidence>=0.4 else [])
+        topics += [x for x in secondary if x not in topics]
+        out.append({"label":f"({m.group(1).lower()})","topics":topics,"topicNames":[topic_name.get(x) for x in topics],"textPreview":clean(block)[:360],"confidence":round(confidence,2)})
+    return out
+
 frq_starts=[]
 current_year=None
 frq_segment=0
@@ -192,12 +207,24 @@ for i,st in enumerate(frq_starts):
     body="\n".join(chunks)
     if len(body.strip())<45: continue
     primary,secondary,confidence=classify(body)
+    parts=frq_parts(body)
+    part_topics=[tid for part in parts for tid in part["topics"]]
+    if part_topics:
+        counts={tid:part_topics.count(tid) for tid in set(part_topics)}
+        # Let the topic that governs the most lettered parts lead. If tied,
+        # preserve the whole-question match as the tie-breaker.
+        maximum=max(counts.values())
+        leaders=sorted(tid for tid,n in counts.items() if n==maximum)
+        primary=primary if primary in leaders else leaders[0]
+        secondary=sorted(tid for tid in counts if tid!=primary)
+        confidence=max(confidence,min(1,maximum/3))
+    related=list(dict.fromkeys(([primary] if primary else [])+secondary+part_topics))
     unit=topic_by_id.get(primary,{}) if primary else {}
     src=clean(st["pageText"].splitlines()[0])[:80]
     exam=f"{st['year'] or 'Year unknown'} AP Chemistry FRQ"
     if "International" in st["pageText"]: exam += " · International"
     status="classified" if primary and confidence>=0.4 else "review"
-    frq_records.append({"id":f"frq-{st['year'] or 'unknown'}-{st['num']}-{st['page']}","type":"FRQ","year":st["year"],"exam":exam,"number":st["num"],"pages":qpages,"primaryUnit":unit.get("id"),"unitName":unit.get("name"),"primaryTopic":primary,"topicName":topic_name.get(primary),"secondaryTopics":secondary,"secondaryTopicNames":[topic_name.get(t) for t in secondary],"multiConcept":bool(secondary),"classificationConfidence":round(confidence,2),"status":status,"reviewReason":None if status=="classified" else "Could not confidently match the question text to a College Board curriculum topic.","textPreview":clean(body)[:260],"source":"AP Chemistry MEGA Compiled Test Bank.pdf"})
+    frq_records.append({"id":f"frq-{st['year'] or 'unknown'}-{st['num']}-{st['page']}","type":"FRQ","year":st["year"],"exam":exam,"number":st["num"],"pages":qpages,"primaryUnit":unit.get("id"),"unitName":unit.get("name"),"primaryTopic":primary,"topicName":topic_name.get(primary),"secondaryTopics":secondary,"secondaryTopicNames":[topic_name.get(t) for t in secondary],"relatedTopics":related,"topicParts":parts,"multiConcept":len(related)>1,"classificationConfidence":round(confidence,2),"status":status,"reviewReason":None if status=="classified" else "Could not confidently match the question text to a College Board curriculum topic.","textPreview":clean(body)[:260],"source":"AP Chemistry MEGA Compiled Test Bank.pdf"})
 
 # MCQ questions: identify question stems on question pages. Every record points back to the original page image.
 mcq_records=[]
@@ -239,7 +266,7 @@ for pn,p in enumerate(pages,1):
         exam=f"{year or 'Year unknown'} AP Chemistry MCQ"
         if "Version" in p: exam += " · Version indicated in source"
         status="classified" if primary and confidence>=0.4 else "review"
-        mcq_records.append({"id":f"mcq-{year or 'unknown'}-{c['num']}-{pn}","type":"MCQ","year":year,"exam":exam,"number":c["num"],"pages":[pn],"primaryUnit":unit.get("id"),"unitName":unit.get("name"),"primaryTopic":primary,"topicName":topic_name.get(primary),"secondaryTopics":secondary,"secondaryTopicNames":[topic_name.get(t) for t in secondary],"multiConcept":False,"classificationConfidence":round(confidence,2),"status":status,"reviewReason":None if status=="classified" else "Question stem or stimulus needs review before assigning a curriculum topic.","textPreview":clean(excerpt)[:260],"source":"AP Chemistry MEGA Compiled Test Bank.pdf"})
+        mcq_records.append({"id":f"mcq-{year or 'unknown'}-{c['num']}-{pn}","type":"MCQ","year":year,"exam":exam,"number":c["num"],"pages":[pn],"primaryUnit":unit.get("id"),"unitName":unit.get("name"),"primaryTopic":primary,"topicName":topic_name.get(primary),"secondaryTopics":secondary,"secondaryTopicNames":[topic_name.get(t) for t in secondary],"relatedTopics":([primary] if primary else []),"topicParts":[],"multiConcept":False,"classificationConfidence":round(confidence,2),"status":status,"reviewReason":None if status=="classified" else "Question stem or stimulus needs review before assigning a curriculum topic.","textPreview":clean(excerpt)[:260],"source":"AP Chemistry MEGA Compiled Test Bank.pdf"})
 
 all_records=frq_records+mcq_records
 all_records.sort(key=lambda q:(q["pages"][0],q["type"],q["number"]))

@@ -937,5 +937,200 @@
     ],
     "status": "classified",
     "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-58-1691",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.6",
+      "4.9",
+      "9.8",
+      "9.9"
+    ],
+    "rationale": "Verified parts assess bromine electron configuration and photoelectron spectroscopy, then oxidation-number reasoning; the prompt continues into electrochemical half-cell data beyond the extracted page, so the later subparts remain for review.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Write the ground-state electron configuration of bromine."
+      },
+      {
+        "label": "(b)(i)\u2013(ii)",
+        "topics": [
+          "1.6"
+        ],
+        "rationale": "Interpret a photoelectron spectrum and compare core-electron binding energies using nuclear charge."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Use oxidation numbers to determine whether chlorine is reduced."
+      },
+      {
+        "label": "remaining electrochemical parts",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "The page introduces half-cell reactions and standard reduction potentials; inspect continuation pages before finalizing the specific skill."
+      }
+    ],
+    "status": "review",
+    "reviewReason": "The FRQ continues beyond the indexed source page. Confirm the remaining electrochemical subparts against the full original pages.",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1691
+    ]
+  },
+  {
+    "id": "mcq-2022-59-1696",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "1.1",
+      "3.4",
+      "2.7",
+      "2.6",
+      "7.4"
+    ],
+    "rationale": "This is a second source-page copy of the C2H4O multipart FRQ; the subpart topics match its complete indexed copy.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.1",
+          "3.4"
+        ],
+        "rationale": "Convert a molar concentration limit and room volume to maximum mass using molar mass."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict a bond angle using VSEPR."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.6"
+        ],
+        "rationale": "Distinguish resonance structures from compounds with different atom connectivity."
+      },
+      {
+        "label": "(d)\u2013(e)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Write Kp from partial pressures and use its magnitude to identify the favored side."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1696
+    ]
+  },
+  {
+    "id": "mcq-2022-60-1701",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "4.2",
+      "3.7",
+      "4.6",
+      "8.5"
+    ],
+    "rationale": "The visible subparts cover a Lewis diagram, a weak-base net ionic reaction, solution dilution, precise volumetric delivery, and an acid\u2013base titration. The page extract ends mid-titration prompt, so retain for review.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Complete the Lewis electron-dot diagram for hydroxylamine."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "8.5"
+        ],
+        "rationale": "Write the net ionic proton-transfer reaction of weak-base hydroxylamine with acid."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.7"
+        ],
+        "rationale": "Calculate a dilution from stock and target solution concentrations and volumes."
+      },
+      {
+        "label": "(d)\u2013(e)",
+        "topics": [
+          "4.6",
+          "8.5"
+        ],
+        "rationale": "Select precise titration glassware and interpret an acid\u2013base titration curve; inspect the continuation for the exact curve tasks."
+      }
+    ],
+    "status": "review",
+    "reviewReason": "The question continues across pages; verify the titration-curve subparts in the original page images before removing from review.",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1701
+    ]
+  },
+  {
+    "id": "mcq-2022-62-1709",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.1",
+      "5.5",
+      "4.5"
+    ],
+    "rationale": "Duplicate source copy of the baking-soda/citric-acid calorimetry FRQ; subpart labels are mapped from its complete copy.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.4"
+        ],
+        "rationale": "Calculate heat from sample mass, specific heat, and measured temperature change."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Explain changing reaction rate using particle collisions as reactant concentration decreases."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.1",
+          "6.4"
+        ],
+        "rationale": "Infer direction of heat transfer from the observed temperature change."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "6.4",
+          "4.5"
+        ],
+        "rationale": "Compare temperature change after changing reactant amount, using stoichiometry and calorimetry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1709
+    ]
   }
 ]

@@ -30,7 +30,11 @@
     "mcq-2022-4-1662",
     "mcq-2022-5-1663",
     "mcq-2022-6-1664",
-    "mcq-2022-7-1665"
+    "mcq-2022-7-1665",
+    "mcq-2022-58-1691",
+    "mcq-2022-59-1696",
+    "mcq-2022-60-1701",
+    "mcq-2022-62-1709"
   ],
-  "evidence": "Original source pages use open-response prompts and lettered subparts rather than answer choices; the extraction heuristic misread these as MCQ. Additional 1999 Section II pages are explicitly free-response: multipart prompts with written calculations/explanations, not A\u2013E choices. Also reclassify 2022 source pages 1657\u20131665: these have open-response verbs and lettered calculation/explanation/diagram subparts, with no answer choices; they are FRQs misidentified by the PDF question indexer."
+  "evidence": "Original source pages use open-response prompts and lettered subparts rather than answer choices; the extraction heuristic misread these as MCQ. Additional 1999 Section II pages are explicitly free-response: multipart prompts with written calculations/explanations, not A\u2013E choices. Also reclassify 2022 source pages 1657\u20131665: these have open-response verbs and lettered calculation/explanation/diagram subparts, with no answer choices; they are FRQs misidentified by the PDF question indexer. Also reclassify 2022 Form I pages 1691, 1696, and 1701 as FRQ: each contains the official free-response work instructions and written/diagram/calculation subparts, with no multiple-choice options. The 2022 Form I page 1709 entry is also an open-response calorimetry prompt with lettered subparts, not an MCQ."
 }

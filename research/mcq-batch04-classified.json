@@ -1,0 +1,1237 @@
+[
+  {
+    "id": "mcq-2022-1-1617",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.4",
+      "6.5"
+    ],
+    "rationale": "Compare energy per gram for phase changes and temperature changes to determine which experiment transforms the greatest mass.",
+    "status": "classified",
+    "evidencePages": [
+      1617
+    ]
+  },
+  {
+    "id": "mcq-2022-2-1617",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Paper chromatography separates mixture components according to their differing interactions and movement through stationary and mobile phases.",
+    "status": "classified",
+    "evidencePages": [
+      1617
+    ]
+  },
+  {
+    "id": "mcq-2022-13-1620",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Track oxidation-number changes during the decomposition reaction to identify oxidation and reduction.",
+    "status": "classified",
+    "evidencePages": [
+      1620
+    ]
+  },
+  {
+    "id": "mcq-2022-1-1636",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.4",
+      "6.5"
+    ],
+    "rationale": "Compare energy per gram for phase changes and temperature changes to determine which experiment transforms the greatest mass.",
+    "status": "classified",
+    "evidencePages": [
+      1636
+    ]
+  },
+  {
+    "id": "mcq-2022-2-1636",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Paper chromatography separates mixture components according to their differing interactions and movement through stationary and mobile phases.",
+    "status": "classified",
+    "evidencePages": [
+      1636
+    ]
+  },
+  {
+    "id": "mcq-2022-3-1636",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7"
+    ],
+    "rationale": "Estimate reaction enthalpy from the bond enthalpies of bonds broken and formed.",
+    "status": "classified",
+    "evidencePages": [
+      1636
+    ]
+  },
+  {
+    "id": "mcq-2022-4-1637",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.7"
+    ],
+    "rationale": "Select acid/conjugate-base solutions that form a buffer with the stated pH range.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-5-1637",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.3",
+      "7.10"
+    ],
+    "rationale": "Compare the reaction quotient with Kp to predict the direction of net reaction and changes in partial pressures.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-6-1637",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.4",
+      "6.5"
+    ],
+    "rationale": "Use heat of fusion and sensible heat to calculate mass melted at thermal equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-7-1637",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "4.5"
+    ],
+    "rationale": "Use calorimetry temperature change to calculate the reaction enthalpy per mole of reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-8-1637",
+    "primaryTopic": "5.7",
+    "relatedTopics": [
+      "5.7",
+      "5.11"
+    ],
+    "rationale": "Identify the catalyst from a multistep reaction mechanism by tracking species consumed and regenerated.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-9-1637",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict the shift in a gas equilibrium after changing volume, using Le Ch\u00e2telier reasoning.",
+    "status": "classified",
+    "evidencePages": [
+      1637
+    ]
+  },
+  {
+    "id": "mcq-2022-10-1638",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Track oxidation-number changes during hydrogen peroxide decomposition to identify oxidation and reduction.",
+    "status": "classified",
+    "evidencePages": [
+      1638
+    ]
+  },
+  {
+    "id": "mcq-2022-11-1638",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Use the balanced decomposition equation and consumed reactant amount to calculate total product moles.",
+    "status": "classified",
+    "evidencePages": [
+      1638
+    ]
+  },
+  {
+    "id": "mcq-2022-12-1638",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "5.3"
+    ],
+    "rationale": "Infer how reaction rate changes over time from measured oxygen production data.",
+    "status": "classified",
+    "evidencePages": [
+      1638
+    ]
+  },
+  {
+    "id": "mcq-2022-13-1639",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "Explain why a catalyst increases reaction rate by providing a pathway with lower activation energy.",
+    "status": "classified",
+    "evidencePages": [
+      1639
+    ]
+  },
+  {
+    "id": "mcq-2022-14-1639",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Predict the initial reaction rate change when reactant concentration increases while other conditions remain fixed.",
+    "status": "classified",
+    "evidencePages": [
+      1639
+    ]
+  },
+  {
+    "id": "mcq-2022-15-1641",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "8.3"
+    ],
+    "rationale": "Identify the basic aqueous substance and explain that its nitrogen lone pair accepts a proton.",
+    "status": "classified",
+    "evidencePages": [
+      1641
+    ]
+  },
+  {
+    "id": "mcq-2022-1-1669",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.4",
+      "6.5"
+    ],
+    "rationale": "Compare energy per gram for phase changes and temperature changes to determine which experiment transforms the greatest mass.",
+    "status": "classified",
+    "evidencePages": [
+      1669
+    ]
+  },
+  {
+    "id": "mcq-2022-2-1669",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Paper chromatography separates mixture components according to their differing interactions and movement through stationary and mobile phases.",
+    "status": "classified",
+    "evidencePages": [
+      1669
+    ]
+  },
+  {
+    "id": "mcq-2022-10-1672",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Track oxidation-number changes during hydrogen peroxide decomposition to identify oxidation and reduction.",
+    "status": "classified",
+    "evidencePages": [
+      1672
+    ]
+  },
+  {
+    "id": "mcq-2022-12-1672",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "5.3"
+    ],
+    "rationale": "Infer how reaction rate changes over time from measured oxygen production data.",
+    "status": "classified",
+    "evidencePages": [
+      1672
+    ]
+  },
+  {
+    "id": "mcq-2022-13-1673",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "Explain why a catalyst increases reaction rate by providing a pathway with lower activation energy.",
+    "status": "classified",
+    "evidencePages": [
+      1673
+    ]
+  },
+  {
+    "id": "mcq-2022-14-1673",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Predict the initial reaction rate change when reactant concentration increases while other conditions remain fixed.",
+    "status": "classified",
+    "evidencePages": [
+      1673
+    ]
+  },
+  {
+    "id": "mcq-2022-15-1674",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "8.3"
+    ],
+    "rationale": "Identify the basic aqueous substance and explain that its nitrogen lone pair accepts a proton.",
+    "status": "classified",
+    "evidencePages": [
+      1674
+    ]
+  },
+  {
+    "id": "mcq-2022-16-1621",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "A catalyst increases the rate by providing an alternative reaction pathway with lower activation energy.",
+    "status": "classified",
+    "evidencePages": [
+      1621
+    ]
+  },
+  {
+    "id": "mcq-2022-17-1621",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Predict how raising reactant concentration changes the amount of product formed early in a fixed time interval.",
+    "status": "classified",
+    "evidencePages": [
+      1621
+    ]
+  },
+  {
+    "id": "mcq-2022-21-1622",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare hydrogen bonding and London dispersion forces to explain boiling-point differences.",
+    "status": "classified",
+    "evidencePages": [
+      1622
+    ]
+  },
+  {
+    "id": "mcq-2022-22-1622",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.1",
+      "3.10"
+    ],
+    "rationale": "Use molecular polarity and intermolecular attractions to predict whether each substance dissolves in water.",
+    "status": "classified",
+    "evidencePages": [
+      1622
+    ]
+  },
+  {
+    "id": "mcq-2022-26-1623",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Apply the ideal gas law to relate pressure, volume, and temperature for a fixed amount of gas.",
+    "status": "classified",
+    "evidencePages": [
+      1623
+    ]
+  },
+  {
+    "id": "mcq-2022-30-1646",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2"
+    ],
+    "rationale": "Interpret a mass spectrum to identify an element from isotope peaks and relative abundances.",
+    "status": "classified",
+    "evidencePages": [
+      1646
+    ]
+  },
+  {
+    "id": "mcq-2022-16-1641",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare hydrogen bonding and London dispersion forces to explain boiling-point differences.",
+    "status": "classified",
+    "evidencePages": [
+      1641
+    ]
+  },
+  {
+    "id": "mcq-2022-17-1641",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.1",
+      "3.10"
+    ],
+    "rationale": "Use molecular polarity and intermolecular attractions to predict solubility in water.",
+    "status": "classified",
+    "evidencePages": [
+      1641
+    ]
+  },
+  {
+    "id": "mcq-2022-18-1642",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.8"
+    ],
+    "rationale": "Use the large jump in successive ionization energies to infer the common ion charge and sulfate formula.",
+    "status": "classified",
+    "evidencePages": [
+      1642
+    ]
+  },
+  {
+    "id": "mcq-2022-19-1642",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Use periodic-table families to identify elements with similar chemical properties.",
+    "status": "classified",
+    "evidencePages": [
+      1642
+    ]
+  },
+  {
+    "id": "mcq-2022-20-1642",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "8.4"
+    ],
+    "rationale": "Identify a Br\u00f8nsted\u2013Lowry conjugate acid-base pair formed by proton transfer.",
+    "status": "classified",
+    "evidencePages": [
+      1642
+    ]
+  },
+  {
+    "id": "mcq-2022-21-1642",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.11",
+      "3.13"
+    ],
+    "rationale": "Use absorbance-concentration behavior to identify an experimental error in a Beer\u2013Lambert measurement.",
+    "status": "classified",
+    "evidencePages": [
+      1642
+    ]
+  },
+  {
+    "id": "mcq-2022-22-1643",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "4.6",
+      "8.5"
+    ],
+    "rationale": "Calculate the volume of standardized base required at the equivalence point of an acid-base titration.",
+    "status": "classified",
+    "evidencePages": [
+      1643
+    ]
+  },
+  {
+    "id": "mcq-2022-23-1644",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "4.5",
+      "6.4",
+      "6.6"
+    ],
+    "rationale": "Use the reaction stoichiometry and reaction enthalpy to determine the heat released when potassium reacts with water.",
+    "status": "classified",
+    "evidencePages": [
+      1644
+    ]
+  },
+  {
+    "id": "mcq-2022-24-1644",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.1",
+      "8.2"
+    ],
+    "rationale": "Determine that potassium hydroxide formed in the reaction makes the solution basic.",
+    "status": "classified",
+    "evidencePages": [
+      1644
+    ]
+  },
+  {
+    "id": "mcq-2022-25-1645",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Compare particle diagrams to identify the process with the greatest positive entropy change.",
+    "status": "classified",
+    "evidencePages": [
+      1645
+    ]
+  },
+  {
+    "id": "mcq-2022-26-1645",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Identify how incomplete drying increases the measured mass of a precipitation product.",
+    "status": "classified",
+    "evidencePages": [
+      1645
+    ]
+  },
+  {
+    "id": "mcq-2022-27-1645",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.2"
+    ],
+    "rationale": "Explain the concentration dependence of rate using more frequent molecular collisions.",
+    "status": "classified",
+    "evidencePages": [
+      1645
+    ]
+  },
+  {
+    "id": "mcq-2022-28-1645",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use the ideal gas law to determine that proportional changes in pressure and temperature leave volume unchanged.",
+    "status": "classified",
+    "evidencePages": [
+      1645
+    ]
+  },
+  {
+    "id": "mcq-2022-29-1645",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "4.5",
+      "8.2"
+    ],
+    "rationale": "Calculate hydronium concentration after combining strong-acid solutions and diluting to a final volume.",
+    "status": "classified",
+    "evidencePages": [
+      1645
+    ]
+  },
+  {
+    "id": "mcq-2022-16-1674",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare hydrogen bonding and London dispersion forces to explain boiling-point differences.",
+    "status": "classified",
+    "evidencePages": [
+      1674
+    ]
+  },
+  {
+    "id": "mcq-2022-20-1676",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "8.4"
+    ],
+    "rationale": "Identify the Br\u00f8nsted\u2013Lowry conjugate acid-base pair after proton transfer.",
+    "status": "classified",
+    "evidencePages": [
+      1676
+    ]
+  },
+  {
+    "id": "mcq-2022-23-1677",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "4.5",
+      "6.4",
+      "6.6"
+    ],
+    "rationale": "Use reaction stoichiometry and enthalpy to determine the heat released.",
+    "status": "classified",
+    "evidencePages": [
+      1677
+    ]
+  },
+  {
+    "id": "mcq-2022-24-1677",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.1",
+      "8.2"
+    ],
+    "rationale": "Determine that potassium hydroxide formed makes the resulting solution basic.",
+    "status": "classified",
+    "evidencePages": [
+      1677
+    ]
+  },
+  {
+    "id": "mcq-2022-25-1678",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Compare particle diagrams to identify the process with the greatest positive entropy change.",
+    "status": "classified",
+    "evidencePages": [
+      1678
+    ]
+  },
+  {
+    "id": "mcq-2022-28-1679",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Apply the ideal gas law to proportional pressure and temperature changes.",
+    "status": "classified",
+    "evidencePages": [
+      1679
+    ]
+  },
+  {
+    "id": "mcq-2022-29-1679",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "4.5",
+      "8.2"
+    ],
+    "rationale": "Calculate hydronium concentration after combining strong-acid solutions and diluting to a final volume.",
+    "status": "classified",
+    "evidencePages": [
+      1679
+    ]
+  },
+  {
+    "id": "mcq-2022-31-1646",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Interpret Maxwell\u2013Boltzmann speed distributions in relation to molecular mass at the same temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1646
+    ]
+  },
+  {
+    "id": "mcq-2022-32-1646",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Calculate molar solubility from the Ksp expression for PbF2.",
+    "status": "classified",
+    "evidencePages": [
+      1646
+    ]
+  },
+  {
+    "id": "mcq-2022-33-1646",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Rank covalent and ionic compounds by the degree of ionic character in their bonds.",
+    "status": "classified",
+    "evidencePages": [
+      1646
+    ]
+  },
+  {
+    "id": "mcq-2022-34-1647",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Use a weak-acid titration curve and pH/pKa behavior to identify the acid.",
+    "status": "classified",
+    "evidencePages": [
+      1647
+    ]
+  },
+  {
+    "id": "mcq-2022-35-1647",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Compare molecular dipole moments, requiring bond polarity and the vector arrangement of bond dipoles.",
+    "status": "classified",
+    "evidencePages": [
+      1647
+    ]
+  },
+  {
+    "id": "mcq-2022-36-1647",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "1.1",
+      "4.5"
+    ],
+    "rationale": "Use the two-step reaction stoichiometry and molar mass to calculate maximum iron yield from pyrite.",
+    "status": "classified",
+    "evidencePages": [
+      1647
+    ]
+  },
+  {
+    "id": "mcq-2022-37-1648",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4"
+    ],
+    "rationale": "Recognize characteristic macroscopic properties of a metallic solid.",
+    "status": "classified",
+    "evidencePages": [
+      1648
+    ]
+  },
+  {
+    "id": "mcq-2022-38-1648",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "6.7"
+    ],
+    "rationale": "Relate bond dissociation energy to the depth of the potential-energy curve for Br2 and I2.",
+    "status": "classified",
+    "evidencePages": [
+      1648
+    ]
+  },
+  {
+    "id": "mcq-2022-39-1649",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Explain noble-gas boiling-point differences using London dispersion forces and polarizability.",
+    "status": "classified",
+    "evidencePages": [
+      1649
+    ]
+  },
+  {
+    "id": "mcq-2022-40-1649",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.4"
+    ],
+    "rationale": "Explain deviation from ideal-gas behavior as intermolecular attractions become significant at high pressure.",
+    "status": "classified",
+    "evidencePages": [
+      1649
+    ]
+  },
+  {
+    "id": "mcq-2022-41-1649",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1"
+    ],
+    "rationale": "Compare number of molecules in equal masses using molar mass.",
+    "status": "classified",
+    "evidencePages": [
+      1649
+    ]
+  },
+  {
+    "id": "mcq-2022-42-1649",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.7",
+      "3.8"
+    ],
+    "rationale": "Compare particle representations and volumes to determine solution molarity.",
+    "status": "classified",
+    "evidencePages": [
+      1649
+    ]
+  },
+  {
+    "id": "mcq-2022-43-1650",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Use percent composition by mass to identify a possible molecular compound.",
+    "status": "classified",
+    "evidencePages": [
+      1650
+    ]
+  },
+  {
+    "id": "mcq-2022-44-1650",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3"
+    ],
+    "rationale": "Explain differences in physical state using relative London dispersion forces between Br2 and I2.",
+    "status": "classified",
+    "evidencePages": [
+      1650
+    ]
+  },
+  {
+    "id": "mcq-2022-45-1650",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Compare Ksp values for similarly structured hydroxides to rank their solubilities.",
+    "status": "classified",
+    "evidencePages": [
+      1650
+    ]
+  },
+  {
+    "id": "mcq-2022-38-1627",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Explain which noble gas has the lower boiling point using relative polarizability and London dispersion forces.",
+    "status": "classified",
+    "evidencePages": [
+      1627
+    ]
+  },
+  {
+    "id": "mcq-2022-32-1680",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Calculate saturated Pb2+ concentration from the Ksp of PbF2.",
+    "status": "classified",
+    "evidencePages": [
+      1680
+    ]
+  },
+  {
+    "id": "mcq-2022-35-1681",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Compare molecular dipole moments using bond polarity and molecular geometry.",
+    "status": "classified",
+    "evidencePages": [
+      1681
+    ]
+  },
+  {
+    "id": "mcq-2022-37-1682",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4"
+    ],
+    "rationale": "Recognize characteristic macroscopic properties of a metallic solid.",
+    "status": "classified",
+    "evidencePages": [
+      1682
+    ]
+  },
+  {
+    "id": "mcq-2022-39-1683",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Explain boiling-point differences with London dispersion forces and polarizability.",
+    "status": "classified",
+    "evidencePages": [
+      1683
+    ]
+  },
+  {
+    "id": "mcq-2022-43-1684",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Use percent composition by mass to identify a possible compound.",
+    "status": "classified",
+    "evidencePages": [
+      1684
+    ]
+  },
+  {
+    "id": "mcq-2022-46-1651",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3"
+    ],
+    "rationale": "Determine a rate law from experimental reaction-rate behavior over time.",
+    "status": "classified",
+    "evidencePages": [
+      1651
+    ]
+  },
+  {
+    "id": "mcq-2022-47-1651",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.7",
+      "5.8"
+    ],
+    "rationale": "Derive the rate law consistent with a proposed multistep mechanism and its slow step.",
+    "status": "classified",
+    "evidencePages": [
+      1651
+    ]
+  },
+  {
+    "id": "mcq-2022-48-1651",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.1",
+      "9.3"
+    ],
+    "rationale": "Use enthalpy and entropy signs to evaluate thermodynamic favorability across temperatures.",
+    "status": "classified",
+    "evidencePages": [
+      1651
+    ]
+  },
+  {
+    "id": "mcq-2022-49-1652",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Compare standard reduction potentials to identify the reaction with the largest positive standard cell potential.",
+    "status": "classified",
+    "evidencePages": [
+      1652
+    ]
+  },
+  {
+    "id": "mcq-2022-50-1652",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Explain the atomic-radius trend across a period using effective nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      1652
+    ]
+  },
+  {
+    "id": "mcq-2022-51-1652",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10"
+    ],
+    "rationale": "Use temperature-dependent solubility data to predict how heating affects ionic salt solubility.",
+    "status": "classified",
+    "evidencePages": [
+      1652
+    ]
+  },
+  {
+    "id": "mcq-2022-52-1652",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Rank a diprotic weak acid and its conjugate species by equilibrium concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1652
+    ]
+  },
+  {
+    "id": "mcq-2022-53-1652",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.11",
+      "3.13"
+    ],
+    "rationale": "Apply Beer\u2013Lambert behavior to choose how to bring an overly high absorbance into the measurable range.",
+    "status": "classified",
+    "evidencePages": [
+      1652
+    ]
+  },
+  {
+    "id": "mcq-2022-54-1653",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Explain brittleness of an ionic crystal from the displacement of like-charged ion planes.",
+    "status": "classified",
+    "evidencePages": [
+      1653
+    ]
+  },
+  {
+    "id": "mcq-2022-55-1653",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4"
+    ],
+    "rationale": "Calculate the equilibrium constant from initial amounts and equilibrium composition.",
+    "status": "classified",
+    "evidencePages": [
+      1653
+    ]
+  },
+  {
+    "id": "mcq-2022-56-1653",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.1",
+      "3.8"
+    ],
+    "rationale": "Interpret a particle diagram of aqueous ions and oriented water molecules.",
+    "status": "classified",
+    "evidencePages": [
+      1653
+    ]
+  },
+  {
+    "id": "mcq-2022-57-1653",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.9"
+    ],
+    "rationale": "Write a net ionic equation for zinc displacing copper ions, preserving the redox species.",
+    "status": "classified",
+    "evidencePages": [
+      1653
+    ]
+  },
+  {
+    "id": "mcq-2022-47-1629",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Explain an atomic-radius comparison using occupied shells and effective nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      1629
+    ]
+  },
+  {
+    "id": "mcq-2022-49-1630",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Rank a weak acid and its conjugate species by concentration at equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1630
+    ]
+  },
+  {
+    "id": "mcq-2022-50-1630",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.11",
+      "3.13"
+    ],
+    "rationale": "Address an excessive absorbance in preparation of a spectrophotometric calibration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1630
+    ]
+  },
+  {
+    "id": "mcq-2022-53-1631",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.9"
+    ],
+    "rationale": "Represent the observed zinc\u2013copper displacement as a net ionic equation.",
+    "status": "classified",
+    "evidencePages": [
+      1631
+    ]
+  },
+  {
+    "id": "mcq-2022-56-1632",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Compare molecular dipole moments from the molecular structures shown.",
+    "status": "classified",
+    "evidencePages": [
+      1632
+    ]
+  },
+  {
+    "id": "mcq-2022-50-1687",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Explain an atomic-radius comparison using occupied shells and effective nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      1687
+    ]
+  },
+  {
+    "id": "mcq-2022-52-1688",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Rank a weak acid and its conjugate species by concentration at equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1688
+    ]
+  },
+  {
+    "id": "mcq-2022-53-1688",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.11",
+      "3.13"
+    ],
+    "rationale": "Apply Beer\u2013Lambert behavior to correct an absorbance that is too high.",
+    "status": "classified",
+    "evidencePages": [
+      1688
+    ]
+  },
+  {
+    "id": "mcq-2022-57-1690",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.9"
+    ],
+    "rationale": "Represent zinc displacement of copper ions using a net ionic equation.",
+    "status": "classified",
+    "evidencePages": [
+      1690
+    ]
+  },
+  {
+    "id": "mcq-2022-20-1622",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "8.3"
+    ],
+    "rationale": "Identify the substance with the highest aqueous pH from its acid\u2013base behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1622
+    ]
+  },
+  {
+    "id": "mcq-2022-28-1624",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6"
+    ],
+    "rationale": "The prompt asks whether the reaction absorbs or releases energy; the stripped formula/amounts prevent checking the precise framing.",
+    "status": "review",
+    "evidencePages": [
+      1624
+    ],
+    "reviewReason": "The source text extraction omits key chemical notation or quantities. Keep the original page visible in the review queue before finalizing."
+  },
+  {
+    "id": "mcq-2022-29-1624",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.1",
+      "8.2"
+    ],
+    "rationale": "The prompt asks for the final water pH after reaction; the stripped species and quantities require source-image review.",
+    "status": "review",
+    "evidencePages": [
+      1624
+    ],
+    "reviewReason": "The source text extraction omits key chemical notation or quantities. Keep the original page visible in the review queue before finalizing."
+  },
+  {
+    "id": "mcq-2022-33-1625",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "4.5"
+    ],
+    "rationale": "Calculate hydronium concentration after mixing strong acids and diluting to a final volume.",
+    "status": "classified",
+    "evidencePages": [
+      1625
+    ]
+  }
+]

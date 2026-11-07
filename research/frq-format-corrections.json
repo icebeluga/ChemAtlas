@@ -24,7 +24,13 @@
     "mcq-1999-5-705",
     "mcq-1999-6-706",
     "mcq-1999-7-707",
-    "mcq-1999-8-707"
+    "mcq-1999-8-707",
+    "mcq-2022-2-1657",
+    "mcq-2022-3-1659",
+    "mcq-2022-4-1662",
+    "mcq-2022-5-1663",
+    "mcq-2022-6-1664",
+    "mcq-2022-7-1665"
   ],
-  "evidence": "Original source pages use open-response prompts and lettered subparts rather than answer choices; the extraction heuristic misread these as MCQ. Additional 1999 Section II pages are explicitly free-response: multipart prompts with written calculations/explanations, not A\u2013E choices."
+  "evidence": "Original source pages use open-response prompts and lettered subparts rather than answer choices; the extraction heuristic misread these as MCQ. Additional 1999 Section II pages are explicitly free-response: multipart prompts with written calculations/explanations, not A\u2013E choices. Also reclassify 2022 source pages 1657\u20131665: these have open-response verbs and lettered calculation/explanation/diagram subparts, with no answer choices; they are FRQs misidentified by the PDF question indexer."
 }

@@ -7,7 +7,7 @@
       "6.6",
       "4.5"
     ],
-    "rationale": "Calorimetry experiment design and analysis for HCl–NaOH neutralization.",
+    "rationale": "Calorimetry experiment design and analysis for HCl\u2013NaOH neutralization.",
     "parts": [
       {
         "label": "(a)",
@@ -18,7 +18,7 @@
         "rationale": "Evaluate measurement precision and calculate reaction enthalpy using calorimetry."
       },
       {
-        "label": "(b)–(c)",
+        "label": "(b)\u2013(c)",
         "topics": [
           "6.4",
           "4.5",
@@ -50,7 +50,7 @@
         "rationale": "Calculate initial gas pressure from mass, volume, and temperature."
       },
       {
-        "label": "(b)–(c)",
+        "label": "(b)\u2013(c)",
         "topics": [
           "7.4",
           "7.7"
@@ -154,7 +154,7 @@
       "8.7",
       "3.7"
     ],
-    "rationale": "Analyze a weak-acid indicator’s ionization and distribution between buffer water and nonpolar oil.",
+    "rationale": "Analyze a weak-acid indicator\u2019s ionization and distribution between buffer water and nonpolar oil.",
     "parts": [
       {
         "label": "all parts",
@@ -181,7 +181,7 @@
     "rationale": "Study reaction stoichiometry, limiting reactant, gas formation, and temperature change when bicarbonate reacts with acetic acid.",
     "parts": [
       {
-        "label": "(a)–(b)",
+        "label": "(a)\u2013(b)",
         "topics": [
           "4.5",
           "4.8"
@@ -257,7 +257,7 @@
       "7.3",
       "4.5"
     ],
-    "rationale": "Analyze complex formation equilibrium for Ba2+ and EDTA4− using a large formation constant and mixture stoichiometry.",
+    "rationale": "Analyze complex formation equilibrium for Ba2+ and EDTA4\u2212 using a large formation constant and mixture stoichiometry.",
     "parts": [
       {
         "label": "all parts",
@@ -307,7 +307,7 @@
     "rationale": "Ammonia weak-base equilibrium and titration by strong acid.",
     "parts": [
       {
-        "label": "(a)–(d)",
+        "label": "(a)\u2013(d)",
         "topics": [
           "8.3",
           "8.7"
@@ -368,7 +368,7 @@
     "rationale": "Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
     "parts": [
       {
-        "label": "(a)–(c)",
+        "label": "(a)\u2013(c)",
         "topics": [
           "5.1",
           "5.2"
@@ -399,7 +399,7 @@
     "rationale": "Predict products and net changes across laboratory reaction scenarios.",
     "parts": [
       {
-        "label": "(a)–(h)",
+        "label": "(a)\u2013(h)",
         "topics": [
           "4.2",
           "4.7",
@@ -422,7 +422,7 @@
     "rationale": "Plans gas collection over water to determine an unknown gas molar mass.",
     "parts": [
       {
-        "label": "(a)–(e)",
+        "label": "(a)\u2013(e)",
         "topics": [
           "3.4",
           "4.5"
@@ -481,7 +481,7 @@
         "rationale": "Compare electrolyte dissociation and conductivity."
       },
       {
-        "label": "(b)–(c)",
+        "label": "(b)\u2013(c)",
         "topics": [],
         "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
       },
@@ -495,7 +495,7 @@
     ],
     "status": "classified",
     "legacyConcepts": [
-      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b\u2013c)."
     ]
   },
   {
@@ -543,7 +543,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
     "parts": [
       {
-        "label": "(a)–(c)",
+        "label": "(a)\u2013(c)",
         "topics": [
           "5.1",
           "5.2"
@@ -574,7 +574,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Predict products and net changes across laboratory reaction scenarios.",
     "parts": [
       {
-        "label": "(a)–(h)",
+        "label": "(a)\u2013(h)",
         "topics": [
           "4.2",
           "4.7",
@@ -597,7 +597,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Plans gas collection over water to determine an unknown gas molar mass.",
     "parts": [
       {
-        "label": "(a)–(e)",
+        "label": "(a)\u2013(e)",
         "topics": [
           "3.4",
           "4.5"
@@ -656,7 +656,7 @@
         "rationale": "Compare electrolyte dissociation and conductivity."
       },
       {
-        "label": "(b)–(c)",
+        "label": "(b)\u2013(c)",
         "topics": [],
         "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
       },
@@ -670,7 +670,7 @@
     ],
     "status": "classified",
     "legacyConcepts": [
-      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b\u2013c)."
     ]
   },
   {
@@ -701,6 +701,238 @@
           "2.1"
         ],
         "rationale": "Compare Lewis structures, VSEPR geometries, and molecular polarity."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-2-1657",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "1.1",
+      "3.4",
+      "2.7",
+      "2.6",
+      "7.4"
+    ],
+    "rationale": "Multipart FRQ combines concentration-to-mass calculation, VSEPR geometry, distinguishing constitutional isomers from resonance forms, and Kp expression/equilibrium interpretation. Equilibrium is the primary tag because the final two linked parts define and interpret Kp.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.1",
+          "3.4"
+        ],
+        "rationale": "Convert a molar concentration limit and room volume to maximum mass using molar mass."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Predict a bond angle using VSEPR."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.6"
+        ],
+        "rationale": "Distinguish resonance structures from compounds with different atom connectivity."
+      },
+      {
+        "label": "(d)\u2013(e)",
+        "topics": [
+          "7.4"
+        ],
+        "rationale": "Write Kp from partial pressures and use its magnitude to identify the favored side."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-3-1659",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "4.2",
+      "8.5"
+    ],
+    "rationale": "Draw a complete Lewis electron-dot structure and write the net ionic acid\u2013base reaction for protonation of a weak base.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Complete the Lewis diagram with bonding and nonbonding valence electrons."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "8.5"
+        ],
+        "rationale": "Write the balanced net ionic proton-transfer reaction of a weak base with a strong acid."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-4-1662",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3",
+      "3.4",
+      "1.1"
+    ],
+    "rationale": "The central task is comparing intermolecular attractions to determine which gas condenses first, supported by ideal-gas and particle-representation parts.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4"
+        ],
+        "rationale": "Calculate total gas moles from pressure, volume, and temperature."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare dispersion attractions and relative condensability of N2 and O2."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.3"
+        ],
+        "rationale": "Represent the two substances in different physical states in a particle diagram."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.1",
+          "3.4"
+        ],
+        "rationale": "Use mole fractions and total gas amount to calculate the mass of the condensed component."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-5-1663",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.1",
+      "5.5",
+      "4.5"
+    ],
+    "rationale": "Calorimetry and reaction energy are the organizing concepts; later parts use collision reasoning and compare heat/temperature changes.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "6.4"
+        ],
+        "rationale": "Calculate heat from sample mass, specific heat, and measured temperature change."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "5.5"
+        ],
+        "rationale": "Explain changing reaction rate using particle collisions as reactant concentration decreases."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.1",
+          "6.4"
+        ],
+        "rationale": "Infer direction of heat transfer from the observed temperature change."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "6.4",
+          "4.5"
+        ],
+        "rationale": "Compare temperature change after changing reactant amount, using stoichiometry and calorimetry."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-6-1664",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "4.2",
+      "7.11"
+    ],
+    "rationale": "The main analytical task is precipitation controlled by Ksp, including molar solubility and the effect of pH on the dissolution equilibrium.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2"
+        ],
+        "rationale": "Write the balanced net ionic precipitation equation for copper(II) phosphate."
+      },
+      {
+        "label": "(b)(i)\u2013(ii)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Write Ksp and calculate saturated Cu2+ concentration."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Apply the solubility equilibrium: added acid consumes OH\u2212, promoting more Cu(OH)2 dissolution rather than additional precipitation."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2022-7-1665",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.1",
+      "3.7"
+    ],
+    "rationale": "The experiment concerns KNO3 solubility in water; the first part directly compares the attractions relevant to dissolving an ionic solid.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1",
+          "3.10"
+        ],
+        "rationale": "Compare ion\u2013dipole and ionic attractions with dispersion forces to explain the phases and dissolution."
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "Read a thermometer to the appropriate precision; retain as a measurement skill rather than assigning a chemistry topic."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.10",
+          "3.7"
+        ],
+        "rationale": "Explain that stirring changes the rate of dissolving, not the equilibrium maximum solubility."
       }
     ],
     "status": "classified",

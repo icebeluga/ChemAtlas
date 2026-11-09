@@ -4608,8 +4608,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-1.png",
+      "decisionEvidence": "Original source page visibly identifies itself as 2002 AP Chemistry FRQ with a matching FRQ number, while this record ID is labeled 2011. The crop is complete for the displayed question; the year/source association requires separate correction."
     },
     {
       "key": "frq-2011-6-949#region-0",
@@ -4626,8 +4630,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-1.png",
+      "decisionEvidence": "Original source page visibly identifies itself as 2002 AP Chemistry FRQ with a matching FRQ number, while this record ID is labeled 2011. The crop is complete for the displayed question; the year/source association requires separate correction."
     },
     {
       "key": "frq-2011-7-950#region-0",
@@ -4644,8 +4652,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-1.png",
+      "decisionEvidence": "Original source page visibly identifies itself as 2002 AP Chemistry FRQ with a matching FRQ number, while this record ID is labeled 2011. The crop is complete for the displayed question; the year/source association requires separate correction."
     },
     {
       "key": "frq-2011-8-951#region-0",
@@ -4662,8 +4674,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-1.png",
+      "decisionEvidence": "Original source page visibly identifies itself as 2002 AP Chemistry FRQ with a matching FRQ number, while this record ID is labeled 2011. The crop is complete for the displayed question; the year/source association requires separate correction."
     },
     {
       "key": "mcq-2013-51-966#region-0",
@@ -4680,8 +4696,19 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-2.png",
+      "correctedRect": [
+        42,
+        44,
+        566,
+        244
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-1.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2013-56-968#region-0",
@@ -4698,8 +4725,19 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-2.png",
+      "correctedRect": [
+        150,
+        42,
+        455,
+        405
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-1.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2013-62-970#region-0",
@@ -4716,8 +4754,19 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-2.png",
+      "correctedRect": [
+        42,
+        28,
+        300,
+        570
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-1.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2013-63-971#region-0",
@@ -4734,8 +4783,19 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-2.png",
+      "correctedRect": [
+        42,
+        48,
+        565,
+        195
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-1.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2013-1-983#region-0",
@@ -4752,8 +4812,12 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-3.png",
+      "decisionEvidence": "The original page is from the 2013 AP Chemistry Free-Response exam and contains a multipart written-response question, while this record is labeled MCQ. This is a source/type mismatch. Required next action: locate the intended MCQ and correct the mapping under a record-level review; do not convert or replace the record based on guesswork."
     },
     {
       "key": "mcq-2013-2-987#region-0",
@@ -4770,8 +4834,12 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-3.png",
+      "decisionEvidence": "The original page is from the 2013 AP Chemistry Free-Response exam and contains a multipart written-response question, while this record is labeled MCQ. This is a source/type mismatch. Required next action: locate the intended MCQ and correct the mapping under a record-level review; do not convert or replace the record based on guesswork."
     },
     {
       "key": "mcq-2013-3-991#region-0",
@@ -4788,8 +4856,12 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-3.png",
+      "decisionEvidence": "The original page is from the 2013 AP Chemistry Free-Response exam and contains a multipart written-response question, while this record is labeled MCQ. This is a source/type mismatch. Required next action: locate the intended MCQ and correct the mapping under a record-level review; do not convert or replace the record based on guesswork."
     },
     {
       "key": "mcq-2013-5-999#region-0",
@@ -4806,8 +4878,12 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-3.png",
+      "decisionEvidence": "The original page is from the 2013 AP Chemistry Free-Response exam and contains a multipart written-response question, while this record is labeled MCQ. This is a source/type mismatch. Required next action: locate the intended MCQ and correct the mapping under a record-level review; do not convert or replace the record based on guesswork."
     },
     {
       "key": "mcq-2013-6-1005#region-0",
@@ -4824,8 +4900,12 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-4.png",
+      "decisionEvidence": "The original page is from the 2013 AP Chemistry Free-Response exam and contains a multipart written-response question, while this record is labeled MCQ. This is a source/type mismatch. Required next action: locate the intended MCQ and correct the mapping under a record-level review; do not convert or replace the record based on guesswork."
     },
     {
       "key": "mcq-2016-8-1055#region-0",
@@ -4842,8 +4922,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-4.png",
+      "correctedRect": [
+        160,
+        74,
+        465,
+        283
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-2.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-9-1056#region-0",
@@ -4860,8 +4951,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-4.png",
+      "correctedRect": [
+        58,
+        62,
+        550,
+        340
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-2.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-10-1057#region-0",
@@ -4878,8 +4980,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-4.png",
+      "correctedRect": [
+        58,
+        60,
+        552,
+        570
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-2.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-28-1065#region-0",
@@ -4896,8 +5009,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-5.png",
+      "correctedRect": [
+        58,
+        58,
+        558,
+        265
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-2.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-31-1067#region-0",
@@ -4914,8 +5038,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-5.png",
+      "correctedRect": [
+        58,
+        60,
+        558,
+        425
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-3.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-32-1068#region-0",
@@ -4932,8 +5067,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-5.png",
+      "correctedRect": [
+        160,
+        68,
+        460,
+        240
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-09-corrected-3.png",
+      "decisionEvidence": "Tightened from near-full-page to a question-focused region using the visible source content bounds. The corrected preview was visually checked: complete stem, all answer choices, and associated equation/table/graph/diagrams are present; unrelated question-removal notice/footer or blank page area is excluded."
     },
     {
       "key": "mcq-2016-2-1085#region-0",
@@ -4950,8 +5096,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-5.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2016-3-1089#region-0",
@@ -4968,8 +5118,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-6.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2016-4-1093#region-0",
@@ -4986,8 +5140,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-6.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2016-5-1095#region-0",
@@ -5004,8 +5162,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-6.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2016-6-1097#region-0",
@@ -5022,8 +5184,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-6.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2016-7-1099#region-0",
@@ -5040,8 +5206,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF region and question identity; corrected MCQ previews checked against source page",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-7.png",
+      "decisionEvidence": "The source page contains a multipart written-response question from the 2016 AP Chemistry Free-Response exam, while the record is labeled MCQ. Required next action: trace the intended MCQ to its proper source and repair the mapping separately."
     },
     {
       "key": "mcq-2018-12-1197#region-0",
@@ -7142,16 +7312,33 @@
       },
       "visuallyReviewed": 25,
       "notes": "Twenty-two source pages match their record identity and are complete as-is. Three pages are 2002 FRQs incorrectly attached to records labeled 2011; retained as unresolved pending source/year correction."
+    },
+    {
+      "batch": 9,
+      "baselineWarningRange": [
+        200,
+        224
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 0,
+        "B_corrected": 10,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 15
+      },
+      "visuallyReviewed": 25,
+      "notes": "Ten genuine MCQ crops were tightened with all choices and supporting figures retained. Fifteen source mismatches are unresolved: four 2002 FRQs under 2011 IDs, five 2013 FRQs under MCQ IDs, and six 2016 FRQs under MCQ IDs."
     }
   ],
   "summary": {
     "baselineRegions": 334,
-    "reviewed": 200,
+    "reviewed": 225,
     "correctAsIs": 129,
-    "corrected": 9,
+    "corrected": 19,
     "incompleteFixed": 31,
     "sharedResolved": 0,
-    "unresolved": 31,
-    "notReviewed": 134
+    "unresolved": 46,
+    "notReviewed": 109
   }
 }

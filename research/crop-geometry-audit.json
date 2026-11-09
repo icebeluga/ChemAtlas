@@ -1373,34 +1373,6 @@
       "rect_area_ratio": 0.8611
     },
     {
-      "id": "mcq-2013-51-966",
-      "region": 0,
-      "page": 966,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2013-56-968",
-      "region": 0,
-      "page": 968,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2013-62-970",
-      "region": 0,
-      "page": 970,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2013-63-971",
-      "region": 0,
-      "page": 971,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
       "id": "mcq-2013-1-983",
       "region": 0,
       "page": 983,
@@ -1434,48 +1406,6 @@
       "page": 1005,
       "code": "near_full_page_crop",
       "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2016-8-1055",
-      "region": 0,
-      "page": 1055,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2016-9-1056",
-      "region": 0,
-      "page": 1056,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2016-10-1057",
-      "region": 0,
-      "page": 1057,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2016-28-1065",
-      "region": 0,
-      "page": 1065,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2016-31-1067",
-      "region": 0,
-      "page": 1067,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2016-32-1068",
-      "region": 0,
-      "page": 1068,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
     },
     {
       "id": "mcq-2016-2-1085",

@@ -78,6 +78,41 @@ def audit(root: Path) -> dict:
                 warnings.append({"id": question["id"], "region": index, "page": page_no, "code": "near_full_page_crop", "rect_area_ratio": round(crop.get_area() / bounds.get_area(), 4)})
 
     segment_report = [{"url": s["url"], "from": s["from"], "to": s["to"], "available": d is not None, "pageCount": d.page_count if d is not None else None} for s, d in docs]
+    stimulus_path = root / "research/stimuli.json"
+    stimulus_data = json.loads(stimulus_path.read_text(encoding="utf-8")) if stimulus_path.exists() else {"stimuli": {}}
+    valid_stimulus_regions = 0
+    for stimulus_id, stimulus in stimulus_data.get("stimuli", {}).items():
+        for index, region in enumerate(stimulus.get("regions", [])):
+            page_no, rect = region.get("page"), region.get("rect")
+            if not isinstance(page_no, int) or not isinstance(rect, list) or len(rect) != 4:
+                errors.append({"id": stimulus_id, "region": index, "code": "malformed_stimulus_region"})
+                continue
+            match = next(((seg, doc) for seg, doc in docs if seg["from"] <= page_no <= seg["to"]), None)
+            if not match or match[1] is None:
+                errors.append({"id": stimulus_id, "region": index, "page": page_no, "code": "unmapped_stimulus_page"})
+                continue
+            seg, doc = match
+            local_index = page_no - seg["from"]
+            if not 0 <= local_index < doc.page_count:
+                errors.append({"id": stimulus_id, "region": index, "page": page_no, "code": "stimulus_page_out_of_range"})
+                continue
+            page = doc.load_page(local_index)
+            try:
+                values = [float(v) for v in rect]
+            except (TypeError, ValueError):
+                errors.append({"id": stimulus_id, "region": index, "page": page_no, "code": "non_numeric_stimulus_rect"})
+                continue
+            crop = fitz.Rect(values)
+            if not all(math.isfinite(v) for v in values) or crop.is_empty or not page.rect.contains(crop):
+                errors.append({"id": stimulus_id, "region": index, "page": page_no, "code": "invalid_stimulus_rect"})
+                continue
+            valid_stimulus_regions += 1
+    for question in catalog["questions"]:
+        for stimulus_id in question.get("stimulusIds", []):
+            if stimulus_id not in stimulus_data.get("stimuli", {}):
+                errors.append({"id": question.get("id"), "stimulusId": stimulus_id, "code": "unknown_stimulus_reference"})
+            elif question["id"] not in stimulus_data["stimuli"][stimulus_id].get("questionIds", []):
+                errors.append({"id": question.get("id"), "stimulusId": stimulus_id, "code": "question_missing_from_stimulus_members"})
     for _, doc in docs:
         if doc is not None:
             doc.close()
@@ -86,6 +121,8 @@ def audit(root: Path) -> dict:
         "questions": len(catalog["questions"]),
         "questionsWithRegions": questions_with_regions,
         "regionsGeometryValid": checked_regions,
+        "stimuli": len(stimulus_data.get("stimuli", {})),
+        "stimulusRegionsGeometryValid": valid_stimulus_regions,
         "errors": errors,
         "warnings": warnings,
         "pageRotations": dict(page_rotations),

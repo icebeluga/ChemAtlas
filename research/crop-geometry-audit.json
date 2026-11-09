@@ -2,7 +2,9 @@
   "coordinateConvention": "PyMuPDF points; top-left origin; [x0,y0,x1,y1]",
   "questions": 1542,
   "questionsWithRegions": 1542,
-  "regionsGeometryValid": 1826,
+  "regionsGeometryValid": 1823,
+  "stimuli": 1,
+  "stimulusRegionsGeometryValid": 1,
   "errors": [],
   "warnings": [
     {
@@ -1434,13 +1436,6 @@
       "rect_area_ratio": 0.8611
     },
     {
-      "id": "mcq-2013-33-961",
-      "region": 0,
-      "page": 961,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
       "id": "mcq-2013-51-966",
       "region": 0,
       "page": 966,
@@ -2352,7 +2347,7 @@
     }
   ],
   "pageRotations": {
-    "0": 1826
+    "0": 1823
   },
   "sourceSegments": [
     {

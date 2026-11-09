@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviews": [
+    {
+      "questionId": "mcq-2008-1-29",
+      "type": "MCQ",
+      "source": "/source/bank-01.pdf",
+      "originalPage": 29,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered source-native diagnostic PDF; complete stem and choices A-E present with shared element-category stimulus.",
+      "region": [
+        30,
+        553,
+        470,
+        590
+      ]
+    },
+    {
+      "questionId": "mcq-2008-2-29",
+      "type": "MCQ",
+      "source": "/source/bank-01.pdf",
+      "originalPage": 29,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered source-native diagnostic PDF; complete stem present; shared stimulus link resolves to categories A-E.",
+      "region": [
+        30,
+        599,
+        180,
+        623
+      ]
+    },
+    {
+      "questionId": "mcq-2008-3-29",
+      "type": "MCQ",
+      "source": "/source/bank-01.pdf",
+      "originalPage": 29,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered source-native diagnostic PDF; complete stem present; shared stimulus link resolves to categories A-E.",
+      "region": [
+        30,
+        632,
+        230,
+        657
+      ]
+    },
+    {
+      "questionId": "mcq-2013-33-961",
+      "type": "MCQ",
+      "source": "/source/bank-04.pdf",
+      "originalPage": 961,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered source page and confirmed complete Question 33 stem and choices A-E; excludes unrelated removed-question notice.",
+      "region": [
+        40,
+        34,
+        300,
+        174
+      ]
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "type": "FRQ",
+      "source": "/source/bank-01.pdf",
+      "originalPage": 6,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Inspected rendered source crop; includes complete question and subparts (a)-(e), equations, and instructions. Contains exam header/footer material retained for context."
+    },
+    {
+      "questionId": "mcq-1994-3-628",
+      "type": "MCQ",
+      "source": "/source/bank-03.pdf",
+      "originalPage": 628,
+      "status": "needs_review",
+      "reviewedAt": "2026-11-09",
+      "verification": "Full-page crop visibly contains apparatus, table, and question parts; top of apparatus appears close to crop boundary and should be checked against the preceding page region before acceptance."
+    }
+  ]
+}

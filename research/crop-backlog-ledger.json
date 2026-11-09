@@ -3508,8 +3508,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-1.png",
+      "decisionEvidence": "The original page visibly identifies the content as 2002 AP Chemistry FRQ (matching question number), but this catalog record ID is labeled 2001. The crop is complete for the page shown; the record year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2001-2-773#region-0",
@@ -3526,8 +3530,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-1.png",
+      "decisionEvidence": "The original page visibly identifies the content as 2002 AP Chemistry FRQ (matching question number), but this catalog record ID is labeled 2001. The crop is complete for the page shown; the record year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2001-3-774#region-0",
@@ -3544,8 +3552,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-1.png",
+      "decisionEvidence": "The original page visibly identifies the content as 2002 AP Chemistry FRQ (matching question number), but this catalog record ID is labeled 2001. The crop is complete for the page shown; the record year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2001-4-775#region-0",
@@ -3562,8 +3574,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-1.png",
+      "decisionEvidence": "The original page visibly identifies the content as 2002 AP Chemistry FRQ (matching question number), but this catalog record ID is labeled 2001. The crop is complete for the page shown; the record year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2001-8-778#region-0",
@@ -3580,8 +3596,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-2.png",
+      "decisionEvidence": "The original page visibly identifies the content as 2002 AP Chemistry FRQ (matching question number), but this catalog record ID is labeled 2001. The crop is complete for the page shown; the record year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2005-1-839#region-0",
@@ -3598,8 +3618,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-2.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-2-840#region-0",
@@ -3616,8 +3640,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-2.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-4-843#region-0",
@@ -3634,8 +3662,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-2.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-5-844#region-0",
@@ -3652,8 +3684,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-3.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-6-845#region-0",
@@ -3670,8 +3706,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-3.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-7-846#region-0",
@@ -3688,8 +3728,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-3.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2005-8-847#region-0",
@@ -3706,8 +3750,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-3.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2006-1-853#region-0",
@@ -3724,8 +3772,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-4.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2006-4-855#region-0",
@@ -3742,8 +3794,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-4.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2006-6-858#region-0",
@@ -3760,8 +3816,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-4.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-1-865#region-0",
@@ -3778,8 +3838,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-4.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-2-867#region-0",
@@ -3796,8 +3860,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-5.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-3-868#region-0",
@@ -3814,8 +3882,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-5.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-4-869#region-0",
@@ -3832,8 +3904,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-5.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-5-870#region-0",
@@ -3850,8 +3926,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-5.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-6-871#region-0",
@@ -3868,8 +3948,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-6.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2003-7-872#region-0",
@@ -3886,8 +3970,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-6.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2004-1-879#region-0",
@@ -3904,8 +3992,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-6.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2004-2-880#region-0",
@@ -3922,8 +4014,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-6.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2004-3-881#region-0",
@@ -3940,8 +4036,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-7.png",
+      "decisionEvidence": "Rendered source page visually matches the record year, question number, and FRQ type. The question content, equations, diagrams, tables and visible subparts on this page lie within the crop. The lower empty area is response space and has not been removed without a verified boundary."
     },
     {
       "key": "frq-2004-4-882#region-0",
@@ -6908,16 +7008,33 @@
       },
       "visuallyReviewed": 25,
       "notes": "All source pages inspected. Eleven matched record identity and were complete as-is. Ten pages are 2002 FRQs attached to IDs labeled 2001; four pages are 1999 FRQs attached to MCQ IDs. These 14 are unresolved metadata/source mismatches pending traceable record remapping."
+    },
+    {
+      "batch": 7,
+      "baselineWarningRange": [
+        150,
+        174
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 20,
+        "B_corrected": 0,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 5
+      },
+      "visuallyReviewed": 25,
+      "notes": "Rendered and inspected all source pages. Five 2002 FRQs remain unresolved because their IDs state 2001; remaining 20 page-specific FRQ crops match and are complete as-is."
     }
   ],
   "summary": {
     "baselineRegions": 334,
-    "reviewed": 150,
-    "correctAsIs": 87,
+    "reviewed": 175,
+    "correctAsIs": 107,
     "corrected": 9,
     "incompleteFixed": 31,
     "sharedResolved": 0,
-    "unresolved": 23,
-    "notReviewed": 184
+    "unresolved": 28,
+    "notReviewed": 159
   }
 }

@@ -4058,8 +4058,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-1.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2004-5-883#region-0",
@@ -4076,8 +4080,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-1.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2004-6-884#region-0",
@@ -4094,8 +4102,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-1.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2004-7-885#region-0",
@@ -4112,8 +4124,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-1.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2004-8-886#region-0",
@@ -4130,8 +4146,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-2.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2008-1-892#region-0",
@@ -4148,8 +4168,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-2.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2008-2-893#region-0",
@@ -4166,8 +4190,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-2.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2008-4-896#region-0",
@@ -4184,8 +4212,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-2.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2008-5-898#region-0",
@@ -4202,8 +4234,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-3.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2008-6-900#region-0",
@@ -4220,8 +4256,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-3.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2009-3-908#region-0",
@@ -4238,8 +4278,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-3.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2009-4-909#region-0",
@@ -4256,8 +4300,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-3.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2009-5-911#region-0",
@@ -4274,8 +4322,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-4.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2009-6-912#region-0",
@@ -4292,8 +4344,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-4.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2010-1-918#region-0",
@@ -4310,8 +4366,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-4.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2010-4-921#region-0",
@@ -4328,8 +4388,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-4.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2010-6-925#region-0",
@@ -4346,8 +4410,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-5.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-1-931#region-0",
@@ -4364,8 +4432,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-5.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-2-932#region-0",
@@ -4382,8 +4454,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-5.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-3-933#region-0",
@@ -4400,8 +4476,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-5.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-4-934#region-0",
@@ -4418,8 +4498,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-6.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-6-937#region-0",
@@ -4436,8 +4520,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "A_correct_as_is",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-6.png",
+      "decisionEvidence": "Rendered original page visually matches the record year, question number, and FRQ type. The existing region contains the complete page-specific question content including all visible subparts, equations, diagrams, and tables. Remaining page area is response space or unrelated footer material and was not included in the cropped question content."
     },
     {
       "key": "frq-2011-1-944#region-0",
@@ -4454,8 +4542,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-6.png",
+      "decisionEvidence": "Original source page is visibly headed 2002 AP Chemistry Free-Response Questions and contains the matching question number, but this catalog record ID is labeled 2011. The crop is complete for the page shown; the year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2011-3-946#region-0",
@@ -4472,8 +4564,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-6.png",
+      "decisionEvidence": "Original source page is visibly headed 2002 AP Chemistry Free-Response Questions and contains the matching question number, but this catalog record ID is labeled 2011. The crop is complete for the page shown; the year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2011-4-947#region-0",
@@ -4490,8 +4586,12 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "reviewMethod": "visual inspection of rendered original PDF page with text-layer and visible year/question/type cross-check",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-7.png",
+      "decisionEvidence": "Original source page is visibly headed 2002 AP Chemistry Free-Response Questions and contains the matching question number, but this catalog record ID is labeled 2011. The crop is complete for the page shown; the year/source association requires separate correction and verification."
     },
     {
       "key": "frq-2011-5-948#region-0",
@@ -7025,16 +7125,33 @@
       },
       "visuallyReviewed": 25,
       "notes": "Rendered and inspected all source pages. Five 2002 FRQs remain unresolved because their IDs state 2001; remaining 20 page-specific FRQ crops match and are complete as-is."
+    },
+    {
+      "batch": 8,
+      "baselineWarningRange": [
+        175,
+        199
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 22,
+        "B_corrected": 0,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 3
+      },
+      "visuallyReviewed": 25,
+      "notes": "Twenty-two source pages match their record identity and are complete as-is. Three pages are 2002 FRQs incorrectly attached to records labeled 2011; retained as unresolved pending source/year correction."
     }
   ],
   "summary": {
     "baselineRegions": 334,
-    "reviewed": 175,
-    "correctAsIs": 107,
+    "reviewed": 200,
+    "correctAsIs": 129,
     "corrected": 9,
     "incompleteFixed": 31,
     "sharedResolved": 0,
-    "unresolved": 28,
-    "notReviewed": 159
+    "unresolved": 31,
+    "notReviewed": 134
   }
 }

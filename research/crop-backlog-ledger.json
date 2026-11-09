@@ -6713,8 +6713,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-1.png",
+      "sourcePageEvidence": "6. A student is interested in studying the Cu2+(aq) ion, which is important in the environment. Cu(NO3)2(aq)+K3PO4(aq) → (a) First, the student carries out a precipitation reaction. A solution of copper(II) nitrate is mixed with a solution of potassium phosphate, as represented above, and a blue precipitate forms. Write the balanced net ionic equation for the process. (b) In a separate experiment the student decides to precipitate the Cu2+(aq) as Cu(OH)2(s). To make sure that Cu(OH)2(s) will precipitate, the student looks up the Ksp value for Cu(OH)2(s), as shown below. Cu(OH)2(s)Cu2+(aq)+2OH−",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1664,
+          "rect": [
+            33.0,
+            48.1,
+            597.8,
+            272.7
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2022-6-1664.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2022-7-1665#region-0",
@@ -6731,8 +6750,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-1.png",
+      "sourcePageEvidence": "7. A student conducts a solubility experiment with potassium nitrate, KNO3, in water by identifying the temperature at which various masses of KNO3 will completely dissolve. (a) At room temperature, H2O is a liquid and KNO3 is a solid. The student incorrectly claims that this is because potassium and nitrate ions experience stronger dispersion forces than H2O molecules. In terms of the types of attractive forces, explain why the student is incorrect. (b) In one of the trials, the student reads the initial temperature of the water using the Celsius thermometer above. Record this temperature to ",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1665,
+          "rect": [
+            33.0,
+            50.4,
+            592.7,
+            439.9
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2022-7-1665.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2022-39-1683#region-0",
@@ -6749,8 +6787,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-1.png",
+      "decisionEvidence": "Original page is headed “Scoring Guide, 2022 Form I”; answer markings/clean exam-source status cannot be excluded from this derivative. Preserve the source and locate a clean exam page before export verification.",
+      "sourcePageEvidence": "(A) (B) (C) (D) 39. Which element, or , has the lower boiling point, and why? (A) , because it has a smaller, less polarizable electron cloud than (B) , because its atoms have a faster average speed at a given temperature than atoms (C) , because it has a larger, more polarizable electron cloud than (D) , because its atoms have a slower average speed at a given temperature than atoms Scoring Guide 2022 Form I AP Chemistry Page 15 of 48 Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939"
     },
     {
       "key": "mcq-2022-58-1691#region-0",
@@ -6767,8 +6811,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-1.png",
+      "decisionEvidence": "Original page is a 2022 Form I Scoring Guide and this ID/question number does not map cleanly to the official FRQ sequence. Full question extent and separation from scoring content require a clean source.",
+      "sourcePageEvidence": "58. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. Bromine is the only nonmetal that exists as a liquid at room temperature and . (a) Write the complete ground-state electron configuration of a bromine atom. (b) Following is a partial photoelectron spectrum showing only the core electrons in bromine. (i) Circle the peak in the spectrum that corresponds to the elec"
     },
     {
       "key": "mcq-2022-59-1696#region-0",
@@ -6785,8 +6835,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-2.png",
+      "decisionEvidence": "Original page is a 2022 Form I Scoring Guide; record number 59 does not map cleanly to the official FRQ sequence. Preserve original while a clean question source is located.",
+      "sourcePageEvidence": "59. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. Answer the following questions about . (a) (molar mass ) is a gas at room temperature and can be harmful at concentrations above . What is the maximum mass of this compound that can safely be present in a room with a volume of ? Two structures, and , with the molecular formula are shown in the table. (b) Based on "
     },
     {
       "key": "mcq-2022-60-1701#region-0",
@@ -6803,8 +6859,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-2.png",
+      "decisionEvidence": "Original page is a 2022 Form I Scoring Guide; record number 60 does not map cleanly to the official FRQ sequence. Preserve original while a clean question source is located.",
+      "sourcePageEvidence": "60. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. Answer the following questions about hydroxylamine, . (a) Complete the Lewis electron-dot diagram of the molecule in the box below, including all bonding and nonbonding valence electrons. (b) Hydroxylamine, , is a weak base. Write the balanced net ionic equation for the reaction that occurs when and are combined. "
     },
     {
       "key": "mcq-2022-62-1709#region-0",
@@ -6821,8 +6883,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-2.png",
+      "decisionEvidence": "Original page is a 2022 Form I Scoring Guide; record number 62 does not map cleanly to the official FRQ sequence. Preserve original while a clean question source is located.",
+      "sourcePageEvidence": "62. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. A student conducts a calorimetry experiment in which solid baking soda, , reacts with excess aqueous citric acid, , as represented by the equation above. The student places of the solution into a calorimeter and measures the temperature. After seconds, of is added. The data are recorded in the following table and "
     },
     {
       "key": "mcq-2023-55-1737#region-0",
@@ -6839,8 +6907,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-2.png",
+      "sourcePageEvidence": "2023 AP Exam 55. The graph of potential energy versus internuclear distance for the HCl molecule is shown. Which of the following graphs includes the plot for the HBr molecule, shown as a dashed line? (A) (B) (C) (D) 20Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1737,
+          "rect": [
+            27.5,
+            47.7,
+            592.7,
+            543.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-55-1737.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-58-1739#region-0",
@@ -6857,8 +6944,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-3.png",
+      "sourcePageEvidence": "2023 AP Exam Half-Reaction E◦(V) Ag+(aq)+e−→Ag(s) 0.80 Cu2+(aq)+2e−→Cu(s) 0.34 Zn2+(aq)+2e−→Cu(s) −0.76 58. A student sets up a standard galvanic cell, as shown in the diagram, and measures a voltage of 1.10 V. Based on the standard reduction potentials in the table, which of the following will occur if the student makes a new standard cell but uses a silver wire in place of the salt bridge? (A) The voltage will be greater than 1.10 V. (B) The voltage will be 0. (C) The silver wire will become thinner. (D) Zn(s) and Cu(s) will form on the silver wire. 22Downloaded by Johnson Liu (gbjohnnyliu20",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1739,
+          "rect": [
+            27.5,
+            47.7,
+            592.7,
+            499.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-58-1739.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-59-1740#region-0",
@@ -6875,8 +6981,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-3.png",
+      "sourcePageEvidence": "2023 AP Exam AgCl(s) ⇌Ag+(aq)+Cl–(aq) 59. The preceding equation represents the equilibrium of a saturated solution of AgCl(aq) in contact with AgCl(s). All points on the curve in the following graph represent values of [Ag+] and [Cl–] for which the product [Ag+][Cl–] is equal to the value of Ksp for AgCl. Which of the following provides the correct comparison of Q and and Ksp describes the net process that occurs at any point in region Y(unshaded) of the graph? (A) Q > Ksp and dissolution of AgCl(s) occurs. (B) Q < Ksp and dissolution of AgCl(s) occurs. (C) Q > Ksp and precipitation of AgCl(s",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1740,
+          "rect": [
+            27.5,
+            61.3,
+            592.7,
+            411.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-59-1740.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-60-1741#region-0",
@@ -6893,13 +7018,32 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-3.png",
+      "sourcePageEvidence": "2023 AP Exam 60. A 15.0 mL sample of 0.10 M HC2H3O2 is titrated with 0.10 M NaOH, and the data are shown in the graph above. Which of the following graphs shows the change in pH when a 15.0 mL sample of 0.10 M HCl is titrated with 0.10 M NaOH? (A) (B) (C) (D) STOP END OF SECTION I 24Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1741,
+          "rect": [
+            27.5,
+            47.7,
+            592.6,
+            607.2
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-60-1741.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-2-1745#region-0",
       "questionId": "mcq-2023-2-1745",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2023",
       "questionNumber": 2,
       "regionIndex": 0,
@@ -6911,13 +7055,32 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-3.png",
+      "sourcePageEvidence": "2023 AP Exam 2. A student performs an experiment to determine the molar mass of butane, C4H10. Initial mass of C4H10 container 25.012 g Final mass of C4H10 container 24.911 g Initial volume of gas 0.00 mL Final volume of gas ? Atmospheric pressure 0.970 atm Temperature 21.0 °C (a) To determine the molar mass, the student collects a sample of butane gas over water in a 50.0 mL gas-collection tube, as shown in the following diagram. The student then adjusts the position of the tube so the water level is the same inside and outside the tube. A partial data table for the experiment is also shown. ",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace. Source text is multipart FRQ (a/b or more); corrected erroneous MCQ type to FRQ and kept its existing question ID, unit/topic mappings and question number. The original page contains multipart free-response work, confirming FRQ type.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1745,
+          "rect": [
+            33.0,
+            50.4,
+            592.7,
+            677.7
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-2-1745.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-3-1747#region-0",
       "questionId": "mcq-2023-3-1747",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2023",
       "questionNumber": 3,
       "regionIndex": 0,
@@ -6929,13 +7092,32 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-4.png",
+      "sourcePageEvidence": "2023 AP Exam 3. Answer the following questions related to N2O5 and H2NO3. (a) An incomplete Lewis diagram for N2O5 is shown. Draw all of the remaining nonbonding electrons on the diagram. (b) Based on VSEPR theory and the molecular geometry around the central O atom, what is the predicted N−O−N bond angle? When N2O5(g) is added to water, HNO3(aq) is formed according to the following equation. N2O5(g)+H2O(l) →2HNO3(aq) Thermodynamic data for the reaction at 298 K are given in the following table. ∆H◦ −140 kJ/molrxn ∆S◦ −124 J/(K·molrxn) (c) Calculate the value of ∆G◦, in kJ/molrxn, at 298 K. (d",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace. Source text is multipart FRQ (a/b or more); corrected erroneous MCQ type to FRQ and kept its existing question ID, unit/topic mappings and question number. The original page contains multipart free-response work, confirming FRQ type.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1747,
+          "rect": [
+            33.0,
+            50.4,
+            592.7,
+            525.4
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-3-1747.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-4-1749#region-0",
       "questionId": "mcq-2023-4-1749",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2023",
       "questionNumber": 4,
       "regionIndex": 0,
@@ -6947,13 +7129,32 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-4.png",
+      "sourcePageEvidence": "2023 AP Exam 4. Answer the following questions about atomic structure and bonding. (a) Write the complete ground-state electron configuration of the Kr atom. (b) The Rb+ ion has the same electron configuration as the neutral Kr atom. Which has the larger radius, the Rb+ ion or the Kr atom? Justify your answer in terms of Coulomb’s law. (c) The composition of a sample of solid Rb containing a high percentage of the radioactive isotope Rb-83 is given in the following table. Isotope Isotopic Mass (amu) Percentage of Sample Isotope Half-Life Rb-83 82.92 32.5% 86 days Rb-85 84.91 50.8% stable Rb-87",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace. Source text is multipart FRQ (a/b or more); corrected erroneous MCQ type to FRQ and kept its existing question ID, unit/topic mappings and question number. The original page contains multipart free-response work, confirming FRQ type.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1749,
+          "rect": [
+            33.0,
+            50.4,
+            592.7,
+            299.6
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-4-1749.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-5-1750#region-0",
       "questionId": "mcq-2023-5-1750",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2023",
       "questionNumber": 5,
       "regionIndex": 0,
@@ -6965,13 +7166,32 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-4.png",
+      "sourcePageEvidence": "2023 AP Exam 5. To determine the value of the solubility product constant, Ksp, a student prepares a saturated solution by dissolving Ba(OH)2(s) in water. The Ksp expression is Ksp = [Ba2+][OH–]2. (a) Write the balanced equation for the dissociation reaction that is consistent with the Ksp expression. (b) The student determines that the solubility of Ba(OH)2(s) is 18.5 g/L at 25 °C. i. Calculate the molar solubility of Ba(OH)2(s) in mol/L at 25 °C. ii. Calculate the value of Ksp for Ba(OH)2(s) at 25 °C. (c) The student creates a saturated solution of Ba(OH)2 in water, as shown in the diagram. ",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace. Source text is multipart FRQ (a/b or more); corrected erroneous MCQ type to FRQ and kept its existing question ID, unit/topic mappings and question number. The original page contains multipart free-response work, confirming FRQ type.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1750,
+          "rect": [
+            33.0,
+            50.2,
+            592.7,
+            410.6
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-5-1750.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-7-1753#region-0",
       "questionId": "mcq-2023-7-1753",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2023",
       "questionNumber": 7,
       "regionIndex": 0,
@@ -6983,8 +7203,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-4.png",
+      "sourcePageEvidence": "2023 AP Exam 7. A student performs a spectrophotometry experiment using solutions of Ni(ClO4)2(aq). The student needs to make a standard curve and determine the concentration of Ni(ClO4)2(aq) in a sample with an unknown concentration. (a) Based on the absorbance spectrum of Ni(ClO4)2(aq) shown in the preceding graph, what wavelength should the student use in the experiment to achieve the greatest precision? (b) To make the standard curve, the student must prepare Ni(ClO4)2(aq) solutions with different concentrations. The student has a standard solution of Ni(ClO4)2(aq) with a concentration of ",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace. Source text is multipart FRQ (a/b or more); corrected erroneous MCQ type to FRQ and kept its existing question ID, unit/topic mappings and question number. The original page contains multipart free-response work, confirming FRQ type.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1753,
+          "rect": [
+            33.0,
+            50.1,
+            592.7,
+            641.3
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-7-1753.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-61-1783#region-0",
@@ -7001,8 +7240,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-5.png",
+      "decisionEvidence": "Original page is a 2023 Form I Scoring Guide containing free-response rubric instructions; ID is marked MCQ and number 61 exceeds the exam MCQ sequence. Requires a clean source and record reconciliation.",
+      "sourcePageEvidence": "61. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. Ethanol ( ) reacts with hydrobromi"
     },
     {
       "key": "mcq-2023-66-1804#region-0",
@@ -7019,8 +7264,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-5.png",
+      "decisionEvidence": "Original page is a 2023 Form I Scoring Guide containing FRQ rubric material; ID is marked MCQ and number 66 exceeds the exam MCQ sequence. Requires a clean source and record reconciliation.",
+      "sourcePageEvidence": "66. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. A student sets up a galvanic cell "
     },
     {
       "key": "mcq-2023-67-1808#region-0",
@@ -7037,8 +7288,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected original source page image and text layer; page header/printed material identifies a scoring-guide or rubric source and record identity conflicts with the official exam sequence.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-5.png",
+      "decisionEvidence": "Original page is a 2023 Form I Scoring Guide containing FRQ rubric material; ID is marked MCQ and number 67 exceeds the exam MCQ sequence. Requires a clean source and record reconciliation.",
+      "sourcePageEvidence": "67. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. A student performs a spectrophotom"
     },
     {
       "key": "mcq-2023-5-1813#region-0",
@@ -7055,8 +7312,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-5.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -6- Fe3+(aq) + KSCN(s) Æ FeSCN2+(aq) + K+(aq) 5. To determine the moles of Fe3+(aq) in a 100. mL sample of an unknown solution, excess KSCN(s) is added to convert all the Fe3+(aq) into the dark red species FeSCN2+(aq), as represented by the equation above. The absorbance of FeSCN2+(aq) at different concentrations is shown in the graph below. If the absorbance of the mixture is 0.20 at 453 nm, how many moles of Fe3+(aq) were present in the 100. mL sample? (Assume that any volume change due to adding the K",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1813,
+          "rect": [
+            39.0,
+            36.6,
+            566.9,
+            427.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-5-1813.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-8-1815#region-0",
@@ -7073,8 +7349,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-6.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -8- 8. Based on the diagram above, which of the following best helps to explain why MgO(s) is not able to conduct electricity, but MgO(l) is a good conductor of electricity? (A) MgO(s) does not contain free electrons, but MgO(l) contains free electrons that can flow. (B) MgO(s) contains no water, but MgO(l) contains water that can conduct electricity. (C) MgO(s) consists of separate Mg2+ ions and O2− ions, but MgO(l) contains MgO molecules that can conduct electricity. (D) MgO(s) consists of separate Mg2",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1815,
+          "rect": [
+            151.0,
+            37.4,
+            458.4,
+            343.4
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-8-1815.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-9-1816#region-0",
@@ -7091,8 +7386,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-6.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -9- 9. A mixture of CO(g) and O2(g) is placed in a container, as shown above. A reaction occurs, forming CO2(g). Which of the following best represents the contents of the box after the reaction has proceeded as completely as possible? (A) (B) (C) (D) Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1816,
+          "rect": [
+            39.0,
+            36.5,
+            294.2,
+            616.7
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-9-1816.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-19-1820#region-0",
@@ -7109,8 +7423,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-6.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -13- 19. The complete photoelectron spectra of neutral atoms of two unknown elements, X and Y, are shown above. Which of the following can be inferred from the data? (A) Element X has a greater electronegativity than element Y does. (B) Element X has a greater ionization energy than element Y does. (C) Element Y has a greater nuclear charge than element X does. (D) The isotopes of element Y are approximately equal in abundance, but those of element X are not. Downloaded by Johnson Liu (gbjohnnyliu2009@gm",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1820,
+          "rect": [
+            39.0,
+            36.5,
+            572.7,
+            268.2
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-19-1820.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-20-1821#region-0",
@@ -7127,8 +7460,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-6.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -14- 20. Based on the structures shown above, which of the following statements identifies the compound with the higher boiling point and provides the best explanation for the higher boiling point? (A) Compound 1, because it has stronger dipole-dipole forces than compound 2 (B) Compound 1, because it forms hydrogen bonds, whereas compound 2 does not (C) Compound 2, because it is less polarizable and has weaker London dispersion forces than compound 1 (D) Compound 2, because it forms hydrogen bonds, where",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1821,
+          "rect": [
+            39.0,
+            36.5,
+            573.4,
+            211.5
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-20-1821.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-26-1823#region-0",
@@ -7145,8 +7497,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Rendered the original PDF page, matched the printed question number and all content blocks/figure rectangles, then inspected the final isolated crop.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-7.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -16- Reaction A: 4 HCl(g) + O2(g)  2 Cl2(g) + 2 H2O(g) Reaction B: N2O4(g)  2 NO2(g) Reaction C: H2(g) + I2(g)  2 HI(g) Reaction D: 2 NH3(g)  N2(g) + 3 H2(g) 26. The reactions represented above are carried out in sealed, rigid containers and allowed to reach equilibrium. If the volume of each container is reduced from 1.0 L to 0.5 L at constant temperature, for which of the reactions will the amount of product(s) be increased? (A) Reaction A (B) Reaction B (C) Reaction C (D) Reaction D Downloaded by ",
+      "decisionEvidence": "Corrected oversized crop to the complete isolated printed question. Kept the question-specific figures, tables, equations and all visible subparts/choices; excluded scan footer and surrounding page whitespace.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1823,
+          "rect": [
+            151.0,
+            37.5,
+            446.2,
+            242.2
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-26-1823.png",
+      "visualContentCheck": "Inspected the rendered isolated source-PDF crop against the source-page evidence; complete visible prompt and associated diagrams/choices are retained."
     },
     {
       "key": "mcq-2023-27-1824#region-0",
@@ -7163,8 +7534,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -17- Type of Steel % Carbon Characteristics Uses Low-carbon steel < 0.2 % Malleable and ductile Chains and nails High-carbon steel 0.6 – 1.5 % Hard and brittle Cutting tools 27. The table above provides some information about two types of steel, both of which are alloys of iron and carbon. Which of the following best helps to explain why high-carbon steel is more rigid than low-carbon steel? (A) Elemental ",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1824,
+          "rect": [
+            40.0,
+            45.5,
+            573.0,
+            229.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-27-1824.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-28-1825#region-0",
@@ -7181,8 +7571,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -18- NO2(g) + CO(g) → NO(g) + CO2(g) 28. The reaction between NO2(g) and CO(g) is represented above. The elementary steps of a proposed reaction mechanism are represented below. Step 1: 2 NO2(g) → NO(g) + NO3(g) (slow) Step 2: NO3(g) + CO(g) → NO2(g) + CO2(g) (fast) Which of the following is the rate law for the overall reaction that is consistent with the proposed mechanism? (A) Rate = k [NO ][CO] 2 (B) R",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1825,
+          "rect": [
+            40.0,
+            29.9,
+            561.8,
+            234.9
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-28-1825.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-29-1826#region-0",
@@ -7199,8 +7608,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -19- Cl−(aq) + ClO−(aq) + 2 H+(aq) → Cl2(g) + H2O(l) 29. What effect will increasing [H+] at constant temperature have on the reaction represented above? (A) The activation energy of the reaction will increase. (B) The activation energy of the reaction will decrease. (C) The frequency of collisions between H+(aq) ions and ClO−(aq) ions will increase. (D) The value of the rate constant will increase. Downlo",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1826,
+          "rect": [
+            152.0,
+            40.0,
+            443.3,
+            181.5
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-29-1826.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-32-1828#region-0",
@@ -7217,8 +7645,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -21- 3 O ( ) + O( ) 2 O ( ) g g Æ 2 g 32. The decomposition of O3(g) represented by the equation above. The potential energy in the upper atmosphere is diagram for the decomposition of O3(g) in the presence and absence of NO(g) is given below. Which of the following mechanisms for the catalyzed reaction is consistent with the equation and diagram above? (A) 2 O3(g) + 2 NO(g) → 4 O2(g) + N2(g) slow (B) O3(g",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1828,
+          "rect": [
+            152.0,
+            38.3,
+            462.4,
+            454.2
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-32-1828.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-33-1829#region-0",
@@ -7235,8 +7682,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -22- Cr2O7 2−(aq) + 3 H2O(l)  2 CrO4 2−(aq) + 2 H3O+(aq) orange yellow 33. The equilibrium system represented by the equation above initially contains equal concentrations of Cr2O7 2−(aq) and CrO4 2−(aq). Which of the following statements correctly predicts the result of adding a sample of 6.0 M NaOH(aq) to the system, and provides an explanation? (A) The mixture will become more orange because OH−(aq) wi",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1829,
+          "rect": [
+            40.0,
+            40.0,
+            561.6,
+            209.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-33-1829.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-34-1830#region-0",
@@ -7253,8 +7719,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -23- 34. The process of dissolution of NaCl(s) in H2O(l) is represented in the diagram above. Which of the following summarizes the signs of DH° and DS° for each part of the dissolution process? Breaking solvent-solvent interactions Breaking solute-solute interactions Forming solute-solvent interactions DH° DS° DH° DS° DH° DS° (A) + + + + − − (B) + + + + − + (C) − − − − + + (D) − + − + + − Downloaded by Jo",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1830,
+          "rect": [
+            40.0,
+            37.5,
+            557.9,
+            340.3
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-34-1830.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-35-1831#region-0",
@@ -7271,8 +7756,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -24- 35. A particle view of a sample of H2O2(aq) is shown above. The H2O2(aq) is titrated with KMnO4(aq), as represented by the equation below. 2 MnO4 −(aq) + 5 H2O2(aq) + 6 H+(aq) → 2 Mn2+(aq) + 5 O2(g) + 8 H2O(l) Which of the following particle views best represents the mixture when the titration is halfway to the equivalence point? (H2O molecules and H+ ions are not shown.) (A) (B) (C) (D) Downloaded by",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1831,
+          "rect": [
+            40.0,
+            37.5,
+            537.7,
+            662.7
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-35-1831.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-44-1835#region-0",
@@ -7289,8 +7793,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -28- 44. The compound CCl4 is nonflammable and was once commonly used in fire extinguishers. On the basis of the periodic properties, which of the following compounds can most likely be used as a fire-resistant chemical? (A) BCl3 (B) CH4 (C) CBr4 (D) PbCl2 Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1835,
+          "rect": [
+            40.0,
+            39.1,
+            300.5,
+            187.9
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-44-1835.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2023-45-1836#region-0",
@@ -7307,13 +7830,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-3.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -29- Reaction Keq La3+ + OH− + HCO3 − → ← LaCO3 + + H2O K1 HCO3 − → ← H+ + CO3 2− Ka H2O → ← H+ + OH− Kw 45. Based on the information above, which of the following expressions represents the equilibrium constant, K, for the reaction represented by the equation below? La3+ + CO3 2− → ← LaCO3 + (A) 1 = ( )( )( ) a w K K K K (B) 1 ( )( ) = a w K K K K (C) 1 = ( )( ) a w K K K K (D) 1 ( )( ) = w a K K K K Down",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1836,
+          "rect": [
+            152.0,
+            42.7,
+            445.6,
+            318.6
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-45-1836.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2017-2-1850#region-0",
       "questionId": "mcq-2017-2-1850",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2017",
       "questionNumber": 2,
       "regionIndex": 0,
@@ -7325,13 +7867,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-3.png",
+      "sourcePageEvidence": "2. A student investigates the reaction between H2O2(aq) and NaOCl(aq) 40.0 mL of O2(g) to produce 40.0 mL of O2(g) at 0.988 atm and 298 K H2O2(aq) + OCl−(aq) → H2O(l) + Cl−(aq) + O2(g) , which is represented by the net-ionic equation shown above. (a) Is the reaction represented above a redox reaction? Justify your answer. To better understand the reaction, the student looks up thermodynamic data for the reaction. For the reaction  DG298 is −197 kJ/molrxn represented above, the value of and the ",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1850,
+          "rect": [
+            40.0,
+            38.6,
+            561.3,
+            653.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-2-1850.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2017-3-1854#region-0",
       "questionId": "mcq-2017-3-1854",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2017",
       "questionNumber": 3,
       "regionIndex": 0,
@@ -7343,13 +7904,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-3.png",
+      "sourcePageEvidence": "molecule has a central oxygen atom bonded to two outer oxygen atoms that are not bonded to one molecule. Include all valid 2 O3(g) → 3 O2(g) ΔH° = − 285 kJ/molrxn O2 is 498 kJ/mol HSO3 −(aq) (6.4 × 10−4 M) O3(aq) (1.0 × 10−5 M) O3(aq) 3. Answer the following questions about ozone. (a) The O3 another. In the box below, draw the Lewis electron-dot diagram of the O3 resonance structures. (b) Based on the diagram you drew in part (a), what is the shape of the ozone molecule? Ozone decomposes accordi",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1854,
+          "rect": [
+            40.0,
+            40.0,
+            563.5,
+            691.3
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-3-1854.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2017-4-1858#region-0",
       "questionId": "mcq-2017-4-1858",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2017",
       "questionNumber": 4,
       "regionIndex": 0,
@@ -7361,13 +7941,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-3.png",
+      "sourcePageEvidence": "4. The structural formulas of glycerol and trichloropropane are given above. Both compounds are liquids at 25°C. (a) For each compound, identify all types of intermolecular forces present in the liquid. Explain why glycerol has the higher boiling point in terms of the relative strengths of the intermolecular forces. (b) Glycerol (molar mass 92.09 g/mol) has been suggested for use as an alternative fuel. The enthalpy of  DHcomb combustion, , of glycerol is −1654 kJ/mol. What mass of glycerol wou",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1858,
+          "rect": [
+            43.1,
+            51.0,
+            565.2,
+            340.9
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-4-1858.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2017-6-1862#region-0",
       "questionId": "mcq-2017-6-1862",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2017",
       "questionNumber": 6,
       "regionIndex": 0,
@@ -7379,13 +7978,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-4.png",
+      "sourcePageEvidence": "for 6. Answer the following questions about the solubility of AgCl(s). The value of Ksp AgCl(s) is 1.8 × 10−10. (a) Calculate the value of [Ag+] in a saturated solution of AgCl in distilled water. (b) The concentration of Cl−(aq) in seawater is 0.54 M. (i) Calculate the molar solubility of AgCl(s) in seawater. (ii) Explain why AgCl(s) is less soluble in seawater than in distilled water. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -22- Downloaded by ",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1862,
+          "rect": [
+            40.0,
+            39.1,
+            554.8,
+            151.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-6-1862.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2017-7-1864#region-0",
       "questionId": "mcq-2017-7-1864",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2017",
       "questionNumber": 7,
       "regionIndex": 0,
@@ -7397,8 +8015,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-4.png",
+      "sourcePageEvidence": "7. A new element with atomic number 116 was discovered in 2000. In 2012 it was named livermorium, is radioactive and short-lived, its chemical properties and reactivity should follow periodic trends. Lv. Although Lv (a) Write the electron configuration for the valence electrons of Lv in the ground state. (b) According to periodic properties, what would be the most likely formula for the product obtained when Lv reacts with H2(g)? (c) The first ionization energy of polonium, Po, is 812 kJ/mol. Is",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1864,
+          "rect": [
+            40.0,
+            39.1,
+            571.3,
+            444.9
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-7-1864.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-3-1902#region-0",
@@ -7415,8 +8052,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-4.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -6- Substance X Y Z Melting Point (°C) 1600 650 1418 Electrical Conductivity in Solid Phase None High None Electrical Conductivity in Liquid Phase None High High 3. Three substances were studied in the laboratory, and the data in the table above were collected. Based on the data, which of the following shows the type of bonding in each substance? Substance X Substance Y Substance Z (A) Network covalent Ion",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1902,
+          "rect": [
+            43.1,
+            40.6,
+            553.8,
+            268.8
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-3-1902.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-4-1903#region-0",
@@ -7433,8 +8089,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-4.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -7- 4. Based on the information in the table above, which of the compounds has the highest boiling point, and why? (A) Butanal, because it can form intermolecular hydrogen bonds (B) Pentane, because it has the longest carbon chain (C) Pentane, because it has the most C−H bonds (D) Propanoic acid, because it can form intermolecular hydrogen bonds",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1903,
+          "rect": [
+            40.0,
+            38.5,
+            557.4,
+            390.5
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-4-1903.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-7-1905#region-0",
@@ -7451,8 +8126,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-5.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -9- 7. A 20. mL sample of 0.50 M HC2H3O2(aq) is titrated with 0.50 M NaOH(aq). Which of the following best represents the species that react and the species produced in the reaction? (A) H+(aq) + OH−(aq) → H2O(l) (B) H+(aq) + C2H3O2 −(aq) + Na+(aq) + OH−(aq) → H2O(l) + NaC2H3O2(aq) (C) HC2H3O2(aq) + OH−(aq) → C2H3O2 −(aq) + H2O(l) (D) HC2H3O2(aq) + NaOH(aq) → H2O(l) + Na+(aq) + C2H3O2 −(aq)",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1905,
+          "rect": [
+            40.0,
+            14.5,
+            545.1,
+            154.6
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-7-1905.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-8-1906#region-0",
@@ -7469,8 +8163,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-5.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -10- 8. The standard reduction potentials for the half-reactions related to the galvanic cell represented above are listed in the table below. Half-Reaction E° (V) − Cr3+(aq) + 3 e → Cr(s) −0.74 − Zn2+(aq) + 2 e → Zn(s) −0.76 Which of the following gives the value of Ecell  for the cell? (A) Ecell  = −1.50 V (B) Ecell  = −0.80 V (C) Ecell  = −0.02 V (D) Ecell  = +0.02 V",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1906,
+          "rect": [
+            40.0,
+            38.5,
+            462.6,
+            478.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-8-1906.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-11-1908#region-0",
@@ -7487,8 +8200,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-5.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -12- HNO2(aq) ← → H+(aq) + NO2 −(aq) K = 4.0 × 10−4 a 11. On the basis of the information above, what is the approximate percent ionization of HNO2 in a 1.0 M HNO2(aq) solution? (A) 0.00040% (B) 0.020% (C) 0.040% (D) 2.0%",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1908,
+          "rect": [
+            152.0,
+            38.8,
+            439.3,
+            177.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-11-1908.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-32-1918#region-0",
@@ -7505,13 +8237,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-5.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -22- Step 1: H2SeO3(aq)  HSeO 3 −(aq) + H+(aq) K = 2.1 × 10−3 a 1 Step 2: HSeO3 −(aq)  SeO3 2−(aq) + H+(aq) Ka2 = 5.3 × 10−9 32. The step-wise dissociation of selenous acid, H2SeO3(aq), is represented by the equations above. Which of the following best helps explain why the value of Ka2 is so much smaller than the value of Ka1 ? (A) The Se atom in H2SeO3(aq) is in a higher oxidation state than the Se ato",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1918,
+          "rect": [
+            40.0,
+            42.8,
+            561.4,
+            261.4
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-32-1918.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-2-1937#region-0",
       "questionId": "mcq-2018-2-1937",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2018",
       "questionNumber": 2,
       "regionIndex": 0,
@@ -7523,13 +8274,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-6.png",
+      "sourcePageEvidence": "2. Answer the following questions relating to HCl, CH3Cl, and CH3Br. (a) HCl(g) can be prepared by the reaction of concentrated H2SO4(aq) with NaCl(s), as represented by the following equation. H2SO4(aq) + 2 NaCl(s) → 2 HCl(g) + Na2SO4(aq) (i) A student claims that the reaction is a redox reaction. Is the student correct? Justify your answer. (ii) Calculate the mass, in grams, of NaCl(s) needed to react with excess H2SO4(aq) to produce 3.00 g of HCl(g). Assume that the reaction goes to completio",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1937,
+          "rect": [
+            43.1,
+            39.1,
+            574.2,
+            651.3
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-2-1937.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-3-1941#region-0",
       "questionId": "mcq-2018-3-1941",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2018",
       "questionNumber": 3,
       "regionIndex": 0,
@@ -7541,13 +8311,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-6.png",
+      "sourcePageEvidence": "3 Cu+(aq) + Au3+(aq) → 3 Cu 2+(aq) + Au(s) 3. A student studying the reaction represented above constructs a voltaic cell as shown in the diagram below. The cell contains an Au(s) electrode in a beaker containing 1.00 M Au(NO3)3(aq) and a Pt(s) electrode in a beaker containing 1.00 MCuNO3(aq) and 1.00 M Cu(NO3)2(aq) . The standard reduction potentials associated with the cell are given in the following table. Half-reaction E° (V) − Cu2+(aq) + e → Cu+(aq) 0.16 − Au3+(aq) + 3 e → Au(s) 1.50 (a) Ca",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1941,
+          "rect": [
+            40.0,
+            38.6,
+            573.1,
+            493.5
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-3-1941.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-4-1945#region-0",
       "questionId": "mcq-2018-4-1945",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2018",
       "questionNumber": 4,
       "regionIndex": 0,
@@ -7559,13 +8348,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-6.png",
+      "sourcePageEvidence": "4. To spectrophotometrically determine the mass percent of cobalt in an ore containing cobalt and some inert materials, solutions with known [Co2+] are prepared and the absorbance of each of the solutions is measured at the wavelength of optimum absorbance. The data are used to create a calibration plot, shown below. A 0.630 g sample of the ore is completely dissolved in concentrated HNO3(aq). The mixture is diluted with water to a final volume of 50.00 mL. Assume that all the cobalt in the ore ",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1945,
+          "rect": [
+            40.0,
+            39.1,
+            569.8,
+            366.1
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-4-1945.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-6-1949#region-0",
       "questionId": "mcq-2018-6-1949",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2018",
       "questionNumber": 6,
       "regionIndex": 0,
@@ -7577,13 +8385,32 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-6.png",
+      "sourcePageEvidence": "6. A student is asked to determine what mass of butane, C4H10(g), needs to burn in order to raise the temperature of a 1650 g beaker of sand by 180.°C. The student is provided with the equipment shown below. (a) Calculate the amount of heat energy needed to raise the temperature of the beaker of sand by 180.°C. Assume that all the heat energy from the burner is transf erred to the beaker of sand and that the specific heat capacity of the beaker and sand together is 0.810 J/(g⋅°C). The student ru",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1949,
+          "rect": [
+            43.1,
+            38.9,
+            573.1,
+            640.7
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-6-1949.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-7-1951#region-0",
       "questionId": "mcq-2018-7-1951",
-      "type": "MCQ",
+      "type": "FRQ",
       "year": "2018",
       "questionNumber": 7,
       "regionIndex": 0,
@@ -7595,8 +8422,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "reviewMethod": "Inspected the original page image and text layer, matched the printed item number, then reviewed the final crop at source rendering resolution. Figures and diagrams were included by their source PDF image/vector bounds.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-7.png",
+      "sourcePageEvidence": "Solution X Solution Y Solution Z 100 mL of 0.10 M NaOH(aq) is mixed with 100 mL of 0.10 M HBr(aq) 100 mL of 0.10 M NaBr(aq) is mixed with 100 mL of 0.10 M HBr(aq) 100 mL of 0.10 M HC 2H3O2(aq) is mixed with 100 mL of 0.10 M NaC2H3O2(aq) 7. A student prepares three solutions, X, Y, and Z, as described in the table above. The values of Ka for the acidic species in the solutions are given in the table below. Species Ka HBr(aq) >>1 (very large) HC2H3O2(aq) 1.8 × 10−5 (a) Using the information above,",
+      "decisionEvidence": "Tightened oversized region to the complete question and supporting source material, excluding scan footer and unrelated page whitespace. Printed item boundary and associated diagrams/tables were visually checked. Verified multipart FRQ and corrected the erroneous record type to FRQ; kept its ID, unit and topic fields.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1951,
+          "rect": [
+            40.0,
+            50.1,
+            564.8,
+            431.6
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-7-1951.png",
+      "visualContentCheck": "Final isolated PDF crop visually compared with source page; complete prompt and the required figures, equations, diagrams or choices are present."
     },
     {
       "key": "mcq-2018-8-1986#region-0",
@@ -7613,8 +8459,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "Allotrope I                                           Allotrope II\n8.  The structures of two different allotropes of arsenic are represented in the figures above. Based on the figures above,\n   which of the following comparisons is false regarding the physical properties of the allotropes?\n    (A)  Both allotropes I and II are relatively soft due to the relative weak strength of their intermolecular forces\n             in certain directions.\n    (B)  Both allotropes I and II are insoluble in water since they contain covalent bonds that hold their atoms\n             together.\n    (C)   Allotrope II takes more energy to change phases than allotrope I since it has more numerous\n            intermolecular forces.\n    (D)   Allotrope I has a greater electrical conductivity than allotrope II due to its molecules being more free to\n         move around compared to the lattice structure of allot",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        40,
+        38,
+        575,
+        370
+      ],
+      "decisionEvidence": "MCQ 8 has both allotrope diagrams, its complete stem, and A-D choices on this page. Tightened around the diagrams and answer text; unrelated page footer and whitespace excluded."
     },
     {
       "key": "mcq-2018-9-1987#region-0",
@@ -7631,8 +8488,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "Beaker I                Beaker II\n9.  Two different beakers contain different and unknown substances. One beaker contains a solvent, and another\n    contains a powdered solute. The figure above shows the contents of their beaker and the structure of the compounds\n    inside. Which of the following best represents the contents of the beakers after they are mixed?\n\n   (A)                                                   (B)\n\n\n\n\n\n   (C)                                                 (D)",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        38,
+        45,
+        580,
+        555
+      ],
+      "decisionEvidence": "Revised after inspecting the source-native export: the first crop version cut off the upper beaker context and lower C/D particle-model diagrams. The final crop includes both beaker diagrams, the entire stem, and complete A-D particle-model choices; scan footer and unrelated whitespace excluded."
     },
     {
       "key": "mcq-2018-16-1991#region-0",
@@ -7649,8 +8517,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "16. A student measures the energy of the photons emitted from a certain laser pointer and determines that the average\n    energy of the photons being emitted is 4.95 × 10–22 kJ. The diagram above shows the wavelengths of photons and\n    their corresponding color in the visible spectrum of light. What is the color of the laser from the laser pointer?\n    (A)  Red\n    (B)  Orange\n    (C)  Green\n    (D)   Violet",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        40,
+        42,
+        565,
+        260
+      ],
+      "decisionEvidence": "MCQ 16 includes the wavelength/color chart, complete stem, and A-D choices. Tightened to chart and text; excluded page footer."
     },
     {
       "key": "mcq-2018-21-1993#region-0",
@@ -7667,8 +8546,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "( q)             ( q)            ( q)        2  ( )                                                          rxn\n\n        Reaction 2 :   CH4(g) + 2 O2(g) →CO2(g) + 2 H2O(g)              ΔH° =  – 891 kJ/molrxn\n\n        Reaction 3 :   2 H2O(l) →2 H2(g) + O2(g)                       ΔH° =    572 kJ/molrxn\n\n        Reaction 4 :   H2SO4(aq) + Mg(OH)2(aq) →MgSO4(aq) + 2 H2O(l)     ΔH° =   – 30 kJ/molrxn\n\n21. The balanced reaction equations for four different reactions are shown above. Based on the reactions above, which\n    reaction yields the product with the strongest intermolecular forces?\n    (A)  Reaction 1\n    (B)   Reaction 2\n    (C)   Reaction 3\n    (D)  Reaction 4",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        38,
+        38,
+        575,
+        238
+      ],
+      "decisionEvidence": "MCQ 21 includes all four reaction equations as its shared stimulus plus complete stem and A-D choices. The equations belong to this one question; unrelated footer excluded."
     },
     {
       "key": "mcq-2018-3-2026#region-0",
@@ -7685,8 +8575,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "Thermo FRQs\n\n\n\n             d. The student claims that some of the heat energy produced by the combustion of butane was lost to the air\n              surrounding the system. Do your answers to parts (a) and (c) support the student’s claim? Explain.\n\n\n\n3.    For parts of the free-response question that require calculations, clearly show the method used and the steps\n      involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and\n      equations may be included in your answers where appropriate.\n\n\n\n\n     The combustion of              is represented by the equation above.\n\n       (a) Use the enthalpies of formation in the table below to calculate the value of       for the reaction.\n\n\n\n\n\n       (b) The energy of the reactants is shown on the energy diagram above. On the right side of the energy diagram,\n     draw a horizontal line segment",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        35,
+        154,
+        578,
+        723
+      ],
+      "decisionEvidence": "Source page is from the five-page “Thermo FRQs” packet. Page 3 contains Question 3 parts (a)-(c), its reaction, table and energy diagram; the preceding tail of Question 2 was excluded. The packet does not state an exam year, so the false 2018 year/type attribution was corrected while preserving the record ID and topic mapping."
     },
     {
       "key": "mcq-2018-1-2057#region-0",
@@ -7703,8 +8604,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "CHEMISTRY\n                                                Section II\n                                          (Total time—95 minutes)\n\n\n                                               Part A\n                               Time—55 minutes\n               YOU MAY USE YOUR CALCULATOR FOR PART A.\n\n\n\nCLEARLY SHOW THE METHOD USED AND THE STEPS INVOLVED IN ARRIVING AT YOUR ANSWERS.\nIt is to your advantage to do this, since you may obtain partial credit if you do and you will receive little or no credit if\nyou do not. Attention should be paid to significant figures.\n\n 1. Answer the following questions about the solubility of the salts Li3PO4 and PbCl2. Assume that hydrolysis\n    effects are negligible.\n\n   The equation for the dissolution of Li3PO4(s) is shown below.\n              →                     Li3PO4(s) ←                               3 Li+(aq) + PO4 3−(aq)      Ksp = 3.2 × 10−9 at 25°C\n",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        46,
+        30,
+        564,
+        565
+      ],
+      "decisionEvidence": "Official Section II Question 1 is complete on this page: directions, both solubility equations, parts (a)-(d). Tightened to include relevant section directions and all question content; excluded page-number/footer area."
     },
     {
       "key": "mcq-2018-5-2061#region-0",
@@ -7721,8 +8633,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "Answer Question 5 and Question 6. The Section II score weighting for these questions is 15 percent each.\n\nYour responses to these questions will be graded on the basis of the accuracy and relevance of the information cited.\nExplanations should be clear and well organized. Examples and equations may be included in your responses where\nappropriate. Specific answers are preferable to broad, diffuse responses.\n\n\n\n\n\n 5. Answer the following questions relating to the galvanic cell shown in the diagram above.\n\n    (a) Write the balanced equation for the overall cell reaction.\n\n    (b) Calculate the value of E° for the cell.\n\n    (c) Is the value of ΔG° for the overall cell reaction positive, negative, or 0 ? Justify your answer.\n\n    (d) Consider the cell as it is operating.\n\n            (i) Does Ecell increase, decrease, or remain the same? Explain.\n            (ii) Does ΔG of the overall cell",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        46,
+        54,
+        566,
+        630
+      ],
+      "decisionEvidence": "Official Section II Question 5 is complete on this page. Includes shared directions for Questions 5-6, the galvanic-cell figure, and all parts (a)-(e). Excluded unrelated footer."
     },
     {
       "key": "mcq-2018-6-2062#region-0",
@@ -7739,8 +8662,19 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-07.pdf",
+      "sourcePageEvidence": "6. Answer each of the following using principles of atomic or molecular structure, and/or intermolecular or\n   intramolecular forces.\n\n    (a) Explain why the H–O–H bond angle in H2O is less than the H–N–H bond angles in NH3 , as shown in\n       the table below.\n\n                          H–O–H          H–N–H\n                          Bond Angle in H2O    Bond Angles in NH3\n\n                                     104.5°                 107°\n\n\n   (b) Explain why the radius of the Br atom is less than the radius of the Br− ion, as shown in the table below.\n\n                                   Radius of Br     Radius of Br−\n\n                                      0.111 nm         0.196 nm\n\n\n\n    (c) Explain why the dipole moment of HI is less than the dipole moment of HCl, as shown in the table below.\n\n\n                             Dipole Moment of HI     Dipole Moment of HCl\n\n                 ",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "correctedRect": [
+        46,
+        54,
+        565,
+        512
+      ],
+      "decisionEvidence": "Official Section II Question 6 is complete on this page, including all tables and parts (a)-(d). Excluded unrelated STOP/end-of-exam block and footer."
     },
     {
       "key": "mcq-2024-13-2151#region-0",
@@ -7757,8 +8691,13 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "source_reviewed_unresolved",
+      "sourcePdfUrl": "/source/bank-08.pdf",
+      "sourcePageEvidence": "Unit 3 Progress Check: MCQ\n\n\n\n\n\n       (A)\n\n\n\n\n\n       (B)\n\n\n\n\n\n       (C)\n\n\n\n\n\n       (D)\n\n\n\n\n\n13.   Equimolar samples of        and           are in identical containers at the same temperature. The           deviates much\n     more from ideal behavior than the          does. Which of the following best helps explain this deviation?\n\n       (A)         molecules have more hydrogen bonding than      molecules do.\n\n       (B)         molecules have a larger, more polarizable electron cloud than      molecules do.\n\n       (C)  The       molecules have a greater average kinetic energy than the      molecules have.\n\n         (  )    h                 l     l  h                     d h   h                l     l  h",
+      "reviewMethod": "Rendered original source PDF page; inspected source-page contact sheet and source-native crop preview; cross-checked text layer and page mapping.",
+      "reviewedAt": "2026-11-09",
+      "decisionEvidence": "The source page contains all four graph choices and the MCQ stem, but a Studocu watermark and QR overlay cross and obscure part of answer choice D. The crop cannot recover obscured source pixels. Keep the current original-page region unchanged; next action: locate an authorized clean College Board copy or confirm against a clean source before making an individual-question crop. This record is not visually verified or export-accurate."
     }
   ],
   "batches": [
@@ -7953,16 +8892,145 @@
         "FRQ": 4
       },
       "notes": "Reviewed 25 original pages. Seven complete MCQ crops were restored, including graph, particle-model, rate-law, equilibrium-table, and titration-table items. Two valid 2022 FRQs were expanded to include all contiguous pages (Question 2: pages 1657-1658; Question 3: pages 1659-1661). 2022 FRQs 4 and 5 were tightly cropped after confirming all subparts and diagrams on one page. Fourteen records remain unresolved because MCQ records point to FRQ source pages; no source IDs were changed. No shared-stimulus groups were confirmed."
+    },
+    {
+      "batch": 12,
+      "baselineWarningRange": [
+        275,
+        299
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 0,
+        "B_corrected": 17,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 8
+      },
+      "visuallyReviewed": 25,
+      "questionCropsVisuallyVerified": {
+        "MCQ": 10,
+        "FRQ": 7
+      },
+      "notes": "Reviewed all 25 source pages. Tightened 10 real 2023 MCQ crops and 7 single-page FRQ crops; five records had been mislabeled MCQ despite clear multipart FRQ content and now use FRQ type without ID/topic changes. Eight records remain unresolved because their original page is a scoring guide/rubric or conflicts with the official sequence; clean-source lookup is required."
+    },
+    {
+      "batch": 13,
+      "baselineWarningRange": [
+        300,
+        324
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 0,
+        "B_corrected": 25,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 0
+      },
+      "visuallyReviewed": 25,
+      "questionCropsVisuallyVerified": {
+        "MCQ": 15,
+        "FRQ": 10
+      },
+      "notes": "Reviewed 25 source pages. Tightened nine 2023 MCQs, five 2017 FRQs, six 2018 MCQs and five 2018 FRQs. Ten records were incorrectly typed as MCQ despite multipart FRQ source pages; type/exam labels were corrected, with IDs and curriculum mappings retained. No unresolved boundary or stimulus case remained in this batch."
+    },
+    {
+      "batch": 14,
+      "baselineWarningRange": [
+        325,
+        333
+      ],
+      "regionCount": 9,
+      "outcomes": {
+        "A_correct_as_is": 0,
+        "B_corrected": 8,
+        "C_incomplete_fixed": 0,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 1
+      },
+      "visuallyReviewed": 9,
+      "questionCropsVisuallyVerified": {
+        "MCQ": 4,
+        "FRQ": 4
+      },
+      "notes": "Inspected all nine source pages. Tightened four MCQs (including their individual diagrams/tables/reaction-stimulus material) and four multipart FRQs. Corrected three official Section II records and one Thermo FRQ packet record from MCQ to FRQ without changing IDs or topic mappings; the practice packet year was unset because source gives no year. One 2024 progress-check question remains unresolved because a watermark/QR obscures answer choice D."
     }
   ],
   "summary": {
     "baselineRegions": 334,
-    "reviewed": 275,
+    "reviewed": 334,
     "correctAsIs": 129,
-    "corrected": 24,
+    "corrected": 74,
     "incompleteFixed": 51,
     "sharedResolved": 0,
-    "unresolved": 71,
-    "notReviewed": 59
+    "unresolved": 80,
+    "notReviewed": 0
+  },
+  "supplementalQuestionBatches": [
+    {
+      "batch": "2008-common-contexts-1",
+      "scope": {
+        "source": "/source/bank-01.pdf",
+        "originalPages": [
+          29,
+          31,
+          32
+        ],
+        "questionIds": [
+          "mcq-2008-4-31",
+          "mcq-2008-5-31",
+          "mcq-2008-6-31",
+          "mcq-2008-7-31",
+          "mcq-2008-8-31",
+          "mcq-2008-9-31",
+          "mcq-2008-10-31",
+          "mcq-2008-11-31",
+          "mcq-2008-12-32",
+          "mcq-2008-13-32",
+          "mcq-2008-14-32",
+          "mcq-2008-15-32",
+          "mcq-2008-16-32",
+          "mcq-2008-17-32"
+        ]
+      },
+      "questionsVisuallyVerified": 14,
+      "sharedStimulusGroupsAdded": 5,
+      "sharedStimulusGroupsTotal": 6,
+      "outcomes": {
+        "completeIndividualQuestionRegions": 14,
+        "stimulusRegions": 5,
+        "unresolved": 0
+      },
+      "validation": {
+        "standaloneSelectionsTested": [
+          "mcq-2008-5-31",
+          "mcq-2008-13-32",
+          "mcq-2008-16-32"
+        ],
+        "multiQuestionDeduplicationTested": [
+          "mcq-2008-4-31",
+          "mcq-2008-5-31",
+          "mcq-2008-6-31"
+        ],
+        "all14QuestionAndStimulusRegionsGeometryValid": true,
+        "visualInspection": "All 15 pages in the 11-question PDF and all four pages in the Q4-Q6 export inspected; Q13 and Q16 standalone exports also inspected page by page."
+      },
+      "evidence": "research/diagnostics/crop-batches/corrected/2008-stimuli-batch-export.pdf; research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group.pdf; research/diagnostics/crop-batches/corrected/2008-q13-alone.pdf; research/diagnostics/crop-batches/corrected/2008-q16-alone.pdf",
+      "status": "complete"
+    }
+  ],
+  "catalogReviewSnapshot": {
+    "asOf": "2026-11-09",
+    "catalogQuestions": 1542,
+    "MCQ": 1266,
+    "FRQ": 276,
+    "uniqueVisuallyVerifiedQuestions": 94,
+    "visuallyVerifiedMCQ": 68,
+    "visuallyVerifiedFRQ": 26,
+    "needsReviewQuestionRecords": 2,
+    "uniqueQuestionsNotVisuallyVerified": 1448,
+    "sharedStimulusGroups": 6,
+    "note": "Geometry validation is tracked separately from visual content verification."
   }
 }

@@ -21,6 +21,110 @@
       ],
       "verificationStatus": "visually_verified",
       "verificationNote": "Source text explicitly states Questions 1–3 use the following element categories; the region contains the shared heading and categories A–E."
+    },
+    "stimulus-2008-mcq-4-6-page31": {
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            32,
+            65,
+            300,
+            405
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-4-31",
+        "mcq-2008-5-31",
+        "mcq-2008-6-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 4–6; includes weak-acid titration setup and full titration curve with A-E points."
+    },
+    "stimulus-2008-mcq-7-9-page31": {
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            320,
+            65,
+            580,
+            195
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-7-31",
+        "mcq-2008-8-31",
+        "mcq-2008-9-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 7–9; includes the shared list of pure gaseous substances A-E."
+    },
+    "stimulus-2008-mcq-10-11-page31": {
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            320,
+            308,
+            580,
+            410
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-10-31",
+        "mcq-2008-11-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 10–11; includes the shared term list A-E."
+    },
+    "stimulus-2008-mcq-12-14-page32": {
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 32,
+          "rect": [
+            60,
+            65,
+            300,
+            233
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-12-32",
+        "mcq-2008-13-32",
+        "mcq-2008-14-32"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 32 explicitly labels Questions 12–14; includes the shared enthalpy/entropy answer choices A-E."
+    },
+    "stimulus-2008-mcq-15-17-page32": {
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 32,
+          "rect": [
+            60,
+            288,
+            325,
+            414
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-15-32",
+        "mcq-2008-16-32",
+        "mcq-2008-17-32"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 32 explicitly labels Questions 15–17; includes the shared reaction choices A-E."
     }
   }
 }

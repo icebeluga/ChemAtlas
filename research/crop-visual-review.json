@@ -302,6 +302,263 @@
         650
       ],
       "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-4.png"
+    },
+    {
+      "questionId": "mcq-2014-43-1461",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1461,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        30,
+        305,
+        415
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2014-47-1463",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1463,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        30,
+        570,
+        470
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2014-50-1465",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1465,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        30,
+        310,
+        430
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2015-24-1546",
+      "type": "MCQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1546,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        35,
+        575,
+        380
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2015-47-1554",
+      "type": "MCQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1554,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        35,
+        465,
+        425
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2015-50-1556",
+      "type": "MCQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1556,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        40,
+        35,
+        480,
+        350
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2022-22-1643",
+      "type": "MCQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1643,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        25,
+        35,
+        590,
+        250
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2022-2-1657",
+      "type": "FRQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1657,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        30,
+        40,
+        590,
+        620
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png",
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-3.png"
+      ],
+      "sourcePages": [
+        1657,
+        1658
+      ],
+      "regions": [
+        {
+          "page": 1657,
+          "rect": [
+            30,
+            40,
+            590,
+            620
+          ]
+        },
+        {
+          "page": 1658,
+          "rect": [
+            50,
+            40,
+            590,
+            395
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "mcq-2022-3-1659",
+      "type": "FRQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1659,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        30,
+        40,
+        590,
+        305
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-3.png"
+      ],
+      "sourcePages": [
+        1659,
+        1660,
+        1661
+      ],
+      "regions": [
+        {
+          "page": 1659,
+          "rect": [
+            30,
+            40,
+            590,
+            305
+          ]
+        },
+        {
+          "page": 1660,
+          "rect": [
+            50,
+            40,
+            590,
+            290
+          ]
+        },
+        {
+          "page": 1661,
+          "rect": [
+            50,
+            40,
+            590,
+            510
+          ]
+        }
+      ]
+    },
+    {
+      "questionId": "mcq-2022-4-1662",
+      "type": "FRQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1662,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        30,
+        40,
+        590,
+        430
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-4.png"
+      ]
+    },
+    {
+      "questionId": "mcq-2022-5-1663",
+      "type": "FRQ",
+      "source": "/source/bank-06.pdf",
+      "originalPage": 1663,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears.",
+      "region": [
+        30,
+        55,
+        590,
+        615
+      ],
+      "evidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-4.png"
+      ]
     }
   ]
 }

@@ -17,8 +17,8 @@ Geometry validation is not content verification.
 
 | Type | Total | Visually verified | Geometry checked | Needs visual review |
 | --- | ---: | ---: | ---: | ---: |
-| MCQ | 1,285 | 18 | 1,285 | 1,267 |
-| FRQ | 257 | 1 | 257 | 256 |
+| MCQ | 1,285 | 25 | 1,285 | 1,260 |
+| FRQ | 257 | 5 | 257 | 252 |
 
 One shared-stimulus group is visually verified: 2008 MCQ Questions 1–3 on
 original page 29. Its common answer-category block is stored once in
@@ -28,10 +28,10 @@ once. Other groups have not yet been audited, so their count is unknown.
 
 The initial geometry heuristic flagged 334 near-full-page regions: 131 MCQ
 regions and 203 FRQ regions. These are review leads, not automatic crop errors.
-The persistent ledger now accounts for 250: 129 correct as-is, 22 tightened,
-42 incomplete crops fixed, and 57 unresolved due primarily to mismatched source
-identities. Eighty-four flagged regions remain unreviewed (74 MCQ, 10 FRQ).
-The current geometry audit has 301 near-full-page warnings; those warnings are
+The persistent ledger now accounts for 275: 129 correct as-is, 24 tightened,
+51 incomplete crops fixed, and 71 unresolved due primarily to mismatched source
+identities. Fifty-nine flagged regions remain unreviewed (53 MCQ, 6 FRQ).
+The current geometry audit has 290 near-full-page warnings; those warnings are
 not equivalent to the 84 remaining ledger items because corrections can also
 remove warnings and some correct-as-is regions remain large for valid reasons.
 An additional 1994 MCQ crop is explicitly marked `needs_review` because the
@@ -56,10 +56,22 @@ the catalog identifies them as MCQs but their cited source pages contain
 2012/2018 multipart FRQs; finding the matching MCQ pages is required before
 changing those records. No shared-stimulus group was confirmed in this batch.
 
-The batch ledger records 3 B corrections, 11 C incomplete fixes, and 11 E
-unresolved items. Crop-level verified totals are 18 MCQs and 1 FRQ; automated
-geometry validation alone is not counted as visual verification. A three-page
-vector-preserving sample PDF from this batch was rendered and visually checked.
+## Batch 11 (flagged regions 251–275 in one-based ledger order)
+
+Visually reviewed all 25 original PDF source pages. Seven MCQ crops were fixed
+for clipped graphs, diagrams, equations, or data tables. Two 2022 FRQs were
+expanded to include all verified contiguous question pages: Question 2 on pages
+1657–1658 and Question 3 on pages 1659–1661. Questions 4 and 5 each fit on one
+page and were cropped to preserve every part and associated diagram/table.
+Fourteen further records remain unresolved because records categorized as
+MCQs point to pages containing free-response items. The record IDs were
+preserved. One vector-preserving worksheet sample combining two MCQs with the
+multi-page 2022 FRQ was rendered and checked page-by-page.
+
+The ledger classifies batch 11 as 2 B corrections, 9 C incomplete fixes, and
+14 E unresolved items. The crop-level visually verified question total is 25
+MCQs and 5 FRQs; this remains separate from geometry validation. The geometry
+audit has zero errors and 290 remaining near-full-page warnings.
 
 ## Export and tests
 

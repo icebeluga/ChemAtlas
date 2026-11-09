@@ -5940,8 +5940,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -25- 43. Consider the reaction represented by the equation 2 X + 2 Z Æ X2Z2. During a reaction in which a large excess of reactant X was present, the concentration of reactant Z was monitored over time. A plot of the natural logarithm of the concentration of Z versus time is shown in the figure above. The order of the reaction with respect to reactant Z is (A) zero order (B) first order (C) second order (D) third order",
+      "decisionEvidence": "The crop includes the reaction graph, full question stem, and all four order choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1461,
+          "rect": [
+            40,
+            30,
+            305,
+            415
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2014-47-1463#region-0",
@@ -5958,8 +5977,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-1.png",
+      "sourcePageEvidence": "47. Which of the following diagrams best illustrates how a displacement in an ionic crystal results in cleavage and brittleness? Before Displacement After Displacement (A) (B) (C) (D) Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -27-",
+      "decisionEvidence": "The crop includes the full ionic-crystal displacement prompt and all before/after diagrams for choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1463,
+          "rect": [
+            40,
+            30,
+            570,
+            470
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2014-50-1465#region-0",
@@ -5976,8 +6014,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -29- NO(g) + NO3(g) → 2 NO2(g) rate = k[NO][NO3] 50. The reaction represented above occurs in a single step that involves the collision between a particle of NO and a particle of NO3. A scientist correctly calculates the rate of collisions between NO and NO3 that have sufficient energy to overcome the activation energy. The observed reaction rate is only a small fraction of the calculated collision rate. Which of the following best explains the discrepancy? (A) The energy of collisions between two reactant particles is frequently absorbed by collision with a third particle. (B) The two reactant particles must collide with a particular orientation in order to react. (C) The activation energy for a reaction is dependent on the concentrations of the reactant particles. (D) The activation energy for a reaction is dependent on the temperature.",
+      "decisionEvidence": "The crop includes both reaction equations/rate-law context and all four explanation choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1465,
+          "rect": [
+            40,
+            30,
+            310,
+            430
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2014-2-1477#region-0",
@@ -5994,8 +6051,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-1.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -10- CH3CH2COOH(aq) + H2O(l) Æ ¨ CH3CH2COO−(aq) + H3O+(aq) 2. Propanoic acid, CH3CH2COOH, is a carboxylic acid that reacts with water according to the equation above. At 25∞C the pH of a 50.0 mL sample of 0.20 M CH3CH2COOH is 2.79. (a) Identify a Brønsted-Lowry conjugate acid-base pair in the reaction. Clearly label which is the acid and which is the base. (b) Determine the value of Ka for propanoic acid at 25∞C. (c) For each of the following statements, determine whether the statement is true or false. In each case, explain the reasoning that supports your answer. (i) The pH of a solution prepared by mixing the 50.0 mL sample of 0.20 M CH3CH2COOH with a 50.0 mL sample of 0.20 M NaOH is 7.00. (ii) If the pH of a hydrochloric acid solution is the same as the pH of a propanoic acid solution, then the molar concentration of the hydrochloric acid solution must be less than the molar concentration of the propanoic acid solution. A student is given the task of determining the concentration of a propanoic acid solution of unknown concentration. A 0.173 M NaOH solution is available to use as the titr",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2014-3-1481#region-0",
@@ -6012,8 +6075,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -14- 3. A student is given a standard galvanic cell, represented above, that has a Cu electrode and a Sn electrode. As current flows through the cell, the student determines that the Cu electrode increases in mass and the Sn electrode decreases in mass. (a) Identify the electrode at which oxidation is occurring. Explain your reasoning based on the student’s observations. (b) As the mass of the Sn electrode decreases, where does the mass go? (c) In the expanded view of the center portion of the salt bridge shown in the diagram below, draw and label a particle view of what occurs in the salt bridge as the cell begins to operate. Omit solvent molecules and use arrows to show the movement of particles.",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2014-4-1485#region-0",
@@ -6030,8 +6099,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -18- CaCO3(s) Æ ¨ CaO(s) + CO2(g) 4. When heated, calcium carbonate decomposes according to the equation above. In a study of the decomposition of calcium carbonate, a student added a 50.0 g sample of powdered CaCO3(s) to a 1.00 L rigid container. The student sealed the container, pumped out all the gases, then heated the container in an oven at 1100 K. As the container was heated, the total pressure of the CO2(g) in the container was measured over time. The data are plotted in the graph below. The student repeated the experiment, but this time the student used a 100.0 g sample of powdered CaCO3(s). In this experiment, the final pressure in the container was 1.04 atm, which was the same final pressure as in the first experiment. (a) Calculate the number of moles of CO2(g) present in the container after 20 minutes of heating. (b) The student claimed that the final pressure in the container in each experiment became constant because all of the CaCO3(s) had decomposed. Based on the data in the experiments, do you agree with this claim? Explain. (c) After 20 minutes some CO2(g) was injected into ",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2014-5-1487#region-0",
@@ -6048,8 +6123,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-2.png",
+      "sourcePageEvidence": "Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -20- Nonmetal C N O Ne Si P S Ar Formula of Compound CF4 NF3 OF2 No compound SiF4 PF3 SF2 No compound 5. Some binary compounds that form between fluorine and various nonmetals are listed in the table above. A student examines the data in the table and poses the following hypothesis: the number of F atoms that will bond to a nonmetal is always equal to 8 minus the number of valence electrons in the nonmetal atom. (a) Based on the student’s hypothesis, what should be the formula of the compound that forms between chlorine and fluorine? (b) In an attempt to verify the hypothesis, the student researches the fluoride compounds of the other halogens and finds the formula ClF3. In the box below, draw a complete Lewis electron-dot diagram for a molecule of ClF3. (c) Two possible geometric shapes for the ClF3 molecule are trigonal planar and T-shaped. The student does some research and learns that the molecule has a dipole moment. Which of the two shapes is consistent with the fact that the ClF3 molecule has a dipole moment? Justify your answer in terms of bond polarity and molecular structure. In an ",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2014-6-1489#region-0",
@@ -6066,8 +6147,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-05.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-2.png",
+      "sourcePageEvidence": ". Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -22- 6. A student places a mixture of plastic beads consisting of polypropylene (PP) and polyvinyl chloride (PVC) in a 1.0 L beaker containing distilled water. After stirring the contents of the beaker vigorously, the student observes that the beads of one type of plastic sink to the bottom of the beaker and the beads of the other type of plastic float on the water. The chemical structures of PP and PVC are represented by the diagrams below, which show segments of each polymer. (a) Given that the spacing between polymer chains in PP and PVC is similar, the beads that sink are made of which polymer? Explain. PP is synthesized from propene, C3H6, and PVC is synthesized from vinyl chloride, C2H3Cl. The structures of the molecules are shown below. (b) The boiling point of liquid propene (226 K) is lower than the boiling point of liquid vinyl chloride (260 K). Account for this difference in terms of the types and strengths of intermolecular forces present in each liquid. In a separate experiment, the student measures the enthalpies of combustion of propene and vinyl chloride. The student determi",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-24-1546#region-0",
@@ -6084,8 +6171,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-3.png",
+      "sourcePageEvidence": "NO(g) and O2(g) 24. The reaction between to produce NO2(g) in a rigid reaction vessel is represented in the diagram above. The pressure inside the container is recorded using a pressure gauge. Which of the following statements correctly predicts the change in pressure as the reaction goes to completion at constant temperature, and provides the correct explanation? (A) The pressure will increase because the product molecules have a greater mass than either of the reactant molecules. (B) The pressure will decrease because there are fewer molecules of product than of reactants. (C) The pressure will decrease because the product molecules have a lower average speed than the reactant molecules. (D) The pressure will not change because the total mass of the product molecules is the same as the total mass of the reactant molecules. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -15-",
+      "decisionEvidence": "The crop includes the complete before/after reaction-vessel diagram, key, prompt, and choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1546,
+          "rect": [
+            40,
+            35,
+            575,
+            380
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-1.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2015-47-1554#region-0",
@@ -6102,8 +6208,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-3.png",
+      "sourcePageEvidence": "47. The potential energy of a system of two atoms as a function of their internuclear distance is shown in the diagram above. Which of the following is true regarding the forces between the atoms when their internuclear distance is x ? (A) The attractive and repulsive forces are balanced, so the atoms will maintain an average internuclear distance x. (B) There is a net repulsive force pushing the atoms apart, so the atoms will move further apart. (C) There is a net attractive force pulling the atoms together, so the atoms will move closer together. (D) It cannot be determined whether the forces between atoms are balanced, attractive, or repulsive, because the diagram shows only the potential energy. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -23-",
+      "decisionEvidence": "The crop includes the full potential-energy curve, prompt, and choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1554,
+          "rect": [
+            40,
+            35,
+            465,
+            425
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2015-50-1556#region-0",
@@ -6120,8 +6245,27 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-3.png",
+      "sourcePageEvidence": "50. The diagram above represents the absorption spectrum for a pure molecular substance. Which of the following correctly indicates the type of transition observed for the substance in each of the regions of the absorption spectrum? Region X Region Y Region Z (A) Molecular vibration Molecular rotation Electronic transition (B) Electronic transition Molecular rotation Molecular vibration (C) Molecular rotation Molecular vibration Electronic transition (D) Electronic transition Molecular vibration Molecular rotation Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -25-",
+      "decisionEvidence": "The crop includes the absorption spectrum with labeled regions X/Y/Z, prompt, and choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1556,
+          "rect": [
+            40,
+            35,
+            480,
+            350
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2015-2-1568#region-0",
@@ -6138,8 +6282,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-3.png",
+      "sourcePageEvidence": "2. Answer the following questions about Fe and Al compounds. (a) Fe2O3(s) and Al2O3(s) have similar chemical properties; some similarities are due to the oxides having similar lattice energies. Give two reasons why the lattice energies of the oxides are similar. Use the following reactions that involve Fe and Al compounds to answer parts (b) and (c). In distilled water Reaction 1: Fe2O3(s) + 3 H2O(l) Æ 2 Fe(OH)3(s) Reaction 2: Al2O3(s) + 3 H2O(l) Æ 2 Al(OH)3(s) In base Reaction 3: Fe(OH)3(s) + NaOH(aq) Æ no reaction Reaction 4: Al(OH)3(s) + NaOH(aq) Æ NaAl(OH)4(aq) In acid Reaction 5: Fe(OH)3(s) + 3 HCl(aq) Æ FeCl3(aq) + 3 H2O(l) Reaction 6: Al(OH)3(s) + 3 HCl(aq) Æ AlCl3(aq) + 3 H2O(l) Reaction 7: NaAl(OH)4(aq) + HCl(aq) Æ Al(OH)3(s) + NaCl(aq) + H2O(l) When heated Reaction 8: 2 Fe(OH)3(s) heat æææ Æ Fe2O3(s) + 3 H2O(g) Reaction 9: 2 Al(OH)3(s) heat æææ Æ Al2O3(s) + 3 H2O(g) Compound Ksp Fe(OH)3 4 × 10−38 Al(OH)3 1 × 10−33 (b) The Ksp values for Fe(OH)3 and Al(OH)3 are given in the table above. A 1.0 g sample of powdered Fe2O3(s) and a 1.0 g sample of powdered Al2O3(s) are mixed together and placed in 1.0 L of distilled water. (i) Which ion, Fe3+(aq) or Al3+(aq), will be present i",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-3-1572#region-0",
@@ -6156,8 +6306,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-4.png",
+      "sourcePageEvidence": "DHcombustion 3. The structures of two compounds commonly found in food, lauric acid, C12H24O2 , and sucrose, C12H22O11 , are shown above. (a) Which compound, lauric acid or sucrose, is more soluble in water? Justify your answer in terms of the intermolecular forces present between water and each of the compounds. (b) Assume that a 1.5 g sample of lauric acid is combusted and all of the heat energy released is transferred to a 325 g sample of water initially at 25°C. Calculate the final temperature of the water if of lauric acid is −37 kJ/g and the specific heat of water is 4.18 J/(g⋅K). (c) In an attempt to determine DHcombustion of lauric acid experimentally, a student places a 1.5 g sample of lauric acid in a ceramic dish underneath a can made of Al containing 325 g of water at 25°C. The student ignites the sample of lauric acid with a match and records the highest temperature reached by the water in the can. (i) The experiment is repeated using a can of the same mass, but this time the can is made of Cu. The specific heat of Cu is 0.39 J/(g⋅K), and the specific heat of Al is 0.90 J/(g⋅K). Will the final temperature of the water in the can made of Cu be greater than, less than, o",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-4-1576#region-0",
@@ -6174,8 +6330,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-4.png",
+      "sourcePageEvidence": "Molecule Boiling Point of Compound (K) Dipole Moment (debyes) Polarizability (10−24 cm3) HCl 188 1.05 2.63 HBr 207 0.80 3.61 HI 238 0.38 5.44 4. The boiling points, dipole moments, and polarizabilities of three hydrogen halides are given in the table above. (a) Based on the data in the table, what type of intermolecular force among the molecules HCl(l), HBr(l), and HI(l) is able to account for the trend in boiling points? Justify your answer. (b) Based on the data in the table, a student predicts that the boiling point of HF should be 174 K. The observed boiling point of HF is 293 K. Explain the failure of the student’s prediction in terms of the types and strengths of the intermolecular forces that exist among HF molecules. (c) A representation of five molecules of HBr in the liquid state is shown in box 1 below. In box 2, draw a representation of the five molecules of HBr after complete vaporization has occurred. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -18-",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-5-1578#region-0",
@@ -6192,8 +6354,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-4.png",
+      "sourcePageEvidence": "CH COOH( ) + CH COOH( ) g  (CH COOH) ( ) g g 3 3 3 2 (ii) Calculate the value of the equilibrium constant, 5. Answer the following questions about two isomers, methyl methanoate and ethanoic acid. The molecular formula of the compounds is C2H4O2 . (a) Complete the Lewis electron-dot diagram of methyl methanoate in the box below. Show all valence electrons. A student puts 0.020 mol of methyl methanoate into a previously evacuated rigid 1.0 L vessel at 450 K. The pressure is measured to be 0.74 atm. When the experiment is repeated using 0.020 mol of ethanoic acid instead of methyl methanoate, the measured pressure is lower than 0.74 atm. The lower pressure for ethanoic acid is due to the following reversible reaction. (b) Assume that when equilibrium has been reached, 50. percent of the ethanoic acid molecules have reacted. (i) Calculate the total pressure in the vessel at equilibrium at 450 K. Kp, for the reaction at 450 K. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -20-",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-6-1580#region-0",
@@ -6210,8 +6378,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-4.png",
+      "sourcePageEvidence": "Peak 1 Peak 2 Peak 3 4 6.72 10 kJ/mol ¥ 3 3.88 10 kJ/mol ¥ 3 1.68 10 kJ/mol ¥ 6. The complete photoelectron spectrum of an unknown element is shown above. The frequency ranges of different regions of the electromagnetic spectrum are given in the table below. Region of Electromagnetic Spectrum Frequency Range (s−1) Infrared (IR) 1 × 1012 to 4 × 1014 Ultraviolet/visible (UV/vis) 4 × 1014 to 5 × 1016 X-rays 5 × 1016 to 1 × 1019 Gamma rays > 1 × 1019 (a) To generate the spectrum above, a source capable of producing electromagnetic radiation with an energy of 7 × 104 kJ per mole of photons was used. Such radiation is from which region of the electromagnetic spectrum? Justify your answer with a calculation. (b) A student examines the spectrum and proposes that the second ionization energy of the element is 3.88 × 103 kJ/mol. To refute the proposed interpretation of the spectrum, identify the following. (i) The subshell from which an electron is removed in the second ionization of an atom of the element (ii) The subshell that corresponds to the second peak of the photoelectron spectrum above Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -22-",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-7-1582#region-0",
@@ -6228,8 +6402,14 @@
         603.3599853515625,
         719.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-5.png",
+      "sourcePageEvidence": "HC H O ( ) + H O( )l  H O ( ) + C H O aq aq + aq -( ) 9 7 4 2 3 9 7 4 HC9H7O4(aq) 0.0100 M HC9H7O4(aq) 7. The molecular formula of acetylsalicylic acid, also known as aspirin, is HC9H7O4. The dissociation of is represented by the equation above. The pH of is measured to be 2.78. (a) Write the expression for the equilibrium constant, Ka, for the reaction above. (b) Calculate the value of Ka for acetylsalicylic acid. (c) An aqueous solution of aspirin is buffered to have equal concentrations of HC9H7O4(aq) and C9H7O4 −(aq). Calculate the pH of the solution. Unauthorized copying or reuse of any part of this page is illegal. GO ON TO THE NEXT PAGE. -24-",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-3-1610#region-0",
@@ -6246,8 +6426,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-5.png",
+      "sourcePageEvidence": "3. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. Answer the following questions related to . (a) Two possible Lewis electron-dot diagrams for are shown above. Explain in terms of formal charges why diagram is the better diagram. (b) Identify the hybridization of the valence orbitals of the atom in the molecule represented in diagram . (c) A sample of dry ice, , is added to an empty balloon. After the balloon is sealed, the sublimes and the in the balloon eventually reaches a temperature of and pressure of . The physical change is represented by the following equation. (i) What is the sign (positive or negative) of the enthalpy change for the process of sublimation? Justify your answer. (ii) List all the numerical values of the quantities, with appropriate units, that are needed to calculate the volume of the balloon. (iii) Calculate the final volume, in liters, of the balloon. (d) reacts with water to form , which quickly ionizes in water to form and ",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-4-1612#region-0",
@@ -6264,8 +6450,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-5.png",
+      "sourcePageEvidence": "4. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. A student wishes to determine the concentration of in a solution of . The student combines of with excess and observes the formation of a white precipitate. The formation of the precipitate is represented by the following equation. (a) Write the balanced net ionic equation for the precipitation reaction. The student collects the precipitate by filtration and measures the mass of the filter paper and precipitate every minutes as it dries. The student records the data in the following table. Mass of dry filter paper Mass of filter paper and precipitate immediately after filtration Mass of filter paper and precipitate after minutes Mass of filter paper and precipitate after minutes Mass of filter paper and precipitate after minutes (b) Use the data above to calculate the number of moles of (molar mass ) that precipitated. (c) Calculate the concentration of in the original solution of . (d) The concentratio",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2015-6-1614#region-0",
@@ -6282,8 +6474,14 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "E_unresolved",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-5.png",
+      "sourcePageEvidence": "6. For parts of the free response question that require calculations, clearly show the method used and the steps involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and equations may be included in your answers where appropriate. The three stable isotopes of are , , and . A rock sample from another planet has a different distribution of the three stable isotopes than what is found on Earth. A partial mass spectrum for in the rock sample is shown below. (a) Draw a line on the graph to show the mass of the missing isotope and its percent abundance. (b) Use the completed mass spectrum to calculate the average atomic mass of on the other planet. (c) The first ionization energy of magnesium samples found on Earth is experimentally determined to be . If a similar experiment is conducted to determine the first ionization energy of magnesium in the rock sample from another planet, will it be greater than, less than, or equal to the first ionization energy of magnesium found on Earth? Explain your reasoning. (d) A table of successive ionization energies for and an unknown element is shown above. Predict the identity of the unknown elemen",
+      "decisionEvidence": "The catalog record is labeled MCQ, but the cited original page visibly contains an AP Chemistry free-response question with lettered/nested subparts and written-response layout. This is a source/type conflict, not a crop-size issue. Next action: verify the intended question identity and all continuation pages, then correct type/source metadata without changing the record ID before cropping."
     },
     {
       "key": "mcq-2022-22-1643#region-0",
@@ -6300,8 +6498,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-6.png",
+      "sourcePageEvidence": "Acid Concentration of Acid (M) Volume of Sample (mL) Volume of Standardized NaOH(aq) Added to Reach Equivalence Point (mL) HClO4(aq) 0.100 25.0 24.0 HClO(aq) 0.200 25.0 ? 22. Samples of two different acids are titrated using the same standardized solution of NaOH(aq). According to the data in the table above, how many milliliters of the standardized NaOH(aq) are required to reach the equivalence point when the 25.0mL sample of 0.200 M HClO(aq) is titrated? (A) 12.0 mL (B) 24.0 mL (C) 48.0 mL (D) It cannot be determined without knowing the values of Ka for HClO4(aq) and HClO(aq). 10Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "The crop includes the complete acid-titration data table, prompt, and choices A-D.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1643,
+          "rect": [
+            25,
+            35,
+            590,
+            250
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2022-2-1657#region-0",
@@ -6318,8 +6535,39 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-6.png",
+      "sourcePageEvidence": "2. Answer the following questions about C2H4O. (a) C2H4O (molar mass 44.06 g/mol) is a gas at room temperature and can be harmful at concentrations above 8.17 × 10−6M. What is the maximum mass of this compound that can safely be present in a room with a volume of 3.00×105 L? Two structures, X and Z, with the molecular formula C2H4O are shown in the table below. (b) Based on VSEPR theory, predict the H−C−H bond angle in structure X. (c) A student incorrectly claims that X and Z are resonance structures of each other. Explain why the student’s claim is incorrect. X and Z are both gases at room temperature and 1 atm, and they react according to the following equation. X ⇌Z (d) Write the expression for the equilibrium constant, Kp, in terms of the partial pressures of X and Z. (e) For the reaction represented above, the value of the equilibrium constant, Kp, is 3.3×10−8 at 25 °C. Which would have a greater partial pressure at equilibrium: the reactant, X, or the product, Z? Circle one of the options and justify your choice. Option 1: The partial pressure of reactant X is greater. Option 2: The partial pressure of reactant Z is greater. 24Downloaded by Johnson Liu (gbjohnnyliu2009@gmail",
+      "decisionEvidence": "Expanded the single-page crop into two contiguous original source regions. Together they include question 2 parts (a)-(h), the structures table, equilibrium reaction/profile, and all explanatory subparts.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1657,
+          "rect": [
+            30,
+            40,
+            590,
+            620
+          ]
+        },
+        {
+          "page": 1658,
+          "rect": [
+            50,
+            40,
+            590,
+            395
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": [
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-2.png",
+        "research/diagnostics/crop-batches/corrected/batch-11-crops-3.png"
+      ],
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2022-3-1659#region-0",
@@ -6336,8 +6584,45 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "C_incomplete_fixed",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-6.png",
+      "sourcePageEvidence": "3. Answer the following questions about hydroxylamine, NH2OH. (a) Complete the Lewis electron-dot diagram of the NH2OH molecule in the box below, including all bonding and nonbonding valence electrons. (b) Hydroxylamine, NH2OH(aq), is a weak base. Write the balanced net ionic equation for the reaction that occurs when NH2OH(aq) and HCl(aq) are combined. 26Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Expanded the single-page crop into three contiguous source regions. Together they include question 3 parts (a)-(f), Lewis structure box, glassware choices, titration table/curve, and decomposition equation.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1659,
+          "rect": [
+            30,
+            40,
+            590,
+            305
+          ]
+        },
+        {
+          "page": 1660,
+          "rect": [
+            50,
+            40,
+            590,
+            290
+          ]
+        },
+        {
+          "page": 1661,
+          "rect": [
+            50,
+            40,
+            590,
+            510
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-3.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2022-4-1662#region-0",
@@ -6354,8 +6639,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-6.png",
+      "sourcePageEvidence": "4. Dry air is comprised of N2, O2, and traces of other gases. A student obtains a 2.00L container filled with a sample of dry air at a total pressure of 1.30 atm and a temperature of 295K. (a) Calculate the total number of moles of gas in the container. (b) The student cools the gaseous mixture until either N2 or O2 condenses. Which gas will condense first? Justify your answer in terms of the types and relative strengths of the intermolecular forces in N2 and O2. (c) Using the legend given, draw at least three molecules of each type of gas in the sealed container represented below when one of the substances has condensed, but the other substance is still a gas. (d) In this sample, 78% of the molecules are N2 and 21% of the molecules are O2. Calculate the total number of grams of the substance that condenses first. 29Downloaded by Johnson Liu (gbjohnnyliu2009@gmail.com) Scan to open on Studocu lOMoARcPSD|75040939",
+      "decisionEvidence": "Trimmed page whitespace while retaining question 4 parts (a)-(d) and the sealed-container/legend diagram.",
+      "resultingQuestionRegions": [
+        {
+          "page": 1662,
+          "rect": [
+            30,
+            40,
+            590,
+            430
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-4.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2022-5-1663#region-0",
@@ -6372,8 +6676,27 @@
         612.0,
         737.0
       ],
-      "disposition": "not_reviewed",
-      "reviewStatus": "not_reviewed"
+      "disposition": "B_corrected",
+      "reviewStatus": "visually_reviewed",
+      "sourcePdfUrl": "/source/bank-06.pdf",
+      "reviewMethod": "Visually inspected rendered original source page with text-layer cross-check; accepted crops were compared to final crop renders.",
+      "reviewedAt": "2026-11-09",
+      "sourceReviewEvidence": "research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-7.png",
+      "sourcePageEvidence": "NaHCO3(s)+H3C6H5O7(aq) →NaH2C6H5O7(aq)+H2O(l)+CO2(g) 5. A student conducts a calorimetry experiment in which solid baking soda, NaHCO3, reacts with excess aqueous citric acid, H3C6H5O7, as represented by the equation above. The student places 36.40 g of the H3C6H5O7 solution into a calorimeter and measures the temperature. After 30 seconds, 8.00 g of NaHCO3 is added. The data are recorded in the following table and graph. Mass of H3C6H5O7(aq) 36.40 g Mass of NaHCO3(s) 8.00 g Total mass of reaction mixture 44.40 g Initial temperature 19.9 °C Final temperature 3.2 °C (a) Calculate the magnitude of q, in joules, for this mixture using the data in the table. Assume that the reaction mixture in the calorimeter has a specific heat capacity of 4.22 J/(g·°C). (b) Based on the collisions that occur between particles, explain why the graph shows temperature changing less rapidly as time progresses in the experiment. (c) Make a claim about the flow of heat between the reaction system and the surroundings during this experiment. The claim should be consistent with the data in the graph. (d) The student conducts a second experiment using 36.40 g of H3C6H5O7(aq) at an initial temperature of 19.9",
+      "decisionEvidence": "Trimmed page whitespace while retaining question 5 reaction equation, data table, temperature graph, and parts (a)-(d).",
+      "resultingQuestionRegions": [
+        {
+          "page": 1663,
+          "rect": [
+            30,
+            55,
+            590,
+            615
+          ]
+        }
+      ],
+      "correctedPreviewEvidence": "research/diagnostics/crop-batches/corrected/batch-11-crops-4.png",
+      "visualContentCheck": "Rendered each stored source region from the original PDF and visually confirmed complete content. Multi-page FRQs were inspected across all contiguous regions; unrelated adjacent questions are absent."
     },
     {
       "key": "mcq-2022-6-1664#region-0",
@@ -7609,16 +7932,37 @@
       "visuallyReviewed": 25,
       "questionCropsVisuallyVerified": 14,
       "notes": "Reviewed all 25 original source pages. Fourteen genuine MCQ crops were corrected and visually compared against their original PDF pages; eleven records remain unresolved because MCQ identifiers point to FRQ source pages (six 2018 and five 2012). No shared-stimulus group was established in this batch."
+    },
+    {
+      "batch": 11,
+      "baselineWarningRange": [
+        250,
+        274
+      ],
+      "regionCount": 25,
+      "outcomes": {
+        "A_correct_as_is": 0,
+        "B_corrected": 2,
+        "C_incomplete_fixed": 9,
+        "D_shared_stimulus_resolved": 0,
+        "E_unresolved": 14
+      },
+      "visuallyReviewed": 25,
+      "questionCropsVisuallyVerified": {
+        "MCQ": 7,
+        "FRQ": 4
+      },
+      "notes": "Reviewed 25 original pages. Seven complete MCQ crops were restored, including graph, particle-model, rate-law, equilibrium-table, and titration-table items. Two valid 2022 FRQs were expanded to include all contiguous pages (Question 2: pages 1657-1658; Question 3: pages 1659-1661). 2022 FRQs 4 and 5 were tightly cropped after confirming all subparts and diagrams on one page. Fourteen records remain unresolved because MCQ records point to FRQ source pages; no source IDs were changed. No shared-stimulus groups were confirmed."
     }
   ],
   "summary": {
     "baselineRegions": 334,
-    "reviewed": 250,
+    "reviewed": 275,
     "correctAsIs": 129,
-    "corrected": 22,
-    "incompleteFixed": 42,
+    "corrected": 24,
+    "incompleteFixed": 51,
     "sharedResolved": 0,
-    "unresolved": 57,
-    "notReviewed": 84
+    "unresolved": 71,
+    "notReviewed": 59
   }
 }

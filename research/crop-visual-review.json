@@ -78,6 +78,230 @@
       "status": "needs_review",
       "reviewedAt": "2026-11-09",
       "verification": "Full-page crop visibly contains apparatus, table, and question parts; top of apparatus appears close to crop boundary and should be checked against the preceding page region before acceptance."
+    },
+    {
+      "questionId": "mcq-2018-12-1197",
+      "type": "MCQ",
+      "source": "/source/bank-04.pdf",
+      "originalPage": 1197,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        145,
+        50,
+        460,
+        242
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-1.png"
+    },
+    {
+      "questionId": "mcq-2018-13-1198",
+      "type": "MCQ",
+      "source": "/source/bank-04.pdf",
+      "originalPage": 1198,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        68,
+        565,
+        352
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-1.png"
+    },
+    {
+      "questionId": "mcq-2018-14-1199",
+      "type": "MCQ",
+      "source": "/source/bank-04.pdf",
+      "originalPage": 1199,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        35,
+        575,
+        464
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-1.png"
+    },
+    {
+      "questionId": "mcq-2018-39-1208",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1208,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        35,
+        330,
+        192
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-1.png"
+    },
+    {
+      "questionId": "mcq-2018-50-1213",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1213,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        35,
+        560,
+        292
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-2.png"
+    },
+    {
+      "questionId": "mcq-2012-62-1364",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1364,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        150,
+        35,
+        465,
+        420
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-2.png"
+    },
+    {
+      "questionId": "mcq-2012-63-1365",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1365,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        30,
+        560,
+        160
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-2.png"
+    },
+    {
+      "questionId": "mcq-2014-10-1445",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1445,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        60,
+        510,
+        490
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-2.png"
+    },
+    {
+      "questionId": "mcq-2014-17-1448",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1448,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        30,
+        550,
+        405
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-3.png"
+    },
+    {
+      "questionId": "mcq-2014-25-1451",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1451,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        30,
+        575,
+        165
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-3.png"
+    },
+    {
+      "questionId": "mcq-2014-30-1454",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1454,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        35,
+        570,
+        690
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-3.png"
+    },
+    {
+      "questionId": "mcq-2014-31-1455",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1455,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        35,
+        570,
+        405
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-3.png"
+    },
+    {
+      "questionId": "mcq-2014-38-1458",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1458,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        30,
+        300,
+        400
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-4.png"
+    },
+    {
+      "questionId": "mcq-2014-42-1460",
+      "type": "MCQ",
+      "source": "/source/bank-05.pdf",
+      "originalPage": 1460,
+      "status": "visually_verified",
+      "reviewedAt": "2026-11-09",
+      "verification": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded.",
+      "region": [
+        40,
+        30,
+        570,
+        650
+      ],
+      "evidence": "research/diagnostics/crop-batches/corrected/batch-10-corrected-4.png"
     }
   ]
 }

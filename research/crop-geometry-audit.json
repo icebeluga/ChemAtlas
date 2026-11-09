@@ -1450,41 +1450,6 @@
       "rect_area_ratio": 0.8611
     },
     {
-      "id": "mcq-2018-12-1197",
-      "region": 0,
-      "page": 1197,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2018-13-1198",
-      "region": 0,
-      "page": 1198,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2018-14-1199",
-      "region": 0,
-      "page": 1199,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2018-39-1208",
-      "region": 0,
-      "page": 1208,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2018-50-1213",
-      "region": 0,
-      "page": 1213,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
       "id": "mcq-2018-2-1224",
       "region": 0,
       "page": 1224,
@@ -1527,20 +1492,6 @@
       "rect_area_ratio": 0.8579
     },
     {
-      "id": "mcq-2012-62-1364",
-      "region": 0,
-      "page": 1364,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2012-63-1365",
-      "region": 0,
-      "page": 1365,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
       "id": "mcq-2012-1-1377",
       "region": 0,
       "page": 1377,
@@ -1572,55 +1523,6 @@
       "id": "mcq-2012-6-1395",
       "region": 0,
       "page": 1395,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-10-1445",
-      "region": 0,
-      "page": 1445,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-17-1448",
-      "region": 0,
-      "page": 1448,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-25-1451",
-      "region": 0,
-      "page": 1451,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-30-1454",
-      "region": 0,
-      "page": 1454,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-31-1455",
-      "region": 0,
-      "page": 1455,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-38-1458",
-      "region": 0,
-      "page": 1458,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
-    },
-    {
-      "id": "mcq-2014-42-1460",
-      "region": 0,
-      "page": 1460,
       "code": "near_full_page_crop",
       "rect_area_ratio": 0.8579
     },

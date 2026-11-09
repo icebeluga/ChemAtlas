@@ -162,109 +162,46 @@
       "rect_area_ratio": 0.8611
     },
     {
-      "id": "mcq-2014-12-176",
-      "region": 0,
-      "page": 176,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-13-177",
-      "region": 0,
-      "page": 177,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-25-181",
-      "region": 0,
-      "page": 181,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-43-188",
-      "region": 0,
-      "page": 188,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-44-189",
-      "region": 0,
-      "page": 189,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-53-192",
-      "region": 0,
-      "page": 192,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-54-193",
-      "region": 0,
-      "page": 193,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-55-194",
-      "region": 0,
-      "page": 194,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
-      "id": "mcq-2014-56-195",
-      "region": 0,
-      "page": 195,
-      "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
-    },
-    {
       "id": "mcq-2014-2-204",
       "region": 0,
       "page": 204,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "mcq-2014-3-208",
       "region": 0,
       "page": 208,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "mcq-2014-4-212",
       "region": 0,
       "page": 212,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "mcq-2014-5-214",
       "region": 0,
       "page": 214,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "mcq-2014-6-216",
       "region": 0,
       "page": 216,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "mcq-2014-7-218",
       "region": 0,
       "page": 218,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.9306
     },
     {
       "id": "frq-2004-1-292",
@@ -404,14 +341,14 @@
       "region": 0,
       "page": 333,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8801
     },
     {
       "id": "frq-2014-4-336",
       "region": 0,
       "page": 336,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8801
     },
     {
       "id": "frq-2014-5-337",
@@ -425,7 +362,7 @@
       "region": 0,
       "page": 346,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8801
     },
     {
       "id": "frq-2015-3-348",
@@ -446,7 +383,7 @@
       "region": 0,
       "page": 351,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8801
     },
     {
       "id": "frq-2015-7-353",
@@ -495,7 +432,7 @@
       "region": 0,
       "page": 376,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8775
     },
     {
       "id": "frq-2016-4-377",
@@ -537,140 +474,140 @@
       "region": 0,
       "page": 392,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8775
     },
     {
       "id": "frq-2021-2-402",
       "region": 0,
       "page": 402,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8902
     },
     {
       "id": "frq-2021-3-405",
       "region": 0,
       "page": 405,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8902
     },
     {
       "id": "frq-2021-4-408",
       "region": 0,
       "page": 408,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8902
     },
     {
       "id": "frq-2021-5-410",
       "region": 0,
       "page": 410,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8902
     },
     {
       "id": "frq-2022-2-424",
       "region": 0,
       "page": 424,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8966
     },
     {
       "id": "frq-2022-4-430",
       "region": 0,
       "page": 430,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8966
     },
     {
       "id": "frq-2022-5-432",
       "region": 0,
       "page": 432,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8966
     },
     {
       "id": "frq-2022-6-434",
       "region": 0,
       "page": 434,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8966
     },
     {
       "id": "frq-2023-2-445",
       "region": 0,
       "page": 445,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8876
     },
     {
       "id": "frq-2023-3-448",
       "region": 0,
       "page": 448,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8953
     },
     {
       "id": "frq-2023-4-452",
       "region": 0,
       "page": 452,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8953
     },
     {
       "id": "frq-2023-5-454",
       "region": 0,
       "page": 454,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8953
     },
     {
       "id": "frq-2023-6-456",
       "region": 0,
       "page": 456,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8953
     },
     {
       "id": "frq-2023-7-458",
       "region": 0,
       "page": 458,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8579
+      "rect_area_ratio": 0.8953
     },
     {
       "id": "frq-2024-2-468",
       "region": 0,
       "page": 468,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8864
     },
     {
       "id": "frq-2024-3-471",
       "region": 0,
       "page": 471,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8864
     },
     {
       "id": "frq-2024-4-474",
       "region": 0,
       "page": 474,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8864
     },
     {
       "id": "frq-2024-5-476",
       "region": 0,
       "page": 476,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8864
     },
     {
       "id": "frq-2024-6-478",
       "region": 0,
       "page": 478,
       "code": "near_full_page_crop",
-      "rect_area_ratio": 0.8611
+      "rect_area_ratio": 0.8864
     },
     {
       "id": "frq-2024-1-484",

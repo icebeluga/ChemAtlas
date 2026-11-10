@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any -- review payloads preserve a versioned JSON format from the source catalog. */
 export type ReviewEntityType = "question" | "stimulus";
 export function sha256Hex(bytes: Uint8Array): Promise<string>;
 export function createFileReviewStore(options: { manifestPath: string; imageRoot: string }): any;
@@ -7,6 +8,8 @@ export function createD1ReviewStore(db: D1Database): {
   recordImage(input: { ownerId: string; entityType: ReviewEntityType; entityId: string; revision: string; segment: number; objectKey: string; byteLength: number; sha256: string }): Promise<any>;
   getStimulusLinks(ownerId: string, questionId: string): Promise<string[]>;
   listStimulusLinks(ownerId: string): Promise<Array<{ questionId: string; stimulusId: string }>>;
+  readRecoveryMetadata(ownerId: string): Promise<{ images: any[]; reviewHistory: any[]; cropRevisions: any[]; recordTimestamps: any[] }>;
+  restoreSnapshot(ownerId: string, manifest: any, recovery?: { images?: any[]; reviewHistory?: any[]; cropRevisions?: any[]; recordTimestamps?: any[] }): Promise<any>;
   saveManifest(ownerId: string, manifest: any): Promise<any>;
 };
 export function createR2ImageStore(bucket: R2Bucket): any;

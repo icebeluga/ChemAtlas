@@ -54,7 +54,7 @@ The screenshot/catalog difference remains: 1,542 available records versus 1,651 
 
 ## G. GitHub checkpoints
 
-Remote branch `work/public-ui-recovery` is based on `main` at `95c09c0cf1cd703cb8c30f7e23da47bb4571cc98`. The initial investigation checkpoint is `7de50f03677a8a2dd0aa29b5039011b3f4d7f164`. The UI and test changes are prepared in the local workspace; the next checkpoint must be the remote branch commit containing `app/page.tsx`, `app/globals.css`, this report, and `tests/public-catalog-integrity.test.mjs`.
+Remote branch `work/public-ui-recovery` is based on `main` at `95c09c0cf1cd703cb8c30f7e23da47bb4571cc98`. The initial investigation checkpoint is `7de50f03677a8a2dd0aa29b5039011b3f4d7f164`. The implementation checkpoint is `0d70de3d908472235332c286cb3544d07f562076`; its tree contains `app/page.tsx`, `app/globals.css`, this report, and `tests/public-catalog-integrity.test.mjs`. Remote read-back verification is pending.
 
 ## H. Deployment preparation
 
@@ -74,7 +74,7 @@ Unverified:
 
 ## Parallel Task Compatibility
 
-- Branch: `work/public-ui-recovery`; latest implementation SHA will be recorded after remote synchronization.
+- Branch: `work/public-ui-recovery`; implementation checkpoint `0d70de3d908472235332c286cb3544d07f562076`.
 - Shared files changed: `app/page.tsx` and `app/globals.css`; both also have changes on `work/private-review-deployment`.
 - No private-review routes, APIs, admin UI, D1/R2 configuration, or Cloudflare resources were changed or copied.
 - Catalog data and API interfaces were not modified. The separate private-review branch changes the catalog file and adds private APIs; those changes remain isolated.

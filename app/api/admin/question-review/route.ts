@@ -53,6 +53,12 @@ export async function GET(request: Request) {
     const { reviews, images } = stores();
     const manifest: any = await reviews.readManifest(auth.user.id);
     const stimuli: Record<string, any> = (stimulusDocument as any).stimuli || {};
+    const storedObjects = await images.listAll(auth.user.id);
+    const imageStats = {
+      totalSegments: storedObjects.length,
+      questionSegments: storedObjects.filter((object: any) => !object.key.includes("/question-images/_stimuli/")).length,
+      stimulusSegments: storedObjects.filter((object: any) => object.key.includes("/question-images/_stimuli/")).length,
+    };
     const approvedImages: Record<string, string[]> = {};
     for (const [questionId, review] of Object.entries(manifest.reviews) as Array<[string, any]>) {
       if (review.status !== "accepted" || !review.imageRevision || review.imageRevision !== review.sourceRegionsRevision || !(await imagesCurrent(images, auth.user.id, "question", questionId, review))) continue;
@@ -66,7 +72,7 @@ export async function GET(request: Request) {
       }
       if (valid) approvedImages[questionId] = [...stimulusPaths, ...review.imagePaths];
     }
-    return json({ manifest, stimuli: stimulusDocument, approvedImages, storageMode: "cloudflare-d1-r2" });
+    return json({ manifest, stimuli: stimulusDocument, approvedImages, imageStats, storageMode: "cloudflare-d1-r2" });
   } catch (error) { return json({ error: error instanceof Error ? error.message : "Review storage is unavailable." }, 503); }
 }
 

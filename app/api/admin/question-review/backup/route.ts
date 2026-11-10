@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- Cloudflare bindings and imported JSON archives are validated at this route boundary. */
 import { env } from "cloudflare:workers";
 import { authenticateReviewRequest } from "@/lib/cloudflare-access.mjs";
-import { createD1ReviewStore, createR2ImageStore } from "@/lib/question-review-storage.mjs";
+import { buildImageManifest, canonicalStimulusLinks } from "@/lib/question-review-backup.mjs";
+import { createD1ReviewStore, createR2ImageStore, sha256Hex } from "@/lib/question-review-storage.mjs";
+import stimulusDocument from "@/research/stimuli.json";
 
 export const runtime = "edge";
 const encoder = new TextEncoder();
@@ -40,8 +42,8 @@ function tarBytes(filename: string, bytes: Uint8Array) {
   return result;
 }
 
-function readableBackup(manifest: any, objects: any[], bucket: any, ownerId: string) {
-  const info = encoder.encode(JSON.stringify({ schemaVersion: 1, exportedAt: new Date().toISOString(), imageCount: objects.length, stimulusLinks: manifest.stimulusLinks || {} }, null, 2) + "\n");
+function readableBackup(manifest: any, objects: any[], bucket: any, ownerId: string, backupInfo: any) {
+  const info = encoder.encode(JSON.stringify(backupInfo, null, 2) + "\n");
   const manifestBytes = encoder.encode(JSON.stringify(manifest, null, 2) + "\n");
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -52,17 +54,12 @@ function readableBackup(manifest: any, objects: any[], bucket: any, ownerId: str
           const archivePath = objectInfo.key.replace(`owners/${ownerId}/`, "");
           const object = await bucket.get(objectInfo.key);
           if (!object) throw new Error(`R2 object disappeared during export: ${archivePath}`);
-          const filename = archivePath;
-          controller.enqueue(makeTarHeader(filename, object.size));
-          const reader = object.body.getReader();
-          let size = 0;
-          while (true) {
-            const { done, value } = await reader.read();
-            if (done) break;
-            if (value) { size += value.byteLength; controller.enqueue(value); }
-          }
-          if (size !== object.size) throw new Error(`R2 image size changed during export: ${filename}`);
-          const padding = (512 - (size % 512)) % 512;
+          const metadata = backupInfo.images.find((entry: any) => entry.archivePath === archivePath);
+          const bytes = new Uint8Array(await object.arrayBuffer());
+          if (!metadata || bytes.byteLength !== object.size || bytes.byteLength !== metadata.byteLength || await sha256Hex(bytes) !== metadata.sha256) throw new Error(`R2 image checksum or size does not match D1 metadata: ${archivePath}`);
+          controller.enqueue(makeTarHeader(archivePath, bytes.byteLength));
+          controller.enqueue(bytes);
+          const padding = (512 - (bytes.byteLength % 512)) % 512;
           if (padding) controller.enqueue(new Uint8Array(padding));
         }
         controller.enqueue(new Uint8Array(1024));
@@ -79,9 +76,26 @@ export async function GET(request: Request) {
   try {
     const runtimeEnv = cloudEnv();
     if (!runtimeEnv.DB || !runtimeEnv.REVIEW_IMAGES) return json({ error: "Persistent D1 and R2 bindings are not configured." }, 503);
-    const manifest = await createD1ReviewStore(runtimeEnv.DB).readManifest(auth.user.id);
+    const store = createD1ReviewStore(runtimeEnv.DB);
+    const manifest = await store.readManifest(auth.user.id);
     const objects = await createR2ImageStore(runtimeEnv.REVIEW_IMAGES).listAll(auth.user.id);
-    return new Response(readableBackup(manifest, objects, runtimeEnv.REVIEW_IMAGES, auth.user.id), { headers: { "content-type": "application/gzip", "content-disposition": 'attachment; filename="chematlas-question-image-review.tar.gz"', "cache-control": "private, no-store" } });
+    const recovery = await store.readRecoveryMetadata(auth.user.id);
+    const links = canonicalStimulusLinks((stimulusDocument as any).stimuli || {});
+    manifest.stimulusLinks = links;
+    const images = buildImageManifest(objects, recovery.images, auth.user.id);
+    const backupInfo = {
+      format: "chematlas-question-image-review",
+      formatVersion: 2,
+      exportedAt: new Date().toISOString(),
+      imageCount: images.length,
+      totalImageBytes: images.reduce((sum: number, image: { byteLength: number }) => sum + image.byteLength, 0),
+      images,
+      stimulusLinks: links,
+      reviewHistory: recovery.reviewHistory,
+      cropRevisions: recovery.cropRevisions,
+      recordTimestamps: recovery.recordTimestamps,
+    };
+    return new Response(readableBackup(manifest, objects, runtimeEnv.REVIEW_IMAGES, auth.user.id, backupInfo), { headers: { "content-type": "application/gzip", "content-disposition": 'attachment; filename="chematlas-question-image-review.tar.gz"', "cache-control": "private, no-store" } });
   } catch (error) { return json({ error: error instanceof Error ? error.message : "Backup export failed." }, 503); }
 }
 

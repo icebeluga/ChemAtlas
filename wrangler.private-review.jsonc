@@ -12,7 +12,7 @@
     {
       "binding": "DB",
       "database_name": "chematlas-private-review",
-      "database_id": "00000000-0000-4000-8000-000000000000",
+      "database_id": "fe3f5e19-c470-4e5b-b83a-c49599508a85",
       "migrations_dir": "drizzle"
     }
   ],

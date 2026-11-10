@@ -1,7 +1,7 @@
 # ChemAtlas — Overnight Website Recovery and UI Restoration Report
 
 Date: 2026-11-10
-Status: **UI reconstruction implemented; browser visual verification is blocked**
+Status: **UI reconstruction implemented and checkpointed; browser visual verification is blocked**
 
 ## A. Verified source and root cause
 
@@ -32,7 +32,7 @@ The Sites workflow skill was read for the supported local preview workflow. UI w
 
 ## D. Visual comparison
 
-The implementation follows the supplied target screenshot’s horizontal header, pale green page surface, compact unit banner, four color-accented statistics, three-column unit grid, typography hierarchy, and unit-card structure. The browser environment could not reach the dev server: the Sites dev server ran in an isolated process namespace, and the CUA browser returned `ERR_CONNECTION_REFUSED` for `127.0.0.1:5173`. Wrangler local preview also failed because the execution environment denied interface-address discovery (`uv_interface_addresses returned Unknown system error 1`). Therefore no development screenshot or visual browser comparison was produced; desktop/tablet/mobile behavior remains unverified in a real browser.
+The implementation follows the supplied target screenshot’s horizontal header, pale green page surface, compact unit banner, four color-accented statistics, three-column unit grid, typography hierarchy, and unit-card structure. The browser environment could not produce a development screenshot. The Sites dev server ran in an isolated process namespace, and the CUA browser returned `ERR_CONNECTION_REFUSED` for `127.0.0.1:5173`. Wrangler preview failed because the execution environment denied interface-address discovery (`uv_interface_addresses returned Unknown system error 1`). Direct headless Chromium aborted because the environment denied its required local socket (`socket() failed: Operation not permitted`); the Playwright browser download was truncated. No development screenshot or visual browser comparison was produced; desktop/tablet/mobile behavior remains unverified in a real browser.
 
 ## E. Question catalog reconciliation
 
@@ -50,11 +50,11 @@ The screenshot/catalog difference remains: 1,542 available records versus 1,651 
 | `pnpm exec node --test tests/public-catalog-integrity.test.mjs` | Pass: 4 tests |
 | Focused ESLint on changed files with pre-existing `react-hooks/set-state-in-effect` rule disabled | Exit 0; 7 existing warnings remain |
 | Full ESLint | Not clean: two existing `react-hooks/set-state-in-effect` errors in local-storage hydration and result-page reset, plus existing warnings |
-| Browser interaction, screenshots, responsive viewports | Blocked by isolated preview networking; not claimed as passed |
+| Browser interaction, screenshots, responsive viewports | Blocked by preview isolation and Chromium socket restriction; not claimed as passed |
 
 ## G. GitHub checkpoints
 
-Remote branch `work/public-ui-recovery` is based on `main` at `95c09c0cf1cd703cb8c30f7e23da47bb4571cc98`. The initial investigation checkpoint is `7de50f03677a8a2dd0aa29b5039011b3f4d7f164`. Implementation commit `0d70de3d908472235332c286cb3544d07f562076` adds `app/page.tsx`, `app/globals.css`, and `tests/public-catalog-integrity.test.mjs`. GitHub read-back confirmed all four implementation/report files are present on the remote branch.
+Remote branch `work/public-ui-recovery` is based on `main` at `95c09c0cf1cd703cb8c30f7e23da47bb4571cc98`. The initial investigation checkpoint is `7de50f03677a8a2dd0aa29b5039011b3f4d7f164`. Implementation commit `0d70de3d908472235332c286cb3544d07f562076` adds `app/page.tsx`, `app/globals.css`, and `tests/public-catalog-integrity.test.mjs`. GitHub read-back at commit `8dfe86323207596b4bbdbf2163bcc7c0205480b1` confirmed the branch contains the implementation and report; reads of all four files returned the expected source hashes.
 
 ## H. Deployment preparation
 
@@ -63,7 +63,6 @@ No Site save or deployment was performed. The existing Site remains version 48, 
 ## I. Unresolved issues
 
 Blocking review readiness:
-- Remote branch must contain and be verified against the tested code checkpoint.
 - Browser visual and interaction verification could not run in this execution environment.
 - 109 records shown by the target screenshot are absent from the supplied catalog; their source is unknown.
 
@@ -74,7 +73,7 @@ Unverified:
 
 ## Parallel Task Compatibility
 
-- Branch: `work/public-ui-recovery`; implementation commit `0d70de3d908472235332c286cb3544d07f562076`, followed by the report updates on the same branch.
+- Branch: `work/public-ui-recovery`; implementation commit `0d70de3d908472235332c286cb3544d07f562076`; latest checkpoint verified before this report update: `8dfe86323207596b4bbdbf2163bcc7c0205480b1`.
 - Shared files changed: `app/page.tsx` and `app/globals.css`; both also have changes on `work/private-review-deployment`.
 - No private-review routes, APIs, admin UI, D1/R2 configuration, or Cloudflare resources were changed or copied.
 - Catalog data and API interfaces were not modified. The separate private-review branch changes the catalog file and adds private APIs; those changes remain isolated.

@@ -58,7 +58,11 @@ Remote branch `work/public-ui-recovery` is based on `main` at `95c09c0cf1cd703cb
 
 ## H. Deployment preparation
 
-No Site save or deployment was performed. The existing Site remains version 48, and its production deployment was previously verified successful. Because the recovered/reconstructed source has not had browser visual verification, it is not ready for production review or publication. No rollback was exercised.
+No Site save or deployment was performed. Read-only Sites metadata confirms version 48 (`2b63a49a778459253035ec2871a84d96a31b5400`) is the latest saved version and its production deployment succeeded. Its saved version ID is `appgprj_6aef507724448191a521d9deccde9f2f~appgver_3308e2dab7c48191ac91ef0ca7915a9f`.
+
+The supported Sites workflow is to push source to the Site's configured remote branch, save a version using that exact pushed commit and its packaged archive, then deploy the returned saved-version ID. The deployment operation publishes to production. The Site metadata available here did not expose a bound repository/branch or write credential, so the recovered branch cannot yet be shown to satisfy the save-version precondition. After compatibility review and approval, first establish the Site's configured source, push the exact reviewed commit there, package the source build as required by its hosting configuration, save it, and deploy only the returned version ID. For rollback, deploy the saved version-48 ID above through the same deployment operation. The rollback path is identified but was not exercised.
+
+The reconstruction is not production-ready: browser visual and interaction verification is still blocked, and 109 screenshot-listed questions are absent from the available catalog. No Site save, publication, or rollback was performed.
 
 ## I. Unresolved issues
 
@@ -73,7 +77,7 @@ Unverified:
 
 ## Parallel Task Compatibility
 
-- Branch: `work/public-ui-recovery`; implementation commit `0d70de3d908472235332c286cb3544d07f562076`; latest checkpoint verified before this report update: `8dfe86323207596b4bbdbf2163bcc7c0205480b1`.
+- Branch: `work/public-ui-recovery`; implementation commit `0d70de3d908472235332c286cb3544d07f562076`; code checkpoint was verified at `8dfe86323207596b4bbdbf2163bcc7c0205480b1`, followed by report-only updates.
 - Shared files changed: `app/page.tsx` and `app/globals.css`; both also have changes on `work/private-review-deployment`.
 - No private-review routes, APIs, admin UI, D1/R2 configuration, or Cloudflare resources were changed or copied.
 - Catalog data and API interfaces were not modified. The separate private-review branch changes the catalog file and adds private APIs; those changes remain isolated.

@@ -10,7 +10,7 @@ Date: 2026-11-10
 | Private review | `work/private-review-deployment` at `1f583294930c08a81b9bd92aa0eed3d0a1102dc5` | 1,542 | 1,266 | 276 | 1,542 |
 | Desired screenshot | Screenshot aggregate only | 1,651 | 1,327 | 324 | Not available |
 
-The two Git snapshots have the same 1,542 stable IDs: zero additions, zero removals, and zero duplicates. The screenshot aggregate is 109 records above the public snapshot, consisting of a difference of 76 MCQs and 67 FRQs. No target record IDs or target catalog file were available, so these screenshot-only records cannot be reconciled individually or safely added.
+The two Git snapshots have the same 1,542 stable IDs: zero additions, zero removals, and zero duplicates. The screenshot aggregate is 109 records above the public snapshot, consisting of a difference of 42 MCQs and 67 FRQs. No target record IDs or target catalog file were available, so these screenshot-only records cannot be reconciled individually or safely added.
 
 ## Public versus private record differences
 

@@ -15,17 +15,26 @@ class MemoryD1 {
     const state = { records: this.records, history: this.history, crops: this.crops, links: this.links, images: this.images };
     const statement = { args: [], bind(...args) { this.args = args; return this; }, async run() {
       const a = this.args;
-      if (sql.includes("INSERT INTO review_records")) state.records.set(`${a[0]}|${a[1]}|${a[2]}`, { owner_id:a[0], entity_type:a[1], entity_id:a[2], status:a[3], payload_json:a[4], updated_at:a[5] });
-      else if (sql.includes("review_history")) state.history.push(a);
-      else if (sql.includes("INSERT OR IGNORE INTO crop_revisions")) state.crops.set(`${a[0]}|${a[1]}|${a[2]}|${a[3]}`, a);
-      else if (sql.includes("DELETE FROM stimulus_links")) { for (const key of [...state.links]) if (key.startsWith(`${a[0]}|${a[1]}|`)) state.links.delete(key); }
-      else if (sql.includes("INSERT OR IGNORE INTO stimulus_links")) state.links.add(`${a[0]}|${a[1]}|${a[2]}`);
+      if (sql.includes("DELETE FROM review_records")) { for (const [key, row] of state.records) if (row.owner_id===a[0]) state.records.delete(key); }
+      else if (sql.includes("DELETE FROM stimulus_links") && sql.includes("question_id = ?")) { for (const key of [...state.links]) if (key.startsWith(`${a[0]}|${a[1]}|`)) state.links.delete(key); }
+      else if (sql.includes("DELETE FROM stimulus_links")) { for (const key of [...state.links]) if (key.startsWith(`${a[0]}|`)) state.links.delete(key); }
+      else if (sql.includes("DELETE FROM review_history")) { const kept=state.history.filter(row => row[0]!==a[0]);state.history.splice(0,state.history.length,...kept); }
+      else if (sql.includes("DELETE FROM crop_revisions")) { for (const key of [...state.crops.keys()]) if (key.startsWith(`${a[0]}|`)) state.crops.delete(key); }
+      else if (sql.includes("DELETE FROM image_objects")) { for (const key of [...state.images.keys()]) if (key.startsWith(`${a[0]}|`)) state.images.delete(key); }
+      else if (sql.includes("INSERT INTO review_records")) state.records.set(`${a[0]}|${a[1]}|${a[2]}`, { owner_id:a[0], entity_type:a[1], entity_id:a[2], status:a[3], payload_json:a[4], updated_at:a[5] });
+      else if (sql.includes("INSERT INTO review_history")) state.history.push(a);
+      else if (sql.includes("crop_revisions")) state.crops.set(`${a[0]}|${a[1]}|${a[2]}|${a[3]}`, a);
+      else if (sql.includes("INSERT OR IGNORE INTO stimulus_links") || sql.includes("INSERT INTO stimulus_links")) state.links.add(`${a[0]}|${a[1]}|${a[2]}`);
       else if (sql.includes("INSERT INTO image_objects")) state.images.set(`${a[0]}|${a[1]}|${a[2]}|${a[3]}|${a[4]}`, { object_key:a[5], byte_length:a[6], sha256:a[7] });
       return { success: true };
     }, async all() {
       const a = this.args;
       if (sql.includes("SELECT entity_type, entity_id, payload_json")) return { results:[...state.records.values()].filter((r)=>r.owner_id===a[0]) };
       if (sql.includes("SELECT question_id, stimulus_id")) return { results:[...state.links].filter((key)=>key.startsWith(`${a[0]}|`)).map((key)=>{const [,question_id,stimulus_id]=key.split("|");return {question_id,stimulus_id}}) };
+      if (sql.includes("SELECT entity_type, entity_id, revision, segment, object_key")) return { results:[...state.images].filter(([key])=>key.startsWith(`${a[0]}|`)).map(([key,value])=>{const [,entity_type,entity_id,revision,segment]=key.split("|");return {entity_type,entity_id,revision,segment:Number(segment),object_key:value.object_key,byte_length:value.byte_length,sha256:value.sha256,mime_type:"image/png",created_at:"2026-11-10T00:00:00.000Z"}}) };
+      if (sql.includes("SELECT entity_type, entity_id, revision, event_json")) return { results:state.history.filter(row=>row[0]===a[0]).map(row=>({entity_type:row[1],entity_id:row[2],revision:row[3],event_json:row[4],created_at:row[5]})) };
+      if (sql.includes("SELECT entity_type, entity_id, revision, crop_json")) return { results:[...state.crops.values()].filter(row=>row[0]===a[0]).map(row=>({entity_type:row[1],entity_id:row[2],revision:row[3],crop_json:row[4],created_at:row[6],notes:row[7]})) };
+      if (sql.includes("SELECT entity_type, entity_id, updated_at")) return { results:[...state.records.values()].filter(r=>r.owner_id===a[0]).map(r=>({entity_type:r.entity_type,entity_id:r.entity_id,updated_at:r.updated_at})) };
       if (sql.includes("SELECT stimulus_id")) return { results:[...state.links].filter((key)=>key.startsWith(`${a[0]}|${a[1]}|`)).map((key)=>({stimulus_id:key.split("|")[2]})) };
       return { results:[] };
     }, async first() {
@@ -84,6 +93,29 @@ test("D1 backup restore batches records and retains question-stimulus associatio
   assert.equal(restored.reviews.q1.status,"accepted");
   assert.deepEqual(restored.stimulusLinks.q1,["stim1"]);
   assert.equal(restored.stimuli.stim1.status,"accepted");
+});
+
+test("D1 restoreSnapshot replaces the owner snapshot atomically with image, history, crop and association metadata", async () => {
+  const db=new MemoryD1(); const ownerId="snapshot-owner";
+  const store=createD1ReviewStore(db);
+  await store.saveRecord({ownerId,entityType:"question",entityId:"old-q",review:{...accepted(),status:"accepted"}});
+  const pending={status:"pending_review",imageRevision:"r2",sourceRegionsRevision:"r2",imagePaths:["/api/admin/question-review/image/q1/r2-segment-1.png"],reviewedAt:null,rejectionReasons:[],notes:"baseline",history:[],cropOverrides:[{page:1,rect:[1,2,30,40]}]};
+  const snapshot={schemaVersion:1,updatedAt:"2026-11-10T02:00:00.000Z",reviews:{q1:pending},stimuli:{},stimulusLinks:{q1:["stim-1"]}};
+  const recovery={
+    images:[{entity_type:"question",entity_id:"q1",revision:"r2",segment:1,object_key:"owners/snapshot-owner/question-images/q1/r2-segment-1.png",byte_length:png.length,sha256:"a".repeat(64)}],
+    reviewHistory:[{entityType:"question",entityId:"q1",revision:1,event:{revision:1,status:"pending_review",at:"2026-11-10T02:00:00.000Z"},createdAt:"2026-11-10T02:00:00.000Z"}],
+    cropRevisions:[{entityType:"question",entityId:"q1",revision:"r2",regions:pending.cropOverrides,createdAt:"2026-11-10T02:00:00.000Z",notes:"verified"}],
+    recordTimestamps:[{entityType:"question",entityId:"q1",updatedAt:"2026-11-10T02:00:00.000Z"}],
+  };
+  const restored=await store.restoreSnapshot(ownerId,snapshot,recovery);
+  assert.deepEqual(Object.keys(restored.reviews),["q1"]);
+  assert.equal(restored.reviews.q1.status,"pending_review");
+  assert.deepEqual(restored.stimulusLinks.q1,["stim-1"]);
+  const metadata=await store.readRecoveryMetadata(ownerId);
+  assert.equal(metadata.images.length,1);
+  assert.equal(metadata.reviewHistory.length,1);
+  assert.equal(metadata.cropRevisions.length,1);
+  assert.equal(metadata.recordTimestamps[0].updatedAt,"2026-11-10T02:00:00.000Z");
 });
 
 test("R2 adapter stores immutable revisions, metadata, shared stimuli, and multi-page segments", async () => {

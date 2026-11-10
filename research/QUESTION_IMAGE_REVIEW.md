@@ -44,6 +44,12 @@ The API is supplied by a Vite middleware configured for `serve`; it is not part 
 
 The current `public/questions.json` contains 1,542 questions: 1,266 MCQs and 276 FRQs. Every record has at least one `sourceRegions` entry and a `sourceAssets` reference. The catalog maps original pages to eight PDF segments under `public/source/`. `research/stimuli.json` contains six explicitly linked shared-stimulus groups. The dashboard renders source regions on demand and can batch-generate PNGs. The checked-in sample set contains five question records (including a two-page FRQ) and one linked shared stimulus; every sample remains `pending_review` and must be manually inspected.
 
+In development, the ChemAtlas sidebar includes a **Question Image Review · DEV** link. The Question Bank checks the review API for accepted, current image revisions and uses those images (including accepted shared-stimulus regions) as previews. Unreviewed, rejected, stale, or dependency-incomplete images are omitted; the original PDF viewer remains available.
+
+## Hosting boundary
+
+The review API is still a Vite `serve` middleware backed by local files. `.openai/hosting.json` currently declares no D1 or R2 binding, the production Worker has no durable review API, and the recovered source is not verified to match the published Site version. Therefore the review navigation is development-only and the review route/API remain unavailable in production. Do not remove that boundary or publish this recovered source as a way to expose the dashboard. A hosted release needs a separately reviewed D1/R2 implementation, server-side identity/authorization on every read and write, and an approved private preview/deployment after compatibility review. The existing Site access policy is not a substitute for testing those API checks.
+
 ## Limits
 
 - There is no sign-in or administrator role in this app, so the dashboard is intentionally unavailable in public production mode. Do not relax that gate until server-side authentication and authorization are implemented.

@@ -86,6 +86,7 @@ test("saved image revisions persist and crop changes invalidate an approval", as
   assert.equal((await saveRecord({ questionId: question.id }, approved)).status, 200);
   let state = await call("/api/admin/question-review");
   assert.equal(state.body.manifest.reviews[question.id].status, "accepted");
+  assert.deepEqual(state.body.approvedImages[question.id], [imagePath]);
   const image = await call(imagePath);
   assert.equal(image.status, 200);
   assert.deepEqual(image.body.subarray(0, 8), Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]));
@@ -99,6 +100,7 @@ test("saved image revisions persist and crop changes invalidate an approval", as
   state = await call("/api/admin/question-review");
   assert.equal(state.body.manifest.reviews[question.id].status, "corrected_pending_review");
   assert.equal(state.body.manifest.reviews[question.id].imageRevision, correctedRevision);
+  assert.equal(state.body.approvedImages[question.id], undefined, "corrected images must disappear from the approved catalog until accepted again");
 });
 
 test("shared-stimulus MCQs cannot be accepted until each linked stimulus is accepted", async () => {
@@ -115,6 +117,7 @@ test("shared-stimulus MCQs cannot be accepted until each linked stimulus is acce
   assert.equal((await saveRecord({ stimulusId: id }, review("pending_review", sRevision, [sImage]))).status, 200);
   assert.equal((await saveRecord({ stimulusId: id }, review("accepted", sRevision, [sImage]))).status, 200);
   assert.equal((await saveRecord({ questionId: question.id }, review("accepted", qRevision, [qImage]))).status, 200);
+  assert.deepEqual((await call("/api/admin/question-review")).body.approvedImages[question.id], [sImage, qImage], "the student catalog receives the approved stimulus before its dependent question image");
 });
 
 test("correcting a shared stimulus invalidates approvals of dependent MCQs", async () => {

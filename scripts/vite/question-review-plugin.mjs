@@ -272,7 +272,27 @@ async function handleRequest(request, response, pathname) {
   if (pathname !== "/api/admin/question-review") return response.writeHead(404).end();
   if (method === "GET") {
     const [manifest, stimulusDoc] = await Promise.all([readManifest(), readJson(projectPath("research", "stimuli.json"))]);
-    return sendJson(response, 200, { manifest, stimuli: stimulusDoc });
+    const stimuli = stimulusDoc.stimuli || {};
+    const sources = await getSources();
+    const approvedImages = {};
+    for (const question of sources.catalog.questions) {
+      const review = manifest.reviews[question.id];
+      if (!review || review.status !== "accepted") continue;
+      const expected = currentQuestionSignature(question, review, stimuli, manifest.stimuli);
+      if (review.imageRevision !== expected || review.sourceRegionsRevision !== expected) continue;
+      const regions = review.cropOverrides || question.sourceRegions || [];
+      if (review.imagePaths.length !== regions.length || !(await imageFilesExist(question.id, review, false))) continue;
+      let stimuliReady = true;
+      const approvedStimulusPaths = [];
+      for (const id of question.stimulusIds || []) {
+        const stimulus = stimuli[id]; const stimulusReview = manifest.stimuli[id];
+        const stimulusRevision = stimulus && currentStimulusSignature(id, stimulus, stimulusReview);
+        if (!stimulusReview || stimulusReview.status !== "accepted" || stimulusReview.imageRevision !== stimulusRevision || stimulusReview.sourceRegionsRevision !== stimulusRevision || !(await imageFilesExist(id, stimulusReview, true))) { stimuliReady = false; break; }
+        approvedStimulusPaths.push(...stimulusReview.imagePaths);
+      }
+      if (stimuliReady) approvedImages[question.id] = [...approvedStimulusPaths, ...review.imagePaths];
+    }
+    return sendJson(response, 200, { manifest, stimuli: stimulusDoc, approvedImages });
   }
   if (method !== "PUT" && method !== "POST") return sendJson(response, 405, { error: "Method not allowed." });
   const payload = await bodyJson(request);

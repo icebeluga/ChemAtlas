@@ -58,3 +58,4 @@ html,body{background:#fbfaf4;color:#153b2f}
 .approved-image-stack img{display:block;max-width:100%;height:auto;max-height:78vh;object-fit:contain;margin:auto;background:#fff}
 .approved-image-stack figcaption{margin-top:7px;font-size:10px;color:#56675d}
 @media(max-width:760px){.review-nav i{display:none}.review-nav{justify-content:center;gap:0}.approved-image-stack figure{padding:6px}}
+@media(min-width:901px){.qiv-stats{grid-template-columns:repeat(8,minmax(0,1fr))}}

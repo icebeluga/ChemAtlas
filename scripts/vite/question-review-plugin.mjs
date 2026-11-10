@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 import { createGzip, gunzipSync } from "node:zlib";
+import { createFileReviewStore } from "../../lib/question-review-storage.mjs";
 
 const statuses = new Set(["not_generated", "pending_review", "accepted", "rejected", "corrected_pending_review", "missing_source"]);
 
@@ -29,6 +30,7 @@ export function questionReviewDevApi() {
 function projectPath(...parts) { return path.join(process.cwd(), ...parts); }
 function manifestPath() { return process.env.CHEMATLAS_REVIEW_MANIFEST || projectPath("research", "question-image-review.json"); }
 function imageRoot(...parts) { return path.join(process.env.CHEMATLAS_REVIEW_IMAGES || projectPath("research", "question-images"), ...parts); }
+function fileStore() { return createFileReviewStore({ manifestPath: manifestPath(), imageRoot: imageRoot() }); }
 function sendJson(response, status, value) {
   response.writeHead(status, { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" });
   response.end(JSON.stringify(value));
@@ -44,11 +46,7 @@ async function bodyJson(request, maxBytes = 36 * 1024 * 1024) {
 }
 async function readJson(file) { return JSON.parse(await readFile(file, "utf8")); }
 async function readManifest() {
-  try { const value = await readJson(manifestPath()); value.stimuli ||= {}; return value; }
-  catch (error) {
-    if (error.code !== "ENOENT") throw error;
-    return { schemaVersion: 1, updatedAt: null, reviews: {}, stimuli: {} };
-  }
+  return fileStore().readManifest();
 }
 async function getSources() {
   const [catalog, stimulusDoc] = await Promise.all([
@@ -58,11 +56,7 @@ async function getSources() {
   return { catalog, questionIds: new Set(catalog.questions.map((question) => question.id)), stimuli: stimulusDoc.stimuli || {} };
 }
 async function saveManifest(manifest) {
-  manifest.updatedAt = new Date().toISOString();
-  const filename = manifestPath();
-  const temporary = `${filename}.${randomUUID()}.tmp`;
-  await writeFile(temporary, `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
-  await rename(temporary, filename);
+  return fileStore().saveManifest(manifest);
 }
 function tarHeader(filename, size) {
   const name = Buffer.from(filename, "utf8");
@@ -182,12 +176,9 @@ async function imageFilesExist(id, review, isStimulus) {
     if (!/^[a-zA-Z0-9_-]+-segment-[1-9][0-9]*\.png$/.test(filename)) return false;
     const revision = review.imageRevision.replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 64);
     if (filename !== revision + "-segment-" + (index + 1) + ".png") return false;
-    const location = isStimulus
-      ? imageRoot("_stimuli", id, filename)
-      : imageRoot(id, filename);
     try {
-      const bytes = await readFile(location);
-      if (bytes.length < 100 || !bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) return false;
+      const bytes = await fileStore().getImage({ entityType: isStimulus ? "stimulus" : "question", entityId: id, filename });
+      if (!bytes || bytes.length < 100 || !Buffer.from(bytes).subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) return false;
     } catch { return false; }
   }
   return true;
@@ -201,17 +192,17 @@ async function handleRequest(request, response, pathname) {
     const id = isStimulus ? folder.slice("_stimulus-".length) : folder;
     const sources = await getSources();
     if (isStimulus ? !Object.hasOwn(sources.stimuli, id) : !sources.questionIds.has(id)) return response.writeHead(404).end();
-    const location = isStimulus
-      ? imageRoot("_stimuli", id, filename)
-      : imageRoot(id, filename);
     try {
-      const bytes = await readFile(location);
-      response.writeHead(200, { "content-type": "image/png", "cache-control": "no-store", "content-length": bytes.length });
-      return response.end(method === "HEAD" ? undefined : bytes);
+      const bytes = await fileStore().getImage({ entityType: isStimulus ? "stimulus" : "question", entityId: id, filename });
+      if (!bytes) return response.writeHead(404).end();
+      response.writeHead(200, { "content-type": "image/png", "cache-control": "no-store", "content-length": bytes.byteLength });
+      return response.end(method === "HEAD" ? undefined : Buffer.from(bytes));
     } catch { return response.writeHead(404).end(); }
   }
   if (pathname === "/api/admin/question-review/backup" && method === "GET") {
     const manifest = await readManifest();
+    const { catalog } = await getSources();
+    manifest.stimulusLinks = Object.fromEntries(catalog.questions.filter((question) => question.stimulusIds?.length).map((question) => [question.id, question.stimulusIds]));
     response.writeHead(200, { "content-type": "application/gzip", "content-disposition": 'attachment; filename="chematlas-question-image-review.tar.gz"', "cache-control": "no-store" });
     await pipeline(Readable.from(reviewBackupTar(manifest)), createGzip({ level: 6 }), response);
     return;
@@ -292,7 +283,7 @@ async function handleRequest(request, response, pathname) {
       }
       if (stimuliReady) approvedImages[question.id] = [...approvedStimulusPaths, ...review.imagePaths];
     }
-    return sendJson(response, 200, { manifest, stimuli: stimulusDoc, approvedImages });
+    return sendJson(response, 200, { manifest, stimuli: stimulusDoc, approvedImages, storageMode: "local-filesystem" });
   }
   if (method !== "PUT" && method !== "POST") return sendJson(response, 405, { error: "Method not allowed." });
   const payload = await bodyJson(request);
@@ -311,19 +302,18 @@ async function handleRequest(request, response, pathname) {
     const segment = Number.isInteger(payload.segment) && payload.segment >= 0 ? payload.segment : 0;
     const folder = payload.stimulusId ? `_stimulus-${key}` : key;
     const filename = `${revision}-segment-${segment + 1}.png`;
-    const location = payload.stimulusId
-      ? imageRoot("_stimuli", key, filename)
-      : imageRoot(key, filename);
-    await mkdir(path.dirname(location), { recursive: true });
-    const existing = await readFile(location).catch(error => error.code === "ENOENT" ? null : Promise.reject(error));
-    if (existing && !existing.equals(bytes)) {
+    const entityType = payload.stimulusId ? "stimulus" : "question";
+    const existing = await fileStore().getImage({ entityType, entityId: key, filename });
+    if (existing && !Buffer.from(existing).equals(bytes)) {
       const manifest = await readManifest();
       const prior = payload.stimulusId ? manifest.stimuli[key] : manifest.reviews[key];
       const pathPrefix = "/api/admin/question-review/image/" + folder + "/";
       if (prior?.status === "accepted" && prior.imagePaths?.includes(pathPrefix + filename)) return sendJson(response, 409, { error: "This PNG revision is already approved and cannot be overwritten. Save a new crop revision first." });
     }
-    if (!existing || !existing.equals(bytes)) await writeFile(location, bytes);
-    return sendJson(response, 200, { saved: true, path: `/api/admin/question-review/image/${folder}/${filename}`, bytes: bytes.length });
+    try {
+      const saved = await fileStore().putImage({ entityType, entityId: key, revision, segment, bytes });
+      return sendJson(response, 200, { saved: true, path: saved.path, bytes: saved.bytes });
+    } catch (error) { return sendJson(response, 409, { error: error.message || "This image revision is immutable." }); }
   }
 
   const review = payload.review;

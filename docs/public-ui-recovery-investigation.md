@@ -93,10 +93,10 @@ Unverified:
 ## Parallel Task Compatibility
 
 - Branch: `work/public-ui-recovery`; verified code checkpoint `08747bf2a0a5b9573268b44f40dff0db65b0ccfc`; the report commit follows this checkpoint.
-- Shared files changed: `app/page.tsx` and `app/globals.css`; both also have changes on `work/private-review-deployment`. New isolated files are `app/navigation.mjs` and `tests/navigation.test.mjs`; catalog integrity test and recovery report are also included.
-- No private-review routes, APIs, admin UI, D1/R2 configuration, or Cloudflare resources were changed or copied.
-- Public catalog data and API interfaces were not modified. The private branch has the same stable IDs but changes 19 question type labels and extends page spans for two records; those private catalog edits remain isolated and must not be overwritten by this branch.
-- Compatibility risk: shared page and CSS may conflict during later integration; review those files line by line after both branches are complete. Recommended order: finish/test each branch independently, compare shared files and catalog schema, then conduct integration review before any merge; keep private infrastructure separate and require explicit production approval.
+- Private branch head checked: `1f583294930c08a81b9bd92aa0eed3d0a1102dc5`. Its `app/page.tsx` adds an approved-image state and calls `/api/admin/question-review`; this recovery page has no private API calls. Its `app/globals.css` adds `.qiv-*` review workspace styles alongside the shared public styles. Its `package.json` adds two private review test scripts. Preserve those private-only changes on their branch.
+- No private-review routes, APIs, admin UI, D1/R2 configuration, or Cloudflare resources were changed or copied in this work. Public URLs remain the catalog routes only; the URL helper does not create or expose admin endpoints.
+- Public catalog data and API interfaces were not modified. The private branch has the same stable IDs but changes 19 question type labels, extends page spans for two records, and adds 17 `stimulusIds` associations; those private catalog edits remain isolated and must not be overwritten by this branch.
+- Compatibility risk: `app/page.tsx` has direct route/state differences, and `app/globals.css` must retain both target-public styles and private `.qiv-*` styles if later combined. Compare shared files and catalog schema line by line after both branches are complete. Recommended order: finish/test each branch independently, preserve private routes/API/Access, perform a dedicated file-level compatibility review, then consider integration only after explicit approval.
 
 ## Safety boundary
 

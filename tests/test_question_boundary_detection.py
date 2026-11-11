@@ -30,6 +30,8 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
         self.assertGreater(result["rect"][3], 300)  # drawing extends the crop past the answer text
         self.assertLess(result["rect"][3], 520)  # following question excluded
         self.assertEqual(result["signals"]["answerChoiceMarkers"], 4)
+        self.assertGreaterEqual(result["signals"]["textCharacters"], 80)
+        self.assertGreaterEqual(result["signals"]["pageTextCharacters"], result["signals"]["textCharacters"])
         self.assertEqual(result["signals"]["graphicsIncluded"], 1)
         self.assertEqual(result["signals"]["linkedStimulusRegions"], 1)
         self.assertGreaterEqual(result["confidence"], 0.78)

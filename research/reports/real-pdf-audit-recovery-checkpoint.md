@@ -26,7 +26,21 @@ This checkpoint records work recovered after the execution workspace was pruned.
 
 ## Next bounded batch
 
-1. Rerun the recovered detector against all 1,542 questions and save a newly named proposal artifact.
-2. Render and classify a five-question real-PDF batch, saving source-page and proposal previews plus exact findings.
-3. Commit that batch before starting the next five questions.
+The recovered detector was rerun successfully after this checkpoint was drafted. The command completed in approximately 53 seconds and wrote `real-question-boundary-proposals.recovered.json`. The durable GitHub artifact is the byte-for-byte gzip-compressed file `real-question-boundary-proposals.recovered.json.gz`.
+
+- Question results: 1,542 (262 high, 1,048 medium, 232 low).
+- Page-segment results: 1,642 (294 high, 1,072 medium, 276 low).
+- Manual-review questions: 309.
+- Multi-page questions: 66.
+- Shared-stimulus dependencies detected: 17.
+- Missing question regions: 0; null crop rectangles: 0; invalid crop rectangles: 0.
+- Text-poor page segments: 150.
+- Material differences from stored crop rectangles: 655.
+- Manual-review segments containing detected graphics: 91.
+- Artifact SHA-256: `96159d1d2c9e46a85f79b10b8c75aac1a8ca77dc50fad4e7dbc19e81ce4784ef`.
+- Compressed artifact SHA-256: `f139f72e77b4b0e83e6ccce9ab9c69f735c939d550b1301963390b6499e8937e`.
+
+These are detector diagnostics rather than visual accuracy measurements. Confidence values are deterministic heuristic scores, not calibrated probabilities.
+
+Next, render and classify a five-question real-PDF batch, save source-page and proposal previews plus exact findings, and commit that batch before starting the next five questions.
 

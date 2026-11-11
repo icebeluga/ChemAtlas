@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "method": "pymupdf-text-layout-plus-page-graphics",
+  "questionCount": 1,
+  "manualReviewCount": 1,
+  "questions": [
+    {
+      "id": "mcq-2024-23-2090",
+      "type": "MCQ",
+      "number": 23,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 2090,
+          "rect": [
+            37.0,
+            50.5,
+            562.5,
+            244.0
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 1,
+          "confidence": 0.42,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "context-only",
+          "signals": {
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "sharedContextOnly": true,
+            "questionStartFound": false,
+            "targetQuestionFound": false,
+            "precedingGroupQuestionNumbers": [
+              22
+            ],
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "pageAssociationUnresolved": true,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true
+          },
+          "reasons": [
+            "Shared context for Questions 22\u201325 is bounded separately; the requested question body was not found on this page.",
+            "Search adjacent source pages and verify the page association before approval.",
+            "The scanned source requires visual review; OCR is used for geometry only."
+          ],
+          "priorRect": [
+            20.0,
+            45.0,
+            575.0,
+            797.0
+          ]
+        },
+        {
+          "page": 2091,
+          "rect": [
+            24.0,
+            61.5,
+            299.62,
+            214.5
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 2,
+          "confidence": 0.18,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "candidate-needs-manual-verification",
+          "priorRect": null,
+          "signals": {
+            "questionStartFound": false,
+            "questionNumberExactMatch": false,
+            "candidateQuestionNumber": 21,
+            "groupOrderCandidate": true,
+            "groupSequenceOrdinal": 0,
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "neighboringQuestionContextVerified": true,
+            "catalogStemContentMatch": false,
+            "catalogStemTokenCoverage": 0.444,
+            "answerChoiceMarkers": 4,
+            "answerChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "answerChoiceSequence": true,
+            "answerOptionContent": [
+              "2"
+            ],
+            "textCharacters": 145,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "columnCount": 2,
+            "sourceQualityFlags": [],
+            "sourceMetadataMismatch": false,
+            "catalogPageAssociationMismatch": true,
+            "catalogSourcePages": [
+              2090
+            ],
+            "detectedSourcePage": 2091
+          },
+          "reasons": [
+            "The target body is absent from its catalog page; this adjacent-page proposal follows the declared shared-question sequence.",
+            "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required."
+          ]
+        }
+      ],
+      "extractionStatus": "candidate-needs-manual-verification",
+      "manualReview": true,
+      "confidence": 0.18
+    }
+  ],
+  "detectorParentCommit": "90151a1643c2f613c4e92633bf3be07c23c193b2",
+  "detectorSha256": "b6190120574ac7f3f68a0d631a031b9e81c4dc8dc197aa19ddd18619d3302f63",
+  "selectionLock": "research/reports/independent-validation/batch-04-lock.json",
+  "developmentCase": true,
+  "preservedOriginalFailure": "research/reports/independent-validation/batch-04-proposals.json"
+}

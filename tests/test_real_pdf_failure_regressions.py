@@ -152,9 +152,13 @@ class RealPdfFailureRegressionTests(unittest.TestCase):
         self.assertGreater(self.region("frq-2024-1-484", 485)["signals"]["graphicsIncluded"], 0)
 
     def test_1984_actual_detect_pipeline_excludes_printed_page_number(self):
-        region = self.region("mcq-1984-8-120", 120)
-        text = self.crop_text("mcq-1984-8-120", 120)
-        self.assertLess(region["rect"][3], 720)
+        regions = [r for r in self.question("mcq-1984-8-120")["regions"] if r["page"] == 120]
+        source = next(s for s in self.catalog["sourceFiles"] if s["from"] <= 120 <= s["to"])
+        with fitz.open(ROOT / "public" / source["url"].lstrip("/")) as doc:
+            page = doc.load_page(120 - int(source["from"]))
+            text = "\n".join(page.get_textbox(fitz.Rect(region["rect"])) for region in regions)
+        self.assertEqual(len(regions), 2)  # Shared reference/choices and target stem are separate segments.
+        self.assertTrue(all(region["rect"][3] < 720 for region in regions))
         self.assertIn("Questions 8-9", text)
         self.assertIn("Solid ethyl alcohol", text)
         self.assertNotRegex(text, r"(?m)^\s*2\s*$")

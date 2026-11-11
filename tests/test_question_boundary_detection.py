@@ -12,6 +12,21 @@ SPEC.loader.exec_module(DETECTOR)
 
 
 class QuestionBoundaryDetectionTests(unittest.TestCase):
+    def test_real_2005_frq_one_excludes_examination_header_and_footer(self):
+        source = ROOT / "public/source/bank-01.pdf"
+        if not source.exists():
+            self.skipTest("Original bank-01.pdf is not available in this checkout.")
+        with fitz.open(source) as doc:
+            page = doc.load_page(5)  # Catalog page 6; printed 2005 FRQ Question 1.
+            q = {"id": "frq-2005-1-6", "number": 1, "type": "FRQ", "pages": [6]}
+            prior = {"page": 6, "rect": [0, 55, 612, 737]}
+            result = DETECTOR.analyze_page(page, q, prior, [q], {}, 6)
+        self.assertEqual(result["signals"]["frqSubpartLabels"], ["a", "b", "c", "d", "e"])
+        self.assertLess(result["rect"][1], 300)  # Introductory acid equation is above the number.
+        self.assertGreater(result["rect"][1], 250)  # Exam instructions/header are excluded.
+        self.assertGreater(result["rect"][3], 690)  # Last subpart remains complete.
+        self.assertLess(result["rect"][3], 720)  # Copyright/footer is excluded.
+
     def test_mcq_refines_prior_includes_context_choices_graphics_and_stops_before_next_question(self):
         doc = fitz.open()
         page = doc.new_page(width=612, height=792)

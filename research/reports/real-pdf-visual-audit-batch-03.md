@@ -31,3 +31,31 @@ This batch covers shared answer sets, cross-page shared context, mathematical no
 4. The immediately preceding catalog page is inspected for a `Questions X-Y` shared group containing the target number. When found, its measured context is emitted as a separate, ordered, manual-review segment, including across source-PDF boundaries.
 
 All 13 detector tests pass after these changes, including real-PDF regressions for the 2021 FRQ continuation, the 1984 shared-answer crop, and the 2018 cross-page table.
+
+## Final visual re-check checkpoint
+
+Date: 2026-11-11 UTC. This checkpoint preserves the already completed final re-check; no pages were rendered or re-verified during checkpoint recovery. Per the operator's last checkpoint, all five questions below passed their final visual re-check (5/5).
+
+| Question | Final re-check | Coordinates retained from the audited proposal |
+|---|---|---|
+| mcq-2008-12-32 | Pass | page 32: [14, 53, 322, 294.7] |
+| mcq-1984-8-120 | Pass | page 120: [28.28, 389.22, 321.3, 761.25]; detector correction excludes printed page number from bottom-bound calculation |
+| frq-2021-1-399 | Pass | page 399: [0, 277.5, 594, 504.14]; page 400: [38.15, 57.72, 568.63, 471.98]; page 401: [38.34, 108.12, 552.27, 626.84]; continuation correction includes measured setup/equation context above the first subpart |
+| mcq-2018-17-1201 | Pass | page 1201: [26, 32.71, 301.77, 251.14]; previous-page shared stimulus remains a separate ordered segment and requires manual review |
+| mcq-2008-25-34 | Pass | page 34: [13.99, 55, 300.2, 291.48] |
+
+The coordinates above are the exact proposal coordinates already recorded in this audit. The saved detector changes address the FRQ continuation context, printed page-number exclusion, missing-graphics manual-review routing, and cross-page shared-group context. No replacement coordinate values were available in the current workspace, so this checkpoint does not claim new numeric values beyond the committed proposal.
+
+### Checksums and evidence identifiers
+
+- Proposal JSON SHA-256: fdf51e39d412e03df9a21ccbf9919aaa1a006562f6142ce10ad4e1aaca89df48 (unchanged from the initial audit).
+- Rendered evidence Git blob IDs (Git SHA-1 object identifiers):
+  - frq-2021-1-399-segment-1.png: ef59011fe32d5c7940e07925093c684448e80d4d
+  - frq-2021-1-399-segment-2.png: a8ba3331451e8825021e6eb7416b91fbd01c97e3
+  - frq-2021-1-399-segment-3.png: 4cc015c1c6f78b100825c02d8956350e39d720b3
+  - mcq-1984-8-120-segment-1.png: 8f45497b99df15072bdb39f2419d185de45bb8e7
+  - mcq-2008-12-32-segment-1.png: 827f8508ab7ca845bbc8ace7251d9c8167736952
+  - mcq-2008-25-34-segment-1.png: 06916e06193dda6971b69129ad01770069fee238
+  - mcq-2018-17-1201-segment-1.png: c83ff30ae7b0b968aeb42343eb0cdc258a2a7252
+
+The 5/5 final visual result is a preserved checkpoint from the prior operator report, not a new verification run in this session. The prior committed code checkpoint reports 13 detector tests passing. This update records the final visual status without repeating those checks.

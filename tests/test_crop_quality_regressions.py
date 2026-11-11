@@ -13,7 +13,7 @@ SPEC = importlib.util.spec_from_file_location("crop_quality_detector", ROOT / "r
 DETECTOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(DETECTOR)
 TARGETS = ["frq-2006-6-25", "mcq-2014-49-1464", "frq-2017-3-1157", "mcq-2002-7-606",
-           "mcq-2002-5-606", "mcq-2002-6-606", "frq-2011-1-1655"]
+           "mcq-2002-5-606", "mcq-2002-6-606", "frq-2011-1-1655", "frq-2008-4-896", "mcq-2018-4-1945"]
 
 
 class RealPdfCropQualityRegressions(unittest.TestCase):
@@ -145,6 +145,40 @@ class RealPdfCropQualityRegressions(unittest.TestCase):
             self.assertGreater(p1158["rect"][3], last_question_y)
         finally:
             doc.close()
+
+    def test_2008_frq_continuation_excludes_form_header_and_keeps_b_c(self):
+        q = self.question("frq-2008-4-896")
+        region = self.region("frq-2008-4-896", 897)
+        text = self.crop_text(897, region["rect"])
+        self.assertIn("Solid strontium hydroxide", text)
+        self.assertIn("barium chloride", text)
+        self.assertIn("What happens to the pH", text)
+        self.assertNotIn("2008 AP", text)
+        self.assertNotIn("Form B", text)
+        self.assertTrue(q["manualReview"])
+        doc, page = self.source_page(897)
+        try:
+            header_lines = [line for block in page.get_text("dict")["blocks"]
+                            for line in block.get("lines", [])
+                            if ("2008 AP" in "".join(span["text"] for span in line["spans"])
+                                or "FREE-RESPONSE QUESTIONS" in "".join(span["text"] for span in line["spans"]))]
+            self.assertGreaterEqual(len(header_lines), 2, "expected the split two-line exam header")
+            header_bottom = max(line["bbox"][3] for line in header_lines)
+            self.assertGreaterEqual(region["rect"][1], header_bottom + 3)
+        finally:
+            doc.close()
+
+    def test_catalog_id_prefix_type_mismatch_blocks_automatic_approval(self):
+        q = self.question("mcq-2018-4-1945")
+        region = self.region("mcq-2018-4-1945", 1945)
+        self.assertEqual(q["id"], "mcq-2018-4-1945")  # Preserve the source identity.
+        self.assertEqual(q["type"], "FRQ")
+        self.assertTrue(region["signals"]["questionIdTypeMismatch"])
+        self.assertTrue(region["manualReview"])
+        self.assertTrue(q["manualReview"])
+        text = self.crop_text(1945, region["rect"])
+        self.assertIn("spectrophotometrically determine", text)
+        self.assertIn("mass percent of Co", text)
 
     def test_2011_frq_excludes_download_footer_qr_and_unused_response_space(self):
         q = self.question("frq-2011-1-1655")

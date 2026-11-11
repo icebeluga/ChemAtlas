@@ -28,7 +28,7 @@ CONTEXT_CUE = re.compile(r"(?:equation|following|data|refer|table|graph|diagram|
 SHARED_GROUP = re.compile(r"^\s*questions?\s+(\d{1,3})\s*(?:-|–|to)\s*(\d{1,3})\s+(?:refer|use|are|will|should|answer)\b", re.I)
 PAGE_BOILERPLATE = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|(?:www\.|apcentral\.)?collegeboard\.com|Downloaded by\b|Scan to open on Studocu|lOMoARcPSD|^\s*Version\s+[A-Z]\s*$)", re.I)
 PAGE_FOOTER = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|S\s*T\s*O\s*P|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|collegeboard\.com|Web or Mass distribution prohibited|Unauthorized copying or reuse|Downloaded by\b|Scan to open on Studocu|lOMoARcPSD)", re.I)
-PAGE_HEADER = re.compile(r"(?:Unit\s+\d+\s+Progress\s+Check|Test\s+Booklet|AP\s+Chemistry\s+20\d{2}.*Free[- ]Response\s+Questions|^\s*(?:19|20)\d{2}\s+AP\s*$|^\s*®?\s*CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*CHEMISTRY\s*$|^\s*SECTION\s+[IVX]+\s*$|^\s*\d+\s+Questions\s*$)", re.I)
+PAGE_HEADER = re.compile(r"(?:Unit\s+\d+\s+Progress\s+Check|Test\s+Booklet|AP\s+Chemistry\s+20\d{2}.*Free[- ]Response\s+Questions|^\s*(?:19|20)\d{2}\s+AP\s*$|^\s*(?:19|20)\d{2}\s+AP\s*®?\s+CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS.*$|^\s*®?\s*CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS.*$|^\s*FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*CHEMISTRY\s*$|^\s*SECTION\s+[IVX]+\s*$|^\s*\d+\s+Questions\s*$)", re.I)
 QUESTION_INSTRUCTION = re.compile(
     r"^\s*Answer\s+Questions?\s+\d+(?:\s*[-–]\s*\d+)?\s+(?:below|in this part)\b.*(?:score weighting|percent|minutes?)?",
     re.I,
@@ -551,6 +551,9 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     visual = _visual_rects(page)
     text_chars = sum(len(line["text"]) for line in lines)
     question_type = question.get("type", "MCQ")
+    qid = str(question.get("id") or "").lower()
+    id_type_prefix = "MCQ" if qid.startswith("mcq-") else ("FRQ" if qid.startswith("frq-") else None)
+    question_id_type_mismatch = bool(id_type_prefix and id_type_prefix != str(question_type).upper())
     source_quality_flags = _source_quality_flags(page, lines)
     source_years = _source_years(lines)
     try:
@@ -1048,6 +1051,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "tableDependencyGraphics": len(table_dependency["boxes"]),
         "boxedStatementDependencyDetected": box_cue,
         "boxedStatementDependencyResolved": bool(semantic_tail) if box_cue and question_type == "FRQ" else None,
+        "questionIdTypeMismatch": question_id_type_mismatch,
+        "questionIdTypePrefix": id_type_prefix,
         "semanticTailLinesIncluded": len(semantic_tail),
     }
     # This is an evidence score, not a model-confidence claim. Text-poor scans are always
@@ -1071,7 +1076,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     manual = (region_text_chars < 25 or not anchor or score < 0.58 or choices_incomplete
               or ambiguous_linked_context or text_mismatch or graphics_missing
               or bool(source_quality_flags) or metadata_year_mismatch or suspicious_column_geometry
-              or unresolved_dependency or unresolved_boxed_statement or native_text_chars < 25)
+              or unresolved_dependency or unresolved_boxed_statement or native_text_chars < 25
+              or question_id_type_mismatch)
     reasons = []
     if text_chars < 25:
         reasons.append("Sparse extractable text on the page; likely scanned or image-only. OCR/manual boundary review is required.")
@@ -1103,6 +1109,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         reasons.append("The source contains answer-revealing annotations or answer-key markings; use a clean exam source before approval.")
     if metadata_year_mismatch:
         reasons.append(f"Source text identifies year(s) {source_years}, which do not match catalog year {metadata_year}; verify source provenance before approval.")
+    if question_id_type_mismatch:
+        reasons.append(f"Question ID prefix identifies {id_type_prefix}, while catalog type is {question_type}; verify record provenance without rewriting the ID.")
     if suspicious_column_geometry:
         reasons.append("Stored crop spans almost the full page while text analysis found multiple columns; verify the column boundary manually.")
     if question_type == "FRQ" and subparts == 0:

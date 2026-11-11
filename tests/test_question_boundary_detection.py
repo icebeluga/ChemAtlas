@@ -21,9 +21,12 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
             q = {"id": "frq-2005-1-6", "number": 1, "type": "FRQ", "pages": [6]}
             prior = {"page": 6, "rect": [0, 55, 612, 737]}
             result = DETECTOR.analyze_page(page, q, prior, [q], {}, 6)
+            crop_text = page.get_textbox(fitz.Rect(result["rect"]))
         self.assertEqual(result["signals"]["frqSubpartLabels"], ["a", "b", "c", "d", "e"])
-        self.assertLess(result["rect"][1], 300)  # Introductory acid equation is above the number.
-        self.assertGreater(result["rect"][1], 250)  # Exam instructions/header are excluded.
+        self.assertLess(result["rect"][1], 320)  # Introductory acid equation is above the number.
+        self.assertGreater(result["rect"][1], 295)  # Exam instructions/header are excluded.
+        self.assertIn("1.34", crop_text)  # The equation and Ka value remain.
+        self.assertNotIn("score weighting", crop_text)
         self.assertGreater(result["rect"][3], 690)  # Last subpart remains complete.
         self.assertLess(result["rect"][3], 720)  # Copyright/footer is excluded.
 

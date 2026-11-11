@@ -24,6 +24,10 @@ CONTEXT_CUE = re.compile(r"(?:equation|following|data|refer|table|graph|diagram|
 SHARED_GROUP = re.compile(r"^\s*questions?\s+(\d{1,3})\s*(?:-|–|to)\s*(\d{1,3})\s+(?:refer|use|are|will|should|answer)\b", re.I)
 PAGE_BOILERPLATE = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|Copyright|(?:www\.|apcentral\.)?collegeboard\.com|^\s*Version\s+[A-Z]\s*$)", re.I)
 PAGE_FOOTER = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|S\s*T\s*O\s*P|Copyright|collegeboard\.com|Web or Mass distribution prohibited|Unauthorized copying or reuse)", re.I)
+QUESTION_INSTRUCTION = re.compile(
+    r"^\s*Answer\s+Questions?\s+\d+(?:\s*[-–]\s*\d+)?\s+(?:below|in this part)\b.*(?:score weighting|percent|minutes?)?",
+    re.I,
+)
 
 
 def _rect(value: Any) -> fitz.Rect | None:
@@ -290,16 +294,25 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                              and a["rect"].y1 < anchor["rect"].y0
                              and _column_for((a["rect"].x0+a["rect"].x1)/2, columns) == column_index]
         prior_question_bottom = max((a["rect"].y1 for a in earlier_questions), default=-1)
+        instruction_bottom = max(
+            (line["rect"].y1 for line in lines
+             if line["rect"].y1 < anchor["rect"].y0
+             and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
+             and QUESTION_INSTRUCTION.search(line["text"])),
+            default=-1,
+        )
+        context_floor = max(prior_question_bottom, instruction_bottom)
         preceding = [line for line in lines
                      if 0 < anchor["rect"].y0 - line["rect"].y1 <= 130
                      and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
-                     and line["rect"].y0 >= prior_question_bottom
+                     and line["rect"].y0 >= context_floor
+                     and not QUESTION_INSTRUCTION.search(line["text"])
                      and CONTEXT_CUE.search(line["text"])]
         intro_context = preceding[-3:]
         context_visual = [box for box in visual
                           if 0 < anchor["rect"].y0 - box.y1 <= 140
                           and _column_for((box.x0+box.x1)/2, columns) == column_index
-                          and box.y0 >= prior_question_bottom]
+                          and box.y0 >= context_floor]
         top = anchor["rect"].y0 - 14
         if target_group and target_group["rect"].y0 < anchor["rect"].y0:
             top = min(top, target_group["rect"].y0 - 12)

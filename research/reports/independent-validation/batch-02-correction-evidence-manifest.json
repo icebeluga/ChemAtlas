@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "frozenOldDetectorCommit": "acfead30f34ce9e48842c6c4b663bc358b7f1fac",
+  "frozenOldDetectorSha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+  "correctedDetectorSha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+  "baselineAndPostFixTestRun": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0,
+    "elapsedSeconds": 19.285,
+    "tesseractDependentCaseExecuted": true,
+    "tesseractVersion": "5.5.0"
+  },
+  "visualStatus": "Original and corrected page/crop comparison panels visually inspected. Corrected boundary excludes lower-page Studocu footer/QR overlay while retaining the complete PES graph and subparts.",
+  "files": [
+    {
+      "path": "research/detect_question_boundaries.py",
+      "sha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+      "bytes": 78174
+    },
+    {
+      "path": "tests/test_crop_quality_regressions.py",
+      "sha256": "e84479d07ae31f4d094963f576c5f46cd60dc96b31331c5776364257085c2ac1",
+      "bytes": 10944
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-frozen-results.json",
+      "sha256": "6470b28414e4af59522e1d57381dd0944be7aa9d42ace0f1d7d49a01817a9d7d",
+      "bytes": 2842
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-proposals.json",
+      "sha256": "43c4b2294fb698e59a64682cff625d875719e63dd3b5f735202d01d506311c60",
+      "bytes": 13050
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-development-proposal.json",
+      "sha256": "00460bcfb593987fea19bb6e7e8f0ae7c79f0c331b851a0d23993385ef707ffc",
+      "bytes": 2737
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-panels/frq-2011-1-1655-segment-1.png",
+      "sha256": "382f85135527fc70ef66a67a40b6e96574b5fe05cbc7d1bbe3a8c0dd7f285b44",
+      "bytes": 588038
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-development-panels/frq-2011-1-1655-segment-1.png",
+      "sha256": "e1c539033c71605002b75b5c519c34faa367db286c75839a07c40390cb1cfa1b",
+      "bytes": 549756
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-lock.json",
+      "sha256": "7e4eff3ff8544d802e4424441ef2329c775aab619dbc12dc63be1a795272f6d2",
+      "bytes": 2575
+    },
+    {
+      "path": "research/reports/independent-validation/preregistered-sample-40.json",
+      "sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+      "bytes": 26945
+    },
+    {
+      "path": "public/source/bank-06.pdf",
+      "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+      "bytes": 11859257
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-correction-checkpoint.md",
+      "sha256": "f8c4780ee643504377f694680f2c3a087033d353c2f8e04ed1ea66be051333c7",
+      "bytes": 3520
+    }
+  ]
+}

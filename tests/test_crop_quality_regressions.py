@@ -13,7 +13,7 @@ SPEC = importlib.util.spec_from_file_location("crop_quality_detector", ROOT / "r
 DETECTOR = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(DETECTOR)
 TARGETS = ["frq-2006-6-25", "mcq-2014-49-1464", "frq-2017-3-1157", "mcq-2002-7-606",
-           "mcq-2002-5-606", "mcq-2002-6-606"]
+           "mcq-2002-5-606", "mcq-2002-6-606", "frq-2011-1-1655"]
 
 
 class RealPdfCropQualityRegressions(unittest.TestCase):
@@ -143,6 +143,30 @@ class RealPdfCropQualityRegressions(unittest.TestCase):
             self.assertIsNotNone(first_response_line, "expected scanned answer-writing rule below the last subpart")
             self.assertLess(p1158["rect"][3], first_response_line)
             self.assertGreater(p1158["rect"][3], last_question_y)
+        finally:
+            doc.close()
+
+    def test_2011_frq_excludes_download_footer_qr_and_unused_response_space(self):
+        q = self.question("frq-2011-1-1655")
+        region = self.region("frq-2011-1-1655", 1655)
+        rect = fitz.Rect(region["rect"])
+        text = self.crop_text(1655, region["rect"])
+        for phrase in ("Bromine is the only nonmetal", "complete ground-state electron configuration",
+                       "photoelectron spectrum", "Circle the peak", "Explain your reasoning"):
+            self.assertIn(phrase, text)
+        for footer in ("Downloaded by", "Scan to open", "Studocu", "lOMoARcPSD"):
+            self.assertNotIn(footer, text)
+        self.assertFalse(region["manualReview"])
+        self.assertLess(rect.y1, 660, "crop should stop after question content, before footer/response space")
+        doc, page = self.source_page(1655)
+        try:
+            images = [fitz.Rect(item["bbox"]) for item in page.get_image_info()]
+            graph = next(box for box in images if box.y0 < 500 and box.y1 > 500)
+            footer_images = [box for box in images if box.y0 > 700]
+            self.assertTrue(rect.contains(graph), "the complete photoelectron spectrum must remain")
+            self.assertTrue(footer_images, "expected source footer/QR imagery in the original page")
+            self.assertTrue(all(not rect.intersects(box) for box in footer_images),
+                            "crop must exclude source-platform logo and QR footer imagery")
         finally:
             doc.close()
 

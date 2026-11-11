@@ -3,7 +3,7 @@
   "caseId": "mcq-2024-23-2090",
   "caseStatus": "development data; excluded from independent validation for this and later detector revisions",
   "parentCommit": "90151a1643c2f613c4e92633bf3be07c23c193b2",
-  "detectorSha256": "b6190120574ac7f3f68a0d631a031b9e81c4dc8dc197aa19ddd18619d3302f63",
+  "detectorSha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
   "sourcePdf": "public/source/bank-07.pdf",
   "sourcePdfSha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
   "originalFrozenFailurePreserved": true,
@@ -27,7 +27,7 @@
       "confidence": 0.42,
       "confidenceBand": "low",
       "manualReview": true,
-      "visualContent": "Shared-group text and complete four-row acid table, including closing rule."
+      "content": "Shared group direction and complete four-row acid table with lower border."
     },
     {
       "order": 2,
@@ -37,50 +37,46 @@
         24.0,
         61.5,
         299.62,
-        214.5
+        201.5
       ],
       "confidence": 0.18,
       "confidenceBand": "low",
       "manualReview": true,
-      "visualContent": "Visually identified Question 23 stem and choices A-D; OCR read number 21 and catalog stem does not match."
+      "content": "Visually identified Q23 stem and A-D choices; OCR question number and catalog stem do not independently confirm identity."
     }
   ],
   "visualVerdict": {
-    "contentCompleteness": "complete for Q23 by direct comparison to source pages",
-    "cropCleanliness": "clean; excludes Q22, Q24, Q25, page numbers, Studocu footer, QR, and excess blank page area",
-    "readability": "legible though scan text is soft; no evidence of answer marking over Q23 or the shared table",
-    "reviewRouting": "manual review required; OCR/catalog evidence does not independently validate the identity; no auto-approval"
+    "contentCompleteness": "Q23 complete by direct visual comparison to source pages",
+    "cropCleanliness": "Q23 segments exclude adjacent question bodies, page numbers, footer, QR and excess blank space",
+    "readability": "scan text soft but legible; no answer marking over retained content",
+    "reviewRouting": "manual review required due OCR/catalog identity mismatch and raster source"
   },
+  "boundedNeighborDevelopmentCases": [
+    "mcq-2024-24-2090",
+    "mcq-2024-25-2090"
+  ],
+  "neighborFinding": "Q23-Q25 share a systematic one-page catalog association discrepancy. Q24/Q25 text candidates are visually complete/clean but remain manual because raster graphics are unverified.",
   "tests": {
     "command": "python -m unittest discover -s tests -v",
-    "passed": 39,
+    "passed": 41,
     "failed": 0,
     "skipped": 0,
     "tesseractScannedPageRegression": "executed"
   },
-  "boundedNeighborDiagnostic": {
-    "questionIds": [
-      "mcq-2024-21-2091",
-      "mcq-2024-22-2090",
-      "mcq-2024-23-2090",
-      "mcq-2024-24-2090",
-      "mcq-2024-25-2090",
-      "mcq-2024-26-2092"
-    ],
-    "finding": "Q23-Q25 cataloged on 2090 have bodies on scanned page 2091; Q24/Q25 candidates remain manual and their current bounds are too tall, so not successful extractions. Adjacent shared-group mapping issue is systematic for this group."
-  },
   "artifactSha256": {
-    "research/detect_question_boundaries.py": "b6190120574ac7f3f68a0d631a031b9e81c4dc8dc197aa19ddd18619d3302f63",
-    "tests/test_adjacent_page_association.py": "27bad2f9b293995b21202edd76ab91d0430492dbd80849dcbb66249a40c8af16",
+    "research/detect_question_boundaries.py": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+    "tests/test_adjacent_page_association.py": "f06deb74869585a76fd23f1201f1e84ca2d58e1b7f2f823c5b2e78e43de8f15b",
     "public/source/bank-07.pdf": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
     "public/questions.json": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe",
     "research/reports/independent-validation/batch-04-proposals.json": "9997613525b5d885d57d409cf2f449330b9d5a2c628e382559ece26f0f934792",
     "research/reports/independent-validation/batch-04-lock.json": "5088e83c503b0cd06ee224ae9f0fb040e0c25ebbd002bb55699826346a5a8991",
-    "research/reports/independent-validation/batch-04-development-proposal.json": "7f8f7edb9203f9e5a3812571c5c504bd52c72e3d65f38bc1e93ed7338051732b",
-    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-1.png": "5cac1ce3a4a1fd83e7293fc13acb1cbc59c0e154755b0b9c298a11977dd494d8",
-    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-2.png": "956c171584a76579eeceac5380173c51e86c130008c3bdb535b43790611345e5",
-    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-corrected.pdf": "6b01cc3a180980cae9b659c4293cd595acc2b352ba4a8bbdc4e17d22128452c3",
+    "research/reports/independent-validation/batch-04-development-proposal.json": "a7d72e517149c3655624931e51a695a3e3fcdd5f69ea2c7a1a03977ff4199937",
+    "research/reports/independent-validation/batch-04-development-report.md": "164a00652e467f21648841cde130b8c3226f92a7a0493fd5d0a21c8c28cc89a3",
+    "research/reports/independent-validation/batch-04-neighbor-development-proposals.json": "f088558e6d640b03eef8bb4bcd88ecee8e21967e92751367cdc24aed7b57a1ea",
     "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-1.jpg": "e87b27bda1d30b54629b6180e4c1759f53e920cbaecaee89911939b8afef9a3c",
-    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-2.jpg": "beafffe284919a09cabf12db575948e3f269f4065feb00e7fd9767b5815cf567"
+    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-2.jpg": "ae1f4fbde4594ee7f7b8a9d30c988b795325f76cebca9fdaa39a5016da727498",
+    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-corrected.pdf": "48561e710189f2acfb3abf39a4c531ad8bf6263de417b26cbb895afe1b6077ed",
+    "research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-24-2090-segment-2.jpg": "0c067347283a86c21c092015c3053bd62ff1ef098134e5c5ae9500ced59a5979",
+    "research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-25-2090-segment-2.jpg": "e7e0f4e78d0c2cf0e153e26430d216c5caa71b00a24422f0a633387e49583f03"
   }
 }

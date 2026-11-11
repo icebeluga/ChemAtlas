@@ -65,6 +65,22 @@ class AdjacentPageAssociationRegressions(unittest.TestCase):
         finally:
             document.close()
 
+    def test_adjacent_shared_group_candidates_trim_footer_and_stay_manual(self):
+        for qid in ("mcq-2024-24-2090", "mcq-2024-25-2090"):
+            question = self.proposed_by_id[qid]
+            body = next(r for r in question["regions"] if r.get("segmentRole") == "questionBody")
+            self.assertEqual(body["page"], 2091)
+            self.assertLess(body["rect"][3], 500, f"{qid} should not retain the lower page footer/blank area")
+            self.assertTrue(body["signals"]["rasterGraphicsUnverified"])
+            self.assertTrue(body["manualReview"])
+
+    def test_right_column_stem_number_is_inside_candidate_bounds(self):
+        body = next(r for r in self.proposed_by_id["mcq-2024-25-2090"]["regions"]
+                    if r.get("segmentRole") == "questionBody")
+        self.assertLessEqual(body["rect"][0], 310,
+                             "right-column crop must include the printed question-number glyph at the gutter")
+        self.assertTrue(body["manualReview"])
+
     def test_unmeasurable_frq_continuation_rejects_prior_as_crop(self):
         document = fitz.open()
         page = document.new_page(width=612, height=792)

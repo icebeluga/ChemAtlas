@@ -642,10 +642,17 @@ def _adjacent_shared_question_candidate(page: fitz.Page, question: dict[str, Any
     for line in body_lines[1:]:
         union |= line["rect"]
     # Full-page scan imagery carries the diagrams, if any. Bound its retained
-    # area to this question column and the text-defined question interval.
+    # area to this question column. Trim its bottom edge to measured content
+    # rather than carrying blank answer space or the page footer along. Since
+    # raster graphics cannot be separated safely from the scan here, keep the
+    # proposal manual and report that limitation explicitly.
     if _is_full_page_raster(page):
-        candidate = fitz.Rect(max(page.rect.x0, col_x0 + 24), start_y,
-                              min(page.rect.x1, col_x1 - 5), max(start_y + 12, bottom))
+        content_bottom = min(bottom, union.y1 + 12)
+        # The right-column stem number may sit close to the inferred gutter;
+        # use a smaller gutter inset there so the first digit is retained.
+        column_inset = 24 if chosen.get("column", 0) == 0 else 4
+        candidate = fitz.Rect(max(page.rect.x0, col_x0 + column_inset), start_y,
+                              min(page.rect.x1, col_x1 - 5), max(start_y + 12, content_bottom))
     else:
         local_visual = [box for box in _visual_rects(page)
                         if box.y1 >= start_y and box.y0 < bottom
@@ -701,6 +708,7 @@ def _adjacent_shared_question_candidate(page: fitz.Page, question: dict[str, Any
             "textCharacters": sum(len(line["text"]) for line in body_lines),
             "nativeTextCharacters": native_chars, "ocrUsed": ocr_used,
             "fullPageRaster": _is_full_page_raster(page), "columnCount": 2 if chosen.get("columnSplit") else 1,
+            "rasterGraphicsUnverified": _is_full_page_raster(page),
             "sourceQualityFlags": _source_quality_flags(page, lines),
             # No source-year conflict was observed here; the discrepancy is
             # specifically the catalog page association (tracked separately).
@@ -711,7 +719,8 @@ def _adjacent_shared_question_candidate(page: fitz.Page, question: dict[str, Any
         "reasons": [
             "The target body is absent from its catalog page; this adjacent-page proposal follows the declared shared-question sequence.",
             "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required.",
-        ] + (["All four answer-option contents were detected in order."] if option_content_complete else
+        ] + (["The page is a full-page raster; inspect the original scan for any non-text graphics not measured by OCR."]
+             if _is_full_page_raster(page) else []) + (["All four answer-option contents were detected in order."] if option_content_complete else
              (["OCR did not confirm a complete A–D answer-choice sequence; inspect the scan manually."] if not choice_sequence else [])),
     }
 

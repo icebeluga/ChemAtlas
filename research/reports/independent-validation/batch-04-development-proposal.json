@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "method": "pymupdf-text-layout-plus-page-graphics",
+  "method": "OCR geometry plus full-page raster detection; adjacent candidate remains manual",
   "questionCount": 1,
   "manualReviewCount": 1,
   "questions": [
@@ -63,7 +63,7 @@
             24.0,
             61.5,
             299.62,
-            214.5
+            201.5
           ],
           "segmentRole": "questionBody",
           "sharedContextId": "ec69a542a2e8da28",
@@ -102,6 +102,7 @@
             "ocrUsed": true,
             "fullPageRaster": true,
             "columnCount": 2,
+            "rasterGraphicsUnverified": true,
             "sourceQualityFlags": [],
             "sourceMetadataMismatch": false,
             "catalogPageAssociationMismatch": true,
@@ -112,7 +113,8 @@
           },
           "reasons": [
             "The target body is absent from its catalog page; this adjacent-page proposal follows the declared shared-question sequence.",
-            "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required."
+            "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required.",
+            "The page is a full-page raster; inspect the original scan for any non-text graphics not measured by OCR."
           ]
         }
       ],
@@ -121,8 +123,8 @@
       "confidence": 0.18
     }
   ],
-  "detectorParentCommit": "90151a1643c2f613c4e92633bf3be07c23c193b2",
-  "detectorSha256": "b6190120574ac7f3f68a0d631a031b9e81c4dc8dc197aa19ddd18619d3302f63",
+  "detectorParentCommit": "d1f14d4ecedc70a26c514c7af2c1fadcdbc57843",
+  "detectorSha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
   "selectionLock": "research/reports/independent-validation/batch-04-lock.json",
   "developmentCase": true,
   "preservedOriginalFailure": "research/reports/independent-validation/batch-04-proposals.json"

@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "method": "bounded bank-07 adjacent-page diagnostic; development only",
+  "questionCount": 2,
+  "manualReviewCount": 2,
+  "questions": [
+    {
+      "id": "mcq-2024-24-2090",
+      "type": "MCQ",
+      "number": 24,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 2090,
+          "rect": [
+            37.0,
+            50.5,
+            562.5,
+            244.0
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 1,
+          "confidence": 0.42,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "context-only",
+          "signals": {
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "sharedContextOnly": true,
+            "questionStartFound": false,
+            "targetQuestionFound": false,
+            "precedingGroupQuestionNumbers": [
+              22
+            ],
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "pageAssociationUnresolved": true,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true
+          },
+          "reasons": [
+            "Shared context for Questions 22\u201325 is bounded separately; the requested question body was not found on this page.",
+            "Search adjacent source pages and verify the page association before approval.",
+            "The scanned source requires visual review; OCR is used for geometry only."
+          ],
+          "priorRect": [
+            20.0,
+            45.0,
+            575.0,
+            797.0
+          ]
+        },
+        {
+          "page": 2091,
+          "rect": [
+            24.0,
+            214.5,
+            299.62,
+            339.5
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 2,
+          "confidence": 0.18,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "candidate-needs-manual-verification",
+          "priorRect": null,
+          "signals": {
+            "questionStartFound": false,
+            "questionNumberExactMatch": false,
+            "candidateQuestionNumber": null,
+            "groupOrderCandidate": true,
+            "groupSequenceOrdinal": 1,
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "neighboringQuestionContextVerified": true,
+            "catalogStemContentMatch": false,
+            "catalogStemTokenCoverage": 0.5,
+            "answerChoiceMarkers": 4,
+            "answerChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "answerChoiceSequence": true,
+            "answerOptionContent": [],
+            "textCharacters": 97,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "columnCount": 2,
+            "rasterGraphicsUnverified": true,
+            "sourceQualityFlags": [],
+            "sourceMetadataMismatch": false,
+            "catalogPageAssociationMismatch": true,
+            "catalogSourcePages": [
+              2090
+            ],
+            "detectedSourcePage": 2091
+          },
+          "reasons": [
+            "The target body is absent from its catalog page; this adjacent-page proposal follows the declared shared-question sequence.",
+            "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required.",
+            "The page is a full-page raster; inspect the original scan for any non-text graphics not measured by OCR."
+          ]
+        }
+      ],
+      "extractionStatus": "candidate-needs-manual-verification",
+      "manualReview": true,
+      "confidence": 0.18
+    },
+    {
+      "id": "mcq-2024-25-2090",
+      "type": "MCQ",
+      "number": 25,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 2090,
+          "rect": [
+            37.0,
+            50.5,
+            562.5,
+            244.0
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 1,
+          "confidence": 0.42,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "context-only",
+          "signals": {
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "sharedContextOnly": true,
+            "questionStartFound": false,
+            "targetQuestionFound": false,
+            "precedingGroupQuestionNumbers": [
+              22
+            ],
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "pageAssociationUnresolved": true,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true
+          },
+          "reasons": [
+            "Shared context for Questions 22\u201325 is bounded separately; the requested question body was not found on this page.",
+            "Search adjacent source pages and verify the page association before approval.",
+            "The scanned source requires visual review; OCR is used for geometry only."
+          ],
+          "priorRect": [
+            20.0,
+            45.0,
+            575.0,
+            797.0
+          ]
+        },
+        {
+          "page": 2091,
+          "rect": [
+            308.62,
+            60.5,
+            590.0,
+            183.5
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "ec69a542a2e8da28",
+          "segmentOrder": 2,
+          "confidence": 0.18,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "extractionStatus": "candidate-needs-manual-verification",
+          "priorRect": null,
+          "signals": {
+            "questionStartFound": true,
+            "questionNumberExactMatch": true,
+            "candidateQuestionNumber": 25,
+            "groupOrderCandidate": true,
+            "groupSequenceOrdinal": 2,
+            "sharedQuestionRange": [
+              22,
+              25
+            ],
+            "neighboringQuestionContextVerified": true,
+            "catalogStemContentMatch": false,
+            "catalogStemTokenCoverage": 0.5,
+            "answerChoiceMarkers": 1,
+            "answerChoiceLabels": [
+              "A"
+            ],
+            "answerChoiceSequence": false,
+            "answerOptionContent": [],
+            "textCharacters": 204,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "columnCount": 2,
+            "rasterGraphicsUnverified": true,
+            "sourceQualityFlags": [],
+            "sourceMetadataMismatch": false,
+            "catalogPageAssociationMismatch": true,
+            "catalogSourcePages": [
+              2090
+            ],
+            "detectedSourcePage": 2091
+          },
+          "reasons": [
+            "The target body is absent from its catalog page; this adjacent-page proposal follows the declared shared-question sequence.",
+            "The scan/OCR or catalog text did not independently confirm the target number and stem; manual verification is required.",
+            "The page is a full-page raster; inspect the original scan for any non-text graphics not measured by OCR.",
+            "OCR did not confirm a complete A\u2013D answer-choice sequence; inspect the scan manually."
+          ]
+        }
+      ],
+      "extractionStatus": "candidate-needs-manual-verification",
+      "manualReview": true,
+      "confidence": 0.18
+    }
+  ],
+  "detectorParentCommit": "d1f14d4ecedc70a26c514c7af2c1fadcdbc57843",
+  "detectorSha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+  "developmentOnly": true,
+  "notIndependentValidation": true
+}

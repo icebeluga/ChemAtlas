@@ -126,6 +126,21 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
             self.assertTrue(result["regions"][1]["manualReview"])
             self.assertEqual(result["manualReview"], True)
 
+    def test_apply_high_confidence_writes_only_unambiguous_question_regions(self):
+        catalog = {"questions": [
+            {"id": "good", "sourceRegions": [{"page": 1, "rect": [0, 0, 1, 1]}]},
+            {"id": "manual", "sourceRegions": [{"page": 2, "rect": [0, 0, 2, 2]}]},
+        ]}
+        proposals = {"questions": [
+            {"id": "good", "regions": [{"page": 1, "rect": [5, 6, 70, 80], "confidenceBand": "high", "manualReview": False}]},
+            {"id": "manual", "regions": [{"page": 2, "rect": [1, 1, 3, 3], "confidenceBand": "medium", "manualReview": True}]},
+        ]}
+        updated, applied = DETECTOR.apply_high_confidence(catalog, proposals)
+        self.assertEqual(applied, 1)
+        self.assertEqual(updated["questions"][0]["sourceRegions"], [{"page": 1, "rect": [5, 6, 70, 80]}])
+        self.assertEqual(updated["questions"][1]["sourceRegions"], catalog["questions"][1]["sourceRegions"])
+        self.assertEqual(catalog["questions"][0]["sourceRegions"], [{"page": 1, "rect": [0, 0, 1, 1]}])
+
 
 if __name__ == "__main__":
     unittest.main()

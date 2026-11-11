@@ -56,3 +56,18 @@ A fresh export after the successful restore verified:
 The existing branch test files were run against an isolated temporary store and synthetic catalog: `node --test tests/question-review-backup.test.mjs tests/question-image-review.integration.test.mjs` — 11 passed. Coverage includes saving a changed crop as a replacement image revision and invalidating its prior approval, invalidating dependent MCQ approval when a shared stimulus changes, local backup export/import round-trip and conflict protection, and version-2 image manifest byte-length/SHA-256 validation.
 
 Still unverified: browser-level PDF.js crop editing and raster regeneration end to end on a separate isolated preview. That UI path was not exercised against the genuine hosted records. A separate re-import of the fresh production export was also not run against D1/R2; the production import route was verified by the requested baseline restore, and backup round-trip behavior was exercised in the isolated test suite. Phase 3, the published ChemAtlas Site, and GitHub `main` were not touched.
+
+
+Verified hosted image references from the post-restore export:
+
+| Entity | Revision / segment | API image reference | Bytes | SHA-256 |
+|---|---|---|---:|---|
+| `stimulus-2008-mcq-1-3-page29` | `r43aa0acd` / 1 | `/_stimulus-stimulus-2008-mcq-1-3-page29/r43aa0acd-segment-1.png` | 23,695 | `62406df86c495d646980845ddebc6a5d01d707bfdce2463eaa8e2e004528fafb` |
+| `frq-2005-1-6` | `r7a97d6df` / 1 | `/frq-2005-1-6/r7a97d6df-segment-1.png` | 220,639 | `c0b5dd879cc245ab3f9ea0a9f5edfc2c4f2613546d787cb175427c0d91372f92` |
+| `frq-2005-3-8` | `r86a14332` / 1 | `/frq-2005-3-8/r86a14332-segment-1.png` | 157,718 | `e7d8acc7a62bb1c6c85af497d9f8c024821a5133f2796ce673666b7bf60e6be0` |
+| `frq-2005-3-8` | `r86a14332` / 2 | `/frq-2005-3-8/r86a14332-segment-2.png` | 91,278 | `5836da326e30bc11575c6433b592ab1e77515ab96afcd796c7a25690cad8580b` |
+| `mcq-2008-1-29` | `rd9a187c` / 1 | `/mcq-2008-1-29/rd9a187c-segment-1.png` | 10,057 | `f504fb887c129f4c1486e8ad44af4bb50a899db6977f79dc24b540315af5869d` |
+| `mcq-2008-69-44` | `rc18c0a3c` / 1 | `/mcq-2008-69-44/rc18c0a3c-segment-1.png` | 30,573 | `06756c72f3ec0fa471f93e83dfec30a0e66e702650c800fb44998620c1e25294` |
+| `mcq-2024-12-2084` | `rb7fe7c21` / 1 | `/mcq-2024-12-2084/rb7fe7c21-segment-1.png` | 586,946 | `51311a6a98d0e0861dfebcfbba6437aa4cbbd048eca4490fcefef8dd66c5b2a3` |
+
+The manifest API references add the prefix `/api/admin/question-review/image`; the stimulus segment uses the `_stimulus-` folder shown above. These references resolve to the seven archive paths and every file matches the exported byte length and SHA-256.

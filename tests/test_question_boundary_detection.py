@@ -47,6 +47,20 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
         self.assertGreater(result["rect"][3], 300)  # Graph and all (c) work remain.
         self.assertLess(result["rect"][3], 360)  # Exam stop/footer area is excluded.
 
+    def test_real_2006_frq_excludes_symbol_copyright_footer(self):
+        source = ROOT / "public/source/bank-01.pdf"
+        if not source.exists():
+            self.skipTest("Original bank-01.pdf is not available in this checkout.")
+        with fitz.open(source) as doc:
+            page = doc.load_page(19)  # Catalog page 20; printed 2006 FRQ Question 1.
+            q = {"id": "frq-2006-1-20", "number": 1, "type": "FRQ", "pages": [20]}
+            prior = {"page": 20, "rect": [0, 55, 612, 737]}
+            result = DETECTOR.analyze_page(page, q, prior, [q], {}, 20)
+            crop_text = page.get_textbox(fitz.Rect(result["rect"]))
+        self.assertIn("why a precipitate does not form", crop_text)
+        self.assertNotIn("All rights reserved", crop_text)
+        self.assertLess(result["rect"][3], 713.5)
+
     def test_mcq_refines_prior_includes_context_choices_graphics_and_stops_before_next_question(self):
         doc = fitz.open()
         page = doc.new_page(width=612, height=792)

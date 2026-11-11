@@ -20,10 +20,10 @@ Each page proposal includes:
 - `confidence`: a transparent 0–1 evidence score, not a calibrated probability.
 - `confidenceBand`: high (`>= 0.78`), medium (`>= 0.58`), or low.
 - `manualReview`: true for sparse text, a missing expected question start, or score below 0.58.
-- `signals`: text character count, exact start match count, next-boundary presence, detected answer-choice/subpart count and sequence, included graphics and shared stimuli, column count, and page rotation.
+- `signals`: candidate-crop and full-page text character counts, exact start match count, next-boundary presence, detected answer-choice/subpart count and sequence, included graphics and shared stimuli, column count, and page rotation.
 - `reasons`: human-readable signals and any limitation that triggered review.
 
-Score contributions are fixed and inspectable: question-start match 0.32; next-question boundary 0.18; at least 80 extractable text characters 0.18 (25–79 gives 0.08); a usable MCQ choice sequence or at least one FRQ subpart 0.14; page graphics or shared context 0.10; and a prior crop 0.08. Sparse-text pages are always manual-review cases. These thresholds are conservative routing rules and have not been statistically calibrated.
+Score contributions are fixed and inspectable: question-start match 0.32; next-question boundary 0.18; at least 80 candidate-crop text characters 0.18 (25–79 gives 0.08); a usable MCQ choice sequence or at least one FRQ subpart 0.14; page graphics or shared context 0.10; and a prior crop 0.08. Sparse-text pages are always manual-review cases. These thresholds are conservative routing rules and have not been statistically calibrated.
 
 ## Validation
 

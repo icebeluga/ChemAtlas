@@ -1,5 +1,11 @@
 # ChemAtlas Phase 2 recovery checkpoint
 
+## 2026-11-11 recovered workspace update
+
+A replacement workspace recovered the previously uncommitted detector, tests, all eight source PDFs, and full-corpus proposal artifacts. The recovered detector now has 9 passing tests, including two tests that open real 2005 AP Chemistry PDF pages. The most recent completed proposal artifact contains all 1,542 questions and 1,642 page segments, with 309 questions marked for manual review. The detector was edited once after that artifact was produced, so a fresh full-corpus run is still required.
+
+The previous contact sheets were not recovered, and the required 20-question tuning audit plus 10-question holdout audit remains incomplete. No hosted records were modified and Phase 3 was not started. See `research/reports/real-pdf-audit-recovery-checkpoint.md`.
+
 Date: 2026-11-11
 Working branch: work/automatic-pdf-boundaries
 Remote head before checkpoint: 5b75b4774fb257299a6bae062970cfadb95db664

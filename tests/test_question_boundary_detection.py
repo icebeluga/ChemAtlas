@@ -27,6 +27,23 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
         self.assertGreater(result["rect"][3], 690)  # Last subpart remains complete.
         self.assertLess(result["rect"][3], 720)  # Copyright/footer is excluded.
 
+    def test_real_2005_frq_continuation_uses_subparts_and_graphics_without_full_page_crop(self):
+        source = ROOT / "public/source/bank-01.pdf"
+        if not source.exists():
+            self.skipTest("Original bank-01.pdf is not available in this checkout.")
+        with fitz.open(source) as doc:
+            page = doc.load_page(8)  # Catalog page 9; continuation of 2005 FRQ Question 3.
+            q = {"id": "frq-2005-3-8", "number": 3, "type": "FRQ", "pages": [8, 9]}
+            prior = {"page": 9, "rect": [20, 40, 592, 737]}
+            result = DETECTOR.analyze_page(page, q, prior, [q], {}, 9)
+        self.assertTrue(result["manualReview"])
+        self.assertTrue(result["signals"]["continuationPageDetected"])
+        self.assertEqual(result["signals"]["frqSubpartLabels"], ["c"])
+        self.assertGreater(result["rect"][1], 40)
+        self.assertLess(result["rect"][1], 90)
+        self.assertGreater(result["rect"][3], 300)  # Graph and all (c) work remain.
+        self.assertLess(result["rect"][3], 360)  # Exam stop/footer area is excluded.
+
     def test_mcq_refines_prior_includes_context_choices_graphics_and_stops_before_next_question(self):
         doc = fitz.open()
         page = doc.new_page(width=612, height=792)

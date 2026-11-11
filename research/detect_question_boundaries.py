@@ -21,6 +21,7 @@ FRQ_START = re.compile(r"^\s*(?:question\s+)?(\d{1,2})\s*[.)]\s+(\S.*)$", re.I)
 CHOICE = re.compile(r"^\s*([A-E])\s*[.)]\s+\S", re.I)
 SUBPART = re.compile(r"^\s*(?:\(([a-h])\)|([a-h])[.)])\s+\S", re.I)
 CONTEXT_CUE = re.compile(r"(?:equation|following|data|refer|table|graph|diagram|reaction|based on|information|use the|shown|figure|below|above|at 25|[=⇌↔→Δ]|K[a-z]|pH|\b\d+(?:\.\d+)?\s*(?:mol|M|kJ|kPa|atm|°C))", re.I)
+PAGE_BOILERPLATE = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|Copyright|(?:www\.|apcentral\.)?collegeboard\.com)", re.I)
 
 
 def _rect(value: Any) -> fitz.Rect | None:
@@ -197,10 +198,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         top = max(bounds.y0, top)
         if next_start:
             bottom = next_start["rect"].y0 - 10
-        elif prior:
-            bottom = max(prior.y1, anchor["rect"].y1 + 28)
         else:
-            bottom = min(bounds.y1, anchor["rect"].y1 + 120)
+            # Existing coordinates are only an estimate. They must not extend a
+            # measured question back into a broad exam-header/page crop.
+            bottom = min(bounds.y1 - 28, anchor["rect"].y1 + 120)
     elif prior:
         top, bottom = prior.y0, prior.y1
     else:
@@ -208,10 +209,21 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                 "manualReview": True, "signals": {"textCharacters": text_chars, "questionStartFound": False},
                 "reasons": ["No usable stored crop or numbered question start was found; no page-sized crop was generated."]}
 
-    # Include source text and graphics within the candidate band and selected column.
-    # Keep a wider prior if it already contains content not visible to text extraction.
+    # Bound the question using extracted content in its column. Ignore standard
+    # page furniture and do not union broad legacy crop coordinates back into it.
+    body_lines = [line for line in lines
+                  if anchor and line["rect"].y1 >= anchor["rect"].y0 - 3
+                  and line["rect"].x0 < col_x1 and line["rect"].x1 > col_x0
+                  and line["rect"].y0 < bounds.y1 - 46
+                  and not PAGE_BOILERPLATE.search(line["text"])]
+    if next_start:
+        body_lines = [line for line in body_lines if line["rect"].y0 < next_start["rect"].y0 - 4]
+    if body_lines and not next_start:
+        bottom = min(bounds.y1 - 24, max(line["rect"].y1 for line in body_lines) + 18)
     band = fitz.Rect(col_x0, top, col_x1, max(top + 1, bottom))
-    included_text = [line for line in lines if line["rect"].intersects(band)]
+    included_text = [line for line in lines if line["rect"].intersects(band)
+                     and line["rect"].y0 < bounds.y1 - 46
+                     and not PAGE_BOILERPLATE.search(line["text"])]
     visual = _visual_rects(page)
     included_visual = [box for box in visual if box.intersects(band)]
     linked = _stimulus_context(question, stimuli, page_number)
@@ -220,13 +232,24 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         bottom = max(bottom, box.y1)
     if next_start:
         bottom = min(bottom, next_start["rect"].y0 - 10)
-    if prior:
-        # Don't discard vector/image-only material preserved by the editor's previous crop.
-        if not next_start:
-            top, bottom = min(top, prior.y0), max(bottom, prior.y1)
-        else:
-            top = min(top, prior.y0) if prior.y0 < (anchor["rect"].y0 if anchor else prior.y0) else top
-    visual_in_band = [box for box in visual if box.intersects(fitz.Rect(col_x0, top, col_x1, max(top+1,bottom)))]
+    if prior and next_start and anchor and 0 <= anchor["rect"].y0 - prior.y0 <= 150:
+        top = min(top, prior.y0)
+    body_text = [line for line in included_text
+                 if anchor and line["rect"].y1 >= anchor["rect"].y0 - 3
+                 and (not next_start or line["rect"].y0 < next_start["rect"].y0 - 4)]
+    visual_in_band = []
+    if body_text:
+        text_top = min(line["rect"].y0 for line in body_text)
+        text_bottom = max(line["rect"].y1 for line in body_text)
+        for box in visual:
+            if not box.intersects(fitz.Rect(col_x0, top, col_x1, max(top + 1, bottom))):
+                continue
+            # Skip page-wide decorative rules and distant objects; retain graphics
+            # overlapping or immediately adjacent to the measured question body.
+            if box.width / max(1, bounds.width) < .96 and box.y1 >= text_top - 96 and box.y0 <= text_bottom + 96:
+                visual_in_band.append(box)
+    elif linked:
+        visual_in_band = [box for box in visual if any(box.intersects(item) for item in linked)]
     content_boxes = [line["rect"] for line in included_text] + visual_in_band + linked + context_visual
     if anchor:
         content_boxes.append(anchor["rect"])
@@ -252,9 +275,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     candidate = _expand(fitz.Rect(left, max(bounds.y0, top), right, min(bounds.y1, max(top+1,bottom))),
                         0, 0, bounds)
     # Where a crop estimate is tighter than inferred content, include the full union.
-    if prior and not candidate.contains(prior) and not next_start:
-        candidate |= prior
-        candidate &= bounds
+    # A broad prior rectangle is evidence to inspect, not an automatic reason to
+    # re-expand a measured crop. Nearby PDF graphics are handled above.
 
     region_text_chars = sum(len(line["text"]) for line in included_text)
     choice_labels = []
@@ -311,7 +333,9 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     if not anchor:
         reasons.append("Expected numbered question start was not located near the metadata estimate.")
     if not next_start:
-        reasons.append("No subsequent question boundary was found on this page; the prior bottom or last detected content was retained conservatively.")
+        reasons.append("No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.")
+    if prior and (prior.y0 < candidate.y0 - 40 or prior.y1 > candidate.y1 + 40 or prior.width > candidate.width * 1.8):
+        reasons.append("Stored crop differs materially from the measured content region; inspect the proposal for image-only content.")
     if question_type == "MCQ" and choices < 3:
         reasons.append(f"Only {choices} distinct answer-choice markers were detected.")
     if question_type == "FRQ" and subparts == 0:

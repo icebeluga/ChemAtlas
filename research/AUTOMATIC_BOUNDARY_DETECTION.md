@@ -9,7 +9,17 @@ python research/detect_question_boundaries.py \
   --output /tmp/question-boundary-proposals.json
 ```
 
-The script uses each question's ID/type/number, page mapping, stored `sourceRegions`, and shared-stimulus links as its source selection and spatial prior. PyMuPDF extracts line-level text boxes, image placements, vector drawing bounds, and page rotation. It detects numbered question starts, metadata-matched next-question starts, MCQ A–E markers, and FRQ lettered subparts. It keeps multi-page records page by page and detects one or two text columns before locating the next boundary. Nearby equation/setup text and linked shared-stimulus regions are included above the question number where present.
+To prepare a separate catalog containing only high-confidence automatic updates (review it before replacing any catalog):
+
+```bash
+python research/detect_question_boundaries.py \
+  --root . --pdf-root public \
+  --output /tmp/question-boundary-proposals.json \
+  --apply-high-confidence \
+  --catalog-output /tmp/questions.with-boundary-proposals.json
+```
+
+The script uses each question's ID/type/number, page mapping, stored `sourceRegions`, and shared-stimulus links as its source selection and spatial prior. It can optionally write a separate catalog copy with only fully high-confidence, non-manual proposals applied; existing catalog files are never overwritten by that option. PyMuPDF extracts line-level text boxes, image placements, vector drawing bounds, and page rotation. It detects numbered question starts, metadata-matched next-question starts, MCQ A–E markers, and FRQ lettered subparts. It keeps multi-page records page by page and detects one or two text columns before locating the next boundary. Nearby equation/setup text and linked shared-stimulus regions are included above the question number where present.
 
 Scanned or image-only pages have no reliable text anchors. With a stored crop, the script returns that prior and sets `manualReview: true`; without one, `rect` is `null`. It never silently substitutes the full page. Rotation and multi-column evidence are recorded in each result.
 

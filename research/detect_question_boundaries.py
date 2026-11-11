@@ -256,6 +256,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         candidate |= prior
         candidate &= bounds
 
+    region_text_chars = sum(len(line["text"]) for line in included_text)
     choice_labels = []
     if question_type == "MCQ":
         for line in included_text:
@@ -275,7 +276,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     subparts = len(subpart_labels)
     subpart_sequence = len(subpart_labels) >= 1 and all(ord(b) == ord(a) + 1 for a, b in zip(subpart_labels, subpart_labels[1:]))
     signals = {
-        "textCharacters": text_chars,
+        "textCharacters": region_text_chars,
+        "pageTextCharacters": text_chars,
         "questionStartFound": bool(anchor),
         "questionStartMatches": len(matching),
         "nextQuestionBoundaryFound": bool(next_start),
@@ -295,15 +297,17 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     score = 0.0
     score += 0.32 if anchor else 0
     score += 0.18 if next_start else 0
-    score += 0.18 if text_chars >= 80 else (0.08 if text_chars >= 25 else 0)
+    score += 0.18 if region_text_chars >= 80 else (0.08 if region_text_chars >= 25 else 0)
     score += 0.14 if (choice_sequence if question_type == "MCQ" else subparts >= 1) else 0
     score += 0.10 if visual_in_band or linked else 0
     score += 0.08 if prior else 0
     score = round(min(1.0, score), 2)
-    manual = text_chars < 25 or not anchor or score < 0.58
+    manual = region_text_chars < 25 or not anchor or score < 0.58
     reasons = []
     if text_chars < 25:
-        reasons.append("Sparse extractable text; likely scanned or image-only page. OCR/manual boundary review is required.")
+        reasons.append("Sparse extractable text on the page; likely scanned or image-only. OCR/manual boundary review is required.")
+    elif region_text_chars < 25:
+        reasons.append("Very little extractable text falls inside this question crop; manual boundary review is required.")
     if not anchor:
         reasons.append("Expected numbered question start was not located near the metadata estimate.")
     if not next_start:

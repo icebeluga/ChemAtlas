@@ -139,7 +139,7 @@ def _content_lines(page: fitz.Page) -> tuple[list[dict[str, Any]], int, bool]:
 def _is_full_page_raster(page: fitz.Page) -> bool:
     bounds = page.rect * page.derotation_matrix if page.rotation else page.rect
     return any((box := _rect(image.get("bbox")))
-               and box.width >= bounds.width * .95
+               and box.width >= bounds.width * .90
                and box.height >= bounds.height * .90
                for image in page.get_image_info())
 
@@ -151,6 +151,13 @@ def _visual_rects(page: fitz.Page) -> list[fitz.Rect]:
         for image in page.get_image_info(xrefs=True):
             box = _rect(image.get("bbox"))
             if box and box.width > 2 and box.height > 2:
+                bounds = page.rect * page.derotation_matrix if page.rotation else page.rect
+                # The scan itself is a page-sized image, not a measured
+                # question graphic. Its pixel content is retained by the final
+                # crop rectangle, but its page-wide bbox must not expand that
+                # rectangle through response space and footer material.
+                if box.width >= bounds.width * .90 and box.height >= bounds.height * .90:
+                    continue
                 found.append(box)
     except (AttributeError, RuntimeError):
         pass
@@ -898,7 +905,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
             continuation_text = [line for line in lines
                                  if line["rect"].y1 >= continuation_top
                                  and line["rect"].y0 < stop_y - 3
-                                 and not PAGE_BOILERPLATE.search(line["text"])]
+                                 and not PAGE_BOILERPLATE.search(line["text"])
+                                 and not PAGE_HEADER.search(line["text"])
+                                 and not PAGE_FOOTER.search(line["text"])
+                                 and line is not continuation_header]
             labels = []
             for line in continuation_parts:
                 match = SUBPART_CONTINUATION.match(line["text"])
@@ -911,13 +921,27 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                    if box.y1 >= continuation_top
                                    and box.y0 < stop_y - 4
                                    and box.width < bounds.width * .97]
-            boxes = [line["rect"] for line in continuation_text] + visual_continuation
-            if boxes:
-                union = boxes[0]
-                for box in boxes[1:]:
-                    union |= box
-                candidate = _expand(union, 20, 16, bounds)
+            raster_graphics_unverified = _is_full_page_raster(page)
+            if raster_graphics_unverified:
+                # A single page image is not a useful graphic boundary. OCR
+                # text defines ordered question segments; a human must check
+                # the source scan for diagrams that OCR cannot bound.
+                visual_continuation = []
+            ordered_text = sorted(continuation_text, key=lambda line: (line["rect"].y0, line["rect"].x0))
+            text_groups: list[list[dict[str, Any]]] = []
+            if ordered_text and not raster_graphics_unverified:
+                # Text PDFs can place essential plots/tables between subparts;
+                # keep their continuation as one measured region with its
+                # detected graphics. Split only scanned pages, where a single
+                # raster bbox would otherwise include the entire response page.
+                text_groups = [ordered_text]
             else:
+                for line in ordered_text:
+                    if not text_groups or line["rect"].y0 - max(item["rect"].y1 for item in text_groups[-1]) > 120:
+                        text_groups.append([line])
+                    else:
+                        text_groups[-1].append(line)
+            if not text_groups:
                 # A prior rectangle is a diagnostic hint, not evidence that a
                 # continuation-page extraction succeeded. Never emit it as a
                 # crop when this page contains no measurable question content.
@@ -941,23 +965,58 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                 continuation_reasons.append("The source contains answer-revealing annotations or answer-key markings; use a clean exam source before approval.")
             if metadata_year_mismatch:
                 continuation_reasons.append(f"Source text identifies year(s) {source_years}, which do not match catalog year {metadata_year}; verify source provenance before approval.")
-            return {"page": page_number, "rect": [round(v, 2) for v in candidate],
-                    "confidence": score, "confidenceBand": "low", "manualReview": True,
-                    "signals": {"textCharacters": sum(len(line["text"]) for line in continuation_text),
-                                "pageTextCharacters": text_chars, "questionStartFound": False,
-                                "questionStartMatches": len(matching), "nextQuestionBoundaryFound": bool(later_questions),
-                                "answerChoiceMarkers": 0, "answerChoiceSequence": False,
-                                "frqSubpartMarkers": len(labels), "frqSubpartLabels": labels,
-                                "frqSubpartSequence": _subpart_sequence(labels),
-                                "graphicsIncluded": len(visual_continuation), "linkedStimulusRegions": 0,
-                                "columnCount": len(columns), "pageRotation": int(page.rotation),
-                                "continuationPageDetected": True,
-                                "introContextLinesIncluded": len(continuation_context),
-                                "sourceQualityFlags": source_quality_flags,
-                                "sourceYears": source_years,
-                                "catalogYear": metadata_year,
+            segment_regions = []
+            for segment_index, group in enumerate(text_groups):
+                group_boxes = [line["rect"] for line in group]
+                group_boxes.extend(box for box in visual_continuation
+                                   if min(item["rect"].y0 for item in group) - 8 <= box.y1
+                                   and max(item["rect"].y1 for item in group) + 8 >= box.y0)
+                union = group_boxes[0]
+                for box in group_boxes[1:]:
+                    union |= box
+                candidate = _expand(union, 18, 12, bounds)
+                segment_lines = [line for line in group]
+                segment_text = sum(len(line["text"]) for line in segment_lines)
+                segment_labels = []
+                for line in segment_lines:
+                    match = SUBPART_CONTINUATION.match(line["text"])
+                    if match:
+                        label = (match.group(1) or match.group(2)).lower()
+                        if label not in segment_labels:
+                            segment_labels.append(label)
+                segment_regions.append({
+                    "page": page_number, "rect": [round(v, 2) for v in candidate],
+                    "confidence": 0.36 if segment_text >= 25 else 0.08,
+                    "confidenceBand": "low", "manualReview": True,
+                    "segmentRole": "questionBody", "extractionStatus": "continuation-segment-needs-manual-verification",
+                    "signals": {"textCharacters": segment_text, "questionStartFound": False,
+                                "continuationPageDetected": True, "continuationSegmentIndex": segment_index + 1,
+                                "continuationSegmentCount": len(text_groups), "frqSubpartLabels": segment_labels,
+                                "graphicsIncluded": len(visual_continuation),
+                                "rasterGraphicsUnverified": raster_graphics_unverified,
+                                "priorRegionRejected": bool(prior), "sourceQualityFlags": source_quality_flags,
+                                "sourceYears": source_years, "catalogYear": metadata_year,
                                 "sourceMetadataMismatch": metadata_year_mismatch},
-                    "reasons": continuation_reasons}
+                    "reasons": continuation_reasons + (["Blank response space and page furniture were excluded; check the original scan for any non-text figure that OCR cannot bound."]
+                                                          if raster_graphics_unverified else [])
+                })
+            primary = segment_regions[0]
+            primary["signals"].update({"pageTextCharacters": text_chars, "questionStartMatches": len(matching),
+                                      "answerChoiceMarkers": 0, "answerChoiceSequence": False,
+                                      "pageSubpartLabels": labels,
+                                      "linkedStimulusRegions": 0, "columnCount": len(columns),
+                                      "pageRotation": int(page.rotation), "introContextLinesIncluded": len(continuation_context)})
+            if not raster_graphics_unverified:
+                # Preserve the existing whole-page signal contract for text
+                # PDFs, where the continuation remains one region.
+                primary["signals"].update({"frqSubpartMarkers": len(labels),
+                                           "frqSubpartLabels": labels,
+                                           "frqSubpartSequence": _subpart_sequence(labels)})
+            if len(segment_regions) > 1:
+                primary["additionalRegions"] = segment_regions[1:]
+            return {**primary,
+                    "confidence": score, "confidenceBand": "low", "manualReview": True,
+                    "signals": primary["signals"], "reasons": continuation_reasons}
         return {"page": page_number, "rect": None, "priorRect": [round(v, 2) for v in prior] if prior else None,
                 "confidence": 0.08 if prior else 0.0, "confidenceBand": "low", "manualReview": True,
                 "extractionStatus": "unresolved", "signals": {"textCharacters": text_chars, "questionStartFound": False,

@@ -19,6 +19,7 @@ class AdjacentPageAssociationRegressions(unittest.TestCase):
         cls.by_id = {q["id"]: q for q in cls.catalog["questions"]}
         selected = [cls.by_id[f"mcq-2024-{n}-" + ("2091" if n == 21 else "2090" if n <= 25 else "2092")]
                     for n in range(21, 27)]
+        selected.append(cls.by_id["frq-2024-4-2123"])
         cls.proposals = DETECTOR.detect({**cls.catalog, "questions": selected}, ROOT / "public")
         cls.proposed_by_id = {q["id"]: q for q in cls.proposals["questions"]}
 
@@ -80,6 +81,17 @@ class AdjacentPageAssociationRegressions(unittest.TestCase):
         self.assertLessEqual(body["rect"][0], 310,
                              "right-column crop must include the printed question-number glyph at the gutter")
         self.assertTrue(body["manualReview"])
+
+    def test_scanned_multipage_frq_segments_prompts_and_excludes_response_space_and_footer(self):
+        q = self.proposed_by_id["frq-2024-4-2123"]
+        self.assertEqual([r["page"] for r in q["regions"]], [2123, 2123, 2124, 2124])
+        self.assertEqual([r["signals"]["continuationSegmentIndex"] for r in q["regions"]], [1, 2, 1, 2])
+        self.assertTrue(all(r["manualReview"] and r["signals"]["rasterGraphicsUnverified"] for r in q["regions"]))
+        self.assertLess(max(r["rect"][3] for r in q["regions"]), 600,
+                        "question-only segments must exclude printed footers and blank response areas")
+        self.assertIn("a", q["regions"][0]["signals"]["frqSubpartLabels"])
+        self.assertIn("b", q["regions"][1]["signals"]["frqSubpartLabels"])
+        self.assertIn("c", q["regions"][2]["signals"]["frqSubpartLabels"])
 
     def test_unmeasurable_frq_continuation_rejects_prior_as_crop(self):
         document = fitz.open()

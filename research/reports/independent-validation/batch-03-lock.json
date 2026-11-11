@@ -1,0 +1,90 @@
+{
+  "title": "ChemAtlas Phase 2 independent crop-quality validation \u2014 Batch 3 pre-render lock",
+  "locked_before_rendering": true,
+  "selection_source": "Original preregistered 40-question sample, samples 11\u201315. No replacements or selection changes.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "detector_commit": "66445d0ba511f1e3167c472430d3d99ee69ef3fd",
+  "detector_sha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract_dependent_case": "executed with Tesseract 5.5.0"
+  },
+  "exclusions": {
+    "development_cases": [
+      "frq-2006-6-25",
+      "mcq-2002-7-606",
+      "frq-2017-3-1157",
+      "mcq-2014-49-1464",
+      "frq-2011-1-1655"
+    ],
+    "replacement_questions": []
+  },
+  "selection_history_note": "Batch 2 samples 6\u201310 remain archived. Sample 6 was a frozen-revision false automatic approval and became development data; samples 7\u201310 remain unscored. The next audit selects samples 11\u201315 from the original registered list.",
+  "independence_checks": {
+    "prior_batch_01_source_page_overlap": false,
+    "existing_report_or_panel_filename_matches": false,
+    "selection_changed": false
+  },
+  "questions": [
+    {
+      "sample_number": 11,
+      "question_id": "frq-2008-4-896",
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        896,
+        897
+      ],
+      "type": "FRQ",
+      "year": "2008",
+      "status": "locked; crop not yet generated under detector revision"
+    },
+    {
+      "sample_number": 12,
+      "question_id": "mcq-2016-13-1058",
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        1058
+      ],
+      "type": "MCQ",
+      "year": "2016",
+      "status": "locked; crop not yet generated under detector revision"
+    },
+    {
+      "sample_number": 13,
+      "question_id": "mcq-2014-17-1448",
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1448
+      ],
+      "type": "MCQ",
+      "year": "2014",
+      "status": "locked; crop not yet generated under detector revision"
+    },
+    {
+      "sample_number": 14,
+      "question_id": "mcq-2023-47-1733",
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1733
+      ],
+      "type": "MCQ",
+      "year": "2023",
+      "status": "locked; crop not yet generated under detector revision"
+    },
+    {
+      "sample_number": 15,
+      "question_id": "mcq-2018-4-1945",
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        1945
+      ],
+      "type": "FRQ",
+      "year": "2018",
+      "status": "locked; crop not yet generated under detector revision"
+    }
+  ]
+}

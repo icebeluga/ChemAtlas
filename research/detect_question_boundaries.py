@@ -397,6 +397,26 @@ def detect(catalog: dict[str, Any], pdf_root: Path, stimuli_doc: dict[str, Any] 
             "manualReviewCount": sum(bool(q.get("manualReview")) for q in results), "questions": results}
 
 
+def apply_high_confidence(catalog: dict[str, Any], proposals: dict[str, Any]) -> tuple[dict[str, Any], int]:
+    """Return a separate catalog value with only fully high-confidence crops replaced."""
+    by_id = {item.get("id"): item for item in proposals.get("questions", [])}
+    output_questions = []
+    applied = 0
+    for original in catalog.get("questions", []):
+        question = dict(original)
+        proposal = by_id.get(question.get("id"))
+        regions = proposal.get("regions", []) if proposal else []
+        eligible = bool(regions) and all(
+            not region.get("manualReview") and region.get("confidenceBand") == "high" and region.get("rect")
+            for region in regions
+        )
+        if eligible:
+            question["sourceRegions"] = [{"page": region["page"], "rect": region["rect"]} for region in regions]
+            applied += 1
+        output_questions.append(question)
+    return {**catalog, "questions": output_questions}, applied
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1], help="ChemAtlas checkout root")
@@ -404,13 +424,26 @@ def main() -> None:
     parser.add_argument("--stimuli", type=Path, help="Shared-stimulus metadata (default: ROOT/research/stimuli.json when present)")
     parser.add_argument("--pdf-root", type=Path, help="Root containing source PDF paths (default: ROOT/public)")
     parser.add_argument("--output", type=Path, default=Path("question-boundary-proposals.json"))
+    parser.add_argument("--apply-high-confidence", action="store_true", help="write a separate catalog with only non-manual high-confidence regions applied")
+    parser.add_argument("--catalog-output", type=Path, help="required with --apply-high-confidence; never overwrites the input catalog")
     args = parser.parse_args()
     catalog_path = args.catalog or args.root / "public/questions.json"
     stimuli_path = args.stimuli or args.root / "research/stimuli.json"
     stimuli = json.loads(stimuli_path.read_text(encoding="utf-8")) if stimuli_path.exists() else None
-    result = detect(json.loads(catalog_path.read_text(encoding="utf-8")), args.pdf_root or args.root / "public", stimuli)
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    result = detect(catalog, args.pdf_root or args.root / "public", stimuli)
+    if args.apply_high_confidence and not args.catalog_output:
+        parser.error("--catalog-output is required with --apply-high-confidence")
+    if args.catalog_output and not args.apply_high_confidence:
+        parser.error("--catalog-output requires --apply-high-confidence")
+    applied = 0
+    if args.apply_high_confidence:
+        updated_catalog, applied = apply_high_confidence(catalog, result)
+        args.catalog_output.parent.mkdir(parents=True, exist_ok=True)
+        args.catalog_output.write_text(json.dumps(updated_catalog, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"questions": result["questionCount"], "manualReview": result["manualReviewCount"], "output": str(args.output)}))
+    print(json.dumps({"questions": result["questionCount"], "manualReview": result["manualReviewCount"], "highConfidenceApplied": applied, "output": str(args.output), "catalogOutput": str(args.catalog_output) if args.catalog_output else None}))
 
 
 if __name__ == "__main__":

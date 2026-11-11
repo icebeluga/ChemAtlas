@@ -59,3 +59,7 @@ The coordinates above are the exact proposal coordinates already recorded in thi
   - mcq-2018-17-1201-segment-1.png: c83ff30ae7b0b968aeb42343eb0cdc258a2a7252
 
 The 5/5 final visual result is a preserved checkpoint from the prior operator report, not a new verification run in this session. The prior committed code checkpoint reports 13 detector tests passing. This update records the final visual status without repeating those checks.
+
+## Superseding correction: `mcq-1984-8-120`
+
+Date: 2026-11-11 UTC. The earlier 5/5 final visual re-check statement above is withdrawn for this question. In this session, the reported discrepancy was reproduced from the source PDF: the direct single-region test did not exercise the production `detect()` path, which merges two stored regions on page 120. That pipeline produced `[28.28, 389.22, 318.84, 761.25]`, visibly including printed page number 2. The corrected `detect()` result is `[28.28, 389.22, 318.84, 619.70]`; the regenerated crop comparison shows the page number outside the crop. A failure-specific test now checks the full pipeline result and crop text. The remaining four Batch 3 questions were not rerun during this correction, so the old 5/5 statement is not a valid current-session result. See `real-pdf-failure-regressions.md` and `visual-audit/failure-regressions/mcq-1984-8-120-segment-1.png`.

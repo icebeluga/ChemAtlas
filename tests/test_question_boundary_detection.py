@@ -134,7 +134,7 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
         result = DETECTOR.analyze_page(page, q1, prior, [q1, q2], {"shared": {"regions": [{"page": 1, "rect": [60, 85, 450, 125]}]}}, 1)
         self.assertIsNotNone(result["rect"])
         self.assertLess(result["rect"][1], 130)  # introductory equation/shared setup retained
-        self.assertGreater(result["rect"][3], 300)  # drawing extends the crop past the answer text
+        self.assertGreater(result["rect"][3], 280)  # the complete drawing remains inside the tighter crop
         self.assertLess(result["rect"][3], 520)  # following question excluded
         self.assertEqual(result["signals"]["answerChoiceMarkers"], 4)
         self.assertGreaterEqual(result["signals"]["textCharacters"], 80)

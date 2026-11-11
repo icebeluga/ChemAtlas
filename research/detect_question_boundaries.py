@@ -18,12 +18,14 @@ import fitz
 
 MCQ_START = re.compile(r"^\s*(?:question\s*)?(\d{1,3})\s*[.)]?\s+(\S.*)$", re.I)
 FRQ_START = re.compile(r"^\s*(?:question\s+)?(\d{1,2})\s*[.)]\s+(\S.*)$", re.I)
-CHOICE = re.compile(r"^\s*([A-E])\s*[.)]\s+\S", re.I)
+CHOICE = re.compile(r"^\s*\(?([A-E])(?:\)|[.)])\s+\S", re.I)
 SUBPART = re.compile(r"^\s*(?:\(([a-h])\)|([a-h])[.)])\s+\S", re.I)
+SUBPART_CONTINUATION = re.compile(r"^\s*(?:\(([a-h]|iv|vi{0,3}|ix|i{1,3})\)|([a-h]|iv|vi{0,3}|ix|i{1,3})[.)])\s+\S", re.I)
 CONTEXT_CUE = re.compile(r"(?:equation|following|data|refer|table|graph|diagram|reaction|based on|information|use the|shown|figure|below|above|at 25|[=⇌↔→Δ]|K[a-z]|pH|\b\d+(?:\.\d+)?\s*(?:mol|M|kJ|kPa|atm|°C))", re.I)
 SHARED_GROUP = re.compile(r"^\s*questions?\s+(\d{1,3})\s*(?:-|–|to)\s*(\d{1,3})\s+(?:refer|use|are|will|should|answer)\b", re.I)
 PAGE_BOILERPLATE = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|(?:www\.|apcentral\.)?collegeboard\.com|^\s*Version\s+[A-Z]\s*$)", re.I)
 PAGE_FOOTER = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|S\s*T\s*O\s*P|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|collegeboard\.com|Web or Mass distribution prohibited|Unauthorized copying or reuse)", re.I)
+PAGE_HEADER = re.compile(r"(?:Unit\s+\d+\s+Progress\s+Check|Test\s+Booklet|AP\s+Chemistry\s+20\d{2}.*Free[- ]Response\s+Questions|^\s*(?:19|20)\d{2}\s+AP\s*$|^\s*®?\s*CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*CHEMISTRY\s*$|^\s*SECTION\s+[IVX]+\s*$|^\s*\d+\s+Questions\s*$)", re.I)
 QUESTION_INSTRUCTION = re.compile(
     r"^\s*Answer\s+Questions?\s+\d+(?:\s*[-–]\s*\d+)?\s+(?:below|in this part)\b.*(?:score weighting|percent|minutes?)?",
     re.I,
@@ -93,13 +95,18 @@ def _columns(lines: list[dict[str, Any]], page_width: float,
     for item in page_questions or []:
         number = int(item.get("number") or 0)
         kind = item.get("type", "MCQ")
-        pattern = MCQ_START if kind == "MCQ" else FRQ_START
-        for line in lines:
-            match = pattern.match(line["text"])
-            if match and int(match.group(1)) == number:
-                anchor_x.append((line["rect"].x0 + line["rect"].x1) / 2)
-                break
+        matching_anchors = [anchor for anchor in _anchors(lines, kind) if anchor["number"] == number]
+        if matching_anchors:
+            # Question numbers are often extracted as a tiny separate line at
+            # the left margin while the stem begins at an indented x position.
+            # Using the line midpoint can mistake those indents for columns.
+            anchor_x.append(matching_anchors[0]["rect"].x0)
     positions = hints or anchor_x
+    # If multiple cataloged question numbers begin at the same page margin,
+    # treat that as positive evidence for one column. Paragraph indentation
+    # gaps later on the page must not override the stable numbered anchors.
+    if len(anchor_x) >= 2 and max(anchor_x) - min(anchor_x) <= page_width * .12 and not hints:
+        return [(0.0, page_width)]
     if len(positions) >= 2:
         centers = sorted(positions)
         gap, index = max(((centers[i + 1] - centers[i], i) for i in range(len(centers) - 1)), default=(0, 0))
@@ -146,12 +153,85 @@ def _column_for(x: float, columns: list[tuple[float, float]]) -> int:
     return min(range(len(columns)), key=lambda i: 0 if columns[i][0] <= x <= columns[i][1] else min(abs(x-columns[i][0]), abs(x-columns[i][1])))
 
 
+def _source_quality_flags(page: fitz.Page, lines: list[dict[str, Any]]) -> list[str]:
+    """Detect source markup that may reveal answers, independently of crop geometry."""
+    choice_boxes = [line["rect"] for line in lines
+                    if CHOICE.match(line["text"])
+                    or re.match(r"^\s*\(?[A-E]\)?\s*[.)]?\s*$", line["text"], re.I)]
+    flags: set[str] = set()
+    try:
+        for annot in page.annots() or []:
+            kind = annot.type[1].lower()
+            if kind in {"highlight", "underline", "strikeout", "squiggly", "ink", "freetext", "circle", "square", "polygon", "polyline"}:
+                flags.add("answer_revealing_annotation")
+                break
+    except (AttributeError, RuntimeError):
+        pass
+
+    # Test-bank scoring keys use pale green bands over correct answer rows. Those
+    # are vector fills rather than PDF annotations, so inspect filled rectangles too.
+    try:
+        for drawing in page.get_drawings():
+            fill = drawing.get("fill")
+            box = _rect(drawing.get("rect"))
+            if not fill or not box or box.width < 80 or not 5 <= box.height <= 55:
+                continue
+            red, green, blue = (list(fill) + [0, 0, 0])[:3]
+            is_answer_band = green >= 0.6 and green > red * 1.08 and green > blue * 1.08
+            if is_answer_band and (not choice_boxes or any(box.intersects(choice) for choice in choice_boxes)):
+                flags.add("colored_answer_key_marking")
+                break
+    except (AttributeError, RuntimeError):
+        pass
+    return sorted(flags)
+
+
+def _source_years(lines: list[dict[str, Any]]) -> list[int]:
+    years = set()
+    for line in lines:
+        source_line = re.search(r"(?:AP\s+CHEMISTRY|COLLEGE\s+BOARD|FREE[- ]RESPONSE|AP\s+EXAM)", line["text"], re.I)
+        for match in (re.finditer(r"20\d{2}", line["text"]) if source_line else []):
+            years.add(int(match.group(0)))
+    return sorted(years)
+
+
+def _is_page_number(line: dict[str, Any], bounds: fitz.Rect) -> bool:
+    return (line["rect"].y0 >= bounds.y1 - 85
+            and bool(re.fullmatch(r"\s*(?:\d{1,3}|-\d{1,3}-)\s*", line["text"])))
+
+
+def _subpart_sequence(labels: list[str]) -> bool:
+    roman = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10}
+    values = [ord(label) if len(label) == 1 and label.isalpha() else roman.get(label) for label in labels]
+    return len(values) >= 1 and all(value is not None for value in values) and all(
+        right == left + 1 for left, right in zip(values, values[1:]))
+
+
+def _choice_match(text: str) -> re.Match[str] | None:
+    return CHOICE.match(text) or re.match(r"^\s*\(?([A-E])\)?\s*[.)]?\s*$", text, re.I)
+
+
+def _complete_choice_sequence(labels: list[str], expected_count: int = 0) -> bool:
+    """Check that all expected choice labels are present, independent of PDF text order.
+
+    Some PDFs encode answer labels and answer text as separate positioned objects; the
+    extracted text order can therefore be A, C, D, B even when the printed page is
+    correctly laid out. Geometry handles crop boundaries, while this signal checks
+    completeness rather than trusting that unreliable serialization order.
+    """
+    unique = set(labels)
+    count = expected_count or (len(unique) if len(unique) in {4, 5} else 0)
+    return count in {4, 5} and unique == set("ABCDE"[:count])
+
+
 def _anchors(lines: list[dict[str, Any]], question_type: str) -> list[dict[str, Any]]:
     pattern = re.compile(r"^\s*(?:question\s*)?(\d{1,3})\s*[.)]\s*(.*)$", re.I) if question_type == "MCQ" else FRQ_START
     found = []
     for line in lines:
         match = pattern.match(line["text"])
         if not match:
+            continue
+        if question_type == "FRQ" and re.fullmatch(r"[_ .…-]{3,}", match.group(2).strip()):
             continue
         number = int(match.group(1))
         # AP MCQ questions usually range 1–75; open-response pages use a short sequence.
@@ -244,6 +324,13 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     visual = _visual_rects(page)
     text_chars = sum(len(line["text"]) for line in lines)
     question_type = question.get("type", "MCQ")
+    source_quality_flags = _source_quality_flags(page, lines)
+    source_years = _source_years(lines)
+    try:
+        metadata_year = int(question.get("year")) if question.get("year") else None
+    except (TypeError, ValueError):
+        metadata_year = None
+    metadata_year_mismatch = bool(metadata_year and source_years and metadata_year not in source_years)
     prior = _rect((region or {}).get("rect"))
     anchors = _anchors(lines, question_type)
     columns = _columns(lines, bounds.width, page_questions)
@@ -268,39 +355,57 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         # from those measurable subpart markers and nearby graphics, but keep
         # the result manual because the missing question heading is unverified.
         continuation_parts = []
+        continuation_header = None
         if question_type == "FRQ" and prior:
             continuation_parts = [line for line in lines
-                                  if SUBPART.match(line["text"])
+                                  if SUBPART_CONTINUATION.match(line["text"])
                                   and prior.x0 - 40 <= line["rect"].x0 + line["rect"].width / 2 <= prior.x1 + 40]
-        if continuation_parts:
-            first_part = min(continuation_parts, key=lambda line: line["rect"].y0)
-            pre_part_lines = [line for line in lines
-                              if 0 < first_part["rect"].y0 - line["rect"].y1 <= 100
-                              and not PAGE_BOILERPLATE.search(line["text"])
-                              and not re.search(r"(?:begin|continue)\s+your\s+response\s+to\s+question", line["text"], re.I)]
-            cue_lines = [line for line in pre_part_lines if CONTEXT_CUE.search(line["text"])]
-            continuation_context = []
-            if cue_lines:
-                context_top = min(line["rect"].y0 for line in cue_lines)
-                continuation_context = [line for line in pre_part_lines if line["rect"].y0 >= context_top - 2]
+            continuation_header = next((line for line in lines
+                                         if re.search(r"(?:begin|continue)\s+your\s+response\s+to\s+question", line["text"], re.I)), None)
+        if continuation_parts or continuation_header:
+            first_part = min(continuation_parts, key=lambda line: line["rect"].y0) if continuation_parts else continuation_header
+            # Continuation pages can place setup, tables, and graphs well above
+            # the first lettered part, and some continue with roman subparts only.
+            # Use the explicit continuation heading when available and preserve
+            # all content below it, while still removing the examination footer.
+            start_line = continuation_header or first_part
+            continuation_top = max(bounds.y0, start_line["rect"].y0 - 4)
+            if not continuation_header and continuation_parts:
+                # Some continuation pages omit the standard banner and put
+                # setup prose or a shared diagram above the first part (for
+                # example, a page beginning with B. after a mass-spectrum
+                # prompt). Retain preceding body content after the page header
+                # instead of treating the first part as the upper boundary.
+                preceding_context = [line for line in lines
+                                     if line["rect"].y0 < first_part["rect"].y0
+                                     and not PAGE_BOILERPLATE.search(line["text"])
+                                     and not PAGE_HEADER.search(line["text"])
+                                     and not PAGE_FOOTER.search(line["text"])]
+                if preceding_context:
+                    continuation_top = max(bounds.y0, min(line["rect"].y0 for line in preceding_context) - 4)
+            continuation_context = [line for line in lines
+                                    if continuation_top <= line["rect"].y0 < first_part["rect"].y0
+                                    and not PAGE_BOILERPLATE.search(line["text"])
+                                    and not PAGE_HEADER.search(line["text"])]
             footer_top = min((line["rect"].y0 for line in lines
                               if PAGE_FOOTER.search(line["text"]) and line["rect"].y0 > bounds.y1 - 220),
                              default=bounds.y1 - 48)
             later_questions = [a for a in anchors if a["number"] > expected and a["rect"].y0 > first_part["rect"].y0]
             stop_y = min([footer_top] + [a["rect"].y0 - 10 for a in later_questions])
             continuation_text = [line for line in lines
-                                 if line["rect"].y1 >= first_part["rect"].y0 - 2
+                                 if line["rect"].y1 >= continuation_top
                                  and line["rect"].y0 < stop_y - 3
                                  and not PAGE_BOILERPLATE.search(line["text"])]
-            continuation_text = continuation_context + continuation_text
             labels = []
             for line in continuation_parts:
-                match = SUBPART.match(line["text"])
+                match = SUBPART_CONTINUATION.match(line["text"])
                 label = (match.group(1) or match.group(2)).lower()
                 if label not in labels:
                     labels.append(label)
+            if any(label in "abcdefgh" for label in labels):
+                labels = [label for label in labels if label in "abcdefgh"]
             visual_continuation = [box for box in visual
-                                   if box.y1 >= first_part["rect"].y0 - 24
+                                   if box.y1 >= continuation_top
                                    and box.y0 < stop_y - 4
                                    and box.width < bounds.width * .97]
             boxes = [line["rect"] for line in continuation_text] + visual_continuation
@@ -312,6 +417,13 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
             else:
                 candidate = prior
             score = 0.36 if text_chars >= 25 else 0.08
+            continuation_reasons = ["No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."]
+            if continuation_context:
+                continuation_reasons.append("Setup text above the first detected subpart was retained with the continuation page.")
+            if source_quality_flags:
+                continuation_reasons.append("The source contains answer-revealing annotations or answer-key markings; use a clean exam source before approval.")
+            if metadata_year_mismatch:
+                continuation_reasons.append(f"Source text identifies year(s) {source_years}, which do not match catalog year {metadata_year}; verify source provenance before approval.")
             return {"page": page_number, "rect": [round(v, 2) for v in candidate],
                     "confidence": score, "confidenceBand": "low", "manualReview": True,
                     "signals": {"textCharacters": sum(len(line["text"]) for line in continuation_text),
@@ -319,13 +431,16 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                 "questionStartMatches": len(matching), "nextQuestionBoundaryFound": bool(later_questions),
                                 "answerChoiceMarkers": 0, "answerChoiceSequence": False,
                                 "frqSubpartMarkers": len(labels), "frqSubpartLabels": labels,
-                                "frqSubpartSequence": all(ord(b) == ord(a) + 1 for a, b in zip(labels, labels[1:])),
+                                "frqSubpartSequence": _subpart_sequence(labels),
                                 "graphicsIncluded": len(visual_continuation), "linkedStimulusRegions": 0,
                                 "columnCount": len(columns), "pageRotation": int(page.rotation),
                                 "continuationPageDetected": True,
-                                "introContextLinesIncluded": len(continuation_context)},
-                    "reasons": ["No repeated numbered FRQ heading was found; a page continuation was estimated from subpart labels and nearby page graphics, and remains manual-review only."]
-                               + (["Nearby setup text or an equation above the first continuation subpart was included as required context."] if continuation_context else [])}
+                                "introContextLinesIncluded": len(continuation_context),
+                                "sourceQualityFlags": source_quality_flags,
+                                "sourceYears": source_years,
+                                "catalogYear": metadata_year,
+                                "sourceMetadataMismatch": metadata_year_mismatch},
+                    "reasons": continuation_reasons}
         return {"page": page_number, "rect": [round(v, 2) for v in prior] if prior else None,
                 "confidence": 0.08 if prior else 0.0, "confidenceBand": "low", "manualReview": True,
                 "signals": {"textCharacters": text_chars, "questionStartFound": False,
@@ -333,9 +448,15 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                             "answerChoiceMarkers": 0, "answerChoiceSequence": False,
                             "frqSubpartMarkers": 0, "frqSubpartLabels": [], "frqSubpartSequence": False,
                             "graphicsIncluded": 0, "linkedStimulusRegions": len(_stimulus_context(question, stimuli, page_number)),
-                            "columnCount": 0, "pageRotation": int(page.rotation)},
+                            "columnCount": 0, "pageRotation": int(page.rotation),
+                            "sourceQualityFlags": source_quality_flags,
+                            "sourceYears": source_years,
+                            "catalogYear": metadata_year,
+                            "sourceMetadataMismatch": metadata_year_mismatch},
                 "reasons": ["Expected numbered question start was not located; the prior crop is retained unchanged for manual review." ]
-                           + (["Sparse extractable text; likely scanned or image-only page."] if text_chars < 25 else [])}
+                           + (["Sparse extractable text; likely scanned or image-only page."] if text_chars < 25 else [])
+                           + (["The source contains answer-revealing annotations or answer-key markings; use a clean exam source before approval."] if source_quality_flags else [])
+                           + ([f"Source text identifies year(s) {source_years}, which do not match catalog year {metadata_year}; verify source provenance before approval."] if metadata_year_mismatch else [])}
 
     center_x = (anchor["rect"].x0 + anchor["rect"].x1) / 2 if anchor else prior_center
     column_index = _column_for(center_x, columns)
@@ -370,18 +491,59 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
              and QUESTION_INSTRUCTION.search(line["text"])),
             default=-1,
         )
-        context_floor = max(prior_question_bottom, instruction_bottom)
+        direction_lines = [line for line in lines
+                           if line["rect"].y1 < anchor["rect"].y0
+                           and re.search(r"\bDirections\s*:", line["text"], re.I)]
+        direction_bottom = -1
+        if direction_lines:
+            first_direction = min(direction_lines, key=lambda line: line["rect"].y0)
+            ordered_before_anchor = sorted((line for line in lines
+                                            if first_direction["rect"].y0 <= line["rect"].y0 < anchor["rect"].y0),
+                                           key=lambda line: line["rect"].y0)
+            last_instruction = first_direction
+            for line in ordered_before_anchor[1:]:
+                if line["rect"].y0 - last_instruction["rect"].y1 > 20:
+                    break
+                last_instruction = line
+            direction_bottom = last_instruction["rect"].y1
+        context_floor = max(prior_question_bottom, instruction_bottom, direction_bottom)
+        page_header_bottom = max((line["rect"].y1 for line in lines
+                                  if line["rect"].y1 < anchor["rect"].y0 and PAGE_HEADER.search(line["text"])),
+                                 default=-1)
+        context_floor = max(context_floor, page_header_bottom)
+        previous_choice_bottom = -1.0
+        previous_anchor = max(earlier_questions, key=lambda item: item["rect"].y0, default=None)
+        if previous_anchor and not target_group:
+            previous_choices = [line for line in lines
+                                if previous_anchor["rect"].y0 <= line["rect"].y0 < anchor["rect"].y0
+                                and _choice_match(line["text"])]
+            previous_labels = []
+            for line in previous_choices:
+                match = _choice_match(line["text"])
+                if match and match.group(1).upper() not in previous_labels:
+                    previous_labels.append(match.group(1).upper())
+            if _complete_choice_sequence(previous_labels):
+                previous_choice_bottom = max(line["rect"].y1 for line in previous_choices)
+                context_floor = max(context_floor, previous_choice_bottom)
         preceding = [line for line in lines
                      if 0 < anchor["rect"].y0 - line["rect"].y1 <= 130
                      and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
                      and line["rect"].y0 >= context_floor
                      and not QUESTION_INSTRUCTION.search(line["text"])
+                     and not PAGE_HEADER.search(line["text"])
                      and CONTEXT_CUE.search(line["text"])]
         intro_context = preceding[-3:]
+        visual_context_requested = bool(re.search(
+            r"\b(graph|figure|diagram|table|shown|illustrat|curve|structure|spectrum|in the box)\b",
+            str(question.get("fullText") or ""), re.I))
         context_visual = [box for box in visual
                           if 0 < anchor["rect"].y0 - box.y1 <= 140
                           and _column_for((box.x0+box.x1)/2, columns) == column_index
-                          and box.y0 >= context_floor]
+                          and box.y0 >= context_floor
+                          and box.y0 >= page_header_bottom
+                          and visual_context_requested
+                          and box.width >= 30 and box.height >= 12
+                          and box.width < bounds.width * .85]
         top = anchor["rect"].y0 - 14
         if target_group and target_group["rect"].y0 < anchor["rect"].y0:
             top = min(top, target_group["rect"].y0 - 12)
@@ -389,8 +551,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
             top = min(top, min(box.y0 for box in context_visual) - 12)
         if intro_context:
             top = min(top, min(line["rect"].y0 for line in intro_context) - 12)
-        if prior and anchor["rect"].y0 - prior.y0 <= 150:
+        if prior and anchor["rect"].y0 - prior.y0 <= 150 and prior.y0 >= context_floor:
             top = min(top, prior.y0)
+        if previous_choice_bottom >= 0:
+            top = max(top, previous_choice_bottom + 4)
         top = max(bounds.y0, top)
         if next_start:
             bottom = next_start["rect"].y0 - 10
@@ -416,11 +580,24 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                   and col_x0 <= line["rect"].x0 + line["rect"].width / 2 <= col_x1
                   and line["rect"].y0 < footer_start - 4
                   and not PAGE_BOILERPLATE.search(line["text"])
-                  and not (line["rect"].y0 >= bounds.y1 - 48 and re.fullmatch(r"\s*\d{1,3}\s*", line["text"] or ""))]
+                  and not _is_page_number(line, bounds)]
     if next_start:
         body_lines = [line for line in body_lines if line["rect"].y0 < next_start["rect"].y0 - 4]
     if next_group:
         body_lines = [line for line in body_lines if line["rect"].y0 < next_group["rect"].y0 - 6]
+    last_choice_bottom = -1.0
+    if question_type == "MCQ" and next_start:
+        target_choice_lines = [line for line in body_lines
+                               if anchor and anchor["rect"].y0 <= line["rect"].y0 < next_start["rect"].y0
+                               and _choice_match(line["text"])]
+        labels = []
+        for line in target_choice_lines:
+            match = _choice_match(line["text"])
+            if match and match.group(1).upper() not in labels:
+                labels.append(match.group(1).upper())
+        if _complete_choice_sequence(labels):
+            last_choice_bottom = max(line["rect"].y1 for line in target_choice_lines)
+            bottom = min(bottom, last_choice_bottom + 18)
     if body_lines and not next_start:
         bottom = min(bounds.y1 - 24, max(line["rect"].y1 for line in body_lines) + 18)
     if next_group:
@@ -432,10 +609,15 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                      and line["rect"].y0 < footer_start - 4
                      and not PAGE_BOILERPLATE.search(line["text"])
                      and (not next_group or line["rect"].y0 < next_group["rect"].y0 - 6)
+                     and not _is_page_number(line, bounds)
                      and (line["rect"].y1 >= anchor["rect"].y0 - 3 or line in intro_context
                           or (target_group and target_group["rect"].y0 <= line["rect"].y0 < anchor["rect"].y0))]
-    included_text = [line for line in included_text
-                     if not (line["rect"].y0 >= bounds.y1 - 48 and re.fullmatch(r"\s*\d{1,3}\s*", line["text"] or ""))]
+    if question_type == "MCQ" and next_start and last_choice_bottom >= 0:
+        # Content such as the next question's equation can appear between the
+        # final choice and its numbered stem. Once every expected choice is
+        # present, it is a safer lower boundary than that later question marker.
+        included_text = [line for line in included_text
+                         if line["rect"].y0 <= last_choice_bottom + 5]
     catalog_tokens = {word for word in re.findall(r"[a-z]{3,}", str(question.get("fullText") or "").lower())
                       if word not in {"the", "and", "for", "that", "with", "which", "from", "into", "this", "are", "was", "were", "each", "following", "above", "below"}}
     crop_tokens = {word for line in included_text for word in re.findall(r"[a-z]{3,}", line["text"].lower())}
@@ -454,7 +636,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         bottom = min(bottom, next_start["rect"].y0 - 10)
     if next_group:
         bottom = min(bottom, next_group["rect"].y0 - 8)
-    if prior and next_start and anchor and 0 <= anchor["rect"].y0 - prior.y0 <= 150:
+    if prior and next_start and anchor and 0 <= anchor["rect"].y0 - prior.y0 <= 150 and prior.y0 >= context_floor:
         top = min(top, prior.y0)
     body_text = [line for line in included_text
                  if anchor and line["rect"].y1 >= anchor["rect"].y0 - 3
@@ -494,6 +676,12 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     if next_start:
         content_bottom = max((box.y1 for box in content_boxes), default=anchor["rect"].y1 if anchor else top)
         safe_bottom = next_start["rect"].y0 - 10
+        if question_type == "MCQ" and last_choice_bottom >= 0:
+            safe_bottom = min(safe_bottom, last_choice_bottom + 8)
+            relevant_visual_bottom = max((box.y1 for box in visual_in_band), default=-1)
+            if relevant_visual_bottom >= 0:
+                safe_bottom = min(next_start["rect"].y0 - 10,
+                                  max(safe_bottom, relevant_visual_bottom + 8))
         bottom = min(safe_bottom, max(content_bottom + 26, anchor["rect"].y1 + 26 if anchor else top + 40))
         if prior and 0 <= prior.y1 - content_bottom <= 72:
             bottom = min(safe_bottom, max(bottom, prior.y1))
@@ -521,23 +709,25 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     choice_labels = []
     if question_type == "MCQ":
         for line in included_text:
-            if anchor and line["rect"].y0 < anchor["rect"].y0 - 2:
+            if anchor and line["rect"].y0 < anchor["rect"].y0 - 2 and not (
+                target_group and target_group["rect"].y0 <= line["rect"].y0 < anchor["rect"].y0
+            ):
                 continue
             if next_start and line["rect"].y0 >= next_start["rect"].y0 - 4:
                 continue
             # PyMuPDF often emits the label ("A)") and its answer text as
             # separate lines/spans. Accept both joined and standalone labels.
-            match = CHOICE.match(line["text"]) or re.match(r"^\s*([A-E])\s*[.)]?\s*$", line["text"], re.I)
+            match = _choice_match(line["text"])
             if match and match.group(1).upper() not in choice_labels:
                 choice_labels.append(match.group(1).upper())
     choices = len(choice_labels)
-    choice_sequence = len(choice_labels) >= 3 and choice_labels[0] == "A" and all(ord(b) == ord(a) + 1 for a, b in zip(choice_labels, choice_labels[1:]))
     expected_choice_count = 0
     if question_type == "MCQ":
         full_text = str(question.get("fullText") or "")
-        expected_choice_count = len(set(re.findall(r"(?m)^\s*([A-E])\s*[.)]\s+", full_text)))
+        expected_choice_count = len(set(re.findall(r"(?m)^\s*\(?([A-E])(?:\)|[.)])\s+", full_text)))
         if expected_choice_count < 3:
             expected_choice_count = 0
+    choice_sequence = _complete_choice_sequence(choice_labels, expected_choice_count)
     subpart_labels = []
     if question_type == "FRQ":
         for line in included_text:
@@ -547,7 +737,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                 if label not in subpart_labels:
                     subpart_labels.append(label)
     subparts = len(subpart_labels)
-    subpart_sequence = len(subpart_labels) >= 1 and all(ord(b) == ord(a) + 1 for a, b in zip(subpart_labels, subpart_labels[1:]))
+    subpart_sequence = _subpart_sequence(subpart_labels)
     signals = {
         "textCharacters": region_text_chars,
         "catalogTextCoverage": catalog_text_coverage,
@@ -569,8 +759,14 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "sharedQuestionGroupDetected": bool(target_group),
         "followingSharedQuestionGroupBoundary": bool(next_group),
         "introContextLinesIncluded": len(intro_context),
+        "previousQuestionChoiceBoundaryY": round(previous_choice_bottom, 2) if previous_choice_bottom >= 0 else None,
         "columnCount": len(columns),
+        "suspiciousColumnGeometry": bool(prior and prior.width >= bounds.width * .90 and len(columns) > 1),
         "pageRotation": int(page.rotation),
+        "sourceQualityFlags": source_quality_flags,
+        "sourceYears": source_years,
+        "catalogYear": metadata_year,
+        "sourceMetadataMismatch": metadata_year_mismatch,
     }
     # This is an evidence score, not a model-confidence claim. Text-poor scans are always
     # routed to manual review, even when a prior rectangle exists.
@@ -585,7 +781,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     choices_incomplete = bool(expected_choice_count and (choices < expected_choice_count or not choice_sequence))
     text_mismatch = catalog_text_coverage is not None and len(catalog_tokens) >= 5 and catalog_text_coverage < .20
     graphics_missing = graphics_expected and not visual_in_band and not linked
-    manual = region_text_chars < 25 or not anchor or score < 0.58 or choices_incomplete or ambiguous_linked_context or text_mismatch or graphics_missing
+    suspicious_column_geometry = signals["suspiciousColumnGeometry"]
+    manual = (region_text_chars < 25 or not anchor or score < 0.58 or choices_incomplete
+              or ambiguous_linked_context or text_mismatch or graphics_missing
+              or bool(source_quality_flags) or metadata_year_mismatch or suspicious_column_geometry)
     reasons = []
     if text_chars < 25:
         reasons.append("Sparse extractable text on the page; likely scanned or image-only. OCR/manual boundary review is required.")
@@ -605,6 +804,12 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         reasons.append(f"Only {catalog_text_coverage:.0%} of distinctive catalog terms appear in the proposed crop; verify that the detected page region matches this question.")
     if graphics_missing:
         reasons.append("The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.")
+    if source_quality_flags:
+        reasons.append("The source contains answer-revealing annotations or answer-key markings; use a clean exam source before approval.")
+    if metadata_year_mismatch:
+        reasons.append(f"Source text identifies year(s) {source_years}, which do not match catalog year {metadata_year}; verify source provenance before approval.")
+    if suspicious_column_geometry:
+        reasons.append("Stored crop spans almost the full page while text analysis found multiple columns; verify the column boundary manually.")
     if question_type == "FRQ" and subparts == 0:
         reasons.append("No lettered FRQ subparts were detected in the candidate region.")
     if signals["columnCount"] > 1:

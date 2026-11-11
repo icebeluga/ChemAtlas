@@ -61,6 +61,64 @@ class QuestionBoundaryDetectionTests(unittest.TestCase):
         self.assertNotIn("All rights reserved", crop_text)
         self.assertLess(result["rect"][3], 713.5)
 
+    def test_real_2021_frq_continuation_keeps_setup_above_first_subpart(self):
+        source = ROOT / "public/source/bank-02.pdf"
+        if not source.exists():
+            self.skipTest("Original bank-02.pdf is not available in this checkout.")
+        with fitz.open(source) as doc:
+            page = doc.load_page(100)  # Catalog page 401; third page of 2021 FRQ Question 1.
+            q = {"id": "frq-2021-1-399", "number": 1, "type": "FRQ", "pages": [399, 400, 401]}
+            prior = {"page": 401, "rect": [20, 40, 574, 734]}
+            result = DETECTOR.analyze_page(page, q, prior, [q], {}, 401)
+            crop_text = page.get_textbox(fitz.Rect(result["rect"]))
+        self.assertTrue(result["manualReview"])
+        self.assertTrue(result["signals"]["continuationPageDetected"])
+        self.assertIn("When a catalyst is added", crop_text)
+        self.assertIn("HCOOH", crop_text)
+        self.assertIn("(e) Is the reaction a redox reaction", crop_text)
+        self.assertLess(result["rect"][1], 75)
+
+    def test_real_1984_shared_mcq_does_not_extend_to_page_number(self):
+        source = ROOT / "public/source/bank-01.pdf"
+        if not source.exists():
+            self.skipTest("Original bank-01.pdf is not available in this checkout.")
+        with fitz.open(source) as doc:
+            page = doc.load_page(119)  # Catalog page 120; printed 1984 MCQ Question 8.
+            q = {"id": "mcq-1984-8-120", "number": 8, "type": "MCQ", "pages": [120]}
+            prior = {"page": 120, "rect": [0, 390, 306, 735]}
+            result = DETECTOR.analyze_page(page, q, prior, [q], {}, 120)
+            crop_text = page.get_textbox(fitz.Rect(result["rect"]))
+        self.assertIn("Questions 8-9", crop_text)
+        self.assertIn("Solid ethyl alcohol", crop_text)
+        self.assertLess(result["rect"][3], 720)
+
+    def test_real_2018_mcq_recovers_previous_page_shared_table(self):
+        source = ROOT / "public/source/bank-04.pdf"
+        following_source = ROOT / "public/source/bank-05.pdf"
+        if not source.exists() or not following_source.exists():
+            self.skipTest("Original bank-04.pdf and bank-05.pdf are not available in this checkout.")
+        catalog = {
+            "sourceFiles": [
+                {"url": "/source/bank-04.pdf", "from": 901, "to": 1200},
+                {"url": "/source/bank-05.pdf", "from": 1201, "to": 1500},
+            ],
+            "questions": [{
+                "id": "mcq-2018-17-1201",
+                "type": "MCQ",
+                "number": 17,
+                "pages": [1201],
+                "sourceRegions": [{"page": 1201, "rect": [0, 55, 301.68, 258.15]}],
+                "fullText": "Based on the structural formulas, which compound is more soluble in water?",
+            }],
+        }
+        result = DETECTOR.detect(catalog, ROOT / "public")["questions"][0]
+        self.assertEqual([region["page"] for region in result["regions"]], [1200, 1201])
+        self.assertTrue(result["manualReview"])
+        self.assertTrue(result["regions"][0]["signals"]["previousPageSharedGroupDetected"])
+        self.assertEqual(result["regions"][0]["signals"]["sharedQuestionRange"], [15, 19])
+        self.assertGreater(result["regions"][0]["signals"]["graphicsIncluded"], 0)
+        self.assertTrue(result["regions"][1]["signals"]["graphicsExpected"])
+
     def test_mcq_refines_prior_includes_context_choices_graphics_and_stops_before_next_question(self):
         doc = fitz.open()
         page = doc.new_page(width=612, height=792)

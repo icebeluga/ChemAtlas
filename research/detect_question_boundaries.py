@@ -179,6 +179,63 @@ def _expand(box: fitz.Rect, dx: float, dy: float, bounds: fitz.Rect) -> fitz.Rec
     return fitz.Rect(max(bounds.x0, box.x0 - dx), max(bounds.y0, box.y0 - dy), min(bounds.x1, box.x1 + dx), min(bounds.y1, box.y1 + dy))
 
 
+def _previous_page_shared_group(page: fitz.Page, expected: int, page_number: int) -> dict[str, Any] | None:
+    """Return a measured prior-page stimulus region when a numbered group spans pages."""
+    bounds = page.rect * page.derotation_matrix if page.rotation else page.rect
+    lines = _text_lines(page)
+    groups = []
+    for line in lines:
+        match = SHARED_GROUP.match(line["text"])
+        if match and int(match.group(1)) <= expected <= int(match.group(2)):
+            groups.append({"first": int(match.group(1)), "last": int(match.group(2)), "rect": line["rect"]})
+    if not groups:
+        return None
+    group = max(groups, key=lambda item: item["rect"].y0)
+    anchors = [anchor for anchor in _anchors(lines, "MCQ")
+               if group["first"] <= anchor["number"] <= group["last"]
+               and anchor["rect"].y0 > group["rect"].y0]
+    stop_y = min((anchor["rect"].y0 for anchor in anchors), default=bounds.y1 - 48) - 8
+    footer_y = min((line["rect"].y0 for line in lines
+                    if PAGE_FOOTER.search(line["text"]) and line["rect"].y0 > group["rect"].y0),
+                   default=bounds.y1 - 32)
+    stop_y = min(stop_y, footer_y - 4)
+    band = fitz.Rect(bounds.x0, max(bounds.y0, group["rect"].y0 - 8), bounds.x1, max(group["rect"].y1 + 1, stop_y))
+    content = [line["rect"] for line in lines
+               if line["rect"].intersects(band) and not PAGE_BOILERPLATE.search(line["text"])]
+    graphics = [box for box in _visual_rects(page)
+                if box.intersects(band) and box.width < bounds.width * .98]
+    boxes = content + graphics
+    if not boxes:
+        return None
+    union = boxes[0]
+    for box in boxes[1:]:
+        union |= box
+    candidate = _expand(union, 18, 10, bounds)
+    return {
+        "page": page_number,
+        "rect": [round(value, 2) for value in candidate],
+        "confidence": 0.58,
+        "confidenceBand": "medium",
+        "manualReview": True,
+        "signals": {
+            "textCharacters": sum(len(line["text"]) for line in lines if line["rect"].intersects(candidate)),
+            "pageTextCharacters": sum(len(line["text"]) for line in lines),
+            "questionStartFound": False,
+            "nextQuestionBoundaryFound": bool(anchors),
+            "graphicsIncluded": len(graphics),
+            "linkedStimulusRegions": 1,
+            "sharedQuestionGroupDetected": True,
+            "previousPageSharedGroupDetected": True,
+            "sharedQuestionRange": [group["first"], group["last"]],
+            "pageRotation": int(page.rotation),
+        },
+        "reasons": [
+            f"A shared context block for Questions {group['first']}–{group['last']} was measured on the immediately preceding catalog page.",
+            "The cross-page context is retained as a separate segment and requires manual review.",
+        ],
+    }
+
+
 def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, Any] | None,
                  page_questions: list[dict[str, Any]], stimuli: dict[str, Any],
                  page_number: int) -> dict[str, Any]:
@@ -217,6 +274,15 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                   and prior.x0 - 40 <= line["rect"].x0 + line["rect"].width / 2 <= prior.x1 + 40]
         if continuation_parts:
             first_part = min(continuation_parts, key=lambda line: line["rect"].y0)
+            pre_part_lines = [line for line in lines
+                              if 0 < first_part["rect"].y0 - line["rect"].y1 <= 100
+                              and not PAGE_BOILERPLATE.search(line["text"])
+                              and not re.search(r"(?:begin|continue)\s+your\s+response\s+to\s+question", line["text"], re.I)]
+            cue_lines = [line for line in pre_part_lines if CONTEXT_CUE.search(line["text"])]
+            continuation_context = []
+            if cue_lines:
+                context_top = min(line["rect"].y0 for line in cue_lines)
+                continuation_context = [line for line in pre_part_lines if line["rect"].y0 >= context_top - 2]
             footer_top = min((line["rect"].y0 for line in lines
                               if PAGE_FOOTER.search(line["text"]) and line["rect"].y0 > bounds.y1 - 220),
                              default=bounds.y1 - 48)
@@ -226,6 +292,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                  if line["rect"].y1 >= first_part["rect"].y0 - 2
                                  and line["rect"].y0 < stop_y - 3
                                  and not PAGE_BOILERPLATE.search(line["text"])]
+            continuation_text = continuation_context + continuation_text
             labels = []
             for line in continuation_parts:
                 match = SUBPART.match(line["text"])
@@ -255,8 +322,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                 "frqSubpartSequence": all(ord(b) == ord(a) + 1 for a, b in zip(labels, labels[1:])),
                                 "graphicsIncluded": len(visual_continuation), "linkedStimulusRegions": 0,
                                 "columnCount": len(columns), "pageRotation": int(page.rotation),
-                                "continuationPageDetected": True},
-                    "reasons": ["No repeated numbered FRQ heading was found; a page continuation was estimated from subpart labels and nearby page graphics, and remains manual-review only."]}
+                                "continuationPageDetected": True,
+                                "introContextLinesIncluded": len(continuation_context)},
+                    "reasons": ["No repeated numbered FRQ heading was found; a page continuation was estimated from subpart labels and nearby page graphics, and remains manual-review only."]
+                               + (["Nearby setup text or an equation above the first continuation subpart was included as required context."] if continuation_context else [])}
         return {"page": page_number, "rect": [round(v, 2) for v in prior] if prior else None,
                 "confidence": 0.08 if prior else 0.0, "confidenceBand": "low", "manualReview": True,
                 "signals": {"textCharacters": text_chars, "questionStartFound": False,
@@ -346,7 +415,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                   and line["rect"].x0 >= col_x0 - 18
                   and col_x0 <= line["rect"].x0 + line["rect"].width / 2 <= col_x1
                   and line["rect"].y0 < footer_start - 4
-                  and not PAGE_BOILERPLATE.search(line["text"])]
+                  and not PAGE_BOILERPLATE.search(line["text"])
+                  and not (line["rect"].y0 >= bounds.y1 - 48 and re.fullmatch(r"\s*\d{1,3}\s*", line["text"] or ""))]
     if next_start:
         body_lines = [line for line in body_lines if line["rect"].y0 < next_start["rect"].y0 - 4]
     if next_group:
@@ -390,11 +460,17 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                  if anchor and line["rect"].y1 >= anchor["rect"].y0 - 3
                  and (not next_start or line["rect"].y0 < next_start["rect"].y0 - 4)]
     visual_in_band = []
+    graphics_expected = False
     if body_text:
         text_top = min(line["rect"].y0 for line in body_text)
         text_bottom = max(line["rect"].y1 for line in body_text)
         question_visual_cue = bool(re.search(r"\b(graph|figure|diagram|table|shown|illustrat|curve|structure|in the box)\b",
                                              (str(question.get("fullText") or "") + " " + " ".join(line["text"] for line in body_text)), re.I))
+        graphics_expected = bool(re.search(
+            r"\b(graph|figure|diagram|table|structural formulas?|curve|illustration|in the box)\b",
+            str(question.get("fullText") or "") + " " + " ".join(line["text"] for line in body_text),
+            re.I,
+        ))
         for box in visual:
             if not box.intersects(fitz.Rect(col_x0, top, col_x1, max(top + 1, bottom))):
                 continue
@@ -487,6 +563,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "frqSubpartLabels": subpart_labels,
         "frqSubpartSequence": subpart_sequence,
         "graphicsIncluded": len(visual_in_band),
+        "graphicsExpected": graphics_expected,
         "linkedStimulusRegions": len(linked),
         "independentQuestionStartsBetweenStimulusAndTarget": len(interposed_questions),
         "sharedQuestionGroupDetected": bool(target_group),
@@ -507,7 +584,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     score = round(min(1.0, score), 2)
     choices_incomplete = bool(expected_choice_count and (choices < expected_choice_count or not choice_sequence))
     text_mismatch = catalog_text_coverage is not None and len(catalog_tokens) >= 5 and catalog_text_coverage < .20
-    manual = region_text_chars < 25 or not anchor or score < 0.58 or choices_incomplete or ambiguous_linked_context or text_mismatch
+    graphics_missing = graphics_expected and not visual_in_band and not linked
+    manual = region_text_chars < 25 or not anchor or score < 0.58 or choices_incomplete or ambiguous_linked_context or text_mismatch or graphics_missing
     reasons = []
     if text_chars < 25:
         reasons.append("Sparse extractable text on the page; likely scanned or image-only. OCR/manual boundary review is required.")
@@ -525,6 +603,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         reasons.append(f"Detected {choices} of {expected_choice_count} answer-choice markers recorded in the question text; manual review is required to avoid a clipped MCQ.")
     if text_mismatch:
         reasons.append(f"Only {catalog_text_coverage:.0%} of distinctive catalog terms appear in the proposed crop; verify that the detected page region matches this question.")
+    if graphics_missing:
+        reasons.append("The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.")
     if question_type == "FRQ" and subparts == 0:
         reasons.append("No lettered FRQ subparts were detected in the candidate region.")
     if signals["columnCount"] > 1:
@@ -601,6 +681,24 @@ def detect(catalog: dict[str, Any], pdf_root: Path, stimuli_doc: dict[str, Any] 
                     rotated = fitz.Rect(proposal["rect"]) * source_page_obj.rotation_matrix
                     proposal["rect"] = [round(v, 2) for v in rotated]
                 out_regions.append(proposal)
+            if q.get("type") == "MCQ" and pages:
+                first_page = min(pages)
+                previous_page = first_page - 1
+                previous_source = next((entry for entry in catalog.get("sourceFiles", [])
+                                        if int(entry["from"]) <= previous_page <= int(entry["to"])), None)
+                if previous_source and previous_page not in pages:
+                    previous_path = pdf_root / previous_source["url"].lstrip("/")
+                    if previous_path.exists():
+                        if str(previous_path) not in cache:
+                            cache[str(previous_path)] = fitz.open(previous_path)
+                        previous_doc = cache[str(previous_path)]
+                        previous_index = previous_page - int(previous_source["from"])
+                        if 0 <= previous_index < previous_doc.page_count:
+                            shared_region = _previous_page_shared_group(
+                                previous_doc.load_page(previous_index), int(q.get("number") or 0), previous_page
+                            )
+                            if shared_region:
+                                out_regions.insert(0, shared_region)
             results.append({"id": q.get("id"), "type": q.get("type"), "number": q.get("number"),
                             "sourceDocument": q.get("source"), "regions": out_regions,
                             "manualReview": any(r.get("manualReview", True) for r in out_regions),

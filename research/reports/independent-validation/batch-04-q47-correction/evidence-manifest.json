@@ -1,0 +1,22 @@
+{
+  "case": "mcq-2024-47-2105",
+  "status": "development-only; excluded from independent validation",
+  "baselineCommit": "d930d141a4b6dff9562746586ef912598e742682",
+  "previousDetectorSha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "correctedDetectorSha256": "11648b5870d8a988b7ec0150b6efa7ad5417a358517aa7301f091d23d852a736",
+  "testResult": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 45,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract": "5.5.0; scanned-page regressions executed"
+  },
+  "files": {
+    "research/detect_question_boundaries.py": "11648b5870d8a988b7ec0150b6efa7ad5417a358517aa7301f091d23d852a736",
+    "tests/test_q47_scanned_particle_diagram.py": "d528a27581c08e178026a085c4c108502b0a5cc07cc220fbd60c29bfa9d84ad3",
+    "public/source/bank-08.pdf": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759",
+    "research/reports/independent-validation/batch-04-q47-correction/proposal.json": "65bb9b830f159d2afbca99684e339bc5eed34f76ccd6be23192108c612a546ce",
+    "research/reports/independent-validation/batch-04-q47-correction/report.md": "1a55ad2162a90adb44404dc5a3b1315b739f08b0c2d133386e661dea469bc931",
+    "research/reports/independent-validation/batch-04-q47-correction/mcq-2024-47-2105-comparison-grayscale.png": "7f355c5a44ab57b1ce88bec6f8cbefb5068ea051888dcdbb1d52a248c4016cef"
+  }
+}

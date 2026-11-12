@@ -66,7 +66,8 @@ def _text_lines(page: fitz.Page) -> list[dict[str, Any]]:
     return result
 
 
-def _ocr_scanned_lines(page: fitz.Page, scale: float = 2.0) -> list[dict[str, Any]]:
+def _ocr_scanned_lines(page: fitz.Page, scale: float = 2.0,
+                       clip: fitz.Rect | None = None, psm: int = 11) -> list[dict[str, Any]]:
     """Use bounded local OCR to estimate content boxes on image-only pages.
 
     OCR supports geometry only: low-native-text pages remain manual-review cases.
@@ -75,9 +76,9 @@ def _ocr_scanned_lines(page: fitz.Page, scale: float = 2.0) -> list[dict[str, An
     if not shutil.which("tesseract"):
         return []
     try:
-        png = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False).tobytes("png")
+        png = page.get_pixmap(matrix=fitz.Matrix(scale, scale), clip=clip, alpha=False).tobytes("png")
         run = subprocess.run(
-            ["tesseract", "stdin", "stdout", "tsv", "--psm", "11"],
+            ["tesseract", "stdin", "stdout", "tsv", "--psm", str(psm)],
             input=png, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
             timeout=15, check=True,
         )
@@ -91,6 +92,9 @@ def _ocr_scanned_lines(page: fitz.Page, scale: float = 2.0) -> list[dict[str, An
         try:
             confidence = float(fields[10])
             x, y, w, h = (float(fields[i]) / scale for i in (6, 7, 8, 9))
+            if clip:
+                x += clip.x0
+                y += clip.y0
         except ValueError:
             continue
         if confidence < 35 or w <= 0 or h <= 0:
@@ -119,6 +123,65 @@ def _ocr_scanned_lines(page: fitz.Page, scale: float = 2.0) -> list[dict[str, An
             result.append({"text": " ".join(word["text"] for word in cluster), "rect": box,
                            "ocrConfidence": round(sum(word["confidence"] for word in cluster) / len(cluster), 1)})
     return result
+
+
+def _raster_dependency_above(page: fitz.Page, anchor: dict[str, Any],
+                             column: tuple[float, float], lines: list[dict[str, Any]],
+                             requested: bool) -> fitz.Rect | None:
+    """Measure a compact raster-content band above a referenced question stem.
+
+    A full-page scan is not itself a graphic boundary. This projection-based
+    estimate looks only in the target column and only above its numbered stem;
+    it is used as a candidate region and always retains manual review.
+    """
+    if not requested or not _is_full_page_raster(page):
+        return None
+    x0, x1 = column
+    y1 = anchor["rect"].y0 - 5
+    prior_anchors = [item for item in _anchors(lines, "MCQ")
+                     if item["rect"].y0 < anchor["rect"].y0
+                     and x0 <= (item["rect"].x0 + item["rect"].x1) / 2 <= x1]
+    y0 = max((item["rect"].y1 for item in prior_anchors), default=page.rect.y0) + (8 if prior_anchors else 0)
+    if y1 - y0 < 18:
+        return None
+    scale = 1.0
+    pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), clip=fitz.Rect(x0, y0, x1, y1),
+                          colorspace=fitz.csGRAY, alpha=False)
+    samples = memoryview(pix.samples)
+    row_counts = []
+    for y in range(pix.height):
+        start = y * pix.width
+        row_counts.append(sum(samples[start + x] < 150 for x in range(pix.width)))
+    threshold = max(4, int(pix.width * 0.012))
+    active = [count >= threshold for count in row_counts]
+    runs: list[tuple[int, int]] = []
+    start = None
+    last = None
+    for i, value in enumerate(active):
+        if value:
+            if start is None:
+                start = i
+            last = i
+        elif start is not None and i - last > 5:
+            if last - start >= 12:
+                runs.append((start, last))
+            start = last = None
+    if start is not None and last is not None and last - start >= 12:
+        runs.append((start, last))
+    if not runs:
+        return None
+    # Select the last compact content band before the stem; this avoids pulling
+    # unrelated material from another column or a distant page header.
+    top_px, bottom_px = runs[-1]
+    active_cols = []
+    for x in range(pix.width):
+        count = sum(samples[y * pix.width + x] < 150 for y in range(top_px, bottom_px + 1))
+        if count >= max(3, int((bottom_px - top_px + 1) * 0.025)):
+            active_cols.append(x)
+    if not active_cols:
+        return None
+    return fitz.Rect(x0 + active_cols[0] - 8, y0 + top_px - 8,
+                     x0 + active_cols[-1] + 9, y0 + bottom_px + 9) & page.rect
 
 
 def _content_lines(page: fitz.Page) -> tuple[list[dict[str, Any]], int, bool]:
@@ -194,6 +257,20 @@ def _columns(lines: list[dict[str, Any]], page_width: float,
             # Using the line midpoint can mistake those indents for columns.
             anchor_x.append(matching_anchors[0]["rect"].x0)
     positions = hints or anchor_x
+    # On scans, a long stem line can create a false gutter inside a real
+    # column. Numbered-question anchors provide a better split than arbitrary
+    # OCR line extents (which vary with wrapping and interleaved columns).
+    if not hints:
+        detected = _anchors(lines, "MCQ")
+        centers = sorted((item["rect"].x0 + item["rect"].x1) / 2 for item in detected)
+        if len(centers) >= 2:
+            gap, index = max(((centers[i + 1] - centers[i], i) for i in range(len(centers) - 1)),
+                             default=(0.0, 0))
+            split = (centers[index] + centers[index + 1]) / 2
+            if gap >= page_width * .20 and page_width * .25 <= split <= page_width * .75:
+                overlap = min(20.0, page_width * .025)
+                return [(0.0, min(page_width, split + overlap)),
+                        (max(0.0, split - overlap), page_width)]
     # If multiple cataloged question numbers begin at the same page margin,
     # treat that as positive evidence for one column. Paragraph indentation
     # gaps later on the page must not override the stable numbered anchors.
@@ -844,6 +921,30 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         matching.sort(key=lambda a: abs((a["rect"].x0+a["rect"].x1)/2-prior_center))
     anchor = matching[0] if matching else None
 
+    # Sparse OCR over a two-column scan often interleaves words from both
+    # columns. Once the target column is known, OCR that column as a text block
+    # so stems and answer choices are measured together and not clipped by a
+    # false gutter inferred from individual OCR lines.
+    if (anchor and question_type == "MCQ" and ocr_used and _is_full_page_raster(page)):
+        target_column = _column_for((anchor["rect"].x0 + anchor["rect"].x1) / 2, columns)
+        clip = fitz.Rect(columns[target_column][0], bounds.y0,
+                         columns[target_column][1], bounds.y1)
+        column_ocr = _ocr_scanned_lines(page, scale=3.0, clip=clip, psm=6)
+        if column_ocr:
+            lines = [line for line in lines
+                     if not columns[target_column][0] <= line["rect"].x0 + line["rect"].width / 2 <= columns[target_column][1]]
+            lines.extend(column_ocr)
+            anchors = _anchors(lines, question_type)
+            columns = _columns(lines, bounds.width, page_questions)
+            matching = [item for item in anchors if item["number"] == expected]
+            if prior:
+                matching.sort(key=lambda item: abs(item["rect"].y0 - prior.y0)
+                              + abs((item["rect"].x0 + item["rect"].x1) / 2 - prior_center))
+            anchor = matching[0] if matching else None
+            text_chars = sum(len(line["text"]) for line in lines)
+            source_quality_flags = _source_quality_flags(page, lines)
+            source_years = _source_years(lines)
+
     # If catalog metadata is incomplete, accept a numbered line only when uniquely inside
     # the stored estimate. This avoids guessing from page-wide numbering in tables.
     if anchor is None and prior:
@@ -1133,6 +1234,15 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                           and visual_context_requested
                           and box.width >= 30 and box.height >= 12
                           and box.width < bounds.width * .85]
+        visual_cue_text = (str(question.get("textPreview") or "") + " "
+                           + str(question.get("fullText") or ""))
+        raster_context = _raster_dependency_above(
+            page, anchor, columns[column_index], lines,
+            bool(re.search(r"\b(graph|figure|diagram|particle model|table|shown|illustrat|curve|structure)\b",
+                           visual_cue_text, re.I)),
+        )
+        if raster_context:
+            context_visual.append(raster_context)
         table_dependency = _above_table_dependency(question, anchor, lines, visual, columns,
                                                    column_index, context_floor, bounds.width)
         if table_dependency["resolved"]:
@@ -1241,6 +1351,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                       if word not in {"the", "and", "for", "that", "with", "which", "from", "into", "this", "are", "was", "were", "each", "following", "above", "below"}}
     crop_tokens = {word for line in included_text for word in re.findall(r"[a-z]{3,}", line["text"].lower())}
     catalog_text_coverage = round(len(catalog_tokens & crop_tokens) / len(catalog_tokens), 2) if catalog_tokens else None
+    leading_catalog_number = re.match(r"\s*(?:question\s*)?(\d{1,3})\s*[.)]", str(question.get("fullText") or ""), re.I)
+    catalog_question_number_mismatch = bool(
+        leading_catalog_number and int(leading_catalog_number.group(1)) != expected
+    )
     visual = _visual_rects(page)
     included_visual = [box for box in visual if box.intersects(band)]
     linked = _stimulus_context(question, stimuli, page_number)
@@ -1359,13 +1473,14 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "questionStartMatches": len(matching),
         "nextQuestionBoundaryFound": bool(next_start),
         "answerChoiceMarkers": choices,
+        "answerChoiceLabels": choice_labels,
         "answerChoiceSequence": choice_sequence,
         "expectedAnswerChoiceMarkers": expected_choice_count,
         "answerChoiceCoverage": choices >= expected_choice_count if expected_choice_count else None,
         "frqSubpartMarkers": subparts,
         "frqSubpartLabels": subpart_labels,
         "frqSubpartSequence": subpart_sequence,
-        "graphicsIncluded": len(visual_in_band),
+        "graphicsIncluded": len(visual_in_band) + int(bool(raster_context)),
         "graphicsExpected": graphics_expected,
         "linkedStimulusRegions": len(linked),
         "independentQuestionStartsBetweenStimulusAndTarget": len(interposed_questions),
@@ -1382,7 +1497,6 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "sourceMetadataMismatch": metadata_year_mismatch,
         "nativeTextCharacters": native_text_chars,
         "ocrUsed": ocr_used,
-        "fullPageRaster": _is_full_page_raster(page),
         "singleQuestionFullWidthOverride": single_frq_anchor_wide_source,
         "tableDependencyDetected": bool(re.search(r"\btable\s+(?:above|shown\s+above|on\s+the\s+previous\s+page)\b", full_text, re.I)),
         "tableDependencyResolved": table_dependency["resolved"],
@@ -1392,6 +1506,9 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "questionIdTypeMismatch": question_id_type_mismatch,
         "questionIdTypePrefix": id_type_prefix,
         "semanticTailLinesIncluded": len(semantic_tail),
+        "rasterGraphicsContextIncluded": bool(raster_context),
+        "catalogQuestionNumberMismatch": catalog_question_number_mismatch,
+        "fullPageRaster": _is_full_page_raster(page),
     }
     # This is an evidence score, not a model-confidence claim. Text-poor scans are always
     # routed to manual review, even when a prior rectangle exists.
@@ -1405,7 +1522,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     score = round(min(1.0, score), 2)
     choices_incomplete = bool(expected_choice_count and (choices < expected_choice_count or not choice_sequence))
     text_mismatch = catalog_text_coverage is not None and len(catalog_tokens) >= 5 and catalog_text_coverage < .20
-    graphics_missing = graphics_expected and not visual_in_band and not linked
+    graphics_missing = graphics_expected and not visual_in_band and not linked and not raster_context
     suspicious_column_geometry = signals["suspiciousColumnGeometry"]
     unresolved_dependency = (signals["tableDependencyDetected"] and not signals["tableDependencyResolved"])
     unresolved_boxed_statement = (signals["boxedStatementDependencyDetected"]
@@ -1415,7 +1532,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
               or ambiguous_linked_context or text_mismatch or graphics_missing
               or bool(source_quality_flags) or metadata_year_mismatch or suspicious_column_geometry
               or unresolved_dependency or unresolved_boxed_statement or native_text_chars < 25
-              or question_id_type_mismatch)
+              or question_id_type_mismatch or catalog_question_number_mismatch
+              or _is_full_page_raster(page))
     reasons = []
     if text_chars < 25:
         reasons.append("Sparse extractable text on the page; likely scanned or image-only. OCR/manual boundary review is required.")
@@ -1433,6 +1551,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         reasons.append(f"Detected {choices} of {expected_choice_count} answer-choice markers recorded in the question text; manual review is required to avoid a clipped MCQ.")
     if text_mismatch:
         reasons.append(f"Only {catalog_text_coverage:.0%} of distinctive catalog terms appear in the proposed crop; verify that the detected page region matches this question.")
+    if catalog_question_number_mismatch:
+        reasons.append(f"Catalog fullText begins with Question {leading_catalog_number.group(1)}, but this record identifies Question {expected}; catalog/source text provenance requires manual review.")
+    if _is_full_page_raster(page):
+        reasons.append("The page is a raster scan; OCR can propose boundaries but cannot certify all graphical content, so manual review is required.")
     if graphics_missing:
         reasons.append("The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.")
     if unresolved_dependency:

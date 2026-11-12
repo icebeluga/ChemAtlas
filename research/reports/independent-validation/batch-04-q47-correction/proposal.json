@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "method": "pymupdf-text-layout-plus-page-graphics",
+  "questionCount": 1,
+  "manualReviewCount": 1,
+  "questions": [
+    {
+      "id": "mcq-2024-47-2105",
+      "type": "MCQ",
+      "number": 47,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 2105,
+          "rect": [
+            22.0,
+            22.0,
+            293.67,
+            406.33
+          ],
+          "confidence": 0.9,
+          "confidenceBand": "high",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 287,
+            "catalogTextCoverage": 0.2,
+            "pageTextCharacters": 1178,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 4,
+            "answerChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "answerChoiceSequence": true,
+            "expectedAnswerChoiceMarkers": 4,
+            "answerChoiceCoverage": true,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 1,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": true,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 73,
+            "ocrUsed": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "questionIdTypeMismatch": false,
+            "questionIdTypePrefix": "MCQ",
+            "semanticTailLinesIncluded": 0,
+            "rasterGraphicsContextIncluded": true,
+            "catalogQuestionNumberMismatch": true,
+            "fullPageRaster": true
+          },
+          "reasons": [
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Catalog fullText begins with Question 49, but this record identifies Question 47; catalog/source text provenance requires manual review.",
+            "The page is a raster scan; OCR can propose boundaries but cannot certify all graphical content, so manual review is required.",
+            "Stored crop spans almost the full page while text analysis found multiple columns; verify the column boundary manually.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column.",
+            "Nearby diagram/table/image content above the question number was included as context."
+          ]
+        }
+      ],
+      "extractionStatus": "proposed",
+      "manualReview": true,
+      "confidence": 0.9
+    }
+  ]
+}

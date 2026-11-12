@@ -7,8 +7,8 @@
   "inspection": "All five preregistered questions and all eleven source/proposal panels were visually reviewed before any detector change.",
   "metrics": {
     "questions": 5,
-    "complete_extractions": 3,
-    "incomplete_extractions": 2,
+    "complete_extractions": 4,
+    "incomplete_extractions": 1,
     "clean_extractions": 4,
     "readable_extractions": 5,
     "manual_review_required": 4,
@@ -25,11 +25,11 @@
       "diagnostic_manual_review": true,
       "automatic_application_eligible": false,
       "approval_status": "proposal-only",
-      "completeness": "fail",
+      "completeness": "pass",
       "cleanliness": "pass",
       "readability": "pass",
-      "review_routing": "manual-review-required-and-routed",
-      "finding": "The table, stem, and choices A–D are present, but the question says the reaction is represented above and the crop omits that reaction equation. The unresolved graphical/dependency signal correctly routed it to review.",
+      "review_routing": "manual-review-routed-conservatively",
+      "finding": "The table, stem, and choices A–D are present; no neighboring Question 57 content is included. The proposal was conservatively routed to review because the detector could not resolve its table-dependency signal, although visual inspection confirms the table is included.",
       "visual_panels": [
         "research/reports/independent-validation/batch-06-panels/mcq-2014-58-196-segment-1.png"
       ]

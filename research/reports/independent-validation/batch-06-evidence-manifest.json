@@ -2,7 +2,7 @@
   "title": "Batch 6 visual evidence manifest",
   "lock_sha256": "e4531475aecd472f59384fc6e78611a1319f4b43f72cce8079d5b8c84c57a171",
   "proposals_sha256": "ab274cd6530f30145d37e81cdebec4dcf3bdf84905ff86235f53b3135d30cc8b",
-  "results_sha256": "c72b00a7e9ef92a9a6532944e91bc9ae0fa6d036af5c2a0d2e2c3fb46b0a978d",
+  "results_sha256": "29173f2cc104cf797873ccdaa56cfb102d8ce2aa90ba2ff4e821e329713e873e",
   "frozen_detector_sha256": "544a489d093dd124584efb89a5e5faf2aed4836f352ee2a7c9db88732e1f7216",
   "panels": [
     {
@@ -72,5 +72,6 @@
       "format": "JPEG quality 86, 1800 px wide"
     }
   ],
-  "render_source_panels_retained_locally_as_png": true
+  "render_source_panels_retained_locally_as_png": true,
+  "report_sha256": "fd4681924a7561563b513a7d300be1861428575a4914f53bd016fe59c8254aff"
 }

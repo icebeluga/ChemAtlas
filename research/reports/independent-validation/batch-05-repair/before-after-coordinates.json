@@ -1,0 +1,204 @@
+{
+  "basedOnFrozenBatch": "batch-05-results.json",
+  "detectorProposalOnly": true,
+  "questions": [
+    {
+      "id": "mcq-1984-53-128",
+      "before": [
+        {
+          "page": 128,
+          "rect": [
+            14.0,
+            381.78,
+            221.58,
+            542.55
+          ]
+        }
+      ],
+      "after": [
+        {
+          "page": 128,
+          "rect": [
+            14.0,
+            381.78,
+            314.56,
+            542.55
+          ],
+          "segmentRole": null
+        }
+      ],
+      "manualReview": false,
+      "approvalStatus": "proposal-only"
+    },
+    {
+      "id": "frq-2016-1-385",
+      "before": [
+        {
+          "page": 385,
+          "rect": [
+            29.12,
+            260.7,
+            575.07,
+            679.51
+          ]
+        },
+        {
+          "page": 386,
+          "rect": [
+            48.0,
+            48.15,
+            577.82,
+            510.13
+          ]
+        }
+      ],
+      "after": [
+        {
+          "page": 385,
+          "rect": [
+            26.0,
+            219.44,
+            575.07,
+            679.51
+          ],
+          "segmentRole": null
+        },
+        {
+          "page": 386,
+          "rect": [
+            48.0,
+            48.15,
+            577.82,
+            510.13
+          ],
+          "segmentRole": "questionBody"
+        }
+      ],
+      "manualReview": true,
+      "approvalStatus": "proposal-only"
+    },
+    {
+      "id": "mcq-2002-15-754",
+      "before": [
+        {
+          "page": 754,
+          "rect": [
+            14.0,
+            296.4,
+            306.0,
+            425.96
+          ]
+        }
+      ],
+      "after": [
+        {
+          "page": 754,
+          "rect": [
+            55.5,
+            105.52,
+            306.0,
+            321.14
+          ],
+          "segmentRole": "sharedStimulus"
+        },
+        {
+          "page": 754,
+          "rect": [
+            28.0,
+            322.28,
+            302.68,
+            426.96
+          ],
+          "segmentRole": "questionBody"
+        }
+      ],
+      "manualReview": false,
+      "approvalStatus": "proposal-only"
+    },
+    {
+      "id": "frq-2010-4-921",
+      "before": [
+        {
+          "page": 921,
+          "rect": [
+            26.0,
+            148.15,
+            587.6,
+            591.38
+          ]
+        },
+        {
+          "page": 922,
+          "rect": [
+            48.72,
+            52.41,
+            583.41,
+            380.0
+          ]
+        }
+      ],
+      "after": [
+        {
+          "page": 921,
+          "rect": [
+            26.0,
+            148.15,
+            587.6,
+            591.38
+          ],
+          "segmentRole": null
+        },
+        {
+          "page": 922,
+          "rect": [
+            48.72,
+            52.41,
+            583.41,
+            380.0
+          ],
+          "segmentRole": "questionBody"
+        }
+      ],
+      "manualReview": true,
+      "approvalStatus": "proposal-only"
+    },
+    {
+      "id": "frq-2011-1-1220",
+      "before": [
+        {
+          "page": 1220,
+          "rect": [
+            26.0,
+            294.3,
+            585.27,
+            567.07
+          ]
+        }
+      ],
+      "after": [
+        {
+          "page": 1220,
+          "rect": [
+            26.0,
+            264.23,
+            585.27,
+            567.07
+          ],
+          "segmentRole": null
+        },
+        {
+          "page": 1221,
+          "rect": [
+            47.28,
+            35.71,
+            575.64,
+            363.99
+          ],
+          "segmentRole": "questionBody"
+        }
+      ],
+      "manualReview": true,
+      "approvalStatus": "proposal-only"
+    }
+  ]
+}

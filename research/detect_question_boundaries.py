@@ -25,12 +25,24 @@ CHOICE = re.compile(r"^\s*\(?([A-E])(?:\)|[.)])\s+\S", re.I)
 SUBPART = re.compile(r"^\s*(?:\(([a-h])\)|([a-h])[.)])\s+\S", re.I)
 SUBPART_CONTINUATION = re.compile(r"^\s*(?:\(([a-h]|iv|vi{0,3}|ix|i{1,3})\)|([a-h]|iv|vi{0,3}|ix|i{1,3})[.)])\s+\S", re.I)
 CONTEXT_CUE = re.compile(r"(?:equation|following|data|refer|table|graph|diagram|reaction|based on|information|use the|shown|figure|below|above|at 25|[=⇌↔→Δ]|K[a-z]|pH|\b\d+(?:\.\d+)?\s*(?:mol|M|kJ|kPa|atm|°C))", re.I)
-SHARED_GROUP = re.compile(r"^\s*questions?\s+(\d{1,3})\s*(?:-|–|to|through)\s*(\d{1,3})\s+(?:refer|use|are|will|should|answer)\b", re.I)
+UPSTREAM_DEPENDENCY_CUE = re.compile(
+    r"\b(?:equation|reaction|expression|formula|statement|information|setup)\s+(?:shown\s+)?above\b|"
+    r"\baccording\s+to\s+(?:the\s+)?(?:equation|reaction|expression|formula)\s+above\b|"
+    r"\bbased\s+on\s+(?:the\s+)?(?:information|setup|equation|reaction)\s+above\b",
+    re.I,
+)
+CHEMICAL_EXPRESSION = re.compile(r"(?:[=⇌↔→]|ΔH|\\Delta|\b(?:mol|kJ)\s*/|\b\d+\s*[A-Z][a-z]?(?:\([^)]*\))?)", re.I)
+SHARED_GROUP = re.compile(r"^\s*questions?\s+(\d{1,3})\s*(?:-|–|to|through)\s*(\d{1,3})\s+(?:refer|use|are|will|should|answer|relate\s+to|are\s+based\s+on)\b", re.I)
 PAGE_BOILERPLATE = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|(?:www\.|apcentral\.)?collegeboard\.com|Downloaded by\b|Scan to open on Studocu|lOMoARcPSD|messages\.(?:pdf_cover_qr_code_label|downloaded_by)|^\s*Version\s+[A-Z]\s*$)", re.I)
 PAGE_FOOTER = re.compile(r"(?:GO ON TO THE NEXT PAGE|END OF EXAM|S\s*T\s*O\s*P|Copyright|©\s*(?:19|20)\d{2}|The College Board\. All rights reserved|collegeboard\.com|Web or Mass distribution prohibited|Unauthorized copying or reuse|Downloaded by\b|Scan to open on Studocu|lOMoARcPSD|messages\.(?:pdf_cover_qr_code_label|downloaded_by))", re.I)
 PAGE_HEADER = re.compile(r"(?:Unit\s+\d+\s+Progress\s+Check|Test\s+Booklet|AP\s+Chemistry\s+20\d{2}.*Free[- ]Response\s+Questions|^\s*(?:19|20)\d{2}\s+AP\s*$|^\s*(?:19|20)\d{2}\s+AP\s*®?\s+CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS.*$|^\s*®?\s*CHEMISTRY\s+FREE[- ]RESPONSE\s+QUESTIONS.*$|^\s*FREE[- ]RESPONSE\s+QUESTIONS\s*$|^\s*CHEMISTRY\s*$|^\s*SECTION\s+[IVX]+\s*$|^\s*\d+\s+Questions\s*$)", re.I)
 QUESTION_INSTRUCTION = re.compile(
     r"^\s*Answer\s+Questions?\s+\d+(?:\s*[-–]\s*\d+)?\s+(?:below|in this part)\b.*(?:score weighting|percent|minutes?)?",
+    re.I,
+)
+GENERIC_EXAM_INSTRUCTION = re.compile(
+    r"\b(?:write your response in the space|examples and equations may be included|"
+    r"for calculations, clearly show|you must show your work|pay attention to significant figures)\b",
     re.I,
 )
 MCQ_STEM_CUE = re.compile(
@@ -241,11 +253,25 @@ def _columns(lines: list[dict[str, Any]], page_width: float,
     # the questions on a page, however, its repeated left/right placement is a
     # useful column signal and is more stable than line-center gaps on equations.
     hints = []
+    hint_rects = []
     for item in page_questions or []:
         for region in item.get("sourceRegions", []):
             box = _rect(region.get("rect")) if region.get("rect") else None
             if box and box.width <= page_width * 0.68:
                 hints.append((box.x0 + box.x1) / 2)
+                hint_rects.append(box)
+    # A lone catalog crop that occupies approximately one half-page is a
+    # useful one-sided column prior. It prevents paragraph indents from
+    # inventing a gutter through a long answer line when validation runs on a
+    # bounded subset containing only the target question.
+    if len(hint_rects) == 1 and page_width * .42 <= hint_rects[0].width <= page_width * .58:
+        hint = hint_rects[0]
+        split = page_width / 2
+        overlap = min(16.0, page_width * .025)
+        if hint.x1 <= split + page_width * .06:
+            return [(0.0, split + overlap), (split - overlap, page_width)]
+        if hint.x0 >= split - page_width * .06:
+            return [(0.0, split + overlap), (split - overlap, page_width)]
     anchor_x = []
     for item in page_questions or []:
         number = int(item.get("number") or 0)
@@ -454,6 +480,17 @@ def _shared_group_segments(page: fitz.Page, question: dict[str, Any],
                           and box.y1 < first_group_y
                           and box.width < page.rect.width * .97
                           and col_x0 - 12 <= (box.x0 + box.x1) / 2 <= col_x1 + 12]
+        shared_context_text = " ".join(item["text"] for item in context_lines)
+        graphics_dependency = bool(re.search(
+            r"\b(graph|figure|diagram|curve|spectrum|shown|illustrat)\b", shared_context_text, re.I
+        ))
+        raster_context = None
+        if graphics_dependency and _is_full_page_raster(page):
+            raster_context = _raster_dependency_above(
+                page, group_anchors[0], columns[column_index], lines, requested=True
+            )
+            if raster_context:
+                context_visual.append(raster_context)
         context_boxes = [item["rect"] for item in context_lines] + context_visual
         if not context_boxes:
             continue
@@ -485,13 +522,14 @@ def _shared_group_segments(page: fitz.Page, question: dict[str, Any],
         for item in body_lines[1:]:
             body_union |= item["rect"]
         body_rect = fitz.Rect(max(col_x0, body_union.x0 - 8), max(page.rect.y0, anchor["rect"].y0 - 4),
-                              min(col_x1, body_union.x1 + 8), min(page.rect.y1, body_union.y1 + 18))
+                              min(col_x1, body_union.x1 + 8), min(page.rect.y1, stop_y - 5,
+                                                                   body_union.y1 + 18))
         stimulus_id = hashlib.sha256(
             f"{question.get('source','')}:{page_number}:{group_first}-{group_last}:{match.group(0).lower()}".encode()
         ).hexdigest()[:16]
         full_page_raster = _is_full_page_raster(page)
         complete_choices = _complete_choice_sequence(shared_labels)
-        unresolved = not complete_choices
+        unresolved = (bool(shared_choices) and not complete_choices) or (graphics_dependency and not context_visual)
         manual = (unresolved or full_page_raster or bool(source_quality_flags) or metadata_year_mismatch)
         reasons = [f"Shared context for Questions {group_first}–{group_last} is emitted as a separate ordered segment from the target stem."]
         if unresolved:
@@ -509,7 +547,10 @@ def _shared_group_segments(page: fitz.Page, question: dict[str, Any],
             "confidenceBand": "medium" if complete_choices else "low", "manualReview": manual,
             "signals": {"sharedQuestionRange": [group_first, group_last],
                         "sharedChoiceLabels": shared_labels, "sharedChoiceSequence": complete_choices,
-                        "graphicsExpected": True, "graphicsIncluded": len(context_visual),
+                        "graphicsExpected": graphics_dependency or bool(shared_choices),
+                        "graphicsIncluded": len(context_visual),
+                        "graphicsDependencyDetected": graphics_dependency,
+                        "graphicsDependencyResolved": bool(context_visual) if graphics_dependency else None,
                         "fullPageRaster": full_page_raster, "questionStemContamination": False,
                         "sourceQualityFlags": source_quality_flags, "sourceYears": source_years,
                         "catalogYear": metadata_year, "sourceMetadataMismatch": metadata_year_mismatch,
@@ -1167,6 +1208,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
     # The prior remains the spatial anchor. A modest context lead includes equations or
     # shared setup printed immediately before the number without taking the previous item.
     intro_context = []
+    dependency_cue_detected = False
+    dependency_lines = []
     context_visual = []
     table_dependency = {"boxes": [], "lines": [], "resolved": False}
     if anchor:
@@ -1192,7 +1235,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                            key=lambda line: line["rect"].y0)
             last_instruction = first_direction
             for line in ordered_before_anchor[1:]:
-                if line["rect"].y0 - last_instruction["rect"].y1 > 20:
+                if (line["rect"].y0 - last_instruction["rect"].y1 > 8
+                        or re.search(r"^\s*write\s+your\s+response", line["text"], re.I)):
                     break
                 last_instruction = line
             direction_bottom = last_instruction["rect"].y1
@@ -1222,7 +1266,38 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                      and not QUESTION_INSTRUCTION.search(line["text"])
                      and not PAGE_HEADER.search(line["text"])
                      and CONTEXT_CUE.search(line["text"])]
-        intro_context = preceding[-3:]
+        full_text = str(question.get("fullText") or "")
+        dependency_cue_detected = bool(UPSTREAM_DEPENDENCY_CUE.search(full_text))
+        dependency_lines = []
+        if dependency_cue_detected:
+            dependency_lines = [line for line in lines
+                                if 0 < anchor["rect"].y0 - line["rect"].y1 <= 180
+                                and line["rect"].y0 >= context_floor
+                                and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
+                                and not PAGE_BOILERPLATE.search(line["text"])
+                                and not PAGE_HEADER.search(line["text"])
+                                and not GENERIC_EXAM_INSTRUCTION.search(line["text"])
+                                and (CHEMICAL_EXPRESSION.search(line["text"])
+                                     or re.search(r"\b(?:given|provided|shown|following|use|based on)\b", line["text"], re.I))]
+            # Equations are often split into multiple text boxes (for example,
+            # reaction, ΔH label, and value). Keep nearby aligned fragments as
+            # one dependency group, but never cross the prior-question boundary.
+            expression_lines = [line for line in dependency_lines if CHEMICAL_EXPRESSION.search(line["text"])]
+            if expression_lines:
+                expression_top = min(line["rect"].y0 for line in expression_lines)
+                expression_bottom = max(line["rect"].y1 for line in expression_lines)
+                dependency_lines = list({id(line): line for line in expression_lines + [
+                    line for line in lines
+                    if expression_top - 5 <= line["rect"].y0 <= expression_bottom + 5
+                    and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
+                    and line["rect"].y0 >= context_floor
+                    and not PAGE_BOILERPLATE.search(line["text"])
+                    and not PAGE_HEADER.search(line["text"])
+                    and not GENERIC_EXAM_INSTRUCTION.search(line["text"])
+                ]}.values())
+        context_selection = dependency_lines if dependency_lines else preceding[-3:]
+        intro_context = list({id(line): line for line in context_selection}.values())
+        intro_context.sort(key=lambda line: (line["rect"].y0, line["rect"].x0))
         visual_context_requested = bool(re.search(
             r"\b(graph|figure|diagram|table|shown|illustrat|curve|structure|spectrum|in the box)\b",
             str(question.get("fullText") or ""), re.I))
@@ -1398,7 +1473,24 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                 visual_in_band.append(box)
     elif linked:
         visual_in_band = [box for box in visual if any(box.intersects(item) for item in linked)]
-    content_boxes = [line["rect"] for line in included_text] + visual_in_band + linked + context_visual
+    # Choice labels and their wrapped answer text are sometimes separate PDF
+    # text boxes. Keep short continuation lines after the final marker in the
+    # target column so a complete-looking A–E marker sequence cannot hide a
+    # clipped final answer.
+    choice_tail_lines = []
+    target_markers = [line for line in body_lines if _choice_match(line["text"])] if question_type == "MCQ" else []
+    if target_markers:
+        final_marker = max(target_markers, key=lambda line: line["rect"].y0)
+        target_end = next_start["rect"].y0 - 4 if next_start else footer_start - 4
+        choice_tail_lines = [line for line in body_lines
+                             if final_marker["rect"].y0 <= line["rect"].y0 <= final_marker["rect"].y0 + 40
+                             and line["rect"].y0 < target_end
+                             and line["rect"].x0 >= col_x0 - 8
+                             and _column_for(line["rect"].x0 + line["rect"].width / 2, columns) == column_index
+                             and not _choice_match(line["text"])
+                             and not PAGE_BOILERPLATE.search(line["text"])]
+    completeness_text = list({id(line): line for line in included_text + choice_tail_lines}.values())
+    content_boxes = [line["rect"] for line in completeness_text] + visual_in_band + linked + context_visual
     if anchor:
         content_boxes.append(anchor["rect"])
     if content_boxes:
@@ -1428,6 +1520,19 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         left, right = col_x0, col_x1
     candidate = _expand(fitz.Rect(left, max(bounds.y0, top), right, min(bounds.y1, max(top+1,bottom))),
                         0, 0, bounds)
+    horizontally_clipped_lines = [line for line in completeness_text
+                                  if line["rect"].x0 < candidate.x0 - 0.5
+                                  or line["rect"].x1 > candidate.x1 + 0.5]
+    # Do not grow through the middle of a neighboring column. If a required
+    # text box crosses that safe edge, retain a diagnostic and require review.
+    if len(columns) > 1:
+        gutter_edge = (columns[0][1] + columns[1][0]) / 2
+        crosses_gutter = any(line["rect"].x1 > gutter_edge + 1 for line in completeness_text
+                             if column_index == 0)
+        if column_index == 1:
+            crosses_gutter = any(line["rect"].x0 < gutter_edge - 1 for line in completeness_text)
+    else:
+        crosses_gutter = False
     # Where a crop estimate is tighter than inferred content, include the full union.
     # A broad prior rectangle is evidence to inspect, not an automatic reason to
     # re-expand a measured crop. Nearby PDF graphics are handled above.
@@ -1509,6 +1614,10 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         "rasterGraphicsContextIncluded": bool(raster_context),
         "catalogQuestionNumberMismatch": catalog_question_number_mismatch,
         "fullPageRaster": _is_full_page_raster(page),
+        "horizontalTextClippingDetected": bool(horizontally_clipped_lines or crosses_gutter),
+        "horizontalTextBoundingBoxesChecked": len(completeness_text),
+        "referencedUpstreamDependencyDetected": dependency_cue_detected,
+        "referencedUpstreamDependencyResolved": bool(dependency_lines) if dependency_cue_detected else None,
     }
     # This is an evidence score, not a model-confidence claim. Text-poor scans are always
     # routed to manual review, even when a prior rectangle exists.
@@ -1533,6 +1642,8 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
               or bool(source_quality_flags) or metadata_year_mismatch or suspicious_column_geometry
               or unresolved_dependency or unresolved_boxed_statement or native_text_chars < 25
               or question_id_type_mismatch or catalog_question_number_mismatch
+              or horizontally_clipped_lines or crosses_gutter
+              or (dependency_cue_detected and not dependency_lines)
               or _is_full_page_raster(page))
     reasons = []
     if text_chars < 25:
@@ -1553,6 +1664,12 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         reasons.append(f"Only {catalog_text_coverage:.0%} of distinctive catalog terms appear in the proposed crop; verify that the detected page region matches this question.")
     if catalog_question_number_mismatch:
         reasons.append(f"Catalog fullText begins with Question {leading_catalog_number.group(1)}, but this record identifies Question {expected}; catalog/source text provenance requires manual review.")
+    if horizontally_clipped_lines or crosses_gutter:
+        reasons.append("One or more required text boxes cross the crop or safe column boundary; horizontal content completeness is unresolved and manual review is required.")
+    if dependency_cue_detected and not dependency_lines:
+        reasons.append("The question explicitly references material above the stem, but no matching source text was localized; manual review is required.")
+    if dependency_lines:
+        reasons.append("Referenced setup or equation text above the stem was localized and included.")
     if _is_full_page_raster(page):
         reasons.append("The page is a raster scan; OCR can propose boundaries but cannot certify all graphical content, so manual review is required.")
     if graphics_missing:
@@ -1655,6 +1772,75 @@ def detect(catalog: dict[str, Any], pdf_root: Path, stimuli_doc: dict[str, Any] 
                         rotated = fitz.Rect(additional_region["rect"]) * source_page_obj.rotation_matrix
                         additional_region["rect"] = [round(v, 2) for v in rotated]
                     out_regions.append(additional_region)
+            if q.get("type") == "FRQ" and pages:
+                # Catalog page ranges can stop before a continuation that starts
+                # with the next lettered subpart. Inspect only the immediately
+                # adjacent page in the same PDF and require a sequential marker.
+                last_page = max(pages)
+                last_region = next((r for r in reversed(out_regions)
+                                    if int(r.get("page", -1)) == last_page
+                                    and r.get("signals", {}).get("frqSubpartLabels")), None)
+                labels = last_region.get("signals", {}).get("frqSubpartLabels", []) if last_region else []
+                alpha_labels = [label for label in labels if len(label) == 1 and label in "abcdefgh"]
+                next_label = chr(ord(alpha_labels[-1]) + 1) if alpha_labels else None
+                catalog_subparts = set()
+                for text_line in str(q.get("fullText") or "").splitlines():
+                    match = SUBPART_CONTINUATION.match(text_line)
+                    if match:
+                        catalog_subparts.add((match.group(1) or match.group(2)).lower())
+                next_page = last_page + 1
+                current_source = next((entry for entry in catalog.get("sourceFiles", [])
+                                       if int(entry["from"]) <= last_page <= int(entry["to"])), None)
+                next_source = next((entry for entry in catalog.get("sourceFiles", [])
+                                    if int(entry["from"]) <= next_page <= int(entry["to"])), None)
+                if (next_label and next_label <= "h" and next_label not in catalog_subparts
+                        and current_source and next_source
+                        and current_source.get("url") == next_source.get("url") and next_page not in pages):
+                    adjacent_path = pdf_root / next_source["url"].lstrip("/")
+                    if adjacent_path.exists():
+                        if str(adjacent_path) not in cache:
+                            cache[str(adjacent_path)] = fitz.open(adjacent_path)
+                        adjacent_doc = cache[str(adjacent_path)]
+                        adjacent_index = next_page - int(next_source["from"])
+                        if 0 <= adjacent_index < adjacent_doc.page_count:
+                            adjacent_obj = adjacent_doc.load_page(adjacent_index)
+                            adjacent_lines, _, _ = _content_lines(adjacent_obj)
+                            adjacent_labels = []
+                            next_label_y = None
+                            for line in adjacent_lines:
+                                match = SUBPART_CONTINUATION.match(line["text"])
+                                if match:
+                                    label = (match.group(1) or match.group(2)).lower()
+                                    if len(label) == 1 and label not in adjacent_labels:
+                                        adjacent_labels.append(label)
+                                    if label == next_label:
+                                        next_label_y = line["rect"].y0
+                            adjacent_anchors = _anchors(adjacent_lines, "FRQ")
+                            competing_start = any(anchor["number"] != int(q.get("number") or 0)
+                                                  and next_label_y is not None
+                                                  and anchor["rect"].y0 < next_label_y
+                                                  for anchor in adjacent_anchors)
+                            if (next_label in adjacent_labels and not competing_start
+                                    and not _is_full_page_raster(adjacent_obj)):
+                                broad_prior = {"page": next_page,
+                                               "rect": [0, 0, adjacent_obj.rect.width, adjacent_obj.rect.height]}
+                                continuation = analyze_page(adjacent_obj, q, broad_prior,
+                                                            by_page.get(next_page, []), stimuli, next_page)
+                                extras = continuation.pop("additionalRegions", [])
+                                continuation.setdefault("signals", {})["continuationPageInferredFromSubpartSequence"] = True
+                                continuation["manualReview"] = True
+                                continuation["reasons"] = continuation.get("reasons", []) + [
+                                    f"Adjacent source page {next_page} was added because subpart ({next_label}) continues the target FRQ sequence; verify the catalog page mapping manually."
+                                ]
+                                if continuation.get("rect") and adjacent_obj.rotation:
+                                    continuation["rect"] = list(fitz.Rect(continuation["rect"]) * adjacent_obj.rotation_matrix)
+                                out_regions.append(continuation)
+                                for extra in extras:
+                                    extra.setdefault("signals", {})["continuationPageInferredFromSubpartSequence"] = True
+                                    extra["manualReview"] = True
+                                    if extra.get("rect") and adjacent_obj.rotation:
+                                        extra["rect"] = list(fitz.Rect(extra["rect"]) * adjacent_obj.rotation_matrix)
+                                    out_regions.append(extra)
             if q.get("type") == "MCQ" and pages:
                 first_page = min(pages)
                 previous_page = first_page - 1
@@ -1719,33 +1905,22 @@ def detect(catalog: dict[str, Any], pdf_root: Path, stimuli_doc: dict[str, Any] 
             results.append({"id": q.get("id"), "type": q.get("type"), "number": q.get("number"),
                             "sourceDocument": q.get("source"), "regions": out_regions,
                             "extractionStatus": extraction_status,
+                            "automaticApplicationEligible": False,
+                            "approvalStatus": "proposal-only",
                             "manualReview": unresolved or any(r.get("manualReview", True) for r in out_regions),
                             "confidence": round(min((r.get("confidence", 0) for r in out_regions), default=0), 2)})
     finally:
         for doc in cache.values():
             doc.close()
-    return {"schemaVersion": 1, "method": "pymupdf-text-layout-plus-page-graphics", "questionCount": len(results),
+    return {"schemaVersion": 1, "method": "pymupdf-text-layout-plus-page-graphics",
+            "automaticApplicationEnabled": False, "approvalStatus": "proposal-only",
+            "questionCount": len(results),
             "manualReviewCount": sum(bool(q.get("manualReview")) for q in results), "questions": results}
 
 
 def apply_high_confidence(catalog: dict[str, Any], proposals: dict[str, Any]) -> tuple[dict[str, Any], int]:
-    """Return a separate catalog value with only fully high-confidence crops replaced."""
-    by_id = {item.get("id"): item for item in proposals.get("questions", [])}
-    output_questions = []
-    applied = 0
-    for original in catalog.get("questions", []):
-        question = dict(original)
-        proposal = by_id.get(question.get("id"))
-        regions = proposal.get("regions", []) if proposal else []
-        eligible = bool(regions) and all(
-            not region.get("manualReview") and region.get("confidenceBand") == "high" and region.get("rect")
-            for region in regions
-        )
-        if eligible:
-            question["sourceRegions"] = [{"page": region["page"], "rect": region["rect"]} for region in regions]
-            applied += 1
-        output_questions.append(question)
-    return {**catalog, "questions": output_questions}, applied
+    """Compatibility stub: Phase 2 candidates cannot be automatically applied."""
+    return catalog, 0
 
 
 def main() -> None:
@@ -1755,9 +1930,11 @@ def main() -> None:
     parser.add_argument("--stimuli", type=Path, help="Shared-stimulus metadata (default: ROOT/research/stimuli.json when present)")
     parser.add_argument("--pdf-root", type=Path, help="Root containing source PDF paths (default: ROOT/public)")
     parser.add_argument("--output", type=Path, default=Path("question-boundary-proposals.json"))
-    parser.add_argument("--apply-high-confidence", action="store_true", help="write a separate catalog with only non-manual high-confidence regions applied")
+    parser.add_argument("--apply-high-confidence", action="store_true", help="disabled in Phase 2")
     parser.add_argument("--catalog-output", type=Path, help="required with --apply-high-confidence; never overwrites the input catalog")
     args = parser.parse_args()
+    if args.apply_high_confidence:
+        parser.error("automatic proposal application is disabled during Phase 2; review proposals manually")
     catalog_path = args.catalog or args.root / "public/questions.json"
     stimuli_path = args.stimuli or args.root / "research/stimuli.json"
     stimuli = json.loads(stimuli_path.read_text(encoding="utf-8")) if stimuli_path.exists() else None

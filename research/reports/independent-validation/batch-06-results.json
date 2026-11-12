@@ -1,0 +1,112 @@
+{
+  "title": "ChemAtlas Phase 2 independent validation Batch 6 results",
+  "locked_selection_path": "research/reports/independent-validation/batch-06-lock.json",
+  "selection_commit": "a2d97d4b86a3712e70281e45323e942c6ce0ec5c",
+  "frozen_detector_revision": "3df2cb9af033996a48735374fdb280fa91f6ac57",
+  "frozen_detector_sha256": "544a489d093dd124584efb89a5e5faf2aed4836f352ee2a7c9db88732e1f7216",
+  "inspection": "All five preregistered questions and all eleven source/proposal panels were visually reviewed before any detector change.",
+  "metrics": {
+    "questions": 5,
+    "complete_extractions": 3,
+    "incomplete_extractions": 2,
+    "clean_extractions": 4,
+    "readable_extractions": 5,
+    "manual_review_required": 4,
+    "manual_review_routed": 4,
+    "automatic_application_enabled": false,
+    "proposals_auto_applied": 0
+  },
+  "questions": [
+    {
+      "sample_number": 22,
+      "question_id": "mcq-2014-58-196",
+      "source_document": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "proposal_confidence": 0.72,
+      "diagnostic_manual_review": true,
+      "automatic_application_eligible": false,
+      "approval_status": "proposal-only",
+      "completeness": "fail",
+      "cleanliness": "pass",
+      "readability": "pass",
+      "review_routing": "manual-review-required-and-routed",
+      "finding": "The table, stem, and choices A–D are present, but the question says the reaction is represented above and the crop omits that reaction equation. The unresolved graphical/dependency signal correctly routed it to review.",
+      "visual_panels": [
+        "research/reports/independent-validation/batch-06-panels/mcq-2014-58-196-segment-1.png"
+      ]
+    },
+    {
+      "sample_number": 23,
+      "question_id": "frq-2021-3-405",
+      "source_document": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "proposal_confidence": 0.36,
+      "diagnostic_manual_review": true,
+      "automatic_application_eligible": false,
+      "approval_status": "proposal-only",
+      "completeness": "pass",
+      "cleanliness": "pass-with-minor-page-instructions",
+      "readability": "pass",
+      "review_routing": "manual-review-required-and-routed",
+      "finding": "Pages 405–407 include setup, data table, subparts a–g, standard curve, and referenced graph. No adjacent question is included. Continued-question instructions remain in source regions; low-confidence continuation segments are manually routed.",
+      "visual_panels": [
+        "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-1.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-2.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-3.png"
+      ]
+    },
+    {
+      "sample_number": 24,
+      "question_id": "mcq-2023-43-1731",
+      "source_document": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "proposal_confidence": 0.4,
+      "diagnostic_manual_review": true,
+      "automatic_application_eligible": false,
+      "approval_status": "proposal-only",
+      "completeness": "fail",
+      "cleanliness": "fail",
+      "readability": "pass",
+      "review_routing": "manual-review-required-and-routed",
+      "finding": "The proposal begins at x=224.42 on the two-column page, cutting off the left portion of the referenced titration graph and the start of the question stem. Choice markers are also outside the crop. The proposal was routed to manual review.",
+      "visual_panels": [
+        "research/reports/independent-validation/batch-06-panels/mcq-2023-43-1731-segment-1.png"
+      ]
+    },
+    {
+      "sample_number": 25,
+      "question_id": "mcq-2023-34-1830",
+      "source_document": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "proposal_confidence": 0.82,
+      "diagnostic_manual_review": false,
+      "automatic_application_eligible": false,
+      "approval_status": "proposal-only",
+      "completeness": "pass",
+      "cleanliness": "pass",
+      "readability": "pass",
+      "review_routing": "no-manual-review-indicated; appropriate for this visually verified crop",
+      "finding": "Stem, dissolution diagram, table, and choices A–D are present. Neighboring question and page footer are excluded.",
+      "visual_panels": [
+        "research/reports/independent-validation/batch-06-panels/mcq-2023-34-1830-segment-1.png"
+      ]
+    },
+    {
+      "sample_number": 26,
+      "question_id": "frq-2024-2-2115",
+      "source_document": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "proposal_confidence": 0.36,
+      "diagnostic_manual_review": true,
+      "automatic_application_eligible": false,
+      "approval_status": "proposal-only",
+      "completeness": "pass",
+      "cleanliness": "pass",
+      "readability": "pass-with-source-scan-limit",
+      "review_routing": "manual-review-required-and-routed",
+      "finding": "All parts across pages 2115–2118 are included, including the Lewis structure, equations, experimental diagrams, table, buret diagram, and parts a–f. Segments are ordered across pages; source is a low-resolution scan, so review routing is appropriate.",
+      "visual_panels": [
+        "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-1.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-2.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-3.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-4.png",
+        "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-5.png"
+      ]
+    }
+  ]
+}

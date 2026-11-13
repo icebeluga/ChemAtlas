@@ -1,0 +1,18 @@
+{
+  "worker": "chematlas-student-private",
+  "active_version": "af854526-9466-4c94-8091-c7d440c0c824",
+  "traffic_percent_owner_dashboard": 100,
+  "deployment_id": null,
+  "deployment_run_id": 43441051919,
+  "deployed_application_sha": "63fd7e4b5287d74f66227742e8b2a4f47e37920f",
+  "catalog_from_deployed_source": {
+    "path": "public/questions.json",
+    "count": 1542,
+    "sha256": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe"
+  },
+  "worksheet_export_assets_in_deployed_source": [],
+  "live_authenticated_asset_bytes_verified": false,
+  "preceding_version": "d4e344f6-550f-47c4-bb44-3304e2174f6b",
+  "rollback_candidate": "af854526-9466-4c94-8091-c7d440c0c824",
+  "rollback_verified": false
+}

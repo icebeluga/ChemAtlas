@@ -1,4 +1,6 @@
 # ChemAtlas Stage 6 release-readiness report
+ 
+[Follow-up production correlation, rollback status and staging plan](resume.md)
 
 **NO-GO for production.** The sealed candidate passed integrity verification. Real-identity hosted checks and live rollback verification are outstanding. Owner approval for production has not been requested.
 
@@ -26,9 +28,9 @@ Downloaded the original GitHub artifact and compared the ZIP and embedded tar di
 | Isolated explicitly denied identity | Blocked. No genuine denied test session was available. |
 | Isolated anonymous browser | Pending the isolated candidate endpoint. See the separate existing-production HTTP observation below. |
 | Candidate routes, assets and admin | Stage 5 synthetic smoke passed. Hosted identity tests, deep links, byte checks and admin/backup denial are pending. No private service endpoint or data was used. |
-| Production deployment ID, active version and allocation | Unknown. Cloudflare dashboard required sign-in and no authorized Cloudflare API session was available. |
-| Deployed application, catalog and worksheet identities | Unknown. Anonymous probes cannot establish resource availability, contents or version behind the edge challenge. |
-| Verified live rollback UUID | Unknown. The Stage 5 rollback source is historical evidence and requires corroboration against the current deployment. |
+| Production deployment ID, active version and allocation | Owner verified version af854526-9466-4c94-8091-c7d440c0c824 at 100%. Deployment ID remains pending. |
+| Deployed application, catalog and worksheet identities | GitHub deployment log links the active UUID to the historical 1,542-record source. Authenticated live asset checks remain pending. |
+| Verified live rollback UUID | The active UUID is the proposed target. Live rollback eligibility and signed-in baseline checks remain pending. |
 
 [Sanitized production probe results](production-anonymous.json) record 28 unauthenticated HTTP GETs, all of which returned HTTP 302 to the student Access login path, including direct resource requests. These probes concern the existing production hostname only. An Access login redirect shows the anonymous request was challenged at that path. It does not establish that the resource exists behind Access or that the Worker independently denies an authenticated student.
 

@@ -30,7 +30,7 @@ if (!existsSync(builtPath)) {
       `Private review asset in student build: ${path}`);
   }
   assert.ok(!Object.keys(manifest).some(path => path.includes("/admin/")), "Private route in student manifest.");
-  const catalog = JSON.parse(readFileSync(resolve(assetRoot, "questions.json"), "utf8"));
+  const catalog = JSON.parse(readFileSync(resolve(assetRoot, "student-questions.json"), "utf8"));
   assert.equal(catalog.units.length, 9);
   assert.ok(catalog.questions.length > 0 && catalog.questions.length === catalog.stats.questions);
   const clientFiles = new Set(Object.values(manifest).flatMap(({ file, css = [], assets = [] }) => [file, ...css, ...assets]));
@@ -41,6 +41,7 @@ if (!existsSync(builtPath)) {
   assert.ok([...clientFiles].some((file) => file?.endsWith(".css")), "Missing client CSS.");
   for (const file of [
     ...clientFiles,
+    "student-page-audit.json",
     "curriculum-topics.json",
     "pdf.worker.min.mjs",
     "worksheet-sources.json",

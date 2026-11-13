@@ -147,7 +147,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   }
   const labels = ["Select questions", "Arrange worksheet", "Format document", "Preview and export"];
   const hasAnswers = draft.entries.some(e => registry?.questions[e.id]?.answer);
-  const reviewCount = content ? draft.entries.filter(e => !content.questions[e.id]).length : 0;
+
   const f = draft.format;
   useEffect(() => { if (!hasAnswers && mode !== "questions") setMode("questions"); }, [hasAnswers, mode]);
 
@@ -189,7 +189,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
     <section className="panel worksheet-workspace" data-step={step} aria-labelledby="worksheet-step-title">
       <h2 id="worksheet-step-title">{labels[step]}</h2>
       {step === 0 && <>
-        <p className="muted">{replacement ? "Choose an unselected question to replace the current item." : "Any question can be added. PDF export uses reviewed question content; entries still awaiting review are marked below."}</p>
+        <p className="muted">{replacement ? "Choose an unselected question to replace the current item." : "Any question can be added. PDF export uses reviewed question content where available and original source pages for other entries."}</p>
         <div className="worksheet-fields worksheet-filters">
           <label>Search<input value={filters.search} onChange={e => setFilter("search", e.target.value)} placeholder="Question, year, or keyword" /></label>
           <label>Unit<select value={filters.unit} onChange={e => setFilter("unit", e.target.value)}><option value="all">All units</option>{units.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
@@ -303,8 +303,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
           {bytes && url && !generating && <><a className="primary" href={url} download={`${(f.title || draft.name).replace(/[^\w -]/g, "").trim() || "worksheet"}${mode === "answers" ? " - answer key" : ""}.pdf`}>Download PDF</a>
             <a className="outline" href={url} target="_blank" rel="noreferrer">Open PDF to print</a></>}
         </div>
-        {reviewCount > 0 && mode !== "answers" && <p className="atlas-alert atlas-tone-review">{reviewCount} selected {reviewCount === 1 ? "question needs" : "questions need"} print review. Remove or replace those entries to export this draft.</p>}
-        <p className="muted">Full source pages can include adjacent material or printed answers. Inspect the preview before sharing.</p>
+        {mode !== "answers" && <p className="muted">Full source pages can include adjacent questions or printed answers. Inspect the preview before sharing.</p>}
         {!hasAnswers && <p className="muted">This worksheet has no verified answer key.</p>}
         {!draft.entries.length && <p>Add questions before exporting.</p>}
         {generating && <p className="atlas-alert atlas-tone-info" role="status">Generating print-quality PDF…</p>}

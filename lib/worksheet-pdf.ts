@@ -255,7 +255,8 @@ export async function composeWorksheet(draft: Draft, catalog: WorksheetQuestion[
           for (const [index, region] of regions.entries()) {
             const first = part === 0 && index === 0;
             await place(region, first ? title : f.numbering ? `${label} (continued)` : "Continued",
-              first ? citation : "", { instructions: first ? sectionInstructions : "", question: q });
+              [first ? citation : "", segment.regions.length ? "" : "Full source page. May contain adjacent questions or printed answers."].filter(Boolean).join(" · "),
+              { instructions: first ? sectionInstructions : "", question: q });
           }
         }
       } else {

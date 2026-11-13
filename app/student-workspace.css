@@ -550,3 +550,14 @@
     max-width: none;
   }
 }
+
+.student-skip-link {
+  position: absolute;
+  inset: 8px auto auto 12px;
+  z-index: 40;
+  padding: 8px 12px;
+  background: var(--color-surface);
+  transform: translateY(-150%);
+}
+
+.student-skip-link:focus { transform: none; }

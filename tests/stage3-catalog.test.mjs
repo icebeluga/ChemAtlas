@@ -32,3 +32,23 @@ test("versioned catalog retains the baseline and contains only the 22 accepted a
   assert.equal(linked.length, 17);
   assert.deepEqual(linked.sort(), registered.sort());
 });
+
+test("the Stage 4 student catalog activates the 22 verified additions with explicit source corrections", async () => {
+  const active = JSON.parse(await read("../public/student-questions.json"));
+  const audit = JSON.parse(await read("../public/student-page-audit.json"));
+  const staged = new Map(candidate.questions.map(q => [q.id, q]));
+  assert.equal(active.questions.length, 1564);
+  assert.equal(new Set(active.questions.map(q => q.id)).size, staged.size);
+  assert.deepEqual(active.audit, audit);
+  const updated = active.questions.filter(q => JSON.stringify(q) !== JSON.stringify(staged.get(q.id)));
+  assert.deepEqual(updated.map(q => q.id).sort(), ["frq-2016-1-385", "mcq-2014-practice-17-179"]);
+  const q17 = active.questions.find(q => q.id === "mcq-2014-practice-17-179");
+  assert.deepEqual(q17.pages, [178, 179]);
+  assert.deepEqual(q17.sourcePagesOriginal, q17.pages);
+  assert.deepEqual(q17.sourceRegions, []);
+  const urea = active.questions.find(q => q.id === "frq-2016-1-385");
+  assert.equal(urea.year, "2019");
+  assert.equal(urea.status, "review");
+  assert.deepEqual(urea.topicParts, []);
+  assert.deepEqual(urea.sourceRegions, []);
+});

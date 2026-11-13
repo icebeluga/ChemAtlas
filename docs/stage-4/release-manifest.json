@@ -1,0 +1,121 @@
+{
+  "branch": "verification/chematlas-stage4",
+  "verified_application_commit": "3c78883006beb48c2dab68443e6e93b87bb9a769",
+  "stage3_handoff": "3469db4ea06389c5d8b4df6f9ca9fd9f01852517",
+  "stage3_tested_application": "a8e0c6bcc611687e1dc36ca73dfcfdd7a3c85dfc",
+  "stage2_audit": "42d31dafe1f4b94a0b86d2d1f6a346f7ea18be43",
+  "sites_reference": "6f4a568382eef820418a9f84fe97bd5cbd21d721",
+  "rollback_application": "63fd7e4b5287d74f66227742e8b2a4f47e37920f",
+  "toolchain": {
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "python": "3.12",
+    "pymupdf": "1.26.6",
+    "tesseract": "5.5.0",
+    "wrangler": "4.140.0"
+  },
+  "student_catalog": {
+    "path": "public/student-questions.json",
+    "count": 1564,
+    "git_blob": "43c58b8afa1090313f873f20a538df64bf7feedb",
+    "sha256": "96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9"
+  },
+  "rollback_catalog": {
+    "path": "public/questions.json",
+    "count": 1542,
+    "git_blob": "3eef99956b037611afc9b5a60a056f1cbbb311b0",
+    "sha256": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe"
+  },
+  "source_assets": {
+    "pnpm-lock.yaml": {
+      "git_blob": "2194ac07a9a90509c95a3e551dc4eb31b899b3d4",
+      "sha256": "a05eab152a6b8a1eda18b8a957a64a76579a489cf69157b8c171905943bbdf01"
+    },
+    "public/page-audit.json": {
+      "git_blob": "3108ef480e1d92d7ddd6a7578acf50a5f38b1efe",
+      "sha256": "bf6db72778195a5ce3c6565892c16b932b18c1be94f85f28135f49f3da33baed"
+    },
+    "public/student-page-audit.json": {
+      "git_blob": "6664d82f7f3ba730e04b1097edf49611531ef4d6",
+      "sha256": "0ba57b5f20057fe0b53c595e284f0ec721308e09713ab59e07e000a3bb523184"
+    },
+    "public/curriculum-topics.json": {
+      "git_blob": "e1f4fc9499b1dd4d345b681713b5c337b1e04ccd",
+      "sha256": "85f7c3b2bff689661f27992d13713147e0b367c7da2c057089888f6e1bb786e9"
+    },
+    "public/pdf.worker.min.mjs": {
+      "git_blob": "54f88f419b7b3775400d93053f8eeac3b7f19b5b",
+      "sha256": "145d2dd3ab0c86151011dba95acfa2d5336e2accd59388ea43dbee0efddaaec6"
+    },
+    "public/worksheet-content.json": {
+      "git_blob": "82e89dc38be6dc8bdf5536b89c9122be1bdf7f83",
+      "sha256": "c6a449d622bc367004a4ae02b07bfb8f44df1cfb2a418bc76103e92c408030f5"
+    },
+    "public/worksheet-sources.json": {
+      "git_blob": "4375abd7d67121dc4edb2aa16a39718c999c0108",
+      "sha256": "4efe1f5abf98bbb9ec5bf99fdf85190b38a9e42fecb2e00841b93743861a5fda"
+    },
+    "public/worksheet-fragments.pdf": {
+      "git_blob": "6e8f5af1c786f4138dd5a14463324edf7fd9496d",
+      "sha256": "115f12a8d3abf9c5012164ce223a55d840eb0bb588550737789da03b100e5f29"
+    },
+    "research/stimuli.json": {
+      "git_blob": "72c05befb3d6d5e9a66538fc71b64bce7ab7b610",
+      "sha256": "0d306d08f380176067ea9fd314da3e04330e82b3760b9b83ab404811c2c9c8c7"
+    },
+    "public/source/bank-01.pdf": {
+      "git_blob": "35ca437fead475205ce7664a98876c7c754c3095",
+      "sha256": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf"
+    },
+    "public/source/bank-02.pdf": {
+      "git_blob": "d03a1d50fd0294c48fd70e92c56a287cba1142ef",
+      "sha256": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5"
+    },
+    "public/source/bank-03.pdf": {
+      "git_blob": "30a70a3ac1dc0fdcede9008ff6adfc2d6fc1ba88",
+      "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7"
+    },
+    "public/source/bank-04.pdf": {
+      "git_blob": "bfa1ef7fb9e4ef58ff0313c5edb681a4df049fca",
+      "sha256": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304"
+    },
+    "public/source/bank-05.pdf": {
+      "git_blob": "41af0c0c22075b7f64c428d94320304bff341fcd",
+      "sha256": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd"
+    },
+    "public/source/bank-06.pdf": {
+      "git_blob": "842e8cad385187c00bce65f97d1911bccc253278",
+      "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb"
+    },
+    "public/source/bank-07.pdf": {
+      "git_blob": "dfa0898a2f3a0422895577a6df17b943851f64dd",
+      "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96"
+    },
+    "public/source/bank-08.pdf": {
+      "git_blob": "5f4728b259607ea23404efbf189448a6a595a824",
+      "sha256": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759"
+    }
+  },
+  "build_outputs_sha256": {
+    "dist/client/.vite/manifest.json": "646dc8dea3c4fc6e35d76afe6138f7c865cd879f3ba4c8b7e21e3eb58c99a63c",
+    "dist/server/wrangler.json": "65b86975b5a0e4cf8ad018c173657866f81f825d748e8ddc00b00bf4bde26f5f",
+    "dist/server/index.js": "4ba7398293dd7c16704ce7d8d2a714f8049de75e0389d55ad3d4f176aa4f40b7",
+    "docs/stage-4/build-assets.sha256": "cc025a27517f5373b02a05dd7a49b24b169138f3da2fa154560c417890f9eca0"
+  },
+  "evidence_sha256": {
+    "docs/stage-4/screens/desktop.jpg": "e7656c0d28affd0a6afccf20322864f4a53c9d9b60035827f1b628c944322e93",
+    "docs/stage-4/screens/mobile.jpg": "3691e2c523ad932fcd695a9eafd934f2e340ed759af05c2ed32f7921e966ef9f",
+    "docs/stage-4/screens/narrow.jpg": "4a616f97899984b5173911acfff80e72a7b2a71e9b5b3e0d75ee35cf4aa42f3f",
+    "docs/stage-4/screens/tablet.jpg": "776c725d914c98020b7e6d5ed40bf66146edede3d2c651dcff8501a923c4a5bb",
+    "docs/stage-4/screens/worksheet.jpg": "612ac7e60d7375cbc2ddb9722c3ae335a5207a3831dc040d0d399a44d9b0a90f",
+    "docs/stage-4/catalog-decisions.tsv": "7078913174af7c856e4779c2d7f9d65a9be4f20c67ca63374c0dc64f099f57e4"
+  },
+  "sample_pdf_sha256": {
+    "questions": "b9f6da92b774fdecb1d2c6a86d55f41dff3bfbf962f1ba15a799b880416bc029",
+    "answers": "d576d8cbeace391a4c6f4cef6ae0b11d8fb99dd9423ad9d52802ae0d7fcdf7e2",
+    "combined": "2e94a1afab8800b57b4976143c7a5e4af93a3514fc79c51e392528c6e797e418"
+  },
+  "production_deployment": null,
+  "rollback_worker_version": null,
+  "hosted_access_verification": "unverified_release_blocker"
+}

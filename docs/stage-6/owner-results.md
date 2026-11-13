@@ -1,8 +1,19 @@
 # Stage 6 owner verification results
 
-**NO-GO pending authenticated UI and worksheet functionality checks and conclusive post-authentication denial for an unapproved identity.**
+**NO-GO pending conclusive post-authentication denial for an unapproved identity.**
 
 On November 13, 2026 at 21:57:21 UTC the owner ran the authenticated staging verifier against artifact 14074740993. Of 34 asset checks, 29 live SHA-256 digests matched, including the student catalog (HTTP 200, SHA-256 `96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9`). All four authenticated admin and backup GETs returned the Worker’s expected 404.
+
+## Authenticated staging UI
+
+The owner manually tested the deployed staging application using their approved Cloudflare Access account and reported the following results. The assistant did not independently replay these browser interactions. The asset hash and admin/backup results above came from automated checks run in the owner's authenticated browser.
+
+| Check | Owner-reported result |
+| --- | --- |
+| Question Bank | PASS |
+| Deep-link navigation and refresh | PASS |
+| Practice Builder, worksheet preview, and PDF export | PASS |
+| Mobile responsive layout at approximately 390 px | PASS |
 
 ## Source PDFs 02–05
 
@@ -19,8 +30,8 @@ On November 13, 2026 at 22:03:30 UTC, the owner ran [retry-pdfs.js](retry-pdfs.j
 
 ## Vinext build manifest
 
-`vinext-client-entry-manifest.json` exists in the sealed artifact and appeared in Wrangler’s upload log. The pinned Vinext code reads it from disk to resolve build entry metadata. It is absent from the generated Worker public-file list. The Worker dispatches only `/_next/static/` directly to ASSETS and sends this root path through Vinext. The exact local Worker reproduced HTTP 404 for the manifest, and its homepage returned HTTP 200 with the actual entry script referenced in the HTML. The staging verifier independently matched the served JS/CSS. The observed 404 is consistent with the Worker routing contract, with no indication that the browser needs the manifest URL. Hosted UI behavior still requires the functional smoke checks.
+`vinext-client-entry-manifest.json` exists in the sealed artifact and appeared in Wrangler’s upload log. The pinned Vinext code reads it from disk to resolve build entry metadata. It is absent from the generated Worker public-file list. The Worker dispatches only `/_next/static/` directly to ASSETS and sends this root path through Vinext. The exact local Worker reproduced HTTP 404 for the manifest, and its homepage returned HTTP 200 with the actual entry script referenced in the HTML. The staging verifier independently matched the served JS/CSS. The observed 404 is consistent with the Worker routing contract, with no indication that the browser needs the manifest URL.
 
 Keep the file and its hash in the sealed build inventory. The owner verifier’s original 34-file result stands as evidence. For the hosted decision, classify this particular 404 as an expected build-metadata response and count 33 of 33 required HTTP-delivered asset hashes verified across the original run and retry. No deployment or sealed manifest correction is indicated.
 
-The [owner checklist](owner-verification.md) still applies to functional UI/export and the unapproved identity evidence. Production deployment requires separate explicit owner approval. This documentation update made no deployment, Access policy change, or change to `main`.
+The sole unresolved verification gate is conclusive denial after an unapproved identity successfully authenticates. The [owner checklist](owner-verification.md) describes acceptable evidence. After that evidence is supplied, recheck the production rollback version and issue a final GO/NO-GO recommendation. Production deployment requires separate explicit owner approval. This documentation update made no deployment, Access policy change, or change to `main`.

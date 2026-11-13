@@ -39,6 +39,7 @@ type Saved = { progress: Record<string, Attempt>; overrides: Record<string, stri
 type Catalog = { sourceFiles?: {url:string;from:number;to:number}[]; units: Unit[]; questions: Question[]; sourcePages: number; includedSourcePages?: number[]; topicDetails?: Record<string, { description: string; learningObjectives?: string[]; pdfPages?: number[] }>; audit?: { totalPages: number; pagesReferencedByQuestionRecords: number; unreferencedPages: number[]; unresolvedPages: number; classified: number; legacy: number; review: number; coverageNote: string }; stats: Record<string, number> };
 
 const STORAGE_KEY = "apchem-studio-v2";
+const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
 const DB_NAME = "apchem-practice-bank";
 const STORE = "pdfs";
 
@@ -140,6 +141,22 @@ export default function Home() {
   const [banks, setBanks] = useState<Bank[]>([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }]);
   const [sessions, setSessions] = useState(0);
   const [showWorksheet, setShowWorksheet] = useState(false);
+  const [worksheetIds, setWorksheetIds] = useState<string[]>([]);
+  const [showBankWorksheet, setShowBankWorksheet] = useState(false);
+  const [worksheetLoaded, setWorksheetLoaded] = useState(false);
+  useEffect(() => {
+    try {
+      const saved: unknown = JSON.parse(localStorage.getItem(BANK_WORKSHEET_KEY) || "[]");
+      if (Array.isArray(saved)) setWorksheetIds([...new Set(saved.filter((id): id is string => typeof id === "string"))]);
+    } catch { /* Keep the draft usable if browser storage is unavailable. */ }
+    setWorksheetLoaded(true);
+  }, []);
+  useEffect(() => {
+    if (!worksheetLoaded) return;
+    try { localStorage.setItem(BANK_WORKSHEET_KEY, JSON.stringify(worksheetIds)); }
+    catch { /* The current draft remains in memory. */ }
+  }, [worksheetIds, worksheetLoaded]);
+  const bankResultsRef = useRef<HTMLDivElement>(null);
   const worksheetRef = useRef<HTMLElement>(null);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -166,6 +183,7 @@ export default function Home() {
       else window.history.pushState(state, "", nextUrl);
     }
     setShowWorksheet(false);
+    setShowBankWorksheet(false);
     setToolsOpen(false);
     setMobileMenuOpen(false);
     setResultPage(0);
@@ -246,6 +264,7 @@ export default function Home() {
   useEffect(() => {
     function resetPracticeAfterHistoryNavigation() {
       setShowWorksheet(false);
+      setShowBankWorksheet(false);
       setPageIndex(0);
       setWork("");
       setSubmitted(false);
@@ -268,6 +287,14 @@ export default function Home() {
       (selectedTopic === "all" || related.includes(selectedTopic)) && (typeFilter === "Mixed" || q.type === typeFilter) &&
       (!query || `${q.year} ${q.exam} ${q.number} ${q.textPreview} ${q.displayName}`.toLowerCase().includes(query.toLowerCase()));
   });
+  const bankWorksheetQuestions = worksheetIds.flatMap(id => {
+    const question = questions.find(q => q.id === id);
+    return question ? [question] : [];
+  });
+  useEffect(() => {
+    bankResultsRef.current?.scrollTo(0, 0);
+  }, [resultPage, selectedUnit, selectedTopic, typeFilter, query]);
+
   const detailSequence = filteredQuestions.some(q => q.id === current?.id) ? filteredQuestions : questions;
   const detailIndex = current ? detailSequence.findIndex(q => q.id === current.id) : -1;
   const weakRows = useMemo(() => questions.filter(q => progress[q.id]?.wrong).sort((a,b) => (progress[b.id]?.wrong || 0) - (progress[a.id]?.wrong || 0)), [questions, progress]);
@@ -331,7 +358,6 @@ export default function Home() {
   const originalPagesFor = (q?: Question) => q?.sourcePagesOriginal?.length ? q.sourcePagesOriginal : (q?.pages?.length?q.pages:[1]);
   const pagesFor = (q?: Question) => q?.sourceBank && q.sourceBank!=="mega" ? q.pages : originalPagesFor(q).map(p=>{const file=catalog.sourceFiles?.find(f=>p>=f.from&&p<=f.to);return file?p-file.from+1:p;});
   const sourceAssetFor = (q:Question,i:number) => q.sourceBank && q.sourceBank!=="mega" ? undefined : catalog.sourceFiles?.find(f=>originalPagesFor(q)[i]>=f.from&&originalPagesFor(q)[i]<=f.to)?.url;
-  const mainTopicQuestionCounts = (id: string) => available.filter(q => (q.relatedTopics||[]).includes(id)).length;
   function printWorksheet() {
     if (worksheetRef.current?.querySelector(".pdf-error")) {
       setNotice("A source page failed to render. Check the worksheet preview before printing.");
@@ -368,14 +394,52 @@ export default function Home() {
         <div className="footnote">Question images are rendered from the original PDF pages. Topic assignments include a reasoning note. Legacy material and unresolved source items are kept separately. <a href="/classification-method.md" target="_blank" rel="noreferrer">Read the classification method</a> · <a href="/page-audit.json" target="_blank" rel="noreferrer">Source coverage audit</a></div>
       </div>}
 
-      {view === "library" && <div className="page">
-        <div className="eyebrow">COLLEGE BOARD UNIT → TOPIC → QUESTION</div><h1 className="page-title">Question catalog</h1><p className="muted">Choose a unit, then a topic. Multi-concept FRQs appear under every matched topic, with the related subpart called out for that topic.</p>
+      {view === "library" && !showBankWorksheet && <div className="page bank-page">
+        <div className="bank-fixed">
+          <h1 className="page-title">Question bank</h1>
+          <p className="muted">Filter by unit, topic, type, or keyword. Multi-concept FRQs appear under each matched topic.</p>
         <div className="library-filters"><label>UNIT<select value={selectedUnit} onChange={e=>{updateFilters({ unit: e.target.value, topic: "all" });}}><option value="all">All units</option>{catalog.units.map(u=><option key={u.id} value={u.id}>{u.id.toUpperCase()} · {u.name}</option>)}</select></label><label>TOPIC<select value={selectedTopic} onChange={e=>updateFilters({ topic: e.target.value })}><option value="all">All topics</option>{topics.filter(t=>selectedUnit==="all"||t.unit===selectedUnit).map(t=><option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label><label>TYPE<select value={typeFilter} onChange={e=>updateFilters({ type: e.target.value })}><option>Mixed</option><option>MCQ</option><option>FRQ</option></select></label><label className="search-label">SEARCH<input value={query} onChange={e=>updateFilters({ query: e.target.value })} placeholder="Year, question number, keyword"/></label></div>
+          {(selectedUnit !== "all" || selectedTopic !== "all" || typeFilter !== "Mixed" || query) &&
+            <button className="bank-view-question" onClick={() => updateFilters({ unit: "all", topic: "all", type: "Mixed", query: "" })}>Clear filters</button>}
+        </div>
+        <div className="library-results-head"><b>{selectedTopic==="all"?(selectedUnit==="all"?"All classified questions":`${catalog.units.find(u=>u.id===selectedUnit)?.name} · all topics`):`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`}</b><span role="status">{filteredQuestions.length.toLocaleString()} catalog entries · uncertain matches are in Review</span></div>
+        {bankWorksheetQuestions.length > 0 && <div className="bank-worksheet-bar">
+          <button className="outline" onClick={() => setShowBankWorksheet(true)}>View worksheet ({bankWorksheetQuestions.length})</button>
+        </div>}
+        <div className="bank-results-scroll" ref={bankResultsRef} role="region" aria-label="Question bank results" tabIndex={0}>
         {selectedTopic!=="all" && catalog.topicDetails?.[selectedTopic] && <div className="topic-definition"><b>{selectedTopic} · {topics.find(t=>t.id===selectedTopic)?.name}</b><p>{catalog.topicDetails[selectedTopic].description}</p><small>College Board CED · learning objectives {catalog.topicDetails[selectedTopic].learningObjectives?.join(", ") || "see curriculum reference"}</small></div>}
-        <div className="topic-shortcuts">{topics.filter(t=>selectedUnit==="all"||t.unit===selectedUnit).map(t=><button key={t.id} className={selectedTopic===t.id?"topic-tag chosen":"topic-tag"} onClick={()=>updateFilters({ topic: selectedTopic===t.id?"all":t.id })}><span>{t.id}</span>{t.name}<i>{mainTopicQuestionCounts(t.id)}</i></button>)}</div>
-        <div className="library-results-head"><b>{selectedTopic==="all"?(selectedUnit==="all"?"All classified questions":`${catalog.units.find(u=>u.id===selectedUnit)?.name} · all topics`):`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`}</b><span>{filteredQuestions.length.toLocaleString()} catalog entries · uncertain matches are in Review</span></div>
-        <div className="question-list">{filteredQuestions.slice(resultPage*50,(resultPage+1)*50).map(q=>{const contextId=selectedTopic!=="all"?selectedTopic:q.displayTopic;const t=topics.find(x=>x.id===contextId);const original=originalPagesFor(q);const relevantParts=partsForTopic(q,selectedTopic!=="all"?selectedTopic:undefined);const primaryMatch=contextId===q.displayTopic;const approved=approvedImages[q.id]?.[0];return <article className="catalog-row" key={q.id}><button className="catalog-main" onClick={()=>openQuestion(q)}>{approved?<span className="catalog-approved-thumb"><img src={approved} loading="lazy" alt="Approved question preview"/><small>IMAGE VERIFIED</small></span>:null}<span className={`type-chip ${q.type.toLowerCase()}`}>{q.type}</span><span className="catalog-info"><b>{q.year || "Added bank"} · Question {q.number}</b><small>{q.exam} · Original PDF {original.length===1?`page ${original[0]}`:`pages ${original[0]}–${original[original.length-1]}`}</small><span className="topic-context"><b>{primaryMatch?"Primary topic":"Also filed under"}:</b> {t?.id} · {t?.name}</span>{relevantParts.length?<span className="part-matches">{relevantParts.slice(0,3).map((part,i)=><span className="part-match" key={`${part.label}-${i}`}><mark>{part.label}</mark><span>{part.textPreview}</span></span>)}</span>:<span className="preview-line">{q.textPreview}</span>}</span><span className="catalog-arrow">Open details ↗</span></button><div className="catalog-tags">{t&&<span className="curriculum-tag">{t.unit.toUpperCase()} · {t.id}</span>}{q.multiConcept&&<span className="multi-tag">MULTI-CONCEPT FRQ</span>}{(q.relatedTopics||[]).filter(id=>id!==q.displayTopic).map(id=>topics.find(x=>x.id===id)).filter(Boolean).map(topic=><span className="secondary-tag" key={topic!.id}>{topic!.id} · {topic!.name}</span>)}<span className="ready-label">Topic assigned</span></div></article>;})}{filteredQuestions.length>50&&<div className="catalog-pagination"><button className="outline" disabled={resultPage===0} onClick={()=>setResultPage(p=>p-1)}>← Previous</button><span>Page {resultPage+1} of {Math.ceil(filteredQuestions.length/50)}</span><button className="outline" disabled={(resultPage+1)*50>=filteredQuestions.length} onClick={()=>setResultPage(p=>p+1)}>Next →</button></div>}{!filteredQuestions.length&&<div className="empty-state"><span>⌕</span><b>No classified questions in this view</b><p>Try another topic, or see uncertain matches in the Review section.</p><button className="outline" onClick={()=>navigate("review")}>Open classification review</button></div>}</div>
-        <div className="curriculum-note"><b>Curriculum source</b> · AP Chemistry Course and Exam Description, College Board. Topic codes and names follow its nine-unit framework.</div>
+        <div className="question-list">{filteredQuestions.slice(resultPage*50,(resultPage+1)*50).map(q=>{
+          const context = topics.find(t=>t.id===selectedTopic) ?? topics.find(t=>t.id===q.displayTopic);
+          const original = originalPagesFor(q);
+          const relevantParts = partsForTopic(q, selectedTopic === "all" ? undefined : selectedTopic);
+          const secondary = (q.relatedTopics||[]).filter(id=>id!==q.displayTopic).map(id=>topics.find(t=>t.id===id)).filter(Boolean);
+          return <article className="catalog-row atlas-result" key={q.id}>
+            <div className="atlas-result-head">
+              <span className={`type-chip ${q.type.toLowerCase()}`}>{q.type}</span>
+              <div className="atlas-result-identity"><h2>{q.year || "Added bank"} · Question {q.number}</h2>
+                <p>{q.exam} · Original PDF {original.length===1 ? `page ${original[0]}` : `pages ${original[0]}–${original.at(-1)}`}</p>
+              </div>
+              <button type="button" className="bank-view-question" onClick={()=>openQuestion(q)} aria-label={`View question ${q.number} · ${q.exam}`}>View question <span aria-hidden="true">↗</span></button>
+            </div>
+            <div className="atlas-result-body">
+              {context && <p><strong>{context.id===q.displayTopic ? "Primary topic" : "Also filed under"}</strong> · <b className="atlas-topic-code">{context.id}</b> {context.name}</p>}
+              {!relevantParts.length && q.textPreview && <p className="preview-line">{q.textPreview}</p>}
+              <div className="atlas-result-actions"><button type="button" className="outline worksheet-add" disabled={worksheetIds.includes(q.id)}
+                  onClick={() => setWorksheetIds(ids => ids.includes(q.id) ? ids : [...ids, q.id])}>
+                  {worksheetIds.includes(q.id) ? "Added to worksheet" : "Add to Worksheet"}
+                </button>{q.status==="review" && <span className="atlas-chip atlas-tone-review">Needs topic review</span>}{!!relevantParts.length && <span>{relevantParts.length} mapped {relevantParts.length===1 ? "part" : "parts"}</span>}</div>
+              <details className="atlas-result-classification">
+                <summary>Classification details</summary>
+                <p>{q.displayTopic ? `Primary topic · ${q.displayTopic} ${q.displayName ?? ""}` : "Topic unassigned"}</p>
+                {q.classificationRationale && <p>{q.classificationRationale}</p>}
+                {!!secondary.length && <p>Secondary topics · {secondary.map(t=>`${t!.id} ${t!.name}`).join(" · ")}</p>}
+                {!!relevantParts.length && <ul>{relevantParts.map((part,i)=><li key={`${part.label}-${i}`}><strong>{part.label}</strong> {part.textPreview || part.rationale || part.topicNames.join(", ")}</li>)}</ul>}
+              </details>
+            </div>
+          </article>;
+        })}{filteredQuestions.length>50&&<div className="catalog-pagination"><button className="outline" disabled={resultPage===0} onClick={()=>setResultPage(p=>p-1)}>← Previous</button><span>Page {resultPage+1} of {Math.ceil(filteredQuestions.length/50)}</span><button className="outline" disabled={(resultPage+1)*50>=filteredQuestions.length} onClick={()=>setResultPage(p=>p+1)}>Next →</button></div>}{!filteredQuestions.length&&<div className="empty-state"><span>⌕</span><b>No classified questions in this view</b><p>Try another topic, or see uncertain matches in the Review section.</p><button className="outline" onClick={()=>navigate("review")}>Open classification review</button></div>}</div>
+          <div className="curriculum-note"><b>Curriculum source</b> · AP Chemistry Course and Exam Description, College Board. Topic codes and names follow its nine-unit framework.</div>
+        </div>
       </div>}
 
       {view === "builder" && <div className="page builder-page"><section className="builder-intro"><span className="eyebrow">BUILD A FOCUSED PRACTICE SET</span><h1 className="page-title">Practice Builder</h1><p className="muted">Choose a unit, topic, and question type. ChemAtlas will draw a randomized set from the indexed source questions that match.</p></section><div className="builder-layout"><section className="panel builder-panel"><div className="panel-head"><div><span className="eyebrow">YOUR QUESTION SET</span><h2>Set the practice scope</h2></div><span className="builder-symbol"><FileText size={22}/></span></div><div className="builder-controls"><label>UNIT<select value={selectedUnit} onChange={e=>{updateFilters({ unit: e.target.value, topic: "all" });}}><option value="all">All units</option>{catalog.units.map(u=><option key={u.id} value={u.id}>{u.id.toUpperCase()} · {u.name}</option>)}</select></label><label>TOPIC<select value={selectedTopic} onChange={e=>updateFilters({ topic: e.target.value })}><option value="all">All topics</option>{topics.filter(t=>selectedUnit==="all"||t.unit===selectedUnit).map(t=><option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label><label>QUESTION TYPE<select value={typeFilter} onChange={e=>updateFilters({ type: e.target.value })}><option>Mixed</option><option>MCQ</option><option>FRQ</option></select></label><label>QUESTION COUNT<select value={sessionSize} onChange={e=>setSessionSize(Number(e.target.value))}>{[5,10,15,20,30].map(n=><option key={n} value={n}>{n} questions</option>)}</select></label></div><div className="builder-summary"><span className="builder-summary-icon"><BookOpen size={21}/></span><div><b>{filteredQuestions.length.toLocaleString()} matching questions</b><small>Only classified records appear in this set. Original PDF pages open during practice.</small></div></div><button className="primary builder-start" disabled={!filteredQuestions.length} onClick={()=>startSession()}>{filteredQuestions.length?`Start ${Math.min(sessionSize,filteredQuestions.length)}-question practice`:"No questions match these filters"}<ArrowUpRight size={18}/></button></section><aside className="builder-side"><div className="builder-side-icon"><FlaskConical size={23}/></div><h2>Practice from the source</h2><p>Questions stay linked to their original PDF pages. Submit your response, then record a self-check to build your personal progress map.</p><button className="text-button" onClick={()=>navigate("library")}>Browse the question bank →</button></aside></div></div>}
@@ -396,15 +460,21 @@ export default function Home() {
         <PdfQuestionPage page={pagesFor(current)[pageIndex]} sourcePage={originalPagesFor(current)[pageIndex]} bankId={current.sourceBank || "mega"} bankName={bankName(current.sourceBank)} sourceAsset={sourceAssetFor(current,pageIndex)} />
         {!submitted ? <div className="response-panel"><label htmlFor="work"><b>Your work / answer</b><span>Write your response here before submitting. The source image remains answer-free.</span></label><textarea id="work" value={work} onChange={e=>setWork(e.target.value)} placeholder={current.type==="FRQ"?"Show your reasoning, equations, units, and conclusion…":"Record your selected letter and a brief reason…"}/><div className="submit-row"><span>When ready, record your self-check. No answer is guessed or revealed.</span><button className="primary" onClick={()=>{if(!work.trim())setNotice("Add your answer or reasoning before submitting.");else setSubmitted(true);}}>Submit response <span>→</span></button></div></div> : <div className="feedback"><div className="eyebrow">SELF-CHECK & REFLECTION</div><div className="feedback-banner review-feedback"><b>Response saved</b><span>This source question is indexed to the PDF page. A verified answer key is not linked to this question record, so the site will not invent one.</span></div><div className="self-check-row"><span>How did it go?</span>{(["correct","missed","unsure"] as const).map(r=><button key={r} disabled={!!selfResult} className={`self-check ${selfResult===r?"selected":""}`} onClick={()=>markSelfCheck(r)}>{r==="correct"?"Got it":r==="missed"?"Missed it":"Not sure"}</button>)}</div>{selfResult==="missed"&&<div className="guided-review"><b>Step-by-step mistake review</b><ol><li>Restate what the prompt asks you to determine, explain, calculate, or represent.</li><li>Identify the AP Chemistry unit/topic and the rule, relationship, or representation it requires.</li><li>Check your setup: species and charges, balanced atoms, units, significant figures, and signs where relevant.</li><li>Compare each step with the official scoring guide in the source bank; mark the exact step where your reasoning changed.</li></ol><p>The compiled bank’s scoring guides are retained in the PDF, but are not yet linked to individual indexed questions.</p></div>}{selfResult&&<button className="primary submit-btn" onClick={nextQuestion}>{activeIndex+1===activeQueue.length?"Finish session":"Next question"}<span>→</span></button>}</div>}
         <div className="question-foot"><span>Primary topic: <b>{current.displayName}</b></span>{current.multiConcept&&<span className="multi-tag">MULTI-CONCEPT FRQ</span>}{current.secondaryTopicNames?.map(n=><span className="secondary-tag" key={n}>Also: {n}</span>)}<span className="source-note">Source: {bankName(current.sourceBank)} · original page {originalPagesFor(current)[pageIndex]}</span></div></div></div>}
-      {view === "practice" && showWorksheet && <section className="page worksheet" ref={worksheetRef}>
+      {((view === "practice" && showWorksheet) || (view === "library" && showBankWorksheet)) && <section className="page worksheet" ref={worksheetRef}>
         <div className="worksheet-actions">
-          <button className="back" onClick={() => { setShowWorksheet(false); setNotice(""); }}>← Back to session</button>
-          <button className="primary" onClick={printWorksheet}>Print or save PDF</button>
+          <button className="back" onClick={() => { setShowWorksheet(false); setShowBankWorksheet(false); setNotice(""); }}>
+            {showBankWorksheet ? "← Back to question bank" : "← Back to session"}
+          </button>
+          <button className="primary" disabled={showBankWorksheet && !bankWorksheetQuestions.length} onClick={printWorksheet}>Print or save PDF</button>
         </div>
         <h1 className="page-title">AP Chemistry practice worksheet</h1>
-        {planWorksheet(activeQueue, stimulusDocument.stimuli, originalPagesFor).map(({ question, segments }, position) => (
+        {showBankWorksheet && !bankWorksheetQuestions.length && <p>Add questions from the Question Bank to build your worksheet.</p>}
+        {planWorksheet(showBankWorksheet ? bankWorksheetQuestions : activeQueue, stimulusDocument.stimuli, originalPagesFor).map(({ question, segments }, position) => (
           <article key={question.id}>
             <h2>{position + 1}. {question.year || "Source bank"} · {question.type} {question.number}</h2>
+            {showBankWorksheet && <button className="outline compact worksheet-remove"
+              onClick={() => setWorksheetIds(ids => ids.filter(id => id !== question.id))}
+              aria-label={`Remove ${question.exam} question ${question.number} from worksheet`}>Remove</button>}
             {segments.map(({ page, regions, stimulusId }, segmentIndex) => {
               const file = catalog.sourceFiles?.find(source => page >= source.from && page <= source.to);
               const bankId = question.sourceBank || "mega";

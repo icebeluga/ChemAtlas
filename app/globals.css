@@ -114,3 +114,60 @@ html,body{background:var(--paper);color:var(--ink)}
   .worksheet h2,.worksheet h3{break-after:avoid}
   .worksheet canvas{max-width:100%;height:auto}
 }
+
+/* Sites v48 Question Bank cards, scoped to the student catalog. */
+.bank-page {
+  width: calc(100% - clamp(32px, 4.25vw, 88px));
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 84px);
+  padding: 24px 0 0;
+}
+.bank-fixed .page-title { margin: 0; font-size: clamp(1.75rem, 2.2vw, 2.3rem); color: #005747; }
+.bank-fixed > .muted { margin: 4px 0 15px; color: #53665c; }
+.bank-page .library-filters {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+.bank-page .library-filters label { min-width: 0; }
+.bank-page .library-filters :is(select, input) {
+  min-width: 0;
+  min-height: 44px;
+  border: 1px solid #7a9586;
+}
+.bank-page .library-results-head {
+  flex: none;
+  border-bottom: 1px solid #d3dfd6;
+  padding: 10px 0 12px;
+  margin: 14px 0 0;
+}
+.bank-results-scroll { min-height: 0; overflow: auto; padding: 8px 10px 14px 2px; scrollbar-width: thin; }
+.bank-page .atlas-result { padding: 14px 16px 20px; border-color: #d3dfd6; background: #fff; }
+.atlas-result-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: start; gap: 12px; }
+.atlas-result-head .type-chip { min-width: 42px; margin-top: 2px; text-align: center; }
+.atlas-result-head .type-chip.frq { background: #efe9f9; color: #694492; }
+.atlas-result-head .type-chip.mcq { background: #e0f0ea; color: #00604e; }
+.atlas-result-identity h2 { margin: 0; font: 600 1.05rem/1.4 Arial, Helvetica, sans-serif; color: #1e2e28; }
+.atlas-result-identity p, .atlas-result-body p, .atlas-result-body ul { margin: 0; }
+.atlas-result-identity p, .atlas-result-body { color: #53665c; font-size: .85rem; overflow-wrap: anywhere; }
+.atlas-result-body { display: grid; gap: 8px; margin-top: 16px; padding-inline-start: 54px; }
+.atlas-result-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+.atlas-result-actions .worksheet-add { min-height: 36px; border-color: #7a9586; color: #1e2e28; }
+.atlas-result-actions .worksheet-add:disabled { cursor: default; opacity: .7; }
+.bank-view-question { min-height: 40px; padding: 4px 8px; border: 0; background: transparent; color: #005747; }
+.bank-view-question span { margin-inline-start: 4px; }
+.atlas-topic-code { color: #24738a; }
+.atlas-result-classification summary { min-height: 26px; width: fit-content; color: #694492; cursor: pointer; }
+.atlas-result-classification :is(p, ul) { margin-top: 4px; }
+.atlas-result-classification ul { padding-inline-start: 20px; }
+.bank-worksheet-bar { flex: none; padding: 8px 0; }
+@media (max-width: 760px) {
+  .bank-page { display: block; height: auto; }
+  .bank-page .library-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .bank-results-scroll { overflow: visible; padding-inline: 0; }
+  .atlas-result-head { grid-template-columns: auto minmax(0, 1fr); }
+  .atlas-result-head .bank-view-question { grid-column: 2; justify-self: start; padding-inline: 0; }
+  .atlas-result-body { margin-top: 6px; padding-inline-start: 0; }
+}
+@media print { .worksheet-remove { display: none !important; } }

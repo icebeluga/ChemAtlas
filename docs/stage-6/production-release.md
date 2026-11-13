@@ -1,6 +1,6 @@
 # ChemAtlas production release
 
-**Deployment and owner acceptance verified. Authenticated production version endpoint readback is pending.** This supersedes [the preflight blocker](production-attempt.md).
+**Controlled production release fully verified.** This supersedes [the preflight blocker](production-attempt.md).
 
 | Record | Value |
 | --- | --- |
@@ -25,6 +25,16 @@ On November 13, 2026, read-only Wrangler commands confirmed deployment allocatio
 | Practice Builder, worksheet preview, and PDF download | PASS |
 | Unauthorized-user denial | PASS |
 
-These five checks were performed by the owner in production. The assistant independently verified the Cloudflare and GitHub deployment metadata and anonymous Access behavior. The deployed package record identifies 1,564 catalog entries, SHA-256 `96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9`, and validation workflow `84edb90d838e53ee63db81f4c60afd922e650bcf`. The authenticated production response from `/student-version.json` was unavailable to the verification session. The recorded staging readback does not substitute for a production readback.
+These five checks were performed by the owner in production. The assistant independently verified the Cloudflare and GitHub deployment metadata and anonymous Access behavior. The deployed package record identifies 1,564 catalog entries, SHA-256 `96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9`, and validation workflow `84edb90d838e53ee63db81f4c60afd922e650bcf`. ## Authenticated production version verification
+
+**PASS.** The owner retrieved `/student-version.json` from live production using their approved Cloudflare Access account. All five reported fields matched the sealed release manifest.
+
+| Field | Verified value |
+| --- | --- |
+| `application_sha` | `3c78883006beb48c2dab68443e6e93b87bb9a769` |
+| `catalog_count` | `1564` |
+| `catalog_sha256` | `96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9` |
+| `release_id` | `chematlas-student-3c78883006beb48c2dab68443e6e93b87bb9a769` |
+| `workflow_sha` | `84edb90d838e53ee63db81f4c60afd922e650bcf` |
 
 Keep version 6 as the rollback candidate. Its exact version record remains retrievable. No rollback or redeployment was performed. Documentation was committed on the verification branch. No Access policy or private review service change was made.

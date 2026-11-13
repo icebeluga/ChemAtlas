@@ -1,0 +1,33 @@
+{
+  "application_sha": "63fd7e4b5287d74f66227742e8b2a4f47e37920f",
+  "catalog": {
+    "count": 1542,
+    "path": "public/questions.json",
+    "sha256": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe"
+  },
+  "cloudflare_worker_version": null,
+  "schema_version": 1,
+  "source_and_asset_sha256": {
+    "pnpm-lock.yaml": "7e484cefc04839676256a5c3ea53765f22ba5b8603c4d9a643cf8dbb120a1952",
+    "public/classification-method.md": "158a67fcd15bb87007f59baafcda9d4fc36e586bf3caf5fc9f35edab84de45e8",
+    "public/curriculum-topics.json": "85f7c3b2bff689661f27992d13713147e0b367c7da2c057089888f6e1bb786e9",
+    "public/favicon.svg": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+    "public/page-audit.json": "bf6db72778195a5ce3c6565892c16b932b18c1be94f85f28135f49f3da33baed",
+    "public/pdf.worker.min.mjs": "145d2dd3ab0c86151011dba95acfa2d5336e2accd59388ea43dbee0efddaaec6",
+    "public/questions.json": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe",
+    "public/source/bank-01.pdf": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+    "public/source/bank-02.pdf": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5",
+    "public/source/bank-03.pdf": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7",
+    "public/source/bank-04.pdf": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304",
+    "public/source/bank-05.pdf": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd",
+    "public/source/bank-06.pdf": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+    "public/source/bank-07.pdf": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+    "public/source/bank-08.pdf": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759",
+    "worker/index.ts": "46401dca659cde35a9cb14187372768d13a1f8877fe6e001fbbb8987e386fda4",
+    "wrangler.student.jsonc": "ccfd255328887eff9feee74f58688c20ca0f53f777920d2b8d06b2fa9720c93c"
+  },
+  "worksheet_exports": {
+    "assets": [],
+    "present": false
+  }
+}

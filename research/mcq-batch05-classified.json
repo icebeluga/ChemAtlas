@@ -1,0 +1,1007 @@
+[
+  {
+    "id": "mcq-1994-3-628",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "3.3"
+    ],
+    "rationale": "Use Dalton’s law and the ideal gas law to correct a gas sample collected over water.",
+    "status": "classified",
+    "evidencePages": [
+      628
+    ]
+  },
+  {
+    "id": "mcq-1994-1-677",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Identify first ionization energy from its definition.",
+    "status": "classified",
+    "evidencePages": [
+      677
+    ]
+  },
+  {
+    "id": "mcq-1994-2-677",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Identify lattice energy from the gaseous-ion/ionic-solid energy change.",
+    "status": "classified",
+    "evidencePages": [
+      677
+    ]
+  },
+  {
+    "id": "mcq-1994-3-677",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3"
+    ],
+    "rationale": "Identify Gibbs free energy as energy available to do useful work.",
+    "status": "classified",
+    "evidencePages": [
+      677
+    ]
+  },
+  {
+    "id": "mcq-1994-4-677",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6"
+    ],
+    "rationale": "Identify activation energy as the energy needed to reach the transition state.",
+    "status": "classified",
+    "evidencePages": [
+      677
+    ]
+  },
+  {
+    "id": "mcq-1994-5-678",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Use orbital occupancy to identify a stable filled valence shell.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-6-678",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Recognize an excited-state electron configuration from an orbital diagram.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-7-678",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Count valence electrons from an orbital diagram.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-8-678",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Identify a transition-metal electron configuration from an orbital diagram.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-9-678",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "8.3"
+    ],
+    "rationale": "Compare solution pH for strong-acid, weak-acid, and base mixtures.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-10-678",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4"
+    ],
+    "rationale": "Compare acid–base mixtures to identify the one closest to neutral.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-11-678",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.3"
+    ],
+    "rationale": "Identify a conjugate acid–base buffer with pH above 8.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-12-678",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.3"
+    ],
+    "rationale": "Identify a conjugate acid–base buffer with pH below 6.",
+    "status": "classified",
+    "evidencePages": [
+      678
+    ]
+  },
+  {
+    "id": "mcq-1994-13-679",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Classify CsCl as an ionic solid with an electrostatic lattice.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-14-679",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4"
+    ],
+    "rationale": "Classify gold as a metallic solid with delocalized electrons.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-15-679",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "3.1"
+    ],
+    "rationale": "Classify solid CO₂ as a molecular solid with intermolecular attractions.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-16-679",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "3.1"
+    ],
+    "rationale": "Classify solid CH₄ as a molecular solid with intermolecular attractions.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-17-679",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3"
+    ],
+    "rationale": "Identify which listed element is a gas at standard conditions.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-18-679",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "1.7"
+    ],
+    "rationale": "Identify an element that reacts with water to produce a strong base.",
+    "status": "classified",
+    "evidencePages": [
+      679
+    ]
+  },
+  {
+    "id": "mcq-1994-19-680",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6"
+    ],
+    "rationale": "Explain that a spark supplies activation energy for combustion.",
+    "status": "classified",
+    "evidencePages": [
+      680
+    ]
+  },
+  {
+    "id": "mcq-1994-20-680",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry and molar mass to calculate gold yield.",
+    "status": "classified",
+    "evidencePages": [
+      680
+    ]
+  },
+  {
+    "id": "mcq-1994-21-680",
+    "primaryTopic": "3.12",
+    "relatedTopics": [
+      "3.12",
+      "1.5"
+    ],
+    "rationale": "Relate sodium’s flame-test color to characteristic photon emission from electronic transitions.",
+    "status": "classified",
+    "evidencePages": [
+      680
+    ]
+  },
+  {
+    "id": "mcq-1994-22-680",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Compare reaction entropy changes, especially changes in gas particle count.",
+    "status": "classified",
+    "evidencePages": [
+      680
+    ]
+  },
+  {
+    "id": "mcq-1994-23-681",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5",
+      "3.4"
+    ],
+    "rationale": "Use gas temperature and density to explain why heated air rises.",
+    "status": "classified",
+    "evidencePages": [
+      681
+    ]
+  },
+  {
+    "id": "mcq-1994-24-681",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "3.7"
+    ],
+    "rationale": "Select safe dilution/rinsing procedure for an acid splash.",
+    "status": "classified",
+    "evidencePages": [
+      681
+    ]
+  },
+  {
+    "id": "mcq-1994-25-682",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3",
+      "6.5"
+    ],
+    "rationale": "Interpret the solid–liquid coexistence plateau on a cooling curve.",
+    "status": "classified",
+    "evidencePages": [
+      682
+    ]
+  },
+  {
+    "id": "mcq-1994-26-682",
+    "primaryTopic": "4.3",
+    "relatedTopics": [
+      "4.3"
+    ],
+    "rationale": "Balance a combustion equation from its chemical representation.",
+    "status": "classified",
+    "evidencePages": [
+      682
+    ]
+  },
+  {
+    "id": "mcq-1994-27-682",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "3.11"
+    ],
+    "rationale": "Distinguish absorbance-based concentration measurement from conductivity and ion identification.",
+    "status": "classified",
+    "evidencePages": [
+      682
+    ]
+  },
+  {
+    "id": "mcq-1994-28-683",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Compare ionic-solid melting points using ion charges and sizes.",
+    "status": "classified",
+    "evidencePages": [
+      683
+    ]
+  },
+  {
+    "id": "mcq-1994-29-683",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "The item tests organic functional-group identification, which is outside the current AP Chemistry CED topic list.",
+    "status": "legacy",
+    "evidencePages": [
+      683
+    ],
+    "reviewReason": "Organic functional-group identification is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-1994-30-683",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Track oxidation-number changes in a redox reaction.",
+    "status": "classified",
+    "evidencePages": [
+      683
+    ]
+  },
+  {
+    "id": "mcq-1994-31-683",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Recognize that molality and mole fraction do not change when only temperature changes.",
+    "status": "classified",
+    "evidencePages": [
+      683
+    ]
+  },
+  {
+    "id": "mcq-1994-32-684",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Determine carbon hybridization from the bonding in propene.",
+    "status": "classified",
+    "evidencePages": [
+      684
+    ]
+  },
+  {
+    "id": "mcq-1994-33-684",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.2"
+    ],
+    "rationale": "Use precipitation stoichiometry and limiting-reactant amounts to determine AgNO₃ required.",
+    "status": "classified",
+    "evidencePages": [
+      684
+    ]
+  },
+  {
+    "id": "mcq-1994-34-684",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "4.9"
+    ],
+    "rationale": "Identify reduction at the cathode in an electrolytic-cell half-reaction.",
+    "status": "classified",
+    "evidencePages": [
+      684
+    ]
+  },
+  {
+    "id": "mcq-1994-35-684",
+    "primaryTopic": "9.11",
+    "relatedTopics": [
+      "9.11",
+      "4.5"
+    ],
+    "rationale": "Apply Faraday’s law to relate electric charge to aluminum production.",
+    "status": "classified",
+    "evidencePages": [
+      684
+    ]
+  },
+  {
+    "id": "mcq-1994-36-685",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Infer a rate law from initial-rate data.",
+    "status": "classified",
+    "evidencePages": [
+      685
+    ]
+  },
+  {
+    "id": "mcq-1994-37-685",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Use successive ionization-energy values to infer valence-electron structure and element identity.",
+    "status": "classified",
+    "evidencePages": [
+      685
+    ]
+  },
+  {
+    "id": "mcq-1994-38-685",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "2.5"
+    ],
+    "rationale": "Identify a Lewis acid as an electron-pair acceptor.",
+    "status": "classified",
+    "evidencePages": [
+      685
+    ]
+  },
+  {
+    "id": "mcq-1994-39-686",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3"
+    ],
+    "rationale": "Interpret phase equilibrium on a pressure–temperature phase diagram; this diagram skill is legacy relative to the current CED.",
+    "status": "classified",
+    "evidencePages": [
+      686
+    ],
+    "legacyConcepts": [
+      "Interpret phase equilibrium on a pressure–temperature phase diagram; this diagram skill is legacy relative to the current CED."
+    ]
+  },
+  {
+    "id": "mcq-1994-40-686",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Compare molecular polarity and net dipole moments using bond polarity and geometry.",
+    "status": "classified",
+    "evidencePages": [
+      686
+    ]
+  },
+  {
+    "id": "mcq-1994-41-686",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict equilibrium changes after adding a gaseous reactant at constant temperature.",
+    "status": "classified",
+    "evidencePages": [
+      686
+    ]
+  },
+  {
+    "id": "mcq-1994-42-687",
+    "primaryTopic": "4.3",
+    "relatedTopics": [
+      "4.3"
+    ],
+    "rationale": "Balance an acid–base reaction equation.",
+    "status": "classified",
+    "evidencePages": [
+      687
+    ]
+  },
+  {
+    "id": "mcq-1994-43-687",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Determine molarity from mass, molality, and solution density.",
+    "status": "classified",
+    "evidencePages": [
+      687
+    ]
+  },
+  {
+    "id": "mcq-1994-44-687",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Predict pressure change when more gas is added to a rigid tank at constant temperature.",
+    "status": "classified",
+    "evidencePages": [
+      687
+    ]
+  },
+  {
+    "id": "mcq-1994-45-687",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Calculate hydrogen-ion concentration for a weak acid using its Ka.",
+    "status": "classified",
+    "evidencePages": [
+      687
+    ]
+  },
+  {
+    "id": "mcq-1994-46-687",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "The item tests formation of a copper–ammonia coordination complex, outside the current CED topic list.",
+    "status": "legacy",
+    "evidencePages": [
+      687
+    ],
+    "reviewReason": "Coordination-complex formation is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-1994-47-688",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Determine an empirical formula from elemental mass percentages.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-48-688",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Radioactive decay and half-life are outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      688
+    ],
+    "reviewReason": "Radioactive decay/half-life is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-1994-49-688",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Select evaporation to recover a dissolved solid from solution.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-50-688",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Apply periodic trends to atomic radius across a period.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-51-688",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Interpret Rutherford scattering as evidence for a small, concentrated positive nucleus.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-52-688",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.4"
+    ],
+    "rationale": "Use gas solubility trends with pressure and temperature.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-53-688",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry and partial pressures to determine a product-gas pressure.",
+    "status": "classified",
+    "evidencePages": [
+      688
+    ]
+  },
+  {
+    "id": "mcq-1994-54-689",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.9"
+    ],
+    "rationale": "Recognize that temperature changes the equilibrium constant and predict the direction for an exothermic reaction.",
+    "status": "classified",
+    "evidencePages": [
+      689
+    ]
+  },
+  {
+    "id": "mcq-1994-55-689",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.9"
+    ],
+    "rationale": "Use the balanced redox equation and limiting-reagent stoichiometry to determine HI needed.",
+    "status": "classified",
+    "evidencePages": [
+      689
+    ]
+  },
+  {
+    "id": "mcq-1994-56-689",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.2"
+    ],
+    "rationale": "Use solubility rules to identify the ion that forms a yellow precipitate with iodide.",
+    "status": "classified",
+    "evidencePages": [
+      689
+    ]
+  },
+  {
+    "id": "mcq-1994-57-689",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Calculate a standard reduction potential from an overall cell reaction and a known half-cell potential.",
+    "status": "classified",
+    "evidencePages": [
+      689
+    ]
+  },
+  {
+    "id": "mcq-1994-58-690",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3",
+      "3.4"
+    ],
+    "rationale": "Explain boiling-point change using equality of vapor pressure and external pressure.",
+    "status": "classified",
+    "evidencePages": [
+      690
+    ]
+  },
+  {
+    "id": "mcq-1994-59-690",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "4.5"
+    ],
+    "rationale": "Add hydroxide moles from two strong bases and calculate the resulting concentration.",
+    "status": "classified",
+    "evidencePages": [
+      690
+    ]
+  },
+  {
+    "id": "mcq-1994-60-690",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.5"
+    ],
+    "rationale": "Use decomposition stoichiometry and the ideal gas law to determine total pressure.",
+    "status": "classified",
+    "evidencePages": [
+      690
+    ]
+  },
+  {
+    "id": "mcq-1994-61-690",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.5"
+    ],
+    "rationale": "Apply Hess’s law to convert combustion enthalpy between gaseous and liquid water products.",
+    "status": "classified",
+    "evidencePages": [
+      690
+    ]
+  },
+  {
+    "id": "mcq-1994-62-691",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4"
+    ],
+    "rationale": "Use an equilibrium reaction and K to compare relative acid/base strengths.",
+    "status": "classified",
+    "evidencePages": [
+      691
+    ]
+  },
+  {
+    "id": "mcq-1994-63-691",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "5.2"
+    ],
+    "rationale": "Infer reaction order from concentration-versus-time data.",
+    "status": "classified",
+    "evidencePages": [
+      691
+    ]
+  },
+  {
+    "id": "mcq-1994-64-692",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Use Graham’s law to compare effusion rates and the changing partial pressures.",
+    "status": "classified",
+    "evidencePages": [
+      692
+    ]
+  },
+  {
+    "id": "mcq-1994-65-692",
+    "primaryTopic": "8.11",
+    "relatedTopics": [
+      "8.11",
+      "7.11"
+    ],
+    "rationale": "Identify a hydroxide that dissolves in acid through acid–base/solubility equilibria.",
+    "status": "classified",
+    "evidencePages": [
+      692
+    ]
+  },
+  {
+    "id": "mcq-1994-66-692",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "9.1"
+    ],
+    "rationale": "Infer endothermicity from cooling and entropy increase from dissolving a crystalline solid.",
+    "status": "classified",
+    "evidencePages": [
+      692
+    ]
+  },
+  {
+    "id": "mcq-1994-67-692",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Calculate molar solubility from Ksp and dissolution stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      692
+    ]
+  },
+  {
+    "id": "mcq-1994-68-693",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "3.2"
+    ],
+    "rationale": "Distinguish breaking covalent bonds from overcoming attractions during physical changes.",
+    "status": "classified",
+    "evidencePages": [
+      693
+    ]
+  },
+  {
+    "id": "mcq-1994-69-693",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.5"
+    ],
+    "rationale": "Calculate residual Ba²⁺ after precipitation with sulfate using stoichiometry and solubility.",
+    "status": "classified",
+    "evidencePages": [
+      693
+    ]
+  },
+  {
+    "id": "mcq-1994-70-693",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.2"
+    ],
+    "rationale": "Use precipitation stoichiometry to determine and compare remaining ion concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      693
+    ]
+  },
+  {
+    "id": "mcq-1994-71-693",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Choose a selective precipitation reagent to separate Pb²⁺ from other ions.",
+    "status": "classified",
+    "evidencePages": [
+      693
+    ]
+  },
+  {
+    "id": "mcq-1994-72-693",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1",
+      "4.5"
+    ],
+    "rationale": "Diagnose measurement error in a gravimetric hydrate experiment from the direction of the water-mass error.",
+    "status": "classified",
+    "evidencePages": [
+      693
+    ]
+  },
+  {
+    "id": "mcq-1994-73-694",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Calculate dilution volume from conservation of solute concentration.",
+    "status": "classified",
+    "evidencePages": [
+      694
+    ]
+  },
+  {
+    "id": "mcq-1994-74-694",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.5"
+    ],
+    "rationale": "Compare real-gas deviations using intermolecular attractions and particle volume.",
+    "status": "classified",
+    "evidencePages": [
+      694
+    ]
+  },
+  {
+    "id": "mcq-1994-75-694",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "The item tests Raoult’s law and ideal-solution vapor-pressure behavior, beyond the current CED.",
+    "status": "legacy",
+    "evidencePages": [
+      694
+    ],
+    "reviewReason": "Raoult’s law and ideal-solution vapor-pressure behavior are outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-1994-76-695",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Post-exam student survey item; it asks about course enrollment, class time, laboratory time, or calculator use rather than chemistry.",
+    "status": "legacy",
+    "reviewReason": "Post-exam survey/administrative item; not a chemistry question.",
+    "evidencePages": [
+      695
+    ]
+  },
+  {
+    "id": "mcq-1994-77-695",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Post-exam student survey item; it asks about course enrollment, class time, laboratory time, or calculator use rather than chemistry.",
+    "status": "legacy",
+    "reviewReason": "Post-exam survey/administrative item; not a chemistry question.",
+    "evidencePages": [
+      695
+    ]
+  },
+  {
+    "id": "mcq-1994-78-695",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Post-exam student survey item; it asks about course enrollment, class time, laboratory time, or calculator use rather than chemistry.",
+    "status": "legacy",
+    "reviewReason": "Post-exam survey/administrative item; not a chemistry question.",
+    "evidencePages": [
+      695
+    ]
+  },
+  {
+    "id": "mcq-1994-79-695",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Post-exam student survey item; it asks about course enrollment, class time, laboratory time, or calculator use rather than chemistry.",
+    "status": "legacy",
+    "reviewReason": "Post-exam survey/administrative item; not a chemistry question.",
+    "evidencePages": [
+      695
+    ]
+  },
+  {
+    "id": "mcq-1994-80-695",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Post-exam student survey item; it asks about course enrollment, class time, laboratory time, or calculator use rather than chemistry.",
+    "status": "legacy",
+    "reviewReason": "Post-exam survey/administrative item; not a chemistry question.",
+    "evidencePages": [
+      695
+    ]
+  }
+]

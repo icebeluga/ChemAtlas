@@ -1,0 +1,685 @@
+[
+  {
+    "id": "mcq-2013-1-956",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Determine the oxidation state of each element and identify a compound containing an element in the +1 state.",
+    "status": "classified",
+    "evidencePages": [
+      956
+    ]
+  },
+  {
+    "id": "mcq-2013-4-956",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5"
+    ],
+    "rationale": "Use Lewis structures to identify a species with two lone pairs.",
+    "status": "classified",
+    "evidencePages": [
+      956
+    ]
+  },
+  {
+    "id": "mcq-2013-5-956",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5"
+    ],
+    "rationale": "Use Lewis structures and valence-electron counts to identify an incomplete octet.",
+    "status": "classified",
+    "evidencePages": [
+      956
+    ]
+  },
+  {
+    "id": "mcq-2013-6-956",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Compare electron-domain geometry and lone-pair repulsion to predict bond angle.",
+    "status": "classified",
+    "evidencePages": [
+      956
+    ]
+  },
+  {
+    "id": "mcq-2013-7-956",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Identify trigonal-pyramidal molecular geometry.",
+    "status": "classified",
+    "evidencePages": [
+      956
+    ]
+  },
+  {
+    "id": "mcq-2013-8-957",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "4.2"
+    ],
+    "rationale": "Identify the Brønsted–Lowry acid–base reaction among reaction representations.",
+    "status": "classified",
+    "evidencePages": [
+      957
+    ]
+  },
+  {
+    "id": "mcq-2013-9-957",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify disproportionation by oxidation and reduction of the same species.",
+    "status": "classified",
+    "evidencePages": [
+      957
+    ]
+  },
+  {
+    "id": "mcq-2013-18-959",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Apply periodic trends to first ionization energy.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-19-959",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "3.8"
+    ],
+    "rationale": "Calculate ion concentrations after dissolving a mixture of soluble salts.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-20-959",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8",
+      "4.1"
+    ],
+    "rationale": "Use ionic charges to predict which element forms a fluoride with the same stoichiometric ratio as magnesium.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-21-959",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Use reaction stoichiometry to calculate HF produced from molecules of H2.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-22-959",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.2"
+    ],
+    "rationale": "Determine proton, neutron, and electron counts for a nuclide.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-23-959",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "3.12"
+    ],
+    "rationale": "Recognize an excited electron configuration that can emit a photon.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-24-959",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Identify a nonpolar molecule containing polar covalent bonds using molecular geometry.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-25-959",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Calculate product mass from a balanced reaction and molecular amount.",
+    "status": "classified",
+    "evidencePages": [
+      959
+    ]
+  },
+  {
+    "id": "mcq-2013-26-960",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict the effect of decreasing volume on gas-phase equilibria.",
+    "status": "classified",
+    "evidencePages": [
+      960
+    ]
+  },
+  {
+    "id": "mcq-2013-28-960",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Combine gases in a rigid vessel and calculate total pressure at constant temperature.",
+    "status": "classified",
+    "evidencePages": [
+      960
+    ]
+  },
+  {
+    "id": "mcq-2013-29-960",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Compare reaction entropy changes using phases and gas stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      960
+    ]
+  },
+  {
+    "id": "mcq-2013-30-960",
+    "primaryTopic": "7.3",
+    "relatedTopics": [
+      "7.3"
+    ],
+    "rationale": "Transform an equilibrium constant when the reaction is reversed and coefficients change.",
+    "status": "classified",
+    "evidencePages": [
+      960
+    ]
+  },
+  {
+    "id": "mcq-2013-32-960",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.11"
+    ],
+    "rationale": "Evaluate how pressure, catalyst surface area, and temperature affect reaction rate.",
+    "status": "classified",
+    "evidencePages": [
+      960
+    ]
+  },
+  {
+    "id": "mcq-2013-33-961",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "4.1"
+    ],
+    "rationale": "Select glassware and prepare a solution with a specified volume and concentration.",
+    "status": "classified",
+    "evidencePages": [
+      961
+    ]
+  },
+  {
+    "id": "mcq-2013-37-962",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.9"
+    ],
+    "rationale": "Determine standard enthalpy of formation from reaction enthalpies.",
+    "status": "classified",
+    "evidencePages": [
+      962
+    ]
+  },
+  {
+    "id": "mcq-2013-38-962",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1",
+      "4.5"
+    ],
+    "rationale": "Evaluate sources of error in a gravimetric precipitation analysis.",
+    "status": "classified",
+    "evidencePages": [
+      962
+    ]
+  },
+  {
+    "id": "mcq-2013-40-963",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4"
+    ],
+    "rationale": "Use a spontaneous proton-transfer reaction to compare conjugate-base strengths.",
+    "status": "classified",
+    "evidencePages": [
+      963
+    ]
+  },
+  {
+    "id": "mcq-2013-41-963",
+    "primaryTopic": "4.3",
+    "relatedTopics": [
+      "4.3",
+      "4.2"
+    ],
+    "rationale": "Balance an acid–carbonate reaction and identify a coefficient.",
+    "status": "classified",
+    "evidencePages": [
+      963
+    ]
+  },
+  {
+    "id": "mcq-2013-42-964",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3"
+    ],
+    "rationale": "Compare boiling points using hydrogen bonding and dispersion forces.",
+    "status": "classified",
+    "evidencePages": [
+      964
+    ]
+  },
+  {
+    "id": "mcq-2013-43-964",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.4"
+    ],
+    "rationale": "Choose which gases can be collected quantitatively over water based on solubility.",
+    "status": "classified",
+    "evidencePages": [
+      964
+    ]
+  },
+  {
+    "id": "mcq-2013-44-964",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "4.5"
+    ],
+    "rationale": "Determine hydrate formula from mass loss and composition.",
+    "status": "classified",
+    "evidencePages": [
+      964
+    ]
+  },
+  {
+    "id": "mcq-2013-45-964",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Calculate Ka from weak-acid concentration and pH.",
+    "status": "classified",
+    "evidencePages": [
+      964
+    ]
+  },
+  {
+    "id": "mcq-2013-46-964",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Use calorimetry and thermal equilibrium to determine final temperature of mixed water samples.",
+    "status": "classified",
+    "evidencePages": [
+      964
+    ]
+  },
+  {
+    "id": "mcq-2013-47-965",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Organic isomer identification is outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      965
+    ],
+    "legacyConcepts": [
+      "Organic isomer identification"
+    ],
+    "reviewReason": "Organic isomer identification is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-2013-48-965",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "4.1"
+    ],
+    "rationale": "Analyze how wet primary-standard KHP affects a titration-derived NaOH concentration.",
+    "status": "classified",
+    "evidencePages": [
+      965
+    ]
+  },
+  {
+    "id": "mcq-2013-49-965",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.7"
+    ],
+    "rationale": "Compare solubility in nonpolar pentane using intermolecular-force similarity.",
+    "status": "classified",
+    "evidencePages": [
+      965
+    ]
+  },
+  {
+    "id": "mcq-2013-51-966",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Infer a rate law from initial-rate data.",
+    "status": "classified",
+    "evidencePages": [
+      966
+    ]
+  },
+  {
+    "id": "mcq-2013-52-967",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.1"
+    ],
+    "rationale": "Determine thermodynamic sign relationships from reaction enthalpy, entropy, and favorability.",
+    "status": "classified",
+    "evidencePages": [
+      967
+    ]
+  },
+  {
+    "id": "mcq-2013-53-967",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Calculate an empirical formula from oxide mass percentages.",
+    "status": "classified",
+    "evidencePages": [
+      967
+    ]
+  },
+  {
+    "id": "mcq-2013-54-967",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.1",
+      "9.6"
+    ],
+    "rationale": "Explain ionic-solid dissolution using lattice attractions, ion–dipole interactions, and entropy.",
+    "status": "classified",
+    "evidencePages": [
+      967
+    ]
+  },
+  {
+    "id": "mcq-2013-55-967",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3"
+    ],
+    "rationale": "Explain the equilibrium vapor pressure of a liquid in a closed system.",
+    "status": "classified",
+    "evidencePages": [
+      967
+    ]
+  },
+  {
+    "id": "mcq-2013-56-968",
+    "primaryTopic": "8.7",
+    "relatedTopics": [
+      "8.7",
+      "8.5"
+    ],
+    "rationale": "Use the titration curve half-equivalence point to identify pKa.",
+    "status": "classified",
+    "evidencePages": [
+      968
+    ]
+  },
+  {
+    "id": "mcq-2013-57-969",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Rank atomic radii using periodic trends.",
+    "status": "classified",
+    "evidencePages": [
+      969
+    ]
+  },
+  {
+    "id": "mcq-2013-59-969",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Calculate standard cell potential from standard reduction potentials.",
+    "status": "classified",
+    "evidencePages": [
+      969
+    ]
+  },
+  {
+    "id": "mcq-2013-60-969",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate Kc from equilibrium composition.",
+    "status": "classified",
+    "evidencePages": [
+      969
+    ]
+  },
+  {
+    "id": "mcq-2013-61-969",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Radioactive half-life is outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      969
+    ],
+    "legacyConcepts": [
+      "Radioactive decay / half-life"
+    ],
+    "reviewReason": "Radioactive half-life is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-2013-62-970",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3"
+    ],
+    "rationale": "Identify a second-order reaction from the linear concentration-time representation.",
+    "status": "classified",
+    "evidencePages": [
+      970
+    ]
+  },
+  {
+    "id": "mcq-2013-63-971",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.9"
+    ],
+    "rationale": "Use balanced redox stoichiometry and limiting-reactant analysis to calculate CO2 produced.",
+    "status": "classified",
+    "evidencePages": [
+      971
+    ]
+  },
+  {
+    "id": "mcq-2013-65-972",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.6"
+    ],
+    "rationale": "Evaluate calorimetry measurement errors and their effect on the calculated heat of reaction.",
+    "status": "classified",
+    "evidencePages": [
+      972
+    ]
+  },
+  {
+    "id": "mcq-2013-66-972",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "3.2"
+    ],
+    "rationale": "Explain the constant temperature during melting as energy overcoming attractions between particles.",
+    "status": "classified",
+    "evidencePages": [
+      972
+    ]
+  },
+  {
+    "id": "mcq-2013-67-972",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "Explain a catalyst’s effect on activation energy and reaction rate.",
+    "status": "classified",
+    "evidencePages": [
+      972
+    ]
+  },
+  {
+    "id": "mcq-2013-68-972",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Calculate concentration after dilution.",
+    "status": "classified",
+    "evidencePages": [
+      972
+    ]
+  },
+  {
+    "id": "mcq-2013-69-972",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1"
+    ],
+    "rationale": "Interpret chemical formulas and compound naming conventions.",
+    "status": "classified",
+    "evidencePages": [
+      972
+    ]
+  },
+  {
+    "id": "mcq-2013-71-973",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "2.5"
+    ],
+    "rationale": "Count sigma and pi bonds from molecular structures.",
+    "status": "classified",
+    "evidencePages": [
+      973
+    ]
+  },
+  {
+    "id": "mcq-2013-73-973",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5"
+    ],
+    "rationale": "Identify resonance-delocalized bonding.",
+    "status": "classified",
+    "evidencePages": [
+      973
+    ]
+  },
+  {
+    "id": "mcq-2013-74-973",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Calculate molarity and report the result with appropriate significant figures.",
+    "status": "classified",
+    "evidencePages": [
+      973
+    ]
+  },
+  {
+    "id": "mcq-2013-75-973",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Distinguish strong electrolytes from molecular nonelectrolytes and weak electrolytes.",
+    "status": "classified",
+    "evidencePages": [
+      973
+    ]
+  }
+]

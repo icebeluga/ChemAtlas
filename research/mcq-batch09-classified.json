@@ -1,0 +1,640 @@
+[
+  {
+    "id": "mcq-2014-1-1441",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Compare oxygen mass fractions in compounds to determine the greatest oxygen content.",
+    "status": "classified",
+    "evidencePages": [
+      1441
+    ]
+  },
+  {
+    "id": "mcq-2014-2-1441",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3",
+      "3.2"
+    ],
+    "rationale": "Use physical properties of a crystalline solid to identify its bonding and structure.",
+    "status": "classified",
+    "evidencePages": [
+      1441
+    ]
+  },
+  {
+    "id": "mcq-2014-3-1441",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain a periodic-trend exception in first ionization energy using electron structure.",
+    "status": "classified",
+    "evidencePages": [
+      1441
+    ]
+  },
+  {
+    "id": "mcq-2014-4-1442",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "3.4"
+    ],
+    "rationale": "Analyze gas pressure for a heterogeneous equilibrium involving a solid and oxygen gas.",
+    "status": "classified",
+    "evidencePages": [
+      1442
+    ]
+  },
+  {
+    "id": "mcq-2014-5-1442",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "6.1",
+      "2.3"
+    ],
+    "rationale": "Explain endothermic dissolution of an ionic solid through lattice-separation and hydration-energy contributions.",
+    "status": "classified",
+    "evidencePages": [
+      1442
+    ]
+  },
+  {
+    "id": "mcq-2014-6-1443",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.5"
+    ],
+    "rationale": "Identify conditions under which hydrogen behaves most ideally.",
+    "status": "classified",
+    "evidencePages": [
+      1443
+    ]
+  },
+  {
+    "id": "mcq-2014-7-1443",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Apply gas laws to a sample undergoing a volume and temperature change.",
+    "status": "classified",
+    "evidencePages": [
+      1443
+    ]
+  },
+  {
+    "id": "mcq-2014-8-1444",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.7"
+    ],
+    "rationale": "Use experimental mass and solution data to identify an unknown metal chloride.",
+    "status": "classified",
+    "evidencePages": [
+      1444
+    ]
+  },
+  {
+    "id": "mcq-2014-9-1444",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2"
+    ],
+    "rationale": "Identify the fate of spectator nitrate ions during a precipitation reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1444
+    ]
+  },
+  {
+    "id": "mcq-2014-10-1445",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.8",
+      "4.2"
+    ],
+    "rationale": "Interpret particle diagrams for an aqueous ionic solution before reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1445
+    ]
+  },
+  {
+    "id": "mcq-2014-11-1446",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "4.5"
+    ],
+    "rationale": "Calculate pH after mixing strong acid and strong base using neutralization stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1446
+    ]
+  },
+  {
+    "id": "mcq-2014-12-1446",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain an ionization-energy trend using electron configuration and shielding.",
+    "status": "classified",
+    "evidencePages": [
+      1446
+    ]
+  },
+  {
+    "id": "mcq-2014-13-1446",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Identify a reaction with a positive standard entropy change from its phases and particle counts.",
+    "status": "classified",
+    "evidencePages": [
+      1446
+    ]
+  },
+  {
+    "id": "mcq-2014-14-1447",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use gas-law relationships to identify an unknown gas from pressure, volume, and amount data.",
+    "status": "classified",
+    "evidencePages": [
+      1447
+    ]
+  },
+  {
+    "id": "mcq-2014-15-1447",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare average gas-particle speeds at specified conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1447
+    ]
+  },
+  {
+    "id": "mcq-2014-16-1447",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5",
+      "3.4"
+    ],
+    "rationale": "Explain partial-pressure differences using kinetic molecular theory and gas molar mass.",
+    "status": "classified",
+    "evidencePages": [
+      1447
+    ]
+  },
+  {
+    "id": "mcq-2014-17-1448",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2"
+    ],
+    "rationale": "Interpret bond strength and equilibrium internuclear distance from potential-energy curves.",
+    "status": "classified",
+    "evidencePages": [
+      1448
+    ]
+  },
+  {
+    "id": "mcq-2014-18-1449",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Use calorimetry and thermal equilibrium to determine a final temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1449
+    ]
+  },
+  {
+    "id": "mcq-2014-19-1449",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.3"
+    ],
+    "rationale": "Analyze pH changes when strong base is added to a weak-acid mixture.",
+    "status": "classified",
+    "evidencePages": [
+      1449
+    ]
+  },
+  {
+    "id": "mcq-2014-20-1449",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "6.1"
+    ],
+    "rationale": "Relate water autoionization and pKw to temperature-dependent acid–base behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1449
+    ]
+  },
+  {
+    "id": "mcq-2014-21-1450",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.9"
+    ],
+    "rationale": "Predict how changing temperature affects the equilibrium constant.",
+    "status": "classified",
+    "evidencePages": [
+      1450
+    ]
+  },
+  {
+    "id": "mcq-2014-22-1450",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "7.7"
+    ],
+    "rationale": "Use gas mixture and equilibrium data for CO/H2 conversion to methanol.",
+    "status": "classified",
+    "evidencePages": [
+      1450
+    ]
+  },
+  {
+    "id": "mcq-2014-23-1450",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate equilibrium concentrations for methanol formation from CO and H2.",
+    "status": "classified",
+    "evidencePages": [
+      1450
+    ]
+  },
+  {
+    "id": "mcq-2014-24-1450",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Use reaction enthalpy and bond energies to compare bonds in a reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1450
+    ]
+  },
+  {
+    "id": "mcq-2014-25-1451",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.9"
+    ],
+    "rationale": "Predict buffer pH after a small acid addition using the acetic acid/acetate pair.",
+    "status": "classified",
+    "evidencePages": [
+      1451
+    ]
+  },
+  {
+    "id": "mcq-2014-26-1452",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "4.5"
+    ],
+    "rationale": "Use balanced redox stoichiometry to relate permanganate and iron(II) ions.",
+    "status": "classified",
+    "evidencePages": [
+      1452
+    ]
+  },
+  {
+    "id": "mcq-2014-27-1452",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "3.11"
+    ],
+    "rationale": "Apply Beer–Lambert law to determine solution concentration by absorbance.",
+    "status": "classified",
+    "evidencePages": [
+      1452
+    ]
+  },
+  {
+    "id": "mcq-2014-28-1453",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.8",
+      "5.2"
+    ],
+    "rationale": "Evaluate proposed reaction mechanisms against an experimental rate law.",
+    "status": "classified",
+    "evidencePages": [
+      1453
+    ]
+  },
+  {
+    "id": "mcq-2014-29-1453",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "7.11"
+    ],
+    "rationale": "Use equilibrium and free-energy evidence to assess dissolution favorability.",
+    "status": "classified",
+    "evidencePages": [
+      1453
+    ]
+  },
+  {
+    "id": "mcq-2014-30-1454",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.5"
+    ],
+    "rationale": "Recognize hydrogen bonding between complementary DNA bases.",
+    "status": "classified",
+    "evidencePages": [
+      1454
+    ]
+  },
+  {
+    "id": "mcq-2014-31-1455",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.6"
+    ],
+    "rationale": "Interpret x-ray photoelectron spectroscopy peaks for core electrons.",
+    "status": "classified",
+    "evidencePages": [
+      1455
+    ]
+  },
+  {
+    "id": "mcq-2014-32-1456",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "4.5"
+    ],
+    "rationale": "Relate oxygen-formation rate to reaction stoichiometry during decomposition.",
+    "status": "classified",
+    "evidencePages": [
+      1456
+    ]
+  },
+  {
+    "id": "mcq-2014-33-1456",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Track oxygen oxidation state during peroxide decomposition.",
+    "status": "classified",
+    "evidencePages": [
+      1456
+    ]
+  },
+  {
+    "id": "mcq-2014-34-1456",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3"
+    ],
+    "rationale": "Interpret pH change during hydrogen-peroxide titration.",
+    "status": "classified",
+    "evidencePages": [
+      1456
+    ]
+  },
+  {
+    "id": "mcq-2014-35-1457",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Explain the polarity difference between BF3 and NF3 using geometry and lone pairs.",
+    "status": "classified",
+    "evidencePages": [
+      1457
+    ]
+  },
+  {
+    "id": "mcq-2014-36-1457",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.3"
+    ],
+    "rationale": "Compare Q and K to predict the direction of reaction at the current composition.",
+    "status": "classified",
+    "evidencePages": [
+      1457
+    ]
+  },
+  {
+    "id": "mcq-2014-37-1457",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4"
+    ],
+    "rationale": "Use reaction stoichiometry and gas amounts for ammonia synthesis.",
+    "status": "classified",
+    "evidencePages": [
+      1457
+    ]
+  },
+  {
+    "id": "mcq-2014-38-1458",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Interpret a titration curve for an unknown monoprotic acid.",
+    "status": "classified",
+    "evidencePages": [
+      1458
+    ]
+  },
+  {
+    "id": "mcq-2014-39-1459",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5"
+    ],
+    "rationale": "Calculate energy required for melting methane using the phase-change enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1459
+    ]
+  },
+  {
+    "id": "mcq-2014-40-1459",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "3.3"
+    ],
+    "rationale": "Compare energy for different phase changes using latent-heat concepts.",
+    "status": "classified",
+    "evidencePages": [
+      1459
+    ]
+  },
+  {
+    "id": "mcq-2014-41-1459",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5"
+    ],
+    "rationale": "Use molar enthalpy of vaporization to reason about energy required for water vaporization.",
+    "status": "classified",
+    "evidencePages": [
+      1459
+    ]
+  },
+  {
+    "id": "mcq-2014-42-1460",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "2.4"
+    ],
+    "rationale": "Explain corrosion resistance through oxidation of chromium and alloy protection.",
+    "status": "classified",
+    "evidencePages": [
+      1460
+    ]
+  },
+  {
+    "id": "mcq-2014-43-1461",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "5.2"
+    ],
+    "rationale": "Infer reaction order from concentration-time data.",
+    "status": "classified",
+    "evidencePages": [
+      1461
+    ]
+  },
+  {
+    "id": "mcq-2014-44-1462",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6",
+      "5.7"
+    ],
+    "rationale": "Compare reaction pathways using energy profiles and activation barriers.",
+    "status": "classified",
+    "evidencePages": [
+      1462
+    ]
+  },
+  {
+    "id": "mcq-2014-45-1462",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6"
+    ],
+    "rationale": "Interpret heat transfer from reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1462
+    ]
+  },
+  {
+    "id": "mcq-2014-46-1462",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Assess thermodynamic favorability using Gibbs free energy under standard conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1462
+    ]
+  },
+  {
+    "id": "mcq-2014-47-1463",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Explain ionic-solid brittleness from lattice structure and ion displacement.",
+    "status": "classified",
+    "evidencePages": [
+      1463
+    ]
+  },
+  {
+    "id": "mcq-2014-48-1464",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Identify limiting reagent and product amount in propane chlorination.",
+    "status": "classified",
+    "evidencePages": [
+      1464
+    ]
+  },
+  {
+    "id": "mcq-2014-49-1464",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3"
+    ],
+    "rationale": "Order boiling points using intermolecular attractions and molecular structures.",
+    "status": "classified",
+    "evidencePages": [
+      1464
+    ]
+  },
+  {
+    "id": "mcq-2014-50-1465",
+    "primaryTopic": "5.4",
+    "relatedTopics": [
+      "5.4",
+      "5.2",
+      "5.5"
+    ],
+    "rationale": "Relate a single-step collision mechanism to the observed rate law.",
+    "status": "classified",
+    "evidencePages": [
+      1465
+    ]
+  }
+]

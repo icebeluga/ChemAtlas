@@ -1,0 +1,486 @@
+[
+  {
+    "id": "mcq-2024-1-2129",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1"
+    ],
+    "rationale": "Use a mass-to-moles conversion to determine amount of substance.",
+    "status": "classified",
+    "evidencePages": [
+      2129
+    ]
+  },
+  {
+    "id": "mcq-2024-2-2129",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1"
+    ],
+    "rationale": "Determine which molar information is needed to convert a pure-metal sample to atom count.",
+    "status": "classified",
+    "evidencePages": [
+      2129
+    ]
+  },
+  {
+    "id": "mcq-2024-11-2131",
+    "primaryTopic": "1.4",
+    "relatedTopics": [
+      "1.4",
+      "1.3"
+    ],
+    "rationale": "Use mass composition and molar masses to calculate mixture mole percentages.",
+    "status": "classified",
+    "evidencePages": [
+      2131
+    ]
+  },
+  {
+    "id": "mcq-2024-12-2132",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.8",
+      "1.1"
+    ],
+    "rationale": "Calculate gas mole fractions from component masses and molar masses.",
+    "status": "classified",
+    "evidencePages": [
+      2132
+    ]
+  },
+  {
+    "id": "mcq-2024-14-2132",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Identify oxygen’s ground-state electron configuration.",
+    "status": "classified",
+    "evidencePages": [
+      2132
+    ]
+  },
+  {
+    "id": "mcq-2024-15-2132",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5"
+    ],
+    "rationale": "Identify magnesium’s ground-state electron configuration.",
+    "status": "classified",
+    "evidencePages": [
+      2132
+    ]
+  },
+  {
+    "id": "mcq-2024-20-2134",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Explain an atomic-radius comparison using principal energy levels and shielding.",
+    "status": "classified",
+    "evidencePages": [
+      2134
+    ]
+  },
+  {
+    "id": "mcq-2024-21-2134",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain an ionization-energy trend using electron structure and effective nuclear charge.",
+    "status": "classified",
+    "evidencePages": [
+      2134
+    ]
+  },
+  {
+    "id": "mcq-2024-22-2134",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Compare periodic reactivity/electron loss using atomic structure.",
+    "status": "classified",
+    "evidencePages": [
+      2134
+    ]
+  },
+  {
+    "id": "mcq-2024-24-2135",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8",
+      "1.5"
+    ],
+    "rationale": "Infer typical ionic charge from valence-electron configuration.",
+    "status": "classified",
+    "evidencePages": [
+      2135
+    ]
+  },
+  {
+    "id": "mcq-2024-1-2137",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Classify bonding from electronegativity differences.",
+    "status": "classified",
+    "evidencePages": [
+      2137
+    ]
+  },
+  {
+    "id": "mcq-2024-2-2137",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.3"
+    ],
+    "rationale": "Identify a valid claim about ionic bonding in binary compounds.",
+    "status": "classified",
+    "evidencePages": [
+      2137
+    ]
+  },
+  {
+    "id": "mcq-2024-3-2137",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1"
+    ],
+    "rationale": "Identify nonpolar covalent bonding from equal electronegativities.",
+    "status": "classified",
+    "evidencePages": [
+      2137
+    ]
+  },
+  {
+    "id": "mcq-2024-8-2139",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4"
+    ],
+    "rationale": "Interpret a particle diagram of an interstitial alloy.",
+    "status": "classified",
+    "evidencePages": [
+      2139
+    ]
+  },
+  {
+    "id": "mcq-2024-11-2141",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5"
+    ],
+    "rationale": "Choose a Lewis diagram using formal-charge minimization.",
+    "status": "classified",
+    "evidencePages": [
+      2141
+    ]
+  },
+  {
+    "id": "mcq-2024-13-2142",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Identify a polar molecule using geometry and bond polarity.",
+    "status": "classified",
+    "evidencePages": [
+      2142
+    ]
+  },
+  {
+    "id": "mcq-2024-7-2147",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Apply Boyle’s law to a gas mixture compressed at constant temperature.",
+    "status": "classified",
+    "evidencePages": [
+      2147
+    ]
+  },
+  {
+    "id": "mcq-2024-13-2151",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.1"
+    ],
+    "rationale": "Explain real-gas deviation using stronger intermolecular attractions.",
+    "status": "classified",
+    "evidencePages": [
+      2151
+    ]
+  },
+  {
+    "id": "mcq-2024-14-2152",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.6"
+    ],
+    "rationale": "Compare liquefaction pressures using intermolecular-force strength and particle size.",
+    "status": "classified",
+    "evidencePages": [
+      2152
+    ]
+  },
+  {
+    "id": "mcq-2024-16-2152",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "3.8"
+    ],
+    "rationale": "Use dilution and concentration relationships to prepare a solution; the same source record includes a neighboring molarity prompt.",
+    "status": "classified",
+    "evidencePages": [
+      2152
+    ]
+  },
+  {
+    "id": "mcq-2024-18-2153",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Calculate solute mass needed to prepare a solution of specified molarity.",
+    "status": "classified",
+    "evidencePages": [
+      2153
+    ]
+  },
+  {
+    "id": "mcq-2024-20-2153",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Choose chromatography to separate colored components of ink.",
+    "status": "classified",
+    "evidencePages": [
+      2153
+    ]
+  },
+  {
+    "id": "mcq-2024-22-2154",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Identify hydrogen bonding between methanol and water molecules.",
+    "status": "classified",
+    "evidencePages": [
+      2154
+    ]
+  },
+  {
+    "id": "mcq-2024-25-2156",
+    "primaryTopic": "3.12",
+    "relatedTopics": [
+      "3.12",
+      "1.5"
+    ],
+    "rationale": "Explain visible-light absorption as electron promotion between energy levels.",
+    "status": "classified",
+    "evidencePages": [
+      2156
+    ]
+  },
+  {
+    "id": "mcq-2024-28-2158",
+    "primaryTopic": "3.12",
+    "relatedTopics": [
+      "3.12"
+    ],
+    "rationale": "Convert a maximum wavelength to photon frequency.",
+    "status": "classified",
+    "evidencePages": [
+      2158
+    ]
+  },
+  {
+    "id": "mcq-2024-29-2158",
+    "primaryTopic": "3.12",
+    "relatedTopics": [
+      "3.12"
+    ],
+    "rationale": "Calculate photon energy from frequency; the source page also includes adjacent photon-spectrum questions.",
+    "status": "classified",
+    "evidencePages": [
+      2158
+    ]
+  },
+  {
+    "id": "mcq-2024-32-2159",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13"
+    ],
+    "rationale": "Apply spectrophotometer cuvette orientation and absorbance measurement principles.",
+    "status": "classified",
+    "evidencePages": [
+      2159
+    ]
+  },
+  {
+    "id": "mcq-2024-33-2159",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13"
+    ],
+    "rationale": "Analyze how failing to rinse a cuvette with sample solution affects absorbance/concentration.",
+    "status": "classified",
+    "evidencePages": [
+      2159
+    ]
+  },
+  {
+    "id": "mcq-2024-4-2080",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "3.8"
+    ],
+    "rationale": "Use molecular geometry and a particle representation to interpret molecular structure.",
+    "status": "classified",
+    "evidencePages": [
+      2080
+    ]
+  },
+  {
+    "id": "mcq-2024-14-2085",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8"
+    ],
+    "rationale": "Use standard reduction potentials to predict a spontaneous redox reaction.",
+    "status": "classified",
+    "evidencePages": [
+      2085
+    ]
+  },
+  {
+    "id": "mcq-2024-16-2086",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Apply a second-order rate law to compare initial rates.",
+    "status": "classified",
+    "evidencePages": [
+      2086
+    ]
+  },
+  {
+    "id": "mcq-2024-17-2086",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Apply a second-order rate law to compare initial rates.",
+    "status": "classified",
+    "evidencePages": [
+      2086
+    ]
+  },
+  {
+    "id": "mcq-2024-23-2090",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "2.5"
+    ],
+    "rationale": "Interpret particle representation for a monoprotic-acid solution.",
+    "status": "classified",
+    "evidencePages": [
+      2090
+    ]
+  },
+  {
+    "id": "mcq-2024-24-2090",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Compare weak-acid ionization using pH and concentration.",
+    "status": "classified",
+    "evidencePages": [
+      2090
+    ]
+  },
+  {
+    "id": "mcq-2024-25-2090",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Relate pH and concentration to acid strength/equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      2090
+    ]
+  },
+  {
+    "id": "mcq-2024-31-2093",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Use calorimetry data to calculate specific heat capacity.",
+    "status": "classified",
+    "evidencePages": [
+      2093
+    ]
+  },
+  {
+    "id": "mcq-2024-33-2094",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Use ΔG = ΔH − TΔS to compare thermodynamic favorability at different temperatures.",
+    "status": "classified",
+    "evidencePages": [
+      2094
+    ]
+  },
+  {
+    "id": "mcq-2024-59-2110",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Compare first ionization energies using periodic trends.",
+    "status": "classified",
+    "evidencePages": [
+      2110
+    ]
+  },
+  {
+    "id": "mcq-2024-60-2110",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2"
+    ],
+    "rationale": "Calculate average atomic mass from isotope abundances.",
+    "status": "classified",
+    "evidencePages": [
+      2110
+    ]
+  }
+]

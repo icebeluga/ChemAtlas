@@ -7,7 +7,7 @@
       "6.6",
       "4.5"
     ],
-    "rationale": "Calorimetry experiment design and analysis for HCl\u2013NaOH neutralization.",
+    "rationale": "Calorimetry experiment design and analysis for HCl–NaOH neutralization.",
     "parts": [
       {
         "label": "(a)",
@@ -18,7 +18,7 @@
         "rationale": "Evaluate measurement precision and calculate reaction enthalpy using calorimetry."
       },
       {
-        "label": "(b)\u2013(c)",
+        "label": "(b)–(c)",
         "topics": [
           "6.4",
           "4.5",
@@ -50,7 +50,7 @@
         "rationale": "Calculate initial gas pressure from mass, volume, and temperature."
       },
       {
-        "label": "(b)\u2013(c)",
+        "label": "(b)–(c)",
         "topics": [
           "7.4",
           "7.7"
@@ -154,7 +154,7 @@
       "8.7",
       "3.7"
     ],
-    "rationale": "Analyze a weak-acid indicator\u2019s ionization and distribution between buffer water and nonpolar oil.",
+    "rationale": "Analyze a weak-acid indicator’s ionization and distribution between buffer water and nonpolar oil.",
     "parts": [
       {
         "label": "all parts",
@@ -181,7 +181,7 @@
     "rationale": "Study reaction stoichiometry, limiting reactant, gas formation, and temperature change when bicarbonate reacts with acetic acid.",
     "parts": [
       {
-        "label": "(a)\u2013(b)",
+        "label": "(a)–(b)",
         "topics": [
           "4.5",
           "4.8"
@@ -257,7 +257,7 @@
       "7.3",
       "4.5"
     ],
-    "rationale": "Analyze complex formation equilibrium for Ba2+ and EDTA4\u2212 using a large formation constant and mixture stoichiometry.",
+    "rationale": "Analyze complex formation equilibrium for Ba2+ and EDTA4− using a large formation constant and mixture stoichiometry.",
     "parts": [
       {
         "label": "all parts",
@@ -307,7 +307,7 @@
     "rationale": "Ammonia weak-base equilibrium and titration by strong acid.",
     "parts": [
       {
-        "label": "(a)\u2013(d)",
+        "label": "(a)–(d)",
         "topics": [
           "8.3",
           "8.7"
@@ -368,7 +368,7 @@
     "rationale": "Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
     "parts": [
       {
-        "label": "(a)\u2013(c)",
+        "label": "(a)–(c)",
         "topics": [
           "5.1",
           "5.2"
@@ -399,7 +399,7 @@
     "rationale": "Predict products and net changes across laboratory reaction scenarios.",
     "parts": [
       {
-        "label": "(a)\u2013(h)",
+        "label": "(a)–(h)",
         "topics": [
           "4.2",
           "4.7",
@@ -422,7 +422,7 @@
     "rationale": "Plans gas collection over water to determine an unknown gas molar mass.",
     "parts": [
       {
-        "label": "(a)\u2013(e)",
+        "label": "(a)–(e)",
         "topics": [
           "3.4",
           "4.5"
@@ -481,7 +481,7 @@
         "rationale": "Compare electrolyte dissociation and conductivity."
       },
       {
-        "label": "(b)\u2013(c)",
+        "label": "(b)–(c)",
         "topics": [],
         "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
       },
@@ -495,7 +495,7 @@
     ],
     "status": "classified",
     "legacyConcepts": [
-      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b\u2013c)."
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
     ]
   },
   {
@@ -543,7 +543,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Determines rate law from initial-rate data and tests a proposed reaction mechanism.",
     "parts": [
       {
-        "label": "(a)\u2013(c)",
+        "label": "(a)–(c)",
         "topics": [
           "5.1",
           "5.2"
@@ -574,7 +574,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Predict products and net changes across laboratory reaction scenarios.",
     "parts": [
       {
-        "label": "(a)\u2013(h)",
+        "label": "(a)–(h)",
         "topics": [
           "4.2",
           "4.7",
@@ -597,7 +597,7 @@
     "rationale": "Duplicate appearance of the same 1999 Section II question; Plans gas collection over water to determine an unknown gas molar mass.",
     "parts": [
       {
-        "label": "(a)\u2013(e)",
+        "label": "(a)–(e)",
         "topics": [
           "3.4",
           "4.5"
@@ -656,7 +656,7 @@
         "rationale": "Compare electrolyte dissociation and conductivity."
       },
       {
-        "label": "(b)\u2013(c)",
+        "label": "(b)–(c)",
         "topics": [],
         "rationale": "Freezing-point and vapor-pressure ranking rely on colligative-property content excluded from the current CED."
       },
@@ -670,7 +670,7 @@
     ],
     "status": "classified",
     "legacyConcepts": [
-      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b\u2013c)."
+      "Colligative properties: freezing-point depression and vapor-pressure lowering (parts b–c)."
     ]
   },
   {
@@ -741,7 +741,7 @@
         "rationale": "Distinguish resonance structures from compounds with different atom connectivity."
       },
       {
-        "label": "(d)\u2013(e)",
+        "label": "(d)–(e)",
         "topics": [
           "7.4"
         ],
@@ -759,7 +759,7 @@
       "4.2",
       "8.5"
     ],
-    "rationale": "Draw a complete Lewis electron-dot structure and write the net ionic acid\u2013base reaction for protonation of a weak base.",
+    "rationale": "Draw a complete Lewis electron-dot structure and write the net ionic acid–base reaction for protonation of a weak base.",
     "parts": [
       {
         "label": "(a)",
@@ -886,7 +886,7 @@
         "rationale": "Write the balanced net ionic precipitation equation for copper(II) phosphate."
       },
       {
-        "label": "(b)(i)\u2013(ii)",
+        "label": "(b)(i)–(ii)",
         "topics": [
           "7.11"
         ],
@@ -897,7 +897,7 @@
         "topics": [
           "7.11"
         ],
-        "rationale": "Apply the solubility equilibrium: added acid consumes OH\u2212, promoting more Cu(OH)2 dissolution rather than additional precipitation."
+        "rationale": "Apply the solubility equilibrium: added acid consumes OH−, promoting more Cu(OH)2 dissolution rather than additional precipitation."
       }
     ],
     "status": "classified",
@@ -919,7 +919,7 @@
           "3.1",
           "3.10"
         ],
-        "rationale": "Compare ion\u2013dipole and ionic attractions with dispersion forces to explain the phases and dissolution."
+        "rationale": "Compare ion–dipole and ionic attractions with dispersion forces to explain the phases and dissolution."
       },
       {
         "label": "(b)",
@@ -940,51 +940,76 @@
   },
   {
     "id": "mcq-2022-58-1691",
-    "primaryTopic": "1.5",
+    "primaryTopic": "9.9",
     "relatedTopics": [
       "1.5",
       "1.6",
+      "1.7",
       "4.9",
+      "9.2",
+      "9.3",
       "9.8",
       "9.9"
     ],
-    "rationale": "Verified parts assess bromine electron configuration and photoelectron spectroscopy, then oxidation-number reasoning; the prompt continues into electrochemical half-cell data beyond the extracted page, so the later subparts remain for review.",
+    "rationale": "This multipart FRQ links bromine electron structure and photoelectron evidence to a redox reaction, cell potential, Gibbs free energy, and entropy. The linked electrochemical thermodynamics parts are the primary emphasis.",
     "parts": [
       {
         "label": "(a)",
         "topics": [
           "1.5"
         ],
-        "rationale": "Write the ground-state electron configuration of bromine."
+        "textPreview": "Write bromine’s ground-state electron configuration.",
+        "rationale": "Determine the ground-state electron configuration."
       },
       {
-        "label": "(b)(i)\u2013(ii)",
+        "label": "(b)",
         "topics": [
-          "1.6"
+          "1.6",
+          "1.7"
         ],
-        "rationale": "Interpret a photoelectron spectrum and compare core-electron binding energies using nuclear charge."
+        "textPreview": "Interpret bromine’s core-electron photoelectron spectrum and compare it with krypton.",
+        "rationale": "Identify a PES peak and compare core-electron binding energies using nuclear charge."
       },
       {
         "label": "(c)",
         "topics": [
           "4.9"
         ],
-        "rationale": "Use oxidation numbers to determine whether chlorine is reduced."
+        "textPreview": "Use oxidation numbers to decide whether chlorine is reduced.",
+        "rationale": "Track oxidation numbers in the redox reaction."
       },
       {
-        "label": "remaining electrochemical parts",
+        "label": "(d)",
         "topics": [
-          "9.8",
-          "9.9"
+          "9.8"
         ],
-        "rationale": "The page introduces half-cell reactions and standard reduction potentials; inspect continuation pages before finalizing the specific skill."
+        "textPreview": "Calculate the standard cell potential.",
+        "rationale": "Use standard reduction potentials to determine the cell potential."
+      },
+      {
+        "label": "(e)–(f)",
+        "topics": [
+          "9.9",
+          "9.3"
+        ],
+        "textPreview": "Calculate standard Gibbs free energy and assess thermodynamic favorability.",
+        "rationale": "Relate standard cell potential and Gibbs free energy, then determine favorability."
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "9.2",
+          "9.3"
+        ],
+        "textPreview": "Calculate standard entropy change from enthalpy and Gibbs free energy.",
+        "rationale": "Use the Gibbs relation to calculate entropy change."
       }
     ],
-    "status": "review",
-    "reviewReason": "The FRQ continues beyond the indexed source page. Confirm the remaining electrochemical subparts against the full original pages.",
+    "status": "classified",
     "legacyConcepts": [],
     "evidencePages": [
-      1691
+      1691,
+      1692
     ]
   },
   {
@@ -992,97 +1017,168 @@
     "primaryTopic": "7.4",
     "relatedTopics": [
       "1.1",
-      "3.4",
-      "2.7",
       "2.6",
-      "7.4"
+      "2.7",
+      "3.4",
+      "5.6",
+      "5.7",
+      "5.11",
+      "7.4",
+      "7.5",
+      "7.6",
+      "7.7"
     ],
-    "rationale": "This is a second source-page copy of the C2H4O multipart FRQ; the subpart topics match its complete indexed copy.",
+    "rationale": "The question emphasizes equilibrium: write Kp, interpret its magnitude, calculate equilibrium partial pressure, and determine that compression at constant temperature does not change Kp. It also includes structure, mole calculations, and a catalyzed mechanism.",
     "parts": [
       {
         "label": "(a)",
         "topics": [
-          "1.1",
-          "3.4"
+          "1.1"
         ],
-        "rationale": "Convert a molar concentration limit and room volume to maximum mass using molar mass."
+        "textPreview": "Convert a gas concentration limit and room volume to a maximum mass.",
+        "rationale": "Use concentration, amount, and molar mass."
       },
       {
         "label": "(b)",
         "topics": [
           "2.7"
         ],
-        "rationale": "Predict a bond angle using VSEPR."
+        "textPreview": "Predict a bond angle using VSEPR theory.",
+        "rationale": "Apply VSEPR to the molecular structure."
       },
       {
         "label": "(c)",
         "topics": [
           "2.6"
         ],
-        "rationale": "Distinguish resonance structures from compounds with different atom connectivity."
+        "textPreview": "Explain why two structures with different connectivity are not resonance forms.",
+        "rationale": "Distinguish resonance structures from constitutional isomers."
       },
       {
-        "label": "(d)\u2013(e)",
+        "label": "(d)",
         "topics": [
           "7.4"
         ],
-        "rationale": "Write Kp from partial pressures and use its magnitude to identify the favored side."
+        "textPreview": "Write Kp in terms of partial pressures.",
+        "rationale": "Construct the equilibrium-constant expression."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "7.5"
+        ],
+        "textPreview": "Use the magnitude of Kp to compare equilibrium partial pressures.",
+        "rationale": "Interpret whether reactants or products are favored."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "7.7"
+        ],
+        "textPreview": "Calculate a partial pressure after equilibrium is established.",
+        "rationale": "Calculate equilibrium composition."
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "7.6"
+        ],
+        "textPreview": "Determine whether compression changes Kp at constant temperature.",
+        "rationale": "Apply properties of the equilibrium constant."
+      },
+      {
+        "label": "(h)",
+        "topics": [
+          "5.6",
+          "5.7",
+          "5.11"
+        ],
+        "textPreview": "Analyze an intermediate and draw an energy profile for the catalyzed mechanism.",
+        "rationale": "Identify a mechanism intermediate and show how catalysis changes the reaction energy profile."
       }
     ],
     "status": "classified",
     "legacyConcepts": [],
     "evidencePages": [
-      1696
+      1696,
+      1697
     ]
   },
   {
     "id": "mcq-2022-60-1701",
-    "primaryTopic": "2.5",
+    "primaryTopic": "8.5",
     "relatedTopics": [
       "2.5",
-      "4.2",
       "3.7",
+      "4.2",
+      "4.5",
       "4.6",
-      "8.5"
+      "6.6",
+      "8.4",
+      "8.5",
+      "8.7"
     ],
-    "rationale": "The visible subparts cover a Lewis diagram, a weak-base net ionic reaction, solution dilution, precise volumetric delivery, and an acid\u2013base titration. The page extract ends mid-titration prompt, so retain for review.",
+    "rationale": "The central set is an acid–base titration of hydroxylamine, including preparation, precise delivery, titration-curve analysis, and error reasoning; it also tests Lewis structure, proton transfer, dilution, and reaction enthalpy.",
     "parts": [
       {
         "label": "(a)",
         "topics": [
           "2.5"
         ],
-        "rationale": "Complete the Lewis electron-dot diagram for hydroxylamine."
+        "textPreview": "Complete the Lewis diagram of hydroxylamine.",
+        "rationale": "Represent bonds and lone pairs in the molecule."
       },
       {
         "label": "(b)",
         "topics": [
           "4.2",
-          "8.5"
+          "8.4"
         ],
-        "rationale": "Write the net ionic proton-transfer reaction of weak-base hydroxylamine with acid."
+        "textPreview": "Write the net ionic reaction of weak-base hydroxylamine with acid.",
+        "rationale": "Represent the acid–base proton-transfer reaction."
       },
       {
         "label": "(c)",
         "topics": [
           "3.7"
         ],
-        "rationale": "Calculate a dilution from stock and target solution concentrations and volumes."
+        "textPreview": "Calculate the stock-solution volume needed for a dilution.",
+        "rationale": "Use concentration and volume relationships for solution preparation."
       },
       {
-        "label": "(d)\u2013(e)",
+        "label": "(d)",
         "topics": [
           "4.6",
           "8.5"
         ],
-        "rationale": "Select precise titration glassware and interpret an acid\u2013base titration curve; inspect the continuation for the exact curve tasks."
+        "textPreview": "Choose the glassware that delivers a titrant volume most precisely.",
+        "rationale": "Select appropriate volumetric equipment for titration."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "8.5",
+          "8.7",
+          "4.5"
+        ],
+        "textPreview": "Analyze a titration curve, estimate pKa, calculate concentration, and evaluate a student’s claim.",
+        "rationale": "Use titration data, the half-equivalence relationship, stoichiometry, and experimental reasoning."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "4.5",
+          "6.6"
+        ],
+        "textPreview": "Calculate heat produced by decomposition at elevated temperature.",
+        "rationale": "Combine reaction stoichiometry with enthalpy of reaction."
       }
     ],
-    "status": "review",
-    "reviewReason": "The question continues across pages; verify the titration-curve subparts in the original page images before removing from review.",
+    "status": "classified",
     "legacyConcepts": [],
     "evidencePages": [
-      1701
+      1701,
+      1702
     ]
   },
   {
@@ -1094,7 +1190,7 @@
       "5.5",
       "4.5"
     ],
-    "rationale": "Duplicate source copy of the baking-soda/citric-acid calorimetry FRQ; subpart labels are mapped from its complete copy.",
+    "rationale": "Duplicate source copy of the baking-soda/citric-acid calorimetry FRQ; the continuation page confirms the heat-transfer and comparison subparts.",
     "parts": [
       {
         "label": "(a)",
@@ -1130,7 +1226,1713 @@
     "status": "classified",
     "legacyConcepts": [],
     "evidencePages": [
-      1709
+      1709,
+      1710
     ]
+  },
+  {
+    "id": "mcq-2022-61-1706",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "1.1",
+      "3.1",
+      "3.3",
+      "3.4"
+    ],
+    "rationale": "The central question is which gas condenses first, explained by relative intermolecular attractions; other parts use the ideal gas law and particle representations.",
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4"
+        ],
+        "textPreview": "Calculate total moles of dry air from pressure, volume, and temperature.",
+        "rationale": "Apply the ideal gas law."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "textPreview": "Compare intermolecular forces to determine which gas condenses first.",
+        "rationale": "Compare dispersion forces and polarizability."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.3"
+        ],
+        "textPreview": "Draw particles for a mixture with one condensed substance and one gas.",
+        "rationale": "Represent substances in different physical states."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.1",
+          "3.4"
+        ],
+        "textPreview": "Use mole percentages and total amount to calculate the mass of the gas that condensed.",
+        "rationale": "Convert mole fraction and gas amount to mass."
+      }
+    ],
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1706
+    ]
+  },
+  {
+    "id": "mcq-1994-7-632",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.5",
+      "2.5",
+      "4.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "8.4",
+          "4.2"
+        ],
+        "rationale": "Write net ionic acid–base reaction equations for phosphate protonation."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.4",
+          "2.5"
+        ],
+        "rationale": "Identify an amphiprotic species and represent its Lewis electron-dot structure."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.5"
+        ],
+        "rationale": "Sketch and explain the curve for titrating a polyprotic base with strong acid."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.4",
+          "4.2"
+        ],
+        "rationale": "Write the reaction after additional strong acid is added."
+      }
+    ],
+    "rationale": "The question centers on phosphate acid–base chemistry and its titration; subparts also test net ionic equations and Lewis diagrams.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      632
+    ]
+  },
+  {
+    "id": "mcq-1994-8-633",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3",
+      "2.2",
+      "4.2",
+      "8.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [],
+        "rationale": "Freezing-point depression is a legacy colligative-property topic."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1",
+          "3.3"
+        ],
+        "rationale": "Compare intermolecular attractions and phase at room temperature."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.2",
+          "3.2"
+        ],
+        "rationale": "Relate graphite and diamond properties to bonding and solid structure."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.2",
+          "8.4"
+        ],
+        "rationale": "Explain carbonate residue reacting with vinegar using acid–base chemistry."
+      }
+    ],
+    "rationale": "The prompt spans colligative properties, intermolecular forces, solid structure, and acid–base reaction; the current-course parts primarily examine particle interactions and structure.",
+    "status": "classified",
+    "legacyConcepts": [
+      "Freezing-point depression and colligative properties"
+    ],
+    "evidencePages": [
+      633
+    ]
+  },
+  {
+    "id": "mcq-1994-9-634",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "2.3"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain the smaller radius of a cation than its neutral atom using electron count and effective nuclear attraction."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "2.3"
+        ],
+        "rationale": "Compare ionic lattice energies using ion charge and size."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Compare first and second ionization energies using periodic trends and electron configurations."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.7"
+        ],
+        "rationale": "Explain the first-ionization-energy exception between Mg and Al from subshell structure."
+      }
+    ],
+    "rationale": "The prompt explicitly tests atomic structure and periodic trends, with lattice energy as a second concept.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      634
+    ]
+  },
+  {
+    "id": "mcq-2012-1-1377",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3",
+      "4.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write Kb and determine base concentration from pH and equilibrium."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "8.5",
+          "4.2"
+        ],
+        "rationale": "Write the net ionic neutralization and calculate acid concentration from equivalence-point stoichiometry."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "8.5"
+        ],
+        "rationale": "Sketch a weak-base/strong-acid titration curve and label the equivalence point."
+      }
+    ],
+    "rationale": "The question centers on a weak-base titration and its curve, with weak-base equilibrium calculations.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1377,
+      1378,
+      1379,
+      1380
+    ]
+  },
+  {
+    "id": "mcq-2012-2-1381",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.4",
+      "3.7",
+      "4.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Calculate reactant mole amounts and stoichiometric ratios."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Correct pressure for water vapor and use the ideal gas law to calculate dry hydrogen volume."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "3.7",
+          "4.1"
+        ],
+        "rationale": "Plan a dilution safely using a volumetric flask and concentrated acid."
+      }
+    ],
+    "rationale": "The task is organized around magnesium–acid stoichiometry and gas collection; supporting parts test ideal-gas calculations and solution preparation.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1381,
+      1382,
+      1383,
+      1384
+    ]
+  },
+  {
+    "id": "mcq-2012-3-1385",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5",
+      "7.4",
+      "7.7",
+      "4.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "9.3",
+          "9.2"
+        ],
+        "rationale": "Calculate standard Gibbs energy and entropy change from thermodynamic data."
+      },
+      {
+        "label": "(c)–(e)",
+        "topics": [
+          "7.4",
+          "7.7",
+          "7.9"
+        ],
+        "rationale": "Write Kp, solve equilibrium water-vapor pressure, and predict the effect of volume change."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Calculate remaining solid mass from dehydration stoichiometry."
+      }
+    ],
+    "rationale": "Thermodynamic favorability and state functions dominate, with equilibrium and stoichiometry in later parts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1385,
+      1386,
+      1387,
+      1388
+    ]
+  },
+  {
+    "id": "mcq-2012-4-1389",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "8.4",
+      "4.9",
+      "7.11",
+      "4.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "8.4",
+          "8.5"
+        ],
+        "rationale": "Write the neutralization equation and explain equivalence-point pH for a weak-acid/strong-base titration."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.2",
+          "4.9"
+        ],
+        "rationale": "Represent the Fe3+/Sn2+ reaction and identify reduction."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "7.11",
+          "4.5"
+        ],
+        "rationale": "Represent precipitation of silver phosphate and determine excess reactant stoichiometrically."
+      }
+    ],
+    "rationale": "The common task is writing and interpreting reaction equations, with acid–base, redox, and precipitation applications.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1389,
+      1390
+    ]
+  },
+  {
+    "id": "mcq-2012-5-1391",
+    "primaryTopic": "5.7",
+    "relatedTopics": [
+      "5.7",
+      "5.8",
+      "5.3",
+      "9.8",
+      "9.9",
+      "5.11"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "5.7",
+          "5.8",
+          "5.3"
+        ],
+        "rationale": "Analyze a proposed radical mechanism, rate law, concentration-time graph, and experimental consistency."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "9.8",
+          "9.9"
+        ],
+        "rationale": "Calculate cell potential and relate its sign to Gibbs free energy."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "5.11",
+          "5.6",
+          "7.6"
+        ],
+        "rationale": "Compare catalyzed and uncatalyzed activation energy and unchanged thermodynamic quantities."
+      }
+    ],
+    "rationale": "The question centers on reaction mechanism and kinetics, then connects catalysis to electrochemistry and thermodynamics.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1391,
+      1392,
+      1393,
+      1394
+    ]
+  },
+  {
+    "id": "mcq-2012-6-1395",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5",
+      "2.7",
+      "3.1",
+      "3.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "3.1",
+          "3.3"
+        ],
+        "rationale": "Compare intermolecular forces to explain physical state."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.7"
+        ],
+        "rationale": "Determine carbon hybridization."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Draw a complete Lewis structure."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "2.6",
+          "2.2"
+        ],
+        "rationale": "Use resonance to explain equal intermediate bond lengths."
+      }
+    ],
+    "rationale": "Resonance and bond descriptions are the distinctive focus, alongside Lewis structures, hybridization, and intermolecular forces.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1395,
+      1396,
+      1397
+    ]
+  },
+  {
+    "id": "mcq-2013-1-983",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4",
+      "7.9",
+      "6.1",
+      "8.3"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "7.4",
+          "7.7"
+        ],
+        "rationale": "Calculate equilibrium quantities for decomposition of solid ammonium chloride."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "7.9",
+          "6.1"
+        ],
+        "rationale": "Predict equilibrium response to added NH3 and temperature change; infer reaction enthalpy sign."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Calculate weak-acid equilibrium constant for NH4+ hydrolysis."
+      }
+    ],
+    "rationale": "Equilibrium calculations and perturbations dominate the question; a later part tests conjugate-acid equilibrium.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      983,
+      984,
+      985,
+      986
+    ]
+  },
+  {
+    "id": "mcq-2013-2-987",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.5",
+      "3.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Use reaction stoichiometry to calculate reactant/product amounts."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "3.4",
+          "3.7"
+        ],
+        "rationale": "Correct for water vapor and apply gas laws to collected gas."
+      }
+    ],
+    "rationale": "Quantitative gas collection from a decomposition reaction combines reaction stoichiometry and gas laws.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      987,
+      988,
+      989,
+      990
+    ]
+  },
+  {
+    "id": "mcq-2013-3-991",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.3",
+      "5.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "5.2"
+        ],
+        "rationale": "Determine a rate law from initial-rate data."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "5.3"
+        ],
+        "rationale": "Analyze concentration change and reaction order."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "5.8"
+        ],
+        "rationale": "Relate a proposed mechanism to the observed rate law."
+      }
+    ],
+    "rationale": "The prompt centers on experimental kinetics and deriving the rate law.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      991,
+      992,
+      993,
+      994,
+      995,
+      996
+    ]
+  },
+  {
+    "id": "mcq-2013-4-997",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7",
+      "7.11"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "4.7"
+        ],
+        "rationale": "Represent magnesium combustion and apply mass conservation to the product."
+      },
+      {
+        "label": "(b)",
+        "topics": [],
+        "rationale": "This subpart was removed as outside current-course alignment."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "7.11"
+        ],
+        "rationale": "Identify spectator ions in a precipitation reaction."
+      }
+    ],
+    "rationale": "The retained parts ask students to represent and interpret chemical reactions; an excluded subpart is preserved as a note.",
+    "status": "classified",
+    "legacyConcepts": [
+      "One printed subpart was removed by the source for current-course alignment."
+    ],
+    "evidencePages": [
+      997,
+      998
+    ]
+  },
+  {
+    "id": "mcq-2013-5-999",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.7",
+      "4.1",
+      "9.8"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "3.7",
+          "4.1"
+        ],
+        "rationale": "Prepare a solution from a solid and evaluate quantitative laboratory procedure."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Use Ksp values and ion concentrations to predict selective precipitation."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Analyze electrodeposition in an electrolytic cell."
+      }
+    ],
+    "rationale": "Selective precipitation is the main application, with solution preparation and electrochemistry in other parts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      999,
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ]
+  },
+  {
+    "id": "mcq-2013-6-1005",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5",
+      "2.5",
+      "2.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "1.5"
+        ],
+        "rationale": "Write ground-state electron configurations."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "1.7",
+          "1.5"
+        ],
+        "rationale": "Explain ionization-energy and ionic-radius trends using atomic structure."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw AsF5 Lewis structure and explain molecular geometry and bond angles."
+      }
+    ],
+    "rationale": "Atomic structure and periodic trends are the main focus, with a final Lewis/VSEPR application.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1005,
+      1006,
+      1007,
+      1008
+    ]
+  },
+  {
+    "id": "mcq-2014-1-1474",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.2",
+      "4.5",
+      "4.1",
+      "3.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "7.11"
+        ],
+        "rationale": "Write the net ionic precipitation equation for PbI2 and explain the ionic representation."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "4.1"
+        ],
+        "rationale": "Use repeated drying and weighing to establish constant mass."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "4.2",
+          "4.5"
+        ],
+        "rationale": "Track spectator-ion amounts and stoichiometric consequences."
+      },
+      {
+        "label": "(d)–(e)",
+        "topics": [
+          "4.5",
+          "1.3"
+        ],
+        "rationale": "Calculate precipitate amount and iodide mass percent."
+      },
+      {
+        "label": "(f)",
+        "topics": [
+          "4.5"
+        ],
+        "rationale": "Evaluate how added solvent volume affects the measured mass percent."
+      },
+      {
+        "label": "(g)",
+        "topics": [
+          "7.11",
+          "3.9"
+        ],
+        "rationale": "Use Ksp to predict precipitation and evaluate quantitative measurement limits."
+      }
+    ],
+    "rationale": "The task centers on selective precipitation and solubility, with gravimetric analysis and stoichiometry across its parts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1474,
+      1475
+    ]
+  },
+  {
+    "id": "mcq-2014-2-1477",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3",
+      "4.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "8.3",
+          "8.4"
+        ],
+        "rationale": "Use weak-acid equilibrium and conjugate-acid/base pairs to analyze pH."
+      },
+      {
+        "label": "(d)–(f)",
+        "topics": [
+          "8.5",
+          "4.5"
+        ],
+        "rationale": "Calculate concentration from titration and evaluate a titration design."
+      }
+    ],
+    "rationale": "The question focuses on weak-acid equilibrium and quantitative acid–base titration.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1477,
+      1478,
+      1479,
+      1480
+    ]
+  },
+  {
+    "id": "mcq-2014-3-1481",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "9.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "9.8"
+        ],
+        "rationale": "Track oxidation at the tin electrode and describe ion flow in the salt bridge."
+      }
+    ],
+    "rationale": "Analyze galvanic-cell operation, electrode mass changes, and salt-bridge ion movement.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1481,
+      1482,
+      1483,
+      1484
+    ]
+  },
+  {
+    "id": "mcq-2014-4-1485",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.9",
+      "7.3",
+      "3.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use gas laws to calculate CO2 amount from pressure and container conditions."
+      },
+      {
+        "label": "(b)–(d)",
+        "topics": [
+          "7.7",
+          "7.9",
+          "7.3"
+        ],
+        "rationale": "Interpret heterogeneous equilibrium, pressure plateau, perturbation response, and whether Kp can be calculated."
+      }
+    ],
+    "rationale": "The experiment tests gas–solid equilibrium and response to changing pressure.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1485,
+      1486
+    ]
+  },
+  {
+    "id": "mcq-2014-5-1487",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "2.7",
+      "2.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Use valence-electron counts to propose a formula and draw a Lewis structure."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "2.7",
+          "2.1"
+        ],
+        "rationale": "Use molecular geometry and bond polarity to explain a dipole moment."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Compare bonding patterns in halogen fluorides and assess the stated formula hypothesis."
+      }
+    ],
+    "rationale": "Lewis diagrams, valence electrons, and molecular geometry are the core tested concepts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1487,
+      1488
+    ]
+  },
+  {
+    "id": "mcq-2014-6-1489",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.2",
+      "2.2",
+      "6.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.2",
+          "2.2"
+        ],
+        "rationale": "Use particle mass and volume/structure to explain polymer-bead density."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare intermolecular forces to explain boiling-point differences."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.9",
+          "6.8"
+        ],
+        "rationale": "Calculate combustion enthalpy using formation enthalpies."
+      }
+    ],
+    "rationale": "The question primarily compares intermolecular forces, while also testing density and thermochemistry.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1489,
+      1490
+    ]
+  },
+  {
+    "id": "mcq-2014-7-1491",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "5.2",
+      "5.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(d)",
+        "topics": [
+          "5.3",
+          "5.2"
+        ],
+        "rationale": "Use half-life and concentration data to analyze a first-order isomerization rate."
+      }
+    ],
+    "rationale": "The prompt focuses on first-order kinetics and how concentration affects rate.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1491,
+      1492,
+      1493
+    ]
+  },
+  {
+    "id": "mcq-2015-2-1568",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "2.3",
+      "4.2",
+      "4.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.3"
+        ],
+        "rationale": "Compare lattice energies using ionic charge and size."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.11"
+        ],
+        "rationale": "Use Ksp to compare dissolved metal-ion concentrations."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "7.11",
+          "3.9"
+        ],
+        "rationale": "Design a selective dissolution and separation procedure."
+      }
+    ],
+    "rationale": "The question emphasizes solubility equilibria and separation, supported by ionic-solid structure.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1568,
+      1569,
+      1570,
+      1571
+    ]
+  },
+  {
+    "id": "mcq-2015-3-1572",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.7",
+      "6.4",
+      "6.6"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1",
+          "3.7"
+        ],
+        "rationale": "Compare hydrogen bonding, polarity, and solubility in water."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "6.4",
+          "6.6"
+        ],
+        "rationale": "Use calorimetry and combustion enthalpy; evaluate heat transfer and experimental error."
+      }
+    ],
+    "rationale": "Intermolecular forces and solubility are the main comparison, with calorimetry in later parts.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1572,
+      1573,
+      1574,
+      1575
+    ]
+  },
+  {
+    "id": "mcq-2015-4-1576",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "3.1",
+          "3.3"
+        ],
+        "rationale": "Explain boiling-point trends using London dispersion and hydrogen bonding; represent vaporized particles."
+      }
+    ],
+    "rationale": "Compare intermolecular forces and phase behavior in hydrogen halides.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1576,
+      1577
+    ]
+  },
+  {
+    "id": "mcq-2015-5-1578",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "2.5",
+      "3.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "2.5"
+        ],
+        "rationale": "Complete the Lewis electron-dot structure of methyl methanoate."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "7.4",
+          "3.4"
+        ],
+        "rationale": "Use gas pressure and stoichiometry to calculate equilibrium pressure and Kp for acid dimerization."
+      }
+    ],
+    "rationale": "The equilibrium dimerization and Kp calculation are central, with Lewis structure representation as a separate part.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1578,
+      1579
+    ]
+  },
+  {
+    "id": "mcq-2015-6-1580",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.6",
+      "1.5",
+      "3.12"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.12"
+        ],
+        "rationale": "Convert photon energy to frequency and identify the electromagnetic-spectrum region."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "1.6",
+          "1.5"
+        ],
+        "rationale": "Interpret photoelectron peaks and successive ionization energies."
+      }
+    ],
+    "rationale": "Photoelectron spectroscopy and electron binding energies dominate.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1580,
+      1581
+    ]
+  },
+  {
+    "id": "mcq-2015-7-1582",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4",
+      "8.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "8.3"
+        ],
+        "rationale": "Write Ka and calculate weak-acid equilibrium from pH."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "8.4",
+          "8.9"
+        ],
+        "rationale": "Calculate pH for an acid/conjugate-base buffer."
+      }
+    ],
+    "rationale": "Weak-acid equilibrium and buffer calculations.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1582,
+      1583
+    ]
+  },
+  {
+    "id": "mcq-2015-3-1610",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5",
+      "2.7",
+      "3.4",
+      "4.5",
+      "6.5",
+      "8.1",
+      "7.10"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.6",
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Compare Lewis structures using formal charges and identify hybridization."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.5",
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Analyze dry-ice sublimation and use stoichiometry and the ideal gas law to calculate balloon volume."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "8.1",
+          "7.10"
+        ],
+        "rationale": "Identify a conjugate pair and use reaction-quotient reasoning."
+      }
+    ],
+    "rationale": "The opening subparts center on Lewis structures and resonance/formal charge; additional parts connect phase change, gas laws, and acid–base equilibrium.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1610,
+      1611
+    ]
+  },
+  {
+    "id": "mcq-2015-4-1612",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.2",
+      "4.5",
+      "4.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.2",
+          "7.11"
+        ],
+        "rationale": "Write the net ionic precipitation equation."
+      },
+      {
+        "label": "(b)–(c)",
+        "topics": [
+          "4.5",
+          "3.7"
+        ],
+        "rationale": "Use gravimetric data and precipitation stoichiometry to calculate concentration."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "4.1"
+        ],
+        "rationale": "Identify a measurement/drying error from mass data."
+      }
+    ],
+    "rationale": "Quantitative precipitation and gravimetric analysis dominate.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1612,
+      1613
+    ]
+  },
+  {
+    "id": "mcq-2015-6-1614",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2",
+      "1.7",
+      "1.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.2"
+        ],
+        "rationale": "Complete a mass spectrum and calculate average atomic mass from isotope abundances."
+      },
+      {
+        "label": "(c)–(d)",
+        "topics": [
+          "1.7",
+          "1.5"
+        ],
+        "rationale": "Explain ionization energy and infer element identity using atomic structure."
+      }
+    ],
+    "rationale": "The question tests isotope mass spectra and periodic/atomic-structure reasoning.",
+    "status": "classified",
+    "legacyConcepts": [],
+    "evidencePages": [
+      1614,
+      1615
+    ]
+  },
+  {
+    "id": "mcq-2016-2-1085",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "4.9",
+      "6.9",
+      "3.4"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.9"
+        ],
+        "rationale": "Evaluate whether oxidation numbers change in thermal decomposition."
+      },
+      {
+        "label": "(b)–(d)",
+        "topics": [
+          "4.7",
+          "6.9"
+        ],
+        "rationale": "Represent products and calculate reaction enthalpy."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Relate gas products and stoichiometric amounts."
+      }
+    ],
+    "rationale": "Thermal decomposition and reaction representation dominate, with redox and thermochemistry in supporting parts.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2016-3-1089",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "8.1",
+      "2.5",
+      "7.11"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "4.5",
+          "3.7"
+        ],
+        "rationale": "Calculate reactant amounts to prepare tetrafluoroborate solution."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "8.1",
+          "2.5"
+        ],
+        "rationale": "Apply Lewis acid-base concepts to boric acid and HF chemistry."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "7.11",
+          "4.5"
+        ],
+        "rationale": "Use precipitation/stoichiometry to analyze product amounts."
+      }
+    ],
+    "rationale": "The question centers on reaction quantities and preparation, with acid-base and solubility applications.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2016-4-1093",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4",
+      "1.7",
+      "3.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.4",
+          "1.7"
+        ],
+        "rationale": "Analyze alloy composition and metallic structure using atomic radii."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "2.4"
+        ],
+        "rationale": "Connect alloy composition to material properties."
+      }
+    ],
+    "rationale": "White-gold alloy composition and metallic structure are the main concepts.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2016-5-1095",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5",
+      "3.12"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "1.5",
+          "1.7"
+        ],
+        "rationale": "Use electron configuration and ionization energy to compare Na and K."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "3.12",
+          "1.5"
+        ],
+        "rationale": "Relate flame color to photons emitted during electron transitions."
+      }
+    ],
+    "rationale": "Periodic trends and electron structure dominate, with a photon-emission application.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2016-6-1097",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "2.6",
+      "8.6",
+      "2.7"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Complete Lewis structures and determine geometry."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "8.6",
+          "2.6"
+        ],
+        "rationale": "Relate molecular structure, resonance, and acidity."
+      }
+    ],
+    "rationale": "Molecular representations and structure–property reasoning are the central thread.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2016-7-1099",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "3.7",
+      "4.1"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "3.7",
+          "4.1"
+        ],
+        "rationale": "Prepare a solution from a stock/solid using appropriate quantitative technique."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "3.13"
+        ],
+        "rationale": "Use spectrophotometry to relate absorbance and concentration."
+      }
+    ],
+    "rationale": "Solution preparation for a spectrophotometry experiment is the main application.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-2-1850",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "6.1",
+      "7.4",
+      "3.4",
+      "4.5"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(d)",
+        "topics": [
+          "4.9",
+          "6.1",
+          "7.4"
+        ],
+        "rationale": "Analyze redox, thermodynamic data, and equilibrium for hydrogen peroxide/hypochlorite reaction."
+      },
+      {
+        "label": "(e)",
+        "topics": [
+          "3.4",
+          "4.5"
+        ],
+        "rationale": "Use gas laws and reaction stoichiometry to produce a target oxygen volume."
+      }
+    ],
+    "rationale": "The prompt centers on an oxidation-reduction reaction, with thermodynamics, equilibrium, and gas production.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-3-1854",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5",
+      "2.7",
+      "6.7",
+      "5.3",
+      "5.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "2.6",
+          "2.5",
+          "2.7"
+        ],
+        "rationale": "Draw valid ozone resonance structures and determine molecular shape."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "6.7"
+        ],
+        "rationale": "Calculate average O–O bond enthalpy from reaction enthalpy."
+      },
+      {
+        "label": "remaining parts",
+        "topics": [
+          "5.3",
+          "5.2"
+        ],
+        "rationale": "Analyze ozone reaction kinetics from concentration-time data."
+      }
+    ],
+    "rationale": "Resonance is the distinctive opening focus, followed by bond enthalpy and kinetics.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-4-1858",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "6.4",
+      "6.6"
+    ],
+    "parts": [
+      {
+        "label": "(a)",
+        "topics": [
+          "3.1"
+        ],
+        "rationale": "Compare intermolecular forces and boiling points."
+      },
+      {
+        "label": "(b)",
+        "topics": [
+          "6.4",
+          "6.6"
+        ],
+        "rationale": "Use calorimetry to calculate fuel mass for a water-heating task."
+      }
+    ],
+    "rationale": "Intermolecular forces dominate the comparison, with calorimetry in a later part.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-5-1860",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "9.11",
+      "4.9"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "4.9",
+          "9.8"
+        ],
+        "rationale": "Analyze oxidation numbers and half-reactions in a lead storage battery."
+      },
+      {
+        "label": "(c)",
+        "topics": [
+          "9.11"
+        ],
+        "rationale": "Use charge and current to calculate electrolysis/regeneration time."
+      }
+    ],
+    "rationale": "Battery redox chemistry and electrochemical operation are the main focus.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-6-1862",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(b)",
+        "topics": [
+          "7.11",
+          "7.12"
+        ],
+        "rationale": "Calculate AgCl solubility in pure water and in a common-ion solution."
+      }
+    ],
+    "rationale": "Quantify solubility equilibrium and common-ion effects.",
+    "status": "classified",
+    "legacyConcepts": []
+  },
+  {
+    "id": "mcq-2017-7-1864",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5",
+      "1.2"
+    ],
+    "parts": [
+      {
+        "label": "(a)–(c)",
+        "topics": [
+          "1.5",
+          "1.7"
+        ],
+        "rationale": "Predict valence configuration and chemical behavior from periodic trends."
+      },
+      {
+        "label": "(d)",
+        "topics": [
+          "1.2"
+        ],
+        "rationale": "Calculate average atomic mass from a mass spectrum."
+      }
+    ],
+    "rationale": "Periodic trends and electron configuration dominate; a final part uses isotope data.",
+    "status": "classified",
+    "legacyConcepts": []
   }
 ]

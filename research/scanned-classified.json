@@ -6634,5 +6634,1198 @@
     "classificationRationale": "Phosgene structure and photochemical energy.",
     "classificationMethod": "Question-part review against current CED; original scan checked",
     "legacyConcepts": []
+  },
+  {
+    "id": "mcq-1994-5-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 5,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 5–8 refer to orbital diagrams. Question 5 asks which diagram represents a chemically unreactive atom.",
+    "fullText": "Questions 5–8 refer to orbital diagrams. Question 5 asks which diagram represents a chemically unreactive atom.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-6-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 6,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 5–8 refer to orbital diagrams. Question 6 asks which diagram represents an atom in an excited state.",
+    "fullText": "Questions 5–8 refer to orbital diagrams. Question 6 asks which diagram represents an atom in an excited state.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-7-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 7,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 5–8 refer to orbital diagrams. Question 7 asks which diagram represents an atom with four valence electrons.",
+    "fullText": "Questions 5–8 refer to orbital diagrams. Question 7 asks which diagram represents an atom with four valence electrons.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-8-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 8,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 5–8 refer to orbital diagrams. Question 8 asks which diagram represents an atom of a transition metal.",
+    "fullText": "Questions 5–8 refer to orbital diagrams. Question 8 asks which diagram represents an atom of a transition metal.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-9-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 9,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 9 asks which solution has the lowest pH.",
+    "fullText": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 9 asks which solution has the lowest pH.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-10-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 10,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 10 asks which solution is most nearly neutral.",
+    "fullText": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 10 asks which solution is most nearly neutral.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-11-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 11,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 11 asks which is a buffer with pH greater than 8.",
+    "fullText": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 11 asks which is a buffer with pH greater than 8.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-12-678",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 12,
+    "pages": [
+      678
+    ],
+    "sourcePagesOriginal": [
+      678
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 12 asks which is a buffer with pH less than 6.",
+    "fullText": "Questions 9–12 compare aqueous solutions made from 1:1 mole ratios of listed acid/base pairs. Question 12 asks which is a buffer with pH less than 6.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 678,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-31-683",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 31,
+    "pages": [
+      683
+    ],
+    "sourcePagesOriginal": [
+      683
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Question 31 asks which statement about molarity, molality, density, and mole fraction is true when an aqueous NaCl solution is heated from 20°C to 90°C.",
+    "fullText": "Question 31 asks which statement about molarity, molality, density, and mole fraction is true when an aqueous NaCl solution is heated from 20°C to 90°C.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 683,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-52-688",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 52,
+    "pages": [
+      688
+    ],
+    "sourcePagesOriginal": [
+      688
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Question 52 asks which pressure and temperature conditions allow the greatest amount of O₂(g) to dissolve in water.",
+    "fullText": "Question 52 asks which pressure and temperature conditions allow the greatest amount of O₂(g) to dissolve in water.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 688,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-1994-72-693",
+    "type": "MCQ",
+    "year": "1994",
+    "exam": "1994 AP Chemistry MCQ",
+    "number": 72,
+    "pages": [
+      693
+    ],
+    "sourcePagesOriginal": [
+      693
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Added from an omitted printed question; topic review required.",
+    "textPreview": "Question 72 asks why a gravimetric hydrate experiment reports 38% water when the correct value is 51%. Options concern sample loss, moisture absorption, sample size, crucible conditioning, or decomposition.",
+    "fullText": "Question 72 asks why a gravimetric hydrate experiment reports 38% water when the correct value is 51%. Options concern sample loss, moisture absorption, sample size, crucible conditioning, or decomposition.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 693,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-18-754",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 18,
+    "pages": [
+      754
+    ],
+    "sourcePagesOriginal": [
+      754
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "The phase diagram for pure substance X is given. Heating a solid at constant pressure 0.5 atm, predict whether it melts, boils, or sublimes.",
+    "fullText": "The phase diagram for pure substance X is given. Heating a solid at constant pressure 0.5 atm, predict whether it melts, boils, or sublimes.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 754,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-22-755",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 22,
+    "pages": [
+      755
+    ],
+    "sourcePagesOriginal": [
+      755
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "In liquid ammonia, NH3 and NH4+ + NH2− are in equilibrium. Determine the Brønsted role of NH4+ in this reaction.",
+    "fullText": "In liquid ammonia, NH3 and NH4+ + NH2− are in equilibrium. Determine the Brønsted role of NH4+ in this reaction.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 755,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-23-755",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 23,
+    "pages": [
+      755
+    ],
+    "sourcePagesOriginal": [
+      755
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Use the nuclear equation for neutron bombardment of uranium-235 to identify the fission-product nuclide X.",
+    "fullText": "Use the nuclear equation for neutron bombardment of uranium-235 to identify the fission-product nuclide X.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 755,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-25-755",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 25,
+    "pages": [
+      755
+    ],
+    "sourcePagesOriginal": [
+      755
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Calculate standard reaction enthalpy for 3 C2H2(g) → C6H6(g) from standard enthalpies of formation.",
+    "fullText": "Calculate standard reaction enthalpy for 3 C2H2(g) → C6H6(g) from standard enthalpies of formation.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 755,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-31-756",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 31,
+    "pages": [
+      756
+    ],
+    "sourcePagesOriginal": [
+      756
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Determine the volume of O2 required to react with excess CS2(l) to produce 4.0 L CO2(g), with gas volumes at 0 °C and 1 atm.",
+    "fullText": "Determine the volume of O2 required to react with excess CS2(l) to produce 4.0 L CO2(g), with gas volumes at 0 °C and 1 atm.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 756,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-39-758",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 39,
+    "pages": [
+      758
+    ],
+    "sourcePagesOriginal": [
+      758
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Use solubility curves to determine which saturated solution yields the greatest percent recovery when cooled from 90 °C to 30 °C.",
+    "fullText": "Use solubility curves to determine which saturated solution yields the greatest percent recovery when cooled from 90 °C to 30 °C.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 758,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-42-760",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 42,
+    "pages": [
+      760
+    ],
+    "sourcePagesOriginal": [
+      760
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Given K = 2.0 × 10^5 for a reaction, calculate the equilibrium constant for the reverse reaction at the same temperature.",
+    "fullText": "Given K = 2.0 × 10^5 for a reaction, calculate the equilibrium constant for the reverse reaction at the same temperature.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 760,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-49-761",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 49,
+    "pages": [
+      761
+    ],
+    "sourcePagesOriginal": [
+      761
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Balance the redox equation Cr2O7^2− + H2S + H+ → Cr3+ + S + H2O and identify the coefficient for H+.",
+    "fullText": "Balance the redox equation Cr2O7^2− + H2S + H+ → Cr3+ + S + H2O and identify the coefficient for H+.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 761,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-51-762",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 51,
+    "pages": [
+      762
+    ],
+    "sourcePagesOriginal": [
+      762
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Evaluate oxidation/reduction statements for a reaction of copper with nitric acid.",
+    "fullText": "Evaluate oxidation/reduction statements for a reaction of copper with nitric acid.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 762,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-55-762",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 55,
+    "pages": [
+      762
+    ],
+    "sourcePagesOriginal": [
+      762
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Use a table of reactant remaining over time to determine reaction order and half-life.",
+    "fullText": "Use a table of reactant remaining over time to determine reaction order and half-life.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 762,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-57-763",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 57,
+    "pages": [
+      763
+    ],
+    "sourcePagesOriginal": [
+      763
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "For Rate = k[M][N]^2, determine the factor change in rate when both reactant concentrations double.",
+    "fullText": "For Rate = k[M][N]^2, determine the factor change in rate when both reactant concentrations double.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 763,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-58-763",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 58,
+    "pages": [
+      763
+    ],
+    "sourcePagesOriginal": [
+      763
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "For 2 N2H4(g) + N2O4(g) → 3 N2(g) + 4 H2O(g), calculate maximum H2O from given reactant masses.",
+    "fullText": "For 2 N2H4(g) + N2O4(g) → 3 N2(g) + 4 H2O(g), calculate maximum H2O from given reactant masses.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 763,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-60-763",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 60,
+    "pages": [
+      763
+    ],
+    "sourcePagesOriginal": [
+      763
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Use the balanced redox equation between permanganate and chlorite to calculate the moles of chlorite needed for a specified KMnO4 sample.",
+    "fullText": "Use the balanced redox equation between permanganate and chlorite to calculate the moles of chlorite needed for a specified KMnO4 sample.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 763,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-68-765",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 68,
+    "pages": [
+      765
+    ],
+    "sourcePagesOriginal": [
+      765
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "Interpret the cooling curve for naphthalene to identify the section at its melting point.",
+    "fullText": "Interpret the cooling curve for naphthalene to identify the section at its melting point.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 765,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2002-73-766",
+    "type": "MCQ",
+    "year": "2002",
+    "exam": "2002 AP Chemistry MCQ Version A",
+    "number": 73,
+    "pages": [
+      766
+    ],
+    "sourcePagesOriginal": [
+      766
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": false,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question identified on source page; awaiting topic assignment.",
+    "textPreview": "At the normal melting point, determine the thermodynamic relationship among ΔS, ΔH, ΔG, and T.",
+    "fullText": "At the normal melting point, determine the thermodynamic relationship among ΔS, ΔH, ΔG, and T.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 766,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2012-4-1389",
+    "type": "FRQ",
+    "year": "2012",
+    "exam": "2012 AP Chemistry FRQ",
+    "number": 4,
+    "pages": [
+      1389,
+      1390
+    ],
+    "sourcePagesOriginal": [
+      1389,
+      1390
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": true,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question 4 was missing from the extracted catalog; added from the printed FRQ pages.",
+    "textPreview": "For three reaction pairs, write balanced net ionic equations, explain the acid–base titration equivalence-point pH, identify the species reduced, and determine excess reactant in a precipitation reaction.",
+    "fullText": "2012 AP Chemistry FRQ 4. For each of three reactions, write a balanced equation and answer a related question. (a) Ethanoic acid and lithium hydroxide: write the balanced equation and explain whether the equivalence-point pH is 7, less than 7, or greater than 7. (b) Iron(III) chloride and tin(II) chloride: write the balanced equation and identify the species reduced. (c) Silver(I) nitrate and sodium phosphate form a precipitate: write the balanced equation and determine which reactant is in excess for 5 mol silver nitrate and 3 mol sodium phosphate.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 1389,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      },
+      {
+        "page": 1390,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2013-4-997",
+    "type": "FRQ",
+    "year": "2013",
+    "exam": "2013 AP Chemistry FRQ",
+    "number": 4,
+    "pages": [
+      997,
+      998
+    ],
+    "sourcePagesOriginal": [
+      997,
+      998
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": true,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question 4 was missing from extracted catalog; restored from printed FRQ pages.",
+    "textPreview": "Question 4 asks for balanced equations and explanations for Mg combustion and the precipitation reaction between AgNO3 and K2S; one middle subpart was removed from the current course.",
+    "fullText": "2013 AP Chemistry FRQ 4. (a) Magnesium metal is heated in oxygen: write a balanced equation and explain whether the container contents gain, lose, or retain mass. (b) A printed subpart was removed because it did not align with the current course. (c) Silver(I) nitrate and potassium sulfide are mixed: identify the spectator ions in the reaction.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 997,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      },
+      {
+        "page": 998,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
+  },
+  {
+    "id": "mcq-2014-1-1474",
+    "type": "FRQ",
+    "year": "2014",
+    "exam": "2014 AP Chemistry FRQ",
+    "number": 1,
+    "pages": [
+      1474,
+      1475
+    ],
+    "sourcePagesOriginal": [
+      1474,
+      1475
+    ],
+    "primaryUnit": null,
+    "unitName": null,
+    "primaryTopic": null,
+    "topicName": null,
+    "secondaryTopics": [],
+    "secondaryTopicNames": [],
+    "relatedTopics": [],
+    "topicParts": [],
+    "multiConcept": true,
+    "classificationConfidence": 0,
+    "status": "review",
+    "reviewReason": "Question 1 was missing from the extracted catalog; added from printed FRQ pages.",
+    "textPreview": "Determine iodide content of a KI tablet by precipitating iodide with Pb(NO3)2, then evaluate gravimetric drying, calculate precipitate and mass percent, and compare an AgNO3 substitution using Ksp.",
+    "fullText": "2014 AP Chemistry FRQ 1. Determine iodide content in a KI tablet by dissolving the tablet and precipitating PbI2 with excess Pb(NO3)2. Parts ask for the net ionic equation, why it is appropriate, why filter paper and precipitate are dried repeatedly, compare spectator-ion concentrations, calculate moles of precipitate and mass percent iodide, predict the effect of changing dissolution volume, and assess substituting AgNO3 using Ksp and balance precision.",
+    "source": "AP Chemistry MEGA Compiled Test Bank.pdf",
+    "sourceRegions": [
+      {
+        "page": 1474,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      },
+      {
+        "page": 1475,
+        "rect": [
+          0,
+          55,
+          612,
+          737
+        ]
+      }
+    ],
+    "extractionWarnings": []
   }
 ]

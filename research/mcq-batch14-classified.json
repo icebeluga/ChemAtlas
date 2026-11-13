@@ -1,0 +1,1791 @@
+[
+  {
+    "id": "mcq-2023-1-1720",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "1.7"
+    ],
+    "rationale": "Choose the atom that forms the most ionic bond using periodic properties.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-2-1720",
+    "primaryTopic": "5.4",
+    "relatedTopics": [
+      "5.4",
+      "5.2"
+    ],
+    "rationale": "Use an elementary reaction to determine its rate law.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-3-1720",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2"
+    ],
+    "rationale": "Calculate pH from a strong-base concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-4-1720",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.8"
+    ],
+    "rationale": "Identify a ground-state electron configuration.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-5-1720",
+    "primaryTopic": "6.3",
+    "relatedTopics": [
+      "6.3",
+      "6.5"
+    ],
+    "rationale": "Use heat transfer and phase-change energy for ice warming/melting.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-6-1720",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Use amount and solution data to prepare or characterize a solution.",
+    "status": "classified",
+    "evidencePages": [
+      1720
+    ]
+  },
+  {
+    "id": "mcq-2023-7-1721",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.2"
+    ],
+    "rationale": "Interpret acid-base titration behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-8-1721",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4",
+      "2.1"
+    ],
+    "rationale": "Explain metallic bonding and metal properties.",
+    "status": "classified",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-9-1721",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1"
+    ],
+    "rationale": "Radioactive decay/half-life is outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-10-1721",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.7"
+    ],
+    "rationale": "Prepare a buffer with a target pH.",
+    "status": "classified",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-11-1721",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.1"
+    ],
+    "rationale": "Explain why hydrogen gas behaves closer to ideal than strongly interacting gases.",
+    "status": "classified",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-12-1721",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain ionization-energy trends down a group.",
+    "status": "classified",
+    "evidencePages": [
+      1721
+    ]
+  },
+  {
+    "id": "mcq-2023-13-1722",
+    "primaryTopic": "6.3",
+    "relatedTopics": [
+      "6.3",
+      "6.4"
+    ],
+    "rationale": "Compare final temperatures using heat capacity and thermal equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1722
+    ]
+  },
+  {
+    "id": "mcq-2023-14-1722",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.1"
+    ],
+    "rationale": "Use an experimental rate law to predict rate changes.",
+    "status": "classified",
+    "evidencePages": [
+      1722
+    ]
+  },
+  {
+    "id": "mcq-2023-15-1722",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "2.6"
+    ],
+    "rationale": "Complete a Lewis diagram and analyze bonding.",
+    "status": "classified",
+    "evidencePages": [
+      1722
+    ]
+  },
+  {
+    "id": "mcq-2023-16-1722",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate equilibrium composition for the H2/I2/HI system.",
+    "status": "classified",
+    "evidencePages": [
+      1722
+    ]
+  },
+  {
+    "id": "mcq-2023-17-1723",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Infer valence-shell electrons from successive ionization energies.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-18-1723",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.5"
+    ],
+    "rationale": "Explain relative boiling points using molecular structure and intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-19-1723",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Relate enthalpy and entropy signs to temperature-dependent favorability.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-20-1723",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Use electrical conductivity to compare weak-acid ionization.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-21-1723",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "4.5"
+    ],
+    "rationale": "Determine empirical/molecular composition from combustion data.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-22-1723",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1",
+      "9.2"
+    ],
+    "rationale": "Identify a process with negative entropy change.",
+    "status": "classified",
+    "evidencePages": [
+      1723
+    ]
+  },
+  {
+    "id": "mcq-2023-23-1724",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2",
+      "1.5"
+    ],
+    "rationale": "Use mass-spectrum isotopes to identify neutron count.",
+    "status": "classified",
+    "evidencePages": [
+      1724
+    ]
+  },
+  {
+    "id": "mcq-2023-24-1724",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict a Le Châtelier shift in a gas equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1724
+    ]
+  },
+  {
+    "id": "mcq-2023-25-1724",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2",
+      "5.1"
+    ],
+    "rationale": "Predict a reaction-rate change from a concentration change.",
+    "status": "classified",
+    "evidencePages": [
+      1724
+    ]
+  },
+  {
+    "id": "mcq-2023-26-1725",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.8"
+    ],
+    "rationale": "Identify the dominant ion in a saturated-solution filtrate.",
+    "status": "classified",
+    "evidencePages": [
+      1725
+    ]
+  },
+  {
+    "id": "mcq-2023-27-1725",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.5"
+    ],
+    "rationale": "Use experimental precipitation data to determine an ion concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1725
+    ]
+  },
+  {
+    "id": "mcq-2023-28-1725",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Compare salt solubilities using Ksp values.",
+    "status": "classified",
+    "evidencePages": [
+      1725
+    ]
+  },
+  {
+    "id": "mcq-2023-29-1726",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "1.1"
+    ],
+    "rationale": "Compare gas densities using molar mass and gas-law conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1726
+    ]
+  },
+  {
+    "id": "mcq-2023-30-1726",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare average kinetic energies at equal temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1726
+    ]
+  },
+  {
+    "id": "mcq-2023-31-1726",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use gas-law data to calculate amount of gas.",
+    "status": "classified",
+    "evidencePages": [
+      1726
+    ]
+  },
+  {
+    "id": "mcq-2023-32-1727",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify oxidation and reduction in a chemical reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1727
+    ]
+  },
+  {
+    "id": "mcq-2023-33-1727",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "Explain a catalyst’s effect on a reaction pathway.",
+    "status": "classified",
+    "evidencePages": [
+      1727
+    ]
+  },
+  {
+    "id": "mcq-2023-34-1728",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.1"
+    ],
+    "rationale": "Compare solubility in ethanol using molecular polarity and intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1728
+    ]
+  },
+  {
+    "id": "mcq-2023-35-1728",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5"
+    ],
+    "rationale": "Identify hybridization from molecular structure.",
+    "status": "classified",
+    "evidencePages": [
+      1728
+    ]
+  },
+  {
+    "id": "mcq-2023-36-1728",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.6"
+    ],
+    "rationale": "Use standard heats of formation to calculate reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1728
+    ]
+  },
+  {
+    "id": "mcq-2023-37-1729",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "3.4"
+    ],
+    "rationale": "Predict pressure changes as a gas reaction proceeds.",
+    "status": "classified",
+    "evidencePages": [
+      1729
+    ]
+  },
+  {
+    "id": "mcq-2023-38-1729",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Calculate reaction enthalpy from bond energies.",
+    "status": "classified",
+    "evidencePages": [
+      1729
+    ]
+  },
+  {
+    "id": "mcq-2023-39-1730",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.8",
+      "4.3"
+    ],
+    "rationale": "Interpret particle representations before and after gases react.",
+    "status": "classified",
+    "evidencePages": [
+      1730
+    ]
+  },
+  {
+    "id": "mcq-2023-40-1730",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "2.5"
+    ],
+    "rationale": "Compare internuclear distances from molecular bond order/size.",
+    "status": "classified",
+    "evidencePages": [
+      1730
+    ]
+  },
+  {
+    "id": "mcq-2023-41-1731",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict how equilibrium responds to a change in conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1731
+    ]
+  },
+  {
+    "id": "mcq-2023-42-1731",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.5"
+    ],
+    "rationale": "Compare bond polarity from electronegativity differences.",
+    "status": "classified",
+    "evidencePages": [
+      1731
+    ]
+  },
+  {
+    "id": "mcq-2023-43-1731",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Interpret an acid titration curve and its equivalence region.",
+    "status": "classified",
+    "evidencePages": [
+      1731
+    ]
+  },
+  {
+    "id": "mcq-2023-44-1732",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "9.9"
+    ],
+    "rationale": "Analyze a galvanic cell using standard reduction potentials.",
+    "status": "classified",
+    "evidencePages": [
+      1732
+    ]
+  },
+  {
+    "id": "mcq-2023-45-1732",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "7.3"
+    ],
+    "rationale": "Evaluate thermodynamic favorability of a gas reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1732
+    ]
+  },
+  {
+    "id": "mcq-2023-46-1732",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Compare conjugate acid-base strength using equilibrium reactions.",
+    "status": "classified",
+    "evidencePages": [
+      1732
+    ]
+  },
+  {
+    "id": "mcq-2023-47-1733",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6",
+      "5.11"
+    ],
+    "rationale": "Interpret a reaction energy profile and activation energy.",
+    "status": "classified",
+    "evidencePages": [
+      1733
+    ]
+  },
+  {
+    "id": "mcq-2023-48-1733",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "6.4"
+    ],
+    "rationale": "Compare heat released per gram using reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1733
+    ]
+  },
+  {
+    "id": "mcq-2023-49-1734",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.8"
+    ],
+    "rationale": "Use Hess’s law/formation data to determine reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1734
+    ]
+  },
+  {
+    "id": "mcq-2023-50-1734",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.5"
+    ],
+    "rationale": "Compare intermolecular forces and boiling points from structures.",
+    "status": "classified",
+    "evidencePages": [
+      1734
+    ]
+  },
+  {
+    "id": "mcq-2023-51-1735",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "1.1"
+    ],
+    "rationale": "Prepare a solution at a target molarity and volume.",
+    "status": "classified",
+    "evidencePages": [
+      1735
+    ]
+  },
+  {
+    "id": "mcq-2023-52-1735",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.8",
+      "5.7"
+    ],
+    "rationale": "Compare proposed mechanisms and their rate-law predictions.",
+    "status": "classified",
+    "evidencePages": [
+      1735
+    ]
+  },
+  {
+    "id": "mcq-2023-53-1736",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.6",
+      "1.5"
+    ],
+    "rationale": "Interpret photoelectron spectra to identify element and orbital.",
+    "status": "classified",
+    "evidencePages": [
+      1736
+    ]
+  },
+  {
+    "id": "mcq-2023-54-1736",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.3"
+    ],
+    "rationale": "Select a weak-acid/conjugate-base mixture to make a buffer.",
+    "status": "classified",
+    "evidencePages": [
+      1736
+    ]
+  },
+  {
+    "id": "mcq-2023-55-1737",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "6.7"
+    ],
+    "rationale": "Compare bond-energy curves and internuclear distance.",
+    "status": "classified",
+    "evidencePages": [
+      1737
+    ]
+  },
+  {
+    "id": "mcq-2023-56-1738",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "5.2"
+    ],
+    "rationale": "Use concentration-versus-time data to determine reaction order.",
+    "status": "classified",
+    "evidencePages": [
+      1738
+    ]
+  },
+  {
+    "id": "mcq-2023-57-1738",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.3"
+    ],
+    "rationale": "Analyze composition of an established chemical equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1738
+    ]
+  },
+  {
+    "id": "mcq-2023-58-1739",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "9.9"
+    ],
+    "rationale": "Predict galvanic-cell behavior from measured and standard potentials.",
+    "status": "classified",
+    "evidencePages": [
+      1739
+    ]
+  },
+  {
+    "id": "mcq-2023-59-1740",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.10"
+    ],
+    "rationale": "Interpret an AgCl saturation/equilibrium representation.",
+    "status": "classified",
+    "evidencePages": [
+      1740
+    ]
+  },
+  {
+    "id": "mcq-2023-60-1741",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.7"
+    ],
+    "rationale": "Analyze a weak-acid/strong-base titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1741
+    ]
+  },
+  {
+    "id": "mcq-2023-1-1756",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "1.7"
+    ],
+    "rationale": "Choose the atom that forms the most ionic bond using periodic properties.",
+    "status": "classified",
+    "evidencePages": [
+      1756
+    ]
+  },
+  {
+    "id": "mcq-2023-4-1756",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.8"
+    ],
+    "rationale": "Identify a ground-state electron configuration.",
+    "status": "classified",
+    "evidencePages": [
+      1756
+    ]
+  },
+  {
+    "id": "mcq-2023-10-1757",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.7"
+    ],
+    "rationale": "Prepare a buffer with a target pH.",
+    "status": "classified",
+    "evidencePages": [
+      1757
+    ]
+  },
+  {
+    "id": "mcq-2023-11-1758",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.1"
+    ],
+    "rationale": "Explain why hydrogen gas behaves closer to ideal than strongly interacting gases.",
+    "status": "classified",
+    "evidencePages": [
+      1758
+    ]
+  },
+  {
+    "id": "mcq-2023-12-1758",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain ionization-energy trends down a group.",
+    "status": "classified",
+    "evidencePages": [
+      1758
+    ]
+  },
+  {
+    "id": "mcq-2023-19-1760",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Relate enthalpy and entropy signs to temperature-dependent favorability.",
+    "status": "classified",
+    "evidencePages": [
+      1760
+    ]
+  },
+  {
+    "id": "mcq-2023-21-1761",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3",
+      "4.5"
+    ],
+    "rationale": "Determine empirical/molecular composition from combustion data.",
+    "status": "classified",
+    "evidencePages": [
+      1761
+    ]
+  },
+  {
+    "id": "mcq-2023-22-1761",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1",
+      "9.2"
+    ],
+    "rationale": "Identify a process with negative entropy change.",
+    "status": "classified",
+    "evidencePages": [
+      1761
+    ]
+  },
+  {
+    "id": "mcq-2023-26-1763",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.8"
+    ],
+    "rationale": "Identify the dominant ion in a saturated-solution filtrate.",
+    "status": "classified",
+    "evidencePages": [
+      1763
+    ]
+  },
+  {
+    "id": "mcq-2023-27-1763",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "4.5"
+    ],
+    "rationale": "Use experimental precipitation data to determine an ion concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1763
+    ]
+  },
+  {
+    "id": "mcq-2023-29-1764",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "1.1"
+    ],
+    "rationale": "Compare gas densities using molar mass and gas-law conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1764
+    ]
+  },
+  {
+    "id": "mcq-2023-30-1764",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare average kinetic energies at equal temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1764
+    ]
+  },
+  {
+    "id": "mcq-2023-31-1764",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use gas-law data to calculate amount of gas.",
+    "status": "classified",
+    "evidencePages": [
+      1764
+    ]
+  },
+  {
+    "id": "mcq-2023-32-1765",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify oxidation and reduction in a chemical reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1765
+    ]
+  },
+  {
+    "id": "mcq-2023-33-1765",
+    "primaryTopic": "5.11",
+    "relatedTopics": [
+      "5.11",
+      "5.6"
+    ],
+    "rationale": "Explain a catalyst’s effect on a reaction pathway.",
+    "status": "classified",
+    "evidencePages": [
+      1765
+    ]
+  },
+  {
+    "id": "mcq-2023-34-1765",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.1"
+    ],
+    "rationale": "Compare solubility in ethanol using molecular polarity and intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1765
+    ]
+  },
+  {
+    "id": "mcq-2023-35-1766",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5"
+    ],
+    "rationale": "Identify hybridization from molecular structure.",
+    "status": "classified",
+    "evidencePages": [
+      1766
+    ]
+  },
+  {
+    "id": "mcq-2023-37-1766",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "3.4"
+    ],
+    "rationale": "Predict pressure changes as a gas reaction proceeds.",
+    "status": "classified",
+    "evidencePages": [
+      1766
+    ]
+  },
+  {
+    "id": "mcq-2023-40-1768",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "2.5"
+    ],
+    "rationale": "Compare internuclear distances from molecular bond order/size.",
+    "status": "classified",
+    "evidencePages": [
+      1768
+    ]
+  },
+  {
+    "id": "mcq-2023-48-1771",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "6.4"
+    ],
+    "rationale": "Compare heat released per gram using reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1771
+    ]
+  },
+  {
+    "id": "mcq-2023-1-1812",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2",
+      "1.5"
+    ],
+    "rationale": "Interpret isotope peaks in a mass spectrum.",
+    "status": "classified",
+    "evidencePages": [
+      1812
+    ]
+  },
+  {
+    "id": "mcq-2023-2-1812",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.4"
+    ],
+    "rationale": "Select the gas that most closely follows ideal behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1812
+    ]
+  },
+  {
+    "id": "mcq-2023-3-1812",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.3"
+    ],
+    "rationale": "Relate halogen physical states to intermolecular attractions.",
+    "status": "classified",
+    "evidencePages": [
+      1812
+    ]
+  },
+  {
+    "id": "mcq-2023-4-1812",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "1.7"
+    ],
+    "rationale": "Rank bonds by polarity using electronegativity.",
+    "status": "classified",
+    "evidencePages": [
+      1812
+    ]
+  },
+  {
+    "id": "mcq-2023-5-1813",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "4.5"
+    ],
+    "rationale": "Use a colored complex and absorbance to determine iron concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1813
+    ]
+  },
+  {
+    "id": "mcq-2023-6-1814",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Explain a periodic trend in first ionization energy.",
+    "status": "classified",
+    "evidencePages": [
+      1814
+    ]
+  },
+  {
+    "id": "mcq-2023-7-1814",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5"
+    ],
+    "rationale": "Identify carbon hybridization before and after a reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1814
+    ]
+  },
+  {
+    "id": "mcq-2023-8-1815",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3",
+      "9.11"
+    ],
+    "rationale": "Explain electrical conductivity of ionic solids versus melts.",
+    "status": "classified",
+    "evidencePages": [
+      1815
+    ]
+  },
+  {
+    "id": "mcq-2023-9-1816",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.3"
+    ],
+    "rationale": "Use particle diagrams and stoichiometry for a gas-forming reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1816
+    ]
+  },
+  {
+    "id": "mcq-2023-10-1817",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1",
+      "4.7"
+    ],
+    "rationale": "Classify the reaction using acid-base concepts.",
+    "status": "classified",
+    "evidencePages": [
+      1817
+    ]
+  },
+  {
+    "id": "mcq-2023-11-1817",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "3.7"
+    ],
+    "rationale": "Use an absorbance calibration curve to determine amount of copper.",
+    "status": "classified",
+    "evidencePages": [
+      1817
+    ]
+  },
+  {
+    "id": "mcq-2023-12-1818",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.7"
+    ],
+    "rationale": "Use product yield in a chemical reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1818
+    ]
+  },
+  {
+    "id": "mcq-2023-13-1818",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Compare actual and theoretical product yield.",
+    "status": "classified",
+    "evidencePages": [
+      1818
+    ]
+  },
+  {
+    "id": "mcq-2023-14-1819",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "2.3"
+    ],
+    "rationale": "Use physical properties to identify a crystalline solid.",
+    "status": "classified",
+    "evidencePages": [
+      1819
+    ]
+  },
+  {
+    "id": "mcq-2023-15-1819",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare boiling points using intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1819
+    ]
+  },
+  {
+    "id": "mcq-2023-16-1819",
+    "primaryTopic": "1.8",
+    "relatedTopics": [
+      "1.8",
+      "2.3"
+    ],
+    "rationale": "Use ionic lattice structure/charge to identify a solid.",
+    "status": "classified",
+    "evidencePages": [
+      1819
+    ]
+  },
+  {
+    "id": "mcq-2023-17-1819",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Calculate an empirical formula from elemental mass percent.",
+    "status": "classified",
+    "evidencePages": [
+      1819
+    ]
+  },
+  {
+    "id": "mcq-2023-18-1819",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Use partial pressures for a mixture of gases.",
+    "status": "classified",
+    "evidencePages": [
+      1819
+    ]
+  },
+  {
+    "id": "mcq-2023-19-1820",
+    "primaryTopic": "1.6",
+    "relatedTopics": [
+      "1.6",
+      "1.5"
+    ],
+    "rationale": "Interpret photoelectron spectra to compare elements.",
+    "status": "classified",
+    "evidencePages": [
+      1820
+    ]
+  },
+  {
+    "id": "mcq-2023-20-1821",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.5"
+    ],
+    "rationale": "Compare boiling points from molecular structure and intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1821
+    ]
+  },
+  {
+    "id": "mcq-2023-21-1822",
+    "primaryTopic": "3.10",
+    "relatedTopics": [
+      "3.10",
+      "3.1"
+    ],
+    "rationale": "Explain relative solubility using polarity and intermolecular forces.",
+    "status": "classified",
+    "evidencePages": [
+      1822
+    ]
+  },
+  {
+    "id": "mcq-2023-22-1822",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate equilibrium partial pressure for N2O4/NO2.",
+    "status": "classified",
+    "evidencePages": [
+      1822
+    ]
+  },
+  {
+    "id": "mcq-2023-23-1822",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.1"
+    ],
+    "rationale": "Explain color change as an equilibrium system responds to temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1822
+    ]
+  },
+  {
+    "id": "mcq-2023-24-1822",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict effect of inert-gas addition at constant volume.",
+    "status": "classified",
+    "evidencePages": [
+      1822
+    ]
+  },
+  {
+    "id": "mcq-2023-25-1822",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "9.3"
+    ],
+    "rationale": "Determine sign of enthalpy from bond/energy evidence.",
+    "status": "classified",
+    "evidencePages": [
+      1822
+    ]
+  },
+  {
+    "id": "mcq-2023-26-1823",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict effect of volume change on gaseous equilibria.",
+    "status": "classified",
+    "evidencePages": [
+      1823
+    ]
+  },
+  {
+    "id": "mcq-2023-27-1824",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4",
+      "3.2"
+    ],
+    "rationale": "Compare properties of iron-carbon alloys.",
+    "status": "classified",
+    "evidencePages": [
+      1824
+    ]
+  },
+  {
+    "id": "mcq-2023-28-1825",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.8",
+      "5.7"
+    ],
+    "rationale": "Analyze an elementary mechanism and rate law.",
+    "status": "classified",
+    "evidencePages": [
+      1825
+    ]
+  },
+  {
+    "id": "mcq-2023-29-1826",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6",
+      "5.5"
+    ],
+    "rationale": "Explain how concentration affects reaction rate/activation barrier.",
+    "status": "classified",
+    "evidencePages": [
+      1826
+    ]
+  },
+  {
+    "id": "mcq-2023-30-1827",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "8.1"
+    ],
+    "rationale": "Use Lewis acid-base bonding to predict the NH3-BF3 adduct structure.",
+    "status": "classified",
+    "evidencePages": [
+      1827
+    ]
+  },
+  {
+    "id": "mcq-2023-31-1827",
+    "primaryTopic": "9.9",
+    "relatedTopics": [
+      "9.9",
+      "9.8"
+    ],
+    "rationale": "Relate cell potential to Gibbs free-energy change.",
+    "status": "classified",
+    "evidencePages": [
+      1827
+    ]
+  },
+  {
+    "id": "mcq-2023-32-1828",
+    "primaryTopic": "5.6",
+    "relatedTopics": [
+      "5.6",
+      "9.3"
+    ],
+    "rationale": "Interpret an energy profile for ozone decomposition.",
+    "status": "classified",
+    "evidencePages": [
+      1828
+    ]
+  },
+  {
+    "id": "mcq-2023-33-1829",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict a chromate-dichromate equilibrium shift.",
+    "status": "classified",
+    "evidencePages": [
+      1829
+    ]
+  },
+  {
+    "id": "mcq-2023-34-1830",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "3.7"
+    ],
+    "rationale": "Analyze enthalpy/entropy of ionic dissolution.",
+    "status": "classified",
+    "evidencePages": [
+      1830
+    ]
+  },
+  {
+    "id": "mcq-2023-35-1831",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "4.5"
+    ],
+    "rationale": "Analyze peroxide redox titration stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1831
+    ]
+  },
+  {
+    "id": "mcq-2023-36-1832",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.5"
+    ],
+    "rationale": "Determine temperature conditions for thermodynamic favorability.",
+    "status": "classified",
+    "evidencePages": [
+      1832
+    ]
+  },
+  {
+    "id": "mcq-2023-37-1832",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Use bond energies to estimate reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1832
+    ]
+  },
+  {
+    "id": "mcq-2023-38-1832",
+    "primaryTopic": "9.5",
+    "relatedTopics": [
+      "9.5",
+      "9.3"
+    ],
+    "rationale": "Relate thermodynamic data to equilibrium constant.",
+    "status": "classified",
+    "evidencePages": [
+      1832
+    ]
+  },
+  {
+    "id": "mcq-2023-39-1832",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.10"
+    ],
+    "rationale": "Compare saturated solutions using solubility equilibria.",
+    "status": "classified",
+    "evidencePages": [
+      1832
+    ]
+  },
+  {
+    "id": "mcq-2023-40-1833",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.1"
+    ],
+    "rationale": "Use calorimetry to determine heat absorbed/dissolved.",
+    "status": "classified",
+    "evidencePages": [
+      1833
+    ]
+  },
+  {
+    "id": "mcq-2023-41-1833",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.9"
+    ],
+    "rationale": "Calculate equilibrium concentrations for ozone/oxygen.",
+    "status": "classified",
+    "evidencePages": [
+      1833
+    ]
+  },
+  {
+    "id": "mcq-2023-42-1834",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Identify the slowest elementary step from reaction kinetics.",
+    "status": "classified",
+    "evidencePages": [
+      1834
+    ]
+  },
+  {
+    "id": "mcq-2023-43-1834",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.6"
+    ],
+    "rationale": "Calculate enthalpy per mole from thermochemical information.",
+    "status": "classified",
+    "evidencePages": [
+      1834
+    ]
+  },
+  {
+    "id": "mcq-2023-44-1835",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "1.7"
+    ],
+    "rationale": "Use periodic properties to compare halogen compounds.",
+    "status": "classified",
+    "evidencePages": [
+      1835
+    ]
+  },
+  {
+    "id": "mcq-2023-45-1836",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.11"
+    ],
+    "rationale": "Combine equilibrium constants for linked dissolution equilibria.",
+    "status": "classified",
+    "evidencePages": [
+      1836
+    ]
+  },
+  {
+    "id": "mcq-2023-46-1837",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Compare relative acid and conjugate-base strengths.",
+    "status": "classified",
+    "evidencePages": [
+      1837
+    ]
+  },
+  {
+    "id": "mcq-2023-47-1837",
+    "primaryTopic": "7.12",
+    "relatedTopics": [
+      "7.12",
+      "7.11"
+    ],
+    "rationale": "Analyze complex-ion formation and its effect on silver-ion equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1837
+    ]
+  },
+  {
+    "id": "mcq-2023-48-1838",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "4.5"
+    ],
+    "rationale": "Classify hydrogen-oxygen synthesis reaction and stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1838
+    ]
+  },
+  {
+    "id": "mcq-2023-49-1838",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.8"
+    ],
+    "rationale": "Explain pH behavior of a weak-acid/conjugate-base buffer.",
+    "status": "classified",
+    "evidencePages": [
+      1838
+    ]
+  },
+  {
+    "id": "mcq-2023-50-1838",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "6.6"
+    ],
+    "rationale": "Classify an exothermic process by its energy transfer.",
+    "status": "classified",
+    "evidencePages": [
+      1838
+    ]
+  },
+  {
+    "id": "mcq-2023-2-1745",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "3.5",
+      "4.5"
+    ],
+    "rationale": "Determine molar mass of butane from a gas-collection experiment.",
+    "status": "classified",
+    "evidencePages": [
+      1745
+    ]
+  },
+  {
+    "id": "mcq-2023-3-1747",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5",
+      "2.6",
+      "4.5"
+    ],
+    "rationale": "Draw Lewis structures and analyze bonding in N2O5 and related species.",
+    "status": "classified",
+    "evidencePages": [
+      1747
+    ]
+  },
+  {
+    "id": "mcq-2023-4-1749",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.7",
+      "2.1"
+    ],
+    "rationale": "Use electron configurations and atomic/bonding concepts.",
+    "status": "classified",
+    "evidencePages": [
+      1749
+    ]
+  },
+  {
+    "id": "mcq-2023-5-1750",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.7",
+      "4.5"
+    ],
+    "rationale": "Determine Ksp from a saturated-solution preparation and analysis.",
+    "status": "classified",
+    "evidencePages": [
+      1750
+    ]
+  },
+  {
+    "id": "mcq-2023-7-1753",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "3.7",
+      "4.5"
+    ],
+    "rationale": "Prepare a calibration curve and use Beer-Lambert law in a spectrophotometry investigation.",
+    "status": "classified",
+    "evidencePages": [
+      1753
+    ]
+  },
+  {
+    "id": "mcq-2023-61-1783",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "3.5",
+      "4.5"
+    ],
+    "rationale": "Analyze gas properties and determine molar mass from collected-gas data.",
+    "status": "classified",
+    "evidencePages": [
+      1783
+    ]
+  },
+  {
+    "id": "mcq-2023-66-1804",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3",
+      "4.5"
+    ],
+    "rationale": "Analyze acid-base titration data and calculate unknown concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1804
+    ]
+  },
+  {
+    "id": "mcq-2023-67-1808",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.13",
+      "4.5"
+    ],
+    "rationale": "Determine solubility-product information from experimental data.",
+    "status": "classified",
+    "evidencePages": [
+      1808
+    ]
+  }
+]

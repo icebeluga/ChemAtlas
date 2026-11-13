@@ -1,0 +1,641 @@
+[
+  {
+    "id": "mcq-2015-1-1536",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Compare gas pressure in rigid containers using the ideal gas law.",
+    "status": "classified",
+    "evidencePages": [
+      1536
+    ]
+  },
+  {
+    "id": "mcq-2015-2-1536",
+    "primaryTopic": "2.3",
+    "relatedTopics": [
+      "2.3"
+    ],
+    "rationale": "Relate ionic lattice energy to ionic charges and distances.",
+    "status": "classified",
+    "evidencePages": [
+      1536
+    ]
+  },
+  {
+    "id": "mcq-2015-3-1537",
+    "primaryTopic": "1.2",
+    "relatedTopics": [
+      "1.2"
+    ],
+    "rationale": "Interpret an elemental mass spectrum and isotope abundance.",
+    "status": "classified",
+    "evidencePages": [
+      1537
+    ]
+  },
+  {
+    "id": "mcq-2015-4-1537",
+    "primaryTopic": "2.4",
+    "relatedTopics": [
+      "2.4"
+    ],
+    "rationale": "Interpret a particle model of an alloy.",
+    "status": "classified",
+    "evidencePages": [
+      1537
+    ]
+  },
+  {
+    "id": "mcq-2015-5-1538",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "2.2"
+    ],
+    "rationale": "Identify the strongest particle interaction between the molecular regions shown.",
+    "status": "classified",
+    "evidencePages": [
+      1538
+    ]
+  },
+  {
+    "id": "mcq-2015-6-1538",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Use calorimetry to calculate the final temperature after heat transfer.",
+    "status": "classified",
+    "evidencePages": [
+      1538
+    ]
+  },
+  {
+    "id": "mcq-2015-7-1539",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "3.4"
+    ],
+    "rationale": "Identify a reaction that explains a gas-pressure change at elevated temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1539
+    ]
+  },
+  {
+    "id": "mcq-2015-8-1540",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3",
+      "3.4"
+    ],
+    "rationale": "Explain mass changes as iodine undergoes a phase change in a vessel.",
+    "status": "classified",
+    "evidencePages": [
+      1540
+    ]
+  },
+  {
+    "id": "mcq-2015-9-1540",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5",
+      "3.4"
+    ],
+    "rationale": "Interpret a particle diagram to compare gas mixtures and their pressure behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1540
+    ]
+  },
+  {
+    "id": "mcq-2015-10-1541",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.9"
+    ],
+    "rationale": "Analyze an acetate buffer after adding strong acid/base.",
+    "status": "classified",
+    "evidencePages": [
+      1541
+    ]
+  },
+  {
+    "id": "mcq-2015-11-1541",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1"
+    ],
+    "rationale": "Compare boiling points of straight-chain hydrocarbons using London dispersion forces.",
+    "status": "classified",
+    "evidencePages": [
+      1541
+    ]
+  },
+  {
+    "id": "mcq-2015-12-1541",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7",
+      "1.5"
+    ],
+    "rationale": "Use successive ionization energies to infer valence-electron structure.",
+    "status": "classified",
+    "evidencePages": [
+      1541
+    ]
+  },
+  {
+    "id": "mcq-2015-13-1541",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "7.11"
+    ],
+    "rationale": "Analyze exothermic dissolution of Mg(OH)2 and its solubility equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1541
+    ]
+  },
+  {
+    "id": "mcq-2015-14-1542",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "3.3"
+    ],
+    "rationale": "Interpret heating-curve data for ethanol and its phase changes.",
+    "status": "classified",
+    "evidencePages": [
+      1542
+    ]
+  },
+  {
+    "id": "mcq-2015-15-1542",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.9"
+    ],
+    "rationale": "Identify the dominant acid/base species in a phosphate buffer using pH and pKa.",
+    "status": "classified",
+    "evidencePages": [
+      1542
+    ]
+  },
+  {
+    "id": "mcq-2015-16-1543",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.3"
+    ],
+    "rationale": "Analyze initial and equilibrium gas amounts for a decomposition reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1543
+    ]
+  },
+  {
+    "id": "mcq-2015-17-1543",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Predict how experimental conditions affect reaction rate.",
+    "status": "classified",
+    "evidencePages": [
+      1543
+    ]
+  },
+  {
+    "id": "mcq-2015-18-1543",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "4.7"
+    ],
+    "rationale": "Compare product gas amounts from equal masses of different alkali metals reacting with water.",
+    "status": "classified",
+    "evidencePages": [
+      1543
+    ]
+  },
+  {
+    "id": "mcq-2015-19-1544",
+    "primaryTopic": "8.7",
+    "relatedTopics": [
+      "8.7",
+      "8.5"
+    ],
+    "rationale": "Infer pKa from a weak-acid titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1544
+    ]
+  },
+  {
+    "id": "mcq-2015-20-1544",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7"
+    ],
+    "rationale": "Choose the balanced net ionic equation for lithium reacting with water.",
+    "status": "classified",
+    "evidencePages": [
+      1544
+    ]
+  },
+  {
+    "id": "mcq-2015-21-1545",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "3.1"
+    ],
+    "rationale": "Apply heat transfer to compare the thermal properties of benzene and water.",
+    "status": "classified",
+    "evidencePages": [
+      1545
+    ]
+  },
+  {
+    "id": "mcq-2015-22-1545",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.3"
+    ],
+    "rationale": "Compare titration equivalence-point pH for acids with different strengths.",
+    "status": "classified",
+    "evidencePages": [
+      1545
+    ]
+  },
+  {
+    "id": "mcq-2015-23-1545",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.6"
+    ],
+    "rationale": "Calculate heat absorbed in calorimetry and compare energy released by food combustion.",
+    "status": "classified",
+    "evidencePages": [
+      1545
+    ]
+  },
+  {
+    "id": "mcq-2015-24-1546",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "4.9"
+    ],
+    "rationale": "Interpret gas-particle diagrams and pressure changes in a reaction involving NO and O2.",
+    "status": "classified",
+    "evidencePages": [
+      1546
+    ]
+  },
+  {
+    "id": "mcq-2015-25-1547",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify oxidation and reduction from oxidation-number changes.",
+    "status": "classified",
+    "evidencePages": [
+      1547
+    ]
+  },
+  {
+    "id": "mcq-2015-26-1547",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "3.4"
+    ],
+    "rationale": "Analyze hydrogen-peroxide decomposition data and gas collected over water.",
+    "status": "classified",
+    "evidencePages": [
+      1547
+    ]
+  },
+  {
+    "id": "mcq-2015-27-1547",
+    "primaryTopic": "5.3",
+    "relatedTopics": [
+      "5.3",
+      "5.2"
+    ],
+    "rationale": "Determine reaction order from integrated-rate-law graph behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1547
+    ]
+  },
+  {
+    "id": "mcq-2015-28-1547",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3",
+      "9.1"
+    ],
+    "rationale": "Infer signs of Gibbs energy and entropy change from thermodynamic information.",
+    "status": "classified",
+    "evidencePages": [
+      1547
+    ]
+  },
+  {
+    "id": "mcq-2015-29-1548",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7"
+    ],
+    "rationale": "Use bond enthalpies to calculate reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1548
+    ]
+  },
+  {
+    "id": "mcq-2015-30-1548",
+    "primaryTopic": "8.2",
+    "relatedTopics": [
+      "8.2",
+      "6.1"
+    ],
+    "rationale": "Explain temperature dependence of water pH through autoionization.",
+    "status": "classified",
+    "evidencePages": [
+      1548
+    ]
+  },
+  {
+    "id": "mcq-2015-31-1548",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1",
+      "4.5"
+    ],
+    "rationale": "Evaluate gravimetric analysis and precipitation steps for determining silver in an alloy.",
+    "status": "classified",
+    "evidencePages": [
+      1548
+    ]
+  },
+  {
+    "id": "mcq-2015-32-1548",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Determine an empirical formula from elemental composition data.",
+    "status": "classified",
+    "evidencePages": [
+      1548
+    ]
+  },
+  {
+    "id": "mcq-2015-33-1548",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "7.12"
+    ],
+    "rationale": "Predict weak-acid dissociation after adding a common ion.",
+    "status": "classified",
+    "evidencePages": [
+      1548
+    ]
+  },
+  {
+    "id": "mcq-2015-34-1549",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "7.11"
+    ],
+    "rationale": "Explain formation of Ca(OH)2 precipitate when calcium carbide reacts with water.",
+    "status": "classified",
+    "evidencePages": [
+      1549
+    ]
+  },
+  {
+    "id": "mcq-2015-35-1549",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "4.7"
+    ],
+    "rationale": "Use reaction stoichiometry to predict products from acidifying hypochlorite solution.",
+    "status": "classified",
+    "evidencePages": [
+      1549
+    ]
+  },
+  {
+    "id": "mcq-2015-36-1549",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.5"
+    ],
+    "rationale": "Determine changes in carbon hybridization from molecular structures.",
+    "status": "classified",
+    "evidencePages": [
+      1549
+    ]
+  },
+  {
+    "id": "mcq-2015-37-1550",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.3"
+    ],
+    "rationale": "Identify a buffer mixture from a weak acid and its conjugate base.",
+    "status": "classified",
+    "evidencePages": [
+      1550
+    ]
+  },
+  {
+    "id": "mcq-2015-38-1550",
+    "primaryTopic": "8.6",
+    "relatedTopics": [
+      "8.6",
+      "2.5"
+    ],
+    "rationale": "Use Lewis structures and bond polarity to compare oxyacid strength.",
+    "status": "classified",
+    "evidencePages": [
+      1550
+    ]
+  },
+  {
+    "id": "mcq-2015-39-1550",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "1.3"
+    ],
+    "rationale": "Compare combustion products from equal masses using molecular composition and stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1550
+    ]
+  },
+  {
+    "id": "mcq-2015-40-1550",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict equilibrium response to a change in conditions.",
+    "status": "classified",
+    "evidencePages": [
+      1550
+    ]
+  },
+  {
+    "id": "mcq-2015-41-1550",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "8.9"
+    ],
+    "rationale": "Choose conditions that maximize product yield in a weak-acid process using buffer principles.",
+    "status": "classified",
+    "evidencePages": [
+      1550
+    ]
+  },
+  {
+    "id": "mcq-2015-42-1551",
+    "primaryTopic": "5.8",
+    "relatedTopics": [
+      "5.8",
+      "5.2"
+    ],
+    "rationale": "Derive an overall rate law from a proposed reaction mechanism.",
+    "status": "classified",
+    "evidencePages": [
+      1551
+    ]
+  },
+  {
+    "id": "mcq-2015-43-1552",
+    "primaryTopic": "5.10",
+    "relatedTopics": [
+      "5.10",
+      "5.7"
+    ],
+    "rationale": "Compare reaction-energy profiles with the proposed mechanism.",
+    "status": "classified",
+    "evidencePages": [
+      1552
+    ]
+  },
+  {
+    "id": "mcq-2015-44-1552",
+    "primaryTopic": "5.7",
+    "relatedTopics": [
+      "5.7",
+      "5.11"
+    ],
+    "rationale": "Identify the roles of reactive intermediates and catalysts in a general mechanism.",
+    "status": "classified",
+    "evidencePages": [
+      1552
+    ]
+  },
+  {
+    "id": "mcq-2015-45-1553",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.4"
+    ],
+    "rationale": "Compare acid–base equilibria in mixtures of weak acids and their conjugate bases.",
+    "status": "classified",
+    "evidencePages": [
+      1553
+    ]
+  },
+  {
+    "id": "mcq-2015-46-1553",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate equilibrium composition from initial amounts and K.",
+    "status": "classified",
+    "evidencePages": [
+      1553
+    ]
+  },
+  {
+    "id": "mcq-2015-47-1554",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2"
+    ],
+    "rationale": "Interpret a potential-energy curve in relation to bond length and bond strength.",
+    "status": "classified",
+    "evidencePages": [
+      1554
+    ]
+  },
+  {
+    "id": "mcq-2015-48-1555",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Determine reaction order from initial-rate measurements.",
+    "status": "classified",
+    "evidencePages": [
+      1555
+    ]
+  },
+  {
+    "id": "mcq-2015-49-1555",
+    "primaryTopic": "3.9",
+    "relatedTopics": [
+      "3.9"
+    ],
+    "rationale": "Interpret paper chromatography as a separation method.",
+    "status": "classified",
+    "evidencePages": [
+      1555
+    ]
+  },
+  {
+    "id": "mcq-2015-50-1556",
+    "primaryTopic": "3.11",
+    "relatedTopics": [
+      "3.11",
+      "3.12"
+    ],
+    "rationale": "Interpret an absorption spectrum as an electronic transition between energy levels.",
+    "status": "classified",
+    "evidencePages": [
+      1556
+    ]
+  }
+]

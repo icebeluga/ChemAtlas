@@ -1,0 +1,962 @@
+[
+  {
+    "id": "mcq-2012-1-1350",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.7"
+    ],
+    "rationale": "Use molecular polarity and geometry to identify a polar molecule.",
+    "status": "classified",
+    "evidencePages": [
+      1350
+    ]
+  },
+  {
+    "id": "mcq-2012-2-1350",
+    "primaryTopic": "2.6",
+    "relatedTopics": [
+      "2.6",
+      "2.5"
+    ],
+    "rationale": "Identify a species whose electron structure requires resonance representations.",
+    "status": "classified",
+    "evidencePages": [
+      1350
+    ]
+  },
+  {
+    "id": "mcq-2012-3-1350",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2",
+      "2.1"
+    ],
+    "rationale": "Compare intramolecular bond strength across the choices.",
+    "status": "classified",
+    "evidencePages": [
+      1350
+    ]
+  },
+  {
+    "id": "mcq-2012-4-1351",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Nuclear decay processes are outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      1351
+    ],
+    "legacyConcepts": [
+      "Radioactive decay / gamma emission"
+    ],
+    "reviewReason": "Nuclear decay processes are outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-2012-5-1351",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Beta decay and nuclear transmutation are outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      1351
+    ],
+    "legacyConcepts": [
+      "Nuclear chemistry"
+    ],
+    "reviewReason": "Beta decay and nuclear transmutation are outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-2012-6-1351",
+    "primaryTopic": "8.4",
+    "relatedTopics": [
+      "8.4",
+      "4.2"
+    ],
+    "rationale": "Identify the acid–base neutralization that occurs when ammonia and vinegar are mixed.",
+    "status": "classified",
+    "evidencePages": [
+      1351
+    ]
+  },
+  {
+    "id": "mcq-2012-7-1351",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "4.7"
+    ],
+    "rationale": "Identify the redox displacement reaction between aluminum and copper(II) ions.",
+    "status": "classified",
+    "evidencePages": [
+      1351
+    ]
+  },
+  {
+    "id": "mcq-2012-8-1351",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Explain basicity of aqueous sodium acetate through conjugate-base hydrolysis.",
+    "status": "classified",
+    "evidencePages": [
+      1351
+    ]
+  },
+  {
+    "id": "mcq-2012-9-1352",
+    "primaryTopic": "3.6",
+    "relatedTopics": [
+      "3.6",
+      "3.5"
+    ],
+    "rationale": "Compare gases to identify which most closely follows ideal-gas behavior.",
+    "status": "classified",
+    "evidencePages": [
+      1352
+    ]
+  },
+  {
+    "id": "mcq-2012-10-1352",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Compare root-mean-square gas speeds using molar mass.",
+    "status": "classified",
+    "evidencePages": [
+      1352
+    ]
+  },
+  {
+    "id": "mcq-2012-11-1352",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Apply periodic trends to electronegativity.",
+    "status": "classified",
+    "evidencePages": [
+      1352
+    ]
+  },
+  {
+    "id": "mcq-2012-12-1352",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Apply periodic trends to first ionization energy.",
+    "status": "classified",
+    "evidencePages": [
+      1352
+    ]
+  },
+  {
+    "id": "mcq-2012-13-1352",
+    "primaryTopic": "1.7",
+    "relatedTopics": [
+      "1.7"
+    ],
+    "rationale": "Apply periodic trends to atomic radius.",
+    "status": "classified",
+    "evidencePages": [
+      1352
+    ]
+  },
+  {
+    "id": "mcq-2012-14-1353",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Organic isomer identification is outside the current AP Chemistry CED.",
+    "status": "legacy",
+    "evidencePages": [
+      1353
+    ],
+    "legacyConcepts": [
+      "Organic isomer identification"
+    ],
+    "reviewReason": "Organic isomer identification is outside the current AP Chemistry CED."
+  },
+  {
+    "id": "mcq-2012-15-1353",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Identify an organic molecule that donates protons in water.",
+    "status": "classified",
+    "evidencePages": [
+      1353
+    ]
+  },
+  {
+    "id": "mcq-2012-16-1353",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Compare ionic-compound solubility in water.",
+    "status": "classified",
+    "evidencePages": [
+      1353
+    ]
+  },
+  {
+    "id": "mcq-2012-17-1354",
+    "primaryTopic": "3.2",
+    "relatedTopics": [
+      "3.2",
+      "2.1"
+    ],
+    "rationale": "Infer molecular-solid character from low melting point and lack of conductivity.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-18-1354",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5",
+      "3.8"
+    ],
+    "rationale": "Use dissociation stoichiometry to relate nitrate concentration to aluminum-ion concentration.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-19-1354",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3"
+    ],
+    "rationale": "Distinguish a weak acid from strong acids.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-20-1354",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1",
+      "1.3"
+    ],
+    "rationale": "Count atoms from the formula and amount of a hydrated ionic compound.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-21-1354",
+    "primaryTopic": "5.1",
+    "relatedTopics": [
+      "5.1",
+      "4.3"
+    ],
+    "rationale": "Use reaction stoichiometry to relate species rates in a balanced equation.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-22-1354",
+    "primaryTopic": "4.1",
+    "relatedTopics": [
+      "4.1",
+      "6.5"
+    ],
+    "rationale": "Determine the appropriate next step when repeated heating shows a hydrate sample has not reached constant mass.",
+    "status": "classified",
+    "evidencePages": [
+      1354
+    ]
+  },
+  {
+    "id": "mcq-2012-23-1355",
+    "primaryTopic": "1.5",
+    "relatedTopics": [
+      "1.5",
+      "1.2"
+    ],
+    "rationale": "Evaluate statements about atomic neutrality, isotopes, and subatomic particles.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ]
+  },
+  {
+    "id": "mcq-2012-24-1355",
+    "primaryTopic": "8.1",
+    "relatedTopics": [
+      "8.1"
+    ],
+    "rationale": "Identify Brønsted–Lowry bases from a proton-transfer reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ]
+  },
+  {
+    "id": "mcq-2012-25-1355",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4"
+    ],
+    "rationale": "Calculate total pressure after gases are combined in a rigid container.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ]
+  },
+  {
+    "id": "mcq-2012-26-1355",
+    "primaryTopic": "3.3",
+    "relatedTopics": [
+      "3.3"
+    ],
+    "rationale": "Follow a phase-diagram path while cooling at constant pressure; phase-diagram interpretation is legacy.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ],
+    "legacyConcepts": [
+      "Detailed phase-diagram interpretation is not an explicit current CED target"
+    ]
+  },
+  {
+    "id": "mcq-2012-27-1355",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9"
+    ],
+    "rationale": "Identify oxygen as an oxidizing agent by tracking electron transfer / oxidation numbers.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ]
+  },
+  {
+    "id": "mcq-2012-28-1355",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Determine limiting reactant and maximum Al2O3 yield.",
+    "status": "classified",
+    "evidencePages": [
+      1355
+    ]
+  },
+  {
+    "id": "mcq-2012-29-1356",
+    "primaryTopic": "4.3",
+    "relatedTopics": [
+      "4.3"
+    ],
+    "rationale": "Balance the combustion equation and identify a coefficient.",
+    "status": "classified",
+    "evidencePages": [
+      1356
+    ]
+  },
+  {
+    "id": "mcq-2012-30-1356",
+    "primaryTopic": null,
+    "relatedTopics": [],
+    "rationale": "Qualitative color identification for transition-metal salts is not a current CED target.",
+    "status": "legacy",
+    "evidencePages": [
+      1356
+    ],
+    "legacyConcepts": [
+      "Specific aqueous salt color identification"
+    ],
+    "reviewReason": "Qualitative color identification for transition-metal salts is not a current CED target."
+  },
+  {
+    "id": "mcq-2012-31-1356",
+    "primaryTopic": "9.3",
+    "relatedTopics": [
+      "9.3"
+    ],
+    "rationale": "Use ΔG = ΔH − TΔS to identify when an endothermic reaction can be thermodynamically favorable.",
+    "status": "classified",
+    "evidencePages": [
+      1356
+    ]
+  },
+  {
+    "id": "mcq-2012-32-1356",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Calculate solution vapor pressure using Raoult’s law; this is legacy content.",
+    "status": "classified",
+    "evidencePages": [
+      1356
+    ],
+    "legacyConcepts": [
+      "Raoult’s law / ideal-solution vapor pressure"
+    ]
+  },
+  {
+    "id": "mcq-2012-33-1356",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Compare solubility of ionic compounds using solubility rules.",
+    "status": "classified",
+    "evidencePages": [
+      1356
+    ]
+  },
+  {
+    "id": "mcq-2012-34-1356",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "4.1"
+    ],
+    "rationale": "Select volumetric glassware for preparing a solution at a specified final volume.",
+    "status": "classified",
+    "evidencePages": [
+      1356
+    ]
+  },
+  {
+    "id": "mcq-2012-35-1357",
+    "primaryTopic": "7.1",
+    "relatedTopics": [
+      "7.1",
+      "7.8"
+    ],
+    "rationale": "Interpret concentration-time data after a reversible system reaches dynamic equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1357
+    ]
+  },
+  {
+    "id": "mcq-2012-36-1357",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict the equilibrium shift when product NH3 is added at constant temperature.",
+    "status": "classified",
+    "evidencePages": [
+      1357
+    ]
+  },
+  {
+    "id": "mcq-2012-37-1358",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Recognize the products of thermal decomposition of a metal carbonate.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-38-1358",
+    "primaryTopic": "7.5",
+    "relatedTopics": [
+      "7.5"
+    ],
+    "rationale": "Interpret the magnitude of an equilibrium constant; a large K indicates product-favored equilibrium, not reaction speed or ΔH.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-39-1358",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Calculate dilution volume using conservation of solute moles.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-40-1358",
+    "primaryTopic": "5.5",
+    "relatedTopics": [
+      "5.5",
+      "5.1"
+    ],
+    "rationale": "Explain increased reaction rate at higher temperature through a larger fraction of effective collisions.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-41-1358",
+    "primaryTopic": "4.5",
+    "relatedTopics": [
+      "4.5"
+    ],
+    "rationale": "Calculate percent yield from reactant amount and actual product mass.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-42-1358",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "8.2"
+    ],
+    "rationale": "Explain the sharp endpoint color change in a strong-acid/strong-base titration.",
+    "status": "classified",
+    "evidencePages": [
+      1358
+    ]
+  },
+  {
+    "id": "mcq-2012-43-1359",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "9.8"
+    ],
+    "rationale": "Use metal redox behavior to compare electron transfer to different ions.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ]
+  },
+  {
+    "id": "mcq-2012-44-1359",
+    "primaryTopic": "3.1",
+    "relatedTopics": [
+      "3.1",
+      "3.2"
+    ],
+    "rationale": "Explain different halogen phases through intermolecular attractions.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ]
+  },
+  {
+    "id": "mcq-2012-45-1359",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Use Ksp and ion concentrations to determine when PbCl2 begins precipitating.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ]
+  },
+  {
+    "id": "mcq-2012-46-1359",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7"
+    ],
+    "rationale": "Compare freezing-point depression among solutions; colligative-property calculation is legacy.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ],
+    "legacyConcepts": [
+      "Freezing-point depression / colligative properties"
+    ]
+  },
+  {
+    "id": "mcq-2012-47-1359",
+    "primaryTopic": "5.7",
+    "relatedTopics": [
+      "5.7",
+      "5.11"
+    ],
+    "rationale": "Identify NO as a catalyst in the ozone-destruction mechanism.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ]
+  },
+  {
+    "id": "mcq-2012-48-1359",
+    "primaryTopic": "8.5",
+    "relatedTopics": [
+      "8.5",
+      "4.1"
+    ],
+    "rationale": "Select the proper buret-rinsing procedure before titration.",
+    "status": "classified",
+    "evidencePages": [
+      1359
+    ]
+  },
+  {
+    "id": "mcq-2012-49-1360",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "6.1",
+      "9.5"
+    ],
+    "rationale": "Use how K changes with temperature to infer the reaction enthalpy sign.",
+    "status": "classified",
+    "evidencePages": [
+      1360
+    ]
+  },
+  {
+    "id": "mcq-2012-50-1360",
+    "primaryTopic": "4.8",
+    "relatedTopics": [
+      "4.8",
+      "8.1"
+    ],
+    "rationale": "Classify the represented proton-transfer reaction as Brønsted–Lowry acid–base chemistry.",
+    "status": "classified",
+    "evidencePages": [
+      1360
+    ]
+  },
+  {
+    "id": "mcq-2012-51-1361",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "4.9"
+    ],
+    "rationale": "Use standard reduction potentials to predict a spontaneous redox reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1361
+    ]
+  },
+  {
+    "id": "mcq-2012-52-1361",
+    "primaryTopic": "4.9",
+    "relatedTopics": [
+      "4.9",
+      "4.3"
+    ],
+    "rationale": "Balance a redox equation and identify the zinc coefficient.",
+    "status": "classified",
+    "evidencePages": [
+      1361
+    ]
+  },
+  {
+    "id": "mcq-2012-53-1362",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.9"
+    ],
+    "rationale": "Calculate reaction enthalpy from standard enthalpies of formation.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-54-1362",
+    "primaryTopic": "9.8",
+    "relatedTopics": [
+      "9.8",
+      "4.9"
+    ],
+    "rationale": "Infer relative reduction potentials from a spontaneous metal-displacement observation.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-55-1362",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7"
+    ],
+    "rationale": "Identify sp2 hybridization from molecular structure.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-56-1362",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "3.8"
+    ],
+    "rationale": "Convert mass fraction and density to molarity.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-57-1362",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7"
+    ],
+    "rationale": "Use a gas test and reaction evidence to identify a reaction product.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-58-1362",
+    "primaryTopic": "3.8",
+    "relatedTopics": [
+      "3.8",
+      "3.7"
+    ],
+    "rationale": "Calculate mole fraction from the amounts of two substances.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-59-1362",
+    "primaryTopic": "1.3",
+    "relatedTopics": [
+      "1.3"
+    ],
+    "rationale": "Determine an empirical formula from elemental mass data.",
+    "status": "classified",
+    "evidencePages": [
+      1362
+    ]
+  },
+  {
+    "id": "mcq-2012-60-1363",
+    "primaryTopic": "3.5",
+    "relatedTopics": [
+      "3.5"
+    ],
+    "rationale": "Explain gas compressibility through the large spaces between particles.",
+    "status": "classified",
+    "evidencePages": [
+      1363
+    ]
+  },
+  {
+    "id": "mcq-2012-61-1363",
+    "primaryTopic": "1.1",
+    "relatedTopics": [
+      "1.1",
+      "3.7"
+    ],
+    "rationale": "Use molar mass and density to calculate the volume occupied by one mole of mercury.",
+    "status": "classified",
+    "evidencePages": [
+      1363
+    ]
+  },
+  {
+    "id": "mcq-2012-62-1364",
+    "primaryTopic": "3.4",
+    "relatedTopics": [
+      "3.4",
+      "3.7"
+    ],
+    "rationale": "Identify measurements needed to calculate molar mass from a gas collected over water.",
+    "status": "classified",
+    "evidencePages": [
+      1364
+    ]
+  },
+  {
+    "id": "mcq-2012-63-1365",
+    "primaryTopic": "4.2",
+    "relatedTopics": [
+      "4.2",
+      "8.4"
+    ],
+    "rationale": "Write the net ionic equation for acid–base precipitation between sulfurous acid and barium hydroxide.",
+    "status": "classified",
+    "evidencePages": [
+      1365
+    ]
+  },
+  {
+    "id": "mcq-2012-64-1366",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.5"
+    ],
+    "rationale": "Apply Hess’s law to determine iodine sublimation enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1366
+    ]
+  },
+  {
+    "id": "mcq-2012-65-1366",
+    "primaryTopic": "2.2",
+    "relatedTopics": [
+      "2.2"
+    ],
+    "rationale": "Interpret potential-energy versus internuclear-distance curves for covalent-bond formation.",
+    "status": "classified",
+    "evidencePages": [
+      1366
+    ]
+  },
+  {
+    "id": "mcq-2012-66-1367",
+    "primaryTopic": "2.5",
+    "relatedTopics": [
+      "2.5"
+    ],
+    "rationale": "Use Lewis structures and octet/valence rules to identify an unlikely compound.",
+    "status": "classified",
+    "evidencePages": [
+      1367
+    ]
+  },
+  {
+    "id": "mcq-2012-67-1367",
+    "primaryTopic": "8.7",
+    "relatedTopics": [
+      "8.7",
+      "8.5"
+    ],
+    "rationale": "Infer pKa from the half-equivalence point on a weak-acid titration curve.",
+    "status": "classified",
+    "evidencePages": [
+      1367
+    ]
+  },
+  {
+    "id": "mcq-2012-68-1367",
+    "primaryTopic": "5.2",
+    "relatedTopics": [
+      "5.2"
+    ],
+    "rationale": "Apply the rate law to calculate the effect of changing reactant concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      1367
+    ]
+  },
+  {
+    "id": "mcq-2012-69-1367",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11"
+    ],
+    "rationale": "Use solubility rules to identify an anion that forms no precipitate with the listed cations.",
+    "status": "classified",
+    "evidencePages": [
+      1367
+    ]
+  },
+  {
+    "id": "mcq-2012-70-1367",
+    "primaryTopic": "3.7",
+    "relatedTopics": [
+      "3.7",
+      "4.5"
+    ],
+    "rationale": "Calculate iodide concentration from the formula-unit amount and dissociation stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1367
+    ]
+  },
+  {
+    "id": "mcq-2012-71-1368",
+    "primaryTopic": "2.1",
+    "relatedTopics": [
+      "2.1",
+      "2.5"
+    ],
+    "rationale": "Identify an ionic compound containing covalent bonds within a polyatomic ion.",
+    "status": "classified",
+    "evidencePages": [
+      1368
+    ]
+  },
+  {
+    "id": "mcq-2012-72-1368",
+    "primaryTopic": "4.7",
+    "relatedTopics": [
+      "4.7",
+      "8.4"
+    ],
+    "rationale": "Identify an acid-rain precursor gas from common reaction chemistry.",
+    "status": "classified",
+    "evidencePages": [
+      1368
+    ]
+  },
+  {
+    "id": "mcq-2012-73-1368",
+    "primaryTopic": "7.3",
+    "relatedTopics": [
+      "7.3",
+      "7.4"
+    ],
+    "rationale": "Combine equilibrium reactions and constants to calculate a net reaction constant.",
+    "status": "classified",
+    "evidencePages": [
+      1368
+    ]
+  },
+  {
+    "id": "mcq-2012-74-1369",
+    "primaryTopic": "2.7",
+    "relatedTopics": [
+      "2.7",
+      "2.1"
+    ],
+    "rationale": "Identify a nonpolar molecule containing polar bonds by molecular geometry.",
+    "status": "classified",
+    "evidencePages": [
+      1369
+    ]
+  },
+  {
+    "id": "mcq-2012-75-1369",
+    "primaryTopic": "8.3",
+    "relatedTopics": [
+      "8.3",
+      "8.1"
+    ],
+    "rationale": "Use salt hydrolysis to identify the most basic salt solution.",
+    "status": "classified",
+    "evidencePages": [
+      1369
+    ]
+  }
+]

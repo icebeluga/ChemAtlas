@@ -4,13 +4,14 @@ import fitz,json,collections
 root=Path(__file__).resolve().parents[1]; research=root/'research'
 corpus=json.loads((research/'apchem-corpus-staged.json').read_text())
 if (research/'scanned-classified.json').exists(): corpus += json.loads((research/'scanned-classified.json').read_text())
+if (research/'progress-check-additions.json').exists(): corpus += json.loads((research/'progress-check-additions.json').read_text())
 format_corrections=json.loads((research/'frq-format-corrections.json').read_text())
 for q in corpus:
  if q['id'] in set(format_corrections['reclassifyAsFRQ']): q['type']='FRQ'
 tax=json.loads((research/'apchem-taxonomy.json').read_text())
 byid={q['id']:q for q in corpus}
 assign={}
-for fn in ['frq-classified.json','frq-batch02-classified.json','frq-batch03-classified.json','frq-batch04-classified.json','frq-batch05-classified.json','frq-batch06-classified.json','frq-batch07-classified.json','frq-batch08-classified.json','frq-batch09-classified.json','frq-batch10-classified.json','frq-batch11-classified.json','frq-batch12-classified.json','frq-batch13-classified.json','frq-batch14-classified.json','frq-format-classified.json','mcq-first-classified.json','mcq-batch01-classified.json','mcq-batch02-classified.json','mcq-batch03-classified.json','mcq-batch04-classified.json','mcq-later-classified.json','scanned-classified.json']:
+for fn in ['frq-classified.json','frq-batch02-classified.json','frq-batch03-classified.json','frq-batch04-classified.json','frq-batch05-classified.json','frq-batch06-classified.json','frq-batch07-classified.json','frq-batch08-classified.json','frq-batch09-classified.json','frq-batch10-classified.json','frq-batch11-classified.json','frq-batch12-classified.json','frq-batch13-classified.json','frq-batch14-classified.json','mcq-first-classified.json','mcq-batch01-classified.json','mcq-batch02-classified.json','mcq-batch03-classified.json','mcq-batch04-classified.json','mcq-later-classified.json','scanned-classified.json','frq-format-classified.json','mcq-batch05-classified.json','mcq-batch06-classified.json','mcq-batch07-classified.json','mcq-batch08-classified.json','mcq-batch09-classified.json','mcq-batch10-classified.json','mcq-batch11-classified.json','mcq-batch12-classified.json','mcq-batch13-classified.json','mcq-batch14-classified.json','mcq-batch15-classified.json','mcq-batch16-classified.json']:
  p=research/fn
  if p.exists():
   for x in json.loads(p.read_text()):

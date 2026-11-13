@@ -1,0 +1,798 @@
+[
+  {
+    "id": "progress-6-mcq-01-p1303",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "6.4"
+    ],
+    "rationale": "Interpret a temperature change in a calorimetry experiment to determine whether the reaction releases or absorbs heat.",
+    "status": "classified",
+    "evidencePages": [
+      1303
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-02-p1303",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "6.5"
+    ],
+    "rationale": "Explain the temperature increase observed when a solid dissolves in water.",
+    "status": "classified",
+    "evidencePages": [
+      1303
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-03-p1303",
+    "primaryTopic": "6.3",
+    "relatedTopics": [
+      "6.3",
+      "6.4"
+    ],
+    "rationale": "Predict the final temperature when two solutions at different temperatures are mixed.",
+    "status": "classified",
+    "evidencePages": [
+      1303
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-04-p1304",
+    "primaryTopic": "6.1",
+    "relatedTopics": [
+      "6.1",
+      "6.4"
+    ],
+    "rationale": "Explain energy transfer as a solid dissolves and warms the surrounding water.",
+    "status": "classified",
+    "evidencePages": [
+      1304
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-05-p1304",
+    "primaryTopic": "6.3",
+    "relatedTopics": [
+      "6.3",
+      "6.4"
+    ],
+    "rationale": "Apply thermal equilibrium to solutions mixed at different temperatures.",
+    "status": "classified",
+    "evidencePages": [
+      1304
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-06-p1305",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4"
+    ],
+    "rationale": "Calculate heat released by benzoic-acid combustion from water temperature data.",
+    "status": "classified",
+    "evidencePages": [
+      1305
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-07-p1305",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Set up conservation of heat for a metal-water calorimetry experiment.",
+    "status": "classified",
+    "evidencePages": [
+      1305
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-08-p1306",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4"
+    ],
+    "rationale": "Calculate the specific heat capacity of a substance from calorimetry data.",
+    "status": "classified",
+    "evidencePages": [
+      1306
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-09-p1306",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "6.1"
+    ],
+    "rationale": "Compare energy absorbed during evaporation with energy released during condensation.",
+    "status": "classified",
+    "evidencePages": [
+      1306
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-10-p1307",
+    "primaryTopic": "6.4",
+    "relatedTopics": [
+      "6.4",
+      "6.3"
+    ],
+    "rationale": "Use specific-heat data to compare heat transfer between substances.",
+    "status": "classified",
+    "evidencePages": [
+      1307
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-11-p1308",
+    "primaryTopic": "6.5",
+    "relatedTopics": [
+      "6.5",
+      "3.3"
+    ],
+    "rationale": "Interpret a heating curve and calculate energy for a phase transition.",
+    "status": "classified",
+    "evidencePages": [
+      1308
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-12-p1308",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "4.5"
+    ],
+    "rationale": "Relate reaction enthalpy to the amount of reactant consumed.",
+    "status": "classified",
+    "evidencePages": [
+      1308
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-13-p1308",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "4.5"
+    ],
+    "rationale": "Calculate heat absorbed or released from the reaction amount and enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1308
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-14-p1308",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "6.1"
+    ],
+    "rationale": "Interpret a thermochemical equation and energy change.",
+    "status": "classified",
+    "evidencePages": [
+      1308
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-15-p1309",
+    "primaryTopic": "6.6",
+    "relatedTopics": [
+      "6.6",
+      "4.5"
+    ],
+    "rationale": "Calculate heat absorbed by an endothermic reaction using stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1309
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-16-p1309",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Estimate ozone bond enthalpy using reaction enthalpy and bond data.",
+    "status": "classified",
+    "evidencePages": [
+      1309
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-17-p1309",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Use bond enthalpies to estimate methane-combustion enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1309
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-18-p1310",
+    "primaryTopic": "6.7",
+    "relatedTopics": [
+      "6.7",
+      "6.6"
+    ],
+    "rationale": "Estimate HCl formation enthalpy from average bond energies.",
+    "status": "classified",
+    "evidencePages": [
+      1310
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-19-p1310",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.6"
+    ],
+    "rationale": "Calculate reaction enthalpy from standard enthalpies of formation.",
+    "status": "classified",
+    "evidencePages": [
+      1310
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-20-p1310",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.6"
+    ],
+    "rationale": "Use standard formation enthalpies to calculate ΔH° for a reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1310
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-21-p1311",
+    "primaryTopic": "6.8",
+    "relatedTopics": [
+      "6.8",
+      "6.6"
+    ],
+    "rationale": "Set up a methane combustion enthalpy calculation from formation data.",
+    "status": "classified",
+    "evidencePages": [
+      1311
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-22-p1311",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.8"
+    ],
+    "rationale": "Identify the additional data needed to calculate reaction enthalpy by Hess’s law.",
+    "status": "classified",
+    "evidencePages": [
+      1311
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-23-p1312",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.6"
+    ],
+    "rationale": "Combine thermochemical equations to obtain an overall reaction enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1312
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-6-mcq-24-p1312",
+    "primaryTopic": "6.9",
+    "relatedTopics": [
+      "6.9",
+      "6.8"
+    ],
+    "rationale": "Identify thermochemical data needed to apply Hess’s law.",
+    "status": "classified",
+    "evidencePages": [
+      1312
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-01-p1314",
+    "primaryTopic": "7.12",
+    "relatedTopics": [
+      "7.12",
+      "7.11"
+    ],
+    "rationale": "Predict common-ion effects on dissolution using a particle diagram and Ksp.",
+    "status": "classified",
+    "evidencePages": [
+      1314
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-02-p1314",
+    "primaryTopic": "9.1",
+    "relatedTopics": [
+      "9.1",
+      "7.8"
+    ],
+    "rationale": "Interpret particle-level disorder during salt dissolution.",
+    "status": "classified",
+    "evidencePages": [
+      1314
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-03-p1315",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "6.6"
+    ],
+    "rationale": "Explain why a particle diagram alone cannot determine dissolution enthalpy.",
+    "status": "classified",
+    "evidencePages": [
+      1315
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-04-p1315",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.1"
+    ],
+    "rationale": "Interpret concentration data for a reaction approaching equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1315
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-05-p1316",
+    "primaryTopic": "7.1",
+    "relatedTopics": [
+      "7.1",
+      "3.3"
+    ],
+    "rationale": "Explain how vapor pressure reaches a dynamic equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1316
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-06-p1317",
+    "primaryTopic": "7.1",
+    "relatedTopics": [
+      "7.1",
+      "7.8"
+    ],
+    "rationale": "Identify experimental evidence that a chemical system has reached equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1317
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-07-p1318",
+    "primaryTopic": "7.8",
+    "relatedTopics": [
+      "7.8",
+      "7.1"
+    ],
+    "rationale": "Evaluate whether a particle diagram represents dynamic equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1318
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-08-p1318",
+    "primaryTopic": "7.8",
+    "relatedTopics": [
+      "7.8",
+      "7.1"
+    ],
+    "rationale": "Explain why one particle snapshot cannot establish equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1318
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-09-p1319",
+    "primaryTopic": "7.1",
+    "relatedTopics": [
+      "7.1",
+      "7.8"
+    ],
+    "rationale": "Use changing particle diagrams to compare forward and reverse reaction rates.",
+    "status": "classified",
+    "evidencePages": [
+      1319
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-10-p1319",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.4"
+    ],
+    "rationale": "Calculate equilibrium composition from initial and equilibrium concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      1319
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-11-p1320",
+    "primaryTopic": "7.4",
+    "relatedTopics": [
+      "7.4",
+      "7.7"
+    ],
+    "rationale": "Calculate equilibrium partial pressures and Kp for a gas reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1320
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-12-p1320",
+    "primaryTopic": "7.7",
+    "relatedTopics": [
+      "7.7",
+      "7.3"
+    ],
+    "rationale": "Compare equilibrium concentrations in two scaled reaction vessels.",
+    "status": "classified",
+    "evidencePages": [
+      1320
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-13-p1321",
+    "primaryTopic": "7.5",
+    "relatedTopics": [
+      "7.5",
+      "7.7"
+    ],
+    "rationale": "Relate the magnitude of K to relative equilibrium concentrations.",
+    "status": "classified",
+    "evidencePages": [
+      1321
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-14-p1321",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.3"
+    ],
+    "rationale": "Use reaction reversal or scaling to relate equilibrium constants.",
+    "status": "classified",
+    "evidencePages": [
+      1321
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-15-p1322",
+    "primaryTopic": "7.5",
+    "relatedTopics": [
+      "7.5",
+      "7.7"
+    ],
+    "rationale": "Use a large equilibrium constant to predict near-complete product formation.",
+    "status": "classified",
+    "evidencePages": [
+      1322
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-16-p1322",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.3"
+    ],
+    "rationale": "Combine equilibrium constants for reactions to construct a net reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1322
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-17-p1322",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.3"
+    ],
+    "rationale": "Derive an equilibrium constant from related reaction equations.",
+    "status": "classified",
+    "evidencePages": [
+      1322
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-18-p1323",
+    "primaryTopic": "7.6",
+    "relatedTopics": [
+      "7.6",
+      "7.3"
+    ],
+    "rationale": "Relate equilibrium constants for coupled NO2/N2O4 reactions.",
+    "status": "classified",
+    "evidencePages": [
+      1323
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-19-p1323",
+    "primaryTopic": "7.9",
+    "relatedTopics": [
+      "7.9",
+      "7.10"
+    ],
+    "rationale": "Predict a temperature-driven equilibrium color change.",
+    "status": "classified",
+    "evidencePages": [
+      1323
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-20-p1324",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict the effect of changing volume on a gaseous equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1324
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-21-p1324",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Use pressure and volume change to predict equilibrium product yield.",
+    "status": "classified",
+    "evidencePages": [
+      1324
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-22-p1325",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.3"
+    ],
+    "rationale": "Compare Q with K to predict the direction of net reaction.",
+    "status": "classified",
+    "evidencePages": [
+      1325
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-23-p1325",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.3"
+    ],
+    "rationale": "Use the reaction quotient to predict changes as equilibrium is approached.",
+    "status": "classified",
+    "evidencePages": [
+      1325
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-24-p1326",
+    "primaryTopic": "7.10",
+    "relatedTopics": [
+      "7.10",
+      "7.9"
+    ],
+    "rationale": "Predict how adding a reactant shifts an equilibrium system.",
+    "status": "classified",
+    "evidencePages": [
+      1326
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-25-p1326",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.10"
+    ],
+    "rationale": "Relate molar solubility to Ksp for salts with different stoichiometry.",
+    "status": "classified",
+    "evidencePages": [
+      1326
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-26-p1326",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12"
+    ],
+    "rationale": "Predict precipitation from ion concentrations and Ksp.",
+    "status": "classified",
+    "evidencePages": [
+      1326
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-27-p1327",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "3.10"
+    ],
+    "rationale": "Calculate ion concentrations in a saturated solution.",
+    "status": "classified",
+    "evidencePages": [
+      1327
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-28-p1327",
+    "primaryTopic": "7.12",
+    "relatedTopics": [
+      "7.12",
+      "7.11"
+    ],
+    "rationale": "Explain how a common ion changes the solubility of a salt.",
+    "status": "classified",
+    "evidencePages": [
+      1327
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-29-p1327",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12"
+    ],
+    "rationale": "Predict precipitation when a reagent is added to a saturated solution.",
+    "status": "classified",
+    "evidencePages": [
+      1327
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-30-p1328",
+    "primaryTopic": "7.11",
+    "relatedTopics": [
+      "7.11",
+      "7.12"
+    ],
+    "rationale": "Identify the reagent that causes precipitation in a solubility equilibrium.",
+    "status": "classified",
+    "evidencePages": [
+      1328
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-31-p1329",
+    "primaryTopic": "8.11",
+    "relatedTopics": [
+      "8.11",
+      "7.11"
+    ],
+    "rationale": "Analyze how pH affects solubility through acid-base consumption of an ion.",
+    "status": "classified",
+    "evidencePages": [
+      1329
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-32-p1329",
+    "primaryTopic": "3.13",
+    "relatedTopics": [
+      "3.13",
+      "7.11"
+    ],
+    "rationale": "Use absorbance measurements to infer concentration in a saturated solution.",
+    "status": "classified",
+    "evidencePages": [
+      1329
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  },
+  {
+    "id": "progress-7-mcq-33-p1330",
+    "primaryTopic": "9.6",
+    "relatedTopics": [
+      "9.6",
+      "9.1"
+    ],
+    "rationale": "Relate particle-level dissolution to thermodynamic favorability.",
+    "status": "classified",
+    "evidencePages": [
+      1330
+    ],
+    "classificationMethod": "Question wording reviewed against current CED"
+  }
+]

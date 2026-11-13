@@ -13,12 +13,13 @@ Tested application and catalog checkpoint `00e598286ffbc217875f1f9c02b96eef2a861
 | Built preview, Chromium at 1440 × 900 | Passed Question Bank search and unit/type filters, MCQ detail, PDF canvas fallback, browser Back/Forward, direct FRQ URL, and Practice Builder session start. |
 | Built preview, Chromium at 390 × 844 | Passed mobile navigation to the Question Bank and checked that the page had no horizontal overflow. |
 | Worksheet print output | Chromium produced a two-page PDF for 2008 MCQ Q1–3. PDF inspection found the shared-stimulus heading once and at least four embedded image segments. |
+| Accepted image and fallback | In isolated local storage, uploaded and accepted a PNG cropped from the original source for `mcq-2008-19-33`. Chromium rendered the served revision and switched to the original PDF successfully. |
 | Local development review dashboard | Chromium opened the dashboard with file storage paths isolated under a temporary directory. The development entry point bypasses Cloudflare Access. |
 | Unconfigured built public review routes | The admin page returned 404. The review and backup APIs returned 503 with Access unconfigured, so review data was unavailable. The Access module's signed-token test verified owner acceptance and non-owner rejection. |
 
 The browser run used Chromium headless shell after the system Chromium binary failed on an unavailable socket operation. Wrangler needed a local loopback interface shim for this container. Neither workaround is part of the application.
 
-The browser run did not exercise a Cloudflare Access owner sign-in end to end or render a served accepted-image revision. The signed-token, image revision and storage tests exercised those components separately. The review branch remains a draft pending that browser verification. Historical independent extraction results remain as recorded in the foundation.
+Cloudflare Access owner sign-in remains unverified end to end. The signed-token, image revision and storage tests exercised those components separately. The PR remains a draft pending that browser verification. Historical independent extraction results remain as recorded in the foundation.
 
 ## Pushed application checkpoints
 

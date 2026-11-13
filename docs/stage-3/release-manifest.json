@@ -1,0 +1,64 @@
+{
+  "candidate_branch": "integration/chematlas-stage3-unified",
+  "baseline": "63fd7e4b5287d74f66227742e8b2a4f47e37920f",
+  "release_workflow_reference": "25c4528307776533575f8f07993e35a851798156",
+  "sites_reference": "6f4a568382eef820418a9f84fe97bd5cbd21d721",
+  "active_catalog_git_blob": "3eef99956b037611afc9b5a60a056f1cbbb311b0",
+  "catalog_candidate_sha256": "68ae75c6005854eb13a8203fdaa54417bea598bebeb1495dfef02a788de14b8d",
+  "decision_ledger_sha256": "69c509eb8f413ea259d38becd14fe28fc4619bf125ea71e799ab68633982c6b3",
+  "build_client_manifest_sha256": {
+    "baseline": "5633e32f504f4416a5928658b1ca447a6c81d555d5c5d6c0280f3e911d1bd9e5",
+    "candidate": "e28d3e4f6129df420f351012a4e89e7e3708a442ec4ae90589398dab8f07687b"
+  },
+  "source_pdfs": {
+    "bank-01.pdf": {
+      "git_blob": "35ca437fead475205ce7664a98876c7c754c3095",
+      "sha256": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf"
+    },
+    "bank-02.pdf": {
+      "git_blob": "d03a1d50fd0294c48fd70e92c56a287cba1142ef",
+      "sha256": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5"
+    },
+    "bank-03.pdf": {
+      "git_blob": "30a70a3ac1dc0fdcede9008ff6adfc2d6fc1ba88",
+      "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7"
+    },
+    "bank-04.pdf": {
+      "git_blob": "bfa1ef7fb9e4ef58ff0313c5edb681a4df049fca",
+      "sha256": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304"
+    },
+    "bank-05.pdf": {
+      "git_blob": "41af0c0c22075b7f64c428d94320304bff341fcd",
+      "sha256": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd"
+    },
+    "bank-06.pdf": {
+      "git_blob": "842e8cad385187c00bce65f97d1911bccc253278",
+      "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb"
+    },
+    "bank-07.pdf": {
+      "git_blob": "dfa0898a2f3a0422895577a6df17b943851f64dd",
+      "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96"
+    },
+    "bank-08.pdf": {
+      "git_blob": "5f4728b259607ea23404efbf189448a6a595a824",
+      "sha256": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759"
+    }
+  },
+  "worksheet_assets": {
+    "worksheet-content.json": {
+      "git_blob": "82e89dc38be6dc8bdf5536b89c9122be1bdf7f83",
+      "sha256": "c6a449d622bc367004a4ae02b07bfb8f44df1cfb2a418bc76103e92c408030f5"
+    },
+    "worksheet-fragments.pdf": {
+      "git_blob": "6e8f5af1c786f4138dd5a14463324edf7fd9496d",
+      "sha256": "115f12a8d3abf9c5012164ce223a55d840eb0bb588550737789da03b100e5f29"
+    },
+    "worksheet-sources.json": {
+      "git_blob": "4375abd7d67121dc4edb2aa16a39718c999c0108",
+      "sha256": "4efe1f5abf98bbb9ec5bf99fdf85190b38a9e42fecb2e00841b93743861a5fda"
+    }
+  },
+  "production_deployment": null,
+  "rollback_worker_version": null,
+  "verified_application_commit": "4cdcdaa18154e0dea114bfa001054988a4ef7481"
+}

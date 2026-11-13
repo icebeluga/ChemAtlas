@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { ScanEye } from "lucide-react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Activity, ArrowUpRight, Atom, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, Menu, Network, Orbit, Thermometer } from "lucide-react";
+import stimulusDocument from "../research/stimuli.json";
+import { planWorksheet } from "../lib/worksheet.mjs";
 import { buildChemAtlasUrl, parseChemAtlasLocation } from "./navigation.mjs";
 
 type AppView = "desk" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit";
@@ -31,7 +33,7 @@ type Question = {
   topicParts?: { label: string; topics: string[]; topicNames: string[]; textPreview: string; confidence?: number; rationale?: string }[];
   secondaryTopicNames: string[]; multiConcept: boolean; classificationConfidence: number;
   status: "classified" | "review" | "legacy"; classificationRationale?: string; classificationMethod?: string; legacyConcepts?: string[]; sourceRegions?: SourceRegion[]; sourceAssets?: string[]; evidencePages?: number[]; reviewReason?: string | null; textPreview: string;
-  source: string; sourceBank?: string;
+  source: string; sourceBank?: string; stimulusIds?: string[];
 };
 type Bank = { id: string; name: string; size: number; addedAt: string; pages?: number };
 type Attempt = { attempts: number; wrong: number; correct: number; last: string; history: { date: string; result: "correct" | "missed" | "unsure" }[] };
@@ -140,6 +142,8 @@ export default function Home() {
   const [overrides, setOverrides] = useState<Record<string, string>>({});
   const [banks, setBanks] = useState<Bank[]>([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }]);
   const [sessions, setSessions] = useState(0);
+  const [showWorksheet, setShowWorksheet] = useState(false);
+  const worksheetRef = useRef<HTMLElement>(null);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [resultPage, setResultPage] = useState(0);
@@ -164,6 +168,7 @@ export default function Home() {
       if (replace) window.history.replaceState(state, "", nextUrl);
       else window.history.pushState(state, "", nextUrl);
     }
+    setShowWorksheet(false);
     setToolsOpen(false);
     setMobileMenuOpen(false);
     setResultPage(0);
@@ -214,6 +219,7 @@ export default function Home() {
       : queue[index];
   useEffect(() => {
     function resetPracticeAfterHistoryNavigation() {
+      setShowWorksheet(false);
       setPageIndex(0);
       setWork("");
       setSubmitted(false);
@@ -300,6 +306,17 @@ export default function Home() {
   const pagesFor = (q?: Question) => q?.sourceBank && q.sourceBank!=="mega" ? q.pages : originalPagesFor(q).map(p=>{const file=catalog.sourceFiles?.find(f=>p>=f.from&&p<=f.to);return file?p-file.from+1:p;});
   const sourceAssetFor = (q:Question,i:number) => q.sourceBank && q.sourceBank!=="mega" ? undefined : catalog.sourceFiles?.find(f=>originalPagesFor(q)[i]>=f.from&&originalPagesFor(q)[i]<=f.to)?.url;
   const mainTopicQuestionCounts = (id: string) => available.filter(q => (q.relatedTopics||[]).includes(id)).length;
+  function printWorksheet() {
+    if (worksheetRef.current?.querySelector(".pdf-error")) {
+      setNotice("A source page failed to render. Check the worksheet preview before printing.");
+    } else if (worksheetRef.current?.querySelector(".pdf-wait")) {
+      setNotice("Wait for the source pages to render before printing.");
+    } else {
+      setNotice("");
+      window.print();
+    }
+  }
+
   return <div className="app-shell">
     <header className="site-nav">
       <button className="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded={mobileMenuOpen} onClick={()=>setMobileMenuOpen(open=>!open)}><Menu size={21}/></button>
@@ -348,12 +365,36 @@ export default function Home() {
       </div>}
       {view === "detail" && !current && <div className="page narrow"><div className="empty-state"><b>Question not found</b><p>This question ID is not present in the currently loaded catalog.</p><button className="outline" onClick={()=>navigate("library")}>Back to Question Bank</button></div></div>}
 
-      {view === "practice" && current && <div className="page practice-page"><div className="session-top"><button className="back" onClick={()=>navigate("desk")}>← Exit session</button><div className="session-step-controls"><button className="outline compact" disabled={activeIndex <= 0} onClick={()=>goToPracticeIndex(activeIndex-1)}>← Previous</button><span className="session-count">QUESTION {activeIndex+1} <i>/</i> {activeQueue.length}</span></div></div><div className="progress-line"><i style={{width:`${((activeIndex+(submitted?1:0))/activeQueue.length)*100}%`}}/></div><div className="question-meta"><span className={`type-chip ${current.type.toLowerCase()}`}>{current.type==="MCQ"?"MULTIPLE CHOICE":"FREE RESPONSE"}</span><span>{current.displayTopic ? `${current.displayTopic} · ${current.displayName}` : "Needs topic review"}</span><span>·</span><span>{current.year || current.exam}</span></div>
+      {view === "practice" && current && !showWorksheet && <div className="page practice-page"><div className="session-top"><button className="back" onClick={()=>navigate("desk")}>← Exit session</button><button className="outline compact" onClick={() => setShowWorksheet(true)}>Worksheet</button><div className="session-step-controls"><button className="outline compact" disabled={activeIndex <= 0} onClick={()=>goToPracticeIndex(activeIndex-1)}>← Previous</button><span className="session-count">QUESTION {activeIndex+1} <i>/</i> {activeQueue.length}</span></div></div><div className="progress-line"><i style={{width:`${((activeIndex+(submitted?1:0))/activeQueue.length)*100}%`}}/></div><div className="question-meta"><span className={`type-chip ${current.type.toLowerCase()}`}>{current.type==="MCQ"?"MULTIPLE CHOICE":"FREE RESPONSE"}</span><span>{current.displayTopic ? `${current.displayTopic} · ${current.displayName}` : "Needs topic review"}</span><span>·</span><span>{current.year || current.exam}</span></div>
         <div className="question-card source-question"><div className="source-question-head"><div><div className="eyebrow">ORIGINAL QUESTION PAGE</div><h2>{current.year || "Source bank"} · {current.type} {current.number}</h2><p>Exact page image from <b>{bankName(current.sourceBank)}</b></p></div><span className="source-page-count">{pageIndex+1} / {pagesFor(current).length} source page{pagesFor(current).length===1?"":"s"}</span></div>
         <div className="pdf-tabs">{pagesFor(current).map((pg,i)=><button key={pg} className={pageIndex===i?"selected":""} onClick={()=>setPageIndex(i)}>Original page {originalPagesFor(current)[i]}</button>)}</div>
         <PdfQuestionPage page={pagesFor(current)[pageIndex]} sourcePage={originalPagesFor(current)[pageIndex]} bankId={current.sourceBank || "mega"} bankName={bankName(current.sourceBank)} sourceAsset={sourceAssetFor(current,pageIndex)} />
         {!submitted ? <div className="response-panel"><label htmlFor="work"><b>Your work / answer</b><span>Write your response here before submitting. The source image remains answer-free.</span></label><textarea id="work" value={work} onChange={e=>setWork(e.target.value)} placeholder={current.type==="FRQ"?"Show your reasoning, equations, units, and conclusion…":"Record your selected letter and a brief reason…"}/><div className="submit-row"><span>When ready, record your self-check. No answer is guessed or revealed.</span><button className="primary" onClick={()=>{if(!work.trim())setNotice("Add your answer or reasoning before submitting.");else setSubmitted(true);}}>Submit response <span>→</span></button></div></div> : <div className="feedback"><div className="eyebrow">SELF-CHECK & REFLECTION</div><div className="feedback-banner review-feedback"><b>Response saved</b><span>This source question is indexed to the PDF page. A verified answer key is not linked to this question record, so the site will not invent one.</span></div><div className="self-check-row"><span>How did it go?</span>{(["correct","missed","unsure"] as const).map(r=><button key={r} disabled={!!selfResult} className={`self-check ${selfResult===r?"selected":""}`} onClick={()=>markSelfCheck(r)}>{r==="correct"?"Got it":r==="missed"?"Missed it":"Not sure"}</button>)}</div>{selfResult==="missed"&&<div className="guided-review"><b>Step-by-step mistake review</b><ol><li>Restate what the prompt asks you to determine, explain, calculate, or represent.</li><li>Identify the AP Chemistry unit/topic and the rule, relationship, or representation it requires.</li><li>Check your setup: species and charges, balanced atoms, units, significant figures, and signs where relevant.</li><li>Compare each step with the official scoring guide in the source bank; mark the exact step where your reasoning changed.</li></ol><p>The compiled bank’s scoring guides are retained in the PDF, but are not yet linked to individual indexed questions.</p></div>}{selfResult&&<button className="primary submit-btn" onClick={nextQuestion}>{activeIndex+1===activeQueue.length?"Finish session":"Next question"}<span>→</span></button>}</div>}
         <div className="question-foot"><span>Primary topic: <b>{current.displayName}</b></span>{current.multiConcept&&<span className="multi-tag">MULTI-CONCEPT FRQ</span>}{current.secondaryTopicNames?.map(n=><span className="secondary-tag" key={n}>Also: {n}</span>)}<span className="source-note">Source: {bankName(current.sourceBank)} · original page {originalPagesFor(current)[pageIndex]}</span></div></div></div>}
+      {view === "practice" && showWorksheet && <section className="page worksheet" ref={worksheetRef}>
+        <div className="worksheet-actions">
+          <button className="back" onClick={() => { setShowWorksheet(false); setNotice(""); }}>← Back to session</button>
+          <button className="primary" onClick={printWorksheet}>Print or save PDF</button>
+        </div>
+        <h1 className="page-title">AP Chemistry practice worksheet</h1>
+        {planWorksheet(activeQueue, stimulusDocument.stimuli, originalPagesFor).map(({ question, segments }, position) => (
+          <article key={question.id}>
+            <h2>{position + 1}. {question.year || "Source bank"} · {question.type} {question.number}</h2>
+            {segments.map(({ page, regions, stimulusId }, segmentIndex) => {
+              const file = catalog.sourceFiles?.find(source => page >= source.from && page <= source.to);
+              const bankId = question.sourceBank || "mega";
+              return <div key={segmentIndex} data-stimulus-id={stimulusId}>
+                {stimulusId && <h3>Shared stimulus</h3>}
+                <PdfQuestionPage page={bankId === "mega" && file ? page - file.from + 1 : page}
+                  sourcePage={page} bankId={bankId} bankName={bankName(bankId)}
+                  sourceAsset={file?.url} sourceRegions={regions} cropView={regions.length > 0}/>
+              </div>;
+            })}
+            {segments.length === 0 && <p>See the source page included earlier in this worksheet.</p>}
+            <div className="worksheet-answer" aria-hidden="true" />
+          </article>
+        ))}
+      </section>}
       {view === "practice" && !current && <div className="page narrow"><div className="empty-state"><span>✦</span><b>No questions in this session</b><p>Choose a unit or topic with indexed questions.</p><button className="primary" onClick={()=>navigate("library")}>Browse questions</button></div></div>}
 
       {view === "progress" && <div className="page"><div className="eyebrow">YOUR LEARNING, OVER TIME</div><h1 className="page-title">Progress & patterns</h1><p className="muted">Attempts, missed questions, and repeated review needs are saved in this browser.</p><div className="stats progress-stats"><div className="stat"><span className="stat-icon peach">↗</span><div><small>TOTAL ATTEMPTS</small><b>{attempts}</b></div></div><div className="stat"><span className="stat-icon rose">⌁</span><div><small>MISSED ANSWERS</small><b>{misses}</b></div></div><div className="stat"><span className="stat-icon lavender">✦</span><div><small>CONCEPTS MASTERED</small><b>{mastered}</b></div></div></div><div className="panel"><div className="panel-head"><div><div className="eyebrow">FOCUS NEXT</div><h2>Concepts to revisit</h2></div><button className="outline" onClick={()=>reviewSession()}>Build review session →</button></div>{weakConcepts.length?weakConcepts.map(c=><div className="weak-row" key={c.id}><div className="weak-icon">⌁</div><div><b>{c.id} · {c.name}</b><small>{c.ids.size} question{c.ids.size===1?"":"s"} attempted</small></div><span className="missed-count">{c.wrong} missed · {c.attempts} attempts</span><button className="row-arrow" onClick={()=>reviewSession(c.id)}>Practice →</button></div>):<div className="empty-state"><span>✧</span><b>Your review map will grow as you practice</b><p>Mark a response as missed to focus future sessions on that question and topic.</p></div>}</div><div className="panel history-panel"><div className="eyebrow">MISSED QUESTIONS</div><h2>Question history</h2>{weakRows.length?weakRows.slice(0,60).map(q=><div className="history-row" key={q.id}><span className="history-x">↻</span><div><b>{q.type} {q.number} · {q.displayName}</b><small>{q.year || q.exam} · {q.source}</small></div><span>{progress[q.id]?.wrong} missed</span><button className="row-arrow" onClick={()=>{setQueue([q]);setIndex(0);setPageIndex(0);setSubmitted(false);setSelfResult(null);setWork("");navigate("practice",{questionId:q.id,sessionIds:[q.id],step:0});}}>Review →</button></div>):<div className="small-empty">No missed questions yet.</div>}</div></div>}

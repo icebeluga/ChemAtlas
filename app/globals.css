@@ -102,3 +102,15 @@ html,body{background:var(--paper);color:var(--ink)}
 .session-step-controls{display:flex;align-items:center;gap:12px}
 .session-step-controls .outline{white-space:nowrap}
 @media(max-width:520px){.detail-navigation{gap:7px}.detail-navigation .outline{padding:8px;font-size:9px}.detail-navigation>span{font-size:9px;text-align:center}.session-step-controls{gap:7px}.session-step-controls .outline{padding:7px 8px}.session-count{font-size:9px}}
+
+.worksheet-actions{display:flex;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.worksheet article{margin:1.25rem 0}
+.worksheet article h2{margin-bottom:.5rem}
+.worksheet-answer{height:4rem;border-bottom:1px solid #a6b0ac}
+@media print{
+  body:has(.worksheet) .site-nav, .worksheet-actions, .worksheet .pdf-crop-note{display:none}
+  .worksheet{width:100%;max-width:none;padding:0;background:white;color:black}
+  .worksheet .pdf-frame,.worksheet-answer{break-inside:avoid}
+  .worksheet h2,.worksheet h3{break-after:avoid}
+  .worksheet canvas{max-width:100%;height:auto}
+}

@@ -1,0 +1,175 @@
+{
+  "host": "chematlas-student-private.chematlas-hub.workers.dev",
+  "timestamp_utc": "2026-11-13T20:35:11.977625+00:00",
+  "scope": "existing production, anonymous GET, no redirect following",
+  "results": [
+    {
+      "path": "/",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/?view=library",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/?view=detail&question=mcq-2008-1-29",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/practice-builder",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/student-version.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/curriculum-topics.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/page-audit.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/pdf.worker.min.mjs",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/questions.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/student-page-audit.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/student-questions.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/worksheet-content.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/worksheet-fragments.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/worksheet-sources.json",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-01.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-02.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-03.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-04.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-05.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-06.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-07.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/source/bank-08.pdf",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/_next/static/b59fa505-1261-4e0b-8a92-2ed03cf9c73d/_buildManifest.js",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/_next/static/css/index.Ctma5xMl.css",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/admin/question-review",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/api/admin/question-review",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/api/admin/question-review/backup",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    },
+    {
+      "path": "/api/admin/question-review/backup/import",
+      "status": 302,
+      "access_login_redirect": true,
+      "curl_exit": 0
+    }
+  ]
+}

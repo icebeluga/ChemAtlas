@@ -1,0 +1,101 @@
+# Inactive proposal. Activation and credentials require owner authorization.
+name: ChemAtlas student production promotion
+on:
+  workflow_dispatch:
+    inputs:
+      application_sha:
+        type: string
+        required: true
+      confirmation:
+        description: Enter PROMOTE STUDENT followed by a space and the exact application SHA
+        type: string
+        required: true
+permissions:
+  actions: read
+  contents: read
+concurrency:
+  group: chematlas-student-private-production
+  cancel-in-progress: false
+jobs:
+  promote:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    environment: chematlas-student-production
+    env:
+      APPLICATION_SHA: ${{ inputs.application_sha }}
+      CONFIRMATION: ${{ inputs.confirmation }}
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - name: Require exact selection and explicit dispatch authorization
+        run: |
+          [[ "$APPLICATION_SHA" =~ ^[0-9a-f]{40}$ ]]
+          [[ "$CONFIRMATION" == "PROMOTE STUDENT $APPLICATION_SHA" ]]
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: controls
+          persist-credentials: false
+      - name: Read reviewed release authorization
+        id: approval
+        env:
+          APPROVAL_SHA256: ${{ secrets.STUDENT_RELEASE_APPROVAL_SHA256 }}
+        run: python controls/scripts/release/approve.py authorize "$APPLICATION_SHA" controls/docs/releases/student-production.json
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.APPLICATION_SHA }}
+          path: application
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          artifact-ids: ${{ steps.approval.outputs.artifact_id }}
+          run-id: ${{ steps.approval.outputs.run_id }}
+          github-token: ${{ github.token }}
+          path: sealed
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.25.0'
+          package_json_file: application/package.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify sealed package and exact checkout
+        working-directory: application
+        run: |
+          python -m pip install PyMuPDF==1.26.6
+          pnpm install --frozen-lockfile
+          python ../controls/scripts/release/approve.py unpack "$APPLICATION_SHA" ../controls/docs/releases/student-production.json ../sealed
+          python ../controls/scripts/release/manifest.py verify "$APPLICATION_SHA" \
+            --workflow-sha '${{ steps.approval.outputs.validation_workflow_sha }}' \
+            --expected-inputs ../controls/docs/releases/student-inputs.json \
+            --manifest ../sealed/release-manifest.json --evidence ../sealed/evidence
+      - name: Preserve verified student hostname and package layout
+        working-directory: application
+        run: |
+          node --input-type=module -e '
+            import { readFileSync, writeFileSync } from "node:fs";
+            const config = JSON.parse(readFileSync("dist/server/wrangler.json"));
+            config.workers_dev = true;
+            writeFileSync("dist/server/wrangler.release.json", JSON.stringify(config));
+          '
+          pnpm exec wrangler deploy --dry-run --config dist/server/wrangler.release.json --keep-vars
+      - name: Run guarded production promotion and record exact versions
+        working-directory: application
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DEPLOY_APPROVED: 'true'
+          EXPECTED_PREVIOUS_VERSION: ${{ steps.approval.outputs.previous_version }}
+          RELEASE_RECORD: ${{ runner.temp }}/student-deployment.json
+          RELEASE_MANIFEST: ../sealed/release-manifest.json
+          PROMOTION_WORKFLOW_SHA: ${{ github.workflow_sha }}
+        run: node ../controls/.github/scripts/cloudflare-student-release.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: student-deployment-${{ env.APPLICATION_SHA }}
+          path: ${{ runner.temp }}/student-deployment.json
+          if-no-files-found: warn

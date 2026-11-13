@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "batch": "Batch 4 stopped after sample 7",
+  "branch": "work/automatic-pdf-boundaries",
+  "detectorCommit": "908b3f60c4ad7bc4f2e55fdee446fc0583c0ae0e",
+  "detectorSha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777",
+  "selectionLock": "research/reports/independent-validation/batch-04-lock.json",
+  "selectionLockCommit": "16c956a43b7e96adb4d95ace9466e0f61d6d0ead",
+  "scoredQuestionCount": 1,
+  "unscoredQuestionIds": [
+    "frq-2024-4-2123",
+    "mcq-2014-26-182",
+    "frq-2022-6-434",
+    "mcq-2024-47-2105"
+  ],
+  "sample07Classification": {
+    "id": "mcq-2024-23-2090",
+    "completeness": "FAIL",
+    "cleanliness": "FAIL",
+    "readability": "FAIL for target extraction",
+    "manualReview": true,
+    "routing": "correctly blocked",
+    "independentEvidenceForLaterRevision": false
+  },
+  "metrics": {
+    "completeAndClean": 0,
+    "incompleteOrContaminated": 1,
+    "correctlyBlockedManualReview": 1,
+    "falseAutomaticApprovals": 0,
+    "readableTargetContent": 0
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract": "5.5.0; scanned-page regression executed"
+  },
+  "files": [
+    {
+      "path": "research/detect_question_boundaries.py",
+      "bytes": 78852,
+      "sha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-04-lock.json",
+      "bytes": 4725,
+      "sha256": "5088e83c503b0cd06ee224ae9f0fb040e0c25ebbd002bb55699826346a5a8991"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-04-proposals.json",
+      "bytes": 12085,
+      "sha256": "9997613525b5d885d57d409cf2f449330b9d5a2c628e382559ece26f0f934792"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-04-stopped-after-sample-07.md",
+      "bytes": 4152,
+      "sha256": "ef47483d6caf35eafbe92d054bf2fd91fef6e3c4dfc314119352015e9be60750"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-04-panels/mcq-2024-23-2090-segment-1.png",
+      "bytes": 996400,
+      "sha256": "fcde7068048874292b6ecfb4fb447d5c356b40ba9a87a762ccc65386d624f0b4"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-04-panels/source-page-2091-context.png",
+      "bytes": 334916,
+      "sha256": "10f5ab546fc04bc110aec3a69ba231ffab3f37b03e88f2c009f6b04ac6e6d070"
+    },
+    {
+      "path": "public/source/bank-07.pdf",
+      "bytes": 7632388,
+      "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "artifact": "Batch 3 corrections; development cases only",
+  "baseIndependentValidationCommit": "e4e2ef6c857349192eba8c8c5b82c507ddadc01b",
+  "frozenDetectorRevision": "66445d0ba511f1e3167c472430d3d99ee69ef3fd",
+  "frozenDetectorSha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+  "correctedDetectorSha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777",
+  "selectionAndBatchResultsUnmodified": true,
+  "casesUsedForDebugging": [
+    "frq-2008-4-896",
+    "mcq-2018-4-1945"
+  ],
+  "independentEvidenceForCorrectedRevision": false,
+  "visualInspection": [
+    "batch-03-correction-panels/frq-2008-4-896-segment-1.png",
+    "batch-03-correction-panels/frq-2008-4-896-segment-2.png",
+    "batch-03-correction-panels/mcq-2018-4-1945-segment-1.png"
+  ],
+  "testCommand": "python -m unittest discover -s tests -v",
+  "testResults": {
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract": "5.5.0; scanned-page OCR regression executed"
+  },
+  "files": [
+    {
+      "path": "research/detect_question_boundaries.py",
+      "bytes": 78852,
+      "sha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777"
+    },
+    {
+      "path": "tests/test_crop_quality_regressions.py",
+      "bytes": 12816,
+      "sha256": "74a10c4b6413b106f236c3c46d7f8893e8b681eed52c9915ddcd95b6b3485f6a"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-correction-proposals.json",
+      "bytes": 6799,
+      "sha256": "8814a502e833845d9d5fb35b29f8857f8e53b921f3ea086514a06c24f1e7d349"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-corrections.md",
+      "bytes": 4344,
+      "sha256": "e3a83d0de9e2724a360153a1b7c6304176a79a39b8412c63fd6f7327f8cb09e6"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-correction-panels/frq-2008-4-896-segment-1.png",
+      "bytes": 717272,
+      "sha256": "af11533533dd9cbc1b2951647eeff630b9c633fba3cba45444cd090356159ac7"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-correction-panels/frq-2008-4-896-segment-2.png",
+      "bytes": 236363,
+      "sha256": "93f4fb6fc984f338284bfd8719f08971a05a30b561a6a4eef477ad775ba455c6"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-correction-panels/mcq-2018-4-1945-segment-1.png",
+      "bytes": 459858,
+      "sha256": "d843c9403b70d51dcb56191db1cbe935419b434cfd86e898c99f1068abe4fa4f"
+    },
+    {
+      "path": "public/source/bank-03.pdf",
+      "bytes": 13987593,
+      "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7"
+    },
+    {
+      "path": "public/source/bank-07.pdf",
+      "bytes": 7632388,
+      "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96"
+    }
+  ]
+}

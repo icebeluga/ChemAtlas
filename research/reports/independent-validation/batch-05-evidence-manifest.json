@@ -1,0 +1,51 @@
+{
+  "batch": "batch-05",
+  "detectorSha256": "11648b5870d8a988b7ec0150b6efa7ad5417a358517aa7301f091d23d852a736",
+  "selectionLockSha256": "a86d34f7793a4e0b1e9d949355d73b6038a714c48de7cfccc7e88973480fdaa8",
+  "evidence": [
+    {
+      "path": "batch-05-lock.json",
+      "sha256": "a86d34f7793a4e0b1e9d949355d73b6038a714c48de7cfccc7e88973480fdaa8"
+    },
+    {
+      "path": "batch-05-proposals.json",
+      "sha256": "0793809570a85f878a75a1566b72d96669038ec589aa09475844961b5e621365"
+    },
+    {
+      "path": "batch-05-results.json",
+      "sha256": "1b3c093a1959cc5c7952df73164f36f45ed2ddcc210aeb98794ce39a24c94fdc"
+    },
+    {
+      "path": "batch-05-report.md",
+      "sha256": "9340aec6a8b47b037aa57e4c8424b00adcd855e4039492a4c54acd35cd183b3c"
+    },
+    {
+      "path": "batch-05-panels/frq-2010-4-921-segment-1.png",
+      "sha256": "41567c7f635ca4b33c0a7472a894a51e0a5795c18f6b045562a4f83d946345f3"
+    },
+    {
+      "path": "batch-05-panels/frq-2010-4-921-segment-2.png",
+      "sha256": "53e2817d4485ea820ea6f7d15fce050c05255baa9059fdfabacf2357b4997fca"
+    },
+    {
+      "path": "batch-05-panels/frq-2011-1-1220-segment-1.png",
+      "sha256": "c5edbc49f27b1343c272764791ea516edc7477ab0864395ca770d72bde53b559"
+    },
+    {
+      "path": "batch-05-panels/frq-2016-1-385-segment-1.png",
+      "sha256": "914932e913b15c4ef90c174c5d1c3f95f8613e70eb4c687bfba178189bb502e3"
+    },
+    {
+      "path": "batch-05-panels/frq-2016-1-385-segment-2.png",
+      "sha256": "bd35df451cd90c5269af534741990c0782741d15825d288ef4af08df591d5d5b"
+    },
+    {
+      "path": "batch-05-panels/mcq-1984-53-128-segment-1.png",
+      "sha256": "5d20eba61af6fb960254eb0e120149f1ec65d741137ea04e62833f03697c3b16"
+    },
+    {
+      "path": "batch-05-panels/mcq-2002-15-754-segment-1.png",
+      "sha256": "fe79425b34c30886ce83977daa9f29a28e34d2445bc73d07126479c2ece8a80b"
+    }
+  ]
+}

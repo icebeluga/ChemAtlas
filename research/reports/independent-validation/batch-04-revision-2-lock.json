@@ -1,0 +1,106 @@
+{
+  "title": "ChemAtlas Phase 2 independent validation \u2014 Batch 4 remaining questions, revised detector lock",
+  "locked_before_rendering": true,
+  "selection_source": "Original preregistered 40-question sample; four previously uninspected questions remaining after sample 7 became development data.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "branch": "work/automatic-pdf-boundaries",
+  "detector_revision_commit": "e0bf22ddf1b2094cf5ec6f36db25005a7c9d74af",
+  "detector_sha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract_dependent_case": "executed"
+  },
+  "selection_history": {
+    "original_selection_lock": "research/reports/independent-validation/batch-04-lock.json",
+    "original_selection_lock_preserved": true,
+    "sample_7_excluded_as_development": [
+      "mcq-2024-23-2090"
+    ],
+    "additional_development_neighbors_excluded": [
+      "mcq-2024-24-2090",
+      "mcq-2024-25-2090"
+    ],
+    "replacement_questions": [],
+    "selection_changed": false,
+    "note": "This is the four uninspected remainder of the original five-question selection; no replacement is introduced."
+  },
+  "independence_checks": {
+    "question_ids_in_prior_visual_audit_results": false,
+    "catalog_pdf_pages_overlap_prior_examined_pages": false,
+    "duplicate_question_stems_among_selected": false,
+    "source_pdf_overlap_note": "Samples 8 and 16 use bank-08.pdf but pages 23\u201324 and 5 respectively; neither page nor shared stimulus overlaps.",
+    "prior_generated_proposal_metadata": "Samples 7\u201310 had metadata-only proposals on the previous revision; visual output was not rendered or scored. New crops/proposals will be generated after this lock."
+  },
+  "source_sha256": {
+    "public/source/bank-01.pdf": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+    "public/source/bank-02.pdf": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5",
+    "public/source/bank-07.pdf": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+    "public/source/bank-08.pdf": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759"
+  },
+  "questions": [
+    {
+      "sample_number": 8,
+      "question_id": "frq-2024-4-2123",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2123,
+        2124
+      ],
+      "pdf_page_numbers": [
+        23,
+        24
+      ],
+      "type": "FRQ",
+      "year": "2024",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 9,
+      "question_id": "mcq-2014-26-182",
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        182
+      ],
+      "pdf_page_numbers": [
+        182
+      ],
+      "type": "MCQ",
+      "year": "2014",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 10,
+      "question_id": "frq-2022-6-434",
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        434,
+        435
+      ],
+      "pdf_page_numbers": [
+        134,
+        135
+      ],
+      "type": "FRQ",
+      "year": "2022",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 16,
+      "question_id": "mcq-2024-47-2105",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2105
+      ],
+      "pdf_page_numbers": [
+        5
+      ],
+      "type": "MCQ",
+      "year": "2024",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    }
+  ]
+}

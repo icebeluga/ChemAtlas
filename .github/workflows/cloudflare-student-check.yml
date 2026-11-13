@@ -1,0 +1,31 @@
+name: ChemAtlas private student CI (no deploy)
+on:
+  push:
+    branches: [deployment/cloudflare-student]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run check
+      - run: pnpm run check:private
+      - run: pnpm run build
+      - run: pnpm run check:private
+      - run: pnpm test
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y tesseract-ocr
+      - run: python -m pip install --disable-pip-version-check 'PyMuPDF>=1.24,<1.28'
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v

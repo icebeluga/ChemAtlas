@@ -1,0 +1,168 @@
+{
+  "schemaVersion": 1,
+  "batch": "batch-04-revision-3",
+  "status": "stopped-after-material-failure",
+  "selectionLock": "research/reports/independent-validation/batch-04-revision-3-lock.json",
+  "detectorRevisionCommit": "88e2aadc6213e82db67ff0a456fa944fe8d374ad",
+  "detectorSha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "previousRevisionFailuresPreserved": [
+    "research/reports/independent-validation/batch-04-revision-2-results.json",
+    "research/reports/independent-validation/batch-04-lock.json"
+  ],
+  "questions": [
+    {
+      "sampleNumber": 9,
+      "id": "mcq-2014-26-182",
+      "sourcePdf": "/source/bank-01.pdf",
+      "catalogPages": [
+        182
+      ],
+      "pdfPages": [
+        182
+      ],
+      "originalCoordinates": [
+        {
+          "page": 182,
+          "rect": [
+            0,
+            55,
+            612.0,
+            557.6883544921875
+          ]
+        }
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 182,
+          "rect": [
+            26.0,
+            50.9,
+            582.83,
+            281.87
+          ]
+        }
+      ],
+      "confidence": 1.0,
+      "manualReview": false,
+      "completeness": "pass: vessel diagram, stem, and choices A-D are present",
+      "cleanliness": "pass: Q27 and unrelated adjacent-column material are outside the crop",
+      "readability": "pass",
+      "routing": "automatic; no observed false approval",
+      "classification": "pass"
+    },
+    {
+      "sampleNumber": 10,
+      "id": "frq-2022-6-434",
+      "sourcePdf": "/source/bank-02.pdf",
+      "catalogPages": [
+        434,
+        435
+      ],
+      "pdfPages": [
+        134,
+        135
+      ],
+      "originalCoordinates": [
+        {
+          "page": 434,
+          "rect": [
+            0,
+            25,
+            594.0,
+            719.0
+          ]
+        },
+        {
+          "page": 435,
+          "rect": [
+            20,
+            40,
+            574.0,
+            719.0
+          ]
+        }
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 434,
+          "rect": [
+            9.37,
+            25.0,
+            569.19,
+            619.73
+          ]
+        },
+        {
+          "page": 435,
+          "rect": [
+            33.62,
+            80.92,
+            570.1,
+            464.42
+          ]
+        }
+      ],
+      "confidence": 0.36,
+      "manualReview": true,
+      "completeness": "pass: setup, graph, data-reading diagram, parts a-b on page 434, procedure, calibration graph, and part c on page 435 are present",
+      "cleanliness": "minor issue: page 434 retains the \u201cBegin your response to QUESTION 6\u201d banner; large blank response areas and page footer are excluded",
+      "readability": "pass",
+      "routing": "manual review; continuation remains correctly blocked",
+      "classification": "minor issue"
+    },
+    {
+      "sampleNumber": 16,
+      "id": "mcq-2024-47-2105",
+      "sourcePdf": "/source/bank-08.pdf",
+      "catalogPages": [
+        2105
+      ],
+      "pdfPages": [
+        5
+      ],
+      "originalCoordinates": [
+        {
+          "page": 2105,
+          "rect": [
+            20,
+            45,
+            575.0,
+            797.0
+          ]
+        }
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 2105,
+          "rect": [
+            22.0,
+            198.0,
+            243.38,
+            422.0
+          ]
+        }
+      ],
+      "confidence": 0.76,
+      "manualReview": true,
+      "completeness": "fail: referenced particle diagram above the stem is omitted and the proposed right boundary clips stem text; answer-choice marker detection found 3 of 4",
+      "cleanliness": "fail for usable extraction: no neighboring question is included, but required diagram/stem content is outside the crop",
+      "readability": "fail: clipped stem and soft scan; the source diagram remains legible on the original page",
+      "routing": "correctly blocked for manual review; not an extraction success",
+      "classification": "critical completeness failure; development data",
+      "metadataDiscrepancy": "catalog fullText begins with Question 49 while the source page and proposal identify Question 47; provenance must be investigated, metadata unchanged"
+    }
+  ],
+  "metrics": {
+    "visuallyScored": 3,
+    "completeAndCleanPass": 1,
+    "minorIssue": 1,
+    "incompleteOrContaminated": 1,
+    "correctManualReviewBlocks": 2,
+    "falseAutomaticApprovals": 0,
+    "automaticallyApprovedAndObservedPass": 1
+  },
+  "stoppedAt": "mcq-2024-47-2105",
+  "stoppingReason": "Required figure omitted and stem clipped; preserved as development failure, not corrected or counted as validation success.",
+  "unscoredAfterStop": [],
+  "nextActions": "Investigate the page/stem mismatch and preceding diagram association as a development case. Remaining locked questions in this selection: none."
+}

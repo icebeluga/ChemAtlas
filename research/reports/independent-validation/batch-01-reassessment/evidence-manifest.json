@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "detectorRevisionSha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+  "verification": {
+    "command": "python -m unittest discover -s tests -v",
+    "result": "32 tests passed; 0 failures",
+    "elapsedSeconds": 22.225
+  },
+  "visualInspection": "All seven regenerated panels visually inspected; after final regeneration, mcq-2002-7-606 segment 2 was re-inspected specifically for final-line clipping.",
+  "files": [
+    {
+      "path": "research/detect_question_boundaries.py",
+      "sha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+      "bytes": 78072
+    },
+    {
+      "path": "tests/test_question_boundary_detection.py",
+      "sha256": "3a55de53905d4707089c16f0085dc0a8c77fbb6c08a64e71e22dd2fed7806941",
+      "bytes": 14694
+    },
+    {
+      "path": "tests/test_real_pdf_failure_regressions.py",
+      "sha256": "2898190066792f65607be7e942a7efe25b3b9196f7e10b7f1dce50fa35674c77",
+      "bytes": 9137
+    },
+    {
+      "path": "tests/test_crop_quality_regressions.py",
+      "sha256": "1a2a91533a0aff75014ac290816e2d9cc41750eef42b15c4a558da5fb9839217",
+      "bytes": 9421
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-report.md",
+      "sha256": "69b10945c12d01109ee54c1021c24dba11d202c156404d3cbd0b6c3eefd9fdb2",
+      "bytes": 4286
+    },
+    {
+      "path": "research/reports/independent-validation/preregistered-sample-40.json",
+      "sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+      "bytes": 26945
+    },
+    {
+      "path": "public/source/bank-01.pdf",
+      "sha256": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+      "bytes": 4884275
+    },
+    {
+      "path": "public/source/bank-03.pdf",
+      "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7",
+      "bytes": 13987593
+    },
+    {
+      "path": "public/source/bank-04.pdf",
+      "sha256": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304",
+      "bytes": 7717854
+    },
+    {
+      "path": "public/source/bank-05.pdf",
+      "sha256": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd",
+      "bytes": 7166311
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/proposals.json",
+      "sha256": "bbe7247e579ba2c5ebc020bc924c0666bd3cc2e97d410993a6488910e7181101",
+      "bytes": 64288
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/comparison.pdf",
+      "sha256": "271de988d9b19cb496ecfb7bf62491b0b47efaa143183a7e3d9348d7203ab266",
+      "bytes": 1582194
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/frq-2006-6-25-segment-1.png",
+      "sha256": "5dad7c7b48c5789aa9b30e41dfdb5392e6c29e3c807c01b5018e61b813f52c1c",
+      "bytes": 548970
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/frq-2006-6-25-segment-2.png",
+      "sha256": "8683c4731e30941a00dfbd6ba5518aae31de7f7eb57f3a9071fc6d9da01acb48",
+      "bytes": 377627
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/frq-2017-3-1157-segment-1.png",
+      "sha256": "789c4c981d925d8a0c941395a40468eeba44a1979c1720ae9de3dfa7ec9a6a69",
+      "bytes": 836183
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/frq-2017-3-1157-segment-2.png",
+      "sha256": "a82bf946b7330df8bf156d23689162fb343c8ab2e5ec7f46b4963a57d4e8630a",
+      "bytes": 383239
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/mcq-2002-7-606-segment-1.png",
+      "sha256": "2ea15e85a579c616665a60e9a369bc9a88f00a8da58497606287d7623539a7c7",
+      "bytes": 474476
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/mcq-2002-7-606-segment-2.png",
+      "sha256": "c16d58c0dcb31a6293b68108199803020164723832ef86ffbb06cde91691e239",
+      "bytes": 440220
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment/mcq-2014-49-1464-segment-1.png",
+      "sha256": "c108e17b9898c7d4e3e249d3595c176bfa4769216b95a2703fa388cacbffe136",
+      "bytes": 332026
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-reassessment.md",
+      "sha256": "ae2d7d0dae3c6bbac296709682bc16fbae40091daed4bdf20a3caed93abf9f62",
+      "bytes": 8098
+    }
+  ]
+}

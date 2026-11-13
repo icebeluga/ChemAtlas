@@ -1,0 +1,123 @@
+{
+  "title": "ChemAtlas Phase 2 independent crop-quality validation \u2014 Batch 4 pre-render lock",
+  "locked_before_rendering": true,
+  "selection_source": "Original preregistered 40-question sample. Remaining eligible Batch 2 samples 7\u201310, plus next eligible sample 16 to complete this batch.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "previous_verified_commit": "908b3f60c4ad7bc4f2e55fdee446fc0583c0ae0e",
+  "branch": "work/automatic-pdf-boundaries",
+  "detector_sha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 35,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract_dependent_case": "executed with Tesseract 5.5.0"
+  },
+  "selection_history": {
+    "samples_7_to_10": "Pre-registered Batch 2. Proposals were generated under the earlier revision after the original lock, but no comparison image was rendered and no visual score was assigned. Fresh proposals will be regenerated with the frozen detector in this lock.",
+    "sample_16": "First remaining eligible sample after Batch 2. Added as the fifth question without inspecting its proposal/crop output.",
+    "sample_6_excluded": "Previously visually scored and used as development/debug data.",
+    "sample_11_excluded": "Previously visually scored; its header and metadata-routing defects were used for the latest detector changes. Samples 12\u201314 had prior visual scoring; sample 15 was also a development case.",
+    "previous_audit_development_ids": [
+      "frq-2006-6-25",
+      "mcq-2002-7-606",
+      "frq-2017-3-1157",
+      "mcq-2014-49-1464",
+      "frq-2011-1-1655",
+      "frq-2008-4-896",
+      "mcq-2018-4-1945"
+    ],
+    "replacement_questions": [],
+    "selection_changed": false
+  },
+  "independence_checks": {
+    "question_ids_in_prior_visual_audit_results": false,
+    "catalog_pdf_pages_overlap_prior_examined_pages": false,
+    "duplicate_question_stems_among_selected": false,
+    "source_pdf_overlap_note": "Samples 8 and 16 use bank-08.pdf but pages 23\u201324 and 5 respectively; neither page nor shared stimulus overlaps.",
+    "prior_generated_proposal_metadata": "Samples 7\u201310 had metadata-only proposals on the previous revision; visual output was not rendered or scored. New crops/proposals will be generated after this lock."
+  },
+  "source_sha256": {
+    "public/source/bank-01.pdf": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+    "public/source/bank-02.pdf": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5",
+    "public/source/bank-07.pdf": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+    "public/source/bank-08.pdf": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759"
+  },
+  "questions": [
+    {
+      "sample_number": 7,
+      "question_id": "mcq-2024-23-2090",
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        2090
+      ],
+      "pdf_page_numbers": [
+        290
+      ],
+      "type": "MCQ",
+      "year": "2024",
+      "status": "selection locked; no crop generated under this frozen detector"
+    },
+    {
+      "sample_number": 8,
+      "question_id": "frq-2024-4-2123",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2123,
+        2124
+      ],
+      "pdf_page_numbers": [
+        23,
+        24
+      ],
+      "type": "FRQ",
+      "year": "2024",
+      "status": "selection locked; no crop generated under this frozen detector"
+    },
+    {
+      "sample_number": 9,
+      "question_id": "mcq-2014-26-182",
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        182
+      ],
+      "pdf_page_numbers": [
+        182
+      ],
+      "type": "MCQ",
+      "year": "2014",
+      "status": "selection locked; no crop generated under this frozen detector"
+    },
+    {
+      "sample_number": 10,
+      "question_id": "frq-2022-6-434",
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        434,
+        435
+      ],
+      "pdf_page_numbers": [
+        134,
+        135
+      ],
+      "type": "FRQ",
+      "year": "2022",
+      "status": "selection locked; no crop generated under this frozen detector"
+    },
+    {
+      "sample_number": 16,
+      "question_id": "mcq-2024-47-2105",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2105
+      ],
+      "pdf_page_numbers": [
+        5
+      ],
+      "type": "MCQ",
+      "year": "2024",
+      "status": "selection locked; no crop generated under this frozen detector"
+    }
+  ]
+}

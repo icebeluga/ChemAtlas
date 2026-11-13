@@ -1,0 +1,1752 @@
+{
+  "coordinateConvention": "PyMuPDF points; top-left origin; [x0,y0,x1,y1]",
+  "questions": 1542,
+  "questionsWithRegions": 1542,
+  "regionsGeometryValid": 1814,
+  "stimuli": 6,
+  "stimulusRegionsGeometryValid": 6,
+  "errors": [],
+  "warnings": [
+    {
+      "id": "frq-2005-1-6",
+      "region": 0,
+      "page": 6,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-2-7",
+      "region": 0,
+      "page": 7,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-3-8",
+      "region": 0,
+      "page": 8,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-4-10",
+      "region": 0,
+      "page": 10,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-5-11",
+      "region": 0,
+      "page": 11,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-6-12",
+      "region": 0,
+      "page": 12,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-7-13",
+      "region": 0,
+      "page": 13,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-8-14",
+      "region": 0,
+      "page": 14,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-1-20",
+      "region": 0,
+      "page": 20,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-2-21",
+      "region": 0,
+      "page": 21,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-3-22",
+      "region": 0,
+      "page": 22,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-4-23",
+      "region": 0,
+      "page": 23,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-5-24",
+      "region": 0,
+      "page": 24,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-6-25",
+      "region": 0,
+      "page": 25,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-7-27",
+      "region": 0,
+      "page": 27,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-8-28",
+      "region": 0,
+      "page": 28,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-1-56",
+      "region": 0,
+      "page": 56,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-2-58",
+      "region": 0,
+      "page": 58,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-3-59",
+      "region": 0,
+      "page": 59,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-4-61",
+      "region": 0,
+      "page": 61,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-5-63",
+      "region": 0,
+      "page": 63,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-6-65",
+      "region": 0,
+      "page": 65,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2014-2-204",
+      "region": 0,
+      "page": 204,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "mcq-2014-3-208",
+      "region": 0,
+      "page": 208,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "mcq-2014-4-212",
+      "region": 0,
+      "page": 212,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "mcq-2014-5-214",
+      "region": 0,
+      "page": 214,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "mcq-2014-6-216",
+      "region": 0,
+      "page": 216,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "mcq-2014-7-218",
+      "region": 0,
+      "page": 218,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.9306
+    },
+    {
+      "id": "frq-2004-1-292",
+      "region": 0,
+      "page": 292,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-2-293",
+      "region": 0,
+      "page": 293,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-3-294",
+      "region": 0,
+      "page": 294,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-4-295",
+      "region": 0,
+      "page": 295,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-5-296",
+      "region": 0,
+      "page": 296,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-6-297",
+      "region": 0,
+      "page": 297,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-7-298",
+      "region": 0,
+      "page": 298,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-8-299",
+      "region": 0,
+      "page": 299,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-1-305",
+      "region": 0,
+      "page": 305,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-2-307",
+      "region": 0,
+      "page": 307,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-3-308",
+      "region": 0,
+      "page": 308,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-4-310",
+      "region": 0,
+      "page": 310,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-5-312",
+      "region": 0,
+      "page": 312,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-6-314",
+      "region": 0,
+      "page": 314,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-1-320",
+      "region": 0,
+      "page": 320,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-3-322",
+      "region": 0,
+      "page": 322,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-4-323",
+      "region": 0,
+      "page": 323,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-5-325",
+      "region": 0,
+      "page": 325,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-6-326",
+      "region": 0,
+      "page": 326,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2014-2-333",
+      "region": 0,
+      "page": 333,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8801
+    },
+    {
+      "id": "frq-2014-4-336",
+      "region": 0,
+      "page": 336,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8801
+    },
+    {
+      "id": "frq-2014-5-337",
+      "region": 0,
+      "page": 337,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2015-2-346",
+      "region": 0,
+      "page": 346,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8801
+    },
+    {
+      "id": "frq-2015-3-348",
+      "region": 0,
+      "page": 348,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2015-4-350",
+      "region": 0,
+      "page": 350,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2015-5-351",
+      "region": 0,
+      "page": 351,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8801
+    },
+    {
+      "id": "frq-2015-7-353",
+      "region": 0,
+      "page": 353,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-2-360",
+      "region": 0,
+      "page": 360,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-3-361",
+      "region": 0,
+      "page": 361,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-4-363",
+      "region": 0,
+      "page": 363,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-6-366",
+      "region": 0,
+      "page": 366,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-7-367",
+      "region": 0,
+      "page": 367,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-3-376",
+      "region": 0,
+      "page": 376,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8775
+    },
+    {
+      "id": "frq-2016-4-377",
+      "region": 0,
+      "page": 377,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-5-378",
+      "region": 0,
+      "page": 378,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-7-380",
+      "region": 0,
+      "page": 380,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-2-387",
+      "region": 0,
+      "page": 387,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-5-391",
+      "region": 0,
+      "page": 391,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2016-6-392",
+      "region": 0,
+      "page": 392,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8775
+    },
+    {
+      "id": "frq-2021-2-402",
+      "region": 0,
+      "page": 402,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8902
+    },
+    {
+      "id": "frq-2021-3-405",
+      "region": 0,
+      "page": 405,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8902
+    },
+    {
+      "id": "frq-2021-4-408",
+      "region": 0,
+      "page": 408,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8902
+    },
+    {
+      "id": "frq-2021-5-410",
+      "region": 0,
+      "page": 410,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8902
+    },
+    {
+      "id": "frq-2022-2-424",
+      "region": 0,
+      "page": 424,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8966
+    },
+    {
+      "id": "frq-2022-4-430",
+      "region": 0,
+      "page": 430,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8966
+    },
+    {
+      "id": "frq-2022-5-432",
+      "region": 0,
+      "page": 432,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8966
+    },
+    {
+      "id": "frq-2022-6-434",
+      "region": 0,
+      "page": 434,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8966
+    },
+    {
+      "id": "frq-2023-2-445",
+      "region": 0,
+      "page": 445,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8876
+    },
+    {
+      "id": "frq-2023-3-448",
+      "region": 0,
+      "page": 448,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8953
+    },
+    {
+      "id": "frq-2023-4-452",
+      "region": 0,
+      "page": 452,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8953
+    },
+    {
+      "id": "frq-2023-5-454",
+      "region": 0,
+      "page": 454,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8953
+    },
+    {
+      "id": "frq-2023-6-456",
+      "region": 0,
+      "page": 456,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8953
+    },
+    {
+      "id": "frq-2023-7-458",
+      "region": 0,
+      "page": 458,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8953
+    },
+    {
+      "id": "frq-2024-2-468",
+      "region": 0,
+      "page": 468,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8864
+    },
+    {
+      "id": "frq-2024-3-471",
+      "region": 0,
+      "page": 471,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8864
+    },
+    {
+      "id": "frq-2024-4-474",
+      "region": 0,
+      "page": 474,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8864
+    },
+    {
+      "id": "frq-2024-5-476",
+      "region": 0,
+      "page": 476,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8864
+    },
+    {
+      "id": "frq-2024-6-478",
+      "region": 0,
+      "page": 478,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8864
+    },
+    {
+      "id": "frq-2024-1-484",
+      "region": 0,
+      "page": 484,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-2-487",
+      "region": 0,
+      "page": 487,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-3-489",
+      "region": 0,
+      "page": 489,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-5-493",
+      "region": 0,
+      "page": 493,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-7-496",
+      "region": 0,
+      "page": 496,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-2-501",
+      "region": 0,
+      "page": 501,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-3-505",
+      "region": 0,
+      "page": 505,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-4-508",
+      "region": 0,
+      "page": 508,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-5-509",
+      "region": 0,
+      "page": 509,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2024-7-512",
+      "region": 0,
+      "page": 512,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-1-519",
+      "region": 0,
+      "page": 519,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-3-521",
+      "region": 0,
+      "page": 521,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-4-522",
+      "region": 0,
+      "page": 522,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-6-525",
+      "region": 0,
+      "page": 525,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-7-526",
+      "region": 0,
+      "page": 526,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-8-527",
+      "region": 0,
+      "page": 527,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-2-534",
+      "region": 0,
+      "page": 534,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-3-536",
+      "region": 0,
+      "page": 536,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-6-539",
+      "region": 0,
+      "page": 539,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-1-546",
+      "region": 0,
+      "page": 546,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-2-547",
+      "region": 0,
+      "page": 547,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-3-548",
+      "region": 0,
+      "page": 548,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-4-549",
+      "region": 0,
+      "page": 549,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-5-550",
+      "region": 0,
+      "page": 550,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1999-6-551",
+      "region": 0,
+      "page": 551,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-1-558",
+      "region": 0,
+      "page": 558,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-2-559",
+      "region": 0,
+      "page": 559,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-3-560",
+      "region": 0,
+      "page": 560,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-4-561",
+      "region": 0,
+      "page": 561,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-5-562",
+      "region": 0,
+      "page": 562,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-1999-7-564",
+      "region": 0,
+      "page": 564,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-1-571",
+      "region": 0,
+      "page": 571,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-2-572",
+      "region": 0,
+      "page": 572,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-3-573",
+      "region": 0,
+      "page": 573,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-4-574",
+      "region": 0,
+      "page": 574,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-5-575",
+      "region": 0,
+      "page": 575,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-6-576",
+      "region": 0,
+      "page": 576,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-7-577",
+      "region": 0,
+      "page": 577,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-8-578",
+      "region": 0,
+      "page": 578,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-1-584",
+      "region": 0,
+      "page": 584,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-2-585",
+      "region": 0,
+      "page": 585,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-3-586",
+      "region": 0,
+      "page": 586,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-4-587",
+      "region": 0,
+      "page": 587,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-8-590",
+      "region": 0,
+      "page": 590,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-1-596",
+      "region": 0,
+      "page": 596,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-2-597",
+      "region": 0,
+      "page": 597,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-3-598",
+      "region": 0,
+      "page": 598,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-4-599",
+      "region": 0,
+      "page": 599,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-8-602",
+      "region": 0,
+      "page": 602,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-1994-3-628",
+      "region": 0,
+      "page": 628,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8597
+    },
+    {
+      "id": "mcq-1994-8-633",
+      "region": 0,
+      "page": 633,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8595
+    },
+    {
+      "id": "mcq-1999-3-703",
+      "region": 0,
+      "page": 703,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8613
+    },
+    {
+      "id": "mcq-1999-4-704",
+      "region": 0,
+      "page": 704,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8609
+    },
+    {
+      "id": "mcq-1999-5-705",
+      "region": 0,
+      "page": 705,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8606
+    },
+    {
+      "id": "mcq-1999-6-706",
+      "region": 0,
+      "page": 706,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.862
+    },
+    {
+      "id": "frq-2001-1-772",
+      "region": 0,
+      "page": 772,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-2-773",
+      "region": 0,
+      "page": 773,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-3-774",
+      "region": 0,
+      "page": 774,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-4-775",
+      "region": 0,
+      "page": 775,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2001-8-778",
+      "region": 0,
+      "page": 778,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-1-839",
+      "region": 0,
+      "page": 839,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-2-840",
+      "region": 0,
+      "page": 840,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-4-843",
+      "region": 0,
+      "page": 843,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-5-844",
+      "region": 0,
+      "page": 844,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-6-845",
+      "region": 0,
+      "page": 845,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-7-846",
+      "region": 0,
+      "page": 846,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2005-8-847",
+      "region": 0,
+      "page": 847,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-1-853",
+      "region": 0,
+      "page": 853,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-4-855",
+      "region": 0,
+      "page": 855,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2006-6-858",
+      "region": 0,
+      "page": 858,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-1-865",
+      "region": 0,
+      "page": 865,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-2-867",
+      "region": 0,
+      "page": 867,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-3-868",
+      "region": 0,
+      "page": 868,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-4-869",
+      "region": 0,
+      "page": 869,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-5-870",
+      "region": 0,
+      "page": 870,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-6-871",
+      "region": 0,
+      "page": 871,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2003-7-872",
+      "region": 0,
+      "page": 872,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-1-879",
+      "region": 0,
+      "page": 879,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-2-880",
+      "region": 0,
+      "page": 880,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-3-881",
+      "region": 0,
+      "page": 881,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-4-882",
+      "region": 0,
+      "page": 882,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-5-883",
+      "region": 0,
+      "page": 883,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-6-884",
+      "region": 0,
+      "page": 884,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-7-885",
+      "region": 0,
+      "page": 885,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2004-8-886",
+      "region": 0,
+      "page": 886,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-1-892",
+      "region": 0,
+      "page": 892,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-2-893",
+      "region": 0,
+      "page": 893,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-4-896",
+      "region": 0,
+      "page": 896,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-5-898",
+      "region": 0,
+      "page": 898,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2008-6-900",
+      "region": 0,
+      "page": 900,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-3-908",
+      "region": 0,
+      "page": 908,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-4-909",
+      "region": 0,
+      "page": 909,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-5-911",
+      "region": 0,
+      "page": 911,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2009-6-912",
+      "region": 0,
+      "page": 912,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2010-1-918",
+      "region": 0,
+      "page": 918,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2010-4-921",
+      "region": 0,
+      "page": 921,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2010-6-925",
+      "region": 0,
+      "page": 925,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-1-931",
+      "region": 0,
+      "page": 931,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-2-932",
+      "region": 0,
+      "page": 932,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-3-933",
+      "region": 0,
+      "page": 933,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-4-934",
+      "region": 0,
+      "page": 934,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-6-937",
+      "region": 0,
+      "page": 937,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-1-944",
+      "region": 0,
+      "page": 944,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-3-946",
+      "region": 0,
+      "page": 946,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-4-947",
+      "region": 0,
+      "page": 947,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-5-948",
+      "region": 0,
+      "page": 948,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-6-949",
+      "region": 0,
+      "page": 949,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-7-950",
+      "region": 0,
+      "page": 950,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "frq-2011-8-951",
+      "region": 0,
+      "page": 951,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2013-1-983",
+      "region": 0,
+      "page": 983,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2013-2-987",
+      "region": 0,
+      "page": 987,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2013-3-991",
+      "region": 0,
+      "page": 991,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2013-5-999",
+      "region": 0,
+      "page": 999,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2013-6-1005",
+      "region": 0,
+      "page": 1005,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2016-2-1085",
+      "region": 0,
+      "page": 1085,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2016-3-1089",
+      "region": 0,
+      "page": 1089,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2016-4-1093",
+      "region": 0,
+      "page": 1093,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2016-5-1095",
+      "region": 0,
+      "page": 1095,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2016-6-1097",
+      "region": 0,
+      "page": 1097,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2016-7-1099",
+      "region": 0,
+      "page": 1099,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2018-2-1224",
+      "region": 0,
+      "page": 1224,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2018-3-1228",
+      "region": 0,
+      "page": 1228,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2018-4-1232",
+      "region": 0,
+      "page": 1232,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2018-5-1234",
+      "region": 0,
+      "page": 1234,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2018-6-1236",
+      "region": 0,
+      "page": 1236,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2018-7-1238",
+      "region": 0,
+      "page": 1238,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2012-1-1377",
+      "region": 0,
+      "page": 1377,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2012-2-1381",
+      "region": 0,
+      "page": 1381,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2012-3-1385",
+      "region": 0,
+      "page": 1385,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2012-5-1391",
+      "region": 0,
+      "page": 1391,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2012-6-1395",
+      "region": 0,
+      "page": 1395,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2014-2-1477",
+      "region": 0,
+      "page": 1477,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2014-3-1481",
+      "region": 0,
+      "page": 1481,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2014-4-1485",
+      "region": 0,
+      "page": 1485,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2014-5-1487",
+      "region": 0,
+      "page": 1487,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2014-6-1489",
+      "region": 0,
+      "page": 1489,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-2-1568",
+      "region": 0,
+      "page": 1568,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-3-1572",
+      "region": 0,
+      "page": 1572,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-4-1576",
+      "region": 0,
+      "page": 1576,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-5-1578",
+      "region": 0,
+      "page": 1578,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-6-1580",
+      "region": 0,
+      "page": 1580,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-7-1582",
+      "region": 0,
+      "page": 1582,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8579
+    },
+    {
+      "id": "mcq-2015-3-1610",
+      "region": 0,
+      "page": 1610,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-4-1612",
+      "region": 0,
+      "page": 1612,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2015-6-1614",
+      "region": 0,
+      "page": 1614,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2022-39-1683",
+      "region": 0,
+      "page": 1683,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2022-58-1691",
+      "region": 0,
+      "page": 1691,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2022-59-1696",
+      "region": 0,
+      "page": 1696,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2022-60-1701",
+      "region": 0,
+      "page": 1701,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2022-62-1709",
+      "region": 0,
+      "page": 1709,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2023-61-1783",
+      "region": 0,
+      "page": 1783,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2023-66-1804",
+      "region": 0,
+      "page": 1804,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2023-67-1808",
+      "region": 0,
+      "page": 1808,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    },
+    {
+      "id": "mcq-2024-13-2151",
+      "region": 0,
+      "page": 2151,
+      "code": "near_full_page_crop",
+      "rect_area_ratio": 0.8611
+    }
+  ],
+  "pageRotations": {
+    "0": 1814
+  },
+  "sourceSegments": [
+    {
+      "url": "/source/bank-01.pdf",
+      "from": 1,
+      "to": 300,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-02.pdf",
+      "from": 301,
+      "to": 600,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-03.pdf",
+      "from": 601,
+      "to": 900,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-04.pdf",
+      "from": 901,
+      "to": 1200,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-05.pdf",
+      "from": 1201,
+      "to": 1500,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-06.pdf",
+      "from": 1501,
+      "to": 1800,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-07.pdf",
+      "from": 1801,
+      "to": 2100,
+      "available": true,
+      "pageCount": 300
+    },
+    {
+      "url": "/source/bank-08.pdf",
+      "from": 2101,
+      "to": 2159,
+      "available": true,
+      "pageCount": 59
+    }
+  ]
+}

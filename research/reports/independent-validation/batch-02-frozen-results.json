@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "batch": "Batch 2 \u2014 stopped after first visual inspection because of material crop-cleanliness failure",
+  "frozenSelectionLock": "research/reports/independent-validation/batch-02-lock.json",
+  "frozenDetectorCommit": "acfead30f34ce9e48842c6c4b663bc358b7f1fac",
+  "frozenDetectorSha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+  "originalPreregistrationPreserved": true,
+  "scoredQuestions": 1,
+  "unscoredSelectedQuestions": [
+    "mcq-2024-23-2090",
+    "frq-2024-4-2123",
+    "mcq-2014-26-182",
+    "frq-2022-6-434"
+  ],
+  "unscoredProposalNotice": "Proposals and coordinates were generated after the selection lock for all five selected questions, but only sample 6 was rendered and visually scored. Samples 7\u201310 remain unscored; do not treat proposal metadata as audit outcomes.",
+  "metrics": {
+    "complete_and_clean_crops": 0,
+    "incomplete_or_contaminated_crops": 1,
+    "correctly_blocked_manual_review_cases": 0,
+    "false_automatic_approvals": 1
+  },
+  "question": {
+    "sampleNumber": 6,
+    "id": "frq-2011-1-1655",
+    "sourcePdf": "public/source/bank-06.pdf",
+    "catalogPage": 1655,
+    "originalCatalogSegments": [
+      [
+        0,
+        163.47113037109375,
+        612.0,
+        315.2076416015625
+      ],
+      [
+        0,
+        315.2076416015625,
+        612.0,
+        737.0
+      ]
+    ],
+    "proposedSegments": [
+      {
+        "page": 1655,
+        "rect": [
+          8.0,
+          304.21,
+          605.65,
+          792.0
+        ],
+        "confidence": 0.82,
+        "confidenceBand": "high",
+        "manualReview": false
+      }
+    ],
+    "contentCompleteness": "PASS",
+    "cropCleanliness": "FAIL",
+    "readability": "PASS",
+    "reviewRouting": "FAIL \u2014 automatic proposal despite visible source footer watermark/QR and excess blank response area",
+    "defects": [
+      "Crop reaches page bottom and includes Studocu branding, QR code and downloader/footer overlay.",
+      "Substantial blank response area remains below the final subpart."
+    ],
+    "contentPresent": [
+      "Bromine stem",
+      "parts (a) and (b)",
+      "PES graph and axes",
+      "subparts (i) and (ii)"
+    ],
+    "clipping": "No required text, graph, axes, or labels visibly clipped.",
+    "manualReview": false,
+    "confidence": 0.82
+  },
+  "visualEvidence": {
+    "path": "research/reports/independent-validation/batch-02-panels/frq-2011-1-1655-segment-1.png",
+    "sha256": "382f85135527fc70ef66a67a40b6e96574b5fe05cbc7d1bbe3a8c0dd7f285b44",
+    "bytes": 588038
+  },
+  "sourcePdfSha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+  "status": "Frozen-revision development failure; exclude from independent accuracy results for any revised detector. Batch stopped before visually scoring remaining questions."
+}

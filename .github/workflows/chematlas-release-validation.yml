@@ -20,9 +20,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: ${{ fromJSON((github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref_name == 'release/chematlas-stage5-controls')) && '["candidate","stage4"]' || '["candidate"]') }}
+        target: ${{ fromJSON(github.event_name == 'push' && github.ref_name == 'release/chematlas-stage5-controls' && '["candidate","stage4"]' || '["candidate"]') }}
     env:
-      APPLICATION_SHA: ${{ matrix.target == 'stage4' && '3c78883006beb48c2dab68443e6e93b87bb9a769' || (github.event_name == 'pull_request' && '3c78883006beb48c2dab68443e6e93b87bb9a769') || inputs.application_sha || github.sha }}
+      APPLICATION_SHA: ${{ matrix.target == 'stage4' && '3c78883006beb48c2dab68443e6e93b87bb9a769' || inputs.application_sha || '3c78883006beb48c2dab68443e6e93b87bb9a769' }}
       WORKFLOW_SHA: ${{ github.workflow_sha }}
     steps:
       - name: Validate selection syntax

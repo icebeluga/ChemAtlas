@@ -16,6 +16,8 @@ The Stage 4 handoff added only evidence to the tested application. At inspection
 
 ## Validation and identity
 
+[Passing validation, exact Stage 4 artifact and digests](validation.md) · [Verified build manifest](stage4-verified-build.json)
+
 The [no-deploy workflow](../../.github/workflows/chematlas-release-validation.yml) checks out the workflow and exact application separately. It runs on release branch pushes and pull requests targeting the approved branch. Stage 5 pushes also validate the exact Stage 4 application against the [reviewed input manifest](stage4-inputs.json). The branch builds use a clean Git checkout, frozen pnpm install, typecheck, Node and Python suites, production build, Wrangler dry run, protected Worker checks and desktop/mobile browser smoke. A successful run retains the sealed tar archive, hash, JSON manifests and validation logs as an Actions artifact.
 
 From a clean checkout of the candidate and with the pinned Node, pnpm, Python, PyMuPDF, Tesseract and Playwright/Chromium installed, use the same entry point locally. Keep the controls checkout and output directory outside the application checkout.

@@ -1,7 +1,7 @@
-/** @typedef {"desk" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit"} ChemAtlasView */
+/** @typedef {"desk" | "unit" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit"} ChemAtlasView */
 /** @typedef {{ view: ChemAtlasView; unit: string; topic: string; type: "MCQ" | "FRQ" | "Mixed"; query: string; questionId: string; sessionIds: string[]; step: number }} ChemAtlasLocation */
 
-const views = new Set(["desk", "library", "builder", "detail", "practice", "progress", "review", "banks", "audit"]);
+const views = new Set(["desk", "unit", "library", "builder", "detail", "practice", "progress", "review", "banks", "audit"]);
 
 /**
  * Read ChemAtlas's shareable route and filter state from a location search string.

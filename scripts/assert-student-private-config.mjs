@@ -24,6 +24,12 @@ if (!existsSync(builtPath)) {
   const assetRoot = resolve(dirname(builtPath), built.assets.directory);
   assert.equal(assetRoot, fileURLToPath(new URL("../dist/client", import.meta.url)));
   const manifest = JSON.parse(readFileSync(resolve(assetRoot, ".vite/manifest.json"), "utf8"));
+  const studentFiles = readdirSync(assetRoot, { recursive: true });
+  for (const path of studentFiles) {
+    assert.ok(!/(?:^|[\/])(?:admin|review-dashboard|question-review|question-images)(?:[\/.-]|$)/i.test(path),
+      `Private review asset in student build: ${path}`);
+  }
+  assert.ok(!Object.keys(manifest).some(path => path.includes("/admin/")), "Private route in student manifest.");
   const catalog = JSON.parse(readFileSync(resolve(assetRoot, "questions.json"), "utf8"));
   assert.equal(catalog.units.length, 9);
   assert.ok(catalog.questions.length > 0 && catalog.questions.length === catalog.stats.questions);
@@ -37,6 +43,9 @@ if (!existsSync(builtPath)) {
     ...clientFiles,
     "curriculum-topics.json",
     "pdf.worker.min.mjs",
+    "worksheet-sources.json",
+    "worksheet-content.json",
+    "worksheet-fragments.pdf",
     ...catalog.sourceFiles.map(({ url }) => url.replace(/^\//, "")),
   ]) {
     assert.ok(statSync(resolve(assetRoot, file)).size > 0, `Empty deployment asset: ${file}`);

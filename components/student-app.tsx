@@ -9,15 +9,14 @@ import { buildChemAtlasUrl, parseChemAtlasLocation } from "../app/navigation.mjs
 import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
 
 import { PracticeBuilder } from "@/components/practice-builder";
-import { UnitDirectoryCard } from "@/components/ui/atlas-controls";
+import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
 import { addEntries, backupSchema, newDraft, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup } from "@/lib/worksheet";
-import Link from "next/link";
 
 const emptySourceFiles: NonNullable<Catalog["sourceFiles"]> = [];
 
-type AppView = "desk" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit";
+type AppView = "desk" | "unit" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit";
 type RouteUpdates = { unit?: string | null; topic?: string | null; type?: string | null; query?: string | null; questionId?: string | null; sessionIds?: string[] | null; step?: number | null };
 
 function subscribeToNavigation(callback: () => void) {
@@ -190,6 +189,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   }, []);
   const bankResultsRef = useRef<HTMLDivElement>(null);
   const worksheetRef = useRef<HTMLElement>(null);
+  const [unitMenuOpen, setUnitMenuOpen] = useState(false);
   const [toolsOpen, setToolsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [resultPage, setResultPage] = useState(0);
@@ -401,9 +401,21 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       <button className="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded={mobileMenuOpen} onClick={()=>setMobileMenuOpen(open=>!open)}><Menu size={21}/></button>
       <button className="brand-lockup" onClick={()=>worksheet ? window.location.assign("/") : navigate("desk")} aria-label="ChemAtlas home"><span className="brandmark">C<span>✦</span></span><span className="brand-copy"><b>ChemAtlas</b><small>AP Chemistry Studio</small></span></button>
       <nav className={`top-navigation ${mobileMenuOpen?"mobile-open":""}`} aria-label="Main navigation">
-        <button className={`top-nav-item ${!worksheet&&view==="desk"?"selected":""}`} aria-current={!worksheet&&view==="desk"?"page":undefined} onClick={()=>{navigate("desk");setMobileMenuOpen(false);}}><BookOpen size={21}/><span>Browse by unit</span><ChevronDown className="nav-chevron" size={16}/></button>
+        <div className="student-unit-nav" onKeyDown={event => { if (event.key === "Escape") { setUnitMenuOpen(false); event.currentTarget.querySelector<HTMLButtonElement>(".unit-menu-toggle")?.focus(); } }}>
+          <button className={`top-nav-item ${!worksheet && (view === "desk" || view === "unit") ? "selected" : ""}`}
+            aria-current={!worksheet && view === "desk" ? "page" : undefined}
+            onClick={() => { navigate("desk"); setUnitMenuOpen(false); setMobileMenuOpen(false); }}>
+            <BookOpen size={21}/><span>Browse by unit</span>
+          </button>
+          <button className="unit-menu-toggle" aria-label="Show all units" aria-expanded={unitMenuOpen}
+            aria-controls="student-unit-menu" onClick={() => { setUnitMenuOpen(open => !open); setToolsOpen(false); }}><ChevronDown size={16}/></button>
+          {unitMenuOpen && <div id="student-unit-menu" className="student-unit-menu">{catalog.units.map((unit, i) =>
+            <button key={unit.id} onClick={() => { navigate("unit", { unit: unit.id, topic: "all", type: "Mixed", query: "" }); setUnitMenuOpen(false); setMobileMenuOpen(false); }}>
+              <small>Unit {i + 1}</small>{unit.name}
+            </button>)}</div>}
+        </div>
         <button className={`top-nav-item ${view==="library"||view==="detail"?"selected":""}`} aria-current={view==="library"?"page":undefined} onClick={()=>{navigate("library");setMobileMenuOpen(false);}}><LibraryBig size={20}/><span>Question bank</span></button>
-        <Link className={`top-nav-item ${worksheet?"selected":""}`} href="/practice-builder" aria-current={worksheet?"page":undefined}><FileText size={20}/><span>Practice Builder</span></Link>
+        <a className={`top-nav-item ${worksheet?"selected":""}`} href="/practice-builder" aria-current={worksheet?"page":undefined}><FileText size={20}/><span>Practice Builder</span></a>
         <button className={`top-nav-item ${view==="builder"||view==="practice"?"selected":""}`} aria-current={view==="builder"?"page":undefined} onClick={()=>{navigate("builder");setMobileMenuOpen(false);}}><Activity size={20}/><span>Practice sessions</span></button>
         <div className="tools-menu"><button className={`top-nav-item tools-toggle ${["progress","review","audit","banks"].includes(view)?"selected":""}`} aria-haspopup="menu" aria-expanded={toolsOpen} onClick={()=>setToolsOpen(open=>!open)}><LayoutGrid size={20}/><span>Tools</span><ChevronDown size={16}/></button>
           {toolsOpen&&<div className="tools-popover" role="menu"><button role="menuitem" onClick={()=>{navigate("progress");setToolsOpen(false);setMobileMenuOpen(false);}}><Activity size={17}/> Progress</button><button role="menuitem" onClick={()=>{setReviewKind("review");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><span className="menu-count">{reviewQuestions.length}</span> Review queue</button><button role="menuitem" onClick={()=>{navigate("audit");setToolsOpen(false);setMobileMenuOpen(false);}}><FileText size={17}/> Source page audit</button><button role="menuitem" onClick={()=>{setReviewKind("legacy");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><BookOpen size={17}/> Legacy content</button><button role="menuitem" onClick={()=>{navigate("banks");setToolsOpen(false);setMobileMenuOpen(false);}}><Beaker size={17}/> Manage test banks</button></div>}
@@ -430,10 +442,22 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
           <div className="stat atlas-metric--teal"><span className="stat-icon"><FileText size={18} aria-hidden="true" /></span><div><small>TOTAL FRQs</small><b>{questions.filter(q=>q.type==="FRQ").length.toLocaleString()}</b></div></div>
         </div>
         <div className="section-head topic-head"><div><div className="eyebrow">COLLEGE BOARD COURSE FRAMEWORK</div><h2>All nine units</h2></div></div>
-        <div className="unit-grid">{catalog.units.map((u,i)=>{const count=available.filter(q=>(q.relatedTopics||[]).some(id=>topics.find(t=>t.id===id)?.unit===u.id)).length;return <UnitDirectoryCard key={u.id} unit={i+1} label={`Unit ${i+1}`} title={u.name} onClick={()=>navigate("library", { unit: u.id, topic: "all" })}>{u.topics.length} topics · {count.toLocaleString()} classified questions</UnitDirectoryCard>})}</div>
+        <div className="unit-grid">{catalog.units.map((u,i)=>{const count=available.filter(q=>(q.relatedTopics||[]).some(id=>topics.find(t=>t.id===id)?.unit===u.id)).length;return <UnitDirectoryCard key={u.id} unit={i+1} label={`Unit ${i+1}`} title={u.name} onClick={()=>navigate("unit", { unit: u.id, topic: "all", type: "Mixed", query: "" })}>{u.topics.length} topics · {count.toLocaleString()} classified questions</UnitDirectoryCard>})}</div>
         <div className="footnote">Question images are rendered from the original PDF pages. Topic assignments include a reasoning note. Legacy material and unresolved source items are kept separately. <a href="/classification-method.md" target="_blank" rel="noreferrer">Read the classification method</a> · <a href="/page-audit.json" target="_blank" rel="noreferrer">Source coverage audit</a></div>
       </div>}
 
+      {view === "unit" && <div className="page unit-detail-page">
+        <button className="back" onClick={() => navigate("desk")}>← All units</button>
+        <header className="unit-detail-heading">
+          <div><h1 className="page-title">{catalog.units.find(unit => unit.id === selectedUnit)?.name ?? "Choose a unit"}</h1>
+            <p className="muted">Choose a topic to browse its original AP Chemistry questions.</p></div>
+          {selectedUnit !== "all" && <button className="primary" onClick={() => navigate("library", { topic: "all" })}>View unit questions →</button>}
+        </header>
+        <div className="unit-topic-page-grid">{topics.filter(topic => topic.unit === selectedUnit).map(topic =>
+          <DirectoryCard key={topic.id} label={topic.id} title={topic.name} onClick={() => navigate("library", { topic: topic.id })}>
+            {available.filter(question => question.relatedTopics?.includes(topic.id)).length} classified questions
+          </DirectoryCard>)}</div>
+      </div>}
       {view === "library" && <div className="page bank-page">
         <div className="bank-fixed">
           <h1 className="page-title">Question bank</h1>
@@ -444,7 +468,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
         </div>
         <div className="library-results-head"><b>{selectedTopic==="all"?(selectedUnit==="all"?"All classified questions":`${catalog.units.find(u=>u.id===selectedUnit)?.name} · all topics`):`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`}</b><span role="status">{filteredQuestions.length.toLocaleString()} catalog entries · uncertain matches are in Review</span></div>
         {worksheetIds.length > 0 && <div className="bank-worksheet-bar">
-          <Link className="outline" href="/practice-builder">View worksheet ({worksheetIds.length})</Link>
+          <a className="outline" href="/practice-builder">View worksheet ({worksheetIds.length})</a>
         </div>}
         <div className="bank-results-scroll" ref={bankResultsRef} role="region" aria-label="Question bank results" tabIndex={0}>
         {selectedTopic!=="all" && catalog.topicDetails?.[selectedTopic] && <div className="topic-definition"><b>{selectedTopic} · {topics.find(t=>t.id===selectedTopic)?.name}</b><p>{catalog.topicDetails[selectedTopic].description}</p><small>College Board CED · learning objectives {catalog.topicDetails[selectedTopic].learningObjectives?.join(", ") || "see curriculum reference"}</small></div>}

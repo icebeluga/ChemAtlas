@@ -6,7 +6,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 // connector preview Worker, or development review API.
 export default defineConfig({
   plugins: [
-    vinext(),
+    vinext({ appDir: "student" }),
     cloudflare({
       configPath: "./wrangler.student.jsonc",
       viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },

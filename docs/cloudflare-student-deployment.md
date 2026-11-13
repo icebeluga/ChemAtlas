@@ -1,9 +1,10 @@
 # ChemAtlas — private Cloudflare student deployment runbook
 
-**State: PREPARATION ONLY. NO DEPLOYMENT AUTHORIZED.**
+**Production updates require owner approval.**
 
 Source: `integration/chematlas-unified` at `cb3fcca3782778b07e948e4be9468e2b55dcd65b`.
-Target branch: `deployment/cloudflare-student`.
+Student baseline: `deployment/cloudflare-student`.
+Asset routing repair: `fix/cloudflare-student-deployment`.
 Worker script: `worker/index.ts`.
 Worker configuration: `wrangler.student.jsonc`.
 Private review Worker: `chematlas-private-question-review` (not changed).
@@ -11,7 +12,9 @@ Private review Worker: `chematlas-private-question-review` (not changed).
 ## Architecture and isolation
 
 Vinext runs the student Next.js-compatible interface inside Cloudflare Workers.
-The Vite plugin builds the Worker and assets. The separate private review
+The Vite plugin builds the Worker and assets. Use the generated Wrangler
+configuration for upload so the server modules and the matching client asset
+manifest come from the same build. The separate private review
 Worker retains its own Cloudflare Access policy and D1/R2 storage; no D1/R2
 review bindings are declared on the student Worker.
 
@@ -32,7 +35,11 @@ Cloudflare Workers with Static Assets may lack `ctx.access` even after Access
 authentication, so the app validates the `Cf-Access-Jwt-Assertion` header.
 The source Wrangler config sets `assets.run_worker_first: true` to route
 **all** HTML, scripts, CSS, catalog JSON, API and original PDF requests through
-the guard. The built Wrangler output must retain this setting.
+the guard. The built Wrangler output must retain this setting. The Worker serves
+`/_next/static/` GET and HEAD requests through `env.ASSETS` after verification.
+The server-side `dist/server/_next/static/` modules are Worker imports. Browser
+assets are under `dist/client/_next/static/` and must be uploaded through the
+asset directory in the generated Wrangler configuration.
 If the Access header is not forwarded in the final runtime, do **not** weaken
 the guard; treat it as a release blocker and resolve the routing first.
 
@@ -46,7 +53,8 @@ pnpm install --frozen-lockfile
 pnpm run check
 pnpm run check:private
 pnpm run build
-pnpm run check:private
+pnpm run check:private --built
+pnpm exec wrangler deploy --config dist/server/wrangler.json --dry-run
 pnpm test
 python -m unittest discover -s tests -p 'test_*.py' -v
 ```
@@ -64,10 +72,10 @@ simulations, but because Static Assets can remove `ctx.access` from the
 Worker, the JWT header delivery still needs separate verification using a
 real protected preview after approval.
 
-## Owner-only Cloudflare Access setup (future; owner action required)
+## Cloudflare Access setup for a new Worker
 
-**Do not perform these steps as a deployment in this task.** When the owner
-authorizes a release:
+For the existing student Worker, use the update steps below and retain its
+current Access policy. These setup steps apply to a new installation.
 
 1. Enable Cloudflare Zero Trust in the intended Cloudflare account. Configure
    **One-Time PIN** as an identity provider/login method. Do not configure
@@ -98,17 +106,28 @@ authorizes a release:
    routes during setup. Only after the owner approves the Access policy
    **and** a verified protected endpoint may a hostname/preview be enabled.
 
-Recommended final release command **for later, not executed now**:
+## Update the existing protected student Worker
+
+Use these steps after production approval. Confirm in the dashboard that the
+existing Worker-level Access policy covers all traffic and that both student
+Access bindings are present. Record the active version for rollback. The
+checked-in configuration disables `workers.dev` for safe preparation, while the
+existing production site uses that hostname. Preserve it with a release-only
+copy of the generated configuration in the same directory, so the `../client`
+asset directory and module paths still resolve.
 
 ```sh
+pnpm install --frozen-lockfile
 pnpm run build
-pnpm run check:private
-pnpm exec wrangler deploy --config dist/server/wrangler.json
+pnpm run check:private --built
+node --input-type=module -e 'import { readFileSync, writeFileSync } from "node:fs"; const config = JSON.parse(readFileSync("dist/server/wrangler.json", "utf8")); config.workers_dev = true; writeFileSync("dist/server/wrangler.release.json", JSON.stringify(config));'
+pnpm exec wrangler deploy --config dist/server/wrangler.release.json --keep-vars --dry-run
+pnpm exec wrangler deploy --config dist/server/wrangler.release.json --keep-vars
 ```
 
-Do not invoke that deploy command until the owner approves. Inspect generated
-config each time before release; no deploy script is provided that could
-accidentally skip the access verification step.
+Run the signed-in and anonymous checks below after deploying. Roll back to the
+previous version if the protected hostname, asset routing, or authorization
+checks fail.
 
 ### Authorized users (dashboard-only, no code changes)
 
@@ -121,8 +140,7 @@ policy. A URL alone never grants admission.
 
 ## Browser and security release checklist
 
-All checks below must be executed against the **actual** deployed Access
-application in a deliberately approved protected test setup. Unit tests
+Run the hosted checks against the actual protected Worker after approval. Unit tests
 of JWT verification alone **do not count as Cloudflare authentication
 verification**. Record the URL, UTC timestamp, tested email, HTTP status,
 and screenshot/log for each result.

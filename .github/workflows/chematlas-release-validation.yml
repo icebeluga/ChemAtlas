@@ -1,0 +1,72 @@
+name: ChemAtlas release validation
+on:
+  push:
+    branches: ['release/**']
+  pull_request:
+    branches: [main, 'release/**']
+  workflow_dispatch:
+    inputs:
+      application_sha:
+        description: Exact 40-character application commit SHA
+        required: true
+        type: string
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: Validate student release (no deploy)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      matrix:
+        application_sha: ${{ fromJSON(github.event_name == 'push' && github.ref_name == 'release/chematlas-stage5-controls' && format('["{0}","3c78883006beb48c2dab68443e6e93b87bb9a769"]', github.sha) || format('["{0}"]', inputs.application_sha || github.sha)) }}
+    env:
+      APPLICATION_SHA: ${{ matrix.application_sha }}
+      WORKFLOW_SHA: ${{ github.workflow_sha }}
+      CHEMATLAS_PLAYWRIGHT: ${{ runner.temp }}/chematlas-browser/node_modules/playwright
+    steps:
+      - name: Validate selection syntax
+        run: '[[ "$APPLICATION_SHA" =~ ^[0-9a-f]{40}$ ]]'
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: controls
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.APPLICATION_SHA }}
+          path: application
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.25.0'
+          package_json_file: application/package.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+          python -m pip install PyMuPDF==1.26.6
+          npm install --prefix "$RUNNER_TEMP/chematlas-browser" --no-save playwright@1.62.1
+          "$RUNNER_TEMP/chematlas-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Validate exact candidate
+        working-directory: application
+        env:
+          REVIEWED_SHA: 3c78883006beb48c2dab68443e6e93b87bb9a769
+        run: |
+          expected=()
+          if [[ "$APPLICATION_SHA" == "$REVIEWED_SHA" ]]; then
+            expected=(../controls/docs/stage-5/stage4-inputs.json)
+          fi
+          bash ../controls/scripts/release/validate.sh "$APPLICATION_SHA" "$WORKFLOW_SHA" "$RUNNER_TEMP/student-release" "${expected[@]}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: student-release-${{ env.APPLICATION_SHA }}
+          path: ${{ runner.temp }}/student-release/
+          if-no-files-found: error

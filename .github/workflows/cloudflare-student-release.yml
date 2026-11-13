@@ -1,0 +1,78 @@
+name: ChemAtlas student Cloudflare release
+on:
+  workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy to production after the read-only Cloudflare preflight
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: chematlas-student-private-production
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      APPROVED_COMMIT: 63fd7e4b5287d74f66227742e8b2a4f47e37920f
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - name: Check out workflow support files
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.workflow_sha }}
+          path: release-workflow
+          persist-credentials: false
+      - name: Check out the approved application
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.APPROVED_COMMIT }}
+          path: application
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: application/package.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+          cache-dependency-path: application/pnpm-lock.yaml
+      - name: Build and validate approved release
+        working-directory: application
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD)" = "$APPROVED_COMMIT"
+          pnpm install --frozen-lockfile
+          pnpm run check
+          pnpm run check:private
+          pnpm run build
+          pnpm run check:private --built
+          pnpm test
+          node --input-type=module -e '
+            import assert from "node:assert/strict";
+            import { readFileSync, writeFileSync } from "node:fs";
+            const config = JSON.parse(readFileSync("dist/server/wrangler.json", "utf8"));
+            assert.equal(config.name, "chematlas-student-private");
+            assert.equal(config.assets.directory, "../client");
+            assert.equal(config.assets.binding, "ASSETS");
+            assert.equal(config.assets.run_worker_first, true);
+            assert.equal(config.workers_dev, false);
+            assert.equal(config.preview_urls, false);
+            assert.deepEqual(config.vars ?? {}, {});
+            assert.ok(!config.routes && !config.route);
+            config.workers_dev = true;
+            writeFileSync("dist/server/wrangler.release.json", JSON.stringify(config));
+          '
+          pnpm exec wrangler deploy --config dist/server/wrangler.release.json --keep-vars --dry-run
+      - name: Verify production settings and record rollback version
+        working-directory: application
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DEPLOY_APPROVED: ${{ inputs.deploy }}
+        run: node ../release-workflow/.github/scripts/cloudflare-student-release.mjs

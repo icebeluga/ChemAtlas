@@ -191,8 +191,8 @@ def main():
                "catalog_sha256": inputs["catalog"]["sha256"], "catalog_count": inputs["catalog"]["count"]}
     version_path = "dist/client/student-version.json"
     if args.mode == "stamp":
-        build_inventory(inputs)
-        write(version_path, version)
+        require(not Path("public/student-version.json").exists(), "Version asset already exists in application source")
+        write("public/student-version.json", version)
         return
     require(read(version_path) == version, "Version asset mismatch")
     manifest = {"schema_version": 1, "identity": version, "inputs": inputs,

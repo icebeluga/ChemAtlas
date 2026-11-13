@@ -28,7 +28,7 @@ bash ../controls/scripts/release/validate.sh \
 
 The optional fourth argument is the independently reviewed input manifest. Use it for Stage 4. For subsequent release candidates, review the workflow-generated input manifest before production approval. Generated build digests describe the exact archived build. Generated IDs and checkout paths can differ in a fresh build.
 
-An authorized student session can request `/student-version.json` to see the application SHA, validation workflow SHA, release ID and catalog hash/count. The validation package adds this asset after building and before the dry run, hashes it with the rest of the package, and tests it through the Worker. Its path and digest travel with the archive. The version asset contains no credentials, account identifiers or private review metadata.
+An authorized student session can request `/student-version.json` to see the application SHA, validation workflow SHA, release ID and catalog hash/count. The validation package injects this generated asset before building so the Worker registers the route, hashes it with the rest of the package, and tests it through the Worker. Its path and digest travel with the archive. The version asset contains no credentials, account identifiers or private review metadata.
 
 ## Stage 6 promotion procedure
 

@@ -6,6 +6,7 @@ const { resolve } = require("node:path");
 
 const vitePluginRequire = createRequire(realpathSync("node_modules/@cloudflare/vite-plugin/package.json"));
 const miniflarePath = vitePluginRequire.resolve("miniflare");
+const localDate = createRequire(miniflarePath)("workerd").compatibilityDate;
 const { Miniflare } = require(miniflarePath);
 const { MockAgent } = createRequire(miniflarePath)("undici");
 const { chromium } = require(process.env.CHEMATLAS_PLAYWRIGHT || "playwright");
@@ -30,7 +31,7 @@ mock.get(issuer).intercept({ path: "/cdn-cgi/access/certs" }).reply(200, {
 }).persist();
 
 const worker = new Miniflare({
-  host: "127.0.0.1", port: 0, compatibilityDate: config.compatibility_date,
+  host: "127.0.0.1", port: 0, compatibilityDate: config.compatibility_date < localDate ? config.compatibility_date : localDate,
   compatibilityFlags: config.compatibility_flags, modulesRoot: resolve("dist/server"),
   modules: [config.main, ...readdirSync("dist/server", { recursive: true })
     .filter(path => path !== config.main && /\.m?js$/.test(path))]
@@ -44,6 +45,7 @@ const worker = new Miniflare({
 
 async function smoke() {
   const origin = await worker.ready;
+  console.log("Local Worker compatibility date:", config.compatibility_date < localDate ? config.compatibility_date : localDate);
   const request = (path, jwt, method = "GET") => fetch(new URL(path, origin), {
     method, headers: jwt ? { "cf-access-jwt-assertion": jwt } : {},
   });

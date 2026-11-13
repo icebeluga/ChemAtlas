@@ -22,9 +22,12 @@ log typecheck pnpm run check
 log node-tests pnpm test
 log python-tests python -m unittest discover -s tests -p 'test_*.py' -v
 pnpm run check:private
-log build pnpm run build
-pnpm run check:private --built
 "${manifest[@]}" stamp "$sha" --workflow-sha "$workflow_sha" "${expected[@]}"
+trap 'rm -f public/student-version.json' EXIT
+log build pnpm run build
+rm public/student-version.json
+trap - EXIT
+pnpm run check:private --built
 log dry-run pnpm exec wrangler deploy --dry-run --config dist/server/wrangler.json
 log smoke node "$control/smoke.cjs"
 "${manifest[@]}" seal "$sha" --workflow-sha "$workflow_sha" "${expected[@]}" \

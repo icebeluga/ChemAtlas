@@ -1,12 +1,11 @@
 const assert = require("node:assert/strict");
 const { generateKeyPairSync, sign } = require("node:crypto");
-const { readFileSync, readdirSync } = require("node:fs");
+const { readFileSync, readdirSync, realpathSync } = require("node:fs");
 const { createRequire } = require("node:module");
 const { resolve } = require("node:path");
 
-const appRequire = createRequire(resolve("package.json"));
-const wranglerRequire = createRequire(appRequire.resolve("wrangler/package.json"));
-const miniflarePath = wranglerRequire.resolve("miniflare");
+const vitePluginRequire = createRequire(realpathSync("node_modules/@cloudflare/vite-plugin/package.json"));
+const miniflarePath = vitePluginRequire.resolve("miniflare");
 const { Miniflare } = require(miniflarePath);
 const { MockAgent } = createRequire(miniflarePath)("undici");
 const { chromium } = require(process.env.CHEMATLAS_PLAYWRIGHT || "playwright");

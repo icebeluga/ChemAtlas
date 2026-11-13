@@ -65,6 +65,10 @@ jobs:
             expected=(../controls/docs/stage-5/stage4-inputs.json)
           fi
           bash ../controls/scripts/release/validate.sh "$APPLICATION_SHA" "$WORKFLOW_SHA" "$RUNNER_TEMP/student-release" "${expected[@]}"
+          set -o pipefail
+          PYTHONDONTWRITEBYTECODE=1 python ../controls/scripts/release/rehearse.py \
+            "$APPLICATION_SHA" "$RUNNER_TEMP/student-release" ../controls/docs/stage-5/rollback-source.json \
+            | tee "$RUNNER_TEMP/student-release/rehearsal.log"
       - uses: actions/upload-artifact@v4
         with:
           name: student-release-${{ env.APPLICATION_SHA }}

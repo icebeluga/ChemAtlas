@@ -1,6 +1,6 @@
 # Stage 6 owner verification results
 
-**NO-GO pending conclusive post-authentication denial for an unapproved identity.**
+**GO for a separately authorized production promotion.** Stage 6 verification passed for sealed artifact 14074740993 on staging Worker version `462adae6-b789-4e37-9cd6-266db85b3b7c`. This decision supersedes the earlier pending results in [readiness-recheck.md](readiness-recheck.md).
 
 On November 13, 2026 at 21:57:21 UTC the owner ran the authenticated staging verifier against artifact 14074740993. Of 34 asset checks, 29 live SHA-256 digests matched, including the student catalog (HTTP 200, SHA-256 `96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9`). All four authenticated admin and backup GETs returned the Worker’s expected 404.
 
@@ -34,4 +34,18 @@ On November 13, 2026 at 22:03:30 UTC, the owner ran [retry-pdfs.js](retry-pdfs.j
 
 Keep the file and its hash in the sealed build inventory. The owner verifier’s original 34-file result stands as evidence. For the hosted decision, classify this particular 404 as an expected build-metadata response and count 33 of 33 required HTTP-delivered asset hashes verified across the original run and retry. No deployment or sealed manifest correction is indicated.
 
-The sole unresolved verification gate is conclusive denial after an unapproved identity successfully authenticates. The [owner checklist](owner-verification.md) describes acceptable evidence. After that evidence is supplied, recheck the production rollback version and issue a final GO/NO-GO recommendation. Production deployment requires separate explicit owner approval. This documentation update made no deployment, Access policy change, or change to `main`.
+## Final Access security verification
+
+The owner tested staging with an unapproved identity and reported successful completion of identity-provider authentication followed by Cloudflare Access displaying “That account does not have access.” The supplied screenshot shows that denial on the staging Access screen. Together, the owner’s account of the authentication sequence and the screenshot close the post-authentication denial gate. This is owner-assisted evidence. A matching Access audit-log event was not independently retrieved. The report records the denial text and omits the raw screenshot.
+
+The approved account retrieved the expected version metadata. Earlier unauthenticated probes verified signed Access challenges across 44 paths. The authenticated browser verifier and PDF retry confirmed 33 of 33 required HTTP-delivered hashes and Worker denial on all four admin and backup GET routes.
+
+## Production rollback recheck
+
+On November 13, 2026, authenticated Wrangler read-only commands confirmed that production Worker `chematlas-student-private` still serves 100% of traffic from `af854526-9466-4c94-8091-c7d440c0c824` under deployment `b966bf0e-4be3-4191-aa47-c404108b85e8`. Wrangler also retrieved the exact version record directly as version 6. It remains the intended rollback target. No live rollback was exercised.
+
+## Promotion decision
+
+The tested application is `3c78883006beb48c2dab68443e6e93b87bb9a769`. Promote only the [sealed artifact 14074740993](https://github.com/icebeluga/ChemAtlas/actions/runs/43501394152/artifacts/14074740993) from run 43501394152, with package SHA-256 `e8ed2136875a8b1093a619c41eca5f4a96d9e17a1e4e5b11b29b25de63c79500`. Recheck the artifact and the active rollback UUID immediately before any approved promotion. Review full-page worksheet fallbacks before distributing worksheets as answer-free.
+
+The production approval record remains pending. Follow the [Stage 5 promotion procedure](../stage-5/README.md) after separate explicit owner approval. No deployment, rollback, Access policy change, or merge into `main` was performed.

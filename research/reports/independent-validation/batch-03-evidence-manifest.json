@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "batch": "3",
+  "detectorCommit": "66445d0ba511f1e3167c472430d3d99ee69ef3fd",
+  "detectorSha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+  "selectionLock": "research/reports/independent-validation/batch-03-lock.json",
+  "visualReview": "Five questions, six ordered page segments; all rendered panels visually inspected against source PDF pages.",
+  "metrics": {
+    "completeAndClean": 4,
+    "incompleteOrContaminated": 1,
+    "correctManualBlocks": 1,
+    "falseAutomaticApprovals": 1,
+    "readable": 5
+  },
+  "files": [
+    {
+      "path": "research/reports/independent-validation/batch-03-lock.json",
+      "sha256": "08c5244bc0c43c3499c69e53099dd75234f346777ce37aa5555f48f7fdf1947e",
+      "bytes": 2928
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-proposals.json",
+      "sha256": "d48ba12c79fd764d5e0478517406c683d46ddc2dcb4428a0e7b236671bfa5ebb",
+      "bytes": 14222
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-frozen-results.json",
+      "sha256": "53e89fdfe856dfc8cf196a63e2bb776e912bb6ee601986687cd80cca4d82dae8",
+      "bytes": 5632
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-report.md",
+      "sha256": "05d9903df122ddc2f0a81de8d16e5af2f2bf4c179f31bb1272f8e4951d2d87a7",
+      "bytes": 3297
+    },
+    {
+      "path": "research/reports/independent-validation/preregistered-sample-40.json",
+      "sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+      "bytes": 26945
+    },
+    {
+      "path": "research/reports/independent-validation/batch-01-report.md",
+      "sha256": "69b10945c12d01109ee54c1021c24dba11d202c156404d3cbd0b6c3eefd9fdb2",
+      "bytes": 4286
+    },
+    {
+      "path": "research/detect_question_boundaries.py",
+      "sha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+      "bytes": 78174
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/frq-2008-4-896-segment-1.png",
+      "sha256": "af11533533dd9cbc1b2951647eeff630b9c633fba3cba45444cd090356159ac7",
+      "bytes": 717272
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/frq-2008-4-896-segment-2.png",
+      "sha256": "89060941aaa599e49ae95909d91c47e8834b154db3d4cd9536542c8d8b5a89b9",
+      "bytes": 244818
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/mcq-2014-17-1448-segment-1.png",
+      "sha256": "a5e5a17f03500e279feccca377fc406cd674efd42dd71d31c9a1623e21a6342d",
+      "bytes": 256112
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/mcq-2016-13-1058-segment-1.png",
+      "sha256": "78c05dd43df3f55967f29562d15b6641395c227434ebd543a7ec217539b4b729",
+      "bytes": 398005
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/mcq-2018-4-1945-segment-1.png",
+      "sha256": "4e82f59316e013500e6edf85f1da49de48baf5db49bc531f76dc890881b443b8",
+      "bytes": 459792
+    },
+    {
+      "path": "research/reports/independent-validation/batch-03-panels/mcq-2023-47-1733-segment-1.png",
+      "sha256": "2e283b4b050c521651537d00f10a7b011d01658fc62376bbdf52db8beebb45bc",
+      "bytes": 382375
+    },
+    {
+      "path": "public/source/bank-03.pdf",
+      "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7",
+      "bytes": 13987593
+    },
+    {
+      "path": "public/source/bank-04.pdf",
+      "sha256": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304",
+      "bytes": 7717854
+    },
+    {
+      "path": "public/source/bank-05.pdf",
+      "sha256": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd",
+      "bytes": 7166311
+    },
+    {
+      "path": "public/source/bank-06.pdf",
+      "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+      "bytes": 11859257
+    },
+    {
+      "path": "public/source/bank-07.pdf",
+      "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+      "bytes": 7632388
+    }
+  ]
+}

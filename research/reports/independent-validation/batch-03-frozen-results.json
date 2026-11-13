@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "batch": "Batch 3 (original preregistered samples 11\u201315)",
+  "selectionLock": "research/reports/independent-validation/batch-03-lock.json",
+  "detectorCommit": "66445d0ba511f1e3167c472430d3d99ee69ef3fd",
+  "detectorSha256": "992d06e28b86ebf9d6513ea67480d2d457128b907fc0983d8e119f00e5a93814",
+  "sampleStatus": "All five questions visually inspected; this frozen-revision batch is complete. The newly found header and ID/type defects are development data for subsequent revisions.",
+  "metrics": {
+    "questions": 5,
+    "completeAndCleanCrops": 4,
+    "incompleteOrContaminatedCrops": 1,
+    "contentIncomplete": 0,
+    "correctManualReviewRouting": 1,
+    "falseAutomaticApprovals": 1,
+    "allRequiredContentReadable": 5
+  },
+  "classifications": [
+    {
+      "id": "frq-2008-4-896",
+      "sourcePdf": "public/source/bank-03.pdf",
+      "originalCoordinates": {
+        "896": [
+          0,
+          55,
+          612,
+          737
+        ],
+        "897": [
+          20,
+          40,
+          592,
+          737
+        ]
+      },
+      "proposedCoordinates": {
+        "896": [
+          26,
+          169.03,
+          586.73,
+          624.8
+        ],
+        "897": [
+          46,
+          14.23,
+          581.81,
+          426.78
+        ]
+      },
+      "completeness": "PASS",
+      "cleanliness": "MINOR FAIL \u2014 p897 includes the unrelated 2008 AP Chemistry FRQ Form B page title at the top; all required setup, parts (a)\u2013(c), answer boxes and continuation content are present.",
+      "readability": "PASS \u2014 text and response boxes legible. The worked Mg example is part of the printed instructions and does not answer Q4.",
+      "reviewRouting": "MANUAL \u2014 correctly blocked, due low-confidence continuation page.",
+      "defects": [
+        "Unnecessary exam page title included on continuation page."
+      ],
+      "confidence": [
+        0.82,
+        0.36
+      ],
+      "manualReview": [
+        false,
+        true
+      ]
+    },
+    {
+      "id": "mcq-2016-13-1058",
+      "sourcePdf": "public/source/bank-04.pdf",
+      "originalCoordinates": {
+        "1058": [
+          306,
+          55,
+          612,
+          737
+        ]
+      },
+      "proposedCoordinates": {
+        "1058": [
+          305.3,
+          55,
+          574.27,
+          645.3
+        ]
+      },
+      "completeness": "PASS \u2014 graph, question stem, and all four graph-based choices A\u2013D present.",
+      "cleanliness": "PASS \u2014 neighboring Q11/Q12 and footer excluded.",
+      "readability": "PASS \u2014 plot curves, axes, labels, choices visible.",
+      "reviewRouting": "AUTOMATIC proposal; no source mismatch observed.",
+      "defects": [],
+      "confidence": [
+        0.82
+      ],
+      "manualReview": [
+        false
+      ]
+    },
+    {
+      "id": "mcq-2014-17-1448",
+      "sourcePdf": "public/source/bank-05.pdf",
+      "originalCoordinates": {
+        "1448": [
+          40,
+          30,
+          550,
+          405
+        ]
+      },
+      "proposedCoordinates": {
+        "1448": [
+          26,
+          29.7,
+          561.87,
+          407.67
+        ]
+      },
+      "completeness": "PASS \u2014 potential-energy graph, molecule labels, stem and choices A\u2013D present.",
+      "cleanliness": "PASS \u2014 no neighboring-question content or page furniture.",
+      "readability": "PASS \u2014 axes, curves and subscripts are clear.",
+      "reviewRouting": "AUTOMATIC proposal.",
+      "defects": [],
+      "confidence": [
+        0.82
+      ],
+      "manualReview": [
+        false
+      ]
+    },
+    {
+      "id": "mcq-2023-47-1733",
+      "sourcePdf": "public/source/bank-06.pdf",
+      "originalCoordinates": {
+        "1733": [
+          0,
+          55,
+          612,
+          375.78466796875
+        ]
+      },
+      "proposedCoordinates": {
+        "1733": [
+          14.53,
+          44.69,
+          605.65,
+          368.78
+        ]
+      },
+      "completeness": "PASS \u2014 energy diagram, A/B arrows, reaction labels, stem and choices A\u2013D present.",
+      "cleanliness": "PASS \u2014 following Q48 table/stem and source footer excluded.",
+      "readability": "PASS \u2014 labels and energy expressions clear.",
+      "reviewRouting": "AUTOMATIC proposal.",
+      "defects": [],
+      "confidence": [
+        1.0
+      ],
+      "manualReview": [
+        false
+      ]
+    },
+    {
+      "id": "mcq-2018-4-1945",
+      "sourcePdf": "public/source/bank-07.pdf",
+      "originalCoordinates": {
+        "1945": [
+          40,
+          39.1,
+          569.8,
+          366.1
+        ]
+      },
+      "proposedCoordinates": {
+        "1945": [
+          26,
+          33.05,
+          583.84,
+          376.09
+        ]
+      },
+      "completeness": "PASS \u2014 calibration graph, data context, and all parts (a)\u2013(c) present.",
+      "cleanliness": "PASS \u2014 blank answer-writing lines, footer and page number excluded.",
+      "readability": "PASS \u2014 graph labels, values, formulas and subscripts legible.",
+      "reviewRouting": "FAIL \u2014 automatic proposal despite question ID prefix `mcq-` conflicting with catalog type/exam `FRQ`; preserve metadata and send for manual provenance review.",
+      "defects": [
+        "Unresolved question-ID/type discrepancy; do not silently rename."
+      ],
+      "confidence": [
+        0.82
+      ],
+      "manualReview": [
+        false
+      ]
+    }
+  ],
+  "unscoredQuestionsInOtherBatch": [
+    "mcq-2024-23-2090",
+    "frq-2024-4-2123",
+    "mcq-2014-26-182",
+    "frq-2022-6-434"
+  ],
+  "sourceIntegrity": "No original source PDF changed."
+}

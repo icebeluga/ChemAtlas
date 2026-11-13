@@ -1,0 +1,955 @@
+{
+  "title": "ChemAtlas Phase 2 independent real-PDF validation — preregistered sample",
+  "schema_version": 1,
+  "registered_at_utc": "2026-11-11T15:47:34.293628+00:00",
+  "evaluation_commit": "2f11785cc8dd4bc557989b98e70ee445b18d9fc3",
+  "branch": "work/automatic-pdf-boundaries",
+  "detector_sha256": "4d479249cceeaf976fc2289e75b3955a414c3dda25f482def5ce419fe64ed3a0",
+  "catalog_sha256": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe",
+  "design": {
+    "sample_size": 40,
+    "batch_size": 5,
+    "allocation": "Exactly five questions per each of eight source PDFs; one from every PDF in each batch.",
+    "selection_rule": "Selected by catalog identity/page mapping, source stratification, MCQ/FRQ and multi-page variety, plus sparse-text source signals. Selection finalized before proposed crop generation and scoring.",
+    "prior_audit_exclusion": "Excluded every question ID identified in prior visual-audit panels/reports and all associated source pages; no ID/page overlap (30 prior IDs, 43 pages).",
+    "duplicate_check": "No duplicate IDs or source pages within the sample. One normalized text similarity was 0.57 (frq-2008-4-896 / frq-2010-4-921); both share exam boilerplate but have different years and different chemistry content, retained as distinct questions.",
+    "layout_coverage": "Actual columns, graphics, tables and shared stimuli will be recorded from rendered pages after this lock. Sparse-text 2024 pages are tagged for scan-aware inspection.",
+    "selection_locked_before_rendering": true,
+    "statistical_claims": "This hand-selected sample cannot establish corpus-wide statistical reliability."
+  },
+  "baseline": {
+    "tests": "python -m unittest tests.test_question_boundary_detection tests.test_real_pdf_failure_regressions tests.test_source_region_export -v",
+    "result": "28/28 passed",
+    "unittest_discover": "Explicit modules are required by repository structure."
+  },
+  "questions": [
+    {
+      "sample_number": 1,
+      "batch": 1,
+      "question_id": "frq-2006-6-25",
+      "catalog_type": "FRQ",
+      "catalog_year": "2006",
+      "exam": "2006 AP Chemistry FRQ",
+      "question_number": 6,
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        25,
+        26
+      ],
+      "pdf_page_numbers": [
+        25,
+        26
+      ],
+      "page_text_character_counts": [
+        1223,
+        789
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 2,
+      "batch": 1,
+      "question_id": "frq-2023-6-456",
+      "catalog_type": "FRQ",
+      "catalog_year": "2023",
+      "exam": "2023 AP Chemistry FRQ",
+      "question_number": 6,
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        456,
+        457
+      ],
+      "pdf_page_numbers": [
+        156,
+        157
+      ],
+      "page_text_character_counts": [
+        867,
+        351
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 3,
+      "batch": 1,
+      "question_id": "mcq-2002-7-606",
+      "catalog_type": "MCQ",
+      "catalog_year": "2002",
+      "exam": "2002 AP Chemistry MCQ",
+      "question_number": 7,
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        606
+      ],
+      "pdf_page_numbers": [
+        6
+      ],
+      "page_text_character_counts": [
+        1645
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 4,
+      "batch": 1,
+      "question_id": "frq-2017-3-1157",
+      "catalog_type": "FRQ",
+      "catalog_year": "2017",
+      "exam": "2017 AP Chemistry FRQ",
+      "question_number": 3,
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        1157,
+        1158
+      ],
+      "pdf_page_numbers": [
+        257,
+        258
+      ],
+      "page_text_character_counts": [
+        0,
+        0
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 5,
+      "batch": 1,
+      "question_id": "mcq-2014-49-1464",
+      "catalog_type": "MCQ",
+      "catalog_year": "2014",
+      "exam": "2014 AP Chemistry MCQ",
+      "question_number": 49,
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1464
+      ],
+      "pdf_page_numbers": [
+        264
+      ],
+      "page_text_character_counts": [
+        926
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 6,
+      "batch": 2,
+      "question_id": "frq-2011-1-1655",
+      "catalog_type": "FRQ",
+      "catalog_year": "2011",
+      "exam": "2011 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1655
+      ],
+      "pdf_page_numbers": [
+        155
+      ],
+      "page_text_character_counts": [
+        1356
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 7,
+      "batch": 2,
+      "question_id": "mcq-2024-23-2090",
+      "catalog_type": "MCQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry MCQ",
+      "question_number": 23,
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        2090
+      ],
+      "pdf_page_numbers": [
+        290
+      ],
+      "page_text_character_counts": [
+        75
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 8,
+      "batch": 2,
+      "question_id": "frq-2024-4-2123",
+      "catalog_type": "FRQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry FRQ",
+      "question_number": 4,
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2123,
+        2124
+      ],
+      "pdf_page_numbers": [
+        23,
+        24
+      ],
+      "page_text_character_counts": [
+        75,
+        75
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 9,
+      "batch": 2,
+      "question_id": "mcq-2014-26-182",
+      "catalog_type": "MCQ",
+      "catalog_year": "2014",
+      "exam": "2014 AP Chemistry MCQ",
+      "question_number": 26,
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        182
+      ],
+      "pdf_page_numbers": [
+        182
+      ],
+      "page_text_character_counts": [
+        1234
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 10,
+      "batch": 2,
+      "question_id": "frq-2022-6-434",
+      "catalog_type": "FRQ",
+      "catalog_year": "2022",
+      "exam": "2022 AP Chemistry FRQ",
+      "question_number": 6,
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        434,
+        435
+      ],
+      "pdf_page_numbers": [
+        134,
+        135
+      ],
+      "page_text_character_counts": [
+        1292,
+        1096
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 11,
+      "batch": 3,
+      "question_id": "frq-2008-4-896",
+      "catalog_type": "FRQ",
+      "catalog_year": "2008",
+      "exam": "2008 AP Chemistry FRQ",
+      "question_number": 4,
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        896,
+        897
+      ],
+      "pdf_page_numbers": [
+        296,
+        297
+      ],
+      "page_text_character_counts": [
+        1501,
+        1231
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 12,
+      "batch": 3,
+      "question_id": "mcq-2016-13-1058",
+      "catalog_type": "MCQ",
+      "catalog_year": "2016",
+      "exam": "2016 AP Chemistry MCQ",
+      "question_number": 13,
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        1058
+      ],
+      "pdf_page_numbers": [
+        158
+      ],
+      "page_text_character_counts": [
+        821
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 13,
+      "batch": 3,
+      "question_id": "mcq-2014-17-1448",
+      "catalog_type": "MCQ",
+      "catalog_year": "2014",
+      "exam": "2014 AP Chemistry MCQ",
+      "question_number": 17,
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1448
+      ],
+      "pdf_page_numbers": [
+        248
+      ],
+      "page_text_character_counts": [
+        439
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 14,
+      "batch": 3,
+      "question_id": "mcq-2023-47-1733",
+      "catalog_type": "MCQ",
+      "catalog_year": "2023",
+      "exam": "2023 AP Chemistry MCQ",
+      "question_number": 47,
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1733
+      ],
+      "pdf_page_numbers": [
+        233
+      ],
+      "page_text_character_counts": [
+        862
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 15,
+      "batch": 3,
+      "question_id": "mcq-2018-4-1945",
+      "catalog_type": "FRQ",
+      "catalog_year": "2018",
+      "exam": "2018 AP Chemistry FRQ",
+      "question_number": 4,
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        1945
+      ],
+      "pdf_page_numbers": [
+        145
+      ],
+      "page_text_character_counts": [
+        921
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 16,
+      "batch": 4,
+      "question_id": "mcq-2024-47-2105",
+      "catalog_type": "MCQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry MCQ",
+      "question_number": 47,
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2105
+      ],
+      "pdf_page_numbers": [
+        5
+      ],
+      "page_text_character_counts": [
+        75
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 17,
+      "batch": 4,
+      "question_id": "mcq-1984-53-128",
+      "catalog_type": "MCQ",
+      "catalog_year": "1984",
+      "exam": "1984 AP Chemistry MCQ · Version indicated in source",
+      "question_number": 53,
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        128
+      ],
+      "pdf_page_numbers": [
+        128
+      ],
+      "page_text_character_counts": [
+        2091
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 18,
+      "batch": 4,
+      "question_id": "frq-2016-1-385",
+      "catalog_type": "FRQ",
+      "catalog_year": "2016",
+      "exam": "2016 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        385,
+        386
+      ],
+      "pdf_page_numbers": [
+        85,
+        86
+      ],
+      "page_text_character_counts": [
+        1643,
+        1316
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 19,
+      "batch": 4,
+      "question_id": "mcq-2002-15-754",
+      "catalog_type": "MCQ",
+      "catalog_year": "2002",
+      "exam": "2002 AP Chemistry MCQ · Version indicated in source",
+      "question_number": 15,
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        754
+      ],
+      "pdf_page_numbers": [
+        154
+      ],
+      "page_text_character_counts": [
+        1740
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 20,
+      "batch": 4,
+      "question_id": "frq-2010-4-921",
+      "catalog_type": "FRQ",
+      "catalog_year": "2010",
+      "exam": "2010 AP Chemistry FRQ",
+      "question_number": 4,
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        921,
+        922
+      ],
+      "pdf_page_numbers": [
+        21,
+        22
+      ],
+      "page_text_character_counts": [
+        1305,
+        954
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 21,
+      "batch": 5,
+      "question_id": "frq-2011-1-1220",
+      "catalog_type": "FRQ",
+      "catalog_year": "2011",
+      "exam": "2011 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1220
+      ],
+      "pdf_page_numbers": [
+        20
+      ],
+      "page_text_character_counts": [
+        2110
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 22,
+      "batch": 5,
+      "question_id": "mcq-2023-43-1731",
+      "catalog_type": "MCQ",
+      "catalog_year": "2023",
+      "exam": "2023 AP Chemistry MCQ",
+      "question_number": 43,
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1731
+      ],
+      "pdf_page_numbers": [
+        231
+      ],
+      "page_text_character_counts": [
+        903
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 23,
+      "batch": 5,
+      "question_id": "mcq-2023-34-1830",
+      "catalog_type": "MCQ",
+      "catalog_year": "2023",
+      "exam": "2023 AP Chemistry MCQ",
+      "question_number": 34,
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        1830
+      ],
+      "pdf_page_numbers": [
+        30
+      ],
+      "page_text_character_counts": [
+        862
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 24,
+      "batch": 5,
+      "question_id": "frq-2024-2-2115",
+      "catalog_type": "FRQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry FRQ",
+      "question_number": 2,
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2115,
+        2116,
+        2117,
+        2118
+      ],
+      "pdf_page_numbers": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "page_text_character_counts": [
+        75,
+        75,
+        75,
+        75
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 25,
+      "batch": 5,
+      "question_id": "mcq-2014-58-196",
+      "catalog_type": "MCQ",
+      "catalog_year": "2014",
+      "exam": "2014 AP Chemistry MCQ",
+      "question_number": 58,
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        196
+      ],
+      "pdf_page_numbers": [
+        196
+      ],
+      "page_text_character_counts": [
+        1174
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 26,
+      "batch": 6,
+      "question_id": "frq-2021-3-405",
+      "catalog_type": "FRQ",
+      "catalog_year": "2021",
+      "exam": "2021 AP Chemistry FRQ",
+      "question_number": 3,
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        405,
+        406,
+        407
+      ],
+      "pdf_page_numbers": [
+        105,
+        106,
+        107
+      ],
+      "page_text_character_counts": [
+        1104,
+        933,
+        822
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 27,
+      "batch": 6,
+      "question_id": "frq-2003-7-872",
+      "catalog_type": "FRQ",
+      "catalog_year": "2003",
+      "exam": "2003 AP Chemistry FRQ",
+      "question_number": 7,
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        872,
+        873
+      ],
+      "pdf_page_numbers": [
+        272,
+        273
+      ],
+      "page_text_character_counts": [
+        1669,
+        1161
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 28,
+      "batch": 6,
+      "question_id": "mcq-2016-28-1065",
+      "catalog_type": "MCQ",
+      "catalog_year": "2016",
+      "exam": "2016 AP Chemistry MCQ",
+      "question_number": 28,
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        1065
+      ],
+      "pdf_page_numbers": [
+        165
+      ],
+      "page_text_character_counts": [
+        757
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 29,
+      "batch": 6,
+      "question_id": "mcq-2014-6-1489",
+      "catalog_type": "MCQ",
+      "catalog_year": "2014",
+      "exam": "2014 AP Chemistry MCQ",
+      "question_number": 6,
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1489
+      ],
+      "pdf_page_numbers": [
+        289
+      ],
+      "page_text_character_counts": [
+        1929
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 30,
+      "batch": 6,
+      "question_id": "frq-2011-1-1743",
+      "catalog_type": "FRQ",
+      "catalog_year": "2011",
+      "exam": "2011 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1743
+      ],
+      "pdf_page_numbers": [
+        243
+      ],
+      "page_text_character_counts": [
+        2075
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 31,
+      "batch": 7,
+      "question_id": "frq-2011-1-1933",
+      "catalog_type": "FRQ",
+      "catalog_year": "2011",
+      "exam": "2011 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        1933
+      ],
+      "pdf_page_numbers": [
+        133
+      ],
+      "page_text_character_counts": [
+        1965
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 32,
+      "batch": 7,
+      "question_id": "mcq-2024-8-2139",
+      "catalog_type": "MCQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry MCQ",
+      "question_number": 8,
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2139
+      ],
+      "pdf_page_numbers": [
+        39
+      ],
+      "page_text_character_counts": [
+        808
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 33,
+      "batch": 7,
+      "question_id": "frq-2008-1-56",
+      "catalog_type": "FRQ",
+      "catalog_year": "2008",
+      "exam": "2008 AP Chemistry FRQ",
+      "question_number": 1,
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        56,
+        57
+      ],
+      "pdf_page_numbers": [
+        56,
+        57
+      ],
+      "page_text_character_counts": [
+        1631,
+        1147
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 34,
+      "batch": 7,
+      "question_id": "frq-2024-6-478",
+      "catalog_type": "FRQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry FRQ",
+      "question_number": 6,
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        478,
+        479
+      ],
+      "pdf_page_numbers": [
+        178,
+        179
+      ],
+      "page_text_character_counts": [
+        950,
+        733
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 35,
+      "batch": 7,
+      "question_id": "mcq-1994-39-686",
+      "catalog_type": "MCQ",
+      "catalog_year": "1994",
+      "exam": "1994 AP Chemistry MCQ",
+      "question_number": 39,
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        686
+      ],
+      "pdf_page_numbers": [
+        86
+      ],
+      "page_text_character_counts": [
+        940
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 36,
+      "batch": 8,
+      "question_id": "mcq-2016-35-1069",
+      "catalog_type": "MCQ",
+      "catalog_year": "2016",
+      "exam": "2016 AP Chemistry MCQ",
+      "question_number": 35,
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        1069
+      ],
+      "pdf_page_numbers": [
+        169
+      ],
+      "page_text_character_counts": [
+        1894
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 37,
+      "batch": 8,
+      "question_id": "mcq-2018-2-1224",
+      "catalog_type": "MCQ",
+      "catalog_year": "2018",
+      "exam": "2018 AP Chemistry MCQ",
+      "question_number": 2,
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1224
+      ],
+      "pdf_page_numbers": [
+        24
+      ],
+      "page_text_character_counts": [
+        938
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 38,
+      "batch": 8,
+      "question_id": "mcq-2022-21-1642",
+      "catalog_type": "MCQ",
+      "catalog_year": "2022",
+      "exam": "2022 AP Chemistry MCQ",
+      "question_number": 21,
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1642
+      ],
+      "pdf_page_numbers": [
+        142
+      ],
+      "page_text_character_counts": [
+        1725
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 39,
+      "batch": 8,
+      "question_id": "mcq-2018-43-2043",
+      "catalog_type": "MCQ",
+      "catalog_year": "2018",
+      "exam": "2018 AP Chemistry MCQ",
+      "question_number": 43,
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        2043
+      ],
+      "pdf_page_numbers": [
+        243
+      ],
+      "page_text_character_counts": [
+        1802
+      ],
+      "sparse_or_scan_signal": false,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    },
+    {
+      "sample_number": 40,
+      "batch": 8,
+      "question_id": "mcq-2024-50-2106",
+      "catalog_type": "MCQ",
+      "catalog_year": "2024",
+      "exam": "2024 AP Chemistry MCQ",
+      "question_number": 50,
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2106
+      ],
+      "pdf_page_numbers": [
+        6
+      ],
+      "page_text_character_counts": [
+        75
+      ],
+      "sparse_or_scan_signal": true,
+      "catalog_source_metadata": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "selection_status": "pre-registered; not yet rendered or scored"
+    }
+  ]
+}

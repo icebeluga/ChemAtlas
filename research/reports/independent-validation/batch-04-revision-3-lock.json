@@ -1,0 +1,81 @@
+{
+  "title": "Independent validation Batch 4 revision 3 \u2014 untouched eligible remainder",
+  "locked_before_rendering": "2026-11-11T18:50:09.324109+00:00",
+  "selection_source": "Original Batch 4 preregistration and preserved Batch 4 selection lock; only uninspected eligible samples retained.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "branch": "work/automatic-pdf-boundaries",
+  "detector_revision_commit": "88e2aadc6213e82db67ff0a456fa944fe8d374ad",
+  "detector_sha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract_scanned_page_regression": "executed"
+  },
+  "selection_history": {
+    "prior_lock": "research/reports/independent-validation/batch-04-revision-2-lock.json",
+    "prior_uninspected_samples": [
+      9,
+      10,
+      16
+    ],
+    "excluded_development_samples": {
+      "7": "mcq-2024-23-2090: page association development case",
+      "8": "frq-2024-4-2123: crop cleanliness development case"
+    },
+    "previously_generated_revision_2_outputs": "preserved but unscored; all proposals and panels will be regenerated for this detector revision"
+  },
+  "independence_checks": {
+    "duplicate_stems": "selection entries carried forward from original lock; no duplicate stems recorded there",
+    "shared_source_pages": "selection entries carried forward from original lock; no known shared-page collision among selected questions",
+    "note": "The three remaining questions are fewer than a five-question batch because the other two original Batch 4 selections became development cases."
+  },
+  "questions": [
+    {
+      "sample_number": 9,
+      "question_id": "mcq-2014-26-182",
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        182
+      ],
+      "pdf_page_numbers": [
+        182
+      ],
+      "type": "MCQ",
+      "year": "2014",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 10,
+      "question_id": "frq-2022-6-434",
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        434,
+        435
+      ],
+      "pdf_page_numbers": [
+        134,
+        135
+      ],
+      "type": "FRQ",
+      "year": "2022",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 16,
+      "question_id": "mcq-2024-47-2105",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2105
+      ],
+      "pdf_page_numbers": [
+        5
+      ],
+      "type": "MCQ",
+      "year": "2024",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    }
+  ]
+}

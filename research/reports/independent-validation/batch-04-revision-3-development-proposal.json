@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "method": "OCR text geometry with ordered multi-region scanned FRQ continuation proposals",
+  "questionCount": 1,
+  "manualReviewCount": 1,
+  "questions": [
+    {
+      "id": "frq-2024-4-2123",
+      "type": "FRQ",
+      "number": 4,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 2123,
+          "rect": [
+            0.0,
+            69.5,
+            576.5,
+            402.5
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "segmentRole": "questionBody",
+          "extractionStatus": "continuation-segment-needs-manual-verification",
+          "signals": {
+            "textCharacters": 432,
+            "questionStartFound": false,
+            "continuationPageDetected": true,
+            "continuationSegmentIndex": 1,
+            "continuationSegmentCount": 2,
+            "frqSubpartLabels": [
+              "a"
+            ],
+            "graphicsIncluded": 0,
+            "rasterGraphicsUnverified": true,
+            "priorRegionRejected": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "pageTextCharacters": 833,
+            "questionStartMatches": 0,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "pageSubpartLabels": [
+              "a",
+              "b"
+            ],
+            "linkedStimulusRegions": 0,
+            "columnCount": 2,
+            "pageRotation": 0,
+            "introContextLinesIncluded": 6
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only.",
+            "Setup text above the first detected subpart was retained with the continuation page."
+          ]
+        },
+        {
+          "page": 2123,
+          "rect": [
+            12.0,
+            518.5,
+            565.0,
+            558.0
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "segmentRole": "questionBody",
+          "extractionStatus": "continuation-segment-needs-manual-verification",
+          "signals": {
+            "textCharacters": 103,
+            "questionStartFound": false,
+            "continuationPageDetected": true,
+            "continuationSegmentIndex": 2,
+            "continuationSegmentCount": 2,
+            "frqSubpartLabels": [
+              "b"
+            ],
+            "graphicsIncluded": 0,
+            "rasterGraphicsUnverified": true,
+            "priorRegionRejected": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only.",
+            "Setup text above the first detected subpart was retained with the continuation page.",
+            "Blank response space and page furniture were excluded; check the original scan for any non-text figure that OCR cannot bound."
+          ]
+        },
+        {
+          "page": 2124,
+          "rect": [
+            31.5,
+            76.0,
+            583.5,
+            131.0
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "segmentRole": "questionBody",
+          "extractionStatus": "continuation-segment-needs-manual-verification",
+          "signals": {
+            "textCharacters": 227,
+            "questionStartFound": false,
+            "continuationPageDetected": true,
+            "continuationSegmentIndex": 1,
+            "continuationSegmentCount": 2,
+            "frqSubpartLabels": [
+              "c"
+            ],
+            "graphicsIncluded": 0,
+            "rasterGraphicsUnverified": true,
+            "priorRegionRejected": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false,
+            "pageTextCharacters": 598,
+            "questionStartMatches": 0,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "pageSubpartLabels": [
+              "c"
+            ],
+            "linkedStimulusRegions": 0,
+            "columnCount": 2,
+            "pageRotation": 0,
+            "introContextLinesIncluded": 1
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only.",
+            "Setup text above the first detected subpart was retained with the continuation page."
+          ]
+        },
+        {
+          "page": 2124,
+          "rect": [
+            54.5,
+            298.0,
+            514.0,
+            334.5
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "segmentRole": "questionBody",
+          "extractionStatus": "continuation-segment-needs-manual-verification",
+          "signals": {
+            "textCharacters": 82,
+            "questionStartFound": false,
+            "continuationPageDetected": true,
+            "continuationSegmentIndex": 2,
+            "continuationSegmentCount": 2,
+            "frqSubpartLabels": [],
+            "graphicsIncluded": 0,
+            "rasterGraphicsUnverified": true,
+            "priorRegionRejected": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2024,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only.",
+            "Setup text above the first detected subpart was retained with the continuation page.",
+            "Blank response space and page furniture were excluded; check the original scan for any non-text figure that OCR cannot bound."
+          ]
+        }
+      ],
+      "extractionStatus": "proposed",
+      "manualReview": true,
+      "confidence": 0.36
+    }
+  ],
+  "developmentCase": "frq-2024-4-2123",
+  "parentCommit": "766c0f501fb2d45b2772d8bb6f2147cc65c8137c",
+  "detectorSha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "failureRevisionCommit": "e0bf22ddf1b2094cf5ec6f36db25005a7c9d74af",
+  "failureResult": "research/reports/independent-validation/batch-04-revision-2-results.json"
+}

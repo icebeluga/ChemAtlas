@@ -1,0 +1,129 @@
+{
+  "title": "ChemAtlas Phase 2 independent validation Batch 5 \u2014 original preregistered samples 17\u201321",
+  "locked_before_rendering": "2026-11-11 (America/New_York; before generating Batch 5 proposals)",
+  "selection_source": "Original preregistered sample-40.json; next untouched entries after Batch 4 samples 9, 10, and 16. No replacements.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "branch": "work/automatic-pdf-boundaries",
+  "detector_revision_commit": "34dbaf1cf2804f6c32c45affdb2adfa92a7a86b1",
+  "detector_sha256": "11648b5870d8a988b7ec0150b6efa7ad5417a358517aa7301f091d23d852a736",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 45,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract": "5.5.0; scanned-page regressions executed"
+  },
+  "selection_history": {
+    "previously scored or inspected original sample entries": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "development-only excluded entries": {
+      "7": "mcq-2024-23-2090",
+      "8": "frq-2024-4-2123",
+      "16": "mcq-2024-47-2105"
+    },
+    "samples_17_to_21_absent_from_previous_visual_reports_and_development_tests": true
+  },
+  "independence_checks": {
+    "unique_ids": true,
+    "unique_source_pdfs": true,
+    "source_pages_disjoint_within_batch": true,
+    "shared_stimulus_membership": {
+      "mcq-1984-53-128": [],
+      "frq-2016-1-385": [],
+      "mcq-2002-15-754": [],
+      "frq-2010-4-921": [],
+      "frq-2011-1-1220": []
+    },
+    "duplicate_text_review": "Sample 20 has previously noted boilerplate similarity to sample 11 (normalized similarity 0.57), but original preregistration judged their chemistry content distinct; this is recorded as a caveat."
+  },
+  "questions": [
+    {
+      "sample_number": 17,
+      "question_id": "mcq-1984-53-128",
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        128
+      ],
+      "pdf_page_numbers": [
+        128
+      ],
+      "type": "MCQ",
+      "year": "1984",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 18,
+      "question_id": "frq-2016-1-385",
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        385,
+        386
+      ],
+      "pdf_page_numbers": [
+        85,
+        86
+      ],
+      "type": "FRQ",
+      "year": "2016",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 19,
+      "question_id": "mcq-2002-15-754",
+      "source_pdf": "/source/bank-03.pdf",
+      "catalog_pages": [
+        754
+      ],
+      "pdf_page_numbers": [
+        154
+      ],
+      "type": "MCQ",
+      "year": "2002",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 20,
+      "question_id": "frq-2010-4-921",
+      "source_pdf": "/source/bank-04.pdf",
+      "catalog_pages": [
+        921,
+        922
+      ],
+      "pdf_page_numbers": [
+        21,
+        22
+      ],
+      "type": "FRQ",
+      "year": "2010",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    },
+    {
+      "sample_number": 21,
+      "question_id": "frq-2011-1-1220",
+      "source_pdf": "/source/bank-05.pdf",
+      "catalog_pages": [
+        1220
+      ],
+      "pdf_page_numbers": [
+        20
+      ],
+      "type": "FRQ",
+      "year": "2011",
+      "status": "locked untouched for independent validation under frozen detector revision"
+    }
+  ]
+}

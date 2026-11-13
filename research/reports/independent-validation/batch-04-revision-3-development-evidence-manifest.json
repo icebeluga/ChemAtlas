@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "case": "frq-2024-4-2123",
+  "classification": "development case; excluded from independent validation",
+  "parentFailureCheckpoint": "766c0f501fb2d45b2772d8bb6f2147cc65c8137c",
+  "failureRevisionCommit": "e0bf22ddf1b2094cf5ec6f36db25005a7c9d74af",
+  "revisedDetectorSha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "originalCoordinates": [
+    {
+      "catalogPage": 2123,
+      "pdfPage": 23,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "catalogPage": 2124,
+      "pdfPage": 24,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    }
+  ],
+  "correctedOrderedSegments": [
+    {
+      "catalogPage": 2123,
+      "pdfPage": 23,
+      "rect": [
+        0.0,
+        69.5,
+        576.5,
+        402.5
+      ],
+      "content": "setup, calorimeter diagram, data table, part (a)",
+      "manualReview": true
+    },
+    {
+      "catalogPage": 2123,
+      "pdfPage": 23,
+      "rect": [
+        12.0,
+        518.5,
+        565.0,
+        558.0
+      ],
+      "content": "part (b)",
+      "manualReview": true
+    },
+    {
+      "catalogPage": 2124,
+      "pdfPage": 24,
+      "rect": [
+        31.5,
+        76.0,
+        583.5,
+        131.0
+      ],
+      "content": "part (c)",
+      "manualReview": true
+    },
+    {
+      "catalogPage": 2124,
+      "pdfPage": 24,
+      "rect": [
+        54.5,
+        298.0,
+        514.0,
+        334.5
+      ],
+      "content": "part (d)",
+      "manualReview": true
+    }
+  ],
+  "visualClassification": {
+    "completeness": "pass on visual review",
+    "cleanliness": "pass on visual review",
+    "readability": "pass with soft-scan limitation",
+    "reviewRouting": "manual review required; raster graphics cannot be fully certified"
+  },
+  "limitations": [
+    "OCR crop segmentation of raster prompts requires visual confirmation.",
+    "The scan contains faint bleed-through; no essential content appears obscured in the reviewed segments."
+  ],
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "tesseractScannedPageRegression": "executed"
+  },
+  "evidenceSha256": {
+    "research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-1.jpg": "f37216762d75f4b09c29f57b01892054fbe31973c92b3e42eb48d9289a33969a",
+    "research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-2.jpg": "88020775bd507564aae8adc1b70b0bcd44320f6ebed19631506a57ddee087965",
+    "research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-3.jpg": "b4484cc08a0b921c717c38a82a4636cc7c6ad464d0f860b8930e0225f7a14e49",
+    "research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-4.jpg": "f07ca789a1afa7101d958da22a3e97ee18e215e103b49c819ca687613271d292",
+    "research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-corrected.pdf": "b677d322ce031579208834b2791503d3419394ed1bf3e1d5a521722bd52b8479"
+  }
+}

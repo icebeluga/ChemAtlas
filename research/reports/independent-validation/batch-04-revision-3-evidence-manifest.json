@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "batch": "batch-04-revision-3",
+  "detectorRevision": "88e2aadc6213e82db67ff0a456fa944fe8d374ad",
+  "detectorSha256": "245c187a20988b0528b3b4d0f4f8c505428ce98aceb26fe020fbc9e84a5920e1",
+  "status": "stopped-after-material-failure",
+  "visualReview": "Samples 9 and 10 scored; sample 16 visually inspected and material defect caused stop.",
+  "files": {
+    "research/reports/independent-validation/batch-04-revision-3-lock.json": "55c5d2f457f075e788f8fd4669e45bbe5c1ebe95aa84cb3faa4279666d12394b",
+    "research/reports/independent-validation/batch-04-revision-3-proposals.json": "8adefa9e840530edacf91bd9101242932ba25966f013c6209dfdccbf2b3f9229",
+    "research/reports/independent-validation/batch-04-revision-3-results.json": "20ff0e76725b31b172c8482cd53a6bf5e41a5b4db43dbff26ad6275103da82ac",
+    "research/reports/independent-validation/batch-04-revision-3-panels/contact-sheet.pdf": "31765f719752d61dfe8884b835307369963081b242e664cc73885b231451ccd8",
+    "research/reports/independent-validation/batch-04-revision-3-panels/frq-2022-6-434-segment-1.png": "75ed6935aa1bac91dc836d849c5caefc01ea3621e4d3c4e2cef588a7fbd2dac0",
+    "research/reports/independent-validation/batch-04-revision-3-panels/frq-2022-6-434-segment-2.png": "d30c0d8b90a74807071dcf349b6743dff18ba3124ca3a6a1cb271fba6065b740",
+    "research/reports/independent-validation/batch-04-revision-3-panels/mcq-2014-26-182-segment-1.png": "041fdf490a7f56b1182920ff9200dcfeec13f6efbad4a5481f04b043b5f2ef57",
+    "research/reports/independent-validation/batch-04-revision-3-panels/mcq-2024-47-2105-segment-1.png": "34d841fa1f121cd0157293125cb6137f1edc28bb8c9a74622f1bbb64ce7b737e"
+  },
+  "sourcePdfSha256": {
+    "public/source/bank-01.pdf": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+    "public/source/bank-02.pdf": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5",
+    "public/source/bank-08.pdf": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759"
+  },
+  "baselineTests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 42,
+    "failed": 0,
+    "skipped": 0,
+    "tesseractScannedPageRegression": "executed"
+  },
+  "previousRevisionFailurePreserved": true,
+  "catalogMetadataChanged": false
+}

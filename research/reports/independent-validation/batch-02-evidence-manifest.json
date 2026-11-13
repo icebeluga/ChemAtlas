@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "evaluationStatus": "stopped after first visual result due to material cleanliness defect",
+  "selectionLock": "research/reports/independent-validation/batch-02-lock.json",
+  "detectorCommit": "acfead30f34ce9e48842c6c4b663bc358b7f1fac",
+  "detectorSha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+  "baselineTests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "tesseractTestExecuted": true,
+    "tesseractVersion": "5.5.0"
+  },
+  "visuallyScored": 1,
+  "selectedButUnscored": [
+    "mcq-2024-23-2090",
+    "frq-2024-4-2123",
+    "mcq-2014-26-182",
+    "frq-2022-6-434"
+  ],
+  "files": [
+    {
+      "path": "research/reports/independent-validation/batch-02-lock.json",
+      "sha256": "7e4eff3ff8544d802e4424441ef2329c775aab619dbc12dc63be1a795272f6d2",
+      "bytes": 2575
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-proposals.json",
+      "sha256": "43c4b2294fb698e59a64682cff625d875719e63dd3b5f735202d01d506311c60",
+      "bytes": 13050
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-frozen-results.json",
+      "sha256": "6470b28414e4af59522e1d57381dd0944be7aa9d42ace0f1d7d49a01817a9d7d",
+      "bytes": 2842
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-stopped-after-sample-06.md",
+      "sha256": "ee3173063ee649eb5957c4b651ccebcb4d9328c38c30f4e08695903c6e38d580",
+      "bytes": 2551
+    },
+    {
+      "path": "research/reports/independent-validation/batch-02-panels/frq-2011-1-1655-segment-1.png",
+      "sha256": "382f85135527fc70ef66a67a40b6e96574b5fe05cbc7d1bbe3a8c0dd7f285b44",
+      "bytes": 588038
+    },
+    {
+      "path": "public/source/bank-06.pdf",
+      "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+      "bytes": 11859257
+    },
+    {
+      "path": "research/detect_question_boundaries.py",
+      "sha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+      "bytes": 78072
+    },
+    {
+      "path": "research/reports/independent-validation/preregistered-sample-40.json",
+      "sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+      "bytes": 26945
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "batch": "batch-04-revision-2",
+  "detectorRevision": "e0bf22ddf1b2094cf5ec6f36db25005a7c9d74af",
+  "detectorSha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+  "selectionLock": "research/reports/independent-validation/batch-04-revision-2-lock.json",
+  "scoringStoppedAfter": "frq-2024-4-2123",
+  "questions": [
+    {
+      "sampleNumber": 8,
+      "id": "frq-2024-4-2123",
+      "sourcePdf": "/source/bank-08.pdf",
+      "pdfPages": [
+        23,
+        24
+      ],
+      "catalogPages": [
+        2123,
+        2124
+      ],
+      "originalCoordinates": [
+        {
+          "page": 2123,
+          "rect": [
+            18,
+            40,
+            577.0,
+            797.0
+          ]
+        },
+        {
+          "page": 2124,
+          "rect": [
+            18,
+            40,
+            577.0,
+            797.0
+          ]
+        }
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 2123,
+          "rect": [
+            0.0,
+            36.0,
+            578.5,
+            562.0
+          ]
+        },
+        {
+          "page": 2124,
+          "rect": [
+            0.0,
+            0.0,
+            595.0,
+            806.0
+          ]
+        }
+      ],
+      "confidence": 0.36,
+      "manualReview": true,
+      "completeness": "pass: setup, experimental diagram/table, and parts a-d are present across both pages",
+      "cleanliness": "fail: first page retains a large response-writing gap and response banner; continuation page includes extensive blank answer area, Question 4/continue-response headers, copyright/footer, printed page 15, and next-page footer",
+      "readability": "pass with limitation: table, diagram, equations, and subpart text are legible in a soft scan",
+      "routing": "correctly blocked for manual review; this does not count as extraction success",
+      "overallExtraction": "fail: crop is not question-only or reasonably tight",
+      "visualEvidence": [
+        "research/reports/independent-validation/batch-04-revision-2-panels/frq-2024-4-2123-segment-1.jpg",
+        "research/reports/independent-validation/batch-04-revision-2-panels/frq-2024-4-2123-segment-2.jpg"
+      ],
+      "debugDisposition": "development data for future revisions; excluded from independent-validation success metrics"
+    }
+  ],
+  "unscoredQuestions": [
+    {
+      "id": "mcq-2014-26-182",
+      "reason": "proposal/panel generated in the locked batch but not visually inspected before the material defect stopped scoring"
+    },
+    {
+      "id": "frq-2022-6-434",
+      "reason": "proposal/panel generated in the locked batch but not visually inspected before the material defect stopped scoring"
+    },
+    {
+      "id": "mcq-2024-47-2105",
+      "reason": "proposal/panel generated in the locked batch but not visually inspected before the material defect stopped scoring"
+    }
+  ],
+  "frozenRevisionMetrics": {
+    "questionsVisuallyScored": 1,
+    "completeAndClean": 0,
+    "contentComplete": 1,
+    "cleanlinessPass": 0,
+    "readabilityPass": 1,
+    "manualReviewCorrectlyBlocked": 1,
+    "falseAutomaticApprovals": 0,
+    "incompleteOrContaminated": 1
+  },
+  "baselineTests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "tesseractScannedPageRegression": "executed"
+  },
+  "selectionLockPreserved": true,
+  "originalBatch4FailurePreserved": true
+}

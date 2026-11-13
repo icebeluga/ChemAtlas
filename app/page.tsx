@@ -1,14 +1,12 @@
 "use client";
 
 import { ChangeEvent, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { ScanEye } from "lucide-react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Activity, ArrowUpRight, Atom, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, Menu, Network, Orbit, Thermometer } from "lucide-react";
 import stimulusDocument from "../research/stimuli.json";
 import { planWorksheet } from "../lib/worksheet.mjs";
 import { buildChemAtlasUrl, parseChemAtlasLocation } from "./navigation.mjs";
+import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
 
 type AppView = "desk" | "library" | "builder" | "detail" | "practice" | "progress" | "review" | "banks" | "audit";
 type RouteUpdates = { unit?: string | null; topic?: string | null; type?: string | null; query?: string | null; questionId?: string | null; sessionIds?: string[] | null; step?: number | null };
@@ -128,7 +126,6 @@ function PdfQuestionPage({ page, sourcePage, bankId, bankName, questionNumber=0,
 }
 
 export default function Home() {
-  const pathname = usePathname();
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
   const view = route.view as AppView;
@@ -137,7 +134,7 @@ export default function Home() {
   const typeFilter = route.type;
   const query = route.query;
   const [catalog, setCatalog] = useState<Catalog>({ units: [], questions: [], sourcePages: 0, stats: {} });
-  const [approvedImages, setApprovedImages] = useState<Record<string, string[]>>({});
+  const [approvedImages] = useState<Record<string, string[]>>({});
   const [progress, setProgress] = useState<Record<string, Attempt>>({});
   const [overrides, setOverrides] = useState<Record<string, string>>({});
   const [banks, setBanks] = useState<Bank[]>([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }]);
@@ -187,7 +184,6 @@ export default function Home() {
 
   useEffect(() => {
     fetch("/questions.json").then(r => r.json()).then(raw => { const data=raw as Catalog; setCatalog(old=>({...data,questions:[...data.questions,...old.questions.filter(q=>q.sourceBank)]})); }).catch(() => setNotice("Question catalog could not be loaded."));
-    fetch("/api/admin/question-review", { cache: "no-store" }).then(r=>r.ok?r.json() as Promise<{approvedImages?:Record<string,string[]>}>:null).then(data=>{if(data?.approvedImages&&typeof data.approvedImages==="object")setApprovedImages(data.approvedImages)}).catch(()=>{});
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
       const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
@@ -201,6 +197,36 @@ export default function Home() {
     } catch { /* keep the bundled bank usable if browser storage is damaged */ }
   }, []);
   useEffect(() => { if (catalog.questions.length) localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress, overrides, banks: banks.filter(b => b.id !== "mega"), questions: catalog.questions.filter(q => q.sourceBank), sessions } satisfies Saved)); }, [catalog.questions, progress, overrides, banks, sessions]);
+
+  function exportBrowserProgress() {
+    const data = serializeProgress({ progress, overrides, sessions });
+    const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "chematlas-progress.json";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    setNotice("Progress export created. Keep this file private.");
+  }
+  async function importBrowserProgress(file?: File) {
+    if (!file) return;
+    if (file.size > 2_000_000) {
+      setNotice("Progress import rejected: the file exceeds the 2 MB limit.");
+      return;
+    }
+    try {
+      const imported = parseProgress(await file.text());
+      if (!window.confirm("Replace this browser's progress, classifications, and session count with the imported copy? This cannot be undone.")) return;
+      setProgress(imported.progress);
+      setOverrides(imported.overrides);
+      setSessions(imported.sessions);
+      setNotice("Progress imported. Your bundled catalog and source PDFs were not changed.");
+    } catch (error) {
+      setNotice(error instanceof Error ? error.message : "Unable to read the progress file.");
+    }
+  }
 
   const topics = useMemo(() => catalog.units.flatMap(u => u.topics.map(([id, name]) => ({ id, name, unit: u.id, unitName: u.name }))), [catalog.units]);
   const questions = useMemo<Question[]>(() => catalog.questions.map(q => {
@@ -325,7 +351,6 @@ export default function Home() {
         <button className={`top-nav-item ${view==="desk"?"selected":""}`} aria-current={view==="desk"?"page":undefined} onClick={()=>{navigate("desk");setMobileMenuOpen(false);}}><BookOpen size={21}/><span>Browse by unit</span><ChevronDown className="nav-chevron" size={16}/></button>
         <button className={`top-nav-item ${view==="library"||view==="detail"?"selected":""}`} aria-current={view==="library"?"page":undefined} onClick={()=>{navigate("library");setMobileMenuOpen(false);}}><LibraryBig size={20}/><span>Question bank</span></button>
         <button className={`top-nav-item ${view==="builder"||view==="practice"?"selected":""}`} aria-current={view==="builder"?"page":undefined} onClick={()=>{navigate("builder");setMobileMenuOpen(false);}}><FileText size={20}/><span>Practice Builder</span></button>
-        {process.env.NODE_ENV === "development" && <Link className={`nav review-nav ${pathname.startsWith("/admin/question-review") ? "active" : ""}`} aria-current={pathname.startsWith("/admin/question-review")?"page":undefined} href="/admin/question-review"><ScanEye className="review-nav-icon" size={16} aria-hidden="true"/>Question Image Review<i>DEV</i></Link>}
         <div className="tools-menu"><button className={`top-nav-item tools-toggle ${["progress","review","audit","banks"].includes(view)?"selected":""}`} aria-haspopup="menu" aria-expanded={toolsOpen} onClick={()=>setToolsOpen(open=>!open)}><LayoutGrid size={20}/><span>Tools</span><ChevronDown size={16}/></button>
           {toolsOpen&&<div className="tools-popover" role="menu"><button role="menuitem" onClick={()=>{navigate("progress");setToolsOpen(false);setMobileMenuOpen(false);}}><Activity size={17}/> Progress</button><button role="menuitem" onClick={()=>{setReviewKind("review");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><span className="menu-count">{reviewQuestions.length}</span> Review queue</button><button role="menuitem" onClick={()=>{navigate("audit");setToolsOpen(false);setMobileMenuOpen(false);}}><FileText size={17}/> Source page audit</button><button role="menuitem" onClick={()=>{setReviewKind("legacy");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><BookOpen size={17}/> Legacy content</button><button role="menuitem" onClick={()=>{navigate("banks");setToolsOpen(false);setMobileMenuOpen(false);}}><Beaker size={17}/> Manage test banks</button></div>}
         </div>
@@ -397,7 +422,7 @@ export default function Home() {
       </section>}
       {view === "practice" && !current && <div className="page narrow"><div className="empty-state"><span>✦</span><b>No questions in this session</b><p>Choose a unit or topic with indexed questions.</p><button className="primary" onClick={()=>navigate("library")}>Browse questions</button></div></div>}
 
-      {view === "progress" && <div className="page"><div className="eyebrow">YOUR LEARNING, OVER TIME</div><h1 className="page-title">Progress & patterns</h1><p className="muted">Attempts, missed questions, and repeated review needs are saved in this browser.</p><div className="stats progress-stats"><div className="stat"><span className="stat-icon peach">↗</span><div><small>TOTAL ATTEMPTS</small><b>{attempts}</b></div></div><div className="stat"><span className="stat-icon rose">⌁</span><div><small>MISSED ANSWERS</small><b>{misses}</b></div></div><div className="stat"><span className="stat-icon lavender">✦</span><div><small>CONCEPTS MASTERED</small><b>{mastered}</b></div></div></div><div className="panel"><div className="panel-head"><div><div className="eyebrow">FOCUS NEXT</div><h2>Concepts to revisit</h2></div><button className="outline" onClick={()=>reviewSession()}>Build review session →</button></div>{weakConcepts.length?weakConcepts.map(c=><div className="weak-row" key={c.id}><div className="weak-icon">⌁</div><div><b>{c.id} · {c.name}</b><small>{c.ids.size} question{c.ids.size===1?"":"s"} attempted</small></div><span className="missed-count">{c.wrong} missed · {c.attempts} attempts</span><button className="row-arrow" onClick={()=>reviewSession(c.id)}>Practice →</button></div>):<div className="empty-state"><span>✧</span><b>Your review map will grow as you practice</b><p>Mark a response as missed to focus future sessions on that question and topic.</p></div>}</div><div className="panel history-panel"><div className="eyebrow">MISSED QUESTIONS</div><h2>Question history</h2>{weakRows.length?weakRows.slice(0,60).map(q=><div className="history-row" key={q.id}><span className="history-x">↻</span><div><b>{q.type} {q.number} · {q.displayName}</b><small>{q.year || q.exam} · {q.source}</small></div><span>{progress[q.id]?.wrong} missed</span><button className="row-arrow" onClick={()=>{setQueue([q]);setIndex(0);setPageIndex(0);setSubmitted(false);setSelfResult(null);setWork("");navigate("practice",{questionId:q.id,sessionIds:[q.id],step:0});}}>Review →</button></div>):<div className="small-empty">No missed questions yet.</div>}</div></div>}
+      {view === "progress" && <div className="page"><div className="eyebrow">YOUR LEARNING, OVER TIME</div><h1 className="page-title">Progress & patterns</h1><p className="muted">Attempts, missed questions, and repeated review needs are saved in this browser.</p><div className="panel" style={{marginBlock:"1rem"}}><div className="eyebrow">DOMAIN MIGRATION</div><h2>Export or import browser progress</h2><p className="muted">Transfer attempts, topic overrides, and session count between your old and new ChemAtlas addresses. Import replaces the current browser’s progress. Uploaded personal PDF files are stored separately in IndexedDB and are not included in this progress export.</p><div style={{display:"flex",gap:"0.75rem",alignItems:"center",flexWrap:"wrap"}}><button className="outline" onClick={exportBrowserProgress}>Export progress (.json)</button><label className="outline" style={{cursor:"pointer",padding:"0.65rem 1rem"}}>Import progress (.json)<input type="file" accept=".json,application/json" style={{display:"none"}} onChange={e=>{void importBrowserProgress(e.currentTarget.files?.[0]);e.currentTarget.value="";}}/></label></div></div><div className="stats progress-stats"><div className="stat"><span className="stat-icon peach">↗</span><div><small>TOTAL ATTEMPTS</small><b>{attempts}</b></div></div><div className="stat"><span className="stat-icon rose">⌁</span><div><small>MISSED ANSWERS</small><b>{misses}</b></div></div><div className="stat"><span className="stat-icon lavender">✦</span><div><small>CONCEPTS MASTERED</small><b>{mastered}</b></div></div></div><div className="panel"><div className="panel-head"><div><div className="eyebrow">FOCUS NEXT</div><h2>Concepts to revisit</h2></div><button className="outline" onClick={()=>reviewSession()}>Build review session →</button></div>{weakConcepts.length?weakConcepts.map(c=><div className="weak-row" key={c.id}><div className="weak-icon">⌁</div><div><b>{c.id} · {c.name}</b><small>{c.ids.size} question{c.ids.size===1?"":"s"} attempted</small></div><span className="missed-count">{c.wrong} missed · {c.attempts} attempts</span><button className="row-arrow" onClick={()=>reviewSession(c.id)}>Practice →</button></div>):<div className="empty-state"><span>✧</span><b>Your review map will grow as you practice</b><p>Mark a response as missed to focus future sessions on that question and topic.</p></div>}</div><div className="panel history-panel"><div className="eyebrow">MISSED QUESTIONS</div><h2>Question history</h2>{weakRows.length?weakRows.slice(0,60).map(q=><div className="history-row" key={q.id}><span className="history-x">↻</span><div><b>{q.type} {q.number} · {q.displayName}</b><small>{q.year || q.exam} · {q.source}</small></div><span>{progress[q.id]?.wrong} missed</span><button className="row-arrow" onClick={()=>{setQueue([q]);setIndex(0);setPageIndex(0);setSubmitted(false);setSelfResult(null);setWork("");navigate("practice",{questionId:q.id,sessionIds:[q.id],step:0});}}>Review →</button></div>):<div className="small-empty">No missed questions yet.</div>}</div></div>}
 
       {view === "audit" && <div className="page"><div className="eyebrow">CHECK EVERY SOURCE PAGE</div><h1 className="page-title">Source page audit</h1><p className="muted">These counts show which PDF pages currently have question records. Unlinked pages can be covers, directions, tables, answer material, or missed questions; the image must be checked before deciding.</p><div className="stats catalog-stats"><div className="stat"><div><small>ORIGINAL PDF PAGES</small><b>{catalog.audit?.totalPages || catalog.sourcePages}</b></div></div><div className="stat"><div><small>PAGES LINKED TO RECORDS</small><b>{catalog.audit?.pagesReferencedByQuestionRecords || 0}</b></div></div><div className="stat"><div><small>UNLINKED PAGES TO INSPECT</small><b>{catalog.audit?.unresolvedPages || 0}</b></div></div><div className="stat"><div><small>QUESTIONS NEEDING TOPIC REVIEW</small><b>{reviewQuestions.length}</b></div></div></div><div className="panel audit-panel"><div className="panel-head"><div><div className="eyebrow">ORIGINAL SOURCE IMAGE</div><h2>Unlinked page {auditPage} of {catalog.audit?.totalPages || catalog.sourcePages}</h2></div><label>GO TO PAGE<input type="number" min="1" max={catalog.audit?.totalPages || catalog.sourcePages} value={auditPage} onChange={e=>setAuditPage(Math.max(1,Math.min(catalog.audit?.totalPages || catalog.sourcePages,Number(e.target.value)||1)))}/></label></div><p className="muted">If this page contains a question that needs indexing, use “Add a question reference” under Manage test banks. Page images remain the compiled PDF exactly as provided.</p>{(()=>{const file=catalog.sourceFiles?.find(f=>auditPage>=f.from&&auditPage<=f.to);return file?<PdfQuestionPage page={auditPage-file.from+1} sourcePage={auditPage} bankName="AP Chemistry MEGA Compiled Test Bank.pdf" sourceAsset={file.url}/>:<div className="pdf-error">The source page file is unavailable.</div>;})()}<div className="catalog-pagination"><button className="outline" disabled={auditPage<=1} onClick={()=>setAuditPage(p=>p-1)}>← Previous page</button><span>Page {auditPage} · {catalog.audit?.unreferencedPages?.includes(auditPage)?"no question record linked":"question record linked"}</span><button className="outline" disabled={auditPage>=(catalog.audit?.totalPages || catalog.sourcePages)} onClick={()=>setAuditPage(p=>p+1)}>Next page →</button></div><div className="audit-note"><b>Classification status</b><p>{catalog.audit?.coverageNote}</p><a href="/page-audit.json" target="_blank" rel="noreferrer">Open complete page list</a> · <a href="/classification-method.md" target="_blank" rel="noreferrer">Read method and topic boundaries</a></div></div></div>}
 

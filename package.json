@@ -1,5 +1,5 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "chematlas-student-worker",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -7,13 +7,16 @@
   },
   "scripts": {
     "install:ci": "bash scripts/install-pnpm.sh",
-    "dev": "node scripts/run-framework.mjs dev",
-    "build": "node scripts/run-framework.mjs build",
-    "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
+    "dev": "vite dev --host 127.0.0.1",
+    "build": "vite build",
+    "start": "wrangler dev --config dist/server/wrangler.json --local --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "test:question-review": "node --test tests/question-image-review.integration.test.mjs",
     "test:question-review-storage": "node --test tests/question-review-storage.test.mjs",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "check": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "check:private": "node scripts/assert-student-private-config.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

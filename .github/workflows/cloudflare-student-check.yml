@@ -1,0 +1,26 @@
+name: ChemAtlas private student CI (no deploy)
+on:
+  push:
+    branches: [deployment/cloudflare-student]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run check
+      - run: pnpm run check:private
+      - run: pnpm run build
+      - run: pnpm run check:private
+      - run: pnpm test
+      - run: python -m unittest discover -s tests -p 'test_*.py' -v

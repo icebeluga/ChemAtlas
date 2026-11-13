@@ -1,0 +1,827 @@
+{
+  "before": {
+    "FRQ": 257,
+    "MCQ": 1285
+  },
+  "after": {
+    "FRQ": 276,
+    "MCQ": 1266
+  },
+  "commonIds": 1542,
+  "addedIds": [],
+  "removedIds": [],
+  "changedFields": {
+    "exam": 24,
+    "fullText": 2,
+    "pages": 2,
+    "reviewReason": 4,
+    "sourcePagesOriginal": 2,
+    "sourceRegions": 143,
+    "stimulusIds": 17,
+    "type": 19,
+    "year": 1
+  },
+  "changedTopLevelKeys": [
+    "stats"
+  ],
+  "catalogCorrections": {
+    "mcq-2008-1-29": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-1-3-page29"
+        ]
+      }
+    },
+    "mcq-2008-10-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-10-11-page31"
+        ]
+      }
+    },
+    "mcq-2008-11-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-10-11-page31"
+        ]
+      }
+    },
+    "mcq-2008-12-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-12-14-page32"
+        ]
+      }
+    },
+    "mcq-2008-13-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-12-14-page32"
+        ]
+      }
+    },
+    "mcq-2008-14-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-12-14-page32"
+        ]
+      }
+    },
+    "mcq-2008-15-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-15-17-page32"
+        ]
+      }
+    },
+    "mcq-2008-16-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-15-17-page32"
+        ]
+      }
+    },
+    "mcq-2008-17-32": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-15-17-page32"
+        ]
+      }
+    },
+    "mcq-2008-2-29": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-1-3-page29"
+        ]
+      }
+    },
+    "mcq-2008-3-29": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-1-3-page29"
+        ]
+      }
+    },
+    "mcq-2008-4-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-4-6-page31"
+        ]
+      }
+    },
+    "mcq-2008-5-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-4-6-page31"
+        ]
+      }
+    },
+    "mcq-2008-6-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-4-6-page31"
+        ]
+      }
+    },
+    "mcq-2008-7-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-7-9-page31"
+        ]
+      }
+    },
+    "mcq-2008-8-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-7-9-page31"
+        ]
+      }
+    },
+    "mcq-2008-9-31": {
+      "stimulusIds": {
+        "before": null,
+        "after": [
+          "stimulus-2008-mcq-7-9-page31"
+        ]
+      }
+    },
+    "mcq-2017-2-1850": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2017-3-1854": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2017-4-1858": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2017-6-1862": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2017-7-1864": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-1-2057": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-2-1937": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-3-1941": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-3-2026": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      },
+      "year": {
+        "before": "2018",
+        "after": null
+      }
+    },
+    "mcq-2018-4-1945": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-5-2061": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-6-1949": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-6-2062": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2018-7-1951": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2022-2-1657": {
+      "pages": {
+        "before": [
+          1657
+        ],
+        "after": [
+          1657,
+          1658
+        ]
+      },
+      "sourcePagesOriginal": {
+        "before": [
+          1657
+        ],
+        "after": [
+          1657,
+          1658
+        ]
+      }
+    },
+    "mcq-2022-3-1659": {
+      "pages": {
+        "before": [
+          1659
+        ],
+        "after": [
+          1659,
+          1660,
+          1661
+        ]
+      },
+      "sourcePagesOriginal": {
+        "before": [
+          1659
+        ],
+        "after": [
+          1659,
+          1660,
+          1661
+        ]
+      }
+    },
+    "mcq-2023-2-1745": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2023-3-1747": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2023-4-1749": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2023-5-1750": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    },
+    "mcq-2023-7-1753": {
+      "type": {
+        "before": "MCQ",
+        "after": "FRQ"
+      }
+    }
+  },
+  "changedFieldsById": {
+    "frq-2014-2-333": [
+      "sourceRegions"
+    ],
+    "frq-2014-4-336": [
+      "sourceRegions"
+    ],
+    "frq-2015-2-346": [
+      "sourceRegions"
+    ],
+    "frq-2015-5-351": [
+      "sourceRegions"
+    ],
+    "frq-2016-3-376": [
+      "sourceRegions"
+    ],
+    "frq-2016-6-392": [
+      "sourceRegions"
+    ],
+    "frq-2021-2-402": [
+      "sourceRegions"
+    ],
+    "frq-2021-3-405": [
+      "sourceRegions"
+    ],
+    "frq-2021-4-408": [
+      "sourceRegions"
+    ],
+    "frq-2021-5-410": [
+      "sourceRegions"
+    ],
+    "frq-2022-2-424": [
+      "sourceRegions"
+    ],
+    "frq-2022-4-430": [
+      "sourceRegions"
+    ],
+    "frq-2022-5-432": [
+      "sourceRegions"
+    ],
+    "frq-2022-6-434": [
+      "sourceRegions"
+    ],
+    "frq-2023-2-445": [
+      "sourceRegions"
+    ],
+    "frq-2023-3-448": [
+      "sourceRegions"
+    ],
+    "frq-2023-4-452": [
+      "sourceRegions"
+    ],
+    "frq-2023-5-454": [
+      "sourceRegions"
+    ],
+    "frq-2023-6-456": [
+      "sourceRegions"
+    ],
+    "frq-2023-7-458": [
+      "sourceRegions"
+    ],
+    "frq-2024-2-468": [
+      "sourceRegions"
+    ],
+    "frq-2024-3-471": [
+      "sourceRegions"
+    ],
+    "frq-2024-4-474": [
+      "sourceRegions"
+    ],
+    "frq-2024-5-476": [
+      "sourceRegions"
+    ],
+    "frq-2024-6-478": [
+      "sourceRegions"
+    ],
+    "mcq-2008-1-29": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-10-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-11-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-12-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-13-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-14-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-15-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-16-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-17-32": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-2-29": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-3-29": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-4-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-5-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-6-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-7-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-8-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2008-9-31": [
+      "sourceRegions",
+      "stimulusIds"
+    ],
+    "mcq-2012-62-1364": [
+      "sourceRegions"
+    ],
+    "mcq-2012-63-1365": [
+      "sourceRegions"
+    ],
+    "mcq-2013-33-961": [
+      "sourceRegions"
+    ],
+    "mcq-2013-51-966": [
+      "sourceRegions"
+    ],
+    "mcq-2013-56-968": [
+      "sourceRegions"
+    ],
+    "mcq-2013-62-970": [
+      "sourceRegions"
+    ],
+    "mcq-2013-63-971": [
+      "sourceRegions"
+    ],
+    "mcq-2014-10-1445": [
+      "sourceRegions"
+    ],
+    "mcq-2014-12-176": [
+      "sourceRegions"
+    ],
+    "mcq-2014-13-177": [
+      "sourceRegions"
+    ],
+    "mcq-2014-17-1448": [
+      "sourceRegions"
+    ],
+    "mcq-2014-2-204": [
+      "sourceRegions"
+    ],
+    "mcq-2014-25-1451": [
+      "sourceRegions"
+    ],
+    "mcq-2014-25-181": [
+      "sourceRegions"
+    ],
+    "mcq-2014-3-208": [
+      "sourceRegions"
+    ],
+    "mcq-2014-30-1454": [
+      "sourceRegions"
+    ],
+    "mcq-2014-31-1455": [
+      "sourceRegions"
+    ],
+    "mcq-2014-38-1458": [
+      "sourceRegions"
+    ],
+    "mcq-2014-4-212": [
+      "sourceRegions"
+    ],
+    "mcq-2014-42-1460": [
+      "sourceRegions"
+    ],
+    "mcq-2014-43-1461": [
+      "sourceRegions"
+    ],
+    "mcq-2014-43-188": [
+      "sourceRegions"
+    ],
+    "mcq-2014-44-189": [
+      "sourceRegions"
+    ],
+    "mcq-2014-47-1463": [
+      "sourceRegions"
+    ],
+    "mcq-2014-5-214": [
+      "sourceRegions"
+    ],
+    "mcq-2014-50-1465": [
+      "sourceRegions"
+    ],
+    "mcq-2014-53-192": [
+      "sourceRegions"
+    ],
+    "mcq-2014-54-193": [
+      "sourceRegions"
+    ],
+    "mcq-2014-55-194": [
+      "sourceRegions"
+    ],
+    "mcq-2014-56-195": [
+      "sourceRegions"
+    ],
+    "mcq-2014-6-216": [
+      "sourceRegions"
+    ],
+    "mcq-2014-7-218": [
+      "sourceRegions"
+    ],
+    "mcq-2015-24-1546": [
+      "sourceRegions"
+    ],
+    "mcq-2015-47-1554": [
+      "sourceRegions"
+    ],
+    "mcq-2015-50-1556": [
+      "sourceRegions"
+    ],
+    "mcq-2016-10-1057": [
+      "sourceRegions"
+    ],
+    "mcq-2016-28-1065": [
+      "sourceRegions"
+    ],
+    "mcq-2016-31-1067": [
+      "sourceRegions"
+    ],
+    "mcq-2016-32-1068": [
+      "sourceRegions"
+    ],
+    "mcq-2016-8-1055": [
+      "sourceRegions"
+    ],
+    "mcq-2016-9-1056": [
+      "sourceRegions"
+    ],
+    "mcq-2017-2-1850": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2017-3-1854": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2017-4-1858": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2017-6-1862": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2017-7-1864": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-1-2057": [
+      "exam",
+      "reviewReason",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-11-1908": [
+      "sourceRegions"
+    ],
+    "mcq-2018-12-1197": [
+      "sourceRegions"
+    ],
+    "mcq-2018-13-1198": [
+      "sourceRegions"
+    ],
+    "mcq-2018-14-1199": [
+      "sourceRegions"
+    ],
+    "mcq-2018-16-1991": [
+      "sourceRegions"
+    ],
+    "mcq-2018-2-1937": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-21-1993": [
+      "sourceRegions"
+    ],
+    "mcq-2018-3-1902": [
+      "sourceRegions"
+    ],
+    "mcq-2018-3-1941": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-3-2026": [
+      "exam",
+      "reviewReason",
+      "sourceRegions",
+      "type",
+      "year"
+    ],
+    "mcq-2018-32-1918": [
+      "sourceRegions"
+    ],
+    "mcq-2018-39-1208": [
+      "sourceRegions"
+    ],
+    "mcq-2018-4-1903": [
+      "sourceRegions"
+    ],
+    "mcq-2018-4-1945": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-5-2061": [
+      "exam",
+      "reviewReason",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-50-1213": [
+      "sourceRegions"
+    ],
+    "mcq-2018-6-1949": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-6-2062": [
+      "exam",
+      "reviewReason",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-7-1905": [
+      "sourceRegions"
+    ],
+    "mcq-2018-7-1951": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2018-8-1906": [
+      "sourceRegions"
+    ],
+    "mcq-2018-8-1986": [
+      "sourceRegions"
+    ],
+    "mcq-2018-9-1987": [
+      "sourceRegions"
+    ],
+    "mcq-2022-2-1657": [
+      "exam",
+      "fullText",
+      "pages",
+      "sourcePagesOriginal",
+      "sourceRegions"
+    ],
+    "mcq-2022-22-1643": [
+      "exam",
+      "sourceRegions"
+    ],
+    "mcq-2022-3-1659": [
+      "exam",
+      "fullText",
+      "pages",
+      "sourcePagesOriginal",
+      "sourceRegions"
+    ],
+    "mcq-2022-4-1662": [
+      "exam",
+      "sourceRegions"
+    ],
+    "mcq-2022-5-1663": [
+      "exam",
+      "sourceRegions"
+    ],
+    "mcq-2022-6-1664": [
+      "sourceRegions"
+    ],
+    "mcq-2022-7-1665": [
+      "sourceRegions"
+    ],
+    "mcq-2023-19-1820": [
+      "sourceRegions"
+    ],
+    "mcq-2023-2-1745": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2023-20-1821": [
+      "sourceRegions"
+    ],
+    "mcq-2023-26-1823": [
+      "sourceRegions"
+    ],
+    "mcq-2023-27-1824": [
+      "sourceRegions"
+    ],
+    "mcq-2023-28-1825": [
+      "sourceRegions"
+    ],
+    "mcq-2023-29-1826": [
+      "sourceRegions"
+    ],
+    "mcq-2023-3-1747": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2023-32-1828": [
+      "sourceRegions"
+    ],
+    "mcq-2023-33-1829": [
+      "sourceRegions"
+    ],
+    "mcq-2023-34-1830": [
+      "sourceRegions"
+    ],
+    "mcq-2023-35-1831": [
+      "sourceRegions"
+    ],
+    "mcq-2023-4-1749": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2023-44-1835": [
+      "sourceRegions"
+    ],
+    "mcq-2023-45-1836": [
+      "sourceRegions"
+    ],
+    "mcq-2023-5-1750": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2023-5-1813": [
+      "sourceRegions"
+    ],
+    "mcq-2023-55-1737": [
+      "sourceRegions"
+    ],
+    "mcq-2023-58-1739": [
+      "sourceRegions"
+    ],
+    "mcq-2023-59-1740": [
+      "sourceRegions"
+    ],
+    "mcq-2023-60-1741": [
+      "sourceRegions"
+    ],
+    "mcq-2023-7-1753": [
+      "exam",
+      "sourceRegions",
+      "type"
+    ],
+    "mcq-2023-8-1815": [
+      "sourceRegions"
+    ],
+    "mcq-2023-9-1816": [
+      "sourceRegions"
+    ]
+  }
+}

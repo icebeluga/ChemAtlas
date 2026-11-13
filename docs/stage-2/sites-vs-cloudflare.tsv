@@ -1,0 +1,1005 @@
+path	comparison	Sites blob	Cloudflare blob	Sites mode	Cloudflare mode
+.github/workflows/cloudflare-student-check.yml	Cloudflare only		64563de2d8a80511f0c73631a9a2a460a612d923		100644
+.gitignore	identical	9e9e16c68cbdd429e732124e53a8b2bf508a5b48	9e9e16c68cbdd429e732124e53a8b2bf508a5b48	100644	100644
+.npmrc	identical	9f274d6425b9792ae0a70cb0b96a29fd98ec6ed6	9f274d6425b9792ae0a70cb0b96a29fd98ec6ed6	100644	100644
+.openai/hosting.json	identical	4cee0f8c1078cf2847a128a85b7001cfb719c1f3	4cee0f8c1078cf2847a128a85b7001cfb719c1f3	100644	100644
+DESIGN_SYSTEM.md	Sites only	030a8df8591ddb32ff1698f59e11d0063d1f94dc		100644	
+README.md	changed	004db658e289ebd41753cb4bbc10e97af633788b	65c4e9bcd1322f977ea574e4d8d140ff15c08603	100644	100644
+UI_AUDIT.md	Sites only	4d11679dcc79b8ccd6ac38fdd77423c8aeea0164		100644	
+UI_IMPLEMENTATION_REPORT.md	Sites only	72cd8596d36761105bdc35603cfb21168d134cc5		100644	
+app/admin/question-review/page.tsx	Cloudflare only		467abcc10c1313687f97cb2e88b059e23085cbf2		100644
+app/admin/question-review/review-dashboard.tsx	Cloudflare only		bc131c9c149aecd68e88add5972b5ed483c0d34a		100644
+app/api/admin/question-review/backup/import/route.ts	Cloudflare only		3dfabb6b9f87b8fba60359c1d4da4a70b54be36b		100644
+app/api/admin/question-review/backup/route.ts	Cloudflare only		98c8fe6795dfe7eac8c1a9828fc54602abece6c8		100644
+app/api/admin/question-review/image/[folder]/[filename]/route.ts	Cloudflare only		9f6750808e5446dccbf0ed4c97bb7d3311d9b1c4		100644
+app/api/admin/question-review/route.ts	Cloudflare only		246425d04a89fe3cf4ddd6d19a10bf794896b6de		100644
+app/atlas-tokens.css	Sites only	78d4d8bcb53acd549f8fb9ad8a942305ee1fcd73		100644	
+app/atlas-workspace.css	Sites only	432e05f33af8317584969150ba6f95df8fe64e0f		100644	
+app/chatgpt-auth.ts	identical	a0ae2ed9a9771b5fc36a06af554a05c18b2a13b3	a0ae2ed9a9771b5fc36a06af554a05c18b2a13b3	100644	100644
+app/globals.css	changed	78a6b95063e0aab7e0a2890c3048d75339949a2e	279349631e0e3143ccd854ea0415013e19d17208	100644	100644
+app/layout.tsx	changed	f671f599bdb8240bbee398a95b522be93ac70ce7	23e971833b5bb9a2e22e44452fdd66e6be290581	100644	100644
+app/navigation.mjs	Cloudflare only		4631d716ea6ddb83d6e67e43845ef3bb58d1a658		100644
+app/page.tsx	changed	94deebc020064d9f239e533b95bb206487fef5e6	9cebe579f6825c77a109a8b54d35d400f835d061	100644	100644
+app/practice-builder/page.tsx	Sites only	7aadb441e70ea072ff04e849ce0da87f3fb382a4		100644	
+cloudflare-env.d.ts	identical	856e090c902917b4e1cebee0e08ea1d398fd01c3	856e090c902917b4e1cebee0e08ea1d398fd01c3	100644	100644
+components.json	identical	c8f5bb16f79ed774f67415a8dc2b4a38243e3e90	c8f5bb16f79ed774f67415a8dc2b4a38243e3e90	100644	100644
+components/chem-atlas.tsx	Sites only	280ef7fb48c9a81c35038bf9f6f265c411a6dfbd		100644	
+components/connector-error.tsx	identical	3c994dc58811e4b02250092fec54b0b788edcc2c	3c994dc58811e4b02250092fec54b0b788edcc2c	100644	100644
+components/practice-builder.tsx	Sites only	55dae4b897f07e124849a0147c6bbcd5b34e2994		100644	
+components/ui/accordion.tsx	identical	91e3a250ce6ee0797b0258454d774800650adcc8	91e3a250ce6ee0797b0258454d774800650adcc8	100644	100644
+components/ui/alert-dialog.tsx	identical	dad327341382f200b84d5f833eb1b7a74b0e7469	dad327341382f200b84d5f833eb1b7a74b0e7469	100644	100644
+components/ui/alert.tsx	identical	f99164ed4b320790482f514342dab5e72f284aca	f99164ed4b320790482f514342dab5e72f284aca	100644	100644
+components/ui/aspect-ratio.tsx	identical	57e38fa96f9c0cb767d7b8de0d6dbc171d1b921a	57e38fa96f9c0cb767d7b8de0d6dbc171d1b921a	100644	100644
+components/ui/atlas-controls.tsx	Sites only	4f31b39eadc32a5f50857e6574eb16f66a741fd7		100644	
+components/ui/attachment.tsx	identical	5bdd1ce7db5800eb55198cd0291a1e47dc67fb0d	5bdd1ce7db5800eb55198cd0291a1e47dc67fb0d	100644	100644
+components/ui/avatar.tsx	identical	ea658505703a577fe93341e5e1a0b478c27245f7	ea658505703a577fe93341e5e1a0b478c27245f7	100644	100644
+components/ui/badge.tsx	identical	6eb2a057aae0e23a74368cc4daf9657210e9a740	6eb2a057aae0e23a74368cc4daf9657210e9a740	100644	100644
+components/ui/breadcrumb.tsx	identical	004bb63a4c92229e612b6126d79fb7b078aa7565	004bb63a4c92229e612b6126d79fb7b078aa7565	100644	100644
+components/ui/bubble.tsx	identical	792146e61d80ef595d032d5d09a3d572d50f1374	792146e61d80ef595d032d5d09a3d572d50f1374	100644	100644
+components/ui/button-group.tsx	identical	cd550d7afca6562548afe3f595b352406f7f3951	cd550d7afca6562548afe3f595b352406f7f3951	100644	100644
+components/ui/button.tsx	identical	4d38506cee5430d95a59ec6a2a0cef2b79217e7a	4d38506cee5430d95a59ec6a2a0cef2b79217e7a	100644	100644
+components/ui/calendar.tsx	identical	5d31419b130a18c52320f5a21546a9236123b6bf	5d31419b130a18c52320f5a21546a9236123b6bf	100644	100644
+components/ui/card.tsx	identical	acf57dc5a534792273b8fb86227e92e001f3dc53	acf57dc5a534792273b8fb86227e92e001f3dc53	100644	100644
+components/ui/carousel.tsx	identical	0e05a77ea155fde6af5d9a4848b1d3953df6ea5a	0e05a77ea155fde6af5d9a4848b1d3953df6ea5a	100644	100644
+components/ui/chart.tsx	identical	9813c584e125847d88e9e7e7f9edff7e9ba45a97	9813c584e125847d88e9e7e7f9edff7e9ba45a97	100644	100644
+components/ui/checkbox.tsx	identical	f5a7e433f3795b82a00c5c06a1fc6decf116a84a	f5a7e433f3795b82a00c5c06a1fc6decf116a84a	100644	100644
+components/ui/collapsible.tsx	identical	2f7a4e7fc64a8874373c1584646a63f28cd63c47	2f7a4e7fc64a8874373c1584646a63f28cd63c47	100644	100644
+components/ui/combobox.tsx	identical	2415bd801031a16bbcee8343058825feecfaea69	2415bd801031a16bbcee8343058825feecfaea69	100644	100644
+components/ui/command.tsx	identical	8fe3ccb406be52d28961b0c0220e87ecd19596ca	8fe3ccb406be52d28961b0c0220e87ecd19596ca	100644	100644
+components/ui/context-menu.tsx	identical	5aaca76552cf0468b1def03c9e2c42f1f0b60734	5aaca76552cf0468b1def03c9e2c42f1f0b60734	100644	100644
+components/ui/dialog.tsx	identical	84bdef4bb307087da1bfaf3cadf7be5dbda73f24	84bdef4bb307087da1bfaf3cadf7be5dbda73f24	100644	100644
+components/ui/direction.tsx	identical	22e165774bd595fbf41d0c45efef1cf996897983	22e165774bd595fbf41d0c45efef1cf996897983	100644	100644
+components/ui/drawer.tsx	identical	ad08671442203fe345093f364696bdf43528e0b7	ad08671442203fe345093f364696bdf43528e0b7	100644	100644
+components/ui/dropdown-menu.tsx	identical	ae1fcf62f1e3b648554789b8fe02943d92bf00fc	ae1fcf62f1e3b648554789b8fe02943d92bf00fc	100644	100644
+components/ui/empty.tsx	identical	ce4b0095f6d19d2eae2e465060e9060b0c210856	ce4b0095f6d19d2eae2e465060e9060b0c210856	100644	100644
+components/ui/field.tsx	identical	ec849dae4d3dd06a973ba22e4b2248a25cf18148	ec849dae4d3dd06a973ba22e4b2248a25cf18148	100644	100644
+components/ui/form.tsx	identical	f371fea1bc35380d28678c6cf53df8f65deb2776	f371fea1bc35380d28678c6cf53df8f65deb2776	100644	100644
+components/ui/hover-card.tsx	identical	91e869c0d3091cbeddf5cb0266e82ddf56f829a6	91e869c0d3091cbeddf5cb0266e82ddf56f829a6	100644	100644
+components/ui/input-group.tsx	identical	a7652d936fffd9c5bca4b88e6b9715bf559e667d	a7652d936fffd9c5bca4b88e6b9715bf559e667d	100644	100644
+components/ui/input-otp.tsx	identical	6a556afacd71996bf0e385ff2b04869fb2ee4523	6a556afacd71996bf0e385ff2b04869fb2ee4523	100644	100644
+components/ui/input.tsx	identical	f1124aea14eee062fc2f4c55dad5f0d9de0ccc1a	f1124aea14eee062fc2f4c55dad5f0d9de0ccc1a	100644	100644
+components/ui/item.tsx	identical	d5dbb1a9c2e70456e45a39887a4b7cc56d484a45	d5dbb1a9c2e70456e45a39887a4b7cc56d484a45	100644	100644
+components/ui/kbd.tsx	identical	2459224fbc531f6306b73aaeb22e9022d9985332	2459224fbc531f6306b73aaeb22e9022d9985332	100644	100644
+components/ui/label.tsx	identical	1ac80f701ebfe9dc02d632c08cafade732e46625	1ac80f701ebfe9dc02d632c08cafade732e46625	100644	100644
+components/ui/marker.tsx	identical	cfa76c6c014ab342befcbf7571eb932917406522	cfa76c6c014ab342befcbf7571eb932917406522	100644	100644
+components/ui/menubar.tsx	identical	4af16a428377f81cbb3f66adfe518308e0b690d8	4af16a428377f81cbb3f66adfe518308e0b690d8	100644	100644
+components/ui/message-scroller.tsx	identical	0b05011259c026a357380c3834bce0ead8565d22	0b05011259c026a357380c3834bce0ead8565d22	100644	100644
+components/ui/message.tsx	identical	53437e8db2b0fad1da06a7499e54ddaf116295c2	53437e8db2b0fad1da06a7499e54ddaf116295c2	100644	100644
+components/ui/native-select.tsx	identical	3058398399ad6c029ad527052475b360b114715b	3058398399ad6c029ad527052475b360b114715b	100644	100644
+components/ui/navigation-menu.tsx	identical	0a673f513c97fbeaae0872403b7582ab2ba7e3c3	0a673f513c97fbeaae0872403b7582ab2ba7e3c3	100644	100644
+components/ui/pagination.tsx	identical	1dcfb0cc050c5f2bdd930522d627313d03d3690c	1dcfb0cc050c5f2bdd930522d627313d03d3690c	100644	100644
+components/ui/popover.tsx	identical	30058c4ec284ca9cad1ed1162d084ce3cd94e2b0	30058c4ec284ca9cad1ed1162d084ce3cd94e2b0	100644	100644
+components/ui/progress.tsx	identical	b3ae25089ad549b7f13125e482f99b43dd895bd2	b3ae25089ad549b7f13125e482f99b43dd895bd2	100644	100644
+components/ui/radio-group.tsx	identical	fe514536ed771f7adef0a6b9e4d1aeadc2c95481	fe514536ed771f7adef0a6b9e4d1aeadc2c95481	100644	100644
+components/ui/resizable.tsx	identical	a76832a10b4c5c2a137e25c16478567ba86daf0d	a76832a10b4c5c2a137e25c16478567ba86daf0d	100644	100644
+components/ui/scroll-area.tsx	identical	73c4eb1cdcd4a699b150a9ddc3e87bfb90b63d09	73c4eb1cdcd4a699b150a9ddc3e87bfb90b63d09	100644	100644
+components/ui/select.tsx	identical	c0dc7120b4f78008ae5efc6d1c8b7ec8205c35d5	c0dc7120b4f78008ae5efc6d1c8b7ec8205c35d5	100644	100644
+components/ui/separator.tsx	identical	cd873e3631b571060f166897b7b62e033e87c18f	cd873e3631b571060f166897b7b62e033e87c18f	100644	100644
+components/ui/sheet.tsx	identical	cb53bb28b6850745c9519e8e7462e05f85a50c93	cb53bb28b6850745c9519e8e7462e05f85a50c93	100644	100644
+components/ui/sidebar.tsx	identical	f5f6c5aefc88ffa2e999e284b299472215c05161	f5f6c5aefc88ffa2e999e284b299472215c05161	100644	100644
+components/ui/skeleton.tsx	identical	3ec6be770b846170b8e7f8916e5f165e2d1730df	3ec6be770b846170b8e7f8916e5f165e2d1730df	100644	100644
+components/ui/slider.tsx	identical	46ebc4b4df1e9baf1f3997a4b6c08ef80c84a9c9	46ebc4b4df1e9baf1f3997a4b6c08ef80c84a9c9	100644	100644
+components/ui/sonner.tsx	identical	9b20afe2e10fd9b94d1abc1ae732054b2fb9821c	9b20afe2e10fd9b94d1abc1ae732054b2fb9821c	100644	100644
+components/ui/spinner.tsx	identical	a70e713c5b4ecb2af186efe3fadea51805f26ba5	a70e713c5b4ecb2af186efe3fadea51805f26ba5	100644	100644
+components/ui/switch.tsx	identical	8baa844fdb17d668b3ce07cfbd6a7ef52e2eb5eb	8baa844fdb17d668b3ce07cfbd6a7ef52e2eb5eb	100644	100644
+components/ui/table.tsx	identical	7add5f1a22db954ac6cb3446f1bf8c8a9fc5c335	7add5f1a22db954ac6cb3446f1bf8c8a9fc5c335	100644	100644
+components/ui/tabs.tsx	identical	b463afd170637df477e36184aa27d2ad1bd3c3e0	b463afd170637df477e36184aa27d2ad1bd3c3e0	100644	100644
+components/ui/textarea.tsx	identical	e67d8fefe50c41dfa2deed9a5096d5be7691581a	e67d8fefe50c41dfa2deed9a5096d5be7691581a	100644	100644
+components/ui/toggle-group.tsx	identical	9894607b212ff7182bf2024f4262da03df0a8973	9894607b212ff7182bf2024f4262da03df0a8973	100644	100644
+components/ui/toggle.tsx	identical	5250c98ff7f11f531af38c227230a76b7d25bf19	5250c98ff7f11f531af38c227230a76b7d25bf19	100644	100644
+components/ui/tooltip.tsx	identical	ec65c1e4255f050d9555c6cdade90a5f8a6c0c29	ec65c1e4255f050d9555c6cdade90a5f8a6c0c29	100644	100644
+components/worksheet-preview.tsx	Sites only	1716af9c577e0a141a04d616851331a829dac7df		100644	
+db/index.ts	identical	19b379900d94124b674f07ffe2dbba8f70bd8d6d	19b379900d94124b674f07ffe2dbba8f70bd8d6d	100644	100644
+db/schema.ts	changed	d2dd83cd250ecaa6ac022559fc9640271f2b2dd5	0fda7bc94158de274a1aaa9025a687048b005779	100644	100644
+docs/automatic-boundary-detection-checkpoint.md	Cloudflare only		6c93918be77e5015a250dbbf3a5047891d8b0ee7		100644
+docs/catalog-compatibility.md	Cloudflare only		7c3e805d9696fac1429bdc8f241a7dbcdc8420b3		100644
+docs/cloudflare-student-deployment.md	Cloudflare only		a41be9a7a78cbde158742260a2b5770691772cba		100644
+docs/private-review-deployment-phase-1.md	Cloudflare only		256e7912a45c8ed4ed0a4dc62314048228f9ea11		100644
+docs/private-review-deployment-phase-2-finalization.md	Cloudflare only		1731a1cf156b589ee0955cfea0ad23be14bac069		100644
+docs/public-ui-recovery-investigation.md	Cloudflare only		085bbea74a60522c20a2e87bf4713a5c0c2ff5a9		100644
+docs/unified-catalog-diff.json	Cloudflare only		352557c22a30dd66c8afed491d42c95364ef0cf6		100644
+docs/unified-integration-plan.md	Cloudflare only		f2990af12d0b0ce1fea4f7a6a06aef45ea4bbed4		100644
+docs/unified-integration.md	Cloudflare only		03395f09a701282baed1e28e4c902687ec24bf51		100644
+docs/unified-verification.md	Cloudflare only		e14697b7334e9292fc803991feb94c3f3ee279cc		100644
+drizzle.config.ts	identical	c2b2f34376984744343453838ce66658ad9d9b6a	c2b2f34376984744343453838ce66658ad9d9b6a	100644	100644
+drizzle/0001_question_image_review.sql	Cloudflare only		3fa2fe17cbe318c71ad462b78a53ddd423e957fc		100644
+drizzle/meta/_journal.json	identical	4377507400414768c5915808bf080a1403cf6cb3	4377507400414768c5915808bf080a1403cf6cb3	100644	100644
+eslint.config.mjs	identical	6600a56ae006c77b1143fcddc8e8ded4e724309b	6600a56ae006c77b1143fcddc8e8ded4e724309b	100644	100644
+examples/d1/app/api/notes/route.ts	identical	07f8318c3c290d68163e95aa3e170ad92a235f27	07f8318c3c290d68163e95aa3e170ad92a235f27	100644	100644
+examples/d1/db/schema.ts	identical	7bb0c157110799b9b53c767517e0d192b7201f2e	7bb0c157110799b9b53c767517e0d192b7201f2e	100644	100644
+hooks/use-mobile.ts	identical	2b0fe1dfef3b17850bbac040665f514a8ffd0f15	2b0fe1dfef3b17850bbac040665f514a8ffd0f15	100644	100644
+lib/cloudflare-access.d.mts	Cloudflare only		55f62aa7ac8c1a550345ca304ec6f47b4e24b2e8		100644
+lib/cloudflare-access.mjs	Cloudflare only		f5f529341f0cbd89f2b30feaebad7d1f08b02b77		100644
+lib/connector-context.ts	identical	6cdeac72bf2df63e0a73159af25e0b4564ed1d43	6cdeac72bf2df63e0a73159af25e0b4564ed1d43	100644	100644
+lib/connector-contract.mts	identical	f146418508b4c272a4495ec5498b6f0554b1f966	f146418508b4c272a4495ec5498b6f0554b1f966	100644	100644
+lib/connector-errors.mts	identical	c9d2fe845ec965062d3724fd28a0892b4fbf5a9b	c9d2fe845ec965062d3724fd28a0892b4fbf5a9b	100644	100644
+lib/connector-preview.d.ts	identical	bb3f498b67e3dfd93601626aa2675af07dfe711c	bb3f498b67e3dfd93601626aa2675af07dfe711c	100644	100644
+lib/connectors.ts	identical	30b85c0dd699e7236ec1694e03466b03caa2a7dc	30b85c0dd699e7236ec1694e03466b03caa2a7dc	100644	100644
+lib/progress-transfer.d.mts	Cloudflare only		157b8d95e85df9bcd14210b62006f234b8ce1a90		100644
+lib/progress-transfer.mjs	Cloudflare only		a2a0d5a076b407794314e82dd62cc07046e241e9		100644
+lib/question-review-backup.mjs	Cloudflare only		a816ea6e756f9cb98cffb950a8369aa30a4dc77e		100644
+lib/question-review-storage.d.mts	Cloudflare only		d79c11e98f68536b6c44df568056efc54484a0d0		100644
+lib/question-review-storage.mjs	Cloudflare only		e74ac160eb717f0474a11a4430ef2f153691b2e0		100644
+lib/question-source.ts	Sites only	98be3c50b2e44a7f50df85c4a25864cf802efc91		100644	
+lib/student-access.d.mts	Cloudflare only		fd4b2e3242042a6cdd6d4c62f0484780cbd80951		100644
+lib/student-access.mjs	Cloudflare only		97b2c0d1c016d221b1967154edf3df03dd50d907		100644
+lib/utils.ts	identical	b500fb167fdaa78785feb0ff03b51f8a182a44ae	b500fb167fdaa78785feb0ff03b51f8a182a44ae	100644	100644
+lib/worksheet-content.ts	Sites only	c33b7b2d14f9bf0a61618d5a903b803f0b9c6f73		100644	
+lib/worksheet-pdf.ts	Sites only	69aba4eac4b9224404f912f8dc820e6243bf3f6d		100644	
+lib/worksheet-render.ts	Sites only	1290dd21cf66a8305e9830edb197e529520aa116		100644	
+lib/worksheet.d.mts	Cloudflare only		82fc625e45c299fb28ad0a1cc05ad9939be16c13		100644
+lib/worksheet.mjs	Cloudflare only		7918479998cdd605f054201d45dcbf818a872107		100644
+lib/worksheet.ts	Sites only	f56e065b3c4c30c7520106c2445c47c5d1ae6dd7		100644	
+next.config.ts	identical	e9ffa3083ad279ecf95fd8eae59cb253e9a539c4	e9ffa3083ad279ecf95fd8eae59cb253e9a539c4	100644	100644
+package.json	changed	369f9b3a12e5464f4191692bb4e39ff413fc59f3	d6584e06fa65ced7e27eef8c3b3c7e5729af1998	100644	100644
+pnpm-lock.yaml	changed	7ee27b7d2f926ebf977e92bd1298e9e12355549d	c21859cd598d1cb9e225c81cc5048dcb3259416d	100644	100644
+pnpm-workspace.yaml	identical	454dde77be0f122931de27f35b440c75b35bfbca	454dde77be0f122931de27f35b440c75b35bfbca	100644	100644
+postcss.config.mjs	identical	61e36849cf7cfa9f1f71b4a3964a4953e3e243d3	61e36849cf7cfa9f1f71b4a3964a4953e3e243d3	100644	100644
+public/classification-method.md	identical	225e1baf36b0d01c36d00e6c68feb37751b7a998	225e1baf36b0d01c36d00e6c68feb37751b7a998	100644	100644
+public/curriculum-topics.json	identical	e1f4fc9499b1dd4d345b681713b5c337b1e04ccd	e1f4fc9499b1dd4d345b681713b5c337b1e04ccd	100644	100644
+public/favicon.svg	changed	c788084dcfd0fcd2261f541a1a91a66a5e5052f9	ca747cb66b233fedec5ff0c84f97bb4631c05dbf	100644	100644
+public/page-audit.json	changed	4c4e039617d46a968ca12ac9969074bf7f174163	3108ef480e1d92d7ddd6a7578acf50a5f38b1efe	100644	100644
+public/pdf.worker.min.mjs	identical	54f88f419b7b3775400d93053f8eeac3b7f19b5b	54f88f419b7b3775400d93053f8eeac3b7f19b5b	100644	100644
+public/questions.json	changed	126f4b46fb1cdb8868dc199eb74974a3898f719a	3eef99956b037611afc9b5a60a056f1cbbb311b0	100644	100644
+public/source/bank-01.pdf	identical	35ca437fead475205ce7664a98876c7c754c3095	35ca437fead475205ce7664a98876c7c754c3095	100644	100644
+public/source/bank-02.pdf	identical	d03a1d50fd0294c48fd70e92c56a287cba1142ef	d03a1d50fd0294c48fd70e92c56a287cba1142ef	100644	100644
+public/source/bank-03.pdf	identical	30a70a3ac1dc0fdcede9008ff6adfc2d6fc1ba88	30a70a3ac1dc0fdcede9008ff6adfc2d6fc1ba88	100644	100644
+public/source/bank-04.pdf	identical	bfa1ef7fb9e4ef58ff0313c5edb681a4df049fca	bfa1ef7fb9e4ef58ff0313c5edb681a4df049fca	100644	100644
+public/source/bank-05.pdf	identical	41af0c0c22075b7f64c428d94320304bff341fcd	41af0c0c22075b7f64c428d94320304bff341fcd	100644	100644
+public/source/bank-06.pdf	identical	842e8cad385187c00bce65f97d1911bccc253278	842e8cad385187c00bce65f97d1911bccc253278	100644	100644
+public/source/bank-07.pdf	identical	dfa0898a2f3a0422895577a6df17b943851f64dd	dfa0898a2f3a0422895577a6df17b943851f64dd	100644	100644
+public/source/bank-08.pdf	identical	5f4728b259607ea23404efbf189448a6a595a824	5f4728b259607ea23404efbf189448a6a595a824	100644	100644
+public/worksheet-content.json	Sites only	82e89dc38be6dc8bdf5536b89c9122be1bdf7f83		100644	
+public/worksheet-fragments.pdf	Sites only	6e8f5af1c786f4138dd5a14463324edf7fd9496d		100644	
+public/worksheet-sources.json	Sites only	4375abd7d67121dc4edb2aa16a39718c999c0108		100644	
+research/2008-mcq-completeness-audit.md	Sites only	039b17c6a646c8c66af7bb24ab18df2c7411609b		100644	
+research/2014-practice-frq-audit.md	Sites only	fe0dcd61ce10bed925448c36d3935545f0078a73		100644	
+research/2014-practice-mcq-audit.md	Sites only	82139769936e602dc9cb5cf93a78c6b3a65b200b		100644	
+research/2020-sample-frq-audit.md	Sites only	ad2948cef138112dc84c9f5a368891a24e1d7cf5		100644	
+research/AUTOMATIC_BOUNDARY_DETECTION.md	Cloudflare only		5730487f90a50bdcdbead01aa96fe898a5c744ea		100644
+research/QUESTION_IMAGE_REVIEW.md	Cloudflare only		1402ee12945111978d8d24fa5cf71cd06e14dc9d		100644
+research/__pycache__/classify_frq_manual.cpython-312.pyc	identical	69dfbd142368101a6a78c5b27e54bcfdc959c4e9	69dfbd142368101a6a78c5b27e54bcfdc959c4e9	100644	100644
+research/__pycache__/extract_corpus.cpython-312.pyc	identical	3ce7e73b30c6d0307a7a1ba02a9213b77a049d28	3ce7e73b30c6d0307a7a1ba02a9213b77a049d28	100644	100644
+research/__pycache__/write_mcq_first.cpython-312.pyc	identical	b40293f3eceddfe9962d4ddcc13d49e6b52b3265	b40293f3eceddfe9962d4ddcc13d49e6b52b3265	100644	100644
+research/add_omitted_2008_mcqs.py	Sites only	07c86374489e623ece7bb848bfc0be2fd2eafd33		100644	
+research/add_omitted_2014_practice_mcqs.py	Sites only	ea6f93e5cd3302e3127ba5388b17cb8db73db2e3		100644	
+research/add_scanned_records.py	identical	219831bbd37dea340fa47dca6ef816404f8a82cb	219831bbd37dea340fa47dca6ef816404f8a82cb	100644	100644
+research/add_verified_2008_mcq_41.py	Sites only	5b6ccd0b95dfcc47e40194451316f18e0df495d5		100644	
+research/add_verified_2014_practice_frq_1.py	Sites only	b5172a1e3b128797ee8408ff96a7da613eec8207		100644	
+research/add_verified_2020_sample_frqs.py	Sites only	14e09a5821c676e608118bcf44084063909222d5		100644	
+research/apchem-classification-guide.md	identical	225e1baf36b0d01c36d00e6c68feb37751b7a998	225e1baf36b0d01c36d00e6c68feb37751b7a998	100644	100644
+research/apchem-corpus-staged.json	changed	bc0f46603de3a266c77f6ece38e1eaa8345fe545	ff59090f2765b0def7faae2c443a25a3b536bd31	100644	100644
+research/apchem-taxonomy.json	identical	e1f4fc9499b1dd4d345b681713b5c337b1e04ccd	e1f4fc9499b1dd4d345b681713b5c337b1e04ccd	100644	100644
+research/apchem-topic-reference.md	identical	688e8d2961beda9a358a40e19e64669efc323d03	688e8d2961beda9a358a40e19e64669efc323d03	100644	100644
+research/audit-worksheet-catalog.py	Sites only	62f75b78b75d1811986ad683e02f8ccfabee87ae		100644	
+research/audit_candidates.py	identical	2788ac263433e342a65435573b068fc6e79affe9	2788ac263433e342a65435573b068fc6e79affe9	100644	100644
+research/audit_crop_geometry.py	Cloudflare only		7466c4aa1e8432e74ca97572a4489c1ad86d334e		100644
+research/batch_mcq_first.py	identical	2af2b83e19aa511c9464fcfa978f884281fd4d83	2af2b83e19aa511c9464fcfa978f884281fd4d83	100644	100644
+research/build-worksheet-fragments.py	Sites only	95526595a7547c39b549002832300c85b13f7182		100644	
+research/build-worksheet-sources.py	Sites only	340f0c03e5f7e771f2a769741acc9d2e38a50fbd		100644	
+research/build_taxonomy.py	identical	9a6b623f183518c951400c838849b2c9ccade08d	9a6b623f183518c951400c838849b2c9ccade08d	100644	100644
+research/build_unlinked_page_inventory.py	Sites only	28abfcc5b3931db5fef7bba3a21cf4b030bd4ada		100644	
+research/candidate-pages.txt	identical	d0d64337087772a2d3d2a5e85358d54037a7af6c	d0d64337087772a2d3d2a5e85358d54037a7af6c	100644	100644
+research/chem-ced.pdf	identical	f5e0f0f8647a93c60a227f33714e6905f92e5405	f5e0f0f8647a93c60a227f33714e6905f92e5405	100644	100644
+research/classify_frq_batch03.py	identical	d7735865baac303bc45335c9e89c0cad108cc65a	d7735865baac303bc45335c9e89c0cad108cc65a	100644	100644
+research/classify_frq_batch04.py	identical	664736f1a118a421ad86f6e3b3732b7d313e59b9	664736f1a118a421ad86f6e3b3732b7d313e59b9	100644	100644
+research/classify_frq_batch2.py	identical	552bfc427a273db6ac80d53a8cd04193490b6d59	552bfc427a273db6ac80d53a8cd04193490b6d59	100644	100644
+research/classify_frq_manual.py	identical	bc7f51e2208dcad54d408ed88b1a532032a848f7	bc7f51e2208dcad54d408ed88b1a532032a848f7	100644	100644
+research/classify_later.py	identical	7c00fad16e1eae7ac9353c8c5c9a6fd42c435852	7c00fad16e1eae7ac9353c8c5c9a6fd42c435852	100644	100644
+research/classify_scanned.py	identical	10b0351db11593c92eec52011b68ccafd0613968	10b0351db11593c92eec52011b68ccafd0613968	100644	100644
+research/crop-backlog-ledger.json	Cloudflare only		50e04ff9e84a564d5f8a6967b07cf11009f75020		100644
+research/crop-geometry-audit.json	Cloudflare only		b3a6904912d4e852b20b6921ab0a798ecaf15863		100644
+research/crop-verification-progress.md	Cloudflare only		026b7e7d1b0cced9a3c89bbcde5b0ec6a6749dca		100644
+research/crop-visual-review.json	Cloudflare only		48bc49659682d9a8629a483ef079175817ad6105		100644
+research/detect_question_boundaries.py	Cloudflare only		46a8755eb97ccfe39923d095624a8981868fb351		100644
+research/diagnostics/crop-batches/batch-10-export-sample.pdf	Cloudflare only		72af68362a06aba501163d5d332d1f1579068645		100644
+research/diagnostics/crop-batches/batch-11-export-sample.pdf	Cloudflare only		2568353bcf4f8b2271f792d41fb5e9aeb7296bb5		100644
+research/diagnostics/crop-batches/corrected/2008-q13-alone-page-1.png	Cloudflare only		cbc1a3e73c9fbb5265ddaff754a969f01b3eeb28		100644
+research/diagnostics/crop-batches/corrected/2008-q13-alone-page-2.png	Cloudflare only		a3b483b7293f4c04c2ea82a5fd488211a43b6983		100644
+research/diagnostics/crop-batches/corrected/2008-q13-alone.pdf	Cloudflare only		9b9c509ac8a2ad95d570f51177fde60d64b7cf80		100644
+research/diagnostics/crop-batches/corrected/2008-q16-alone-page-1.png	Cloudflare only		d24c2b9557f92b4c0abe9aecce8d7c6d7b8fddc6		100644
+research/diagnostics/crop-batches/corrected/2008-q16-alone-page-2.png	Cloudflare only		880d275fcfeade2a35e87e4f03da9b70474bc409		100644
+research/diagnostics/crop-batches/corrected/2008-q16-alone.pdf	Cloudflare only		d661370bde5da74ff50b30491af0fbaacfa9769d		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-1.png	Cloudflare only		047bcd2941521d1aee2417c9840568c0d7649870		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-10.png	Cloudflare only		472abe06abeb8b8367b0180bd778b2729d23efe7		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-11.png	Cloudflare only		11c54cb74c3cc8761a406af349ef98adf939dc38		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-12.png	Cloudflare only		9998fce3341dbdaabd155c1e724a7c6a70306559		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-13.png	Cloudflare only		51d40a661e508f2a7d1ea9a9743e24ff9bc18052		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-14.png	Cloudflare only		9e72175831d9098b40cd6be031230fb4b38ed5cd		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-15.png	Cloudflare only		27b8c2704a59c3a53f3911bcbb93c7e518dc41f5		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-2.png	Cloudflare only		3750e862ecc874df73116e5f22343ebdffbf1da7		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-3.png	Cloudflare only		09ccd54881a3ecd779391b8b52abe7c64fc2bdba		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-4.png	Cloudflare only		43e605a652dc8f5eea7c6600016eba60651771ba		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-5.png	Cloudflare only		2ad262425c9a63ccf120393cabdc21ff0f70642c		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-6.png	Cloudflare only		700bf634366f4c5951fe2db66f29d562732c3ecd		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-7.png	Cloudflare only		13eaf8de688129e596ec74fe631c49ab6dc19fbb		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-8.png	Cloudflare only		0bba7c538b74c391db66e1bfa18b93e359124b9a		100644
+research/diagnostics/crop-batches/corrected/2008-stimuli-batch-page-9.png	Cloudflare only		40d68f638d953eb1185e9bd3fe46bdad3e6afa83		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-batch-export.pdf	Cloudflare only		7af76fdac9b62f7033c8b49b8a9385ba3e724757		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group-page-1.png	Cloudflare only		a225200b8747dfeeaf789a91182fa1d227c5c2ab		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group-page-2.png	Cloudflare only		b2828efaecb4f38f1e28fc703194057408c04f72		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group-page-3.png	Cloudflare only		daffb04788c720b89bc27c4c6fcb40d08932e7a4		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group-page-4.png	Cloudflare only		8153507c5983c22b73bf918a1c16381ab35f232f		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-deduplicated-group.pdf	Cloudflare only		738e958f5db27a3954be49f475ba82265fa66a5e		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-single-question-page-1.png	Cloudflare only		a225200b8747dfeeaf789a91182fa1d227c5c2ab		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-single-question-page-2.png	Cloudflare only		daffb04788c720b89bc27c4c6fcb40d08932e7a4		100644
+research/diagnostics/crop-batches/corrected/2008-stimulus-single-question.pdf	Cloudflare only		e565c2cfc0156fe021b8a5ba0174fd07d6cd6566		100644
+research/diagnostics/crop-batches/corrected/batch-09-corrected-1.png	Cloudflare only		94c33d4f9be64a7bfdf4f59aef51c930431b4db6		100644
+research/diagnostics/crop-batches/corrected/batch-09-corrected-2.png	Cloudflare only		2deea2217b5b9cf58c22e983afa7e087a4ee9cbd		100644
+research/diagnostics/crop-batches/corrected/batch-09-corrected-3.png	Cloudflare only		e9c9fd83fdc57a5e41a3902f9a795c48a7ce23d0		100644
+research/diagnostics/crop-batches/corrected/batch-10-corrected-1.png	Cloudflare only		c565c96a6e5bb018c8be3f9cc1f81f0495ece685		100644
+research/diagnostics/crop-batches/corrected/batch-10-corrected-2.png	Cloudflare only		0be6d00153c66fbf384e4b45685352b6483f9332		100644
+research/diagnostics/crop-batches/corrected/batch-10-corrected-3.png	Cloudflare only		cc5fbef0fd48b455e9e16db8883712a9bf25ddd9		100644
+research/diagnostics/crop-batches/corrected/batch-10-corrected-4.png	Cloudflare only		1b675b93ba1b6bdfb37d5058fb9e78e5979f433f		100644
+research/diagnostics/crop-batches/corrected/batch-10-export-page-1.png	Cloudflare only		2e0ca165a63413eb74c273a64a60f015a2e1dac7		100644
+research/diagnostics/crop-batches/corrected/batch-10-export-page-2.png	Cloudflare only		d9f1d78900d29ace188279a3409ce3d635402afd		100644
+research/diagnostics/crop-batches/corrected/batch-10-export-page-3.png	Cloudflare only		307427dae9743dc82fada327ed0192fc1a2f4d77		100644
+research/diagnostics/crop-batches/corrected/batch-11-crops-1.png	Cloudflare only		93ddb96f4f3e747e1b280b6cec2dce80719e9a94		100644
+research/diagnostics/crop-batches/corrected/batch-11-crops-2.png	Cloudflare only		31647cd20f95f1add74f608567d8e0cf43b40e04		100644
+research/diagnostics/crop-batches/corrected/batch-11-crops-3.png	Cloudflare only		e2d04269f11da6ec8f769dd5c17eacffebc4d97c		100644
+research/diagnostics/crop-batches/corrected/batch-11-crops-4.png	Cloudflare only		429cae8a85018696d4097ac637847e62fbc34b05		100644
+research/diagnostics/crop-batches/corrected/batch-11-export-page-1.png	Cloudflare only		e91d49b21ecc4d15837189e736b93c93e40a671f		100644
+research/diagnostics/crop-batches/corrected/batch-11-export-page-2.png	Cloudflare only		0884309b12c1e88bb14f6079f27b5bbcd16598fb		100644
+research/diagnostics/crop-batches/corrected/batch-11-export-page-3.png	Cloudflare only		00f0d260ae40c6134def231301dad899fa2245ec		100644
+research/diagnostics/crop-batches/corrected/batch-11-export-page-4.png	Cloudflare only		afc93b45bc0cbb470748df6c4fdfb047b86dc5e1		100644
+research/diagnostics/crop-batches/corrected/batch-12-corrected-1.png	Cloudflare only		f383bae909bf2575cbf0d51ff3fb131334f2dd1f		100644
+research/diagnostics/crop-batches/corrected/batch-12-corrected-2.png	Cloudflare only		c592ed1a00afd947ab482dd126d88622ca124d5a		100644
+research/diagnostics/crop-batches/corrected/batch-12-corrected-3.png	Cloudflare only		69dc98d0176d7ea870f4264afae9b019f1733172		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-1.png	Cloudflare only		d233f4ff5a646a73c1a76f2ee59f8706c6c0ae38		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-2.png	Cloudflare only		456e27a8284b3ec3511fcda02340043601ce7d08		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-3.png	Cloudflare only		eec54dc4ed93fe3b13bf1ade02f9ade9c5cdf849		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-4.png	Cloudflare only		ee00c785ffde91436e5a940d70d52a6c51f68682		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-5.png	Cloudflare only		54cb21095bd1c22dcd7d31c1a12ae8b122926809		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-page-6.png	Cloudflare only		85df26049cfb1a1bc96adee18b2f20d5e0dffb73		100644
+research/diagnostics/crop-batches/corrected/batch-12-export-sample.pdf	Cloudflare only		115d753e20282971bc351d42f53666407e23429c		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2022-6-1664.png	Cloudflare only		66c997f9892225863312b67305a5a9c4760ccec8		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2022-7-1665.png	Cloudflare only		875eb67f3b6b354aa124338c3fd847165ec286e0		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-19-1820.png	Cloudflare only		7d8d815882558576f8f2361d69cddb117d57efa7		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-2-1745.png	Cloudflare only		830e716fa02d215d8aa0dec5709963b0d6a6abf3		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-20-1821.png	Cloudflare only		b2c3ad39313933c5318f0730f8d2019007eb5219		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-26-1823.png	Cloudflare only		1fcebc502c55a7ef650aea5ac24b2165327770f1		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-3-1747.png	Cloudflare only		406804300331671fca33157fafb14f2d1d76b82c		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-4-1749.png	Cloudflare only		f926db8cbe1fabd4738d8944d94e397fe99607c9		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-5-1750.png	Cloudflare only		bf21625b373533073d112da97481e657b16ca0a8		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-5-1813.png	Cloudflare only		d961682319f342ab5d725746a29955dfc1067353		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-55-1737.png	Cloudflare only		e33a83113cd63ecb5fb1e2e85f0562a3bd7e695a		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-58-1739.png	Cloudflare only		42b296aaad60420c0ec425e8a80cac962b7bd064		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-59-1740.png	Cloudflare only		d838a8fd4756eb487eb94ca704a45722a09f1ba7		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-60-1741.png	Cloudflare only		987f3ede8398f7b11d4834759f6d2b24b0884dd7		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-7-1753.png	Cloudflare only		50b75fcbb688571e1c51dc52a50c9863c96089b2		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-8-1815.png	Cloudflare only		73b8f589caad5f4871541789c6528d48ca0b225c		100644
+research/diagnostics/crop-batches/corrected/batch-12-mcq-2023-9-1816.png	Cloudflare only		2fb7f4c7930a92bfbd87c75048ce565064a4b9bc		100644
+research/diagnostics/crop-batches/corrected/batch-13-corrected-1.png	Cloudflare only		100578f1eeefa4a033620c147dec5fce42fbd636		100644
+research/diagnostics/crop-batches/corrected/batch-13-corrected-2.png	Cloudflare only		c2d6fa15a6d9a3171451cfa83cbafcc285b976a6		100644
+research/diagnostics/crop-batches/corrected/batch-13-corrected-3.png	Cloudflare only		31f3c89ca8d8082b5584949f066694e0c39b9c06		100644
+research/diagnostics/crop-batches/corrected/batch-13-corrected-4.png	Cloudflare only		28da86d220c6447120b84af399488295b3787aa9		100644
+research/diagnostics/crop-batches/corrected/batch-13-corrected-5.png	Cloudflare only		be164cef9c3a4d4499cf575b42f2590c3d165316		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-1.png	Cloudflare only		8eaddaa3c1b967c8bcd2d8ef7baedf459b840475		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-2.png	Cloudflare only		c27dc21522148010c0254880107c3aae3cd1d2e0		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-3.png	Cloudflare only		47cce523e049bde074a283d3822c147f5bad6a88		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-4.png	Cloudflare only		7686a88ad048850ae95e97d07dc2fd21ec6bb07a		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-5.png	Cloudflare only		2347f3c60bbac1f76dbd61421757082ea2ff583d		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-page-6.png	Cloudflare only		1ed29613a4edd64078970bec2e57c5d8ac817f4d		100644
+research/diagnostics/crop-batches/corrected/batch-13-export-sample.pdf	Cloudflare only		ee98d9d90a1e0a271895c5938cf1511d562a3fcf		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-2-1850.png	Cloudflare only		de5801370b3c1e139427c8c05722622a11ec41e4		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-3-1854.png	Cloudflare only		d28c9eec69dc4cd5d178ac8cb8d5d94491645fd2		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-4-1858.png	Cloudflare only		3ecc9131803dad44b41fc6ee3bb5878859e5a5ad		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-6-1862.png	Cloudflare only		8a466eb4d4a90ce08c0f5bea2faf503e7353b9ef		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2017-7-1864.png	Cloudflare only		159105cfbabd4e92bb597e48294a54ebe8b93552		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-11-1908.png	Cloudflare only		495502b4a85d3f5cf80ec6f0d32648ca7db2f18a		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-2-1937.png	Cloudflare only		f3ac398805654cd9de70930ad5fc4516fb30df53		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-3-1902.png	Cloudflare only		02a7bbedd0244f5dba0bd3b8a2fb9a80fb96bb2f		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-3-1941.png	Cloudflare only		3ccc4e72e3b6610869e758db8c952f659f56af45		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-32-1918.png	Cloudflare only		5bd3b9f46f2db1b3301eb1cee4f1e26a09ce0ac1		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-4-1903.png	Cloudflare only		05f671d8e442acdfe75fcb06e72e7d9abfa5b4a3		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-4-1945.png	Cloudflare only		b2a2c82c53f363a51fedf6765b19ab1233fe07fb		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-6-1949.png	Cloudflare only		b399c583ed4fac36324335a9740abeb6a65e39a3		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-7-1905.png	Cloudflare only		11a39bcf96b63264acfdc2f929cc109ea2efc862		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-7-1951.png	Cloudflare only		7fc0868b5823e13d1be40061f5043b251563392f		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2018-8-1906.png	Cloudflare only		51bbc39d056402e0087ea17ca9cba6468bd956d5		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-27-1824.png	Cloudflare only		0a6f96d16e12490711f9b0205d587bc2a23b4bd3		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-28-1825.png	Cloudflare only		bbfe1947ab2c98c72de95c0a28ac49599a58c1d8		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-29-1826.png	Cloudflare only		8b02c8947717e52d266929665da299fb3b0216f4		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-32-1828.png	Cloudflare only		2a3ee69e8fa988053e433243c8a26c9c22c215c6		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-33-1829.png	Cloudflare only		a3cfd30d8bf286c698864357800de2da5eb768c2		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-34-1830.png	Cloudflare only		268c515df7a5c810c0db9896c25029c313d4b899		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-35-1831.png	Cloudflare only		e913fa457a46da5f5de0b5af8a4acc620ba31d8e		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-44-1835.png	Cloudflare only		0b0f728dbacd4576d8efc197f3fe163be462317d		100644
+research/diagnostics/crop-batches/corrected/batch-13-mcq-2023-45-1836.png	Cloudflare only		91fb0adaa04955871c9080236bae072446d5338c		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-1.png	Cloudflare only		3fb2803cefd9c49dbb7e27a8451f6e7e946df6ff		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-2.png	Cloudflare only		7294e91b69f8ae4a335584c8b0abc6487668ff67		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-3.png	Cloudflare only		2ef1607132fca0beb75c35d6a3a1680afdae6c25		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-4.png	Cloudflare only		ba470d5176899d19497479d67c3f10594c0aeb9f		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-5.png	Cloudflare only		e1a9ca5e256a01df5950cc5d30551b3042e195f2		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-6.png	Cloudflare only		2237c2bbe9770adbb15482835f2c31e7e47f651a		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-7.png	Cloudflare only		efbff1cf56086ecaefdce39c3884d8bcf4b6e704		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-page-8.png	Cloudflare only		35d1b6da79c9d5e5ba1f28ee18d3f8fd7fdb183f		100644
+research/diagnostics/crop-batches/corrected/batch-14-export-sample.pdf	Cloudflare only		e7699e3703bcafc00f6d17f86ac996339f8104aa		100644
+research/diagnostics/crop-batches/corrected/corrected-01.png	Cloudflare only		cb79c0a35e444c4325962ef338f5cb3c4122bad9		100644
+research/diagnostics/crop-batches/corrected/corrected-02.png	Cloudflare only		501485548114c771ce157c0426ab676badd3191a		100644
+research/diagnostics/crop-batches/corrected/corrected-03.png	Cloudflare only		91b32f50bb0ad618a14ab69dd3067b53795a7462		100644
+research/diagnostics/crop-batches/corrected/corrected-04.png	Cloudflare only		59036ab774a8416e4ca371d4142f32f517ed93f2		100644
+research/diagnostics/crop-batches/corrected/corrected-05.png	Cloudflare only		d4d557e6c79cf0b35312226c8adec732cacbe3c3		100644
+research/diagnostics/crop-batches/corrected/corrected-06.png	Cloudflare only		58204485faf9014bd6e15f825fb16ea91eb627ad		100644
+research/diagnostics/crop-batches/corrected/corrected-07.png	Cloudflare only		2947db4b16ab74587f484bf29eddd5d1742bf867		100644
+research/diagnostics/crop-batches/corrected/corrected-08.png	Cloudflare only		675fdd09b74760dd25634b734f040037a0c1c085		100644
+research/diagnostics/crop-batches/corrected/corrected-09.png	Cloudflare only		9a32b7f516e0b62983a4bbc99bde50ace2e74877		100644
+research/diagnostics/crop-batches/corrected/corrected-10.png	Cloudflare only		3613e00ec31410c3a3358b6e2d5ad3e044451649		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-1.png	Cloudflare only		eb04d54200d437e67dc6c39e3fcc66642674c47a		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-2.png	Cloudflare only		89edfa1d7471e14cb880b152bb0fabc7421193c0		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-3.png	Cloudflare only		a2b8d9b6859d90c5cd61e9524f06a735c7702b23		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-4.png	Cloudflare only		210ee3d21fc5cf74cb1e44c15b8c00b8056a41ee		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-5.png	Cloudflare only		c7475a5a1d65c69222246c64c9238743fb752418		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-6.png	Cloudflare only		85c1d86a35e86e54360889a5fb171b293490f263		100644
+research/diagnostics/crop-batches/source-reviewed/batch-01-sheet-7.png	Cloudflare only		03f9c7765b7a092ef43aab791a7b02831673cdcb		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-1.png	Cloudflare only		0199e2337a995a190092a125464128dbe9986f41		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-2.png	Cloudflare only		df324354f6756203077b2b3bc99adbf7f2407496		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-3.png	Cloudflare only		213de2bb881380677e0f7cbfc93d441519f9cdc6		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-4.png	Cloudflare only		6b7e8c6014e3bd0b1f6987793a110d875b0dd479		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-5.png	Cloudflare only		80199c7a1d021cffb003160eea54b506feca7296		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-6.png	Cloudflare only		d9d276fd30ea959d4b4318fe84cf1bcf2902efcd		100644
+research/diagnostics/crop-batches/source-reviewed/batch-02-sheet-7.png	Cloudflare only		ea9dadc119c775574be1ed934bf29d06623831e6		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-1.png	Cloudflare only		b87c72ea31cfa2b4d3efcc86cd8ccda8ea103077		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-2.png	Cloudflare only		6d90478a74ea36611cffc2a8103a02ba5068e81c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-3.png	Cloudflare only		e031434147ffda5c58a996c0bda1fb17a42e1185		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-4.png	Cloudflare only		289e9ea80a73f7cefb200f6642314dd9715766b1		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-5.png	Cloudflare only		a7ba15ac0b8252b988e30db4dc25f29c5d1c597c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-6.png	Cloudflare only		45327bff420e3958a8aca020be413cb9a055d2b3		100644
+research/diagnostics/crop-batches/source-reviewed/batch-03-sheet-7.png	Cloudflare only		259bb123a726ee3ed8e08d6dd90b9410cb783437		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-1.png	Cloudflare only		8de7df71b39639646095752dea736a3d81254e23		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-2.png	Cloudflare only		3a6132c0d4a21d37511caa67e0b942e0e041d0ba		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-3.png	Cloudflare only		a3dfc00a622d4e637ef5598e923f61a9ba742f0b		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-4.png	Cloudflare only		2c3e737e5c513b1f4b7483ba4d7f8c3b62353736		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-5.png	Cloudflare only		8aa35386aed7122ca15f75ce05c136835edaf2dc		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-6.png	Cloudflare only		9859229ecc4c10809263b5985ba5ee30a7400254		100644
+research/diagnostics/crop-batches/source-reviewed/batch-04-sheet-7.png	Cloudflare only		1392981f68e488940292fbeddc2629ed2082d0cf		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-1.png	Cloudflare only		d3b0a051d893d17b0855715028e4be29cbc2f120		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-2.png	Cloudflare only		ee7bea8b94be5f238754b81c79d0401437f10f31		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-3.png	Cloudflare only		9c066f7af96ca411eb05c24c976406b7a13c9a62		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-4.png	Cloudflare only		f393c3146748ce03a387bd89e703b4f4fa9870a1		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-5.png	Cloudflare only		0eca314164b5a4b3563c58e5d33da1a51fca9bc0		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-6.png	Cloudflare only		c86962832f99cfd03ffcf61e0cfd2ddb1c2c0645		100644
+research/diagnostics/crop-batches/source-reviewed/batch-05-sheet-7.png	Cloudflare only		3a3837f9204b2329318ca0be1e943a836b490a3c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-1.png	Cloudflare only		51d99386e7f5d29e2e8ea5e378b3000f7e51f2fa		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-2.png	Cloudflare only		b65590b797724159caeab91025fc7cf11c0f4072		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-3.png	Cloudflare only		b3faed1da9b659f3f74ca720d206476670fec8fd		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-4.png	Cloudflare only		fac1e76502f48fd7e8b188810658d6ab2c9805be		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-5.png	Cloudflare only		95d3b3cf209ca3ea68dc8b972e06568a24d3b84a		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-6.png	Cloudflare only		70af186e5f06e400b13725af53f0b54b6edf29ba		100644
+research/diagnostics/crop-batches/source-reviewed/batch-06-sheet-7.png	Cloudflare only		a00d0c21e64d45ed539e476c2cbbf45c9e45c52f		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-1.png	Cloudflare only		d694e72853f36f76ad73791508051eab869caaf9		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-2.png	Cloudflare only		8f016386eea422cd48f20653a9d078b1605fd3c6		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-3.png	Cloudflare only		a4640441953416538c1270845cd849a3f49c8b77		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-4.png	Cloudflare only		510f59196c1d5708bbcac5778ba50f2ac5674dd4		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-5.png	Cloudflare only		b1427379ec1151d303a7b5c71535046cef3b7ada		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-6.png	Cloudflare only		91661551f6b50a4e0e43e756bc8a4612e08cfe5c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-07-sheet-7.png	Cloudflare only		c774a3443dd90d9a0939288dd2865ebd264d7151		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-1.png	Cloudflare only		c50bdaa99840b82953e4d5051888a27736d9604d		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-2.png	Cloudflare only		d3b2052bd9e36f9a81bac34e58110050d471aa71		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-3.png	Cloudflare only		6530ecf3525431fd3f6529eb84c7b31db0b38619		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-4.png	Cloudflare only		f8bd16a54905e1d78d7b09f830f14ef84ce6d84f		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-5.png	Cloudflare only		eaf1e3db667c7e5a909f2af6a42b2dd7519ccbe0		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-6.png	Cloudflare only		2f09e656c0c5aa3122c7052abb5f0c862d68d1f5		100644
+research/diagnostics/crop-batches/source-reviewed/batch-08-sheet-7.png	Cloudflare only		cf38f87151d423fdb692ea9062fdc312d4b33254		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-1.png	Cloudflare only		6af7cb72e388a1b982e61335f90c12f2c8c95ec1		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-2.png	Cloudflare only		7a4cef889c4d2ba205899ebf26ad6ea85c67b119		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-3.png	Cloudflare only		b20d1e28c009a2326d9950c514e3ea5fac1ee036		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-4.png	Cloudflare only		e4038498c1c6d24b2180cadebc21e6d31fc57aba		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-5.png	Cloudflare only		b21cbb54b5847b429f11b0f6081aaa9d98de5575		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-6.png	Cloudflare only		03e8ee50254b6f93a35bb4254681c66e01ece93e		100644
+research/diagnostics/crop-batches/source-reviewed/batch-09-sheet-7.png	Cloudflare only		4061f6d7274a2d7398c2c145d1ef68d68b4abf3c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-1.png	Cloudflare only		8580f2b94aec71f1602c0f4456a6b5851f0297aa		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-2.png	Cloudflare only		4b24756c1c1ec0412c75ac594436d4edf51c44a4		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-3.png	Cloudflare only		570cd47fbd555a73e221e3f088127450f40b5aa4		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-4.png	Cloudflare only		077824e310b22f2b8ef45c57572f4e73dc8b7bab		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-5.png	Cloudflare only		4a3b0c83bf9451a4ebf9c33bcdf951c017cc573c		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-6.png	Cloudflare only		cd1878ba58769b8c8e7adc3e00f55f7a309b868f		100644
+research/diagnostics/crop-batches/source-reviewed/batch-10-sheet-7.png	Cloudflare only		43de6dd0834751050dc6dfac10547ff4e47f5d4a		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-1.png	Cloudflare only		a991ce7ee2b4e7a4b746e4b87a13b22ecb11ce29		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-2.png	Cloudflare only		738977d7b631cb7f2509ae3ade25db83b9d631bd		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-3.png	Cloudflare only		1ecb96d9326b54d0f570b5bd17322a5f486d61fc		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-4.png	Cloudflare only		165a4f53c9db03a3a0bcd85fb2fd0b70992127c4		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-5.png	Cloudflare only		3c205b6950d8a756d4319a07c4e346b49fc03d56		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-6.png	Cloudflare only		c023f412b8012f2bec6ae56bea2fcd1481ed0764		100644
+research/diagnostics/crop-batches/source-reviewed/batch-11-sheet-7.png	Cloudflare only		5db925406a2685ffb2e6692626de029454b286b8		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-1.png	Cloudflare only		b135dc2ec6e5516193374b1efdc9e44ade0634a0		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-2.png	Cloudflare only		a914f9d114fda8a68ae81cca2ffaff9ea7700474		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-3.png	Cloudflare only		6539c2c1bfb30d84b70847f00ab06c2b9a46c4eb		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-4.png	Cloudflare only		4f8e9aaedeb526de862db55a08eb370ad003c8ca		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-5.png	Cloudflare only		5f885e3e66b9badb8b541cdf758b9b2faf212b6e		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-6.png	Cloudflare only		ca328e477b3e3bab2e352d1fae2832d51b2928ad		100644
+research/diagnostics/crop-batches/source-reviewed/batch-12-sheet-7.png	Cloudflare only		22bf54b860bee987b437c509cc5633285eb87599		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-1.png	Cloudflare only		4146540a8bf44a5c76efefa0e026131cc4cb73cd		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-2.png	Cloudflare only		6c59a47686c8b75ee0df45894bdafc742868e3d3		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-3.png	Cloudflare only		7369fdaae0821ad203e0ad0015261619b5e64cdd		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-4.png	Cloudflare only		7e395deaf91f9a072c83a33a31f59405cd398780		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-5.png	Cloudflare only		7094c4e24765c0f51f05d12cfc67c5c46134211d		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-6.png	Cloudflare only		25477b2afac1db41ff8ead86661b47e285f68f69		100644
+research/diagnostics/crop-batches/source-reviewed/batch-13-sheet-7.png	Cloudflare only		e0c3596002f05eb9e6edd45b87cdd7dcf9c3042b		100644
+research/diagnostics/crop-batches/source-reviewed/batch-14-source-1.png	Cloudflare only		d0d1c2a3cc03c7f7d2da12bdc68df3b69332a13a		100644
+research/diagnostics/crop-batches/source-reviewed/batch-14-source-2.png	Cloudflare only		499b91c3f9fa85ab2f642a2e3328fb232ca7d6fb		100644
+research/diagnostics/crop-batches/source-reviewed/batch-14-source-3.png	Cloudflare only		0ca551b8a15e067e1200c170a3c5cbbbadd4fcef		100644
+research/diagnostics/frq-2005-1-6.pdf	Cloudflare only		e6a59bc0596b8973e079e999afe20300ba8ecc0e		100644
+research/diagnostics/mcq-1994-3-628.pdf	Cloudflare only		0466d0e6b588f53d315c67892a972bcd4fc97e6a		100644
+research/diagnostics/mcq-2008-1-29.pdf	Cloudflare only		4084a878209f97db0223e3429d2b7474b73d8f99		100644
+research/diagnostics/mcq-2008-1-3-shared.pdf	Cloudflare only		eb54efc77263afaaec8275f7f4d2fcd5c93892f7		100644
+research/diagnostics/mcq-2013-33-961.pdf	Cloudflare only		1152bb547cb52e82a9b5f71d77dbbf8fbcbf5f7b		100644
+research/export_source_regions.py	Cloudflare only		1dc66f095e3a67ce3ac394b98e6a0ae10196542f		100644
+research/extract_corpus.py	identical	e4d938caba606b78402857f7bc6024ee4dd1ea33	e4d938caba606b78402857f7bc6024ee4dd1ea33	100644	100644
+research/extract_source_mappings.py	identical	ea4fe68a183c6ecf284ea307cc84c211f4a793b0	ea4fe68a183c6ecf284ea307cc84c211f4a793b0	100644	100644
+research/frq-batch02-classified.json	identical	c39dd9c0babeb9985bf98a1ec6fa6a607a482ade	c39dd9c0babeb9985bf98a1ec6fa6a607a482ade	100644	100644
+research/frq-batch03-classified.json	identical	a431df4a0ef27a3358f5890b29f8b8a25405ef56	a431df4a0ef27a3358f5890b29f8b8a25405ef56	100644	100644
+research/frq-batch04-classified.json	identical	08e6a7dcc8f2e4edf83b11116bf77fd3253860ab	08e6a7dcc8f2e4edf83b11116bf77fd3253860ab	100644	100644
+research/frq-batch05-classified.json	identical	6fe5138df5e191769e3176df0dc12ca44fabe019	6fe5138df5e191769e3176df0dc12ca44fabe019	100644	100644
+research/frq-batch06-classified.json	identical	6fc70a0a4de748a3e6f2ca61c7c7248de706185c	6fc70a0a4de748a3e6f2ca61c7c7248de706185c	100644	100644
+research/frq-batch07-classified.json	identical	156e841ed9112570bd44eeed2729d073c0c83a4a	156e841ed9112570bd44eeed2729d073c0c83a4a	100644	100644
+research/frq-batch08-classified.json	identical	7cd34f6e9a3e4d40364ae7605c07a072c19e35be	7cd34f6e9a3e4d40364ae7605c07a072c19e35be	100644	100644
+research/frq-batch09-classified.json	identical	871102aafef2987cef4984b52d1891987e879a50	871102aafef2987cef4984b52d1891987e879a50	100644	100644
+research/frq-batch10-classified.json	identical	b485ff4dec37d313aa6fb14fa551a8510f0357d7	b485ff4dec37d313aa6fb14fa551a8510f0357d7	100644	100644
+research/frq-batch11-classified.json	identical	400c9a5b732c6cdcbb53ce74ab828187fdc4083e	400c9a5b732c6cdcbb53ce74ab828187fdc4083e	100644	100644
+research/frq-batch12-classified.json	identical	7223e5c20ba754fd189454d03afcfc18718118a5	7223e5c20ba754fd189454d03afcfc18718118a5	100644	100644
+research/frq-batch13-classified.json	identical	8cdefc59c7ec75699ba125408d4670a3722e2a2e	8cdefc59c7ec75699ba125408d4670a3722e2a2e	100644	100644
+research/frq-batch14-classified.json	identical	7b651d4575d24bd279cbd6ba33b95f0745bafec3	7b651d4575d24bd279cbd6ba33b95f0745bafec3	100644	100644
+research/frq-classified.json	identical	b6fcadcfdd731857acbd84a1c31f6490e5b1f79e	b6fcadcfdd731857acbd84a1c31f6490e5b1f79e	100644	100644
+research/frq-existing-full.json	identical	dd6b0bcd10ef4b54ab8e8b3115b60421479c1083	dd6b0bcd10ef4b54ab8e8b3115b60421479c1083	100644	100644
+research/frq-format-classified.json	changed	feedb55c02496bf23d2ab004acebfedef87797b1	ac35a1d13f43253ac7d443fc20da48db5914d802	100644	100644
+research/frq-format-corrections.json	changed	709f5bd0c6776584fc3f0148b807df93b6c71ea5	76d34c7b1ceb5db1028a25cc9ca758aeb6dd068d	100644	100644
+research/frq_batch01.py	identical	595d57a391d53eff0b9f6e744cce107e62fe5971	595d57a391d53eff0b9f6e744cce107e62fe5971	100644	100644
+research/frq_batch02.py	identical	ecd956ec8c745ebace1f76dbaf0f71ed8fbf59e8	ecd956ec8c745ebace1f76dbaf0f71ed8fbf59e8	100644	100644
+research/frq_extract_existing.py	identical	6490659b19643129a3c09e75536b68b188128e7f	6490659b19643129a3c09e75536b68b188128e7f	100644	100644
+research/interaction-design-audit.md	Sites only	ad28306d0db04d7d7537fcd5b8a35397612cf3e3		100644	
+research/mcq-batch01-classified.json	identical	b4607ce6a654d4bc1a9660cecfc7d96828012d36	b4607ce6a654d4bc1a9660cecfc7d96828012d36	100644	100644
+research/mcq-batch02-classified.json	identical	9c9a42c43fd19e362f8742e0116487bf8f10c3fa	9c9a42c43fd19e362f8742e0116487bf8f10c3fa	100644	100644
+research/mcq-batch03-classified.json	identical	ffdfca2e13f299534f0480edc57ea1783173fbcf	ffdfca2e13f299534f0480edc57ea1783173fbcf	100644	100644
+research/mcq-batch04-classified.json	identical	4d2121cac96a33d602458291916e03986cc745ca	4d2121cac96a33d602458291916e03986cc745ca	100644	100644
+research/mcq-batch05-classified.json	Sites only	db27a6df6d9ea6039ef9e65ca93ad3a6e962a218		100644	
+research/mcq-batch06-classified.json	Sites only	a2c80a3c04f19e9e603f55824911ca3bfae7342c		100644	
+research/mcq-batch07-classified.json	Sites only	05bce2d7e9059ca0b93eb236fb539eca0a403d9b		100644	
+research/mcq-batch08-classified.json	Sites only	8c0ee2f6d0a1b1faf723d07953ce80218ad0a3b3		100644	
+research/mcq-batch09-classified.json	Sites only	a2f1a81836e6c325b55e5cd09e757f219bf22771		100644	
+research/mcq-batch10-classified.json	Sites only	da0e543122b2809ff4f00ac5f75930f6c3b72f8a		100644	
+research/mcq-batch11-classified.json	Sites only	5dd78af5fb184bae348785e6c100f3bb93f8a123		100644	
+research/mcq-batch12-classified.json	Sites only	0f36a27072cf4f4a39188365dfbec6c2d96fcb9c		100644	
+research/mcq-batch13-classified.json	Sites only	237c20d4ef95ca22defb48f4f22c1b137fa41cb2		100644	
+research/mcq-batch14-classified.json	Sites only	fb974e68b25ac5826aa860f860ef60842c976695		100644	
+research/mcq-batch15-classified.json	Sites only	e02e4fa5999f1f8fa2c0864ceec76afe2665da12		100644	
+research/mcq-batch16-classified.json	Sites only	8f151eefc42f6ae3057fde76c158d938811d1b96		100644	
+research/mcq-first-classified.json	identical	f58e9c96782c6e19d2ebef8ea4f385b6c430b2db	f58e9c96782c6e19d2ebef8ea4f385b6c430b2db	100644	100644
+research/mcq-first-input.json	identical	df3a90f1f11914a070647f3e6dc8176e39b8f98a	df3a90f1f11914a070647f3e6dc8176e39b8f98a	100644	100644
+research/mcq-later-classified.json	identical	32545022a64dc24cf99da39732165c04aef6dfad	32545022a64dc24cf99da39732165c04aef6dfad	100644	100644
+research/mega-text.txt	identical	96f119f97af30441008ab0ba7706ba19e74b011c	96f119f97af30441008ab0ba7706ba19e74b011c	100644	100644
+research/ocr/1121.tsv	identical	e17b440d34d243ee0cd668a6a8e3622f4eedb694	e17b440d34d243ee0cd668a6a8e3622f4eedb694	100644	100644
+research/ocr/1121.txt	identical	c8766d52a18420397351317afbb86116f52e14a2	c8766d52a18420397351317afbb86116f52e14a2	100644	100644
+research/ocr/1122.tsv	identical	0101f9bb998822381c8aa5b4cbc1f3b1f341700a	0101f9bb998822381c8aa5b4cbc1f3b1f341700a	100644	100644
+research/ocr/1122.txt	identical	478a8fb80ea71786e362ff832c24330b018e0e07	478a8fb80ea71786e362ff832c24330b018e0e07	100644	100644
+research/ocr/1123.tsv	identical	dc30777eb076ee1f4317dfc80aec3be4912aa543	dc30777eb076ee1f4317dfc80aec3be4912aa543	100644	100644
+research/ocr/1123.txt	identical	10cf3edd984fc67c09e5c96edb9b7d4169a71306	10cf3edd984fc67c09e5c96edb9b7d4169a71306	100644	100644
+research/ocr/1124.tsv	identical	fd8a5b9a6c8de1e2857c25cecf3974e0fa804f58	fd8a5b9a6c8de1e2857c25cecf3974e0fa804f58	100644	100644
+research/ocr/1124.txt	identical	291837cd8b3434abb47941f8a5c74232208155c1	291837cd8b3434abb47941f8a5c74232208155c1	100644	100644
+research/ocr/1125.png	identical	d4a97c40a1a2592c5113ec532a82b77d10b2d0ba	d4a97c40a1a2592c5113ec532a82b77d10b2d0ba	100644	100644
+research/ocr/1125.tsv	identical	00d345e7ac20dffdcf764aa79c533e705aecff4d	00d345e7ac20dffdcf764aa79c533e705aecff4d	100644	100644
+research/ocr/1125.txt	identical	f0b8e616f340fc68f1748a037b66ec4537847adb	f0b8e616f340fc68f1748a037b66ec4537847adb	100644	100644
+research/ocr/1126.png	identical	86c557c3f2ed141499ded45aa90cd13e5aa95adf	86c557c3f2ed141499ded45aa90cd13e5aa95adf	100644	100644
+research/ocr/1126.tsv	identical	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	100644	100644
+research/ocr/1126.txt	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/1127.png	identical	69aeb84c14f1102e558ffb4bc0da5cebd273250c	69aeb84c14f1102e558ffb4bc0da5cebd273250c	100644	100644
+research/ocr/1127.tsv	identical	4541d339d317e390a53958d8eb67fbd9e489e055	4541d339d317e390a53958d8eb67fbd9e489e055	100644	100644
+research/ocr/1127.txt	identical	49aa9d662bc36471f50eb5d17053d5c5f8b78887	49aa9d662bc36471f50eb5d17053d5c5f8b78887	100644	100644
+research/ocr/1128.png	identical	d3ebb0043d07df3bfd60b7f4316156e838238838	d3ebb0043d07df3bfd60b7f4316156e838238838	100644	100644
+research/ocr/1128.tsv	identical	2a1fd9622056f5bc589933805077a7e013ce2cae	2a1fd9622056f5bc589933805077a7e013ce2cae	100644	100644
+research/ocr/1128.txt	identical	c92b98652617e00bc3a9623c429cb36018fa7b37	c92b98652617e00bc3a9623c429cb36018fa7b37	100644	100644
+research/ocr/1129.tsv	identical	9132a44af9818b713f688906630362d1c60f0923	9132a44af9818b713f688906630362d1c60f0923	100644	100644
+research/ocr/1129.txt	identical	7e3e144346f2aaaa1f1cc3f34158d0e383f4d8aa	7e3e144346f2aaaa1f1cc3f34158d0e383f4d8aa	100644	100644
+research/ocr/1130.tsv	identical	2d19a518abdf9249cb72afd8824871d72ef57757	2d19a518abdf9249cb72afd8824871d72ef57757	100644	100644
+research/ocr/1130.txt	identical	4f7b9341b7a006fa7c079912ba1fcc3829c4557e	4f7b9341b7a006fa7c079912ba1fcc3829c4557e	100644	100644
+research/ocr/1131.tsv	identical	faf00306d4005b4e3f2056aa0245bbb6996d4e4c	faf00306d4005b4e3f2056aa0245bbb6996d4e4c	100644	100644
+research/ocr/1131.txt	identical	9b846a110b8d7ca74b96a5a48c0ab8eb3a099cc9	9b846a110b8d7ca74b96a5a48c0ab8eb3a099cc9	100644	100644
+research/ocr/1132.png	identical	189ed789f685d6ff73dd395209254f71acfe3e66	189ed789f685d6ff73dd395209254f71acfe3e66	100644	100644
+research/ocr/1132.tsv	identical	f242d5510e0ed3d4806d18597200764606e2cd55	f242d5510e0ed3d4806d18597200764606e2cd55	100644	100644
+research/ocr/1132.txt	identical	283a389a1fab2336650a0d47f3c0275a8d04fff0	283a389a1fab2336650a0d47f3c0275a8d04fff0	100644	100644
+research/ocr/1133.tsv	identical	c48884b6a691f3500b830384ac61424c916de8d0	c48884b6a691f3500b830384ac61424c916de8d0	100644	100644
+research/ocr/1133.txt	identical	67d65bccb5b7c934bda41159169b871d8ace44d6	67d65bccb5b7c934bda41159169b871d8ace44d6	100644	100644
+research/ocr/1134.png	identical	862b1f55b0daef8f6d9608a3c0228f0986b890f7	862b1f55b0daef8f6d9608a3c0228f0986b890f7	100644	100644
+research/ocr/1134.tsv	identical	3bd61beef0002bbc7a43d894ae87c62dc21d6d86	3bd61beef0002bbc7a43d894ae87c62dc21d6d86	100644	100644
+research/ocr/1134.txt	identical	511fac80d206f6ad00dab6fc86e268aea54183b0	511fac80d206f6ad00dab6fc86e268aea54183b0	100644	100644
+research/ocr/1135.png	identical	c539376a62224a73345e0529cf60e33f2c48dc17	c539376a62224a73345e0529cf60e33f2c48dc17	100644	100644
+research/ocr/1135.tsv	identical	f4630b85bdbb19a0c771a0d531df51903cd48a27	f4630b85bdbb19a0c771a0d531df51903cd48a27	100644	100644
+research/ocr/1135.txt	identical	0871c5fd878fd573ba0b960a509f421f95d8d6a2	0871c5fd878fd573ba0b960a509f421f95d8d6a2	100644	100644
+research/ocr/1136.png	identical	7a5dc6901ed3ea1b46343b332984ab1ea369be04	7a5dc6901ed3ea1b46343b332984ab1ea369be04	100644	100644
+research/ocr/1136.tsv	identical	2640bd8ddfdeb01e354e47d1f7b686ecddb195bc	2640bd8ddfdeb01e354e47d1f7b686ecddb195bc	100644	100644
+research/ocr/1136.txt	identical	a2a80fb4a852f8665ac5f1c0c19caf8dfaf03851	a2a80fb4a852f8665ac5f1c0c19caf8dfaf03851	100644	100644
+research/ocr/1137.tsv	identical	547c6ce9f822501c22fd2a95b861030067dfcedc	547c6ce9f822501c22fd2a95b861030067dfcedc	100644	100644
+research/ocr/1137.txt	identical	ddfdb12c24ca84089f042db7d244c3bf283e9d05	ddfdb12c24ca84089f042db7d244c3bf283e9d05	100644	100644
+research/ocr/1138.tsv	identical	cee25f880df824f147bc111a8544665c2622fd78	cee25f880df824f147bc111a8544665c2622fd78	100644	100644
+research/ocr/1138.txt	identical	abca7854f82fe661332a734a4e2eae5e523a458e	abca7854f82fe661332a734a4e2eae5e523a458e	100644	100644
+research/ocr/1139.tsv	identical	73072fbf6472e52b3e5c94c74f631b7ce1bbeb20	73072fbf6472e52b3e5c94c74f631b7ce1bbeb20	100644	100644
+research/ocr/1139.txt	identical	567c4b76c184bae995bb190a72b184ae541f6700	567c4b76c184bae995bb190a72b184ae541f6700	100644	100644
+research/ocr/1140.tsv	identical	b533fccdde719f58522227c5d85204985958569a	b533fccdde719f58522227c5d85204985958569a	100644	100644
+research/ocr/1140.txt	identical	900a159a621226a209a49c2a47e63b993f41f52a	900a159a621226a209a49c2a47e63b993f41f52a	100644	100644
+research/ocr/1141.tsv	identical	99126c9e91108d0a7901dd15e5da3f04ab0e7c72	99126c9e91108d0a7901dd15e5da3f04ab0e7c72	100644	100644
+research/ocr/1141.txt	identical	25037ac9372abc3e9dcc7ee28f3ba4e8ec5aaa44	25037ac9372abc3e9dcc7ee28f3ba4e8ec5aaa44	100644	100644
+research/ocr/1142.png	identical	a673eca5614de7649a1e2bce3d162785c4c7dfe2	a673eca5614de7649a1e2bce3d162785c4c7dfe2	100644	100644
+research/ocr/1142.tsv	identical	d4bb3ca14ebcfed566463ace64913ccd1f94b255	d4bb3ca14ebcfed566463ace64913ccd1f94b255	100644	100644
+research/ocr/1142.txt	identical	0148350d70bc5376a5ee5d51fa61b1846796cd96	0148350d70bc5376a5ee5d51fa61b1846796cd96	100644	100644
+research/ocr/1143.tsv	identical	0a4c9c3db347d1e2aa80f7883b5f46bdb81ef202	0a4c9c3db347d1e2aa80f7883b5f46bdb81ef202	100644	100644
+research/ocr/1143.txt	identical	0214d9e0c7a1158b590a96059b40a5e392370d64	0214d9e0c7a1158b590a96059b40a5e392370d64	100644	100644
+research/ocr/1144.png	identical	11d4f4ceff0d889ebf75e2d96298148c8a0f72cf	11d4f4ceff0d889ebf75e2d96298148c8a0f72cf	100644	100644
+research/ocr/1144.tsv	identical	9d74e321d713132e57962b0f616a8ee4e5a20ed6	9d74e321d713132e57962b0f616a8ee4e5a20ed6	100644	100644
+research/ocr/1144.txt	identical	c1b3940261ec80c324adbaaf40d6894381b8b60b	c1b3940261ec80c324adbaaf40d6894381b8b60b	100644	100644
+research/ocr/1145.png	identical	6acbbd4b67aea79ec59cebbb790e0037c45c0fc7	6acbbd4b67aea79ec59cebbb790e0037c45c0fc7	100644	100644
+research/ocr/1145.tsv	identical	26cc1b2237667577ad2ca025440a248ab376d18c	26cc1b2237667577ad2ca025440a248ab376d18c	100644	100644
+research/ocr/1145.txt	identical	ad8634820f3d50354dd3567796e7d7b6e6c7646a	ad8634820f3d50354dd3567796e7d7b6e6c7646a	100644	100644
+research/ocr/1146.png	identical	c437b1cf2af6ec0a32baa7a0f8e169629ff969c2	c437b1cf2af6ec0a32baa7a0f8e169629ff969c2	100644	100644
+research/ocr/1146.tsv	identical	6e5c9dba8bd4b82cb17ba17595dbfb2c9442e665	6e5c9dba8bd4b82cb17ba17595dbfb2c9442e665	100644	100644
+research/ocr/1146.txt	identical	f5e78a7b40dc3e81877ed1cd1f1e5e35e3a11dd9	f5e78a7b40dc3e81877ed1cd1f1e5e35e3a11dd9	100644	100644
+research/ocr/1147.tsv	identical	257d5cb9c428f9f63bd072c2b9e95c88097ff59a	257d5cb9c428f9f63bd072c2b9e95c88097ff59a	100644	100644
+research/ocr/1147.txt	identical	9b4439a47e76c926d7780e9e6e7bca654f85cc4f	9b4439a47e76c926d7780e9e6e7bca654f85cc4f	100644	100644
+research/ocr/1148.tsv	identical	80928940fed71aa7d2ee6cfd8648e4948d82b2f7	80928940fed71aa7d2ee6cfd8648e4948d82b2f7	100644	100644
+research/ocr/1148.txt	identical	9b7d0f5486a871854e8d69b8ba23844b438c61e1	9b7d0f5486a871854e8d69b8ba23844b438c61e1	100644	100644
+research/ocr/1149.tsv	identical	1843feabb809764fcebb8a46f3683faba2faf6d3	1843feabb809764fcebb8a46f3683faba2faf6d3	100644	100644
+research/ocr/1149.txt	identical	345dea3b97aaeca90cf171970fd37f2fd2525c36	345dea3b97aaeca90cf171970fd37f2fd2525c36	100644	100644
+research/ocr/1150.tsv	identical	d47bd47acb63f6308ac3f6151534ed7d37eeb254	d47bd47acb63f6308ac3f6151534ed7d37eeb254	100644	100644
+research/ocr/1150.txt	identical	f525b8386a2bac9a9a1c0be495b4b93e0e6dcf08	f525b8386a2bac9a9a1c0be495b4b93e0e6dcf08	100644	100644
+research/ocr/1151.tsv	identical	01e2ff091cfcafc93eeaf57db76ff7e4b376b3fb	01e2ff091cfcafc93eeaf57db76ff7e4b376b3fb	100644	100644
+research/ocr/1151.txt	identical	57f7c445667fb5c6626e2cf535f46e166da15a12	57f7c445667fb5c6626e2cf535f46e166da15a12	100644	100644
+research/ocr/1152.png	identical	25b7d5ea272379f872cff3df5e1e3e4b3d693bdc	25b7d5ea272379f872cff3df5e1e3e4b3d693bdc	100644	100644
+research/ocr/1152.tsv	identical	9e6bc4159b9a795a307ae8c0bf94f432d24cc572	9e6bc4159b9a795a307ae8c0bf94f432d24cc572	100644	100644
+research/ocr/1152.txt	identical	a6cb714cd2203ff818c9f5b3b1c1902144a3f6ed	a6cb714cd2203ff818c9f5b3b1c1902144a3f6ed	100644	100644
+research/ocr/1153.png	identical	bf30fc33d1565931a8faf5c4280598123e23df47	bf30fc33d1565931a8faf5c4280598123e23df47	100644	100644
+research/ocr/1153.tsv	identical	49c67fd7543ac2b64256dc2fca91e28c26d53da8	49c67fd7543ac2b64256dc2fca91e28c26d53da8	100644	100644
+research/ocr/1153.txt	identical	267b69acb4f57153310c0bd1ce00a5403c8446ec	267b69acb4f57153310c0bd1ce00a5403c8446ec	100644	100644
+research/ocr/1154.png	identical	c2153cbca00dd409c57010a44c30db10948c1ccd	c2153cbca00dd409c57010a44c30db10948c1ccd	100644	100644
+research/ocr/1154.tsv	identical	ef791b37ecb0e08e181d2f4f8101ada90e632a58	ef791b37ecb0e08e181d2f4f8101ada90e632a58	100644	100644
+research/ocr/1154.txt	identical	e6f02f29c89d7c806a4c15b3af82472442a16315	e6f02f29c89d7c806a4c15b3af82472442a16315	100644	100644
+research/ocr/1155.png	identical	2bfcc0252cf8b50c96fdfaf239b22aa487c68b75	2bfcc0252cf8b50c96fdfaf239b22aa487c68b75	100644	100644
+research/ocr/1155.tsv	identical	7cedc95453f26f660a8569dd862a9c566e9347de	7cedc95453f26f660a8569dd862a9c566e9347de	100644	100644
+research/ocr/1155.txt	identical	1c173d254a436e9d7af73d970188a11b445e5d9b	1c173d254a436e9d7af73d970188a11b445e5d9b	100644	100644
+research/ocr/1156.tsv	identical	dbc48fb0596344d2ebb559076ae7c153406db302	dbc48fb0596344d2ebb559076ae7c153406db302	100644	100644
+research/ocr/1156.txt	identical	eb316689d02663067cee5f4c193ae1587ed76f1f	eb316689d02663067cee5f4c193ae1587ed76f1f	100644	100644
+research/ocr/1157.tsv	identical	ea9c10449471cdd8540e4511ccaf78fc7c26f9d2	ea9c10449471cdd8540e4511ccaf78fc7c26f9d2	100644	100644
+research/ocr/1157.txt	identical	a8a06f1315f58bd754a59fbd95e435a7d0f0c66c	a8a06f1315f58bd754a59fbd95e435a7d0f0c66c	100644	100644
+research/ocr/1158.tsv	identical	e96a51d0896cf3e466b63263e0b41691146fea12	e96a51d0896cf3e466b63263e0b41691146fea12	100644	100644
+research/ocr/1158.txt	identical	742cb2b8dd6fd6b634ad8d7213d94bbbbde9b261	742cb2b8dd6fd6b634ad8d7213d94bbbbde9b261	100644	100644
+research/ocr/1159.tsv	identical	669ca5b3e508a7142b813b192c8fbf70b29b1a6a	669ca5b3e508a7142b813b192c8fbf70b29b1a6a	100644	100644
+research/ocr/1159.txt	identical	0aa81086cb9fecdd8e01b0baad37b9687a4c58a0	0aa81086cb9fecdd8e01b0baad37b9687a4c58a0	100644	100644
+research/ocr/1160.png	identical	d351b3558f79b8efd68810f10027472dc8e969be	d351b3558f79b8efd68810f10027472dc8e969be	100644	100644
+research/ocr/1160.tsv	identical	59415722d60012a430c00764f63c937569756a37	59415722d60012a430c00764f63c937569756a37	100644	100644
+research/ocr/1160.txt	identical	9eb1c5ba380540b02cc15a583ae312e7d7449104	9eb1c5ba380540b02cc15a583ae312e7d7449104	100644	100644
+research/ocr/1161.png	identical	e435b3362e5d6c0e1c582bdce96bd63d4578756e	e435b3362e5d6c0e1c582bdce96bd63d4578756e	100644	100644
+research/ocr/1161.tsv	identical	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	100644	100644
+research/ocr/1161.txt	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/1162.png	identical	9ac54cd647290d569ee8b6404a38ed01a582389b	9ac54cd647290d569ee8b6404a38ed01a582389b	100644	100644
+research/ocr/1162.tsv	identical	78d0e6106d66ba7d6cc7b3472567606fde078f91	78d0e6106d66ba7d6cc7b3472567606fde078f91	100644	100644
+research/ocr/1162.txt	identical	92fd6efca36108d1bbb432373e9f8ec99086713b	92fd6efca36108d1bbb432373e9f8ec99086713b	100644	100644
+research/ocr/1163.tsv	identical	1843feabb809764fcebb8a46f3683faba2faf6d3	1843feabb809764fcebb8a46f3683faba2faf6d3	100644	100644
+research/ocr/1163.txt	identical	345dea3b97aaeca90cf171970fd37f2fd2525c36	345dea3b97aaeca90cf171970fd37f2fd2525c36	100644	100644
+research/ocr/1164.tsv	identical	6565ac1d64226facd9a59e95877d9fd72f2cd786	6565ac1d64226facd9a59e95877d9fd72f2cd786	100644	100644
+research/ocr/1164.txt	identical	695dc300d601673d77352dc263c597d1f498e8c1	695dc300d601673d77352dc263c597d1f498e8c1	100644	100644
+research/ocr/1165.tsv	identical	52bdb3726bcdf3c2ff7ee11e9319e03870e2e400	52bdb3726bcdf3c2ff7ee11e9319e03870e2e400	100644	100644
+research/ocr/1165.txt	identical	c7ec79b90dab4bef171d0d72ce03b5b4964d8b22	c7ec79b90dab4bef171d0d72ce03b5b4964d8b22	100644	100644
+research/ocr/1166.png	identical	cbf92bc6f20095672d4a0a494d2a8a7b3b1dc899	cbf92bc6f20095672d4a0a494d2a8a7b3b1dc899	100644	100644
+research/ocr/1166.tsv	identical	90eb2a12f810c44dd32181c811db68db58babf44	90eb2a12f810c44dd32181c811db68db58babf44	100644	100644
+research/ocr/1166.txt	identical	5417f6b6a8eda6c1c8d94a1bfbafe413cc8ac6e2	5417f6b6a8eda6c1c8d94a1bfbafe413cc8ac6e2	100644	100644
+research/ocr/1167.png	identical	97cb3c955e0346142277a5b9b2f2f3ecd6524b22	97cb3c955e0346142277a5b9b2f2f3ecd6524b22	100644	100644
+research/ocr/1167.tsv	identical	a05d533ef353017848d7c6a01510fa09194ab8c3	a05d533ef353017848d7c6a01510fa09194ab8c3	100644	100644
+research/ocr/1167.txt	identical	628f857bd458853880b4d50d284d47b101afd13d	628f857bd458853880b4d50d284d47b101afd13d	100644	100644
+research/ocr/1168.tsv	identical	5bcf0472f444b9c9063881f40b739a6e6322ba0f	5bcf0472f444b9c9063881f40b739a6e6322ba0f	100644	100644
+research/ocr/1168.txt	identical	1f5583aebe062378379c3bf4f45f4d8e9bdc849f	1f5583aebe062378379c3bf4f45f4d8e9bdc849f	100644	100644
+research/ocr/1169.png	identical	f66297ca69e233afa9e02397e28d7e4a5f941e40	f66297ca69e233afa9e02397e28d7e4a5f941e40	100644	100644
+research/ocr/1169.tsv	identical	d82231748fa61c8a7e70ec01ace88486cf217a15	d82231748fa61c8a7e70ec01ace88486cf217a15	100644	100644
+research/ocr/1169.txt	identical	0e3d92c9595fc7e0db5caa8210a5853df3d1bf3f	0e3d92c9595fc7e0db5caa8210a5853df3d1bf3f	100644	100644
+research/ocr/1170.png	identical	482a9d7db46c0302e73cbeed2040b7105a6f1363	482a9d7db46c0302e73cbeed2040b7105a6f1363	100644	100644
+research/ocr/1170.tsv	identical	51ed24ab3120d241c27e184f41a465ef6b94a0a7	51ed24ab3120d241c27e184f41a465ef6b94a0a7	100644	100644
+research/ocr/1170.txt	identical	51aa00a9286493bf85f2b7dd4b75eba128936873	51aa00a9286493bf85f2b7dd4b75eba128936873	100644	100644
+research/ocr/1171.tsv	identical	04d08c92887c0235fa63969beab60ca0cec38ad1	04d08c92887c0235fa63969beab60ca0cec38ad1	100644	100644
+research/ocr/1171.txt	identical	2aa2f46e557ac084d4404b66c06e9974a2bca911	2aa2f46e557ac084d4404b66c06e9974a2bca911	100644	100644
+research/ocr/1172.tsv	identical	1ad096d7866b95d46c227c77c0e7d7c2e357d2e3	1ad096d7866b95d46c227c77c0e7d7c2e357d2e3	100644	100644
+research/ocr/1172.txt	identical	27db4253bf1df3c824255155dc917d6e1d6219b5	27db4253bf1df3c824255155dc917d6e1d6219b5	100644	100644
+research/ocr/1173.tsv	identical	fae7e2dff6900b894a1700d3f5b3c974c5569e30	fae7e2dff6900b894a1700d3f5b3c974c5569e30	100644	100644
+research/ocr/1173.txt	identical	d305e6707061597ce7cc12d03fbd73b3e8dd1f00	d305e6707061597ce7cc12d03fbd73b3e8dd1f00	100644	100644
+research/ocr/1174.tsv	identical	a205599720b3734b6af8fb3d87a1a33a1edd66f4	a205599720b3734b6af8fb3d87a1a33a1edd66f4	100644	100644
+research/ocr/1174.txt	identical	b032af7541565220e45b6597c9d5fb363b1ee07e	b032af7541565220e45b6597c9d5fb363b1ee07e	100644	100644
+research/ocr/1175.png	identical	02ad3769ce920f067cd42070af7996257c32cbd3	02ad3769ce920f067cd42070af7996257c32cbd3	100644	100644
+research/ocr/1175.tsv	identical	8dc1dffdb325b25f04f1bca726c30bc4c789a92f	8dc1dffdb325b25f04f1bca726c30bc4c789a92f	100644	100644
+research/ocr/1175.txt	identical	005d96f0c7f78e544283b67ad4a63706a0107a8e	005d96f0c7f78e544283b67ad4a63706a0107a8e	100644	100644
+research/ocr/1176.png	identical	6c758178e3bb75605765e5b62ee40993cf3b1e38	6c758178e3bb75605765e5b62ee40993cf3b1e38	100644	100644
+research/ocr/1176.tsv	identical	1c84b509fc5dd50f620e89655e209ea8b2fe5cd9	1c84b509fc5dd50f620e89655e209ea8b2fe5cd9	100644	100644
+research/ocr/1176.txt	identical	58518a7353864059fa8b29e0160f8b6c93d2315c	58518a7353864059fa8b29e0160f8b6c93d2315c	100644	100644
+research/ocr/1177.png	identical	3fe3830b033a9c3a8d4399b6e7825173b4d280dc	3fe3830b033a9c3a8d4399b6e7825173b4d280dc	100644	100644
+research/ocr/1177.tsv	identical	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	100644	100644
+research/ocr/1177.txt	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/1178.png	identical	b7f79b358fbe24a1e2006001f3448abe46075bf8	b7f79b358fbe24a1e2006001f3448abe46075bf8	100644	100644
+research/ocr/1178.tsv	identical	01e2ff091cfcafc93eeaf57db76ff7e4b376b3fb	01e2ff091cfcafc93eeaf57db76ff7e4b376b3fb	100644	100644
+research/ocr/1178.txt	identical	57f7c445667fb5c6626e2cf535f46e166da15a12	57f7c445667fb5c6626e2cf535f46e166da15a12	100644	100644
+research/ocr/2079.tsv	identical	6416f29ecf68727e74156c8d87fd960e830b4146	6416f29ecf68727e74156c8d87fd960e830b4146	100644	100644
+research/ocr/2079.txt	identical	142378e3009ac6ac34777dcbe353f8b476fa9ee0	142378e3009ac6ac34777dcbe353f8b476fa9ee0	100644	100644
+research/ocr/2080.tsv	identical	b5d3c7b8398625a1cfdc33a4bcd0cc6a32598b57	b5d3c7b8398625a1cfdc33a4bcd0cc6a32598b57	100644	100644
+research/ocr/2080.txt	identical	cc3705d83cf48e52ee6b6c6b815f0c5ff0a4778a	cc3705d83cf48e52ee6b6c6b815f0c5ff0a4778a	100644	100644
+research/ocr/2081.tsv	identical	bd0b5424ee5e2fc1a201c30d243aecfbda8e282e	bd0b5424ee5e2fc1a201c30d243aecfbda8e282e	100644	100644
+research/ocr/2081.txt	identical	71b2bbdd2dd35578e28961056705732c337f2145	71b2bbdd2dd35578e28961056705732c337f2145	100644	100644
+research/ocr/2082.tsv	identical	13d32d69a62fde742d36d78f4f22b73830a844a5	13d32d69a62fde742d36d78f4f22b73830a844a5	100644	100644
+research/ocr/2082.txt	identical	2f548abb6e6cf8bfcaefa438677d1791a7df809f	2f548abb6e6cf8bfcaefa438677d1791a7df809f	100644	100644
+research/ocr/2083.png	identical	be771853a921fa29909cd8f79881df52a45f7149	be771853a921fa29909cd8f79881df52a45f7149	100644	100644
+research/ocr/2083.tsv	identical	e066b29ab8fb015a40ad4cc2d6fc4ad0d035eb95	e066b29ab8fb015a40ad4cc2d6fc4ad0d035eb95	100644	100644
+research/ocr/2083.txt	identical	de13f6be25d47ada68d7a7a790e5f72e4544b61b	de13f6be25d47ada68d7a7a790e5f72e4544b61b	100644	100644
+research/ocr/2084.png	identical	f847aa00363858fc64561ab1e5305bf4725247a4	f847aa00363858fc64561ab1e5305bf4725247a4	100644	100644
+research/ocr/2084.tsv	identical	d191bde7146a150efca4d8b939d123b158fa68af	d191bde7146a150efca4d8b939d123b158fa68af	100644	100644
+research/ocr/2084.txt	identical	7b1be1843f69f3aa076334d6fb01400f06e1116b	7b1be1843f69f3aa076334d6fb01400f06e1116b	100644	100644
+research/ocr/2085.png	identical	137b658ff15b025c8580aa0f82be61e7cc278b6f	137b658ff15b025c8580aa0f82be61e7cc278b6f	100644	100644
+research/ocr/2085.tsv	identical	896507a8c5548101e84411332dfb9b221455ea02	896507a8c5548101e84411332dfb9b221455ea02	100644	100644
+research/ocr/2085.txt	identical	1dc830ec8471e8f1404bdfab18be63084dfecabf	1dc830ec8471e8f1404bdfab18be63084dfecabf	100644	100644
+research/ocr/2086.png	identical	4d3d79e3d0323092dff82ab8939e563f459d4687	4d3d79e3d0323092dff82ab8939e563f459d4687	100644	100644
+research/ocr/2086.tsv	identical	eb491001c980b52a1b11f80aef3e584cd97f789e	eb491001c980b52a1b11f80aef3e584cd97f789e	100644	100644
+research/ocr/2086.txt	identical	f69432d0e7608aa77b394f4b50f048f110a79895	f69432d0e7608aa77b394f4b50f048f110a79895	100644	100644
+research/ocr/2087.tsv	identical	ff743f58f9faa6e2494aafa18e9503581f44c7ca	ff743f58f9faa6e2494aafa18e9503581f44c7ca	100644	100644
+research/ocr/2087.txt	identical	b25667f24d6200eefb5d7fc5da944433cac51cba	b25667f24d6200eefb5d7fc5da944433cac51cba	100644	100644
+research/ocr/2088.tsv	identical	b1a1aa2eec288b51e96fd040ca623ea0f676afa6	b1a1aa2eec288b51e96fd040ca623ea0f676afa6	100644	100644
+research/ocr/2088.txt	identical	d58d04b1f07aca29fbde7ad50de538d5ec4c6b6a	d58d04b1f07aca29fbde7ad50de538d5ec4c6b6a	100644	100644
+research/ocr/2089.tsv	identical	d89c30cf69aed886114f395bb7147e9f82e05721	d89c30cf69aed886114f395bb7147e9f82e05721	100644	100644
+research/ocr/2089.txt	identical	9b41d01265a7f90dda0457d8f86af37bc5c96305	9b41d01265a7f90dda0457d8f86af37bc5c96305	100644	100644
+research/ocr/2090.tsv	identical	5b1deac32102146e46da49ae949e51adbaf4f41a	5b1deac32102146e46da49ae949e51adbaf4f41a	100644	100644
+research/ocr/2090.txt	identical	434b63419dc869fd2aa712ece6d540de72795d08	434b63419dc869fd2aa712ece6d540de72795d08	100644	100644
+research/ocr/2091.tsv	identical	4b30feb1063be337b0e00d9920679469586eba9d	4b30feb1063be337b0e00d9920679469586eba9d	100644	100644
+research/ocr/2091.txt	identical	acbe253f75c29bef3e6b1de6b956fb8ad33bc7b3	acbe253f75c29bef3e6b1de6b956fb8ad33bc7b3	100644	100644
+research/ocr/2092.tsv	identical	7ce9f2f80ea05573ee0a794e40087312427ffd7b	7ce9f2f80ea05573ee0a794e40087312427ffd7b	100644	100644
+research/ocr/2092.txt	identical	a328f7590397815f45d25436d5ec6b3263286a15	a328f7590397815f45d25436d5ec6b3263286a15	100644	100644
+research/ocr/2093.png	identical	c092f43402353951f97c419dd3a6d45427a88390	c092f43402353951f97c419dd3a6d45427a88390	100644	100644
+research/ocr/2093.tsv	identical	bb1a9ede85ffa8ae3b69c3ec5bde35ca0ccf5122	bb1a9ede85ffa8ae3b69c3ec5bde35ca0ccf5122	100644	100644
+research/ocr/2093.txt	identical	45bb63633cb6fbda7fbb8845ae5e2dcdd0b600aa	45bb63633cb6fbda7fbb8845ae5e2dcdd0b600aa	100644	100644
+research/ocr/2094.png	identical	7c317fa414f0e2329aa3a57fcca785950fde4899	7c317fa414f0e2329aa3a57fcca785950fde4899	100644	100644
+research/ocr/2094.tsv	identical	43c9aeed80eb90906ee1b9589aec77aa37c9908f	43c9aeed80eb90906ee1b9589aec77aa37c9908f	100644	100644
+research/ocr/2094.txt	identical	78f20a28719c7bc140d1ad2017f0c2342f9db4f0	78f20a28719c7bc140d1ad2017f0c2342f9db4f0	100644	100644
+research/ocr/2095.png	identical	ce69efb93a8784b6a0b1997d8f3b711ddafab9bb	ce69efb93a8784b6a0b1997d8f3b711ddafab9bb	100644	100644
+research/ocr/2095.tsv	identical	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	377119e501f5c9ab4fb5e58ad6a495d48904bd8b	100644	100644
+research/ocr/2095.txt	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/2096.tsv	identical	ba8d220383da1659da15c47ae07bd4bc43b05d9d	ba8d220383da1659da15c47ae07bd4bc43b05d9d	100644	100644
+research/ocr/2096.txt	identical	a74bf607e68861f86f6fbb5da3116bd27a97565b	a74bf607e68861f86f6fbb5da3116bd27a97565b	100644	100644
+research/ocr/2097.tsv	identical	d00389c1894e384d0ebb19c4134e265880aca4b2	d00389c1894e384d0ebb19c4134e265880aca4b2	100644	100644
+research/ocr/2097.txt	identical	41be2d6e4e8674cb00434594fcb811d95573ecf8	41be2d6e4e8674cb00434594fcb811d95573ecf8	100644	100644
+research/ocr/2098.tsv	identical	283e374f2553da6805d6981372d12a7a7df34041	283e374f2553da6805d6981372d12a7a7df34041	100644	100644
+research/ocr/2098.txt	identical	d6cc4147fd26b76c4075b3195423002e0b69de77	d6cc4147fd26b76c4075b3195423002e0b69de77	100644	100644
+research/ocr/2099.tsv	identical	43f79ee2faeb14a33c8930f6cfcc0b48d62cb84f	43f79ee2faeb14a33c8930f6cfcc0b48d62cb84f	100644	100644
+research/ocr/2099.txt	identical	faa935e43f8a195bcec2eb0259dbd90334330563	faa935e43f8a195bcec2eb0259dbd90334330563	100644	100644
+research/ocr/2100.tsv	identical	81163988f98e2ee507ec197127ccbfead4baf925	81163988f98e2ee507ec197127ccbfead4baf925	100644	100644
+research/ocr/2100.txt	identical	d1b9d47addc544392eab8c0743585ec9fb4123ad	d1b9d47addc544392eab8c0743585ec9fb4123ad	100644	100644
+research/ocr/2101.png	identical	20d70768de0f2338bab0c598493920235ea61296	20d70768de0f2338bab0c598493920235ea61296	100644	100644
+research/ocr/2101.tsv	identical	a6f4086f0bc1d09c09f98b1a3c8e264fcf8e462e	a6f4086f0bc1d09c09f98b1a3c8e264fcf8e462e	100644	100644
+research/ocr/2101.txt	identical	0fcdef5ef862008ff7c45663fb07a5e8259646e5	0fcdef5ef862008ff7c45663fb07a5e8259646e5	100644	100644
+research/ocr/2102.tsv	identical	3e2af05ad3fc9f413e3da8364840084b0a7b232e	3e2af05ad3fc9f413e3da8364840084b0a7b232e	100644	100644
+research/ocr/2102.txt	identical	f6530dd115e09c2e7a506bbac86589a80c86c11d	f6530dd115e09c2e7a506bbac86589a80c86c11d	100644	100644
+research/ocr/2103.png	identical	7983752849902f172af0354eea5eaf88a261c6ac	7983752849902f172af0354eea5eaf88a261c6ac	100644	100644
+research/ocr/2103.tsv	identical	c33329290f44c2cddc8af83223e336bbb37385b1	c33329290f44c2cddc8af83223e336bbb37385b1	100644	100644
+research/ocr/2103.txt	identical	fc3e21e1c9292f578c1c5169143c205d39c73b05	fc3e21e1c9292f578c1c5169143c205d39c73b05	100644	100644
+research/ocr/2104.png	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/2104.tsv	identical	fbd21f5adf489ec174d3edeeef97a25da90753a1	fbd21f5adf489ec174d3edeeef97a25da90753a1	100644	100644
+research/ocr/2104.txt	identical	c730a0394d2ee7fc476d20be1037d248f98af8c0	c730a0394d2ee7fc476d20be1037d248f98af8c0	100644	100644
+research/ocr/2105.tsv	identical	463401cc7a8c55aa355eeae68e03ba4d8cb757c5	463401cc7a8c55aa355eeae68e03ba4d8cb757c5	100644	100644
+research/ocr/2105.txt	identical	50c61331911cc4878b772380dd4fbec3b7e17728	50c61331911cc4878b772380dd4fbec3b7e17728	100644	100644
+research/ocr/2106.tsv	identical	8af6c652444f61a344a24d4050c12c7d84aea1b0	8af6c652444f61a344a24d4050c12c7d84aea1b0	100644	100644
+research/ocr/2106.txt	identical	a934dff3915c44101e4e2e117f384d92c8420029	a934dff3915c44101e4e2e117f384d92c8420029	100644	100644
+research/ocr/2107.tsv	identical	931b73e1af254c7c85db61ba4adb39a99cce66b9	931b73e1af254c7c85db61ba4adb39a99cce66b9	100644	100644
+research/ocr/2107.txt	identical	169dfc52e75846e7360f309c2126eb65ba0efb66	169dfc52e75846e7360f309c2126eb65ba0efb66	100644	100644
+research/ocr/2108.png	identical	b75253bac6f3560628293e5c2289498e9ee67dd7	b75253bac6f3560628293e5c2289498e9ee67dd7	100644	100644
+research/ocr/2108.tsv	identical	c3e124e6f0d0f10057fde574fca8fa623997d86a	c3e124e6f0d0f10057fde574fca8fa623997d86a	100644	100644
+research/ocr/2108.txt	identical	4b709baf26c7b681ecc65d42c41dce34e392ba8e	4b709baf26c7b681ecc65d42c41dce34e392ba8e	100644	100644
+research/ocr/2109.png	identical	0c7c912396dfbbb7ae0b3e0c8f968fb1061440d9	0c7c912396dfbbb7ae0b3e0c8f968fb1061440d9	100644	100644
+research/ocr/2109.tsv	identical	7d940523a7899104d1d45ec298c4d33cc95206e1	7d940523a7899104d1d45ec298c4d33cc95206e1	100644	100644
+research/ocr/2109.txt	identical	d19c69574b5c911013dc496fde143a477e9f3d18	d19c69574b5c911013dc496fde143a477e9f3d18	100644	100644
+research/ocr/2110.png	identical	23f8c95d792e4b7031756efe70672c66322ff567	23f8c95d792e4b7031756efe70672c66322ff567	100644	100644
+research/ocr/2110.tsv	identical	d60b0b14647fac5d148883b9f6f25a64893e2280	d60b0b14647fac5d148883b9f6f25a64893e2280	100644	100644
+research/ocr/2110.txt	identical	75ed3d84c37780c4637e4e18f3652a903881494b	75ed3d84c37780c4637e4e18f3652a903881494b	100644	100644
+research/ocr/2111.png	identical	417521c82463d975e0535608b7034b2cf278c3ba	417521c82463d975e0535608b7034b2cf278c3ba	100644	100644
+research/ocr/2111.tsv	identical	dbf533fe0ca96b519920fad70a98e6b670525385	dbf533fe0ca96b519920fad70a98e6b670525385	100644	100644
+research/ocr/2111.txt	identical	9011c594ecfb0b29fd5508edb3a118a634718bd4	9011c594ecfb0b29fd5508edb3a118a634718bd4	100644	100644
+research/ocr/2112.tsv	identical	7a575bbd67c96ef0c05024db10c293febd036611	7a575bbd67c96ef0c05024db10c293febd036611	100644	100644
+research/ocr/2112.txt	identical	3be90abe19a9d323601b3dbd2bf543902bc6b060	3be90abe19a9d323601b3dbd2bf543902bc6b060	100644	100644
+research/ocr/2113.tsv	identical	ebf88cdf44daf995130d7503a0a808bdb36c2056	ebf88cdf44daf995130d7503a0a808bdb36c2056	100644	100644
+research/ocr/2113.txt	identical	55b3cb6a378bb718064f7801e4c0e388208d8f67	55b3cb6a378bb718064f7801e4c0e388208d8f67	100644	100644
+research/ocr/2114.tsv	identical	8614e54290534adb4fd70b837bbfbe5553c37ea6	8614e54290534adb4fd70b837bbfbe5553c37ea6	100644	100644
+research/ocr/2114.txt	identical	8ae3229066827dadee20a4dc21f74629c840c557	8ae3229066827dadee20a4dc21f74629c840c557	100644	100644
+research/ocr/2115.tsv	identical	8629d92a015d55c49b02cc2aac919915aa6f54e2	8629d92a015d55c49b02cc2aac919915aa6f54e2	100644	100644
+research/ocr/2115.txt	identical	55bb19c22cd1eb95d28ac1da4ec06fe35746da1e	55bb19c22cd1eb95d28ac1da4ec06fe35746da1e	100644	100644
+research/ocr/2116.png	identical	2af4dc7767e6f8c3d8131a4d59b60b15101681fd	2af4dc7767e6f8c3d8131a4d59b60b15101681fd	100644	100644
+research/ocr/2116.tsv	identical	f761f7750161d0292d398d380779eea22ad7da89	f761f7750161d0292d398d380779eea22ad7da89	100644	100644
+research/ocr/2116.txt	identical	dc4656a01fce1351dd7e65d52580a3ea1c42260e	dc4656a01fce1351dd7e65d52580a3ea1c42260e	100644	100644
+research/ocr/2117.png	identical	a3b36c7c5693b7d668378146ad6115d9f646fe13	a3b36c7c5693b7d668378146ad6115d9f646fe13	100644	100644
+research/ocr/2117.tsv	identical	d56377def1811fe8cf8aeb116a6f77943b94525a	d56377def1811fe8cf8aeb116a6f77943b94525a	100644	100644
+research/ocr/2117.txt	identical	b457bc4b68eed5c6434d8239539fbc03c1347997	b457bc4b68eed5c6434d8239539fbc03c1347997	100644	100644
+research/ocr/2118.png	identical	840c59b2524e319bd86de8671127f7a1ac6559b5	840c59b2524e319bd86de8671127f7a1ac6559b5	100644	100644
+research/ocr/2118.tsv	identical	b89c034232b9b421faaa5421b96c413f9f812b99	b89c034232b9b421faaa5421b96c413f9f812b99	100644	100644
+research/ocr/2118.txt	identical	c95807669c4423cc026d599be572db1f17087aff	c95807669c4423cc026d599be572db1f17087aff	100644	100644
+research/ocr/2119.tsv	identical	2cf8e07ac0fa687fe8bc4b5b22e89e954f2b28d6	2cf8e07ac0fa687fe8bc4b5b22e89e954f2b28d6	100644	100644
+research/ocr/2119.txt	identical	1c89ed98c642163cb77a16eb10f6c46115e085e5	1c89ed98c642163cb77a16eb10f6c46115e085e5	100644	100644
+research/ocr/2120.tsv	identical	f8963d3e2abab87a37ecd31adb8495951b7583d6	f8963d3e2abab87a37ecd31adb8495951b7583d6	100644	100644
+research/ocr/2120.txt	identical	3353a255fc40f45ad137b72554d3b531bb3db518	3353a255fc40f45ad137b72554d3b531bb3db518	100644	100644
+research/ocr/2121.tsv	identical	a168daad4d9c3ad8eddd30a2fc7f39f547389c31	a168daad4d9c3ad8eddd30a2fc7f39f547389c31	100644	100644
+research/ocr/2121.txt	identical	7e87215a6445e5e20af5c3f380409ccd1a49df9f	7e87215a6445e5e20af5c3f380409ccd1a49df9f	100644	100644
+research/ocr/2122.tsv	identical	4a9be24afce9b632d77373e78e771c4e6ab0f2b6	4a9be24afce9b632d77373e78e771c4e6ab0f2b6	100644	100644
+research/ocr/2122.txt	identical	75b002fd422c5c74e2f60c7401d33bc6b52bf540	75b002fd422c5c74e2f60c7401d33bc6b52bf540	100644	100644
+research/ocr/2123.tsv	identical	a1aa17a3e79254a16a4d774b2d869be80418ed1a	a1aa17a3e79254a16a4d774b2d869be80418ed1a	100644	100644
+research/ocr/2123.txt	identical	81c186a352810a61b8010b08e05420c7fc2f190b	81c186a352810a61b8010b08e05420c7fc2f190b	100644	100644
+research/ocr/2124.png	identical	841efdd1b6d77bbbfa43e3d8f72d9f4e6c0ddf79	841efdd1b6d77bbbfa43e3d8f72d9f4e6c0ddf79	100644	100644
+research/ocr/2124.tsv	identical	9cf4fc8ababffdf66d24ddc98dca17e6049861ac	9cf4fc8ababffdf66d24ddc98dca17e6049861ac	100644	100644
+research/ocr/2124.txt	identical	9b112e37f40433aa7298db1e4143796854125156	9b112e37f40433aa7298db1e4143796854125156	100644	100644
+research/ocr/2125.png	identical	375d0fec447f2b90e184f53b2778fb5fe7f0b363	375d0fec447f2b90e184f53b2778fb5fe7f0b363	100644	100644
+research/ocr/2125.tsv	identical	c16eb519cddcb4a7e06f189b0ac7d4120e6b9e32	c16eb519cddcb4a7e06f189b0ac7d4120e6b9e32	100644	100644
+research/ocr/2125.txt	identical	399afdd13b4deb292ffa0965228c098502f93496	399afdd13b4deb292ffa0965228c098502f93496	100644	100644
+research/ocr/2126.png	identical	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	100644	100644
+research/ocr/2126.tsv	identical	1c147594ac8725068af9d61f2014f72ae35a68f5	1c147594ac8725068af9d61f2014f72ae35a68f5	100644	100644
+research/ocr/2126.txt	identical	3589025d876d299da0c2988aefd7ab8a1355bb3c	3589025d876d299da0c2988aefd7ab8a1355bb3c	100644	100644
+research/ocr/2127.tsv	identical	c455e188211e9cbe3f92e4eb453cb87855b9a98f	c455e188211e9cbe3f92e4eb453cb87855b9a98f	100644	100644
+research/ocr/2127.txt	identical	70e1d1ffdd1bb4b00f0468fe33e445709885bdc7	70e1d1ffdd1bb4b00f0468fe33e445709885bdc7	100644	100644
+research/ocr_scans.py	identical	e88c85591b44cc76e4ff2db91b3987b05d70c6b3	e88c85591b44cc76e4ff2db91b3987b05d70c6b3	100644	100644
+research/overnight-development-log.md	Sites only	1d3328ffa397b776439a82a0f5e4575d54ba2a3a		100644	
+research/page-1121.png	identical	dd1263e17e7db43729a002cae0a19674bbb09519	dd1263e17e7db43729a002cae0a19674bbb09519	100644	100644
+research/page-1127.png	identical	d629a388a874ad66fcddec2acfaefc7965370f24	d629a388a874ad66fcddec2acfaefc7965370f24	100644	100644
+research/page-2079.png	identical	977a472cb10ce8d861be99927a7f999f4d622c7b	977a472cb10ce8d861be99927a7f999f4d622c7b	100644	100644
+research/page-2084.png	identical	e8391de5184b02940ae7cc82ba339cedea3bf8f2	e8391de5184b02940ae7cc82ba339cedea3bf8f2	100644	100644
+research/page-798.png	identical	39bb41b4f76e754cabf12c120db9ec30f163d3c1	39bb41b4f76e754cabf12c120db9ec30f163d3c1	100644	100644
+research/page-audit.json	changed	4c4e039617d46a968ca12ac9969074bf7f174163	3108ef480e1d92d7ddd6a7578acf50a5f38b1efe	100644	100644
+research/page-geometry.json	identical	92e22676689d6d3cb8bf9775c0c243e042247dbf	92e22676689d6d3cb8bf9775c0c243e042247dbf	100644	100644
+research/page-heads.json	identical	b674dce9397a5dee3d851fd935a368a4b09e19e5	b674dce9397a5dee3d851fd935a368a4b09e19e5	100644	100644
+research/practice-builder-plan.md	Sites only	95843f5e967f5198bb5dd61665339484a4ba12d1		100644	
+research/progress-check-additions.json	Sites only	4e3d8fbad4eb8b3549ef441c7f54596af9ff0119		100644	
+research/question-image-review.json	Cloudflare only		644443d6a06c9a2860faa6bf7f7a258dd3f3a2f4		100644
+research/question-images/_stimuli/stimulus-2008-mcq-1-3-page29/r43aa0acd-segment-1.png	Cloudflare only		23a0c2520079a34ef492f3028d6817e3aca30e36		100644
+research/question-images/frq-2005-1-6/r7a97d6df-segment-1.png	Cloudflare only		b39d96b1762bc3fdb804ad526873f6a9b57b8e88		100644
+research/question-images/frq-2005-3-8/r86a14332-segment-1.png	Cloudflare only		f944e31db9450d32bbee1b5c3d64200709887cfc		100644
+research/question-images/frq-2005-3-8/r86a14332-segment-2.png	Cloudflare only		f79db72235e641595c40fd1e5c08b30c89758369		100644
+research/question-images/mcq-2008-1-29/rd9a187c-segment-1.png	Cloudflare only		02ebb70d04031765def45622dbf23c8baf76d8bd		100644
+research/question-images/mcq-2008-69-44/rc18c0a3c-segment-1.png	Cloudflare only		6ad2b1d603a5899ff8c5fbf0747452cc5fd5e011		100644
+research/question-images/mcq-2024-12-2084/rb7fe7c21-segment-1.png	Cloudflare only		7d3289074ac56dc14713d6d2e0f6aeab32552c9e		100644
+research/render_real_pdf_audit_batch.py	Cloudflare only		5451992815114de5f2b86306b1a6d60e2ec60650		100644
+research/reports/independent-validation/batch-01-catalog-context.json	Cloudflare only		8b197d7994edd3a5b882a9efa65e5860741b63b8		100644
+research/reports/independent-validation/batch-01-evidence.json	Cloudflare only		eeaf5cfeae0bad882eb5d0ce360403d5f6ce961f		100644
+research/reports/independent-validation/batch-01-proposals.json	Cloudflare only		f17d09941e2aa5ec096e74ad36262f94962a1ecd		100644
+research/reports/independent-validation/batch-01-reassessment.md	Cloudflare only		060d3e9904cdca4cb8463094fd47cf21c672e8ae		100644
+research/reports/independent-validation/batch-01-reassessment/evidence-manifest.json	Cloudflare only		dc385e6c56590da24ca61c3ecba15cf05f24b1a0		100644
+research/reports/independent-validation/batch-01-reassessment/proposals.json	Cloudflare only		f8c98358cc81ee7c7c2a41f6477f16fc2ba29bfa		100644
+research/reports/independent-validation/batch-01-report.md	Cloudflare only		626bde71f18922219bb48b4c7cffe9d4815fc424		100644
+research/reports/independent-validation/batch-02-correction-checkpoint.md	Cloudflare only		93ae187afe689c678df957ca17baf8ae2d381eac		100644
+research/reports/independent-validation/batch-02-correction-evidence-manifest.json	Cloudflare only		ab46f42e0535dcf3e98b8f140621c182610a3ed2		100644
+research/reports/independent-validation/batch-02-development-panels/frq-2011-1-1655-segment-1.png	Cloudflare only		e7abdd24b2341e610d4bde6aab9a004adc88acd6		100644
+research/reports/independent-validation/batch-02-development-proposal.json	Cloudflare only		bbcdc23776e52b8cbf8d370ff1d951a21d4263ce		100644
+research/reports/independent-validation/batch-02-evidence-manifest.json	Cloudflare only		5abaaab7d64c377db45acf0e9dc5cb771c65a588		100644
+research/reports/independent-validation/batch-02-frozen-results.json	Cloudflare only		6885daad9290cdafd13d606bdd1aa069e982a205		100644
+research/reports/independent-validation/batch-02-lock.json	Cloudflare only		1bbc22de6ad9907627fdc6f01320222e57128f05		100644
+research/reports/independent-validation/batch-02-panels/frq-2011-1-1655-segment-1.png	Cloudflare only		45ef90f6dd91a9e6402a4aa6dad4687b14ede005		100644
+research/reports/independent-validation/batch-02-proposals.json	Cloudflare only		ad77276302c94f754e4516b4e06ee0ed4ab0f9c0		100644
+research/reports/independent-validation/batch-02-stopped-after-sample-06.md	Cloudflare only		0202c0eac3e2e1006b5192232b8f175ae01e4f7a		100644
+research/reports/independent-validation/batch-03-correction-panels/frq-2008-4-896-segment-1.png	Cloudflare only		53c81400f06d877c6e7eda27d501fbf641c0a71b		100644
+research/reports/independent-validation/batch-03-correction-panels/frq-2008-4-896-segment-2.png	Cloudflare only		e69dd863833551e98a4fda71f265fc512d7cf729		100644
+research/reports/independent-validation/batch-03-correction-panels/mcq-2018-4-1945-segment-1.png	Cloudflare only		1dabdf912f54b760e5768d300512872707747c32		100644
+research/reports/independent-validation/batch-03-correction-proposals.json	Cloudflare only		f205dacf459b2f55d2711164e238bb960bed672d		100644
+research/reports/independent-validation/batch-03-corrections-evidence-manifest.json	Cloudflare only		046d022e5c5af9041bcde614efaf4379b093cd3c		100644
+research/reports/independent-validation/batch-03-corrections.md	Cloudflare only		ee4edd648387a74c535fc15bb4ae2f8f3043fe39		100644
+research/reports/independent-validation/batch-03-evidence-manifest.json	Cloudflare only		d6156de50207a13beeaad274bbabf9c2359dc3be		100644
+research/reports/independent-validation/batch-03-frozen-results.json	Cloudflare only		9c0a6c5bcfc3a36aba2533aae98ae31870d001c3		100644
+research/reports/independent-validation/batch-03-lock.json	Cloudflare only		6d49b29254e090d6073ef9c9b5beeb8e1cb10ef7		100644
+research/reports/independent-validation/batch-03-panels/frq-2008-4-896-segment-1.png	Cloudflare only		53c81400f06d877c6e7eda27d501fbf641c0a71b		100644
+research/reports/independent-validation/batch-03-panels/frq-2008-4-896-segment-2.png	Cloudflare only		941c75f794f2aac56d9786ccbe8a197e31a3eca1		100644
+research/reports/independent-validation/batch-03-panels/mcq-2014-17-1448-segment-1.png	Cloudflare only		f6178d9ed6865b7acc62f98847bd8f906711a421		100644
+research/reports/independent-validation/batch-03-panels/mcq-2016-13-1058-segment-1.png	Cloudflare only		934fb38b8b403f210fca973e51318e004a7099b2		100644
+research/reports/independent-validation/batch-03-panels/mcq-2018-4-1945-segment-1.png	Cloudflare only		22b9a4c28055a36b4d522c9cee21a8ec3ff148a2		100644
+research/reports/independent-validation/batch-03-panels/mcq-2023-47-1733-segment-1.png	Cloudflare only		2555e62b97813282067b611a6a437669c7e99be8		100644
+research/reports/independent-validation/batch-03-proposals.json	Cloudflare only		e9b7c7d13afcbdb39bf90c1b3ca9684b6b1f9dc9		100644
+research/reports/independent-validation/batch-03-report.md	Cloudflare only		5f723b06c08942528e3c2a945bc7c1f5081b36c0		100644
+research/reports/independent-validation/batch-04-correction-evidence-manifest.json	Cloudflare only		ca46f2db5403d0606ff4f7c59877b13dd610b8d8		100644
+research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-1.jpg	Cloudflare only		cb89f2c62e062f40845a40d5f506f2af3263b3f0		100644
+research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-2.jpg	Cloudflare only		c4bd0d4652c296cde6ca16d2e2e2c08d0eb76a5f		100644
+research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-corrected.pdf	Cloudflare only		67934149f3518f80c2737cd53cde13e0e7264321		100644
+research/reports/independent-validation/batch-04-development-proposal.json	Cloudflare only		61db54b9fed9f218aeddb820d7a1a3438864f568		100644
+research/reports/independent-validation/batch-04-development-report.md	Cloudflare only		0cbbbe6cdfea0b2b23333d9823442b2462b58d52		100644
+research/reports/independent-validation/batch-04-evidence-manifest.json	Cloudflare only		0d6155d17aa92440272b779aa0ebd6b4c8a12124		100644
+research/reports/independent-validation/batch-04-lock.json	Cloudflare only		8b2d5bf142c1590d5dd7f8e46952d07b6f6319e5		100644
+research/reports/independent-validation/batch-04-neighbor-development-proposals.json	Cloudflare only		edaddfb95a06816d9b0c15c8ff213b2af033dc8f		100644
+research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-24-2090-segment-2.jpg	Cloudflare only		5f1edb914f4c4c09da957a3fd7656699b4278d3a		100644
+research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-25-2090-segment-2.jpg	Cloudflare only		cea91910f0e8833985580979a7b9f84b0901b1ae		100644
+research/reports/independent-validation/batch-04-panels/mcq-2024-23-2090-segment-1.png	Cloudflare only		44cc22b516005f94f31b6cd8e347c959a8fe1cdc		100644
+research/reports/independent-validation/batch-04-panels/source-page-2091-context.png	Cloudflare only		97eb8bef1c13bc9172da45105af7c45ca9a773db		100644
+research/reports/independent-validation/batch-04-proposals.json	Cloudflare only		3dca06ddd50d0ed704de6f0185eb284546322463		100644
+research/reports/independent-validation/batch-04-q47-correction/evidence-manifest.json	Cloudflare only		47b00bb3962b5ff615d23cff3fb4bd475d159934		100644
+research/reports/independent-validation/batch-04-q47-correction/mcq-2024-47-2105-comparison-grayscale.png	Cloudflare only		0fc2bdcd855984e8d907807d836caa842c8b7d47		100644
+research/reports/independent-validation/batch-04-q47-correction/proposal.json	Cloudflare only		c2a71619e7922180015c3fe98e037919d05ec090		100644
+research/reports/independent-validation/batch-04-q47-correction/report.md	Cloudflare only		dc0cab20c6356a30b046b381ff7ebc31ed3f71fd		100644
+research/reports/independent-validation/batch-04-revision-2-evidence-manifest.json	Cloudflare only		8d07a880ad78fdbad57113b3f013e4ade6737c29		100644
+research/reports/independent-validation/batch-04-revision-2-lock.json	Cloudflare only		77e11a6d13beecce068b4d0006d52e47227aca84		100644
+research/reports/independent-validation/batch-04-revision-2-panels/frq-2022-6-434-segment-1.jpg	Cloudflare only		3f63a056e77f7400d33a882f565b2973f60fe927		100644
+research/reports/independent-validation/batch-04-revision-2-panels/frq-2022-6-434-segment-2.jpg	Cloudflare only		fcfacf9ae3d43f5ada71bb5e523684bdd84ddeb5		100644
+research/reports/independent-validation/batch-04-revision-2-panels/frq-2024-4-2123-segment-1.jpg	Cloudflare only		bd84802d08744a2a066d7cee4aa9913929c9cb6a		100644
+research/reports/independent-validation/batch-04-revision-2-panels/frq-2024-4-2123-segment-2.jpg	Cloudflare only		1610746313f481146d25c67d5dcf2217d62ae739		100644
+research/reports/independent-validation/batch-04-revision-2-panels/mcq-2014-26-182-segment-1.jpg	Cloudflare only		57e4f27b9fe4e53fc558cdb5b62198d0c114871f		100644
+research/reports/independent-validation/batch-04-revision-2-panels/mcq-2024-47-2105-segment-1.jpg	Cloudflare only		423b4e835f86f560eba1a987bf5cd32cc298d0d0		100644
+research/reports/independent-validation/batch-04-revision-2-proposals.json	Cloudflare only		5b7cda511cdbde0b755065fd9c77e0ec8e40ae21		100644
+research/reports/independent-validation/batch-04-revision-2-report.md	Cloudflare only		331c460516dd9479139ef4e96c5aeb7be140a691		100644
+research/reports/independent-validation/batch-04-revision-2-results.json	Cloudflare only		601c98cb1afe6704986d2633168c69aea9e7261e		100644
+research/reports/independent-validation/batch-04-revision-3-development-evidence-manifest.json	Cloudflare only		0a70f30a6b698f18dda691be813e907359dbeb87		100644
+research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-corrected.pdf	Cloudflare only		c301092ac3fb21541c9b385167425a707538c020		100644
+research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-1.jpg	Cloudflare only		1d1963183bd9ffbc95ee9dfc1f86f121095e2570		100644
+research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-2.jpg	Cloudflare only		3a35288ac469921bda388eeecf164b44af5667da		100644
+research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-3.jpg	Cloudflare only		3d5d9853ba0b9617d4bc55239719a05ee3da1014		100644
+research/reports/independent-validation/batch-04-revision-3-development-panels/frq-2024-4-2123-segment-4.jpg	Cloudflare only		57bf52cd7cd8b2a967c9a85cfbaf8bdbe94d458f		100644
+research/reports/independent-validation/batch-04-revision-3-development-proposal.json	Cloudflare only		e9daf035c31b2038d45ce445b8ada85ce9a622c8		100644
+research/reports/independent-validation/batch-04-revision-3-development-report.md	Cloudflare only		f509cad9f9f56921f47d1e0c73a04ce854144cdc		100644
+research/reports/independent-validation/batch-04-revision-3-evidence-manifest.json	Cloudflare only		fa2657c57dc5332102591ec1f4e97aff94169c8f		100644
+research/reports/independent-validation/batch-04-revision-3-lock.json	Cloudflare only		0929321a2202ce009a698010ce212c105c5ec9bc		100644
+research/reports/independent-validation/batch-04-revision-3-panels/contact-sheet.pdf	Cloudflare only		fe790650a8f1069afc76e6dce07563f07b727f34		100644
+research/reports/independent-validation/batch-04-revision-3-panels/frq-2022-6-434-segment-1.png	Cloudflare only		819f7d8e29c940b6d5141b1e7f51bfc5037d1636		100644
+research/reports/independent-validation/batch-04-revision-3-panels/frq-2022-6-434-segment-2.png	Cloudflare only		bb635252d652a5b976ab1ecc437cc984cdb9ddef		100644
+research/reports/independent-validation/batch-04-revision-3-panels/mcq-2014-26-182-segment-1.png	Cloudflare only		9c0e31d5e21926f61095b1ae9135b3a64d5eac75		100644
+research/reports/independent-validation/batch-04-revision-3-panels/mcq-2024-47-2105-segment-1.png	Cloudflare only		63be760a3b638032682627fdc8c58e2d194fe0af		100644
+research/reports/independent-validation/batch-04-revision-3-proposals.json	Cloudflare only		be625b62e534d1f02159a79324ea0e08d93c8ad4		100644
+research/reports/independent-validation/batch-04-revision-3-report.md	Cloudflare only		902ffe83be18c8ed4138d1e36189a8e258ff89c5		100644
+research/reports/independent-validation/batch-04-revision-3-results.json	Cloudflare only		a95bd05726e3fccf71b6e42d0ba416decb2d96ea		100644
+research/reports/independent-validation/batch-04-stopped-after-sample-07.md	Cloudflare only		9caec6e0ad01cb51f47493ceb8b4810b55303a40		100644
+research/reports/independent-validation/batch-05-evidence-manifest.json	Cloudflare only		fa17803d4c8ceed3faff726b780f528fbf9a7d4c		100644
+research/reports/independent-validation/batch-05-lock.json	Cloudflare only		1244969077cdfb9a7f30d9e69c9b9f3688c18687		100644
+research/reports/independent-validation/batch-05-panels/frq-2010-4-921-segment-1.png	Cloudflare only		e182f4a96c6d6921de3a68faf5c6c158e38a5c06		100644
+research/reports/independent-validation/batch-05-panels/frq-2010-4-921-segment-2.png	Cloudflare only		9959b043f17b5b8e43377e2d18e39c4283e9b6e9		100644
+research/reports/independent-validation/batch-05-panels/frq-2011-1-1220-segment-1.png	Cloudflare only		b2e6877f34a8defd31cf9d6a36b0451d96f757f0		100644
+research/reports/independent-validation/batch-05-panels/frq-2016-1-385-segment-1.png	Cloudflare only		a08ef49f402de30d6c95c6ce53ea64aa708f1d07		100644
+research/reports/independent-validation/batch-05-panels/frq-2016-1-385-segment-2.png	Cloudflare only		fdc35e6e52e9a32099d8655cbadee2713ea8191e		100644
+research/reports/independent-validation/batch-05-panels/mcq-1984-53-128-segment-1.png	Cloudflare only		5666550452f32a5510b1c5a98ffb917a0546dbc5		100644
+research/reports/independent-validation/batch-05-panels/mcq-2002-15-754-segment-1.png	Cloudflare only		d588f3d4f4218cd9c1f207ff1c0e955f50e2a1ec		100644
+research/reports/independent-validation/batch-05-proposals.json	Cloudflare only		688a1650bd7067855c806d2514b34f487d3a7d70		100644
+research/reports/independent-validation/batch-05-repair/before-after-coordinates.json	Cloudflare only		3709ccb88648aa8cf765b94b8d665826bda26d05		100644
+research/reports/independent-validation/batch-05-repair/development-proposals.json	Cloudflare only		86830508eaa20f687ace5eceeddd80f3b4399dde		100644
+research/reports/independent-validation/batch-05-repair/evidence-manifest.json	Cloudflare only		24d924228850d44aeb02833220a5e6c7923fb154		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2010-4-921-segment-1.png	Cloudflare only		c16cec8d2a4b021fb0db93b0faae1bbec85249b1		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2010-4-921-segment-2.png	Cloudflare only		34ddde582adaee1f3f609ebd4f0bd640183a24bd		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2011-1-1220-segment-1.png	Cloudflare only		10ca65bc28d86e419cbe046eabab24ac691ab257		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2011-1-1220-segment-2.png	Cloudflare only		4f9c5e0d392431fe030d4e5b7d134beea9ca2c89		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2016-1-385-segment-1.png	Cloudflare only		d0926c5a7a3731925d1e0410a1268339c6633f35		100644
+research/reports/independent-validation/batch-05-repair/panels/frq-2016-1-385-segment-2.png	Cloudflare only		65eba0133668d659f2eb1ce81475a366a464709b		100644
+research/reports/independent-validation/batch-05-repair/panels/mcq-1984-53-128-segment-1.png	Cloudflare only		164fcc6a7b24bb0649f86e8cb7ef2a4aff50f01a		100644
+research/reports/independent-validation/batch-05-repair/panels/mcq-2002-15-754-segment-1.png	Cloudflare only		cf12b087708f7484fdd545d43b592a06f144c492		100644
+research/reports/independent-validation/batch-05-repair/panels/mcq-2002-15-754-segment-2.png	Cloudflare only		a803b125187ea07f7fa8968c98db7046ef3e350f		100644
+research/reports/independent-validation/batch-05-repair/report.md	Cloudflare only		5bcedd8432bf9c17ada9a9b285a7918b5afa813d		100644
+research/reports/independent-validation/batch-05-report.md	Cloudflare only		545af9b31c29247d0b1b8ef734324323a5c9c2ba		100644
+research/reports/independent-validation/batch-05-results.json	Cloudflare only		17972e816b6abeff74fa5ccb3669aa7cebbea2a5		100644
+research/reports/independent-validation/batch-06-evidence-manifest.json	Cloudflare only		7857fa6acafba135a8f2d34e911260dec6990c49		100644
+research/reports/independent-validation/batch-06-lock.json	Cloudflare only		440b95168c1948988c20fc0596da7abe3ef5efd7		100644
+research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-1.jpg	Cloudflare only		b391444d34a9e9ecf4494b68e500f8853896d91e		100644
+research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-2.jpg	Cloudflare only		e21e970c61b3fe3f222fa269beb5ff9d2a111b01		100644
+research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-3.jpg	Cloudflare only		fe83808d883843cf1bfed5041c2b7fed969a12a4		100644
+research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-1.jpg	Cloudflare only		fba16a81408f95566bee058f88b62e3273d7399a		100644
+research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-2.jpg	Cloudflare only		980fa2ecf01b95ef3df747c69fbbd1a5e6b829d8		100644
+research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-3.jpg	Cloudflare only		4402e0700a97edc44f9ae39a082a399de6af32b5		100644
+research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-4.jpg	Cloudflare only		2aa161e3b6e7f76c68a7b9c00bc046e7dfc74084		100644
+research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-5.jpg	Cloudflare only		a8925f3f60c37f161427121a3d28193b01cee91c		100644
+research/reports/independent-validation/batch-06-panels/mcq-2014-58-196-segment-1.jpg	Cloudflare only		693a9d8e8ba73442bb12b19464505af42922b135		100644
+research/reports/independent-validation/batch-06-panels/mcq-2023-34-1830-segment-1.jpg	Cloudflare only		5bf0724c7847c0fc994b713da031e50144884ba9		100644
+research/reports/independent-validation/batch-06-panels/mcq-2023-43-1731-segment-1.jpg	Cloudflare only		d4eb4740643002578c7d2dfd129c906192a211f4		100644
+research/reports/independent-validation/batch-06-proposals.json	Cloudflare only		b81b8fa840bac2c1083df473e507865c7250127a		100644
+research/reports/independent-validation/batch-06-report.md	Cloudflare only		35aa213fe2b151fc342b94982b6945644f25b9dd		100644
+research/reports/independent-validation/batch-06-results.json	Cloudflare only		e7bf6610b0c1242a087fc19f2e1d1ca137dd6d54		100644
+research/reports/independent-validation/preregistered-sample-40.json	Cloudflare only		5fdb600fd7a4c52d6ad745ebe35561d6ebd304fb		100644
+research/reports/real-pdf-audit-recovery-checkpoint.md	Cloudflare only		c12e603c3ed221675c2d3004b3a45f072686afe0		100644
+research/reports/real-pdf-failure-regressions.md	Cloudflare only		3cd23b8230a4cdf56b1a554f745156cdca57fd1f		100644
+research/reports/real-pdf-proposals.failure-regressions.json	Cloudflare only		8d15c414e00f3a559defbbf40dda02f2a5fedbc0		100644
+research/reports/real-pdf-visual-audit-batch-01.md	Cloudflare only		b490d8f8c33a9e2efe3fff37f48e659906ca2b10		100644
+research/reports/real-pdf-visual-audit-batch-02.md	Cloudflare only		e18ab801a4a1a7c24a2da243f4a55bd1e7129110		100644
+research/reports/real-pdf-visual-audit-batch-03.md	Cloudflare only		9e650c15e9249f53118162a8425d266fe206033a		100644
+research/reports/real-pdf-visual-audit-batch-04.md	Cloudflare only		eb9faf62b3691e97c8217af4a9b225b6c4f5dc1a		100644
+research/reports/real-pdf-visual-audit-holdout-01.md	Cloudflare only		4be55e39da308fc10f2f3c03a3412e796129eb34		100644
+research/reports/real-pdf-visual-audit-holdout-02.md	Cloudflare only		793ed4a160bfc5b0075e85b7fda5dbcde4d3fcd9		100644
+research/reports/real-question-boundary-proposals.batch-04.json.gz	Cloudflare only		740a2a3df7c8182b120b284182156a1b3e7ab9ea		100644
+research/reports/real-question-boundary-proposals.batch01-corrected.json.gz	Cloudflare only		62b137eeb840014026233704088e1a2b7962e397		100644
+research/reports/real-question-boundary-proposals.batch02-corrected.json.gz	Cloudflare only		192e14f6f9476b0f8f3c83cc8e0174c745c15590		100644
+research/reports/real-question-boundary-proposals.holdout-01.json.gz	Cloudflare only		69a1b88cd707145404855ea0e1dd9f8ba3bb96d7		100644
+research/reports/real-question-boundary-proposals.holdout-02.json.gz	Cloudflare only		7b2d584582570f97e7179ac2b2b317bfc6a7d4d2		100644
+research/reports/real-question-boundary-proposals.recovered.json.gz	Cloudflare only		63090539b8e6d7688ec022c7cbc788469839c8e0		100644
+research/reports/visual-audit/batch-01-corrected/frq-2005-1-6-segment-1.png	Cloudflare only		89558293fd60b28667ef89d00fc8d1e516fc0b98		100644
+research/reports/visual-audit/batch-01/frq-2005-1-6-segment-1.png	Cloudflare only		9cde9c43acd46cc2dbb03f667c909a14dac58b61		100644
+research/reports/visual-audit/batch-01/frq-2005-3-8-segment-1.png	Cloudflare only		462d48c7df4f6561df7e43cabaacfed4235b7f19		100644
+research/reports/visual-audit/batch-01/frq-2005-3-8-segment-2.png	Cloudflare only		de0977bf61faeb6363df8016e75cab7a05b32b54		100644
+research/reports/visual-audit/batch-01/mcq-2002-17-608-segment-1.png	Cloudflare only		618ba1c49ab3c34319cddefb25b7cc82dc53678f		100644
+research/reports/visual-audit/batch-01/mcq-2008-19-33-segment-1.png	Cloudflare only		79926b3ac6294ef4866b51e1880b4c102065afef		100644
+research/reports/visual-audit/batch-01/mcq-2008-4-31-segment-1.png	Cloudflare only		090676f7ae1d5a0fb99af54036509e68af189fde		100644
+research/reports/visual-audit/batch-02-corrected/frq-2006-1-20-segment-1.png	Cloudflare only		c71e7a1a6b1ca6afdcf94bf3bec0cec9a11318db		100644
+research/reports/visual-audit/batch-02/frq-2003-1-865-segment-1.png	Cloudflare only		87f7664767cc8b8a5b342776711dd7073b12809e		100644
+research/reports/visual-audit/batch-02/frq-2003-1-865-segment-2.png	Cloudflare only		7724db295832bf5ef8c834e03d4f133257c7918e		100644
+research/reports/visual-audit/batch-02/frq-2004-1-292-segment-1.png	Cloudflare only		a3fcf17e13904c0db39143893dba3c63552931d4		100644
+research/reports/visual-audit/batch-02/frq-2006-1-20-segment-1.png	Cloudflare only		b97830205cb4479e05d4eef65ab9d247bd95fe6c		100644
+research/reports/visual-audit/batch-02/frq-2011-1-944-segment-1.png	Cloudflare only		6b7db2105484db2a450ec7f1dd2d3eca9942baef		100644
+research/reports/visual-audit/batch-02/mcq-1999-1-546-segment-1.png	Cloudflare only		030a1bff32f77199efedf293c178340e13f827f3		100644
+research/reports/visual-audit/batch-03/frq-2021-1-399-segment-1.png	Cloudflare only		ef59011fe32d5c7940e07925093c684448e80d4d		100644
+research/reports/visual-audit/batch-03/frq-2021-1-399-segment-2.png	Cloudflare only		a8ba3331451e8825021e6eb7416b91fbd01c97e3		100644
+research/reports/visual-audit/batch-03/frq-2021-1-399-segment-3.png	Cloudflare only		4cc015c1c6f78b100825c02d8956350e39d720b3		100644
+research/reports/visual-audit/batch-03/mcq-1984-8-120-segment-1.png	Cloudflare only		8f45497b99df15072bdb39f2419d185de45bb8e7		100644
+research/reports/visual-audit/batch-03/mcq-2008-12-32-segment-1.png	Cloudflare only		827f8508ab7ca845bbc8ace7251d9c8167736952		100644
+research/reports/visual-audit/batch-03/mcq-2008-25-34-segment-1.png	Cloudflare only		06916e06193dda6971b69129ad01770069fee238		100644
+research/reports/visual-audit/batch-03/mcq-2018-17-1201-segment-1.png	Cloudflare only		c83ff30ae7b0b968aeb42343eb0cdc258a2a7252		100644
+research/reports/visual-audit/batch-04/frq-2021-1-399-segment-1.png	Cloudflare only		ae09c92af1fee617295fb1658a9280810afc7c05		100644
+research/reports/visual-audit/batch-04/frq-2021-1-399-segment-2.png	Cloudflare only		1fbd71234b1a05b3c2602e47727612d9935e6703		100644
+research/reports/visual-audit/batch-04/frq-2021-1-399-segment-3.png	Cloudflare only		a7a5e39f521776de5f73da3982ff1f1e3c5086a6		100644
+research/reports/visual-audit/batch-04/frq-2023-1-442-segment-1.png	Cloudflare only		afbde4cdcc182d86c26b53d5376cd69be444d31c		100644
+research/reports/visual-audit/batch-04/frq-2023-1-442-segment-2.png	Cloudflare only		52a914183062a084c43c942fca6b402980ba7db3		100644
+research/reports/visual-audit/batch-04/frq-2023-1-442-segment-3.png	Cloudflare only		7b73a6efd234e3b9eec872d286fc82328d1897df		100644
+research/reports/visual-audit/batch-04/mcq-1984-8-120-segment-1.png	Cloudflare only		f7e29cac83052bdb8e0738a88dabec4239bb26b3		100644
+research/reports/visual-audit/batch-04/mcq-2008-1-29-segment-1.png	Cloudflare only		0f2e0198027a25e479641f35b07304e1090eb402		100644
+research/reports/visual-audit/batch-04/mcq-2008-69-44-segment-1.png	Cloudflare only		fb085dddbe444bfa99cd23570d62e39ce5861d6a		100644
+research/reports/visual-audit/batch-04/mcq-2018-17-1201-segment-1.png	Cloudflare only		269bc962421ff7db0776fa0c11789cd9f732c5b8		100644
+research/reports/visual-audit/batch-04/mcq-2018-17-1201-segment-2.png	Cloudflare only		5704d07a8b7bcdf5c7f1d980a4f7602a112faacc		100644
+research/reports/visual-audit/batch-04/mcq-2023-1-1756-segment-1.png	Cloudflare only		951d714747a925f8a985035f3284c4f2ccc0f126		100644
+research/reports/visual-audit/batch-04/mcq-2024-12-2084-segment-1.png	Cloudflare only		021386b6a5405e655efb85ac240b878e242167b5		100644
+research/reports/visual-audit/holdout-01/frq-2022-1-420-segment-1.png	Cloudflare only		ba32a00de7899dad6a9ef9cdc1ea31abefae2a1e		100644
+research/reports/visual-audit/holdout-01/frq-2022-1-420-segment-2.png	Cloudflare only		14a624d1737f4ab849ed88f600cbd093aeb76919		100644
+research/reports/visual-audit/holdout-01/frq-2022-1-420-segment-3.png	Cloudflare only		819c2f7b7e47b46b4ce4867e5fb6355f61bf3a0c		100644
+research/reports/visual-audit/holdout-01/frq-2022-1-420-segment-4.png	Cloudflare only		7a24810cad2bc2bee9921b07a4a75438f3473133		100644
+research/reports/visual-audit/holdout-01/mcq-2008-70-44-segment-1.png	Cloudflare only		da7ce2baeb3dcbe5bfc5778d2dd97725b07d30aa		100644
+research/reports/visual-audit/holdout-01/mcq-2022-1-1617-segment-1.png	Cloudflare only		08b314a5c35b7e166e5baa8df73e46f76e42f877		100644
+research/reports/visual-audit/holdout-01/mcq-2023-1-1720-segment-1.png	Cloudflare only		dff6f4069980bf1e1f9fe55060dc92c43b1bd06b		100644
+research/reports/visual-audit/holdout-01/mcq-2024-1-2129-segment-1.png	Cloudflare only		664b37e8c2d5c2442e720037978e880c76f49f85		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-464-segment-1.png	Cloudflare only		6013810df2b3485d1b920b247a949956562be2ad		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-464-segment-2.png	Cloudflare only		d82698341756fd2e04f76bc8de2bd6f1a96a608a		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-464-segment-3.png	Cloudflare only		3d31df4e5a252062d15ea46376bc3dbdefdf597e		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-464-segment-4.png	Cloudflare only		e3fc6f20c3c95df1f5b55125c83747b111c1e046		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-484-segment-1.png	Cloudflare only		569b756e7a5980aca8ca8ce1482737302e3a8033		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-484-segment-2.png	Cloudflare only		94f680593e16982f3bcd6f91f79342d7e3d34e78		100644
+research/reports/visual-audit/holdout-02/frq-2024-1-484-segment-3.png	Cloudflare only		d09f9a46a5dad0043e997214685cf8b5b3d90525		100644
+research/reports/visual-audit/holdout-02/mcq-2022-1-1669-segment-1.png	Cloudflare only		2c9e18c69a3c3657e6551a49b1d4063efb5c501c		100644
+research/reports/visual-audit/holdout-02/mcq-2023-1-1812-segment-1.png	Cloudflare only		46db055989d6535a464e9ec65816c57a886a6547		100644
+research/reports/visual-audit/holdout-02/mcq-2024-12-2132-segment-1.png	Cloudflare only		30c0d277512270cdad0c2fbd18ba62674023fad5		100644
+research/scanned-additions.json	changed	49ce74d2084114c84cff55b9db4b8e91a9b366f1	0ba7425564d21bb84d11d9743d6be19854b5f391	100644	100644
+research/scanned-classified.json	changed	2222dcb90401496ef933ee1f6675a833d942bd3e	fd6a2b032da0f1c5036fbc17fe954e9597743e4d	100644	100644
+research/source-manifest.json	identical	856674fa7e6f40e4d2ee45dd5b3f86723b7ec45d	856674fa7e6f40e4d2ee45dd5b3f86723b7ec45d	100644	100644
+research/source-mappings.json	identical	51e98eb53d89c3ef342e61f053d44ddf90e441e3	51e98eb53d89c3ef342e61f053d44ddf90e441e3	100644	100644
+research/stimuli.json	Cloudflare only		72c05befb3d6d5e9a66538fc71b64bce7ab7b610		100644
+research/unlinked-page-inventory-summary.md	Sites only	a2f447909d3f9d508b281f8e8d5ffbb143c259e1		100644	
+research/unlinked-page-inventory.json	Sites only	4b35537d28d7ae22231b653881790ba43866c586		100644	
+research/worksheet-baseline-ids.json	Sites only	d899c613ad68c2424aed49c46f6753629ec5110d		100644	
+research/worksheet-catalog-coverage.json	Sites only	75c0bddb5815c74e4c7d6157b8654b0e3c899555		100644	
+research/worksheet-coverage-audit.md	Sites only	50f9d77f5f12ed035e7e848c7eda44d273b80031		100644	
+research/worksheet-extraction-checkpoint.json	Sites only	fdb8f8d7e96244d872a2f2768d9a1242444e47d2		100644	
+research/worksheet-reviewed-regions.json	Sites only	1ec83876791b7dec46514bc572dc8dd7514fd43b		100644	
+research/worksheet-typesetting.md	Sites only	2148e6af8c2c80fb7883ee3014fca3a9a7aaf17b		100644	
+research/write_mcq_first.py	identical	f0c499d4e0fb9d835b9cc2a6cf1a95454f8ba342	f0c499d4e0fb9d835b9cc2a6cf1a95454f8ba342	100644	100644
+scripts/assemble_catalog.py	changed	74ab0790beee1c237fed1cdee20a6da45180cc73	898c49b06d5c9028030130fe71ad0b99428bf93a	100644	100644
+scripts/assert-student-private-config.mjs	Cloudflare only		b87ad801eaf80aa13a1bb49c3fe7e09bfc915203		100644
+scripts/build-verified.sh	identical	6c69cf3ad6855c25c312b67f02fd1afffb97b63d	6c69cf3ad6855c25c312b67f02fd1afffb97b63d	100755	100755
+scripts/connector-preview/connector-preview-session.mjs	identical	aa2d2d92f663e547e4af956e3f0475a6198b1bf2	aa2d2d92f663e547e4af956e3f0475a6198b1bf2	100644	100644
+scripts/connector-preview/host-binding.mjs	identical	88e6efb56e6ceb044dd3c9127d26960b5bb9c5e9	88e6efb56e6ceb044dd3c9127d26960b5bb9c5e9	100644	100644
+scripts/connector-preview/protocol.mjs	identical	6476ba302de4ee408ba549fc0d790861185dd919	6476ba302de4ee408ba549fc0d790861185dd919	100644	100644
+scripts/connector-preview/worker.mjs	identical	5ab638e8b4e34767e39a1d224cc9f3dd9c28c4c9	5ab638e8b4e34767e39a1d224cc9f3dd9c28c4c9	100644	100644
+scripts/diff_catalog.py	Cloudflare only		d1c0085bc7a242d67fea8e8bcf9e37607f0db0f1		100644
+scripts/execution-profile.mjs	identical	f27aec211320d9a5fd0dbbb07f5c508222b2b8d4	f27aec211320d9a5fd0dbbb07f5c508222b2b8d4	100644	100644
+scripts/index_bank.py	identical	0cedec58a42adeb0f72e5931beebd747e802f817	0cedec58a42adeb0f72e5931beebd747e802f817	100644	100644
+scripts/install-ci.mjs	identical	22bd7d555c8f2a996d5bfe5be0ba9a5a43a1bf7f	22bd7d555c8f2a996d5bfe5be0ba9a5a43a1bf7f	100644	100644
+scripts/install-ci.sh	identical	7b4a810e1663afb4572d167eb78e09b3db07be10	7b4a810e1663afb4572d167eb78e09b3db07be10	100755	100755
+scripts/install-pnpm.sh	identical	573ecdb89461a5922386ec9ccf5a83504fa9caae	573ecdb89461a5922386ec9ccf5a83504fa9caae	100755	100755
+scripts/npm-install.mjs	identical	64ade63f6092ed209b1a76718145d80de38b34f2	64ade63f6092ed209b1a76718145d80de38b34f2	100644	100644
+scripts/package_source.py	identical	f879a2cca7ff332d2319dd0a36f6a5dd015f9e95	f879a2cca7ff332d2319dd0a36f6a5dd015f9e95	100644	100644
+scripts/pnpm-install.mjs	identical	ae92c9fe150ee780e46f590947ceacd03b7226ad	ae92c9fe150ee780e46f590947ceacd03b7226ad	100644	100644
+scripts/run-framework.mjs	identical	166b0c2487819135ddfb30c9267e790ebb8c498f	166b0c2487819135ddfb30c9267e790ebb8c498f	100644	100644
+scripts/sites-env.mjs	identical	a90ace6dff612ac554fe710d8212d5222bcf9e9b	a90ace6dff612ac554fe710d8212d5222bcf9e9b	100644	100644
+scripts/sites-env.sh	identical	d656010b7e14323be160dd4ecbac6760d1789000	d656010b7e14323be160dd4ecbac6760d1789000	100755	100755
+scripts/tool-environment.mjs	identical	66d5f0ebd083f922be28c983e0a6d5de06e60e46	66d5f0ebd083f922be28c983e0a6d5de06e60e46	100644	100644
+scripts/verify-color-contrast.mjs	Sites only	9b5a2fcfe7ab5926beff39fc1848f262dc9424b2		100644	
+scripts/verify-worksheet-export.mts	Sites only	e43d06ab3eb0abdd8b553158d675dcf7187f874c		100644	
+scripts/vite/connector-preview-plugin.mjs	identical	f29e9953bdac6f25be5f1b58e5a02ef0457bafbe	f29e9953bdac6f25be5f1b58e5a02ef0457bafbe	100644	100644
+scripts/vite/question-review-plugin.mjs	Cloudflare only		f6e269e6bb4ff412187089461c38f0a36f597452		100644
+scripts/vite/sites-vite-plugin.LICENSE	identical	4243cb4a9aaa50f954498e54c850773e9ba13eea	4243cb4a9aaa50f954498e54c850773e9ba13eea	100644	100644
+scripts/vite/sites-vite-plugin.ts	identical	2ece1b96530b40a7ea4981e6341b52771a07813e	2ece1b96530b40a7ea4981e6341b52771a07813e	100644	100644
+tests/navigation.test.mjs	Cloudflare only		e2ec0cd0748fdfb12ab8450b7857723fe108c23e		100644
+tests/progress-transfer.test.mjs	Cloudflare only		50b57f6d41c81ef658f7f86b73eadf6139cf5f88		100644
+tests/public-catalog-integrity.test.mjs	Cloudflare only		64595133d475d241f4231268f78aa68fc23783f5		100644
+tests/question-image-review.integration.test.mjs	Cloudflare only		40841d8ae19faec7aa7780329fcdcbd1be946b09		100644
+tests/question-review-backup.test.mjs	Cloudflare only		933a6bea8e40020e24f7f64db0cd911e58b9b20d		100644
+tests/question-review-storage.test.mjs	Cloudflare only		f114e1e6f99bce8996f8bfd1bcc02dd1eec601ce		100644
+tests/student-access.test.mjs	Cloudflare only		b1259964cdf37c7ce8bbb10cdc9d8ab080698b1a		100644
+tests/test_adjacent_page_association.py	Cloudflare only		c3981928d23974802bc007b12142d3a1124ad579		100644
+tests/test_batch5_failure_regressions.py	Cloudflare only		984370aeab8aa332f3ab901c851f84de821c9f3d		100644
+tests/test_crop_quality_regressions.py	Cloudflare only		fad4dfbaa39ba58dfd4b4bb47d971dc58c651b77		100644
+tests/test_q47_scanned_particle_diagram.py	Cloudflare only		c59cafd3e837cff2cf30a7f0b3a24c04f8f49348		100644
+tests/test_question_boundary_detection.py	Cloudflare only		ba4da42b9d043880c98cf981d9e911157ecf517c		100644
+tests/test_real_pdf_failure_regressions.py	Cloudflare only		1d55ce4fb8d5dd1b8f7bdf38b074fc8919b3a816		100644
+tests/test_source_region_export.py	Cloudflare only		ea92e06c8c20e7f511f27c9e3ef594e13a91ac2c		100644
+tests/worksheet.test.mjs	Cloudflare only		63c0c1cf55c5753c32c9a0fb4966813472f585b3		100644
+tsconfig.json	identical	b96b030395279e33ceb96d41da84e734b5a93078	b96b030395279e33ceb96d41da84e734b5a93078	100644	100644
+vendor/shadcn-tailwind-4.13.0.LICENSE.md	identical	fad4d887a681dd49233e5ed01ee2c7a1513089a0	fad4d887a681dd49233e5ed01ee2c7a1513089a0	100644	100644
+vendor/shadcn-tailwind-4.13.0.css	identical	7807c58eb94de8b764b9b6b7b5d8cde6d012b17f	7807c58eb94de8b764b9b6b7b5d8cde6d012b17f	100644	100644
+vite.config.ts	changed	c4b4b73f5d91840732a55c776eb601215e0b7b38	a073a3dd6fa093c9757715897feee540e44d851e	100644	100644
+worker/index.ts	changed	f72ddaf88049e3359a20c50d2d692925895543e0	21710f9eec6f07780a0c15a0ae85871075c4e055	100644	100644
+wrangler.private-review.jsonc	Cloudflare only		9622d4fa82cf5365d483bd151fa03c5e4bb93481		100644
+wrangler.student.jsonc	Cloudflare only		bbc6bca318a0ccdf8964fe7bb022670901e1194f		100644

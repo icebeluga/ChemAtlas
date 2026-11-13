@@ -19,7 +19,7 @@ This candidate combines the Cloudflare student foundation with the restored flat
 | Separate catalog candidate SHA-256 | `68ae75c6005854eb13a8203fdaa54417bea598bebeb1495dfef02a788de14b8d` |
 | Migration ledger SHA-256 | `69c509eb8f413ea259d38becd14fe28fc4619bf125ea71e799ab68633982c6b3` |
 
-Dependencies use Node 24.22.1 and pnpm 11.25.0 for the recorded checks. The pinned build uses React 19.2.6, Vinext 1.0.0-beta.5, Vite 8.0.13, Wrangler 4.140.0, PDF.js 6.4.299 and pdf-lib 1.17.1. Python checks used PyMuPDF 1.26.6 and Tesseract 5.5.0.
+Dependencies use Node 24.22.1 and pnpm 11.25.0 for the recorded checks. The fresh frozen dependency install ran in an alternate modules directory and the resulting dependency tree also passed typecheck, build and Node tests. The pinned build uses React 19.2.6, Vinext 1.0.0-beta.5, Vite 8.0.13, Wrangler 4.140.0, PDF.js 6.4.299 and pdf-lib 1.17.1. Python checks used PyMuPDF 1.26.6 and Tesseract 5.5.0.
 
 ```sh
 git clone --branch integration/chematlas-stage3-unified https://github.com/icebeluga/ChemAtlas.git
@@ -35,7 +35,7 @@ pnpm check:private --built
 pnpm exec wrangler deploy --dry-run --config dist/server/wrangler.json
 ```
 
-The eight bundled PDF Git hashes, in filename order, are recorded in [release-manifest.json](release-manifest.json). The built artifact is under `dist/server` and `dist/client`. Preserve the original audited archive and the existing production release workflow pin.
+The exact application commit used for the handoff is recorded in the release manifest. The eight bundled PDF Git hashes, in filename order, are recorded in [release-manifest.json](release-manifest.json). The built artifact is under `dist/server` and `dist/client`. Preserve the original audited archive and the existing production release workflow pin.
 
 ## Verification
 
@@ -46,10 +46,10 @@ The eight bundled PDF Git hashes, in filename order, are recorded in [release-ma
 | Dependency lock | Frozen installation and pnpm lockfile supply-chain validation passed. |
 | Wrangler packaging | Dry run passed. The generated student config exposes the ASSETS binding. |
 | Local Worker authentication | An isolated signed fixture served the app, JavaScript, CSS, catalog, PDF worker and source PDF. Anonymous versions returned 403. Admin and review backup routes returned 404. Automated tests cover signed token validation and rejection cases. |
-| Chromium | 1440×900 and 390×844. Browse, unit/topic navigation, filtered Question Bank and empty results, FRQ detail canvas, browser Back and reload, worksheet selection persistence, creation and switching of drafts, format, PDF download, practice response and self-check. |
+| Chromium | 1440×900 and 390×844. Browse, unit/topic navigation, filtered Question Bank and empty results, FRQ detail canvas, browser Back and reload, worksheet selection persistence, creation and switching of drafts, format, PDF download, practice response and self-check. Legacy selection migration, reordering, duplication, backup download/import and keyboard-operated unit navigation were also checked at 1440×900, 390×844, 768×1024 and 320×700. |
 | Worksheet composition | Actual reviewed 2008 Q1–3 and single-member export fixtures. Synthetic fallback verified one shared source page and ordered multi-page FRQ fallback. The downloaded browser FRQ PDF contains the complete four-part prompt and no answer key. |
 
-[Desktop comparison](screens/desktop-comparison.jpg) · [Mobile comparison](screens/mobile-comparison.jpg) · [Baseline desktop](screens/baseline-desktop.jpg) · [Baseline mobile](screens/baseline-mobile.jpg) · [Rendered worksheet](screens/worksheet-preview.jpg)
+[Desktop comparison](screens/desktop-comparison.jpg) · [Mobile comparison](screens/mobile-comparison.jpg) · [Baseline desktop](screens/baseline-desktop.jpg) · [Baseline mobile](screens/baseline-mobile.jpg) · [Rendered worksheet](screens/worksheet-preview.jpg) · [Tablet and narrow checks](screens/compact-checks.jpg)
 
 The Sites comparison uses the archived 1,651 records and default Bank filters. The candidate captures the 1,542-record runtime with an active 2005 FRQ filter. The candidate preserves the Cloudflare top bar, mobile menu, explicit Practice sessions entry, URL filters, and PDF detail controls. Browse uses the archived card anatomy and visual hierarchy. The bank retains Cloudflare's filtered topic context and the restored flat cards. The builder ports the four Sites steps into the Cloudflare shell. Fine spacing, typography and detail toolbar still differ.
 
@@ -65,7 +65,7 @@ Vinext builds `student/app` as the student route root. The existing admin source
 
 ## Stage 4 gates and rollback
 
-1. Repeat visual acceptance on one clean checkout and the matching versioned catalog. Compare equal filter settings and fixture IDs. Finish browser coverage for draft backup round-trip, two-item reordering, keyboard focus and narrow/tablet layouts.
+1. Repeat visual acceptance on one clean checkout and the matching versioned catalog. Compare equal filter settings and fixture IDs. Repeat the tested draft operations and keyboard navigation on the authorized release environment. Check focus and scrolling across all detail controls.
 2. Compare printed source editions and complete prompts for the 87 additions and 864 shared deltas. Resolve the year, type and page conflicts and only promote a reviewed candidate as a unit with its worksheet registries.
 3. Verify a mixed MCQ/FRQ worksheet with real multi-page and fallback sources. Check reference tables, page breaks, answer-only and combined modes, and document any printed-key leakage before authorizing wider worksheet distribution.
 4. Do a signed-in Cloudflare Access verification in an authorized protected environment. Confirm allowed and denied identities, direct asset and PDF requests, and admin-route denials. Use synthetic or isolated storage for any private restore exercise.

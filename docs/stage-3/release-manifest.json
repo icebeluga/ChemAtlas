@@ -8,7 +8,7 @@
   "decision_ledger_sha256": "69c509eb8f413ea259d38becd14fe28fc4619bf125ea71e799ab68633982c6b3",
   "build_client_manifest_sha256": {
     "baseline": "5633e32f504f4416a5928658b1ca447a6c81d555d5c5d6c0280f3e911d1bd9e5",
-    "candidate": "e28d3e4f6129df420f351012a4e89e7e3708a442ec4ae90589398dab8f07687b"
+    "candidate": "c7d04c75f83fc3eea319aaebf326bc006b5077998df5344f7d86e20c64ea0005"
   },
   "source_pdfs": {
     "bank-01.pdf": {
@@ -60,5 +60,5 @@
   },
   "production_deployment": null,
   "rollback_worker_version": null,
-  "verified_application_commit": "4cdcdaa18154e0dea114bfa001054988a4ef7481"
+  "verified_application_commit": "a8e0c6bcc611687e1dc36ca73dfcfdd7a3c85dfc"
 }

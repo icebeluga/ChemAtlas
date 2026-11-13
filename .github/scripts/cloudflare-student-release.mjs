@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { appendFileSync, readdirSync } from "node:fs";
+import { appendFileSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { createPublicKey, verify } from "node:crypto";
 import { spawnSync } from "node:child_process";
 
@@ -52,7 +52,10 @@ async function checkAnonymousAccess() {
   const css = files.find((file) => file.endsWith(".css"));
   const js = files.find((file) => file.endsWith(".js"));
   assert.ok(css && js, "Missing browser assets for anonymous probes.");
-  const paths = ["/", "/questions.json", "/curriculum-topics.json", "/source/bank-01.pdf",
+  const paths = ["/", "/practice-builder", "/student-version.json", "/questions.json", "/student-questions.json",
+    "/student-page-audit.json", "/curriculum-topics.json", "/pdf.worker.min.mjs",
+    "/worksheet-content.json", "/worksheet-sources.json", "/worksheet-fragments.pdf",
+    ...Array.from({ length: 8 }, (_, index) => `/source/bank-0${index + 1}.pdf`),
     `/_next/static/${css}`, `/_next/static/${js}`];
   const logins = await Promise.all(paths.map(async (path) => {
     const response = await fetch(`https://${hostname}${path}`, {
@@ -263,6 +266,16 @@ try {
   record(`Rollback version for ${workerName}: ${previous}`);
   record(`Verified ${before.coverage} Access, the student hostname, Worker bindings, email allowlist, and anonymous Access redirects.`);
   if (process.env.DEPLOY_APPROVED === "true") {
+    assert.equal(previous, process.env.EXPECTED_PREVIOUS_VERSION, "Live Worker version differs from the approved rollback target.");
+    const manifest = JSON.parse(readFileSync(process.env.RELEASE_MANIFEST, "utf8"));
+    const deployment = {
+      ...manifest,
+      promotion_workflow_sha: process.env.PROMOTION_WORKFLOW_SHA,
+      previous_known_good: JSON.parse(readFileSync("../controls/docs/releases/student-production.json", "utf8")).previous_known_good,
+    };
+    const save = (status, version) => writeFileSync(process.env.RELEASE_RECORD,
+      JSON.stringify({ ...deployment, status, cloudflare_worker_version: version }, null, 2) + "\n");
+    save("promotion_attempted", null);
     try {
       wrangler(["deploy", "--config", config, "--keep-vars"]);
       const deployed = await activeVersion();
@@ -270,6 +283,7 @@ try {
       // Compare in memory so Access rules and environment values stay out of logs.
       assert.ok(JSON.stringify(await productionSettings({ requireAssets: true })) === JSON.stringify(before),
         "Production Access or Worker settings changed during deployment.");
+      save("promoted", deployed);
       record(`Active production version: ${deployed}`);
       record("Anonymous requests still require Cloudflare Access. Signed-in browser verification is pending.");
     } catch (error) {
@@ -282,6 +296,7 @@ try {
           wrangler(["rollback", previous, "--config", config, "--yes", "--message", "Restore pre-release student Worker"]);
           assert.ok(await activeVersion() === previous, "Rollback version could not be verified.");
           await checkAnonymousAccess();
+          save("rolled_back", previous);
           record(`Restored production version: ${previous}`);
         } catch {
           throw new Error(`Automatic rollback could not be verified. Restore version ${previous} in Cloudflare immediately.`);

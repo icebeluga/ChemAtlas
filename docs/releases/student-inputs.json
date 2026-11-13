@@ -1,0 +1,91 @@
+{
+  "application_sha": "3c78883006beb48c2dab68443e6e93b87bb9a769",
+  "inputs": {
+    "assets": {
+      "pnpm-lock.yaml": "a05eab152a6b8a1eda18b8a957a64a76579a489cf69157b8c171905943bbdf01",
+      "public/curriculum-topics.json": "85f7c3b2bff689661f27992d13713147e0b367c7da2c057089888f6e1bb786e9",
+      "public/page-audit.json": "bf6db72778195a5ce3c6565892c16b932b18c1be94f85f28135f49f3da33baed",
+      "public/pdf.worker.min.mjs": "145d2dd3ab0c86151011dba95acfa2d5336e2accd59388ea43dbee0efddaaec6",
+      "public/questions.json": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe",
+      "public/student-page-audit.json": "0ba57b5f20057fe0b53c595e284f0ec721308e09713ab59e07e000a3bb523184",
+      "public/student-questions.json": "96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9",
+      "public/worksheet-content.json": "c6a449d622bc367004a4ae02b07bfb8f44df1cfb2a418bc76103e92c408030f5",
+      "public/worksheet-fragments.pdf": "115f12a8d3abf9c5012164ce223a55d840eb0bb588550737789da03b100e5f29",
+      "public/worksheet-sources.json": "4efe1f5abf98bbb9ec5bf99fdf85190b38a9e42fecb2e00841b93743861a5fda",
+      "research/stimuli.json": "0d306d08f380176067ea9fd314da3e04330e82b3760b9b83ab404811c2c9c8c7"
+    },
+    "catalog": {
+      "count": 1564,
+      "path": "public/student-questions.json",
+      "sha256": "96d67555cb3474aab1d49df6a7a38f1282e4617cb07c3a707d73c679f2bbf7e9"
+    },
+    "shared_stimuli": {
+      "groups": 6,
+      "links": 17
+    },
+    "source_pdfs": {
+      "/source/bank-01.pdf": {
+        "bytes": 4884275,
+        "from": 1,
+        "sha256": "e05d7a13e7587bb1480e3113e48c86bddd583815dcddaf6ebf7d1ec6dbe027bf",
+        "to": 300,
+        "url": "/source/bank-01.pdf"
+      },
+      "/source/bank-02.pdf": {
+        "bytes": 4363185,
+        "from": 301,
+        "sha256": "fcc673296f40b437f6174e82c530b9bf639755d97308565d35f4db372eb9b2f5",
+        "to": 600,
+        "url": "/source/bank-02.pdf"
+      },
+      "/source/bank-03.pdf": {
+        "bytes": 13987593,
+        "from": 601,
+        "sha256": "10757d0d7de0b5d57cd4c459b17edeceb70858c9f03016e609f2d840311653a7",
+        "to": 900,
+        "url": "/source/bank-03.pdf"
+      },
+      "/source/bank-04.pdf": {
+        "bytes": 7717854,
+        "from": 901,
+        "sha256": "d5340628fd7fd6e715bd816fd7d17f108bf60fd96c822ba6d813986c53235304",
+        "to": 1200,
+        "url": "/source/bank-04.pdf"
+      },
+      "/source/bank-05.pdf": {
+        "bytes": 7166311,
+        "from": 1201,
+        "sha256": "9ad05766191617f2204944de897c3b9f1b49b50aef1a528302852b865cd9ecdd",
+        "to": 1500,
+        "url": "/source/bank-05.pdf"
+      },
+      "/source/bank-06.pdf": {
+        "bytes": 11859257,
+        "from": 1501,
+        "sha256": "f5295903476214a1c80b03b391e1cc17374c6314ec54496e60b728482dcff2bb",
+        "to": 1800,
+        "url": "/source/bank-06.pdf"
+      },
+      "/source/bank-07.pdf": {
+        "bytes": 7632388,
+        "from": 1801,
+        "sha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+        "to": 2100,
+        "url": "/source/bank-07.pdf"
+      },
+      "/source/bank-08.pdf": {
+        "bytes": 4776764,
+        "from": 2101,
+        "sha256": "b0e2202a25cbd488d2623dea4daec4dba87f5ca3fafb964b0f550286c1e4d759",
+        "to": 2159,
+        "url": "/source/bank-08.pdf"
+      }
+    },
+    "worksheet_assets": {
+      "worksheet-content.json": "c6a449d622bc367004a4ae02b07bfb8f44df1cfb2a418bc76103e92c408030f5",
+      "worksheet-fragments.pdf": "115f12a8d3abf9c5012164ce223a55d840eb0bb588550737789da03b100e5f29",
+      "worksheet-sources.json": "4efe1f5abf98bbb9ec5bf99fdf85190b38a9e42fecb2e00841b93743861a5fda"
+    }
+  },
+  "schema_version": 1
+}

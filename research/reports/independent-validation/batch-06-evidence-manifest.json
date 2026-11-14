@@ -1,0 +1,77 @@
+{
+  "title": "Batch 6 visual evidence manifest",
+  "lock_sha256": "e4531475aecd472f59384fc6e78611a1319f4b43f72cce8079d5b8c84c57a171",
+  "proposals_sha256": "ab274cd6530f30145d37e81cdebec4dcf3bdf84905ff86235f53b3135d30cc8b",
+  "results_sha256": "29173f2cc104cf797873ccdaa56cfb102d8ce2aa90ba2ff4e821e329713e873e",
+  "frozen_detector_sha256": "544a489d093dd124584efb89a5e5faf2aed4836f352ee2a7c9db88732e1f7216",
+  "panels": [
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-1.jpg",
+      "sha256": "cda25ae826c127f3fb53bd253253dd802367465a236ba48b1cec6654846fd035",
+      "bytes": 171143,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-2.jpg",
+      "sha256": "30e09ac2ed41bb038afc10f4fb16a55d6e639bfd91c4dabf967bc88b1756ea84",
+      "bytes": 132297,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2021-3-405-segment-3.jpg",
+      "sha256": "d5a05a8b7c5923d6269eeaf2d6bcfb1d45d5abcab5c14a41ed6a8bdf9fa96612",
+      "bytes": 157520,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-1.jpg",
+      "sha256": "3e30ddca3c4744d6632e8d18c9b9dd65e42183f1ef955bf62391bcf6a3b32082",
+      "bytes": 200293,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-2.jpg",
+      "sha256": "23493f2b651706caa04c1c6840375038b588ca1348640f7d9c8a2fcd07cce59e",
+      "bytes": 212816,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-3.jpg",
+      "sha256": "6f65e6089f1783a5ea7a097057462a699ad8ae89ab8b2e5d5c224644129165de",
+      "bytes": 183412,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-4.jpg",
+      "sha256": "27b78d8d7b8dbd2b8c528fc68bbab0c045390be1c060487f333ef91f586c955e",
+      "bytes": 215160,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/frq-2024-2-2115-segment-5.jpg",
+      "sha256": "fc8f28e4e2596066f7b767714e5aa461d7c92692529a6d1d02d5975473eccd81",
+      "bytes": 221082,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/mcq-2014-58-196-segment-1.jpg",
+      "sha256": "78f324f13152717edad4ad910eca556192fb0b662a4d7793912f9b1b0fb9f9ce",
+      "bytes": 125524,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/mcq-2023-34-1830-segment-1.jpg",
+      "sha256": "3c3a10b8bfb0f03caa877176d68dd07b15ea9122b941b4bdf269cf3655f37d4a",
+      "bytes": 168091,
+      "format": "JPEG quality 86, 1800 px wide"
+    },
+    {
+      "path": "research/reports/independent-validation/batch-06-panels/mcq-2023-43-1731-segment-1.jpg",
+      "sha256": "3a6bcbc2f7947afeeba1acd190692d00f0b83bfea3489ee785c06bf1225f7073",
+      "bytes": 177599,
+      "format": "JPEG quality 86, 1800 px wide"
+    }
+  ],
+  "render_source_panels_retained_locally_as_png": true,
+  "report_sha256": "fd4681924a7561563b513a7d300be1861428575a4914f53bd016fe59c8254aff"
+}

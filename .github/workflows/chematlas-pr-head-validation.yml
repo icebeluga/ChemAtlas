@@ -1,0 +1,49 @@
+# Validates the pull request's own head commit. Never deploys and uses no secrets.
+# The sealed-release check in chematlas-release-validation.yml stays pinned to the reviewed SHA.
+name: ChemAtlas PR head validation
+on:
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    name: Validate PR head application (no deploy)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      APPLICATION_SHA: ${{ github.event.pull_request.head.sha }}
+      WORKFLOW_SHA: ${{ github.workflow_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.APPLICATION_SHA }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+      - uses: pnpm/action-setup@v4
+        with:
+          version: '11.25.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Set up verification tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr
+          python -m pip install PyMuPDF==1.26.6
+          npm install --prefix "$RUNNER_TEMP/chematlas-browser" --no-save playwright@1.62.1
+          "$RUNNER_TEMP/chematlas-browser/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Typecheck, tests, build, privacy checks, dry run and smoke on PR head
+        env:
+          CHEMATLAS_PLAYWRIGHT: ${{ runner.temp }}/chematlas-browser/node_modules/playwright
+        run: bash scripts/release/validate.sh "$APPLICATION_SHA" "$WORKFLOW_SHA" "$RUNNER_TEMP/pr-head"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pr-head-evidence-${{ env.APPLICATION_SHA }}
+          path: |
+            ${{ runner.temp }}/pr-head/evidence/
+            ${{ runner.temp }}/pr-head/release-manifest.json
+          if-no-files-found: warn

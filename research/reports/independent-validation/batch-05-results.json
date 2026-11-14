@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "batch": "batch-05",
+  "status": "scored-all-locked-samples; failures-preserved-against-frozen-revision",
+  "selectionLock": "research/reports/independent-validation/batch-05-lock.json",
+  "detectorRevisionCommit": "34dbaf1cf2804f6c32c45affdb2adfa92a7a86b1",
+  "detectorSha256": "11648b5870d8a988b7ec0150b6efa7ad5417a358517aa7301f091d23d852a736",
+  "previousFrozenValidationResultsPreserved": [
+    "batch-01-report.md",
+    "batch-02-frozen-results.json",
+    "batch-03-frozen-results.json",
+    "batch-04-revision-2-results.json",
+    "batch-04-revision-3-results.json"
+  ],
+  "questions": [
+    {
+      "sampleNumber": 17,
+      "id": "mcq-1984-53-128",
+      "sourcePdf": "/source/bank-01.pdf",
+      "catalogPages": [
+        128
+      ],
+      "pdfPages": [
+        128
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 128,
+          "rect": [
+            14.0,
+            381.78,
+            221.58,
+            542.55
+          ]
+        }
+      ],
+      "confidence": 0.72,
+      "manualReview": false,
+      "completeness": "fail: answer-choice labels appear detected A-E, but the rendered crop clips the right ends of the stem and choice E; crop edge cuts text.",
+      "cleanliness": "fail: crop ends through text; no adjacent question included, but required content is clipped.",
+      "readability": "fail: clipped text is not reliably readable.",
+      "routing": "false automatic approval: detector marked automatic despite visibly truncated text.",
+      "classification": "critical extraction failure; development case"
+    },
+    {
+      "sampleNumber": 18,
+      "id": "frq-2016-1-385",
+      "sourcePdf": "/source/bank-02.pdf",
+      "catalogPages": [
+        385,
+        386
+      ],
+      "pdfPages": [
+        85,
+        86
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 385,
+          "rect": [
+            29.12,
+            260.7,
+            575.07,
+            679.51
+          ]
+        },
+        {
+          "page": 386,
+          "rect": [
+            48.0,
+            48.15,
+            577.82,
+            510.13
+          ]
+        }
+      ],
+      "confidence": 0.36,
+      "manualReview": true,
+      "completeness": "pass for visible 2019 FRQ Question 1, parts a-h across two pages, including urea diagram, particle model, equipment, and table. Catalog identity mismatch: ID says 2016 while source header says 2019.",
+      "cleanliness": "minor issue: first segment retains exam heading/directions and example response; target content itself is isolated from neighboring FRQ.",
+      "readability": "pass",
+      "routing": "manual review correctly required by unresolved source-year mismatch and unresolved table-dependency signal.",
+      "classification": "source/catalog provenance failure; excluded from extraction success"
+    },
+    {
+      "sampleNumber": 19,
+      "id": "mcq-2002-15-754",
+      "sourcePdf": "/source/bank-03.pdf",
+      "catalogPages": [
+        754
+      ],
+      "pdfPages": [
+        154
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 754,
+          "rect": [
+            14.0,
+            296.4,
+            306.0,
+            425.96
+          ]
+        }
+      ],
+      "confidence": 0.9,
+      "manualReview": false,
+      "completeness": "fail: shared heating-curve graph for Q15-16 is above and outside the crop; only the prompt and choices are included.",
+      "cleanliness": "fail as a usable extraction because the required shared stimulus is absent.",
+      "readability": "text is readable, but the question cannot be answered without the graph.",
+      "routing": "false automatic approval: graph dependency was recognized as expected, but crop was still auto-approved.",
+      "classification": "critical shared-stimulus omission; development case"
+    },
+    {
+      "sampleNumber": 20,
+      "id": "frq-2010-4-921",
+      "sourcePdf": "/source/bank-04.pdf",
+      "catalogPages": [
+        921,
+        922
+      ],
+      "pdfPages": [
+        21,
+        22
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 921,
+          "rect": [
+            26.0,
+            148.15,
+            587.6,
+            591.38
+          ]
+        },
+        {
+          "page": 922,
+          "rect": [
+            48.72,
+            52.41,
+            583.41,
+            380.0
+          ]
+        }
+      ],
+      "confidence": 0.36,
+      "manualReview": true,
+      "completeness": "pass: parts a-c are present across pages 921-922, including the example/setup context and answer prompts.",
+      "cleanliness": "minor issue: first page includes the exam heading and worked example; no neighboring question or footer contaminates the usable question content.",
+      "readability": "pass",
+      "routing": "manual review correctly required for multi-page continuation.",
+      "classification": "pass with minor cleanliness issue"
+    },
+    {
+      "sampleNumber": 21,
+      "id": "frq-2011-1-1220",
+      "sourcePdf": "/source/bank-05.pdf",
+      "catalogPages": [
+        1220
+      ],
+      "pdfPages": [
+        20
+      ],
+      "proposedCoordinates": [
+        {
+          "page": 1220,
+          "rect": [
+            26.0,
+            294.3,
+            585.27,
+            567.07
+          ]
+        }
+      ],
+      "confidence": 0.72,
+      "manualReview": true,
+      "completeness": "fail: crop omits the balanced combustion equation printed above the stem, referenced by the question.",
+      "cleanliness": "fail as a complete question extraction because required context is outside the crop.",
+      "readability": "question text is readable, but dependent on missing equation.",
+      "routing": "manual review correctly required because graphics were expected but none were included.",
+      "classification": "critical graphical-dependency omission; development case"
+    }
+  ],
+  "metrics": {
+    "visuallyScored": 5,
+    "completeAndCleanPass": 0,
+    "passWithMinorCleanlinessIssue": 1,
+    "sourceCatalogIdentityFailures": 1,
+    "criticalContentIncomplete": 3,
+    "falseAutomaticApprovals": 2,
+    "correctManualReviewBlocks": 2,
+    "automaticApprovalsObservedPass": 0
+  },
+  "extractionQuality": {
+    "completeQuestions": 1,
+    "completeAndClean": 0,
+    "completeWithMinorCleanlinessIssue": 1,
+    "incompleteOrIdentityUnresolved": 4
+  },
+  "manualReviewRouting": {
+    "casesRequiringReview": 5,
+    "correctlyRoutedToReview": 3,
+    "falseAutomaticApprovals": 2,
+    "notes": "Sample 18 was manually routed for source/catalog year conflict; its rendered content is complete but identity is unresolved."
+  },
+  "independentSuccessCount": 0,
+  "developmentCases": [
+    "mcq-1984-53-128",
+    "mcq-2002-15-754",
+    "frq-2011-1-1220"
+  ],
+  "unresolvedProvenanceCases": [
+    "frq-2016-1-385"
+  ],
+  "unscoredAfterLock": [],
+  "nextAction": "Investigate the three extraction defects and the FRQ source-year mismatch only after preserving this frozen batch. These cases are excluded from future independent success metrics."
+}

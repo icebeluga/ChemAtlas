@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "method": "pymupdf-text-layout-plus-page-graphics",
+  "questionCount": 3,
+  "manualReviewCount": 3,
+  "questions": [
+    {
+      "id": "frq-2008-4-896",
+      "type": "FRQ",
+      "number": 4,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 896,
+          "rect": [
+            26.0,
+            169.03,
+            586.73,
+            624.8
+          ],
+          "confidence": 0.82,
+          "confidenceBand": "high",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 1056,
+            "catalogTextCoverage": 0.57,
+            "pageTextCharacters": 1455,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 1,
+            "frqSubpartLabels": [
+              "a"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 1,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2008
+            ],
+            "catalogYear": 2008,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1455,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "questionIdTypeMismatch": false,
+            "questionIdTypePrefix": "FRQ",
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content."
+          ]
+        },
+        {
+          "page": 897,
+          "rect": [
+            46.0,
+            60.05,
+            581.81,
+            426.78
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 948,
+            "pageTextCharacters": 1191,
+            "questionStartFound": false,
+            "questionStartMatches": 0,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "frqSubpartMarkers": 2,
+            "frqSubpartLabels": [
+              "b",
+              "c"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "linkedStimulusRegions": 0,
+            "columnCount": 1,
+            "pageRotation": 0,
+            "continuationPageDetected": true,
+            "introContextLinesIncluded": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2008
+            ],
+            "catalogYear": 2008,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.36
+    },
+    {
+      "id": "mcq-2018-4-1945",
+      "type": "FRQ",
+      "number": 4,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1945,
+          "rect": [
+            26.0,
+            33.05,
+            583.84,
+            376.09
+          ],
+          "confidence": 0.82,
+          "confidenceBand": "high",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 763,
+            "catalogTextCoverage": 1.0,
+            "pageTextCharacters": 855,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 3,
+            "frqSubpartLabels": [
+              "a",
+              "b",
+              "c"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 1,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2018,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 855,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "questionIdTypeMismatch": true,
+            "questionIdTypePrefix": "MCQ",
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Question ID prefix identifies MCQ, while catalog type is FRQ; verify record provenance without rewriting the ID."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.82
+    }
+  ],
+  "detectorSha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777",
+  "developmentCases": true
+}

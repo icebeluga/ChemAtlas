@@ -1,0 +1,563 @@
+.student-workspace{
+  color-scheme:light;
+  /* Palette primitives. Component roles below reference these families. */
+  --ca-canvas:#F6F8F5;
+  --ca-surface:#FFFFFF;
+  --ca-surface-warm:#F8F5EE;
+  --ca-surface-cool:#F1F5F8;
+  --ca-brand:#005C48;
+  --ca-brand-soft:#E7F3ED;
+  --ca-blue:#315A92;
+  --ca-blue-soft:#EAF2FF;
+  --ca-purple:#70469B;
+  --ca-purple-soft:#F1EBFA;
+  --ca-teal:#236B82;
+  --ca-teal-soft:#E3F2F4;
+  --ca-amber:#955310;
+  --ca-amber-accent:#B36A1B;
+  --ca-amber-soft:#FFF0DB;
+  --ca-coral:#AA453E;
+  --ca-coral-soft:#FBECE9;
+  --ca-text:#1B2A24;
+  --ca-text-muted:#56675D;
+  --ca-border:#D9E3DB;
+  --ca-control-border:#7C9487;
+  --color-primary:var(--ca-brand);
+  --color-secondary:#27745C;
+  --color-primary-hover:#004B3C;
+  --color-shadow:rgba(37,53,47,.08);
+  --color-primary-soft:var(--ca-brand-soft);
+  --color-primary-border:#B8CBBE;
+  --color-background:var(--ca-canvas);
+  --color-surface:var(--ca-surface);
+  --color-surface-muted:#EEF3EE;
+  --color-surface-hover:#EAF0EB;
+  --color-text-primary:var(--ca-text);
+  --color-text-secondary:var(--ca-text-muted);
+  --color-text-muted:var(--ca-text-muted);
+  --color-text-inverse:var(--ca-surface);
+  --color-border:var(--ca-border);
+  --color-border-strong:#B8C9BE;
+  --color-control-border:var(--ca-control-border);
+  --color-focus:var(--ca-brand);
+  --color-disabled:#AAB6AF;
+  --color-warning:var(--ca-amber-accent);
+  --color-warning-text:var(--ca-amber);
+  --color-warning-soft:var(--ca-amber-soft);
+  --color-warning-border:#E5C9A9;
+  --color-success:var(--ca-brand);
+  --color-success-text:var(--ca-brand);
+  --color-success-soft:var(--ca-brand-soft);
+  --color-success-border:#BCD3C3;
+  --color-error:var(--ca-coral);
+  --color-error-text:var(--ca-coral);
+  --color-error-soft:var(--ca-coral-soft);
+  --color-error-border:#E6C5BF;
+  --color-info:var(--ca-blue);
+  --color-info-soft:var(--ca-blue-soft);
+  --color-info-border:#C8D9DF;
+  --shadow-sm:0 1px 3px rgba(37,53,47,.06);
+  --shadow-md:0 4px 14px rgba(37,53,47,.08);
+  --atlas-hero-surface:linear-gradient(108deg,var(--ca-brand-soft) 0%,var(--ca-canvas) 72%);
+  --atlas-card-hover-shadow:0 7px 18px rgba(27,42,36,.08);
+  --font-heading:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --font-body:"Inter",Arial,Helvetica,sans-serif;
+  --font-mono:ui-monospace,SFMono-Regular,Consolas,monospace;
+  --font-size-xs:.75rem;
+  --font-size-sm:.875rem;
+  --font-size-base:1rem;
+  --font-size-lg:1.125rem;
+  --font-size-xl:1.25rem;
+  --font-size-2xl:1.5rem;
+  --font-size-3xl:clamp(1.875rem,3vw,2.25rem);
+  --font-size-display:clamp(1.875rem,3vw,2.25rem);
+  --font-weight-regular:400;
+  --font-weight-medium:500;
+  --font-weight-semibold:600;
+  --font-weight-bold:700;
+  --line-height-tight:1.2;
+  --line-height-body:1.5;
+  --line-height-reading:1.65;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-8:32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --color-accent:#A5C46A;
+  --atlas-heading:clamp(1.75rem, 1.63rem + .48vw, 2rem);
+  --atlas-section:clamp(1.25rem, 1.12rem + .54vw, 1.5rem);
+  --atlas-card-title:1.0625rem;
+  --atlas-body:.9375rem;
+  --atlas-support:.8125rem;
+  --atlas-content:1600px;
+  --atlas-document-content:1760px;
+  --page-gutter:clamp(16px,2.4vw,40px);
+  --section-gap:clamp(16px,2vw,32px);
+  --card-gap:clamp(12px,1.5vw,20px);
+  --atlas-topic-min:260px;
+  --atlas-unit-min:340px;
+  --atlas-pdf-padding:clamp(8px,1vw,16px);
+  --atlas-nav-height:68px;
+  --atlas-action-height:44px;
+  --atlas-compact-height:36px;
+  --atlas-panel-radius:14px;
+  --atlas-hover:150ms;
+  --atlas-reveal:180ms;
+  --atlas-step:220ms;
+  --motion-instant:80ms;
+  --motion-fast:var(--atlas-hover);
+  --motion-standard:var(--atlas-reveal);
+  --motion-expanded:var(--atlas-step);
+  --ease-standard:var(--atlas-ease);
+  --ease-enter:cubic-bezier(.16,1,.3,1);
+  --color-surface-pressed:#E0EBE4;
+  --color-focus-ring:rgba(0,92,72,.28);
+  --atlas-ease:cubic-bezier(.2,.65,.3,1);
+  --radius-sm:6px;--radius-md:8px;--radius-lg:10px;
+  /* Compatibility aliases for existing selectors, all mapped to semantic tokens. */
+  --ink:var(--color-text-primary);--muted:var(--color-text-secondary);--line:var(--color-border);
+  --paper:var(--color-background);--teal:var(--color-primary);--mint:var(--color-primary-soft);
+  --cream:var(--color-warning-soft);--coral:var(--color-warning);--leaf:var(--color-secondary);
+  --sun:var(--color-warning);--ember:var(--color-warning-text);--forest:var(--color-primary);
+  --serif:var(--font-heading)
+}
+.student-workspace {
+  --content-max: var(--atlas-content);
+  --control-height: var(--atlas-action-height);
+  --card-radius: var(--radius-lg);
+}
+
+.atlas-action, .worksheet-page :is(.primary, .outline, .back) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--atlas-action-height);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font: 500 .875rem/1.4 var(--font-body);
+  text-decoration: none;
+  transition: background-color var(--atlas-hover) var(--atlas-ease), border-color var(--atlas-hover) var(--atlas-ease), color var(--atlas-hover) var(--atlas-ease);
+}
+.atlas-action--primary, .worksheet-page .primary {
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+}
+.atlas-action--secondary, .worksheet-page .outline {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-control-border);
+}
+.atlas-action--tertiary { background: var(--ca-surface-cool); color: var(--color-text-primary); }
+.atlas-action--tertiary:disabled { background: var(--color-success-soft); color: var(--color-success-text); }
+.atlas-action--ghost, .atlas-action--icon, .worksheet-page .back { background: transparent; color: var(--color-primary); }
+.atlas-action--icon { min-width: var(--atlas-action-height); padding-inline: var(--space-2); }
+.atlas-action--destructive { background: var(--color-error-soft); color: var(--color-error-text); }
+.atlas-action:active:not(:disabled), .worksheet-page :is(.primary, .outline, .back):active:not(:disabled) { box-shadow: inset 0 0 0 2px currentColor; }
+.atlas-action:disabled:not(.atlas-action--tertiary), .worksheet-page :is(.primary, .outline):disabled { opacity: .56; }
+.atlas-action--tertiary:disabled { opacity: 1; }
+.worksheet-page{display:grid;gap:var(--space-4,16px)}
+.worksheet-heading,.worksheet-actions{display:flex;align-items:center;gap:var(--space-2,8px);flex-wrap:wrap}
+.worksheet-heading{justify-content:space-between;align-items:flex-start}
+.worksheet-heading p{margin:4px 0 0}
+.worksheet-count{color:var(--color-primary);background:var(--color-primary-soft);border-radius:var(--card-radius);padding:8px 12px;font-weight:600;white-space:nowrap}
+.worksheet-drafts,.worksheet-workspace{padding:var(--space-4,16px)}
+.worksheet-drafts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:var(--space-3,12px);align-items:end}
+.worksheet-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-2,8px)}
+.worksheet-steps button{min-height:40px;padding:8px}
+.worksheet-steps span{margin-right:4px;font-variant-numeric:tabular-nums}
+.worksheet-workspace{display:grid;gap:var(--space-3,12px);min-width:0}
+.worksheet-workspace h2,.worksheet-workspace p{margin:0}
+.worksheet-workspace>button{justify-self:start}
+.worksheet-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:var(--space-3,12px)}
+.worksheet-page label{display:grid;gap:4px;min-width:0;color:var(--color-text-secondary);font-size:.875rem;font-weight:600}
+.worksheet-page input:not([type="checkbox"]),.worksheet-page select,.worksheet-page textarea{width:100%;min-width:0;margin:0}
+.worksheet-page input[type="range"]{accent-color:var(--color-primary)}
+.worksheet-page .worksheet-check,.worksheet-page .worksheet-inline{display:inline-flex;align-items:center;gap:6px;min-height:36px}
+.worksheet-inline input[type="number"]{max-width:4.75rem}
+.worksheet-inline select{max-width:16rem}
+.worksheet-page :is(.primary,.outline){min-height:36px}
+.worksheet-page a:is(.primary,.outline){display:inline-flex;align-items:center;text-decoration:none}
+.worksheet-page :is(button,a,summary):focus-visible{outline:2px solid var(--color-primary);outline-offset:2px}
+.worksheet-page button[aria-pressed="true"]{background:var(--color-primary-soft);color:var(--color-primary)}
+.worksheet-page button:disabled,.worksheet-add:disabled{opacity:.65;cursor:default}
+.worksheet-status{font-size:.875rem}
+.worksheet-error{color:var(--color-error-text);margin:0}
+.worksheet-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:var(--space-3,12px);padding:12px;border:1px solid var(--color-border);border-radius:var(--card-radius);overflow-wrap:anywhere}
+.worksheet-row small{display:block;color:var(--color-text-secondary);margin-top:4px}
+.worksheet-source{grid-column:1/-1;min-width:0;display:grid;gap:8px}
+.worksheet-handle{cursor:grab;margin-right:8px;color:var(--color-text-muted)}
+.worksheet-backup{position:relative}
+.worksheet-backup summary{padding:8px;cursor:pointer}
+.worksheet-backup>div{position:absolute;z-index:2;right:0;top:100%;width:min(260px,calc(100vw - 64px));padding:12px;display:grid;gap:12px}
+.worksheet-preset{max-width:26rem}
+.worksheet-preview{display:grid;gap:12px;min-width:0}
+.worksheet-paper{overflow-x:auto;min-width:0;padding:12px;background:var(--color-background);border:1px solid var(--color-border);border-radius:var(--card-radius)}
+.worksheet-paper canvas{display:block;max-width:none;height:auto;margin-inline:auto;background:var(--color-surface)}
+.worksheet-add{font-size:.75rem;white-space:nowrap}
+@media(max-width:850px){
+  .worksheet-drafts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .worksheet-drafts>.worksheet-actions{grid-column:1/-1}
+  .worksheet-row{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:560px){
+  .worksheet-steps,.worksheet-drafts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .worksheet-backup>div{right:auto;left:0}
+}
+@media(max-width:400px){
+  .worksheet-drafts{grid-template-columns:minmax(0,1fr)}
+}
+.worksheet-page { gap: var(--space-4); }
+.worksheet-page .worksheet-heading { align-items: center; gap: var(--space-3); }
+.worksheet-page .worksheet-count { padding: var(--space-2) var(--space-3); font-size: .875rem; font-variant-numeric: tabular-nums; }
+/* A twelve-track grid aligns title, saved draft picker and draft actions. */
+.worksheet-page { container: worksheet / inline-size; }
+.worksheet-page .worksheet-drafts { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-4); }
+.worksheet-drafts > label { grid-column: span 4; }
+.worksheet-page .worksheet-drafts > .worksheet-actions { grid-column: span 4; }
+.worksheet-page .worksheet-title-field input { font: 500 1.125rem/1.4 var(--font-heading); }
+.worksheet-backup > summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--atlas-action-height);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-size: .875rem;
+  list-style: none;
+}
+.worksheet-backup > summary::-webkit-details-marker { display: none; }
+.worksheet-backup > summary:hover, .worksheet-backup[open] > summary { background: var(--color-surface-muted); }
+.worksheet-backup > .panel { box-shadow: var(--shadow-md); }
+.worksheet-page .worksheet-steps { gap: 0; overflow: visible; border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+.worksheet-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-width: 0;
+  min-height: 52px;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-md);
+  font: 500 .875rem/1.3 var(--font-body);
+  transition: background-color var(--atlas-reveal) var(--atlas-ease), color var(--atlas-reveal) var(--atlas-ease);
+}
+.worksheet-step:hover { background: var(--color-surface-muted); }
+.worksheet-step[aria-current=step] { background: var(--color-primary-soft); color: var(--color-primary); box-shadow: inset 0 -2px var(--color-primary); }
+.worksheet-steps .worksheet-step span {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 24px;
+  height: 24px;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: .75rem;
+}
+.worksheet-step[aria-current=step] span { border-color: var(--color-primary); background: var(--color-primary); color: var(--color-text-inverse); }
+.worksheet-page .worksheet-status { margin: 0; font-size: var(--atlas-support); }
+.worksheet-page .worksheet-workspace { padding: clamp(16px, 2vw, 24px); gap: var(--space-4); }
+.worksheet-filters { grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr)); }
+.worksheet-more-filters { padding: var(--space-2) var(--space-3); border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface-muted); }
+.worksheet-more-filters > summary { min-height: 32px; padding-block: var(--space-1); color: var(--color-primary); font-size: .875rem; font-weight: 500; }
+.worksheet-more-filters[open] > div { padding-block: var(--space-2); }
+.worksheet-page .worksheet-row { padding: var(--space-3) var(--space-4); }
+.worksheet-row[data-selected=true] { border-color: var(--color-primary-border); background: var(--color-primary-soft); }
+.worksheet-question-title { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); color: var(--color-text-primary); font-size: 1rem; }
+.worksheet-handle { display: inline-flex; vertical-align: middle; }
+.worksheet-format-group { display: grid; gap: var(--space-3); min-width: 0; padding: var(--space-3) var(--space-4); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.worksheet-format-group legend { padding-inline: var(--space-2); font-weight: 600; }
+.worksheet-page .worksheet-preview .worksheet-actions { padding: var(--space-2); background: var(--color-surface-muted); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+.worksheet-page .worksheet-preview .atlas-action { min-height: var(--atlas-compact-height); }
+.worksheet-page .worksheet-preview button[aria-pressed=true] { box-shadow: inset 0 -2px var(--color-primary); }
+
+@container worksheet (max-width: 55rem) {
+  .worksheet-drafts > label { grid-column: span 6; }
+  .worksheet-page .worksheet-drafts > .worksheet-actions { grid-column: 1 / -1; }
+}
+@container worksheet (max-width: 34rem) {
+  .worksheet-drafts > label { grid-column: 1 / -1; }
+  .worksheet-page .worksheet-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .worksheet-page .worksheet-row { grid-template-columns: minmax(0, 1fr); }
+  .worksheet-page .worksheet-row .worksheet-actions { justify-content: flex-start; }
+  .worksheet-page .worksheet-backup > .panel { right: auto; left: 0; max-width: calc(100vw - 64px); }
+}
+.dashboard-page .dashboard-heading {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: clamp(24px, 3.4vw, 40px) clamp(24px, 3.8vw, 44px);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  background: var(--atlas-hero-surface);
+}
+.dashboard-page .dashboard-heading::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--ca-brand);
+  content: "";
+}
+.dashboard-page .dashboard-heading > div { max-width: 800px; }
+.dashboard-page .dashboard-heading h1 {
+  margin: 0;
+  color: var(--ca-brand);
+  font: 500 clamp(2rem, 3.8vw, 2.75rem)/1.12 var(--font-heading);
+  letter-spacing: -.025em;
+}
+.dashboard-page .dashboard-heading p {
+  max-width: 650px;
+  margin: var(--space-3) 0 0;
+  color: var(--color-text-secondary);
+  font: 400 clamp(.875rem, 1.2vw, 1rem)/1.6 var(--font-body);
+}
+.dashboard-page .atlas-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.dashboard-page .atlas-metrics .stat {
+  --metric-accent: var(--ca-brand);
+  --metric-soft: var(--ca-brand-soft);
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  min-height: 90px;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-top: 3px solid var(--metric-accent);
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.dashboard-page .atlas-metrics .atlas-metric--blue { --metric-accent: var(--ca-blue); --metric-soft: var(--ca-blue-soft); }
+.dashboard-page .atlas-metrics .atlas-metric--amber { --metric-accent: var(--ca-amber); --metric-soft: var(--ca-amber-soft); }
+.dashboard-page .atlas-metrics .atlas-metric--teal { --metric-accent: var(--ca-teal); --metric-soft: var(--ca-teal-soft); }
+.dashboard-page .atlas-metrics .stat-icon {
+  display: grid;
+  flex: 0 0 40px;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--metric-soft);
+  color: var(--metric-accent);
+}
+.dashboard-page .atlas-metrics .stat small {
+  display: block;
+  margin: 0 0 var(--space-1);
+  color: var(--color-text-secondary);
+  font: 600 .6875rem/1.35 var(--font-body);
+  letter-spacing: .065em;
+}
+.dashboard-page .atlas-metrics .stat b {
+  color: var(--color-text-primary);
+  font: 650 clamp(1.35rem, 2vw, 1.65rem)/1.1 var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+.dashboard-page .section-head.topic-head {
+  display: flex;
+  align-items: end;
+  gap: var(--space-6);
+  margin: clamp(28px, 4vw, 44px) 0 var(--space-4);
+}
+.dashboard-page .topic-head > div { flex: 0 0 auto; }
+.dashboard-page .topic-head::after {
+  flex: 1 1 auto;
+  margin-bottom: 6px;
+  border-top: 1px solid var(--color-border);
+  content: "";
+}
+.dashboard-page .topic-head .eyebrow {
+  margin-bottom: var(--space-1);
+  color: var(--ca-teal);
+  font: 600 .6875rem/1.4 var(--font-body);
+  letter-spacing: .1em;
+}
+.dashboard-page .topic-head h2 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font: 500 clamp(1.35rem, 2vw, 1.65rem)/1.25 var(--font-heading);
+}
+.dashboard-page .unit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: minmax(128px, auto);
+  gap: var(--space-4);
+  margin: 0;
+  overflow: visible;
+}
+.dashboard-page .unit-directory-card {
+  --unit-accent: var(--ca-brand);
+  --unit-soft: var(--ca-brand-soft);
+  position: relative;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 36px;
+  grid-template-rows: 1fr;
+  align-items: center;
+  min-width: 0;
+  min-height: 128px;
+  height: auto;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: 15px;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text-primary);
+  text-align: left;
+  transition: transform var(--atlas-reveal) var(--atlas-ease), border-color var(--atlas-reveal) var(--atlas-ease), box-shadow var(--atlas-reveal) var(--atlas-ease), background-color var(--atlas-reveal) var(--atlas-ease);
+}
+.dashboard-page .unit-directory-card[data-accent="teal"] { --unit-accent: var(--ca-teal); --unit-soft: var(--ca-teal-soft); }
+.dashboard-page .unit-directory-card[data-accent="amber"] { --unit-accent: var(--ca-amber); --unit-soft: var(--ca-amber-soft); }
+.dashboard-page .unit-directory-card[data-accent="blue"] { --unit-accent: var(--ca-blue); --unit-soft: var(--ca-blue-soft); }
+.dashboard-page .unit-directory-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--unit-accent);
+  background: var(--color-surface);
+  box-shadow: var(--atlas-card-hover-shadow);
+}
+.dashboard-page .unit-directory-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--unit-soft);
+  color: var(--unit-accent);
+}
+.dashboard-page .unit-directory-copy { display: grid; min-width: 0; gap: 5px; }
+.dashboard-page .unit-directory-card .atlas-card-label {
+  color: var(--unit-accent);
+  font: 650 .6875rem/1.3 var(--font-body);
+  letter-spacing: .09em;
+}
+.dashboard-page .unit-directory-card .atlas-card-title {
+  color: var(--color-text-primary);
+  font: 600 clamp(.95rem, 1.2vw, 1.0625rem)/1.35 var(--font-body);
+  overflow-wrap: anywhere;
+}
+.dashboard-page .unit-directory-card .atlas-card-meta {
+  color: var(--color-text-secondary);
+  font: 400 .75rem/1.45 var(--font-body);
+  font-variant-numeric: tabular-nums;
+}
+.dashboard-page .unit-directory-arrow {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--unit-soft);
+  color: var(--unit-accent);
+  transition: transform var(--atlas-reveal) var(--atlas-ease), background-color var(--atlas-reveal) var(--atlas-ease);
+}
+.dashboard-page .unit-directory-card:hover .unit-directory-arrow { transform: translate(2px, -2px); }
+.dashboard-page .unit-directory-card:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.dashboard-page .footnote { margin-top: var(--space-6); padding-top: var(--space-3); border-top: 1px solid var(--color-border); font-size: .75rem; }
+@media (min-width: 48rem) and (max-width: 74.99rem) {
+  .dashboard-page .atlas-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-page .unit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 47.99rem) {
+  .dashboard-page .dashboard-heading { padding: 24px 22px; border-radius: 14px; }
+  .dashboard-page .dashboard-heading h1 { font-size: clamp(1.85rem, 8vw, 2.25rem); }
+  .dashboard-page .atlas-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin-top: var(--space-4); }
+  .dashboard-page .atlas-metrics .stat { min-height: 82px; gap: var(--space-2); padding: var(--space-3); }
+  .dashboard-page .atlas-metrics .stat-icon { flex-basis: 34px; width: 34px; height: 34px; }
+  .dashboard-page .atlas-metrics .stat small { font-size: .625rem; }
+  .dashboard-page .section-head.topic-head { margin-top: var(--space-8); }
+  .dashboard-page .unit-grid { grid-template-columns: minmax(0, 1fr); grid-auto-rows: minmax(104px, auto); gap: var(--space-3); }
+  .dashboard-page .unit-directory-card { min-height: 104px; grid-template-columns: 44px minmax(0, 1fr) 32px; gap: var(--space-3); padding: var(--space-4); }
+  .dashboard-page .unit-directory-icon { width: 44px; height: 44px; }
+}
+@media (max-width: 360px) {
+  .dashboard-page .atlas-metrics .stat { gap: 7px; padding: 10px 8px; }
+  .dashboard-page .atlas-metrics .stat-icon { flex-basis: 30px; width: 30px; height: 30px; }
+  .dashboard-page .atlas-metrics .stat b { font-size: 1.25rem; }
+  .dashboard-page .unit-directory-card { grid-template-columns: 40px minmax(0, 1fr) 28px; gap: 10px; padding: 12px; }
+  .dashboard-page .unit-directory-icon { width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-page .unit-directory-card, .dashboard-page .unit-directory-arrow { transition: none; }
+  .dashboard-page .unit-directory-card:hover { transform: none; }
+}
+
+
+.top-navigation a.top-nav-item, .bank-worksheet-bar a { text-decoration: none; }
+
+@media print { body:has(.worksheet-page) .site-nav { display: none; } }
+
+
+.worksheet-page :is(input:not([type="checkbox"]):not([type="range"]), select, textarea) {
+  min-height: 42px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-control-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+}
+.worksheet-page select { appearance: auto; }
+.worksheet-page :is(input, select, textarea):focus-visible { outline: 2px solid var(--color-focus); }
+.unit-detail-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.unit-topic-page-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px; margin-top: 20px; }
+.unit-topic-page-grid .atlas-directory-card { display: grid; position: relative; gap: 8px; padding: 16px 38px 16px 16px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface); text-align: left; }
+.unit-topic-page-grid .atlas-card-arrow { position: absolute; top: 16px; right: 14px; }
+.student-unit-nav { display: flex; flex-wrap: wrap; position: relative; align-items: center; }
+.unit-menu-toggle { padding: 10px; color: var(--color-primary); border-radius: 8px; }
+.unit-menu-toggle:hover { background: var(--color-primary-soft); }
+.student-unit-menu { position: absolute; z-index: 2; top: 100%; left: 0; width: min(580px, 82vw); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; padding: 10px; border: 1px solid var(--color-border); border-radius: 12px; background: white; box-shadow: var(--shadow-md); }
+.student-unit-menu button { padding: 8px; border-radius: 6px; text-align: left; }
+.student-unit-menu button:hover, .student-unit-menu button:focus-visible { background: var(--color-primary-soft); }
+.student-unit-menu small { display: block; color: var(--color-primary); }
+@media (max-width: 900px) {
+  .student-workspace .mobile-menu-toggle { display: grid; place-items: center; width: 38px; height: 38px; flex: none; border: 1px solid var(--line); border-radius: 10px; }
+  .student-workspace .nav-profile { margin-left: auto; }
+  .student-workspace .top-navigation { display: none; position: absolute; inset: calc(100% + 7px) 12px auto; height: auto; padding: 8px; flex-direction: column; align-items: stretch; gap: 4px; border: 1px solid var(--line); border-radius: 14px; background: white; box-shadow: var(--shadow-md); }
+  .student-workspace .top-navigation.mobile-open { display: flex; }
+  .student-workspace .top-nav-item { justify-content: flex-start; height: 48px; }
+  .student-workspace .tools-menu { border-left: 0; }
+  .student-workspace .tools-popover { position: static; }
+
+  .student-unit-nav > .top-nav-item { width: calc(100% - 44px); }
+  .student-unit-menu { position: static; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); box-shadow: none; }
+}
+
+
+/* Anchor the backup popover to the available worksheet width on compact screens. */
+@container worksheet (max-width: 55rem) {
+  .worksheet-drafts { position: relative; }
+  .worksheet-drafts .worksheet-backup { position: static; }
+  .worksheet-page .worksheet-backup > .panel {
+    inset-inline: 12px;
+    width: auto;
+    max-width: none;
+  }
+}
+
+.student-skip-link {
+  position: absolute;
+  inset: 8px auto auto 12px;
+  z-index: 40;
+  padding: 8px 12px;
+  background: var(--color-surface);
+  transform: translateY(-150%);
+}
+
+.student-skip-link:focus { transform: none; }

@@ -1,0 +1,89 @@
+{
+  "title": "ChemAtlas Phase 2 independent crop-quality validation \u2014 Batch 2 pre-render lock",
+  "locked_before_rendering": true,
+  "source_selection": "Original preregistered 40-question sample; samples 6\u201310 retained without replacement or reselection.",
+  "preregistration_path": "research/reports/independent-validation/preregistered-sample-40.json",
+  "preregistration_sha256": "d0ac3e47186dd0b2ebbd267a7175a0ad8f84fdf71696ae14ebdc57812f43a934",
+  "detector_commit": "acfead30f34ce9e48842c6c4b663bc358b7f1fac",
+  "detector_sha256": "d692cdf3c11eb4f83c2c5d08de48168d29385d08e2a183f8776252a56b0b3809",
+  "baseline_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 32,
+    "failed": 0,
+    "skipped": 0,
+    "tesseract_dependent_scanned_test": "executed; Tesseract 5.5.0 available"
+  },
+  "exclusions": {
+    "development_cases": [
+      "frq-2006-6-25",
+      "mcq-2002-7-606",
+      "frq-2017-3-1157",
+      "mcq-2014-49-1464"
+    ],
+    "replacement_questions": []
+  },
+  "independence_checks": {
+    "prior_report_or_panel_name_matches": false,
+    "source_page_overlap_with_batch_01": false,
+    "selection_changed": false
+  },
+  "questions": [
+    {
+      "sample_number": 6,
+      "question_id": "frq-2011-1-1655",
+      "source_pdf": "/source/bank-06.pdf",
+      "catalog_pages": [
+        1655
+      ],
+      "type": "FRQ",
+      "year": "2011",
+      "status": "locked; crop not yet rendered or scored"
+    },
+    {
+      "sample_number": 7,
+      "question_id": "mcq-2024-23-2090",
+      "source_pdf": "/source/bank-07.pdf",
+      "catalog_pages": [
+        2090
+      ],
+      "type": "MCQ",
+      "year": "2024",
+      "status": "locked; crop not yet rendered or scored"
+    },
+    {
+      "sample_number": 8,
+      "question_id": "frq-2024-4-2123",
+      "source_pdf": "/source/bank-08.pdf",
+      "catalog_pages": [
+        2123,
+        2124
+      ],
+      "type": "FRQ",
+      "year": "2024",
+      "status": "locked; crop not yet rendered or scored"
+    },
+    {
+      "sample_number": 9,
+      "question_id": "mcq-2014-26-182",
+      "source_pdf": "/source/bank-01.pdf",
+      "catalog_pages": [
+        182
+      ],
+      "type": "MCQ",
+      "year": "2014",
+      "status": "locked; crop not yet rendered or scored"
+    },
+    {
+      "sample_number": 10,
+      "question_id": "frq-2022-6-434",
+      "source_pdf": "/source/bank-02.pdf",
+      "catalog_pages": [
+        434,
+        435
+      ],
+      "type": "FRQ",
+      "year": "2022",
+      "status": "locked; crop not yet rendered or scored"
+    }
+  ]
+}

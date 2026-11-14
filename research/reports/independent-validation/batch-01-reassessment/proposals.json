@@ -1,0 +1,1808 @@
+{
+  "schemaVersion": 1,
+  "method": "pymupdf-text-layout-plus-page-graphics",
+  "questionCount": 23,
+  "manualReviewCount": 13,
+  "questions": [
+    {
+      "id": "frq-2006-5-24",
+      "type": "FRQ",
+      "number": 5,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 24,
+          "rect": [
+            25.98,
+            55.0,
+            582.9,
+            691.5
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 1821,
+            "catalogTextCoverage": 0.84,
+            "pageTextCharacters": 2255,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 5,
+            "frqSubpartLabels": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 3,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2006
+            ],
+            "catalogYear": 2006,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 2255,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.",
+            "Nearby equation/setup text above the question number was included as introductory context."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.72
+    },
+    {
+      "id": "frq-2006-6-25",
+      "type": "FRQ",
+      "number": 6,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 25,
+          "rect": [
+            25.98,
+            55.0,
+            583.2,
+            582.72
+          ],
+          "confidence": 0.82,
+          "confidenceBand": "high",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 895,
+            "catalogTextCoverage": 0.57,
+            "pageTextCharacters": 1127,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 3,
+            "frqSubpartLabels": [
+              "a",
+              "b",
+              "c"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 1,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2006
+            ],
+            "catalogYear": 2006,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1127,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": true,
+            "boxedStatementDependencyResolved": true,
+            "semanticTailLinesIncluded": 2
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "An explicitly referenced boxed statement below the subparts was matched to catalog text and included."
+          ]
+        },
+        {
+          "page": 26,
+          "rect": [
+            39.68,
+            55.17,
+            583.2,
+            396.28
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 506,
+            "pageTextCharacters": 738,
+            "questionStartFound": false,
+            "questionStartMatches": 0,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "frqSubpartMarkers": 1,
+            "frqSubpartLabels": [
+              "d"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 1,
+            "linkedStimulusRegions": 0,
+            "columnCount": 1,
+            "pageRotation": 0,
+            "continuationPageDetected": true,
+            "introContextLinesIncluded": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2006
+            ],
+            "catalogYear": 2006,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.36
+    },
+    {
+      "id": "frq-2006-7-27",
+      "type": "FRQ",
+      "number": 7,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 27,
+          "rect": [
+            25.98,
+            55.0,
+            562.69,
+            516.43
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 1148,
+            "catalogTextCoverage": 0.65,
+            "pageTextCharacters": 1547,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 2,
+            "frqSubpartLabels": [
+              "a",
+              "b"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 1,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [
+              2006
+            ],
+            "catalogYear": 2006,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1547,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Nearby equation/setup text above the question number was included as introductory context."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.72
+    },
+    {
+      "id": "mcq-2002-1-606",
+      "type": "MCQ",
+      "number": 1,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            31.04,
+            213.89,
+            317.1,
+            268.21
+          ],
+          "confidence": 0.76,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 92,
+            "catalogTextCoverage": 0.75,
+            "pageTextCharacters": 1539,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.76
+    },
+    {
+      "id": "mcq-2002-2-606",
+      "type": "MCQ",
+      "number": 2,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            29.84,
+            264.21,
+            308.5,
+            307.57
+          ],
+          "confidence": 0.66,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 61,
+            "catalogTextCoverage": 0.75,
+            "pageTextCharacters": 1539,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.66
+    },
+    {
+      "id": "mcq-2002-3-606",
+      "type": "MCQ",
+      "number": 3,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            29.84,
+            303.57,
+            300.31,
+            346.21
+          ],
+          "confidence": 0.66,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 69,
+            "catalogTextCoverage": 0.89,
+            "pageTextCharacters": 1539,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.66
+    },
+    {
+      "id": "mcq-2002-4-606",
+      "type": "MCQ",
+      "number": 4,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            29.36,
+            342.21,
+            317.1,
+            760.68
+          ],
+          "confidence": 0.58,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 123,
+            "catalogTextCoverage": 0.56,
+            "pageTextCharacters": 1539,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.58
+    },
+    {
+      "id": "mcq-2002-5-606",
+      "type": "MCQ",
+      "number": 5,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            286.9,
+            130.29,
+            560.85,
+            393.75
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 1,
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "sharedQuestionRange": [
+              5,
+              7
+            ],
+            "sharedChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "sharedChoiceSequence": true,
+            "graphicsExpected": true,
+            "graphicsIncluded": 0,
+            "fullPageRaster": true,
+            "questionStemContamination": false,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        },
+        {
+          "page": 606,
+          "rect": [
+            306.64,
+            396.13,
+            567.33,
+            442.87
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 2,
+          "confidence": 0.68,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "questionStartFound": true,
+            "targetQuestionOnly": true,
+            "excludedGroupQuestions": [
+              6,
+              7
+            ],
+            "textCharacters": 105,
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.68
+    },
+    {
+      "id": "mcq-2002-6-606",
+      "type": "MCQ",
+      "number": 6,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            286.9,
+            130.29,
+            560.85,
+            393.75
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 1,
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "sharedQuestionRange": [
+              5,
+              7
+            ],
+            "sharedChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "sharedChoiceSequence": true,
+            "graphicsExpected": true,
+            "graphicsIncluded": 0,
+            "fullPageRaster": true,
+            "questionStemContamination": false,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        },
+        {
+          "page": 606,
+          "rect": [
+            306.64,
+            446.77,
+            566.42,
+            493.51
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 2,
+          "confidence": 0.68,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "questionStartFound": true,
+            "targetQuestionOnly": true,
+            "excludedGroupQuestions": [
+              5,
+              7
+            ],
+            "textCharacters": 103,
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.68
+    },
+    {
+      "id": "mcq-2002-7-606",
+      "type": "MCQ",
+      "number": 7,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 606,
+          "rect": [
+            286.9,
+            130.29,
+            560.85,
+            393.75
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 1,
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "sharedQuestionRange": [
+              5,
+              7
+            ],
+            "sharedChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "sharedChoiceSequence": true,
+            "graphicsExpected": true,
+            "graphicsIncluded": 0,
+            "fullPageRaster": true,
+            "questionStemContamination": false,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true,
+            "nativeTextCharacters": 1539,
+            "ocrUsed": false
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        },
+        {
+          "page": 606,
+          "rect": [
+            306.64,
+            496.93,
+            571.03,
+            543.67
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "faef9bc33b43f66b",
+          "segmentOrder": 2,
+          "confidence": 0.68,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "questionStartFound": true,
+            "targetQuestionOnly": true,
+            "excludedGroupQuestions": [
+              5,
+              6
+            ],
+            "textCharacters": 104,
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": true
+          },
+          "reasons": [
+            "Shared context for Questions 5\u20137 is emitted as a separate ordered segment from the target stem.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.68
+    },
+    {
+      "id": "mcq-2002-8-607",
+      "type": "MCQ",
+      "number": 8,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            21.2,
+            21.93,
+            305.53,
+            152.09
+          ],
+          "confidence": 0.76,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 126,
+            "catalogTextCoverage": 0.75,
+            "pageTextCharacters": 407,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 4,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 4,
+            "answerChoiceCoverage": true,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": true,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 1,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Detected 4 of 4 answer-choice markers recorded in the question text; manual review is required to avoid a clipped MCQ.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column.",
+            "Shared context for Questions 8\u201310 was located from the PDF text.",
+            "Nearby equation/setup text above the question number was included as introductory context."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.76
+    },
+    {
+      "id": "mcq-2002-9-607",
+      "type": "MCQ",
+      "number": 9,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            31.2,
+            25.93,
+            309.53,
+            129.31
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "fc12677a0edaf20c",
+          "segmentOrder": 1,
+          "confidence": 0.46,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "sharedQuestionRange": [
+              8,
+              10
+            ],
+            "sharedChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "E"
+            ],
+            "sharedChoiceSequence": false,
+            "graphicsExpected": true,
+            "graphicsIncluded": 0,
+            "fullPageRaster": true,
+            "questionStemContamination": false,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false
+          },
+          "reasons": [
+            "Shared context for Questions 8\u201310 is emitted as a separate ordered segment from the target stem.",
+            "The shared answer-choice set was not complete in the detected stimulus segment; manual review is required.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        },
+        {
+          "page": 607,
+          "rect": [
+            40.24,
+            158.09,
+            166.24,
+            193.31
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "fc12677a0edaf20c",
+          "segmentOrder": 2,
+          "confidence": 0.68,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "questionStartFound": true,
+            "targetQuestionOnly": true,
+            "excludedGroupQuestions": [
+              8,
+              10
+            ],
+            "textCharacters": 24,
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": false
+          },
+          "reasons": [
+            "Shared context for Questions 8\u201310 is emitted as a separate ordered segment from the target stem.",
+            "The shared answer-choice set was not complete in the detected stimulus segment; manual review is required.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.46
+    },
+    {
+      "id": "mcq-2002-10-607",
+      "type": "MCQ",
+      "number": 10,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            31.2,
+            25.93,
+            309.53,
+            129.31
+          ],
+          "segmentRole": "sharedStimulus",
+          "sharedContextId": "fc12677a0edaf20c",
+          "segmentOrder": 1,
+          "confidence": 0.46,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "sharedQuestionRange": [
+              8,
+              10
+            ],
+            "sharedChoiceLabels": [
+              "A",
+              "B",
+              "C",
+              "E"
+            ],
+            "sharedChoiceSequence": false,
+            "graphicsExpected": true,
+            "graphicsIncluded": 0,
+            "fullPageRaster": true,
+            "questionStemContamination": false,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false
+          },
+          "reasons": [
+            "Shared context for Questions 8\u201310 is emitted as a separate ordered segment from the target stem.",
+            "The shared answer-choice set was not complete in the detected stimulus segment; manual review is required.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        },
+        {
+          "page": 607,
+          "rect": [
+            35.92,
+            185.69,
+            247.87,
+            220.91
+          ],
+          "segmentRole": "questionBody",
+          "sharedContextId": "fc12677a0edaf20c",
+          "segmentOrder": 2,
+          "confidence": 0.68,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "questionStartFound": true,
+            "targetQuestionOnly": true,
+            "excludedGroupQuestions": [
+              8,
+              9
+            ],
+            "textCharacters": 45,
+            "fullPageRaster": true,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "contentDependencyResolved": false
+          },
+          "reasons": [
+            "Shared context for Questions 8\u201310 is emitted as a separate ordered segment from the target stem.",
+            "The shared answer-choice set was not complete in the detected stimulus segment; manual review is required.",
+            "A full-page raster underlies this page; OCR estimates boundaries, but visual review remains required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.46
+    },
+    {
+      "id": "mcq-2002-11-607",
+      "type": "MCQ",
+      "number": 11,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            285.44,
+            30.93,
+            564.72,
+            152.09
+          ],
+          "confidence": 0.66,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 54,
+            "catalogTextCoverage": 0.8,
+            "pageTextCharacters": 407,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.66
+    },
+    {
+      "id": "mcq-2002-12-607",
+      "type": "MCQ",
+      "number": 12,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            285.44,
+            148.09,
+            556.38,
+            191.21
+          ],
+          "confidence": 0.66,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 66,
+            "catalogTextCoverage": 0.33,
+            "pageTextCharacters": 407,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.66
+    },
+    {
+      "id": "mcq-2002-13-607",
+      "type": "MCQ",
+      "number": 13,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 607,
+          "rect": [
+            285.44,
+            187.21,
+            544.17,
+            232.43
+          ],
+          "confidence": 0.48,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 50,
+            "catalogTextCoverage": 0.4,
+            "pageTextCharacters": 407,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 2,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2002,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 407,
+            "ocrUsed": false,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Only 0 distinct answer-choice markers were detected.",
+            "A multi-column page layout was detected; the crop is constrained to the nearest column."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.48
+    },
+    {
+      "id": "mcq-2014-47-1463",
+      "type": "MCQ",
+      "number": 47,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1463,
+          "rect": [
+            25.99,
+            29.17,
+            576.07,
+            474.56
+          ],
+          "confidence": 0.82,
+          "confidenceBand": "high",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 176,
+            "catalogTextCoverage": 1.0,
+            "pageTextCharacters": 268,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 4,
+            "answerChoiceSequence": true,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 8,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2014,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 268,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.82
+    },
+    {
+      "id": "mcq-2014-48-1464",
+      "type": "MCQ",
+      "number": 48,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1464,
+          "rect": [
+            138.04,
+            55.0,
+            473.6,
+            233.73
+          ],
+          "confidence": 0.9,
+          "confidenceBand": "high",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 297,
+            "catalogTextCoverage": 0.75,
+            "pageTextCharacters": 842,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": true,
+            "answerChoiceMarkers": 4,
+            "answerChoiceSequence": true,
+            "expectedAnswerChoiceMarkers": 4,
+            "answerChoiceCoverage": true,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2014,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 842,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.9
+    },
+    {
+      "id": "mcq-2014-49-1464",
+      "type": "MCQ",
+      "number": 49,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1464,
+          "rect": [
+            138.02,
+            267.99,
+            476.12,
+            678.86
+          ],
+          "confidence": 0.82,
+          "confidenceBand": "high",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 405,
+            "catalogTextCoverage": 1.0,
+            "pageTextCharacters": 842,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 4,
+            "answerChoiceSequence": true,
+            "expectedAnswerChoiceMarkers": 4,
+            "answerChoiceCoverage": true,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 2,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": 225.73,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2014,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 842,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": true,
+            "tableDependencyResolved": true,
+            "tableDependencyGraphics": 3,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Nearby diagram/table/image content above the question number was included as context."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.82
+    },
+    {
+      "id": "mcq-2014-50-1465",
+      "type": "MCQ",
+      "number": 50,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1465,
+          "rect": [
+            26.0,
+            30.0,
+            310.84,
+            365.11
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": false,
+          "signals": {
+            "textCharacters": 829,
+            "catalogTextCoverage": 1.0,
+            "pageTextCharacters": 921,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 4,
+            "answerChoiceSequence": true,
+            "expectedAnswerChoiceMarkers": 4,
+            "answerChoiceCoverage": true,
+            "frqSubpartMarkers": 0,
+            "frqSubpartLabels": [],
+            "frqSubpartSequence": false,
+            "graphicsIncluded": 0,
+            "graphicsExpected": false,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 2,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2014,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 921,
+            "ocrUsed": false,
+            "fullPageRaster": false,
+            "singleQuestionFullWidthOverride": false,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "Nearby equation/setup text above the question number was included as introductory context."
+          ]
+        }
+      ],
+      "manualReview": false,
+      "confidence": 0.72
+    },
+    {
+      "id": "frq-2017-2-1155",
+      "type": "FRQ",
+      "number": 2,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1155,
+          "rect": [
+            29.0,
+            100.0,
+            565.5,
+            693.0
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 1200,
+            "catalogTextCoverage": 0.56,
+            "pageTextCharacters": 1313,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 5,
+            "frqSubpartLabels": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2017,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 0,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.",
+            "The source page is scanned/image-only. OCR supplied a boundary estimate, but manual visual approval is required."
+          ]
+        },
+        {
+          "page": 1156,
+          "rect": [
+            45.5,
+            74.0,
+            575.5,
+            413.0
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 709,
+            "pageTextCharacters": 800,
+            "questionStartFound": false,
+            "questionStartMatches": 0,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "frqSubpartMarkers": 2,
+            "frqSubpartLabels": [
+              "f",
+              "g"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "linkedStimulusRegions": 0,
+            "columnCount": 1,
+            "pageRotation": 0,
+            "continuationPageDetected": true,
+            "introContextLinesIncluded": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2017,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.36
+    },
+    {
+      "id": "frq-2017-3-1157",
+      "type": "FRQ",
+      "number": 3,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1157,
+          "rect": [
+            29.0,
+            73.0,
+            566.0,
+            731.0
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 1071,
+            "catalogTextCoverage": 0.62,
+            "pageTextCharacters": 1161,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 3,
+            "frqSubpartLabels": [
+              "a",
+              "b",
+              "c"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 0,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2017,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 0,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.",
+            "The source page is scanned/image-only. OCR supplied a boundary estimate, but manual visual approval is required."
+          ]
+        },
+        {
+          "page": 1158,
+          "rect": [
+            45.5,
+            70.0,
+            575.0,
+            207.5
+          ],
+          "confidence": 0.36,
+          "confidenceBand": "low",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 525,
+            "pageTextCharacters": 615,
+            "questionStartFound": false,
+            "questionStartMatches": 0,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "frqSubpartMarkers": 1,
+            "frqSubpartLabels": [
+              "d"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "linkedStimulusRegions": 0,
+            "columnCount": 1,
+            "pageRotation": 0,
+            "continuationPageDetected": true,
+            "introContextLinesIncluded": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2017,
+            "sourceMetadataMismatch": false
+          },
+          "reasons": [
+            "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.36
+    },
+    {
+      "id": "frq-2017-4-1159",
+      "type": "FRQ",
+      "number": 4,
+      "sourceDocument": "AP Chemistry MEGA Compiled Test Bank.pdf",
+      "regions": [
+        {
+          "page": 1159,
+          "rect": [
+            28.5,
+            186.0,
+            568.5,
+            385.5
+          ],
+          "confidence": 0.72,
+          "confidenceBand": "medium",
+          "manualReview": true,
+          "signals": {
+            "textCharacters": 750,
+            "catalogTextCoverage": 0.84,
+            "pageTextCharacters": 903,
+            "questionStartFound": true,
+            "questionStartMatches": 1,
+            "nextQuestionBoundaryFound": false,
+            "answerChoiceMarkers": 0,
+            "answerChoiceSequence": false,
+            "expectedAnswerChoiceMarkers": 0,
+            "answerChoiceCoverage": null,
+            "frqSubpartMarkers": 2,
+            "frqSubpartLabels": [
+              "a",
+              "b"
+            ],
+            "frqSubpartSequence": true,
+            "graphicsIncluded": 0,
+            "graphicsExpected": true,
+            "linkedStimulusRegions": 0,
+            "independentQuestionStartsBetweenStimulusAndTarget": 0,
+            "sharedQuestionGroupDetected": false,
+            "followingSharedQuestionGroupBoundary": false,
+            "introContextLinesIncluded": 1,
+            "previousQuestionChoiceBoundaryY": null,
+            "columnCount": 1,
+            "suspiciousColumnGeometry": false,
+            "pageRotation": 0,
+            "sourceQualityFlags": [],
+            "sourceYears": [],
+            "catalogYear": 2017,
+            "sourceMetadataMismatch": false,
+            "nativeTextCharacters": 0,
+            "ocrUsed": true,
+            "fullPageRaster": true,
+            "singleQuestionFullWidthOverride": true,
+            "tableDependencyDetected": false,
+            "tableDependencyResolved": false,
+            "tableDependencyGraphics": 0,
+            "boxedStatementDependencyDetected": false,
+            "boxedStatementDependencyResolved": null,
+            "semanticTailLinesIncluded": 0
+          },
+          "reasons": [
+            "No subsequent question boundary was found; the bottom follows extracted question content and nearby graphics, excluding page boilerplate.",
+            "Stored crop differs materially from the measured content region; inspect the proposal for image-only content.",
+            "The question explicitly references a graph, table, diagram, or structural formula, but no graphical region was measured inside the crop; manual context review is required.",
+            "The source page is scanned/image-only. OCR supplied a boundary estimate, but manual visual approval is required.",
+            "Nearby equation/setup text above the question number was included as introductory context."
+          ]
+        }
+      ],
+      "manualReview": true,
+      "confidence": 0.72
+    }
+  ]
+}

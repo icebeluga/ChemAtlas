@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-10T00:21:58.980Z",
+  "reviews": {
+    "mcq-2008-69-44": {
+      "status": "pending_review",
+      "imageRevision": "rc18c0a3c",
+      "sourceRegionsRevision": "rc18c0a3c",
+      "imagePaths": [
+        "/api/admin/question-review/image/mcq-2008-69-44/rc18c0a3c-segment-1.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    },
+    "mcq-2008-1-29": {
+      "status": "pending_review",
+      "imageRevision": "rd9a187c",
+      "sourceRegionsRevision": "rd9a187c",
+      "imagePaths": [
+        "/api/admin/question-review/image/mcq-2008-1-29/rd9a187c-segment-1.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    },
+    "mcq-2024-12-2084": {
+      "status": "pending_review",
+      "imageRevision": "rb7fe7c21",
+      "sourceRegionsRevision": "rb7fe7c21",
+      "imagePaths": [
+        "/api/admin/question-review/image/mcq-2024-12-2084/rb7fe7c21-segment-1.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    },
+    "frq-2005-1-6": {
+      "status": "pending_review",
+      "imageRevision": "r7a97d6df",
+      "sourceRegionsRevision": "r7a97d6df",
+      "imagePaths": [
+        "/api/admin/question-review/image/frq-2005-1-6/r7a97d6df-segment-1.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    },
+    "frq-2005-3-8": {
+      "status": "pending_review",
+      "imageRevision": "r86a14332",
+      "sourceRegionsRevision": "r86a14332",
+      "imagePaths": [
+        "/api/admin/question-review/image/frq-2005-3-8/r86a14332-segment-1.png",
+        "/api/admin/question-review/image/frq-2005-3-8/r86a14332-segment-2.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    }
+  },
+  "stimuli": {
+    "stimulus-2008-mcq-1-3-page29": {
+      "status": "pending_review",
+      "imageRevision": "r43aa0acd",
+      "sourceRegionsRevision": "r43aa0acd",
+      "imagePaths": [
+        "/api/admin/question-review/image/_stimulus-stimulus-2008-mcq-1-3-page29/r43aa0acd-segment-1.png"
+      ],
+      "reviewedAt": null,
+      "rejectionReasons": [],
+      "notes": "",
+      "history": []
+    }
+  }
+}

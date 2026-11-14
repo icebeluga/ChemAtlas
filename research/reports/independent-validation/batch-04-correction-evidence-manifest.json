@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "caseId": "mcq-2024-23-2090",
+  "caseStatus": "development data; excluded from independent validation for this and later detector revisions",
+  "parentCommit": "90151a1643c2f613c4e92633bf3be07c23c193b2",
+  "detectorSha256": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+  "sourcePdf": "public/source/bank-07.pdf",
+  "sourcePdfSha256": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+  "originalFrozenFailurePreserved": true,
+  "originalFrozenFailurePath": "research/reports/independent-validation/batch-04-proposals.json",
+  "originalFrozenFailureSha256": "9997613525b5d885d57d409cf2f449330b9d5a2c628e382559ece26f0f934792",
+  "selectionLockPreserved": true,
+  "selectionLockPath": "research/reports/independent-validation/batch-04-lock.json",
+  "selectionLockSha256": "5088e83c503b0cd06ee224ae9f0fb040e0c25ebbd002bb55699826346a5a8991",
+  "originalFrozenDetectorSha256": "24d7bc01539de572348d4303b99decde8a5c3a9b5e0fa92622dcbff54d644777",
+  "segments": [
+    {
+      "order": 1,
+      "role": "sharedStimulus",
+      "sourcePage": 2090,
+      "coordinatesPdfPoints": [
+        37.0,
+        50.5,
+        562.5,
+        244.0
+      ],
+      "confidence": 0.42,
+      "confidenceBand": "low",
+      "manualReview": true,
+      "content": "Shared group direction and complete four-row acid table with lower border."
+    },
+    {
+      "order": 2,
+      "role": "questionBody",
+      "sourcePage": 2091,
+      "coordinatesPdfPoints": [
+        24.0,
+        61.5,
+        299.62,
+        201.5
+      ],
+      "confidence": 0.18,
+      "confidenceBand": "low",
+      "manualReview": true,
+      "content": "Visually identified Q23 stem and A-D choices; OCR question number and catalog stem do not independently confirm identity."
+    }
+  ],
+  "visualVerdict": {
+    "contentCompleteness": "Q23 complete by direct visual comparison to source pages",
+    "cropCleanliness": "Q23 segments exclude adjacent question bodies, page numbers, footer, QR and excess blank space",
+    "readability": "scan text soft but legible; no answer marking over retained content",
+    "reviewRouting": "manual review required due OCR/catalog identity mismatch and raster source"
+  },
+  "boundedNeighborDevelopmentCases": [
+    "mcq-2024-24-2090",
+    "mcq-2024-25-2090"
+  ],
+  "neighborFinding": "Q23-Q25 share a systematic one-page catalog association discrepancy. Q24/Q25 text candidates are visually complete/clean but remain manual because raster graphics are unverified.",
+  "tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 41,
+    "failed": 0,
+    "skipped": 0,
+    "tesseractScannedPageRegression": "executed"
+  },
+  "artifactSha256": {
+    "research/detect_question_boundaries.py": "aa87de11393cbd864cd0b4551c09ae167a6a0d2e8f1c5ed5bdc91f4b33eedca8",
+    "tests/test_adjacent_page_association.py": "f06deb74869585a76fd23f1201f1e84ca2d58e1b7f2f823c5b2e78e43de8f15b",
+    "public/source/bank-07.pdf": "69aa3e08b09e1b67df5acc8b1e1a02b6a68ecd61c26248bf978da159be998c96",
+    "public/questions.json": "ecd44472e2b0aa935d3e31ce67f7977ff090c6c2c946574921da4b7efc95defe",
+    "research/reports/independent-validation/batch-04-proposals.json": "9997613525b5d885d57d409cf2f449330b9d5a2c628e382559ece26f0f934792",
+    "research/reports/independent-validation/batch-04-lock.json": "5088e83c503b0cd06ee224ae9f0fb040e0c25ebbd002bb55699826346a5a8991",
+    "research/reports/independent-validation/batch-04-development-proposal.json": "a7d72e517149c3655624931e51a695a3e3fcdd5f69ea2c7a1a03977ff4199937",
+    "research/reports/independent-validation/batch-04-development-report.md": "164a00652e467f21648841cde130b8c3226f92a7a0493fd5d0a21c8c28cc89a3",
+    "research/reports/independent-validation/batch-04-neighbor-development-proposals.json": "f088558e6d640b03eef8bb4bcd88ecee8e21967e92751367cdc24aed7b57a1ea",
+    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-1.jpg": "e87b27bda1d30b54629b6180e4c1759f53e920cbaecaee89911939b8afef9a3c",
+    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-2090-segment-2.jpg": "ae1f4fbde4594ee7f7b8a9d30c988b795325f76cebca9fdaa39a5016da727498",
+    "research/reports/independent-validation/batch-04-correction-panels/mcq-2024-23-corrected.pdf": "48561e710189f2acfb3abf39a4c531ad8bf6263de417b26cbb895afe1b6077ed",
+    "research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-24-2090-segment-2.jpg": "0c067347283a86c21c092015c3053bd62ff1ef098134e5c5ae9500ced59a5979",
+    "research/reports/independent-validation/batch-04-neighbor-diagnostic-panels/mcq-2024-25-2090-segment-2.jpg": "e7e0f4e78d0c2cf0e153e26430d216c5caa71b00a24422f0a633387e49583f03"
+  }
+}

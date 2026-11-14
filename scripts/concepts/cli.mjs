@@ -11,6 +11,7 @@ import { candidateConcepts } from "../../lib/concepts/candidates.mjs";
 import { validateResult, upsertRecord, applyReview, staleness, emptyStore } from "../../lib/concepts/records.mjs";
 import { compareClassifications, scoreAgainstReference } from "../../lib/concepts/evaluate.mjs";
 import { buildConceptIndex, VERIFIED, PROVISIONAL } from "../../lib/concepts/search.mjs";
+import { renderReviewSheet } from "../../lib/concepts/review-sheet.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const PATHS = {
@@ -228,10 +229,27 @@ const commands = {
 
   // review --file decisions.json : [{questionId, decision: approve|reject|flag|edit, reviewer, notes, parts?}]
   review(args) {
-    const { store } = loadAll();
+    const { store, resolver } = loadAll();
     const decisions = JSON.parse(readFileSync(resolve(args.file), "utf8"));
-    for (const d of decisions) { const r = applyReview(store, d.questionId, d); console.log(`${d.questionId} -> ${r.reviewStatus}`); }
+    for (const d of decisions) {
+      const unknown = (d.parts ?? []).flatMap(p => ["primary", "supporting", "contextual"].flatMap(r => (p[r] ?? []).map(a => a.conceptId))).filter(id => !resolver.concepts.has(id));
+      if (unknown.length) { console.error(`${d.questionId}: unknown concept ids ${unknown.join(", ")}; decision skipped`); process.exitCode = 1; continue; }
+      try { const r = applyReview(store, d.questionId, d); console.log(`${d.questionId} -> ${r.reviewStatus}`); }
+      catch (e) { console.error(`${d.questionId}: ${e.message}`); process.exitCode = 1; }
+    }
     if (!args["dry-run"]) { writeJson(PATHS.store, store); commands["build-graph"](); }
+  },
+
+  // review-sheet --run pilot-v1 : standalone HTML for human review (images load from the run's local images folder)
+  "review-sheet"(args) {
+    const { taxonomy, store } = loadAll();
+    const run = args.run ?? "pilot-v1", runDir = `${PATHS.runs}/${run}`;
+    const ids = readJson(`${runDir}/manifest.json`).questionIds;
+    const records = ids.map(id => store.records[id]?.current).filter(Boolean);
+    const packets = Object.fromEntries(ids.map(id => [id, readJson(`${runDir}/packets/${id}.json`)]));
+    const comparisons = existsSync(abs(`${runDir}/compare-b.json`)) ? Object.fromEntries(readJson(`${runDir}/compare-b.json`).map(c => [c.questionId, c])) : {};
+    writeFileSync(abs(`${runDir}/review-sheet.html`), renderReviewSheet({ run, records, packets, comparisons, taxonomy, imageBase: "images/" }));
+    console.log(`${records.length} questions -> ${runDir}/review-sheet.html`);
   },
 
   // status : counts by review status and stale records (content or concept definition changed)

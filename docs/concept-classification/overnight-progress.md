@@ -29,3 +29,7 @@ Review the benchmark in the sheet, decide the conventions, confirm the supplemen
 - Cross-family agreement: primary ~0.82, supporting ~0.5 (vs 0.93 / 0.77 within Claude). Of the 23 primary disagreements, Claude matches the taxonomy rules in 10, GPT-6 is right in 1 (+2 where Claude omitted entropy), 1 taxonomy gap, 4 legacy-format, 4 role calls, 1 unresolved.
 - GPT-6 advice recorded on 7 conventions (all still undecided); 2 new conventions (C7, C8); all 8 page corrections independently confirmed; 4 catalog issues added.
 - Validation now flags `exclude-rule-check`. Analysis: `gpt6-audit-analysis.md`.
+
+## Round 5 (2026-11-14): taxonomy 1.1 draft
+- Draft source and build (113 concepts: 6 edited, 4 added) from changes both AI reviews support; not active, nothing re-classified. Adopting it would make 17 records stale. Change log: `research/concepts/taxonomy-1.1-changes.md`.
+- `build-taxonomy --source --out` builds a draft without touching the active taxonomy.

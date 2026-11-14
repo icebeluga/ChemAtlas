@@ -65,3 +65,19 @@ test("concept graph links resolve and expose the educational relationships", () 
   assert.ok(graph.links.some(l => l.relation === "RELATED_TO" && [l.source, l.target].includes("concept:formal-charge") && [l.source, l.target].includes("concept:resonance")));
   assert.ok(has("topic:2.7", "unit:u2", "PART_OF"));
 });
+
+test("taxonomy 1.1 draft builds cleanly, stays a draft and only adds or edits concepts", async () => {
+  const draftSource = await json("../research/concepts/concepts.v1.1.draft.source.json");
+  const draft = await json("../research/concepts/taxonomy.v1.1.draft.json");
+  const { taxonomy, errors } = buildTaxonomy({ source: draftSource, research, catalog, researchHashes: draft.provenance.researchFiles });
+  assert.deepEqual(errors, []);
+  assert.deepEqual(taxonomy, draft, "the committed draft is exactly what the builder produces");
+  assert.equal(draft.status, "draft");
+  assert.equal(committed.taxonomyVersion, "1.0.0", "the active taxonomy is unchanged");
+  const before = new Set(committed.concepts.map(c => c.id));
+  assert.ok(committed.concepts.every(c => draft.concepts.some(d => d.id === c.id)), "no concept removed");
+  const added = draft.concepts.filter(c => !before.has(c.id));
+  assert.deepEqual(added.map(c => c.id).sort(), ["d-orbital-hybridization", "electrolyte-conductivity", "lewis-acid-base", "phase-diagrams"]);
+  for (const c of added.filter(c => c.scope === "beyond-ap")) assert.deepEqual(c.topics.primary, [], `${c.id} has no current CED topic`);
+  assert.match(draft.concepts.find(c => c.id === "hess-law").exclude, /coupled-reactions/);
+});

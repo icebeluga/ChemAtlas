@@ -74,7 +74,7 @@ New catalog issues from the audit, added to `catalog-issues.json`: `mcq-2002-38-
 
 Changes are proposals unless marked done. None changes stored classifications.
 
-**Taxonomy (version 1.1, after the owner decides the conventions)**
+**Taxonomy.** Items 1–4 are now drafted as taxonomy 1.1 (`research/concepts/taxonomy-1.1-changes.md`; not active). Item 5 and the convention text (item 6) wait for the owner.
 1. `hess-law` exclude: add "Do not tag addition of ΔG° values (tag coupled-reactions)". `coupled-reactions` include: "including combining ΔG° of reactions because G is a state function, even without an unfavorable step". (Both families; the rule existed but was missed.)
 2. `entropy` include: "including solving ΔG° = ΔH° − TΔS° for ΔS°" (role per C7).
 3. New `electrolyte-conductivity` concept (strong, weak and non-electrolytes; conductivity from mobile ions; CED 3.x/2.x). Reported by Claude in round 1 and by GPT-6.

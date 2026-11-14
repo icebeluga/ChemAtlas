@@ -124,12 +124,22 @@ const commands = {
   "build-taxonomy"(args) {
     const research = readJson(PATHS.researchJson);
     const researchHashes = Object.fromEntries([PATHS.researchJson, PATHS.researchMd].map(p => [p, sha256(readFileSync(abs(p)))]));
-    const { taxonomy, errors, warnings } = buildTaxonomy({ source: readJson(PATHS.source), research, catalog: readJson(PATHS.catalog), researchHashes });
+    const { taxonomy, errors, warnings } = buildTaxonomy({ source: readJson(args.source ?? PATHS.source), research, catalog: readJson(PATHS.catalog), researchHashes });
     for (const w of warnings) console.warn(w);
     if (errors.length) { console.error(errors.join("\n")); process.exitCode = 1; return; }
     const methods = {};
     for (const m of Object.values(taxonomy.microConceptMap)) methods[m.method] = (methods[m.method] ?? 0) + 1;
     console.log(`taxonomy ${taxonomy.taxonomyVersion} (${taxonomy.taxonomyHash}): ${taxonomy.concepts.length} concepts, ${taxonomy.skills.length} skills; micro-label mapping ${JSON.stringify(methods)}`);
+    if (args.out) {
+      // Draft build (--source x --out y): writes only y and reports which stored records adopting it would make stale.
+      const store = existsSync(abs(PATHS.store)) ? readJson(PATHS.store) : emptyStore();
+      const stale = Object.values(store.records).map(e => [e.current.questionId, staleness(e.current, null, taxonomy)]).filter(([, r]) => r.length);
+      const active = readJson(PATHS.taxonomy), before = new Map(active.concepts.map(c => [c.id, c.hash]));
+      const changed = taxonomy.concepts.filter(c => before.has(c.id) && before.get(c.id) !== c.hash).map(c => c.id), added = taxonomy.concepts.filter(c => !before.has(c.id)).map(c => c.id);
+      console.log(`vs active ${active.taxonomyVersion}: changed ${changed.join(", ") || "none"}; added ${added.join(", ") || "none"}\nadopting it would make ${stale.length} of ${Object.keys(store.records).length} records stale${stale.length ? ":\n  " + stale.map(([id, r]) => `${id}: ${r.join(", ")}`).join("\n  ") : ""}`);
+      if (!args["dry-run"]) writeJson(args.out, taxonomy);
+      return;
+    }
     if (args["dry-run"]) return;
     writeJson(PATHS.taxonomy, taxonomy);
     commands["build-graph"]();

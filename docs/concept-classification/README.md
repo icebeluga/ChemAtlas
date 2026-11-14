@@ -120,7 +120,22 @@ Decisions file (v2): `{ format, run, reviewer, exportedAt, decisions: [{ questio
 
 When the classifier reports missing content (continuation page, shared stimulus on another page, wrong page), the fix goes in `content-supplements.json` instead of the catalog: `mode: add` appends regions, `mode: replace` swaps them, and `catalogTextBelongsElsewhere` withholds catalog text that is another question's. A supplement changes the question's content hash, so only that record goes stale and is re-classified. Each entry records who located it (so far always a model) and any proposed catalog correction for the owner.
 
-## 6. Known limitations
+## 6. Independent AI review
+
+Because no human chemistry reviewer is available yet, the benchmark can be audited by another AI model. The review is recorded as an **independent AI review**, never as human verification.
+
+```bash
+node scripts/concepts/cli.mjs export-review-package --out <dir> --zip <file.zip> [--force]
+node scripts/concepts/cli.mjs import-ai-review --file results.json[,batch-02.json] --dry-run
+node scripts/concepts/cli.mjs import-ai-review --file results.json[,batch-02.json]
+node scripts/concepts/cli.mjs evaluate --pass a --reference research/concepts/ai-reviews/gpt-6-pilot-v1.json --tag gpt6
+```
+
+The package holds the 40 benchmark and 45 held-out questions: crops, full source pages and shared stimuli rendered from the PDFs (crops at 180 dpi, pages at 144 dpi, each page stored once), OCR text marked as not authoritative, FRQ parts, completeness cautions, the taxonomy (`CONCEPTS.md` and JSON), the open conventions, and the proposed page corrections with their original and supplied pages. Claude's classifications and model references are in `claude/`, which the instructions (`research/concepts/review-package/GPT6_REVIEW_INSTRUCTIONS.md`) say to open only after classifying each question independently. The exporter fails if any referenced file is missing, an image is not a valid PNG, or a question's stored content is not complete.
+
+`import-ai-review` validates the results (`chematlas-ai-review/v1`; schema in `research/concepts/review-package/review-results.schema.json`): every concept id, every part id (printed subparts of range parts are accepted), roles, verdicts and convention options. It then writes `research/concepts/ai-reviews/<model>-<run>.json`, which is also a valid `--reference`. It does not change `classifications.json`, does not mark anything `human_verified`, does not decide conventions, and refuses to overwrite an earlier import without `--force`.
+
+## 7. Known limitations
 
 - No human-verified benchmark exists yet. Accuracy numbers in the pilot report are measured against **model-built** references (one adjudicated, one blind) and must be confirmed by a chemistry teacher before broad tagging.
 - Concept definitions and boundaries are ChemAtlas proposals, not reviewed by a teacher.

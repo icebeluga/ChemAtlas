@@ -1,18 +1,20 @@
 #!/usr/bin/env node
 // ChemAtlas concept classification CLI. Run `node scripts/concepts/cli.mjs help`.
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, copyFileSync, statSync, rmSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import { dirname, join, resolve, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildTaxonomy, catalogTopics, createResolver, sha256 } from "../../lib/concepts/taxonomy.mjs";
 import { buildConceptGraph } from "../../lib/concepts/graph.mjs";
-import { createContentContext, questionContent } from "../../lib/concepts/content.mjs";
+import { createContentContext, questionContent, sourcePageRef } from "../../lib/concepts/content.mjs";
 import { candidateConcepts } from "../../lib/concepts/candidates.mjs";
 import { validateResult, upsertRecord, applyReview, staleness, emptyStore, applyConventionDecisions } from "../../lib/concepts/records.mjs";
 import { compareClassifications, scoreAgainstReference, humanReference } from "../../lib/concepts/evaluate.mjs";
 import { buildConceptIndex, VERIFIED, PROVISIONAL } from "../../lib/concepts/search.mjs";
 import { renderReviewSheet } from "../../lib/concepts/review-sheet.mjs";
 import { pilotStats, cropWorklist } from "../../lib/concepts/report.mjs";
+import { completenessFlags, questionMarkdown, claudeView, conceptsMarkdown, conventionsMarkdown, correctionsMarkdown } from "../../lib/concepts/review-package.mjs";
+import { validateAiReview, aiReviewToReference } from "../../lib/concepts/ai-review.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const PATHS = {
@@ -369,6 +371,136 @@ const commands = {
     const out = args.out ?? (args.provisional ? "research/concepts/concept-index.provisional.json" : PATHS.index);
     writeJson(out, index);
     console.log(`${index.questionCount} questions indexed (${index.includedStatuses.join(", ")}) -> ${out}`);
+  },
+
+  // export-review-package --out <dir> [--zip <file.zip>] [--run pilot-v1] : independent-review package for an outside reviewer.
+  // Phase-1 material (question images, OCR text, taxonomy, conventions, corrections) is kept apart from Claude's tags (claude/).
+  "export-review-package"(args) {
+    if (!args.out) throw new Error("--out <dir> is required");
+    const { catalog, taxonomy, ctx, store } = loadAll();
+    const run = args.run ?? "pilot-v1", out = resolve(args.out);
+    if (existsSync(out)) { if (!args.force) throw new Error(`${out} exists; pass --force to rebuild it`); rmSync(out, { recursive: true }); }
+    const bench = readJson(`research/concepts/benchmark/reference-${run}.json`), hold = readJson(`research/concepts/benchmark/holdout-reference-${run}.json`);
+    const sets = [...Object.keys(bench.questions).map(id => [id, "benchmark"]), ...Object.keys(hold.questions).map(id => [id, "holdout"])];
+    const conventions = readJson(PATHS.conventions).conventions, supplements = readJson(PATHS.supplements).supplements;
+    const catalogIssues = readJson("research/concepts/catalog-issues.json").issues;
+    const names = Object.fromEntries(taxonomy.concepts.map(k => [k.id, k.name]));
+    const pageName = src => `images/pages/${src.pdf.split("/").pop().replace(".pdf", "")}-p${String(src.localPage ?? src.page).padStart(3, "0")}.png`;
+    const jobs = new Map(), job = (file, pdf, page, rect, zoom) => { if (!jobs.has(file)) jobs.set(file, { pdf: abs(pdf), page, rect, zoom, out: join(out, file) }); return file; };
+    const put = (file, data) => { mkdirSync(dirname(join(out, file)), { recursive: true }); writeFileSync(join(out, file), typeof data === "string" ? data : JSON.stringify(data, null, 2) + "\n"); };
+    const manifestQs = [], template = [], claudeIndex = {};
+    for (const [id, set] of sets) {
+      const content = questionContent(id, ctx), record = store.records[id]?.current, q = ctx.byId.get(id);
+      const images = [];
+      content.regions.forEach((r, i) => {
+        if (!r.source) return;
+        const page = pageName(r.source);
+        if (r.rect) images.push({ kind: "crop", file: job(`images/crops/${id}-${i + 1}.png`, r.source.pdf, r.source.localPage, r.rect, 2.5), pdf: r.source.pdf, page: r.source.localPage, compiledPage: r.page, rect: r.rect });
+        images.push({ kind: "page", role: r.role ?? (r.rect ? "context" : "question-page"), file: job(page, r.source.pdf, r.source.localPage, null, 2), pdf: r.source.pdf, page: r.source.localPage, compiledPage: r.page, rect: null });
+      });
+      for (const s of content.stimulus) (s.regions ?? []).forEach((r, i) => {
+        const src = catalog.sourceFiles.find(f => f.url === s.sourceDocument);
+        if (!src) return;
+        const pdf = `public${s.sourceDocument}`, local = r.page - src.from + 1;
+        images.push({ kind: "stimulus", stimulusId: s.id, file: job(`images/stimuli/${s.id}-${i + 1}.png`, pdf, local, r.rect, 2.5), pdf, page: local, compiledPage: r.page, rect: r.rect });
+        const page = pageName({ pdf, localPage: local });
+        if (!images.some(x => x.file === page)) images.push({ kind: "page", role: "stimulus-page", file: job(page, pdf, local, null, 2), pdf, page: local, compiledPage: r.page, rect: null });
+      });
+      const completeness = completenessFlags({ content, record, holdoutRef: set === "holdout" ? hold.questions[id] : null, catalogIssues });
+      const entry = {
+        questionId: id, set, type: content.type, exam: content.exam, year: content.year, number: content.number,
+        catalogTopics: { primary: q.primaryTopic, secondary: q.secondaryTopics ?? [], status: q.status },
+        parts: content.parts.map(p => ({ partId: p.partId, label: p.label, catalogTopics: p.catalogTopics ?? [] })),
+        questionFile: `questions/${id}/question.md`, images, completeness,
+        supplement: content.supplement,
+        candidateConcepts: candidateConcepts(content, taxonomy).map(k => k.conceptId),
+        claudeClassification: `claude/classifications/${id}.json`,
+      };
+      manifestQs.push(entry);
+      put(entry.questionFile, questionMarkdown({ ...entry, ocrText: content.text }));
+      if (record) { put(entry.claudeClassification, claudeView(record, names)); claudeIndex[id] = { file: entry.claudeClassification, concepts: [...new Set(record.parts.flatMap(p => [...p.primary, ...p.supporting, ...p.contextual].map(a => a.conceptId)))] }; }
+      template.push({ questionId: id, contentStatus: "", contentIssues: [], independent: { parts: Object.fromEntries(content.parts.map(p => [p.partId, { primary: [], supporting: [], contextual: [], rationale: "" }])) }, confidence: "", comparison: { verdict: "", findings: [] }, changedMindAfterComparison: false, notes: "" });
+    }
+    renderImages([...jobs.values()], "research/concepts/runs/" + run);
+    const missing = [...jobs.values()].filter(j => !existsSync(j.out));
+    if (missing.length) throw new Error(`${missing.length} images failed to render: ${missing.slice(0, 5).map(j => j.out).join(", ")}`);
+    const concepts = taxonomy.concepts.map(({ id, name, group, scope, definition, include, exclude, examples, topics, aliases, related, prerequisites }) => ({ id, name, group, scope: scope ?? "ap", definition, include, exclude, examples, topics, aliases, related, prerequisites }));
+    put("taxonomy/concepts.json", { taxonomyVersion: taxonomy.taxonomyVersion, taxonomyHash: taxonomy.taxonomyHash, groups: taxonomy.groups, concepts, skills: taxonomy.skills });
+    put("taxonomy/CONCEPTS.md", conceptsMarkdown(taxonomy));
+    put("conventions/conventions.json", { conventions: conventions.map(({ history, ...k }) => k) });
+    put("conventions/CONVENTIONS.md", conventionsMarkdown(conventions));
+    const pageFile = compiled => { const s = catalog.sourceFiles.find(f => f.from <= compiled && compiled <= f.to); return s ? pageName({ pdf: `public${s.url}`, localPage: compiled - s.from + 1 }) : null; };
+    put("corrections/content-supplements.json", { supplements });
+    put("corrections/catalog-issues.json", { issues: catalogIssues });
+    // Each correction ships with the catalog's original page(s) and the supplied page(s), so the reviewer can check it.
+    const originals = {};
+    for (const [id, s] of Object.entries(supplements)) {
+      const q = ctx.byId.get(id), orig = [...new Set(q.sourceRegions?.length ? q.sourceRegions.map(r => r.page) : q.pages)];
+      for (const p of new Set([...orig, ...s.regions.map(r => r.page)])) { const src = sourcePageRef(catalog, p); if (src) job(pageFile(p), src.pdf, src.localPage, null, 2); }
+      originals[id] = orig.map(pageFile);
+    }
+    renderImages([...jobs.values()], "research/concepts/runs/" + run);
+    if ([...jobs.values()].some(j => !existsSync(j.out))) throw new Error("correction pages failed to render");
+    put("corrections/CORRECTIONS.md", correctionsMarkdown(supplements, catalogIssues, pageFile, originals));
+    put("claude/index.json", { note: "Phase 2 only. Claude's stored pass-A classifications (model claude-opus-5-5, prompt classifier.v1). Not human-verified.", questions: claudeIndex });
+    put("claude/model-references.json", { note: "Phase 2 only. Reference answers built by Claude adjudicator models. NOT human-verified; another Claude opinion, not an answer key.", benchmark: { referenceKind: bench.referenceKind, questions: bench.questions }, holdout: { referenceKind: hold.referenceKind, questions: hold.questions } });
+    put("review-output/gpt6-review-results.template.json", { format: "chematlas-ai-review/v1", reviewer: { model: "GPT-6", interface: "ChatGPT", notes: "" }, reviewedAt: "", questions: template, conventions: conventions.map(k => ({ id: k.id, recommendation: "", proposedRule: "", rationale: "", confidence: "" })), correctionChecks: Object.keys(supplements).map(id => ({ questionId: id, result: "", note: "" })), taxonomyIssues: [], catalogIssues: [], packageIssues: [] });
+    for (const name of ["GPT6_REVIEW_INSTRUCTIONS.md", "review-results.schema.json"]) {
+      const dest = name.endsWith(".md") ? name : `review-output/${name}`;
+      mkdirSync(dirname(join(out, dest)), { recursive: true }); copyFileSync(abs(`research/concepts/review-package/${name}`), join(out, dest));
+    }
+    const counts = { questions: manifestQs.length, benchmark: manifestQs.filter(m => m.set === "benchmark").length, holdout: manifestQs.filter(m => m.set === "holdout").length, frq: manifestQs.filter(m => m.type === "FRQ").length, parts: manifestQs.reduce((n, m) => n + m.parts.length, 0), images: jobs.size, concepts: concepts.length, conventions: conventions.length, corrections: Object.keys(supplements).length };
+    const manifest = { package: "ChemAtlas concept classification: independent review", format: "chematlas-review-package/v1", createdAt: new Date().toISOString(), run, taxonomyVersion: taxonomy.taxonomyVersion, taxonomyHash: taxonomy.taxonomyHash, counts, phases: { phase1: ["questions/", "images/", "taxonomy/", "conventions/", "corrections/"], phase2: ["claude/"] }, questions: manifestQs };
+    put("manifest.json", manifest);
+    put("README.md", `# ChemAtlas concept classification: independent review package\n\nRead **GPT6_REVIEW_INSTRUCTIONS.md** first, then \`manifest.json\`.\n\n- ${counts.questions} AP Chemistry questions (${counts.benchmark} benchmark, ${counts.holdout} held-out; ${counts.frq} free-response with ${counts.parts} parts in total), with ${counts.images} source images rendered from the original PDFs.\n- ${counts.concepts} concepts, ${counts.conventions} unresolved conventions, ${counts.corrections} proposed page corrections.\n- \`claude/\` holds Claude's classifications. Open it only after classifying a question yourself.\n- Return \`gpt6-review-results.json\` in the format of \`review-output/gpt6-review-results.template.json\`.\n\nNothing here is human-verified. Generated ${manifest.createdAt} from ChemAtlas taxonomy ${taxonomy.taxonomyVersion} (${taxonomy.taxonomyHash}).\n`);
+    // Self-check: every referenced file exists, every image is a non-trivial PNG, every Claude concept id is in the taxonomy.
+    const problems = [], ids = new Set(concepts.map(k => k.id)), PNG = "89504e470d0a1a0a";
+    for (const m of manifestQs) {
+      for (const file of [m.questionFile, ...m.images.map(i => i.file)]) {
+        if (!existsSync(join(out, file))) { problems.push(`${m.questionId}: missing ${file}`); continue; }
+        if (file.endsWith(".png") && (readFileSync(join(out, file)).subarray(0, 8).toString("hex") !== PNG || statSync(join(out, file)).size < 3000)) problems.push(`${m.questionId}: bad image ${file}`);
+      }
+      if (!m.images.some(i => i.kind === "crop" || i.kind === "page")) problems.push(`${m.questionId}: no question image`);
+      if (m.completeness.status === "incomplete") problems.push(`${m.questionId}: classified content is not complete`);
+      for (const k of claudeIndex[m.questionId]?.concepts ?? []) if (!ids.has(k)) problems.push(`${m.questionId}: unknown concept ${k}`);
+    }
+    let bytes = 0; const walk = d => { for (const e of readdirSync(d, { withFileTypes: true })) e.isDirectory() ? walk(join(d, e.name)) : (bytes += statSync(join(d, e.name)).size); }; walk(out);
+    console.log(JSON.stringify({ out, counts, cautions: manifestQs.filter(m => m.completeness.status !== "complete").length, megabytes: +(bytes / 1e6).toFixed(1), problems }, null, 1));
+    if (problems.length) { process.exitCode = 1; return; }
+    if (args.zip) {
+      const r = spawnSync("uv", ["run", "--no-project", "python", "-I", abs("scripts/concepts/zip_package.py"), out, resolve(args.zip)], { cwd: ROOT, encoding: "utf8" });
+      process.stdout.write(r.stdout ?? ""); process.stderr.write(r.stderr ?? "");
+      if (r.status !== 0) process.exitCode = 1;
+    }
+  },
+
+  // import-ai-review --file results.json[,batch2.json] [--run pilot-v1] [--dry-run] [--force]
+  // Stores an independent AI review as research/concepts/ai-reviews/<model>-<run>.json. Never touches classifications.json,
+  // never marks anything human_verified, never decides a convention.
+  "import-ai-review"(args) {
+    if (!args.file) throw new Error("--file is required");
+    const { taxonomy, ctx, store } = loadAll();
+    const run = args.run ?? "pilot-v1";
+    const texts = String(args.file).split(",").map(p => readFileSync(resolve(p), "utf8"));
+    const reviews = texts.map(t => JSON.parse(t));
+    const models = [...new Set(reviews.map(r => r.reviewer?.model))];
+    if (models.length !== 1) throw new Error(`all files must come from one reviewer model, got ${models.join(", ")}`);
+    const cat = k => reviews.flatMap(r => r[k] ?? []);
+    const merged = { ...reviews[0], questions: cat("questions"), conventions: cat("conventions"), correctionChecks: cat("correctionChecks"), taxonomyIssues: cat("taxonomyIssues"), catalogIssues: cat("catalogIssues"), packageIssues: cat("packageIssues") };
+    const ids = [...Object.keys(readJson(`research/concepts/benchmark/reference-${run}.json`).questions), ...Object.keys(readJson(`research/concepts/benchmark/holdout-reference-${run}.json`).questions)];
+    const questionParts = new Map(ids.map(id => [id, questionContent(id, ctx).parts]));
+    const { errors, warnings } = validateAiReview(merged, { conceptIds: new Set(taxonomy.concepts.map(k => k.id)), questionParts, conventions: readJson(PATHS.conventions).conventions });
+    for (const w of warnings) console.warn(`warning: ${w}`);
+    if (errors.length) { console.error(errors.map(e => `ERROR ${e}`).join("\n")); process.exitCode = 1; return; }
+    const ref = aiReviewToReference(merged, { importedAt: new Date().toISOString(), sourceSha256: sha256(texts.join("\n")) });
+    const out = `research/concepts/ai-reviews/${models[0].toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${run}.json`;
+    const records = Object.fromEntries(Object.values(store.records).map(e => [e.current.questionId, e.current]));
+    const s = scoreAgainstReference(records, ref).summary;
+    console.log(`${Object.keys(ref.questions).length} questions reviewed by ${models[0]} (${warnings.length} warnings). Claude pass A vs this review: primary ${s.primary.precision}/${s.primary.recall}, supporting ${s.supporting.precision}/${s.supporting.recall}, any role ${s.anyRole.precision}/${s.anyRole.recall}`);
+    if (args["dry-run"]) return;
+    if (existsSync(abs(out)) && !args.force) { console.error(`${out} exists; pass --force to replace it (the earlier import stays in git history)`); process.exitCode = 1; return; }
+    writeJson(out, ref);
+    console.log(`-> ${out} (independent AI review; not human-verified; classifications.json unchanged)`);
   },
 
   help() {

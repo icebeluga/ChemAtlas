@@ -17,3 +17,9 @@ Taxonomy 1.0.0, pipeline, review sheet, 92-question pilot, 40-question adjudicat
 
 ## Needs a human
 Review the benchmark in the sheet, decide the conventions, confirm the supplement pages and catalog corrections, choose precision vs recall for student search.
+
+## Round 3 (2026-11-14): independent-review package
+- `export-review-package` builds a review package for an outside AI reviewer (GPT-6); `import-ai-review` validates and stores the results as an independent AI review (never human-verified).
+- Package built and verified: 85 questions (40 benchmark + 45 held-out), 150 parts, 195 source images, 109 concepts, 7 conventions, 8 corrections; 379 files, 39 MB. Saved to the owner's Downloads folder (not committed).
+- `research/concepts/catalog-issues.json` collects the catalog problems found so far.
+- 24 concept tests pass.

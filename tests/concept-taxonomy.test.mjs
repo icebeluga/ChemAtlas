@@ -80,4 +80,7 @@ test("taxonomy 1.1 draft builds cleanly, stays a draft and only adds or edits co
   assert.deepEqual(added.map(c => c.id).sort(), ["d-orbital-hybridization", "electrolyte-conductivity", "lewis-acid-base", "phase-diagrams"]);
   for (const c of added.filter(c => c.scope === "beyond-ap")) assert.deepEqual(c.topics.primary, [], `${c.id} has no current CED topic`);
   assert.match(draft.concepts.find(c => c.id === "hess-law").exclude, /coupled-reactions/);
+  const ec = draft.concepts.find(c => c.id === "electrolyte-conductivity");
+  assert.deepEqual(ec.topics, { primary: ["3.7"], related: ["3.8", "2.3"] });
+  assert.match(ec.topicNote, /not an explicit College Board learning objective/);
 });

@@ -1,6 +1,6 @@
 # Taxonomy 1.1 (draft): change log
 
-Status: **draft, not active.** Source `concepts.v1.1.draft.source.json`, built to `taxonomy.v1.1.draft.json` (hash `899936cf9607d2a5`, 113 concepts). The pipeline still uses taxonomy 1.0.0 (`taxonomy.v1.json`); nothing has been re-classified and no record is stale.
+Status: **draft, not active.** Source `concepts.v1.1.draft.source.json`, built to `taxonomy.v1.1.draft.json` (hash `d4073d133876a5e5`, 113 concepts). The pipeline still uses taxonomy 1.0.0 (`taxonomy.v1.json`); nothing has been re-classified and no record is stale.
 
 Scope: only changes supported by **both** independent AI reviews (Claude's classifiers/adjudicators and GPT-6) **and** by the chemistry. The open conventions C0–C8 are deliberately not encoded; they need the owner's (ideally a teacher's) decision first. Evidence: `docs/concept-classification/gpt6-audit-analysis.md`.
 
@@ -19,10 +19,12 @@ Scope: only changes supported by **both** independent AI reviews (Claude's class
 
 | Concept | Scope | Why |
 | --- | --- | --- |
-| `electrolyte-conductivity` (topic 3.8; related 2.3, 3.7) | current AP | `frq-2024-5-2125` (b) asks why the filtrate conducts; GPT-6 had to use bonding-types (wrong) and Claude solution-representations (a particle-diagram concept). Reported by Claude's classifiers in round 1 and by GPT-6. **The topic placement should be confirmed against the CED.** |
+| `electrolyte-conductivity` (topic 3.7; related 3.8, 2.3) | current AP | `frq-2024-5-2125` (b) asks why the filtrate conducts; GPT-6 had to use bonding-types (wrong) and Claude solution-representations (a particle-diagram concept). Reported by Claude's classifiers in round 1 and by GPT-6. Topic placement: see below. |
 | `lewis-acid-base` | beyond AP | BF3 + NH3 adduct (`frq-2005-4-10` (f), also `mcq-2017-30-1137`). Reported by both. |
 | `phase-diagrams` | beyond AP | `mcq-2002-6-606` and legacy items; reported by both. |
 | `d-orbital-hybridization` | beyond AP | Legacy sp3d/sp3d2 (`frq-2008-5-63` (e)(ii)); both reviewers asked for a scope marker. |
+
+**Topic placement of `electrolyte-conductivity` (revised).** The first draft put it under 3.8. A check of the College Board CED (by GPT-6, at the owner's request) found that 3.8 is specifically about particulate representations of solutions, and no CED topic is about conductivity as such. The draft now uses **3.7 (solutions and mixtures) as the closest organizational association**, with 3.8 related when particle diagrams are involved and 2.3 related for molten versus solid ionic compounds. This is a **ChemAtlas classification decision, not an explicit College Board learning objective**; the concept's `topicNote` field says so.
 
 Beyond-AP concepts have no current CED topic and set the record flag `beyond-ap-content`, so legacy items stay searchable without being presented as current exam content.
 

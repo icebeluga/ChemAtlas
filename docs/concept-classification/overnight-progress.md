@@ -33,3 +33,7 @@ Review the benchmark in the sheet, decide the conventions, confirm the supplemen
 ## Round 5 (2026-11-14): taxonomy 1.1 draft
 - Draft source and build (113 concepts: 6 edited, 4 added) from changes both AI reviews support; not active, nothing re-classified. Adopting it would make 17 records stale. Change log: `research/concepts/taxonomy-1.1-changes.md`.
 - `build-taxonomy --source --out` builds a draft without touching the active taxonomy.
+
+## Round 6 (2026-11-14): conductivity topic and frq-2024-5-2125
+- `electrolyte-conductivity` now topic 3.7 (related 3.8, 2.3), documented as a ChemAtlas decision; draft rebuilt (`d4073d133876a5e5`), still inactive.
+- `frq-2024-5-2125` is from a different, unreleased exam form (scanned booklet; year only from the uploader's title), not a numbering typo; record unchanged. Three more catalog problems found. See `source-identity-frq-2024-5-2125.md`.

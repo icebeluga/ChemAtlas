@@ -5669,20 +5669,21 @@
       "hash": "7367a294b245b5df"
     },
     {
-      "researchGroups": [],
-      "prerequisites": [],
       "id": "electrolyte-conductivity",
       "name": "Electrolytes and electrical conductivity",
       "group": "solutions",
       "topics": {
         "primary": [
-          "3.8"
+          "3.7"
         ],
         "related": [
-          "2.3",
-          "3.7"
+          "3.8",
+          "2.3"
         ]
       },
+      "topicNote": "ChemAtlas classification decision, not an explicit College Board learning objective: no CED topic is about conductivity as such. Topic 3.7 (solutions and mixtures) is the closest organizational home; 3.8 (particulate representations of solutions) is related when particle diagrams are involved, and 2.3 (structure of ionic solids) for conduction in molten versus solid ionic compounds.",
+      "researchGroups": [],
+      "prerequisites": [],
       "definition": "Explaining electrical conductivity from mobile charged particles: ionic solids do not conduct but their melts and aqueous solutions do; strong electrolytes dissociate completely, weak electrolytes partly, and molecular non-electrolytes not at all.",
       "include": "Tag when conductivity must be predicted or explained, or substances classified as strong, weak or non-electrolytes from conductivity evidence.",
       "exclude": "Do not tag when electrolytes are only drawn or chosen as particle diagrams (tag solution-representations); conduction in metals is bonding-types.",
@@ -5708,7 +5709,7 @@
         "u2"
       ],
       "researchMicroConcepts": [],
-      "hash": "4b3e0435b8f5c0b9"
+      "hash": "b5d1b942844ea9c8"
     },
     {
       "researchGroups": [],
@@ -13660,5 +13661,5 @@
       "warning: research topic 8.4 name \"Acid-Base Reactions\" differs from catalog \"Acid-Base Reactions and Buffers\" (catalog name kept)"
     ]
   },
-  "taxonomyHash": "899936cf9607d2a5"
+  "taxonomyHash": "d4073d133876a5e5"
 }

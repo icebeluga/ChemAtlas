@@ -1,0 +1,25 @@
+{
+  "questionId": "frq-2024-6-2126",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "electrochemical-cells"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "redox-half-reactions"
+      ],
+      "supporting": []
+    },
+    "c": {
+      "primary": [
+        "electrolysis-faraday"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Only parts a-c are printed on this page (matching the catalog); the Cl2 potential reads -1.36 in the scan, which does not change the tags."
+}

@@ -1,0 +1,22 @@
+{
+  "questionId": "mcq-2014-33-185",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop cuts off the first line of the stem ('Additional Cl2(g) is injected into the system at'); page context shows it in full. Graphs A-D legible. Shared stimulus page (Q29-33) gives PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid container, so Cl2 is a product and the reverse reaction consumes it." },
+  "officialTopics": { "primary": "7.9", "additional": ["7.2"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        { "conceptId": "le-chatelier", "evidence": "Must predict how adding a product (Cl2) disturbs the equilibrium and shifts it toward reactants, so the reverse rate jumps and then relaxes." },
+        { "conceptId": "dynamic-equilibrium", "evidence": "Must choose the rate-versus-time graph showing forward and reverse rates re-equalizing at a new constant value after the disturbance." }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["predict", "interpret"],
+      "representations": ["graph", "chemical-equation"],
+      "skills": ["graph-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

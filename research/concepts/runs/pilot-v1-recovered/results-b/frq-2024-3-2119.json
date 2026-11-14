@@ -1,0 +1,215 @@
+{
+  "questionId": "frq-2024-3-2119",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Pages 10-12 plus scanned continuation page 13 (part f) read. All parts (a)-(f) and graph visible; scan is photocopied but legible."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "8.4",
+      "7.10",
+      "5.1",
+      "9.2",
+      "9.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "bronsted-lowry",
+          "evidence": "Must identify a conjugate acid-base pair (e.g. piperidine/piperidinium or H2O/OH-) and label donor and acceptor."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must write the Kb expression for the weak base with products over reactant and water omitted."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "ph-poh",
+          "evidence": "Must convert given [OH-] to pOH and then pH at 25 C using Kw."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Percent ionization of the weak base is [OH-]eq divided by initial concentration."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-i",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write the net ionic equation between major species (piperidine and H3O+), conserving atoms and charge."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "bronsted-lowry",
+          "evidence": "The reaction is a proton transfer from H3O+ to the base."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-ii",
+      "primary": [
+        {
+          "conceptId": "reaction-quotient",
+          "evidence": "Must argue that adding acid lowers [OH-], making Q less than K so the reaction proceeds forward."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "Must reason from the form of Q for the Kb reaction, with OH- in the numerator."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "justify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "reaction-rate",
+          "evidence": "Curve must show H2 pressure falling three times as fast as product pressure rises, from the stoichiometric ratio."
+        },
+        {
+          "conceptId": "reaction-stoichiometry",
+          "evidence": "Final H2 pressure at 30 min must come from the 3:1 mole ratio applied to the product pressure on the graph in a rigid container."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent",
+        "interpret"
+      ],
+      "representations": [
+        "graph",
+        "chemical-equation"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "f-i",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must explain at the particle level that fewer gas particles (4 mol to 1 mol) means fewer microstates and less dispersal, so delta S is negative."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f-ii",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must use delta G = delta H - T delta S with negative delta G and negative delta S to deduce the sign of delta H."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must use the negative delta S from part (i) so that -T delta S is positive."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "predict"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

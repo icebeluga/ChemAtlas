@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "about": "Extra or corrected source regions for questions whose catalog regions miss content. Applied only by the concept pipeline (lib/concepts/content.mjs); public/student-questions.json and the image-review service are not changed. Pages are compiled catalog page numbers. Every entry was located by a model looking at the rendered PDF pages and is NOT human-confirmed; entries with catalogCorrection propose a catalog fix for the owner.",
+  "supplements": {
+    "mcq-2018-36-1207": {
+      "mode": "add",
+      "regions": [{ "page": 1206, "rect": null, "role": "stimulus" }],
+      "reason": "Shared eggshell experiment (Questions 35-38: calibration line and eggshell data) is printed on the preceding page.",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-05 p6 begins 'Questions 35-38 refer to the following information'"
+    },
+    "frq-2011-6-937": {
+      "mode": "add",
+      "regions": [{ "page": 938, "rect": null, "role": "continuation" }],
+      "reason": "Part (b)(ii) and part (c) continue on the next page (2011 Form B, page -13-).",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-04 p38"
+    },
+    "frq-2024-3-2119": {
+      "mode": "add",
+      "regions": [{ "page": 2122, "rect": null, "role": "continuation" }],
+      "reason": "Part (f)(i)-(ii) is on the scanned page after the three catalog pages ('Continue your response to QUESTION 3', Page 13).",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-08 p22 viewed"
+    },
+    "mcq-2024-21-2091": {
+      "mode": "replace",
+      "regions": [{ "page": 2089, "rect": null, "role": "question" }],
+      "catalogTextBelongsElsewhere": true,
+      "reason": "Catalog page 2091 prints Questions 23-25; its OCR read '23.' as '21.'. Printed Question 21 (CO + 2 H2 equilibrium, Le Chatelier) is on page 2089, which no catalog record cites.",
+      "catalogCorrection": "Point mcq-2024-21 at page 2089 and replace its fullText; the current text is printed Question 23.",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-07 p289 and p291 viewed"
+    },
+    "mcq-2024-33-2094": {
+      "mode": "replace",
+      "regions": [{ "page": 2095, "rect": null, "role": "question" }],
+      "catalogTextBelongsElsewhere": true,
+      "reason": "Catalog page 2094 prints Questions 31-32 only. Printed Question 33 (C2H5Cl decomposition, first-order evidence from rate and half-life) is on page 2095.",
+      "catalogCorrection": "Point mcq-2024-33 at page 2095 and replace its fullText; the current text is printed Questions 31-32.",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-07 p295 viewed"
+    },
+    "mcq-2014-33-185": {
+      "mode": "add",
+      "regions": [{ "page": 184, "rect": null, "role": "stimulus" }],
+      "reason": "Shared stimulus for Questions 29-33 (PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid 1.00 L container) is printed on the preceding page; the question depends on which side Cl2 is on.",
+      "catalogCorrection": "Register a shared stimulus for 2014 practice exam Questions 29-33 in research/stimuli.json (page 184).",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-01 p184 begins 'Questions 29-33 refer to the following'; found because the blind adjudicator marked the question partial"
+    },
+    "mcq-2022-62-1709": {
+      "mode": "add",
+      "regions": [{ "page": 1710, "rect": null, "role": "continuation" }],
+      "reason": "Parts (c) and (d) of this scoring-guide item continue on the next page.",
+      "catalogCorrection": "This record is typed MCQ but is a free-response item taken from a scoring-guide page; consider re-typing or replacing with the clean question source.",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-06 p210 begins with part (c)"
+    },
+    "mcq-2023-67-1808": {
+      "mode": "add",
+      "regions": [{ "page": 1809, "rect": null, "role": "continuation" }],
+      "reason": "Parts (c) and (d) of this scoring-guide item continue on the next page.",
+      "catalogCorrection": "This record is typed MCQ but is a free-response item taken from a scoring-guide page; consider re-typing or replacing with the clean question source.",
+      "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-07 p9 begins with part (c)"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "questionId": "mcq-2024-33-2094",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 33,
+  "text": "",
+  "regions": [
+    {
+      "page": 2095,
+      "rect": null,
+      "role": "question",
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 295,
+        "compiledPage": 2095
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Question number was not legible in OCR; source page retained and needs visual verification.",
+    "Content supplement (replace): Catalog page 2094 prints Questions 31-32 only. Printed Question 33 (C2H5Cl decomposition, first-order evidence from rate and half-life) is on page 2095. Catalog text belongs to another question and is withheld."
+  ],
+  "supplement": {
+    "mode": "replace",
+    "reason": "Catalog page 2094 prints Questions 31-32 only. Printed Question 33 (C2H5Cl decomposition, first-order evidence from rate and half-life) is on page 2095.",
+    "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-07 p295 viewed",
+    "catalogCorrection": "Point mcq-2024-33 at page 2095 and replace its fullText; the current text is printed Questions 31-32."
+  },
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "question-number-not-confirmed",
+      "refers-to-visual-content",
+      "content-supplemented-see-images",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "a849cfc774a3cf89",
+  "images": [
+    {
+      "kind": "question",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2024-33-2094-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 295,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

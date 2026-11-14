@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2024-21-2091",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Printed Question 21 (CO + 2 H2 equilibrium, delta H -90 kJ) and choices A-D clear on page 289; faint bleed-through of other pages ignored. Catalog text withheld and not used."
+  },
+  "officialTopics": {
+    "primary": "7.9",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "Must predict which stress shifts the equilibrium toward products to decrease CO: compare temperature changes, adding product, and removing a reactant."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must use the negative delta H (exothermic forward) to decide the direction of shift for a temperature change."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "compare"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

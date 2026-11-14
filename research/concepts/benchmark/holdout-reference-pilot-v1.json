@@ -1,0 +1,1002 @@
+{
+  "referenceKind": "model-adjudicated blind (claude-opus-5-5, prompt adjudicator.blind.v1, no proposals seen); NOT human-verified",
+  "createdAt": "2026-11-14T14:38:13.028Z",
+  "questions": {
+    "frq-2005-1-6": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ]
+        },
+        "c-i": {
+          "primary": [
+            "molarity"
+          ],
+          "supporting": []
+        },
+        "c-ii": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": []
+        },
+        "d-i": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        },
+        "d-ii": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        },
+        "e": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Part d split into printed (i)/(ii); e compares acids by Ka values, which the reference assigns to weak-acid-equilibrium, not acid-strength-structure."
+    },
+    "frq-2005-4-10": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ]
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        },
+        "c": {
+          "primary": [
+            "balanced-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ]
+        },
+        "d": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        },
+        "e": {
+          "primary": [
+            "balanced-equations"
+          ],
+          "supporting": [
+            "ionic-formulas"
+          ]
+        },
+        "f": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        },
+        "g": {
+          "primary": [
+            "net-ionic-equations",
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        },
+        "h": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Hydroxo-complex formation (b), Lewis adduct BF3-NH3 (f) and acidic-anhydride behavior of SO3 (g) are recall-based descriptive chemistry beyond the current CED."
+    },
+    "frq-2005-7-13": {
+      "contentStatus": "complete",
+      "parts": {
+        "a-i": {
+          "primary": [
+            "hydrogen-bonding",
+            "dipole-dipole"
+          ],
+          "supporting": [
+            "molecular-polarity"
+          ]
+        },
+        "a-ii": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": []
+        },
+        "b-i": {
+          "primary": [
+            "bonding-types"
+          ],
+          "supporting": []
+        },
+        "b-ii": {
+          "primary": [
+            "lattice-energy"
+          ],
+          "supporting": []
+        },
+        "c-i": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "c-ii": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "d-i": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        },
+        "d-ii": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Used printed labels (a)(i),(a)(ii),(d)(i),(d)(ii) rather than catalog a and d; ion size in (b)(ii) is an input to the lattice argument so atomic-radius is not tagged."
+    },
+    "frq-2008-3-59": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [
+            "redox-half-reactions"
+          ]
+        },
+        "c": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "e": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "f": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Part (b) requires n = 6 electrons from combining the half-reactions; (d)(i) and (d)(ii) test the same concept so kept as one part."
+    },
+    "frq-2008-5-63": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "c": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "d": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        },
+        "e-i": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "e-ii": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "f": {
+          "primary": [
+            "molecular-polarity"
+          ],
+          "supporting": [
+            "molecular-geometry"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Part (e)(ii) needs sp3d2 for six domains, which the reference marks as d-orbital hybridization not assessed on the current exam; still tagged hybridization."
+    },
+    "frq-2008-6-65": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "hydrogen-bonding",
+            "molecular-polarity"
+          ]
+        },
+        "b": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "solid-types"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "imf-properties",
+            "london-dispersion"
+          ],
+          "supporting": [
+            "dipole-dipole"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "In (d) dispersion decides the comparison but HCl's dipole-dipole forces must be addressed; in (c) the molecular versus covalent-network classification carries the argument."
+    },
+    "frq-2009-5-325": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        },
+        "e": {
+          "primary": [
+            "thermodynamic-kinetic-control"
+          ],
+          "supporting": []
+        },
+        "f-i": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "f-ii": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": []
+        },
+        "f-iii": {
+          "primary": [
+            "ideal-gas-law"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "f-iii: ideal-gas-law primary for pressure falling with fewer gas moles; favorability of Z (negative dG from X and Y, or Q=0<K) is supporting; f split into printed subparts."
+    },
+    "frq-2011-3-946": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "balanced-equations",
+            "oxidation-numbers"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "c-i": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "enthalpy-of-formation"
+          ]
+        },
+        "c-ii": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        },
+        "d-i": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "reaction-quotient"
+          ]
+        },
+        "d-ii": {
+          "primary": [
+            "free-energy-equilibrium",
+            "reaction-quotient"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Page is 2002 Form B Q3 despite the 2011 id; c-i uses products-minus-reactants with formation values (N2 zero), tagged enthalpy-of-formation as supporting since no dGf concept exists."
+    },
+    "frq-2020-sample-2-116": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": [
+            "reaction-mechanisms"
+          ]
+        },
+        "b": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "dipole-dipole",
+            "london-dispersion"
+          ]
+        },
+        "e": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        },
+        "f": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        },
+        "g": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        },
+        "h": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": [
+            "dilution"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Distillation in e is context for a vapor-pressure IMF argument; h needs moles of acid unchanged by added water (dilution); g buret reading is titration-analysis."
+    },
+    "frq-2024-6-2126": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "electrochemical-cells"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "redox-half-reactions"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "electrolysis-faraday"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Only parts a-c are printed on this page (matching the catalog); the Cl2 potential reads -1.36 in the scan, which does not change the tags."
+    },
+    "mcq-1984-38-126": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Identifying beta emission from the change in atomic number is a nuclear-equation task beyond the current AP course."
+    },
+    "mcq-1984-72-131": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "partial-pressures"
+          ],
+          "supporting": [
+            "ideal-gas-law"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "The key is recognizing the water-vapor correction (Dalton's law) uses a tabulated value; molar mass via PV=nRT is the supporting framework."
+    },
+    "mcq-1984-84-135": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "colligative-properties"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Boiling-point elevation requires counting dissolved particles per formula (K2SO4 gives 3 ions vs 0.20 M sucrose)."
+    },
+    "mcq-1994-63-691": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Crop omits the graph but page context shows it; constant half-life of X under excess Y indicates first order, and pseudo-order reasoning is part of the same concept."
+    },
+    "mcq-1994-65-692": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ph-solubility"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Must recognize Mg(OH)2 as insoluble in water (the ammonium and nitrate salts are soluble by AP rules) and that acid dissolves a basic hydroxide."
+    },
+    "mcq-2002-38-614": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "beer-lambert"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Q38 (crop starts mid-question; page context shows full stem) evaluates spectrophotometry procedure; experimental-design is a skill."
+    },
+    "mcq-2002-48-760": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "molecular-polarity"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "CCl4 has polar bonds but is a nonpolar molecule, so judging whole-molecule polarity is a necessary step; ion-dipole left implicit in like-dissolves-like."
+    },
+    "mcq-2008-25-34": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ideal-gas-law"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Choosing R in L atm units and kelvin temperature is part of applying PV=nRT, not separate concepts."
+    },
+    "mcq-2008-3-29": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Predicting which group forms anions from valence electrons is ion-charge prediction."
+    },
+    "mcq-2008-4-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Locating the equivalence point on the curve; no titration calculation is required."
+    },
+    "mcq-2008-44-39": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Full page shows Q44 choices; ranking Cl2 vs I2 oxidizing strength via reduction potentials gives positive E cell."
+    },
+    "mcq-2008-57-41": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Full page shows Q57 with choices; the triple bond counts as one domain, giving two domains per C."
+    },
+    "mcq-2008-6-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Half-equivalence point on the curve; Henderson-Hasselbalch not needed."
+    },
+    "mcq-2008-8-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "strong-weak-acids"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Requires recognizing HBr as a strong acid that ionizes completely."
+    },
+    "mcq-2008-9-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "kinetic-molecular-theory"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Slowest effusion means heaviest molar mass at equal T; qualitative KMT, no Graham calculation."
+    },
+    "mcq-2014-12-176": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Sign analysis of dH and dS for temperature-dependent favorability; entropy signs are given so entropy is not tagged."
+    },
+    "mcq-2014-17-1448": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-order"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Well depth/position must be matched to N2 triple > O2 double bond strength and H2 shortest bond."
+    },
+    "mcq-2014-22-180": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Kb of a weak base gives [OH-]; converting pOH to pH is a non-trivial step that separates choice D from A."
+    },
+    "mcq-2014-24-1450": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Stimulus on the page gives ΔH<0, so the sign is given and endo-exothermic is not tagged."
+    },
+    "mcq-2014-29-1453": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "k-manipulation",
+            "free-energy-equilibrium"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Crop omits the equations but page context shows them; K3 = K1*K2^2 must be computed and K>1 linked to favorability."
+    },
+    "mcq-2014-30-184": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "dynamic-equilibrium"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Stimulus PCl5 decomposition is visible on the page context; forward rate falling to a nonzero constant is the nature of dynamic equilibrium."
+    },
+    "mcq-2014-33-185": {
+      "contentStatus": "partial",
+      "parts": {},
+      "stratum": "non-agree",
+      "notes": "The shared stimulus (the reaction equation, needed to know whether Cl2 is a reactant or product) is on the previous page and not in this packet's images; the crop also starts mid-stem."
+    },
+    "mcq-2014-47-190": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nernst-nonstandard"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Fe2+ is a reactant in Y and a product in Z, so raising it changes Q oppositely; Q reasoning is treated as inside nernst-nonstandard."
+    },
+    "mcq-2014-9-174": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "heat-transfer"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Energy lost by metal equals energy gained by water is the key; rejecting the heat-capacity distractor relies on q=mcΔT reasoning."
+    },
+    "mcq-2016-26-1064": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "The slow step must be bimolecular in NO2 and F2, requiring the elementary-step rate law from molecularity."
+    },
+    "mcq-2018-11-1196": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Standard cell potential from two reduction potentials; not multiplying E by coefficients is part of the same concept."
+    },
+    "mcq-2018-12-1197": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Mass-mole conversions are routine steps of the 1:2 mole-ratio calculation."
+    },
+    "mcq-2018-38-1920": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "coupled-reactions"
+          ],
+          "supporting": [
+            "hess-law"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Adding scaled/reversed dG values matches coupled-reactions include rule; hess-law supporting for the state-function equation manipulation, a boundary call."
+    },
+    "mcq-2018-57-2046": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "At the normal melting point the phases are at equilibrium so ΔG=0, giving ΔH=TΔS; the ΔG=0-at-equilibrium step is from free-energy-equilibrium."
+    },
+    "mcq-2022-38-1648": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "atomic-radius"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Choosing the curve needs both well depth from the given energies and a longer equilibrium distance for I2 because I atoms are larger."
+    },
+    "mcq-2023-43-1731": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "titration-curves"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Indicator selection is pka-speciation; reading the equivalence-point pH from the curve is supporting."
+    },
+    "mcq-2024-19-2088": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "atomic-radius"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Ranking includes ions and isoelectronic species but only the size order is asked, so coulombic-attraction is not tagged separately."
+    },
+    "mcq-2024-38-2099": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "photoelectron-spectroscopy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Must link higher binding energies for the same configuration to larger nuclear charge, a Coulombic argument beyond reading the spectrum."
+    },
+    "mcq-2024-56-2109": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-representations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Matching ion ratios in the diagram to an equation also requires rejecting choices whose stated precipitate or solubility is wrong."
+    },
+    "mcq-2024-60-2110": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Q60 weighted-average atomic mass from isotope abundances; crop includes neighbouring Q57-59."
+    }
+  }
+}

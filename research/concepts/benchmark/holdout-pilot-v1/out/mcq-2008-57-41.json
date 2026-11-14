@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2008-57-41",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "hybridization"
+      ],
+      "supporting": [
+        "electron-domains"
+      ]
+    }
+  },
+  "notes": "Full page shows Q57 with choices; the triple bond counts as one domain, giving two domains per C."
+}

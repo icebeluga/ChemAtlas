@@ -1,0 +1,22 @@
+{
+  "questionId": "mcq-2023-67-1808",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "missing-content-recovered-from-page", "notes": "Free-response item (parts a-d) from a scoring-guide page, cataloged as an MCQ with a single stem part. Page 8 shows the absorbance spectrum, (a), (b) and the standard curve; the continuation (page 9) shows (c), (d) and the two-student standard-curve graph. Scoring answers are visible on page 9 but were not used. Classified as one stem part because the catalog has no part list." },
+  "officialTopics": { "primary": "3.13", "additional": ["3.7"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        { "conceptId": "beer-lambert", "evidence": "Parts (a), (c) and (d) require choosing the wavelength of maximum absorbance, reading concentration from the standard curve at A = 0.30, and identifying an error that makes the calibration slope less steep." },
+        { "conceptId": "dilution", "evidence": "Part (b) requires M1V1 = M2V2 to find the volume of 0.198 M stock needed for 250.0 mL of 0.0400 M solution." }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["identify", "calculate", "interpret", "evaluate-error"],
+      "representations": ["spectrum", "calibration-curve", "graph"],
+      "skills": ["graph-analysis", "error-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "This is a multi-part FRQ but the catalog gives only a stem part, so per-part concepts are merged; it should be re-typed as an FRQ with parts a-d."
+}

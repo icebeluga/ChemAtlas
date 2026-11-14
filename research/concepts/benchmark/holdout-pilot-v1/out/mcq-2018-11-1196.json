@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-2018-11-1196",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "cell-potential"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Standard cell potential from two reduction potentials; not multiplying E by coefficients is part of the same concept."
+}

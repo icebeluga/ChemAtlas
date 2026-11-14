@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2018-36-1207",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows stem and choices A-D; calibration graph and eggshell data table recovered from preceding stimulus page (Questions 35-38)."
+  },
+  "officialTopics": {
+    "primary": "1.4",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mixture-composition",
+          "evidence": "Must find the mass of CaCO3 in the eggshell from the pressure of gas it produced, via the calibration line, then divide by the 0.200 g sample to get the mass percent of one component in a mixture."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "interpret"
+      ],
+      "representations": [
+        "graph",
+        "table",
+        "experimental-data",
+        "calibration-curve"
+      ],
+      "skills": [
+        "graph-analysis",
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

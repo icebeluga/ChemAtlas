@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-1984-72-131",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.4",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "partial-pressures",
+          "evidence": "Must recognize the collected gas is mixed with water vapor, so its partial pressure requires subtracting the water vapor pressure, a tabulated value rather than a measurement."
+        },
+        {
+          "conceptId": "ideal-gas-law",
+          "evidence": "Must know which quantities (mass, P, V, T) enter M = mRT/PV to determine molecular weight."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-procedure"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

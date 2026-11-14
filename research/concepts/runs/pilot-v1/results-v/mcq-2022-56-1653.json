@@ -1,0 +1,55 @@
+{
+  "questionId": "mcq-2022-56-1653",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the particulate diagram of ions X and Y with water molecules, the stem and choices A-D; atom orientation legible."
+  },
+  "officialTopics": {
+    "primary": "3.8",
+    "additional": [
+      "3.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ion-dipole",
+          "evidence": "Must use the orientation of water molecules around each ion to decide which ion is the anion and which the cation."
+        },
+        {
+          "conceptId": "solution-representations",
+          "evidence": "Must interpret the particulate diagram of hydrated ions."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "particulate-diagram"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "removed supporting bond-polarity",
+        "reason": "Knowing which end of a water molecule faces a cation or anion is part of understanding ion-dipole hydration-shell orientation itself, so a student who knows the primary concept needs nothing further."
+      }
+    ]
+  }
+}

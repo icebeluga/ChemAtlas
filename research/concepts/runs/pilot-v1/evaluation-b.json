@@ -1,30 +1,34 @@
 {
+  "reference": "research/concepts/benchmark/reference-pilot-v1.json",
+  "conventionsExcluded": 0,
   "summary": {
     "referenceQuestions": 40,
     "compared": 40,
     "missing": 0,
     "statusMismatch": 0,
     "primary": {
-      "precision": 0.892,
-      "recall": 0.846,
-      "tp": 66,
-      "fp": 8,
-      "fn": 12
+      "precision": 0.829,
+      "recall": 0.872,
+      "tp": 68,
+      "fp": 14,
+      "fn": 10
     },
     "supporting": {
-      "precision": 0.5,
+      "precision": 0.423,
       "recall": 0.759,
       "tp": 22,
-      "fp": 22,
+      "fp": 30,
       "fn": 7
     },
     "anyRole": {
-      "precision": 0.822,
-      "recall": 0.907,
-      "tp": 97,
-      "fp": 21,
-      "fn": 10
+      "precision": 0.754,
+      "recall": 0.944,
+      "tp": 101,
+      "fp": 33,
+      "fn": 6
     },
+    "roleSwaps": 11,
+    "ignoredConceptMentions": 0,
     "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
   },
   "errors": [
@@ -51,12 +55,42 @@
     {
       "questionId": "frq-2011-3-933",
       "partId": "c-i",
-      "issue": "missed primary free-energy-equilibrium"
+      "issue": "extra primary gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-i",
+      "issue": "extra supporting le-chatelier"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-i",
+      "issue": "extra supporting hess-law"
     },
     {
       "questionId": "frq-2011-3-933",
       "partId": "c-ii",
-      "issue": "missed primary gibbs-free-energy"
+      "issue": "extra primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-ii",
+      "issue": "extra supporting le-chatelier"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-ii",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-iii",
+      "issue": "extra primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-iii",
+      "issue": "extra primary gibbs-free-energy"
     },
     {
       "questionId": "frq-2011-3-933",
@@ -65,8 +99,38 @@
     },
     {
       "questionId": "frq-2011-3-933",
+      "partId": "c-iii",
+      "issue": "extra supporting le-chatelier"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "c-iii",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "d",
+      "issue": "extra primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "d",
+      "issue": "extra primary gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2011-3-933",
       "partId": "d",
       "issue": "missed primary hess-law"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "d",
+      "issue": "extra supporting le-chatelier"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "d",
+      "issue": "extra supporting hess-law"
     },
     {
       "questionId": "frq-2023-3-448",
@@ -301,6 +365,8 @@
         "fp": 2,
         "fn": 0
       },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 0,
       "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
     },
     "non-agree": {
@@ -309,26 +375,28 @@
       "missing": 0,
       "statusMismatch": 0,
       "primary": {
-        "precision": 0.864,
-        "recall": 0.81,
-        "tp": 51,
-        "fp": 8,
-        "fn": 12
+        "precision": 0.791,
+        "recall": 0.841,
+        "tp": 53,
+        "fp": 14,
+        "fn": 10
       },
       "supporting": {
-        "precision": 0.429,
+        "precision": 0.349,
         "recall": 0.682,
         "tp": 15,
-        "fp": 20,
+        "fp": 28,
         "fn": 7
       },
       "anyRole": {
-        "precision": 0.798,
-        "recall": 0.882,
-        "tp": 75,
-        "fp": 19,
-        "fn": 10
+        "precision": 0.718,
+        "recall": 0.929,
+        "tp": 79,
+        "fp": 31,
+        "fn": 6
       },
+      "roleSwaps": 11,
+      "ignoredConceptMentions": 0,
       "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
     }
   }

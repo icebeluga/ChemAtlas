@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2016-5-1053",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows full stem and choices A-D plus a partial footer line."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": [
+      "2.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-order",
+          "evidence": "Must rank N2, O2 and F2 bond enthalpies from their triple, double and single bonds."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Bond multiplicities are not given, so the student must work out the Lewis structures of N2, O2 and F2 to know the bond orders."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

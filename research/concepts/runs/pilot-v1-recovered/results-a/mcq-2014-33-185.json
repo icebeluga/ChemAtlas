@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2014-33-185",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop omits the first stem line ('Additional Cl2(g) is injected into the system at'); page context shows it. All four rate-vs-time graphs A-D legible. Shared stimulus on p184 gives PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid 1.00 L container, so Cl2 is a product." },
+  "officialTopics": { "primary": "7.2", "additional": ["7.9"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "dynamic-equilibrium", "evidence": "Must choose a reverse-rate-versus-time graph, reasoning about a nonzero reverse rate at the initial equilibrium, its immediate response to added product Cl2, and its evolution as the system re-approaches equal forward and reverse rates." }],
+      "supporting": [{ "conceptId": "le-chatelier", "evidence": "Must recognize that adding the product Cl2 shifts the equilibrium toward PCl5, and must judge where the new equilibrium reverse rate lies relative to the original to distinguish graphs B, C and D." }],
+      "contextual": [],
+      "actions": ["interpret", "predict"],
+      "representations": ["graph", "chemical-equation"],
+      "skills": ["graph-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

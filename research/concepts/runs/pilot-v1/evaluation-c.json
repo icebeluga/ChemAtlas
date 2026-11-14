@@ -1,4 +1,6 @@
 {
+  "reference": "research/concepts/benchmark/reference-pilot-v1.json",
+  "conventionsExcluded": 0,
   "summary": {
     "referenceQuestions": 40,
     "compared": 40,
@@ -25,6 +27,8 @@
       "fp": 6,
       "fn": 8
     },
+    "roleSwaps": 4,
+    "ignoredConceptMentions": 0,
     "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
   },
   "errors": [
@@ -166,6 +170,8 @@
         "fp": 1,
         "fn": 2
       },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 0,
       "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
     },
     "non-agree": {
@@ -194,6 +200,8 @@
         "fp": 5,
         "fn": 6
       },
+      "roleSwaps": 4,
+      "ignoredConceptMentions": 0,
       "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
     }
   }

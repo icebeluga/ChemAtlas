@@ -5,92 +5,45 @@
     "FRQ": 20
   },
   "byReviewStatus": {
-    "blocked": 7,
-    "machine_reviewed": 33,
-    "needs_attention": 52
+    "needs_attention": 57,
+    "machine_reviewed": 35
   },
-  "blocked": [
-    {
-      "questionId": "mcq-2018-36-1207",
-      "status": "partial",
-      "notes": "Crop and page show only the stem and choices; the eggshell experiment stimulus (sample mass and measured data) shared by Q35-38 is on an earlier page not included in the packet, so the required data cannot be seen.",
-      "selectedAs": "unit 1 MCQ (catalog topic reviewed)"
-    },
-    {
-      "questionId": "frq-2011-6-937",
-      "status": "partial",
-      "notes": "Crop and page show parts (a)(i), (a)(ii) and (b)(i) with the ethyl methanoate Lewis diagram, but (b) continues on a following page (the stem also promises kinetic molecular theory) that is not in the packet; remaining parts cannot be seen.",
-      "selectedAs": "unit 2 multipart FRQ"
-    },
-    {
-      "questionId": "mcq-2024-21-2091",
-      "status": "partial",
-      "notes": "Crop and page context are the same scanned page (-17-) showing questions numbered 23 (or 21; scan ambiguous), 24 and 25 about 'Sample 1-4' of acid. The shared stimulus describing the four acid samples (table or diagram, on a preceding page) is not in the packet, so the samples cannot be distinguished. The question number on the page does not clearly match 21.",
-      "selectedAs": "unit 8 MCQ (catalog topic reviewed)"
-    },
-    {
-      "questionId": "frq-2024-3-2119",
-      "status": "partial",
-      "notes": "Crops r1-r3 (pages 10-12 of the scan) show parts (a), (b), (c)(i)-(ii), (d)(i)-(ii) and (e)(i)-(ii) with the C5H10NH partial-pressure graph, all legible. The catalog lists parts f-i and f-ii, but the continuation page carrying part (f) is not in the packet and is not visible on any page context.",
-      "selectedAs": "unit 8 multipart FRQ"
-    },
-    {
-      "questionId": "mcq-2024-33-2094",
-      "status": "unreadable",
-      "notes": "Id says Q33, but the crop and page show only printed Q31 (ΔG favorability of 2 PCl3 + O2) and Q32 (gravimetric NaBr error). Q33 is not visible on any provided image, so it cannot be classified.",
-      "selectedAs": "question number not confirmed in OCR"
-    },
-    {
-      "questionId": "mcq-2022-62-1709",
-      "status": "partial",
-      "notes": "Scoring-guide page shows the shared stem (baking soda + citric acid calorimetry), data table, temperature-time graph and parts (a) and (b) only; catalog parts (c) and (d) are on a continuation page that is not provided.",
-      "selectedAs": "source is answer/scoring page"
-    },
-    {
-      "questionId": "mcq-2023-67-1808",
-      "status": "partial",
-      "notes": "Scoring-guide page shows the Ni(ClO4)2 spectrophotometry stem, absorbance spectrum, parts (a) and (b), and a standard curve that belongs to a later part; the continuation page with the remaining part(s) is not provided. Catalog lists only a single stem part.",
-      "selectedAs": "source is answer/scoring page"
-    }
-  ],
+  "blocked": [],
   "invalid": [],
   "cropIssues": {
-    "missing-content": 6,
+    "missing-content-recovered-from-page": 29,
     "extra-content": 8,
     "none": 47,
-    "missing-content-recovered-from-page": 24,
-    "no-crop": 6,
-    "wrong-question": 1
+    "wrong-question": 2,
+    "no-crop": 6
   },
   "diagram": {
-    "none": 45,
-    "analyzed": 43,
-    "unreadable": 1,
-    "partially-readable": 3
+    "analyzed": 48,
+    "none": 44
   },
   "flags": [
     [
       "second-pass-disagreement",
-      45
-    ],
-    [
-      "classifier-requested-review",
-      26
+      49
     ],
     [
       "crop-issue:missing-content-recovered-from-page",
-      24
+      29
+    ],
+    [
+      "classifier-requested-review",
+      21
     ],
     [
       "topic-differs-from-catalog",
-      11
+      12
     ],
     [
       "crop-issue:extra-content",
       8
     ],
     [
-      "crop-issue:missing-content",
+      "part-refined",
       6
     ],
     [
@@ -98,44 +51,52 @@
       5
     ],
     [
-      "part-refined",
-      5
+      "crop-issue:wrong-question",
+      2
     ],
     [
       "source-not-clean-question-page",
       2
-    ],
-    [
-      "crop-issue:wrong-question",
-      1
     ]
   ],
-  "partsClassified": 168,
+  "partsClassified": 193,
   "primaryPerPart": {
-    "1": 154,
-    "2": 14
+    "1": 176,
+    "2": 17
   },
   "supportingPerPart": {
-    "0": 106,
-    "1": 57,
+    "0": 121,
+    "1": 67,
     "2": 5
   },
-  "distinctConceptsUsed": 91,
+  "distinctConceptsUsed": 94,
   "topPrimary": [
     [
       "Gibbs free energy and favorability",
-      6
+      7
     ],
     [
       "Enthalpy of reaction",
+      7
+    ],
+    [
+      "Hydrogen bonding",
       6
+    ],
+    [
+      "Lewis structures",
+      5
     ],
     [
       "Intermolecular forces and physical properties",
       5
     ],
     [
-      "Hydrogen bonding",
+      "Entropy",
+      5
+    ],
+    [
+      "Equilibrium constant expressions",
       5
     ],
     [
@@ -143,7 +104,11 @@
       4
     ],
     [
-      "Lewis structures",
+      "Integrated rate laws and half-life",
+      4
+    ],
+    [
+      "Rate laws and reaction order",
       4
     ],
     [
@@ -151,7 +116,11 @@
       4
     ],
     [
-      "Entropy",
+      "Net ionic equations",
+      4
+    ],
+    [
+      "Endothermic and exothermic processes",
       4
     ],
     [
@@ -159,34 +128,14 @@
       4
     ],
     [
-      "Equilibrium constant expressions",
+      "Le Châtelier's principle",
       4
-    ],
-    [
-      "Electron configurations and atomic structure",
-      3
-    ],
-    [
-      "Bond potential-energy curves",
-      3
-    ],
-    [
-      "Bond enthalpies",
-      3
-    ],
-    [
-      "Integrated rate laws and half-life",
-      3
-    ],
-    [
-      "Rate laws and reaction order",
-      3
     ]
   ],
   "topSupporting": [
     [
       "Electron-domain counting",
-      5
+      6
     ],
     [
       "Coulomb's law and effective nuclear charge",
@@ -198,6 +147,10 @@
     ],
     [
       "Strong versus weak acids and bases",
+      3
+    ],
+    [
+      "Endothermic and exothermic processes",
       3
     ],
     [
@@ -213,15 +166,11 @@
       2
     ],
     [
+      "Reaction stoichiometry",
+      2
+    ],
+    [
       "Particle representations of solutions",
-      2
-    ],
-    [
-      "Elementary reactions and molecularity",
-      2
-    ],
-    [
-      "Endothermic and exothermic processes",
       2
     ]
   ],
@@ -239,35 +188,35 @@
       3
     ],
     [
+      "electron-domains + hybridization",
+      3
+    ],
+    [
       "free-energy-equilibrium + gibbs-free-energy",
       3
     ],
     [
-      "electron-domains + hybridization",
-      2
+      "calorimetry + enthalpy-of-reaction",
+      3
     ],
     [
       "molecular-geometry + molecular-polarity",
       2
     ],
     [
+      "bond-angles + electron-domains",
+      2
+    ],
+    [
+      "integrated-rate-laws + rate-law",
+      2
+    ],
+    [
       "dipole-dipole + london-dispersion",
-      2
-    ],
-    [
-      "imf-properties + london-dispersion",
-      2
-    ],
-    [
-      "dipole-dipole + hydrogen-bonding",
-      2
-    ],
-    [
-      "enthalpy-of-reaction + limiting-reactant",
       2
     ]
   ],
-  "topicChangedFromCatalog": 11,
+  "topicChangedFromCatalog": 12,
   "agreement": {
     "partial": 34,
     "disagree": 12,

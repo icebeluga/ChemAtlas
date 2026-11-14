@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-1994-65-692",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "ph-solubility"
+      ],
+      "supporting": [
+        "precipitation"
+      ]
+    }
+  },
+  "notes": "Must recognize Mg(OH)2 as insoluble in water (the ammonium and nitrate salts are soluble by AP rules) and that acid dissolves a basic hydroxide."
+}

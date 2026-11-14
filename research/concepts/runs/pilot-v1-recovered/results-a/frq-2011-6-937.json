@@ -1,0 +1,82 @@
+{
+  "questionId": "frq-2011-6-937",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop/page 12 shows the stem, (a)(i)-(ii) with the given Lewis diagram of ethyl methanoate, and (b)(i). The continuation image (page 13) shows (b)(ii) and (c)(i)-(iv) with the pressure-vs-time graph; it ends with STOP / END OF EXAM, so the question is complete. Catalog part 'remaining visible parts' is replaced by printed parts c-i to c-iv." },
+  "officialTopics": { "primary": "2.7", "additional": ["2.5", "3.1", "3.4", "3.5"] },
+  "parts": [
+    {
+      "partId": "a-i",
+      "primary": [{ "conceptId": "hybridization", "evidence": "Asks for the hybridization of the carbon atom labeled Cw in the given Lewis diagram." }],
+      "supporting": [{ "conceptId": "electron-domains", "evidence": "Must count three electron domains around Cw, treating the C=O double bond as one domain, to assign the hybridization." }],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["lewis-structure"],
+      "skills": []
+    },
+    {
+      "partId": "a-ii",
+      "primary": [{ "conceptId": "bond-angles", "evidence": "Must estimate the Hy-Cx-O bond angle and explain the basis of the estimate." }],
+      "supporting": [{ "conceptId": "electron-domains", "evidence": "The estimate rests on Cx having four bonding domains and no lone pairs, giving a tetrahedral arrangement." }],
+      "contextual": [],
+      "actions": ["predict", "explain"],
+      "representations": ["lewis-structure"],
+      "skills": []
+    },
+    {
+      "partId": "b-i",
+      "primary": [{ "conceptId": "lewis-structures", "evidence": "Must draw the complete Lewis electron-dot diagram of methanoic acid, HCOOH, including the C=O double bond and all lone pairs." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["represent"],
+      "representations": ["lewis-structure"],
+      "skills": []
+    },
+    {
+      "partId": "b-ii",
+      "primary": [{ "conceptId": "hydrogen-bonding", "evidence": "Must draw methanoic acid and water oriented so that an H on O of one molecule points to a lone pair on O of the other, forming a hydrogen bond." }],
+      "supporting": [{ "conceptId": "lewis-structures", "evidence": "Requires complete Lewis diagrams of both molecules with lone pairs shown, so the acceptor lone pair can be placed." }],
+      "contextual": [],
+      "actions": ["represent"],
+      "representations": ["lewis-structure"],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [{ "conceptId": "kinetic-molecular-theory", "evidence": "Must explain the pressure rise as more gas particles (ethyl methanoate vapor) colliding with the walls of the rigid flask." }],
+      "supporting": [{ "conceptId": "particulate-states", "evidence": "Must recognize that liquid ethyl methanoate evaporates, moving molecules from the liquid into the gas phase." }],
+      "contextual": [{ "conceptId": "partial-pressures" }],
+      "actions": ["explain"],
+      "representations": ["graph"],
+      "skills": ["graph-analysis"]
+    },
+    {
+      "partId": "c-ii",
+      "primary": [{ "conceptId": "dynamic-equilibrium", "evidence": "Must explain the constant pressure after 60 s as the rate of evaporation equaling the rate of condensation at the molecular level." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["explain"],
+      "representations": ["graph"],
+      "skills": ["graph-analysis"]
+    },
+    {
+      "partId": "c-iii",
+      "primary": [{ "conceptId": "partial-pressures", "evidence": "Must obtain the vapor partial pressure as the total pressure read from the graph at 60 s minus the 1.00 atm contributed by argon (Dalton's law)." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["calculate"],
+      "representations": ["graph"],
+      "skills": ["graph-analysis"]
+    },
+    {
+      "partId": "c-iv",
+      "primary": [{ "conceptId": "dynamic-equilibrium", "evidence": "Must explain that with liquid still present the liquid-vapor equilibrium is re-established at the same temperature, so adding more liquid does not change the vapor partial pressure." }],
+      "supporting": [],
+      "contextual": [{ "conceptId": "imf-properties" }],
+      "actions": ["predict", "explain"],
+      "representations": ["text-only"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (c) is about the vapor pressure of a liquid, which has no dedicated concept; c-i (kinetic-molecular-theory vs particulate-states) and c-iv (dynamic-equilibrium vs imf-properties or le-chatelier) are boundary calls."
+}

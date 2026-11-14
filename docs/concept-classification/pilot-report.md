@@ -48,8 +48,10 @@ Scoring counts (question, part, concept) pairs:
 | Run | Primary precision | Primary recall | Supporting precision | Supporting recall |
 | --- | ---: | ---: | ---: | ---: |
 | A: Opus, v1 (stored) | 0.95 | 0.99 | 0.80 | 0.83 |
-| B: Sonnet, v1 | 0.89 | 0.85 | 0.50 | 0.76 |
+| B: Sonnet, v1 | 0.83 | 0.87 | 0.42 | 0.76 |
 | C: Opus, v2 (fresh run, not shown to adjudicator) | 0.95 | 0.94 | 0.79 | 0.76 |
+
+Correction (round 2): the first version of this report gave run B as 0.89 / 0.85 / 0.50 / 0.76. That `evaluation-b.json` had been written before the range-aware comparison fix in the same commit. Re-scored with the fixed code, run B is as shown above. Runs A and C were unaffected.
 
 Caveats:
 - Run A's scores are **inflated**: its own output was one of the two proposals the adjudicator saw, and the adjudicator is the same model. Run C is the fairer estimate of a fresh Opus classification.
@@ -82,7 +84,7 @@ Measured per question: about 1.5k tokens of text and candidate definitions, abou
 | Opus 5.5 ($4 in / $20 out, $0.20 cache read) | ≈ $0.066 | ≈ $0.033 | ≈ $52 |
 | Sonnet 5.5 ($2 / $10, $0.10 cache read) | ≈ $0.033 | ≈ $0.017 | ≈ $26 |
 
-A recommended production run is Opus for pass 1, a second independent pass, and adjudication of disputes only (about half the questions). That comes to roughly **$100–130 for the full catalog** at batch prices; human review time is the real cost. In the pilot, subagents classified 23 questions in about 6 minutes of wall-clock time per batch, with 4 batches in parallel. Sonnet was cheaper but noticeably less accurate on supporting tags (precision 0.50), so it is suited only as a disagreement detector, not as the primary classifier.
+A recommended production run is Opus for pass 1, a second independent pass, and adjudication of disputes only (about half the questions). That comes to roughly **$100–130 for the full catalog** at batch prices; human review time is the real cost. In the pilot, subagents classified 23 questions in about 6 minutes of wall-clock time per batch, with 4 batches in parallel. Sonnet was cheaper but noticeably less accurate on supporting tags (precision 0.42), so it is suited only as a disagreement detector, not as the primary classifier.
 
 ## What a human needs to do next
 
@@ -90,3 +92,84 @@ A recommended production run is Opus for pass 1, a second independent pass, and 
 2. `node scripts/concepts/cli.mjs review --file concept-review-decisions.json` → records become `human_verified` (or rejected/edited) with history.
 3. Turn the human decisions into the real reference: edit `reference-pilot-v1.json` (or create `reference-pilot-v1.human.json`) and run `evaluate --reference …` for passes a, b and c to get true precision and recall.
 4. Decide the six conventions above, write them into the concepts' include/exclude text, rebuild the taxonomy (affected records go stale automatically), and re-run.
+
+## Round 2 (2026-11-14, after the draft PR)
+
+Everything below is model work, checked by code and by a second model where stated. **No human has verified any tag, convention or page location yet.**
+
+### Blocked questions: 7 of 7 recovered, plus 1 more
+
+All seven blocked questions had their missing content on an adjacent PDF page. The fixes live in `research/concepts/content-supplements.json`, which the pipeline applies on top of the catalog; `public/student-questions.json` and the image-review service are unchanged. A supplement changes the question's content hash, so only those records went stale and were re-classified (run `pilot-v1-recovered`, same two passes and prompt).
+
+| Question | What was missing | Where it was | Catalog fix proposed |
+| --- | --- | --- | --- |
+| `mcq-2018-36-1207` | eggshell data for Q35–38 | previous page (1206) | register shared stimulus |
+| `frq-2011-6-937` | parts (b)(ii) and (c) | next page (938) | |
+| `frq-2024-3-2119` | part (f) | next scanned page (2122); page 2123 starts Question 4, so (f) is the last part | |
+| `mcq-2024-21-2091` | wrong page: 2091 prints Q23–25 and its OCR read "23." as "21." | printed Q21 is on page 2089, which no record cites | repoint record, replace text |
+| `mcq-2024-33-2094` | wrong page: 2094 prints Q31–32 | printed Q33 is on page 2095 | repoint record, replace text |
+| `mcq-2022-62-1709` | parts (c)–(d) | next page (1710) | it is an FRQ from a scoring guide typed as MCQ |
+| `mcq-2023-67-1808` | parts (c)–(d) | next page (1809) | same |
+| `mcq-2014-33-185` | PCl5 equilibrium for Q29–33 | previous page (184) | register shared stimulus (found by the blind adjudicator) |
+
+Second pass on the recovered questions: 3 agree, 2 partial, 2 disagree (the 8th was re-run separately). For the two wrong-page records, the catalog text belongs to another question, so it is withheld from the classifier and the readiness check forces image review.
+
+Other catalog issues found this round: `frq-2011-3-946` is printed as 2002 Form B Question 3; the 2014 practice exam's Q29–33 stimulus and the 2018 Q35–38 stimulus are not in `research/stimuli.json`.
+
+### Crop worklist
+
+`cli.mjs crop-issues` writes `runs/pilot-v1/crop-issues.json`: 45 pilot questions with a crop or diagram problem, ordered by severity (1 wrong question, 6 missing content, 6 no crop, 8 extra content, 24 content recovered from the full page), each with a suggested action and any supplement page. It uses the earliest record that reported the problem, so a re-classification from a supplement does not hide the original defect. It is input for the image-review owner; nothing in the review service was changed.
+
+### A held-out reference (blind)
+
+The 40-question benchmark has two weaknesses: pass A's output was one of the proposals the adjudicator judged, and changes tuned on it cannot be validated on it. So the other 45 classified pilot questions got a **blind** reference: Opus with `prompts/adjudicator.blind.v1.md` saw only the images and concept definitions, never a classifier's output (`benchmark/holdout-reference-pilot-v1.json`, 44 complete + 1 partial).
+
+| Pass A (Opus, v1) on | Primary P / R | Supporting P / R | Concept present, any role, P / R |
+| --- | ---: | ---: | ---: |
+| 40-question benchmark (inflated) | 0.95 / 0.99 | 0.80 / 0.83 | 0.95 / 0.99 |
+| 44-question blind held-out set | 0.91 / 0.92 | 0.75 / 0.73 | 0.93 / 0.93 |
+| **All 84, combined** | **0.93 / 0.95** | **0.77 / 0.77** | **0.94 / 0.96** |
+| MCQ only (68) | 0.94 / 0.97 | 0.83 / 0.75 | 0.96 / 0.96 |
+| FRQ only (16) | 0.92 / 0.93 | 0.73 / 0.79 | 0.93 / 0.95 |
+
+Pass B (Sonnet) on all 84: primary 0.83 / 0.87, supporting 0.41 / 0.73.
+
+What the errors are: **finding the right concept is fairly reliable (~0.94); deciding its role is not.** 15 of the errors on the 84 questions are role swaps (the right concept, tagged primary instead of supporting or the reverse), concentrated in multipart FRQs. Reviewers can fix a role with one click, and student search can match "primary or supporting", which makes search tolerant of role errors.
+
+### Boundary conventions
+
+`research/concepts/conventions.json` lists the six disputed boundaries from round 1 plus a seventh (specific IMF as co-primary vs supporting), each with options, the benchmark cases it affects, and a model suggestion kept separate from the decision. All are `undecided`. `evaluate --conventions` leaves the concepts of undecided cases out of the score: on the benchmark, pass A becomes primary 1.00 / 1.00 and supporting 0.83 / 0.95. That is a ceiling estimate for once the conventions are settled, not a measured result.
+
+New boundary questions raised by the blind adjudicator (in its `notes`): vapor pressure has no concept (it currently falls under `dynamic-equilibrium`/`imf-properties`); ΔG° from free energies of formation; d-orbital hybridization in legacy items; combining ΔG° values (`coupled-reactions` vs `hess-law`).
+
+### Supporting-tag verifier (experiment, not adopted)
+
+`prompts/verifier.v1.md` re-checks only pass A's supporting tags against two tests (necessary, and not a routine step). It was written from the general rule, not from benchmark errors. Over the 85 classified questions it removed 5, moved 6 to contextual and added none.
+
+| On all 84 | Supporting P / R |
+| --- | ---: |
+| Pass A | 0.77 / 0.77 |
+| Pass A + verifier | 0.83 / 0.70 |
+| Same, blind held-out set only | 0.75 / 0.73 → 0.78 / 0.68 |
+
+It trades recall for precision rather than improving both; on the blind set the gain is small. Stored records stay on pass A. If the owner decides that a wrong tag in student search is worse than a missing one, the verifier is a ready precision setting (results in `runs/pilot-v1/results-v/`).
+
+### Human review workflow
+
+`cli.mjs review-sheet --runs pilot-v1,pilot-v1-recovered` now:
+- shows the 40 benchmark questions first, with filters (benchmark, needs attention, machine reviewed, not yet decided) and a progress count;
+- offers pass B's differing tags as one-click options per part, and an add box per part (previously every addition went to the first part);
+- keeps the classifier's evidence when a tag is kept;
+- refuses to export an edit that leaves a part without a primary concept or puts one concept in two roles (also enforced by `cli.mjs review`);
+- shows content supplements so the reviewer can confirm the page;
+- has a panel for the seven conventions; choices are exported with the reviewer's name and recorded in `conventions.json` by `cli.mjs review`;
+- autosaves in the browser.
+
+After review, `cli.mjs build-reference --from-review` builds `benchmark/human-reference-pilot-v1.json` from records a named person approved or edited (machine agreement never counts), and `evaluate --reference` with that file gives the first human-measured accuracy.
+
+### Still needs a human
+
+1. Review the benchmark (and ideally the held-out set) in the sheet; this is the only way to get a real accuracy figure.
+2. Decide the seven conventions in the sheet's panel.
+3. Confirm the eight supplement page locations, and decide whether to apply the proposed catalog corrections.
+4. Decide whether student search should favour precision (verifier) or recall (pass A).

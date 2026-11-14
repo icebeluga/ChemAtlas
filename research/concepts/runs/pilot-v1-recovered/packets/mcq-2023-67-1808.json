@@ -1,0 +1,125 @@
+{
+  "questionId": "mcq-2023-67-1808",
+  "type": "MCQ",
+  "exam": "2023 AP Chemistry MCQ",
+  "year": "2023",
+  "number": 67,
+  "text": "2023 Form I\n\n\n\n67.   For parts of the free response question that require calculations, clearly show the method used and the steps\n      involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and\n      equations may be included in your answers where appropriate.\n\n\n\n\n      For parts of the free response question that require calculations, clearly show the method used and the steps\n      involved in arriving at your answers. You must show your work to receive credit for your answer. Examples and\n      equations may be included in your answers where appropriate.\n\n\n    A student performs a spectrophotometry experiment using solutions of                              . The student needs to\n     make a standard curve and determine the concentration of                    in a sample with an unknown\n       concentration.\n\n\n\n\n\n       (a) Based on the absorbance spectrum of               shown in the preceding graph, what wavelength\n      should the student use in the experiment to achieve the greatest precision?\n\n       (b) To make the standard curve, the student must prepare                   solutions with different\n       concentrations. The student has a standard solution of                 with a concentration of                 .\n      Calculate the volume, in        , of                                  that is needed to prepare            of\n                                                              .",
+  "regions": [
+    {
+      "page": 1808,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 8,
+        "compiledPage": 1808
+      }
+    },
+    {
+      "page": 1809,
+      "rect": null,
+      "role": "continuation",
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 9,
+        "compiledPage": 1809
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Source is an answer/scoring/diagnostic page; not a clean question-only occurrence.",
+    "Content supplement (add): Parts (c) and (d) of this scoring-guide item continue on the next page."
+  ],
+  "supplement": {
+    "mode": "add",
+    "reason": "Parts (c) and (d) of this scoring-guide item continue on the next page.",
+    "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-07 p9 begins with part (c)",
+    "catalogCorrection": "This record is typed MCQ but is a free-response item taken from a scoring-guide page; consider re-typing or replacing with the clean question source."
+  },
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "source-is-answer-or-scoring-page",
+      "refers-to-visual-content",
+      "choices-not-in-text",
+      "content-supplemented-see-images",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "9471f192194b0381",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2023-67-1808-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 8,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2023-67-1808-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 8,
+      "rect": null
+    },
+    {
+      "kind": "continuation",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2023-67-1808-r2.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 9,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "beer-lambert",
+      "name": "Beer-Lambert law and spectrophotometry",
+      "definition": "Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.",
+      "include": "Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.",
+      "exclude": "Do not tag general spectroscopy questions without an absorbance-concentration relationship.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

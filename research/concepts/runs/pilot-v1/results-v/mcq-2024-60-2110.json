@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2024-60-2110",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "complete",
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Crop is the whole page with Q57-Q60; Q60 (isotope mass/abundance table and choices A-D) is complete and legible. Question number taken from the id since OCR could not read it."
+  },
+  "officialTopics": {
+    "primary": "1.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mass-spectrometry",
+          "evidence": "Must compute the weighted-average atomic mass from isotopes 185 amu (37%) and 187 amu (63%), recognizing the average lies closer to 187."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Crop holds four questions; assumed the target is printed Q60 per the id number. Verify the crop region.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

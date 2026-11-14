@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2008-44-39",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "complete",
+    "diagramStatus": "none",
+    "cropIssue": "no-crop",
+    "notes": "Full-page image only; Q44 (Cl2 + 2 I- -> 2 Cl- + I2, choices A-E) is legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+    "primary": "9.9",
+    "additional": [
+      "9.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "cell-potential",
+          "evidence": "Must reason that the cell produces electricity (positive E°, thermodynamically favored) because Cl2 is more readily reduced than I2, i.e. has the higher reduction potential."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Choice wording uses \"oxidizing agent\", a term the current CED does not assess; the underlying concept is comparison of reduction potentials.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

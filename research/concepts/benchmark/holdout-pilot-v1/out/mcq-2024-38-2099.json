@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2024-38-2099",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "photoelectron-spectroscopy"
+      ],
+      "supporting": [
+        "coulombic-attraction"
+      ]
+    }
+  },
+  "notes": "Must link higher binding energies for the same configuration to larger nuclear charge, a Coulombic argument beyond reading the spectrum."
+}

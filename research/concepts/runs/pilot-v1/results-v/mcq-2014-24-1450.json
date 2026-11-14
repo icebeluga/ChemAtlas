@@ -1,0 +1,52 @@
+{
+  "questionId": "mcq-2014-24-1450",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows question 24 and choices A-D but omits the shared stimulus for questions 21-24 (CO(g) + 2 H2(g) <=> CH3OH(g), ΔH < 0); stimulus visible on the same page context."
+  },
+  "officialTopics": {
+    "primary": "6.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-enthalpy",
+          "evidence": "Must reason that bond breaking absorbs energy and bond formation releases it, and that ΔH equals energy absorbed minus energy released."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "The stimulus gives ΔH < 0, which signals an exothermic reaction."
+        }
+      ],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "moved supporting endo-exothermic to contextual",
+        "reason": "Reading the given ΔH < 0 as exothermic is a sign convention; relating the net enthalpy sign to bonds broken versus formed is the primary bond-enthalpy reasoning itself."
+      }
+    ]
+  }
+}

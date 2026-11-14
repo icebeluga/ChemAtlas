@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2024-33-2094",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Printed Question 33 (C2H5Cl decomposition) with data table (trials at 1.0 M and 2.0 M with rate and half-life symbols) and choices A-D clear on page 295. Catalog text withheld and not used."
+  },
+  "officialTopics": {
+    "primary": "5.3",
+    "additional": [
+      "5.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must know that a first-order reaction has a half-life independent of initial concentration."
+        },
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must know that for first order the initial rate is proportional to concentration, so doubling concentration changes the rate."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "evaluate-procedure"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

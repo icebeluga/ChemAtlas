@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2002-48-760",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "solubility-polarity"
+      ],
+      "supporting": [
+        "molecular-polarity"
+      ]
+    }
+  },
+  "notes": "CCl4 has polar bonds but is a nonpolar molecule, so judging whole-molecule polarity is a necessary step; ion-dipole left implicit in like-dissolves-like."
+}

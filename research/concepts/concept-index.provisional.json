@@ -7,7 +7,7 @@
     "machine_reviewed",
     "machine_generated"
   ],
-  "questionCount": 33,
+  "questionCount": 35,
   "concepts": {
     "mole-conversions": {
       "name": "Moles, molar mass and particle counts",
@@ -960,7 +960,8 @@
       },
       "scope": "ap",
       "questionIds": [
-        "frq-2008-3-59"
+        "frq-2008-3-59",
+        "mcq-2024-33-2094"
       ]
     },
     "integrated-rate-laws": {
@@ -976,7 +977,9 @@
         ]
       },
       "scope": "ap",
-      "questionIds": []
+      "questionIds": [
+        "mcq-2024-33-2094"
+      ]
     },
     "elementary-steps": {
       "name": "Elementary reactions and molecularity",
@@ -1090,7 +1093,8 @@
       "scope": "ap",
       "questionIds": [
         "mcq-2002-41-759",
-        "mcq-2014-24-1450"
+        "mcq-2014-24-1450",
+        "mcq-2024-21-2091"
       ]
     },
     "heat-transfer": {
@@ -1323,7 +1327,9 @@
         ]
       },
       "scope": "ap",
-      "questionIds": []
+      "questionIds": [
+        "mcq-2024-21-2091"
+      ]
     },
     "solubility-product": {
       "name": "Solubility equilibria and Ksp",
@@ -2339,6 +2345,42 @@
       ],
       "primary": [
         "atomic-radius"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2024-21-2091": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "7.9",
+        "8.5"
+      ],
+      "units": [
+        "u7",
+        "u8"
+      ],
+      "primary": [
+        "le-chatelier"
+      ],
+      "supporting": [
+        "endo-exothermic"
+      ],
+      "parts": []
+    },
+    "mcq-2024-33-2094": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "5.3",
+        "5.2"
+      ],
+      "units": [
+        "u5"
+      ],
+      "primary": [
+        "integrated-rate-laws",
+        "rate-law"
       ],
       "supporting": [],
       "parts": []

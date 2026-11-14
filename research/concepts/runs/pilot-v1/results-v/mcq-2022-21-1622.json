@@ -1,0 +1,51 @@
+{
+  "questionId": "mcq-2022-21-1622",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows stem and choices A-D but omits the shared table of structures and molar masses above Q20; recovered from page context. Source scan has a highlighter mark on a choice, ignored."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must decide which compound has the higher boiling point from the relative strength of intermolecular attractions."
+        },
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must recognize propanoic acid has an O-H group able to hydrogen bond while pentane has no H bonded to N, O or F."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "A distractor cites dispersion forces; the similar molar masses (72 vs 74 g/mol) make it non-decisive."
+        }
+      ],
+      "actions": [
+        "compare",
+        "justify"
+      ],
+      "representations": [
+        "molecular-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

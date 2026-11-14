@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2008-10-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows question 10; stimulus image shows the shared choice list A-E (activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy). Matches page."
+  },
+  "officialTopics": {
+    "primary": "9.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must recall that a pure, perfect crystal at 0 K has only one possible arrangement, so its absolute entropy is zero (third law)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Third-law absolute entropy is at the edge of the current CED entropy topic; classified under entropy.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

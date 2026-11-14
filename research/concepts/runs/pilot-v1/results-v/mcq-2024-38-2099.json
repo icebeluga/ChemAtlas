@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2024-38-2099",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Full-page crop shows both PES spectra for X and Y and choices A-D; peak positions and heights legible."
+  },
+  "officialTopics": {
+    "primary": "1.6",
+    "additional": [
+      "1.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "photoelectron-spectroscopy",
+          "evidence": "Must compare binding energies of corresponding peaks in the two complete PE spectra of species with identical electron configurations."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Must reason that higher binding energies for the same configuration mean greater nuclear charge, which identifies which species is the neutral atom and which the anion."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "spectrum"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

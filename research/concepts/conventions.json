@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "about": "Boundary conventions the concept classifiers and the model adjudicator disagreed on. Each needs a chemistry teacher's decision; none is decided. 'modelLean' is the model's suggestion only. Once decided, write the rule into the named concepts' include/exclude text in concepts.v1.source.json (taxonomy 1.1); affected records then go stale automatically. 'affects' lists the benchmark cases; `evaluate --conventions` can leave undecided cases out of the score.",
+  "conventions": [
+    {
+      "id": "C0-specific-imf-role",
+      "question": "When a part asks why a substance has a higher boiling point (or other property) because of a specific intermolecular force, is that force (e.g. hydrogen-bonding) co-primary with imf-properties, or supporting?",
+      "options": {
+        "A": "imf-properties primary; the specific force is supporting.",
+        "B": "Both primary (two primaries)."
+      },
+      "modelLean": "A. The adjudicator chose A in every benchmark case and prompt v2 already states it; two primaries should mean two equally assessed ideas.",
+      "concepts": ["imf-properties", "hydrogen-bonding", "dipole-dipole", "london-dispersion"],
+      "affects": [
+        { "questionId": "mcq-2002-67-765", "partId": "stem", "concepts": ["hydrogen-bonding"] },
+        { "questionId": "mcq-2022-21-1622", "partId": "stem", "concepts": ["hydrogen-bonding"] }
+      ],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C1-shape-vs-polarity",
+      "question": "When one part asks for the molecular shape and whether the molecule is polar, which is primary?",
+      "options": {
+        "A": "molecular-geometry primary, molecular-polarity supporting (polarity follows from shape).",
+        "B": "molecular-polarity primary, molecular-geometry supporting (polarity is the final claim).",
+        "C": "Both primary when both are separately asked for."
+      },
+      "modelLean": "C when the part asks for both answers explicitly; otherwise the one the part asks for is primary.",
+      "concepts": ["molecular-geometry", "molecular-polarity"],
+      "affects": [{ "questionId": "frq-1999-7-564", "partId": "d", "concepts": ["molecular-geometry", "molecular-polarity"] }],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C2-collision-vs-activation-energy",
+      "question": "For 'why does rate increase with temperature' questions, is the primary concept the collision model or activation energy (fraction of collisions above Ea)?",
+      "options": {
+        "A": "activation-energy primary; collision-model supporting.",
+        "B": "collision-model primary; activation-energy supporting.",
+        "C": "collision-model primary, activation-energy primary only when Ea or a Maxwell-Boltzmann distribution is shown or named."
+      },
+      "modelLean": "C. It ties the tag to a visible feature, which makes it reproducible.",
+      "concepts": ["collision-model", "activation-energy"],
+      "affects": [{ "questionId": "mcq-2008-11-31", "partId": "stem", "concepts": ["collision-model", "activation-energy"] }],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C3-phase-change-vs-endo-exo",
+      "question": "For heating-curve or phase-change questions that ask whether a step absorbs or releases energy, is the primary concept phase-change energy or endothermic/exothermic processes?",
+      "options": {
+        "A": "phase-change-energy primary; endo-exothermic supporting or untagged.",
+        "B": "endo-exothermic primary; phase-change-energy supporting."
+      },
+      "modelLean": "A. The CED places heating curves under phase-change energy; endo/exo is the general idea.",
+      "concepts": ["phase-change-energy", "endo-exothermic"],
+      "affects": [{ "questionId": "mcq-2008-13-32", "partId": "stem", "concepts": ["phase-change-energy", "endo-exothermic"] }],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C4-pka-speciation-vs-henderson-hasselbalch",
+      "question": "When a part asks which species predominates in a buffer at a given pH (no calculation of pH), is the primary concept pKa/speciation or Henderson-Hasselbalch?",
+      "options": {
+        "A": "pka-speciation primary; henderson-hasselbalch only when a pH or ratio is calculated.",
+        "B": "henderson-hasselbalch primary for any buffer-composition question."
+      },
+      "modelLean": "A. It separates a qualitative comparison of pH with pKa from a calculation.",
+      "concepts": ["pka-speciation", "henderson-hasselbalch"],
+      "affects": [{ "questionId": "frq-2003-3-536", "partId": "e", "concepts": ["pka-speciation", "henderson-hasselbalch"] }],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C5-strong-weak-identity-as-supporting",
+      "question": "In a pH or acid-comparison question, does recognizing whether an acid is strong or weak earn a supporting strong-weak-acids tag?",
+      "options": {
+        "A": "Yes, whenever the solution depends on the strong/weak distinction (e.g. full vs partial ionization).",
+        "B": "Only when the acid's identity must be recalled (not given) or is the point of the distractors."
+      },
+      "modelLean": "B. Otherwise almost every acid-base question carries the tag and it stops being useful for search.",
+      "concepts": ["strong-weak-acids"],
+      "affects": [
+        { "questionId": "mcq-2016-9-1056", "partId": "stem", "concepts": ["strong-weak-acids"] },
+        { "questionId": "mcq-2022-52-1652", "partId": "stem", "concepts": ["strong-weak-acids"] }
+      ],
+      "status": "undecided", "decidedBy": null, "decision": null
+    },
+    {
+      "id": "C6-particle-diagram-solution-representations",
+      "question": "Does a question that shows a particle diagram of a solution earn a supporting solution-representations tag?",
+      "options": {
+        "A": "Yes, whenever the student must interpret or choose a particle diagram of a solution.",
+        "B": "No; record the diagram under representations (particulate-diagram) only, and tag solution-representations only when the diagram itself is what is assessed."
+      },
+      "modelLean": "B. The representations field already captures the diagram and is searchable separately.",
+      "concepts": ["solution-representations"],
+      "affects": [
+        { "questionId": "mcq-2014-15-178", "partId": "stem", "concepts": ["solution-representations"] },
+        { "questionId": "mcq-2022-56-1653", "partId": "stem", "concepts": ["solution-representations"] },
+        { "questionId": "frq-2003-3-536", "partId": "e", "concepts": ["solution-representations"] }
+      ],
+      "status": "undecided", "decidedBy": null, "decision": null
+    }
+  ]
+}

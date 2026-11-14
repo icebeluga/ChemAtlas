@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2014-22-180",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop starts mid-stem ('value of 4 × 10^-4') and omits 'Caffeine (C8H10N4O2) is a weak base with a Kb'; it also includes the CO2/SO2 Lewis structures belonging to question 23. Full stem and choices A-D visible on page context."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "8.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must use Kb = 4 × 10^-4 for the weak base caffeine at 0.01 M to estimate [OH-] from the base ionization equilibrium."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "ph-poh",
+          "evidence": "Must convert [OH-] to pOH and then to pH using pH + pOH = 14 to pick the range."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

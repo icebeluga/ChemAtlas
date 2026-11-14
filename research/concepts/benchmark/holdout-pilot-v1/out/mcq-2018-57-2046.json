@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2018-57-2046",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": [
+        "free-energy-equilibrium"
+      ]
+    }
+  },
+  "notes": "At the normal melting point the phases are at equilibrium so ΔG=0, giving ΔH=TΔS; the ΔG=0-at-equilibrium step is from free-energy-equilibrium."
+}

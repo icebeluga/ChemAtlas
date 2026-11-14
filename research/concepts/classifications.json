@@ -5006,46 +5006,291 @@
       "current": {
         "questionId": "frq-2011-6-937",
         "type": "FRQ",
-        "contentHash": "59b1ba13e14a4936",
+        "contentHash": "086901d395c83c5a",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "hybridization": "631ee7e0d945bcd1",
+          "electron-domains": "90122f3b5d4613d4",
+          "bond-angles": "14748b738215757f",
+          "lewis-structures": "a7c424bb8d3bfa49",
+          "hydrogen-bonding": "3a1130bde006eee6",
+          "kinetic-molecular-theory": "3bbe6c2ff3776062",
+          "particulate-states": "804be17b81486f02",
+          "dynamic-equilibrium": "d1fb198dfa5354dc",
+          "partial-pressures": "7c04ba0b7a396274"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:34.985Z",
-        "contentStatus": "partial",
+        "createdAt": "2026-11-14T14:34:32.768Z",
+        "contentStatus": "complete",
         "diagramStatus": "analyzed",
-        "cropIssue": "missing-content",
+        "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Crop and page show parts (a)(i), (a)(ii) and (b)(i) with the ethyl methanoate Lewis diagram, but (b) continues on a following page (the stem also promises kinetic molecular theory) that is not in the packet; remaining parts cannot be seen.",
+        "contentNotes": "Crop/page 12 shows the stem, (a)(i)-(ii) with the given Lewis diagram of ethyl methanoate, and (b)(i). The continuation image (page 13) shows (b)(ii) and (c)(i)-(iv) with the pressure-vs-time graph; it ends with STOP / END OF EXAM, so the question is complete. Catalog part 'remaining visible parts' is replaced by printed parts c-i to c-iv.",
         "readiness": {
           "status": "needs-visual-check",
           "reasons": [
             "refers-to-visual-content",
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
           "primary": "2.7",
           "additional": [
-            "2.5"
+            "2.5",
+            "3.1",
+            "3.4",
+            "3.5"
           ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Continuation page of Question 6 is missing; visible parts would be hybridization (a-i), bond angle (a-ii) and Lewis structure (b-i).",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "a-i",
+            "label": "a-i",
+            "primary": [
+              {
+                "conceptId": "hybridization",
+                "evidence": "Asks for the hybridization of the carbon atom labeled Cw in the given Lewis diagram."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "electron-domains",
+                "evidence": "Must count three electron domains around Cw, treating the C=O double bond as one domain, to assign the hybridization."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "identify"
+            ],
+            "representations": [
+              "lewis-structure"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "a-ii",
+            "label": "a-ii",
+            "primary": [
+              {
+                "conceptId": "bond-angles",
+                "evidence": "Must estimate the Hy-Cx-O bond angle and explain the basis of the estimate."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "electron-domains",
+                "evidence": "The estimate rests on Cx having four bonding domains and no lone pairs, giving a tetrahedral arrangement."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "predict",
+              "explain"
+            ],
+            "representations": [
+              "lewis-structure"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "b-i",
+            "label": "b-i",
+            "primary": [
+              {
+                "conceptId": "lewis-structures",
+                "evidence": "Must draw the complete Lewis electron-dot diagram of methanoic acid, HCOOH, including the C=O double bond and all lone pairs."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "represent"
+            ],
+            "representations": [
+              "lewis-structure"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "b-ii",
+            "label": "b-ii",
+            "primary": [
+              {
+                "conceptId": "hydrogen-bonding",
+                "evidence": "Must draw methanoic acid and water oriented so that an H on O of one molecule points to a lone pair on O of the other, forming a hydrogen bond."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "lewis-structures",
+                "evidence": "Requires complete Lewis diagrams of both molecules with lone pairs shown, so the acceptor lone pair can be placed."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "represent"
+            ],
+            "representations": [
+              "lewis-structure"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "c-i",
+            "label": "c-i",
+            "primary": [
+              {
+                "conceptId": "kinetic-molecular-theory",
+                "evidence": "Must explain the pressure rise as more gas particles (ethyl methanoate vapor) colliding with the walls of the rigid flask."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "particulate-states",
+                "evidence": "Must recognize that liquid ethyl methanoate evaporates, moving molecules from the liquid into the gas phase."
+              }
+            ],
+            "contextual": [
+              {
+                "conceptId": "partial-pressures",
+                "evidence": ""
+              }
+            ],
+            "actions": [
+              "explain"
+            ],
+            "representations": [
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "c-ii",
+            "label": "c-ii",
+            "primary": [
+              {
+                "conceptId": "dynamic-equilibrium",
+                "evidence": "Must explain the constant pressure after 60 s as the rate of evaporation equaling the rate of condensation at the molecular level."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "explain"
+            ],
+            "representations": [
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "c-iii",
+            "label": "c-iii",
+            "primary": [
+              {
+                "conceptId": "partial-pressures",
+                "evidence": "Must obtain the vapor partial pressure as the total pressure read from the graph at 60 s minus the 1.00 atm contributed by argon (Dalton's law)."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "calculate"
+            ],
+            "representations": [
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "c-iv",
+            "label": "c-iv",
+            "primary": [
+              {
+                "conceptId": "dynamic-equilibrium",
+                "evidence": "Must explain that with liquid still present the liquid-vapor equilibrium is re-established at the same temperature, so adding more liquid does not change the vapor partial pressure."
+              }
+            ],
+            "supporting": [],
+            "contextual": [
+              {
+                "conceptId": "imf-properties",
+                "evidence": ""
+              }
+            ],
+            "actions": [
+              "predict",
+              "explain"
+            ],
+            "representations": [
+              "text-only"
+            ],
+            "skills": []
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "hybridization",
+            "bond-angles",
+            "lewis-structures",
+            "hydrogen-bonding",
+            "kinetic-molecular-theory",
+            "dynamic-equilibrium",
+            "partial-pressures"
+          ],
+          "supporting": [
+            "electron-domains",
+            "particulate-states"
+          ],
+          "contextual": [
+            "imf-properties"
+          ],
+          "actions": [
+            "identify",
+            "predict",
+            "explain",
+            "represent",
+            "calculate"
+          ],
+          "representations": [
+            "lewis-structure",
+            "graph",
+            "text-only"
+          ]
+        },
+        "uncertainty": "Part (c) is about the vapor pressure of a liquid, which has no dedicated concept; c-i (kinetic-molecular-theory vs particulate-states) and c-iv (dynamic-equilibrium vs imf-properties or le-chatelier) are boundary calls.",
+        "reviewStatus": "needs_attention",
         "flags": [
-          "crop-issue:missing-content",
-          "classifier-requested-review"
+          "crop-issue:missing-content-recovered-from-page",
+          "part-refined",
+          "classifier-requested-review",
+          "second-pass-disagreement"
         ],
         "validation": {
-          "warnings": []
+          "warnings": [
+            "part a-i refines catalog part (a)",
+            "part a-ii refines catalog part (a)",
+            "part b-i refines catalog part (b)",
+            "part b-ii refines catalog part (b)",
+            "part c-i refines catalog part remaining visible parts",
+            "part c-ii refines catalog part remaining visible parts",
+            "part c-iii refines catalog part remaining visible parts",
+            "part c-iv refines catalog part remaining visible parts"
+          ]
         }
       },
       "history": [
@@ -5067,6 +5312,55 @@
               "runId": "pilot-v1"
             },
             "createdAt": "2026-11-14T09:18:44.056Z",
+            "contentStatus": "partial",
+            "diagramStatus": "analyzed",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Crop and page show parts (a)(i), (a)(ii) and (b)(i) with the ethyl methanoate Lewis diagram, but (b) continues on a following page (the stem also promises kinetic molecular theory) that is not in the packet; remaining parts cannot be seen.",
+            "readiness": {
+              "status": "needs-visual-check",
+              "reasons": [
+                "refers-to-visual-content",
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "2.7",
+              "additional": [
+                "2.5"
+              ]
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Continuation page of Question 6 is missing; visible parts would be hybridization (a-i), bond angle (a-ii) and Lewis structure (b-i).",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.768Z",
+          "record": {
+            "questionId": "frq-2011-6-937",
+            "type": "FRQ",
+            "contentHash": "59b1ba13e14a4936",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:34.985Z",
             "contentStatus": "partial",
             "diagramStatus": "analyzed",
             "cropIssue": "missing-content",
@@ -6752,27 +7046,40 @@
       "current": {
         "questionId": "frq-2024-3-2119",
         "type": "FRQ",
-        "contentHash": "9a54d8012635563a",
+        "contentHash": "63cff6f80eef756f",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "bronsted-lowry": "e52282cc28115065",
+          "equilibrium-expression": "44fc8d1f6bd06125",
+          "weak-acid-equilibrium": "fac7b0db6621cb46",
+          "ph-poh": "02cca91111985108",
+          "net-ionic-equations": "a3f2b09451990586",
+          "acid-base-mixtures": "24e60126e8969a4d",
+          "reaction-quotient": "28b11654a13b80a7",
+          "reaction-rate": "8f1df81f73448d88",
+          "reaction-stoichiometry": "d40e5ffad84a1b10",
+          "entropy": "6f0158c7b84bc140",
+          "gibbs-free-energy": "af16198123e35b2e"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:34.993Z",
-        "contentStatus": "partial",
-        "diagramStatus": "partially-readable",
-        "cropIssue": "missing-content",
+        "createdAt": "2026-11-14T14:34:32.795Z",
+        "contentStatus": "complete",
+        "diagramStatus": "analyzed",
+        "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Crops r1-r3 (pages 10-12 of the scan) show parts (a), (b), (c)(i)-(ii), (d)(i)-(ii) and (e)(i)-(ii) with the C5H10NH partial-pressure graph, all legible. The catalog lists parts f-i and f-ii, but the continuation page carrying part (f) is not in the packet and is not visible on any page context.",
+        "contentNotes": "Three catalog crops (pages 10-12) show the stem, (a), (b), (c)(i)-(ii), (d)(i)-(ii), and the second scenario with the partial-pressure graph and (e). The continuation scan (page 13) shows (f)(i)-(ii). Scans are slightly blurred but legible.",
         "readiness": {
           "status": "needs-visual-check",
           "reasons": [
             "refers-to-visual-content",
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
@@ -6783,19 +7090,261 @@
             "7.3",
             "8.2",
             "4.2",
+            "8.4",
             "7.10",
             "5.1",
             "9.2",
             "9.3"
           ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Part (f)(i)-(ii) page missing (scan page 13). Parts (a)-(e) are complete and could be classified once the packet includes the continuation page.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "a",
+            "label": "(a)",
+            "primary": [
+              {
+                "conceptId": "bronsted-lowry",
+                "evidence": "Must identify a conjugate acid-base pair in the piperidine-water reaction and label which member is the acid and which the base."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "identify"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "b",
+            "label": "(b)",
+            "primary": [
+              {
+                "conceptId": "equilibrium-expression",
+                "evidence": "Must write the equilibrium constant expression from the equation, omitting liquid water."
+              },
+              {
+                "conceptId": "weak-acid-equilibrium",
+                "evidence": "The expression asked for is Kb of a weak base, with the conjugate acid and OH- over piperidine."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "write-equation"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "c-i",
+            "label": "(c)(i)",
+            "primary": [
+              {
+                "conceptId": "ph-poh",
+                "evidence": "Must convert the given equilibrium [OH-] = 3.09 x 10^-2 M to pOH and then to pH at 25 C using Kw."
+              }
+            ],
+            "supporting": [],
+            "contextual": [
+              {
+                "conceptId": "weak-acid-equilibrium",
+                "evidence": ""
+              }
+            ],
+            "actions": [
+              "calculate"
+            ],
+            "representations": [
+              "text-only"
+            ],
+            "skills": [
+              "logarithms"
+            ]
+          },
+          {
+            "partId": "c-ii",
+            "label": "(c)(ii)",
+            "primary": [
+              {
+                "conceptId": "weak-acid-equilibrium",
+                "evidence": "Must compute the percent ionization of the weak base as equilibrium [OH-] (equal to ionized piperidine) divided by the initial 0.750 M."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "calculate"
+            ],
+            "representations": [
+              "text-only"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "d-i",
+            "label": "(d)(i)",
+            "primary": [
+              {
+                "conceptId": "net-ionic-equations",
+                "evidence": "Must write the balanced net ionic equation for added strong acid, as H3O+ (or H+) reacting with piperidine, the major basic species."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "acid-base-mixtures",
+                "evidence": "Must identify that the strong acid reacts essentially completely with the weak base present as the major species in solution."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "write-equation"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "d-ii",
+            "label": "(d)(ii)",
+            "primary": [
+              {
+                "conceptId": "reaction-quotient",
+                "evidence": "Must explain using Q and K that consuming OH- lowers Q below K, so the reaction proceeds forward and forms more C5H10NH2+."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "acid-base-mixtures",
+                "evidence": "Must recognize that the added strong acid neutralizes OH-, which is the change that alters Q."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "explain"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "e",
+            "label": "(e)",
+            "primary": [
+              {
+                "conceptId": "reaction-rate",
+                "evidence": "The sketched H2 curve must fall three times as fast as C5H10NH rises, relating rates of reactant loss and product formation through the 3:1 coefficients."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "reaction-stoichiometry",
+                "evidence": "Must use the 3:1 mole ratio with the product pressure read at 30 min to find the remaining H2 partial pressure from its 1.40 atm start."
+              }
+            ],
+            "contextual": [
+              {
+                "conceptId": "partial-pressures",
+                "evidence": ""
+              }
+            ],
+            "actions": [
+              "represent"
+            ],
+            "representations": [
+              "graph",
+              "chemical-equation"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "f-i",
+            "label": "(f)(i)",
+            "primary": [
+              {
+                "conceptId": "entropy",
+                "evidence": "Must explain at the particle level why 4 mol of gaseous reactants forming 1 mol of gaseous product gives a negative entropy change (fewer gas particles, fewer possible arrangements)."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "explain"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "f-ii",
+            "label": "(f)(ii)",
+            "primary": [
+              {
+                "conceptId": "gibbs-free-energy",
+                "evidence": "Must combine the negative signs of the given dG and of dS from (f)(i) in dG = dH - TdS to deduce and justify the sign of dH."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "predict",
+              "justify"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "bronsted-lowry",
+            "equilibrium-expression",
+            "weak-acid-equilibrium",
+            "ph-poh",
+            "net-ionic-equations",
+            "reaction-quotient",
+            "reaction-rate",
+            "entropy",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "acid-base-mixtures",
+            "reaction-stoichiometry"
+          ],
+          "contextual": [
+            "partial-pressures"
+          ],
+          "actions": [
+            "identify",
+            "write-equation",
+            "calculate",
+            "explain",
+            "represent",
+            "predict",
+            "justify"
+          ],
+          "representations": [
+            "chemical-equation",
+            "text-only",
+            "graph"
+          ]
+        },
+        "uncertainty": "Page 13 ends with GO ON TO THE NEXT PAGE and no later page was provided, so a part after (f) cannot be fully ruled out, although the catalog lists parts only through (f)(ii). Part (e) had catalog topic 7.7; classified here as rate and stoichiometry (5.1, 4.5).",
+        "reviewStatus": "needs_attention",
         "flags": [
-          "crop-issue:missing-content",
-          "classifier-requested-review"
+          "crop-issue:missing-content-recovered-from-page",
+          "classifier-requested-review",
+          "second-pass-disagreement"
         ],
         "validation": {
           "warnings": []
@@ -6820,6 +7369,62 @@
               "runId": "pilot-v1"
             },
             "createdAt": "2026-11-14T09:18:44.060Z",
+            "contentStatus": "partial",
+            "diagramStatus": "partially-readable",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Crops r1-r3 (pages 10-12 of the scan) show parts (a), (b), (c)(i)-(ii), (d)(i)-(ii) and (e)(i)-(ii) with the C5H10NH partial-pressure graph, all legible. The catalog lists parts f-i and f-ii, but the continuation page carrying part (f) is not in the packet and is not visible on any page context.",
+            "readiness": {
+              "status": "needs-visual-check",
+              "reasons": [
+                "refers-to-visual-content",
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "8.3",
+              "additional": [
+                "4.8",
+                "7.3",
+                "8.2",
+                "4.2",
+                "7.10",
+                "5.1",
+                "9.2",
+                "9.3"
+              ]
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Part (f)(i)-(ii) page missing (scan page 13). Parts (a)-(e) are complete and could be classified once the packet includes the continuation page.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.795Z",
+          "record": {
+            "questionId": "frq-2024-3-2119",
+            "type": "FRQ",
+            "contentHash": "9a54d8012635563a",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:34.993Z",
             "contentStatus": "partial",
             "diagramStatus": "partially-readable",
             "cropIssue": "missing-content",
@@ -13680,7 +14285,7 @@
       "current": {
         "questionId": "mcq-2014-33-185",
         "type": "MCQ",
-        "contentHash": "bd13d1cd1e1c3bc6",
+        "contentHash": "76fca98d5e4a7d82",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
         "conceptHashes": {
@@ -13692,17 +14297,18 @@
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.063Z",
+        "createdAt": "2026-11-14T14:44:17.817Z",
         "contentStatus": "complete",
         "diagramStatus": "analyzed",
         "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Crop starts mid-stem ('equilibrium. Which of the following graphs...'); page context shows the stem start 'Additional Cl2(g) is injected into the system at equilibrium' and graphs A-D. The shared stimulus (PCl5(g) <=> PCl3(g) + Cl2(g), questions 29-33) is on the preceding page, which is not in this packet; it was seen on the page image of packet mcq-2014-30-184 (same source, page 184).",
+        "contentNotes": "Crop omits the first stem line ('Additional Cl2(g) is injected into the system at'); page context shows it. All four rate-vs-time graphs A-D legible. Shared stimulus on p184 gives PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid 1.00 L container, so Cl2 is a product.",
         "readiness": {
-          "status": "text-sufficient-candidate",
+          "status": "needs-visual-check",
           "reasons": [
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
@@ -13719,18 +14325,19 @@
             "primary": [
               {
                 "conceptId": "dynamic-equilibrium",
-                "evidence": "Must choose the graph of reverse rate versus time as the disturbed system returns to a new equilibrium where forward and reverse rates are again equal."
+                "evidence": "Must choose a reverse-rate-versus-time graph, reasoning about a nonzero reverse rate at the initial equilibrium, its immediate response to added product Cl2, and its evolution as the system re-approaches equal forward and reverse rates."
               }
             ],
             "supporting": [
               {
                 "conceptId": "le-chatelier",
-                "evidence": "Must recognize that adding the product Cl2 instantly raises the reverse rate, which then declines as the system shifts toward PCl5 to a new level above the original."
+                "evidence": "Must recognize that adding the product Cl2 shifts the equilibrium toward PCl5, and must judge where the new equilibrium reverse rate lies relative to the original to distinguish graphs B, C and D."
               }
             ],
             "contextual": [],
             "actions": [
-              "interpret"
+              "interpret",
+              "predict"
             ],
             "representations": [
               "graph",
@@ -13750,18 +14357,18 @@
           ],
           "contextual": [],
           "actions": [
-            "interpret"
+            "interpret",
+            "predict"
           ],
           "representations": [
             "graph",
             "chemical-equation"
           ]
         },
-        "uncertainty": "The shared stimulus identifying Cl2 as a product is absent from this packet's images; it was taken from another packet's page image of the preceding page. Packet should include the stimulus.",
+        "uncertainty": "",
         "reviewStatus": "needs_attention",
         "flags": [
           "crop-issue:missing-content-recovered-from-page",
-          "classifier-requested-review",
           "second-pass-disagreement"
         ],
         "validation": {
@@ -13863,6 +14470,109 @@
               "warnings": []
             }
           }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:44:17.817Z",
+          "record": {
+            "questionId": "mcq-2014-33-185",
+            "type": "MCQ",
+            "contentHash": "bd13d1cd1e1c3bc6",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {
+              "dynamic-equilibrium": "d1fb198dfa5354dc",
+              "le-chatelier": "ba65ca7667b4a2ec"
+            },
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.063Z",
+            "contentStatus": "complete",
+            "diagramStatus": "analyzed",
+            "cropIssue": "missing-content-recovered-from-page",
+            "sawImage": true,
+            "contentNotes": "Crop starts mid-stem ('equilibrium. Which of the following graphs...'); page context shows the stem start 'Additional Cl2(g) is injected into the system at equilibrium' and graphs A-D. The shared stimulus (PCl5(g) <=> PCl3(g) + Cl2(g), questions 29-33) is on the preceding page, which is not in this packet; it was seen on the page image of packet mcq-2014-30-184 (same source, page 184).",
+            "readiness": {
+              "status": "text-sufficient-candidate",
+              "reasons": [
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "7.2",
+              "additional": [
+                "7.9"
+              ]
+            },
+            "parts": [
+              {
+                "partId": "stem",
+                "label": "(stem)",
+                "primary": [
+                  {
+                    "conceptId": "dynamic-equilibrium",
+                    "evidence": "Must choose the graph of reverse rate versus time as the disturbed system returns to a new equilibrium where forward and reverse rates are again equal."
+                  }
+                ],
+                "supporting": [
+                  {
+                    "conceptId": "le-chatelier",
+                    "evidence": "Must recognize that adding the product Cl2 instantly raises the reverse rate, which then declines as the system shifts toward PCl5 to a new level above the original."
+                  }
+                ],
+                "contextual": [],
+                "actions": [
+                  "interpret"
+                ],
+                "representations": [
+                  "graph",
+                  "chemical-equation"
+                ],
+                "skills": [
+                  "graph-analysis"
+                ]
+              }
+            ],
+            "aggregate": {
+              "primary": [
+                "dynamic-equilibrium"
+              ],
+              "supporting": [
+                "le-chatelier"
+              ],
+              "contextual": [],
+              "actions": [
+                "interpret"
+              ],
+              "representations": [
+                "graph",
+                "chemical-equation"
+              ]
+            },
+            "uncertainty": "The shared stimulus identifying Cl2 as a product is absent from this packet's images; it was taken from another packet's page image of the preceding page. Packet should include the stimulus.",
+            "reviewStatus": "needs_attention",
+            "flags": [
+              "crop-issue:missing-content-recovered-from-page",
+              "classifier-requested-review",
+              "second-pass-disagreement"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "review",
+          "at": "2026-11-14T14:44:18.784Z",
+          "reviewer": null,
+          "from": "machine_generated",
+          "to": "needs_attention",
+          "notes": "pass b disagreed: stem: primary dynamic-equilibrium vs le-chatelier+dynamic-equilibrium; supporting le-chatelier vs -"
         }
       ]
     },
@@ -17348,40 +18058,93 @@
       "current": {
         "questionId": "mcq-2018-36-1207",
         "type": "MCQ",
-        "contentHash": "710a885ff484dac0",
+        "contentHash": "7022313c74c3d379",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "mixture-composition": "552c0c7c8728037a",
+          "partial-pressures": "7c04ba0b7a396274"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.100Z",
-        "contentStatus": "partial",
-        "diagramStatus": "none",
-        "cropIssue": "missing-content",
+        "createdAt": "2026-11-14T14:34:32.798Z",
+        "contentStatus": "complete",
+        "diagramStatus": "analyzed",
+        "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Crop and page show only the stem and choices; the eggshell experiment stimulus (sample mass and measured data) shared by Q35-38 is on an earlier page not included in the packet, so the required data cannot be seen.",
+        "contentNotes": "Crop shows stem and choices A-D but not the shared stimulus; the stimulus image (preceding page, Questions 35-38) shows the calibration line of gas pressure vs. mass of CaCO3 and the eggshell data table (0.200 g, 0.800 atm before, 0.870 atm after). All legible.",
         "readiness": {
-          "status": "text-sufficient-candidate",
+          "status": "needs-visual-check",
           "reasons": [
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
           "primary": "1.4",
-          "additional": []
+          "additional": [
+            "3.4"
+          ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Shared stimulus for the eggshell question set is missing; cannot determine what data the student uses.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "stem",
+            "label": "(stem)",
+            "primary": [
+              {
+                "conceptId": "mixture-composition",
+                "evidence": "Must find the mass of CaCO3 in a 0.200 g eggshell mixture and express it as a mass percent of the sample."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "partial-pressures",
+                "evidence": "Must recognize the pressure of gas produced is the increase in total pressure (0.870 - 0.800 atm), not the final total pressure, before using the calibration line."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "calculate",
+              "interpret"
+            ],
+            "representations": [
+              "calibration-curve",
+              "table",
+              "experimental-data"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "mixture-composition"
+          ],
+          "supporting": [
+            "partial-pressures"
+          ],
+          "contextual": [],
+          "actions": [
+            "calculate",
+            "interpret"
+          ],
+          "representations": [
+            "calibration-curve",
+            "table",
+            "experimental-data"
+          ]
+        },
+        "uncertainty": "",
+        "reviewStatus": "needs_attention",
         "flags": [
-          "crop-issue:missing-content",
-          "classifier-requested-review"
+          "crop-issue:missing-content-recovered-from-page",
+          "second-pass-disagreement"
         ],
         "validation": {
           "warnings": []
@@ -17433,6 +18196,60 @@
               "warnings": []
             }
           }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.798Z",
+          "record": {
+            "questionId": "mcq-2018-36-1207",
+            "type": "MCQ",
+            "contentHash": "710a885ff484dac0",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.100Z",
+            "contentStatus": "partial",
+            "diagramStatus": "none",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Crop and page show only the stem and choices; the eggshell experiment stimulus (sample mass and measured data) shared by Q35-38 is on an earlier page not included in the packet, so the required data cannot be seen.",
+            "readiness": {
+              "status": "text-sufficient-candidate",
+              "reasons": [
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "1.4",
+              "additional": []
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Shared stimulus for the eggshell question set is missing; cannot determine what data the student uses.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "review",
+          "at": "2026-11-14T14:34:33.682Z",
+          "reviewer": null,
+          "from": "machine_generated",
+          "to": "needs_attention",
+          "notes": "pass b disagreed: stem: primary mixture-composition vs mixture-composition; supporting partial-pressures vs -"
         }
       ]
     },
@@ -19494,43 +20311,171 @@
       "current": {
         "questionId": "mcq-2022-62-1709",
         "type": "FRQ",
-        "contentHash": "1f403be264aabc51",
+        "contentHash": "21ce81d6ecd48cec",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "calorimetry": "ccad04cd43c3486a",
+          "collision-model": "772ec309875cc838",
+          "endo-exothermic": "6803ca98f117065d",
+          "enthalpy-of-reaction": "24ad3299b459a15e"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.119Z",
-        "contentStatus": "partial",
-        "diagramStatus": "partially-readable",
-        "cropIssue": "missing-content",
+        "createdAt": "2026-11-14T14:34:32.800Z",
+        "contentStatus": "complete",
+        "diagramStatus": "analyzed",
+        "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Scoring-guide page shows the shared stem (baking soda + citric acid calorimetry), data table, temperature-time graph and parts (a) and (b) only; catalog parts (c) and (d) are on a continuation page that is not provided.",
+        "contentNotes": "Free-response item from a scoring-guide page. Page 209 shows the equation, the data table, the temperature-vs-time graph and parts (a)-(b); the continuation (page 210) shows parts (c)-(d). Scoring criteria are visible on page 210 but were not used.",
         "readiness": {
           "status": "needs-visual-check",
           "reasons": [
             "source-is-answer-or-scoring-page",
             "refers-to-visual-content",
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
           "primary": "6.4",
-          "additional": []
+          "additional": [
+            "5.5",
+            "6.1",
+            "6.6"
+          ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Parts (c) and (d) missing; source is a scoring-guide page rather than a clean question page.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "a",
+            "label": "(a)",
+            "primary": [
+              {
+                "conceptId": "calorimetry",
+                "evidence": "Must calculate the magnitude of q with q = mc dT using the 44.40 g total mass, 4.22 J/(g C) and the temperature change from the table."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "calculate"
+            ],
+            "representations": [
+              "table",
+              "experimental-data"
+            ],
+            "skills": []
+          },
+          {
+            "partId": "b",
+            "label": "(b)",
+            "primary": [
+              {
+                "conceptId": "collision-model",
+                "evidence": "Must explain the slowing temperature change through fewer collisions per unit time as the reactant concentration falls during the reaction."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "explain"
+            ],
+            "representations": [
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "c",
+            "label": "(c)",
+            "primary": [
+              {
+                "conceptId": "endo-exothermic",
+                "evidence": "Must claim the direction of heat flow between the reaction system and surroundings consistent with the temperature drop shown in the graph."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "predict",
+              "justify"
+            ],
+            "representations": [
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis"
+            ]
+          },
+          {
+            "partId": "d",
+            "label": "(d)",
+            "primary": [
+              {
+                "conceptId": "enthalpy-of-reaction",
+                "evidence": "Must reason that with citric acid in excess, halving the NaHCO3 halves the amount reacting and therefore the heat absorbed."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "calorimetry",
+                "evidence": "Must connect the smaller heat to a smaller temperature change for a similar mass of mixture through q = mc dT."
+              }
+            ],
+            "contextual": [
+              {
+                "conceptId": "limiting-reactant",
+                "evidence": ""
+              }
+            ],
+            "actions": [
+              "compare",
+              "justify"
+            ],
+            "representations": [
+              "text-only"
+            ],
+            "skills": []
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "calorimetry",
+            "collision-model",
+            "endo-exothermic",
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [],
+          "contextual": [
+            "limiting-reactant"
+          ],
+          "actions": [
+            "calculate",
+            "explain",
+            "predict",
+            "justify",
+            "compare"
+          ],
+          "representations": [
+            "table",
+            "experimental-data",
+            "graph",
+            "text-only"
+          ]
+        },
+        "uncertainty": "",
+        "reviewStatus": "needs_attention",
         "flags": [
-          "crop-issue:missing-content",
-          "classifier-requested-review",
-          "source-not-clean-question-page"
+          "crop-issue:missing-content-recovered-from-page",
+          "source-not-clean-question-page",
+          "second-pass-disagreement"
         ],
         "validation": {
           "warnings": []
@@ -19585,6 +20530,63 @@
               "warnings": []
             }
           }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.800Z",
+          "record": {
+            "questionId": "mcq-2022-62-1709",
+            "type": "FRQ",
+            "contentHash": "1f403be264aabc51",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.119Z",
+            "contentStatus": "partial",
+            "diagramStatus": "partially-readable",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Scoring-guide page shows the shared stem (baking soda + citric acid calorimetry), data table, temperature-time graph and parts (a) and (b) only; catalog parts (c) and (d) are on a continuation page that is not provided.",
+            "readiness": {
+              "status": "needs-visual-check",
+              "reasons": [
+                "source-is-answer-or-scoring-page",
+                "refers-to-visual-content",
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "6.4",
+              "additional": []
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Parts (c) and (d) missing; source is a scoring-guide page rather than a clean question page.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review",
+              "source-not-clean-question-page"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "review",
+          "at": "2026-11-14T14:34:33.685Z",
+          "reviewer": null,
+          "from": "machine_generated",
+          "to": "needs_attention",
+          "notes": "pass b disagreed: c: primary endo-exothermic vs endo-exothermic; supporting - vs heat-transfer | d: primary enthalpy-of-reaction vs calorimetry; supporting calorimetry vs enthalpy-of-reaction"
         }
       ]
     },
@@ -19968,42 +20970,98 @@
       "current": {
         "questionId": "mcq-2023-67-1808",
         "type": "MCQ",
-        "contentHash": "d586c1fa32388b52",
+        "contentHash": "9471f192194b0381",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "beer-lambert": "a564603438ccb0f0",
+          "dilution": "ba2bf82f39abefdd"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.124Z",
-        "contentStatus": "partial",
-        "diagramStatus": "partially-readable",
-        "cropIssue": "missing-content",
+        "createdAt": "2026-11-14T14:34:32.802Z",
+        "contentStatus": "complete",
+        "diagramStatus": "analyzed",
+        "cropIssue": "missing-content-recovered-from-page",
         "sawImage": true,
-        "contentNotes": "Scoring-guide page shows the Ni(ClO4)2 spectrophotometry stem, absorbance spectrum, parts (a) and (b), and a standard curve that belongs to a later part; the continuation page with the remaining part(s) is not provided. Catalog lists only a single stem part.",
+        "contentNotes": "Free-response item (parts a-d) from a scoring-guide page, cataloged as an MCQ with a single stem part. Page 8 shows the absorbance spectrum, (a), (b) and the standard curve; the continuation (page 9) shows (c), (d) and the two-student standard-curve graph. Scoring answers are visible on page 9 but were not used. Classified as one stem part because the catalog has no part list.",
         "readiness": {
           "status": "needs-visual-check",
           "reasons": [
             "source-is-answer-or-scoring-page",
             "refers-to-visual-content",
             "choices-not-in-text",
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
           "primary": "3.13",
-          "additional": []
+          "additional": [
+            "3.7"
+          ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Multi-part FRQ-style item catalogued as a single-stem MCQ; later parts missing. Source is a scoring-guide page.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "stem",
+            "label": "(stem)",
+            "primary": [
+              {
+                "conceptId": "beer-lambert",
+                "evidence": "Parts (a), (c) and (d) require choosing the wavelength of maximum absorbance, reading concentration from the standard curve at A = 0.30, and identifying an error that makes the calibration slope less steep."
+              },
+              {
+                "conceptId": "dilution",
+                "evidence": "Part (b) requires M1V1 = M2V2 to find the volume of 0.198 M stock needed for 250.0 mL of 0.0400 M solution."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "identify",
+              "calculate",
+              "interpret",
+              "evaluate-error"
+            ],
+            "representations": [
+              "spectrum",
+              "calibration-curve",
+              "graph"
+            ],
+            "skills": [
+              "graph-analysis",
+              "error-analysis"
+            ]
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "beer-lambert",
+            "dilution"
+          ],
+          "supporting": [],
+          "contextual": [],
+          "actions": [
+            "identify",
+            "calculate",
+            "interpret",
+            "evaluate-error"
+          ],
+          "representations": [
+            "spectrum",
+            "calibration-curve",
+            "graph"
+          ]
+        },
+        "uncertainty": "This is a multi-part FRQ but the catalog gives only a stem part, so per-part concepts are merged; it should be re-typed as an FRQ with parts a-d.",
+        "reviewStatus": "needs_attention",
         "flags": [
-          "crop-issue:missing-content",
+          "crop-issue:missing-content-recovered-from-page",
           "classifier-requested-review",
           "source-not-clean-question-page"
         ],
@@ -20030,6 +21088,56 @@
               "runId": "pilot-v1"
             },
             "createdAt": "2026-11-14T09:18:44.121Z",
+            "contentStatus": "partial",
+            "diagramStatus": "partially-readable",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Scoring-guide page shows the Ni(ClO4)2 spectrophotometry stem, absorbance spectrum, parts (a) and (b), and a standard curve that belongs to a later part; the continuation page with the remaining part(s) is not provided. Catalog lists only a single stem part.",
+            "readiness": {
+              "status": "needs-visual-check",
+              "reasons": [
+                "source-is-answer-or-scoring-page",
+                "refers-to-visual-content",
+                "choices-not-in-text",
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "3.13",
+              "additional": []
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Multi-part FRQ-style item catalogued as a single-stem MCQ; later parts missing. Source is a scoring-guide page.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review",
+              "source-not-clean-question-page"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.802Z",
+          "record": {
+            "questionId": "mcq-2023-67-1808",
+            "type": "MCQ",
+            "contentHash": "d586c1fa32388b52",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.124Z",
             "contentStatus": "partial",
             "diagramStatus": "partially-readable",
             "cropIssue": "missing-content",
@@ -20246,40 +21354,83 @@
       "current": {
         "questionId": "mcq-2024-21-2091",
         "type": "MCQ",
-        "contentHash": "1db26eaf473758b0",
+        "contentHash": "3de531afb33a93a2",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "le-chatelier": "ba65ca7667b4a2ec",
+          "endo-exothermic": "6803ca98f117065d"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.129Z",
-        "contentStatus": "partial",
-        "diagramStatus": "unreadable",
-        "cropIssue": "missing-content",
+        "createdAt": "2026-11-14T14:34:32.804Z",
+        "contentStatus": "complete",
+        "diagramStatus": "none",
+        "cropIssue": "wrong-question",
         "sawImage": true,
-        "contentNotes": "Crop and page context are the same scanned page (-17-) showing questions numbered 23 (or 21; scan ambiguous), 24 and 25 about 'Sample 1-4' of acid. The shared stimulus describing the four acid samples (table or diagram, on a preceding page) is not in the packet, so the samples cannot be distinguished. The question number on the page does not clearly match 21.",
+        "contentNotes": "Catalog text withheld (it was printed Question 23). The question image (page 2089, printed -15-) shows the equation CO(g) + 2 H2(g) <=> CH3OH(g), dH = -90 kJ/mol, printed Question 21 and choices A-D, all legible.",
         "readiness": {
-          "status": "text-sufficient-candidate",
+          "status": "needs-visual-check",
           "reasons": [
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
-          "primary": "8.5",
+          "primary": "7.9",
           "additional": []
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Missing shared stimulus for the acid samples, and the printed question number on the page appears to be 23, not 21. Need the preceding page and a check that the crop targets the right question.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "stem",
+            "label": "(stem)",
+            "primary": [
+              {
+                "conceptId": "le-chatelier",
+                "evidence": "Must predict which change (raising or lowering temperature, adding CH3OH, removing H2) shifts the equilibrium so that the amount of CO decreases."
+              }
+            ],
+            "supporting": [
+              {
+                "conceptId": "endo-exothermic",
+                "evidence": "Must use the negative dH to treat the forward reaction as exothermic, so heat acts as a product when judging the temperature choices."
+              }
+            ],
+            "contextual": [],
+            "actions": [
+              "predict"
+            ],
+            "representations": [
+              "chemical-equation"
+            ],
+            "skills": []
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ],
+          "contextual": [],
+          "actions": [
+            "predict"
+          ],
+          "representations": [
+            "chemical-equation"
+          ]
+        },
+        "uncertainty": "",
+        "reviewStatus": "machine_reviewed",
         "flags": [
-          "crop-issue:missing-content",
-          "classifier-requested-review"
+          "crop-issue:wrong-question",
+          "topic-differs-from-catalog"
         ],
         "validation": {
           "warnings": []
@@ -20331,6 +21482,60 @@
               "warnings": []
             }
           }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.804Z",
+          "record": {
+            "questionId": "mcq-2024-21-2091",
+            "type": "MCQ",
+            "contentHash": "1db26eaf473758b0",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.129Z",
+            "contentStatus": "partial",
+            "diagramStatus": "unreadable",
+            "cropIssue": "missing-content",
+            "sawImage": true,
+            "contentNotes": "Crop and page context are the same scanned page (-17-) showing questions numbered 23 (or 21; scan ambiguous), 24 and 25 about 'Sample 1-4' of acid. The shared stimulus describing the four acid samples (table or diagram, on a preceding page) is not in the packet, so the samples cannot be distinguished. The question number on the page does not clearly match 21.",
+            "readiness": {
+              "status": "text-sufficient-candidate",
+              "reasons": [
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "8.5",
+              "additional": []
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Missing shared stimulus for the acid samples, and the printed question number on the page appears to be 23, not 21. Need the preceding page and a check that the crop targets the right question.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:missing-content",
+              "classifier-requested-review"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "review",
+          "at": "2026-11-14T14:34:33.691Z",
+          "reviewer": null,
+          "from": "machine_generated",
+          "to": "machine_reviewed",
+          "notes": "independent pass b agreed"
         }
       ]
     },
@@ -20338,42 +21543,88 @@
       "current": {
         "questionId": "mcq-2024-33-2094",
         "type": "MCQ",
-        "contentHash": "47b92b88b02a42be",
+        "contentHash": "a849cfc774a3cf89",
         "taxonomyVersion": "1.0.0",
         "taxonomyHash": "2807830503f6372c",
-        "conceptHashes": {},
+        "conceptHashes": {
+          "integrated-rate-laws": "06df17dd1b444968",
+          "rate-law": "914c1bc98e66d6d5"
+        },
         "promptVersion": "classifier.v1",
         "method": {
           "engine": "claude-code-subagent",
           "model": "claude-opus-5-5",
           "role": "classifier-pass-a",
-          "runId": "pilot-v1"
+          "runId": "pilot-v1-recovered"
         },
-        "createdAt": "2026-11-14T09:27:35.131Z",
-        "contentStatus": "unreadable",
-        "diagramStatus": "none",
+        "createdAt": "2026-11-14T14:34:32.807Z",
+        "contentStatus": "complete",
+        "diagramStatus": "analyzed",
         "cropIssue": "wrong-question",
         "sawImage": true,
-        "contentNotes": "Id says Q33, but the crop and page show only printed Q31 (ΔG favorability of 2 PCl3 + O2) and Q32 (gravimetric NaBr error). Q33 is not visible on any provided image, so it cannot be classified.",
+        "contentNotes": "Catalog text withheld (it was printed Questions 31-32). The question image (page 2095, printed -21-) shows printed Question 33: C2H5Cl decomposition, a table of initial concentration, initial rate and half-life for two trials, and choices A-D. Legible.",
         "readiness": {
           "status": "needs-visual-check",
           "reasons": [
             "question-number-not-confirmed",
             "refers-to-visual-content",
+            "content-supplemented-see-images",
             "crop-unverified"
           ]
         },
         "officialTopics": {
-          "primary": "9.3",
-          "additional": []
+          "primary": "5.3",
+          "additional": [
+            "5.2"
+          ]
         },
-        "parts": [],
-        "aggregate": null,
-        "uncertainty": "Wrong-question crop: target Q33 is not on page 2094; the page holds Q31 and Q32. Needs re-cropping or id correction.",
-        "reviewStatus": "blocked",
+        "parts": [
+          {
+            "partId": "stem",
+            "label": "(stem)",
+            "primary": [
+              {
+                "conceptId": "integrated-rate-laws",
+                "evidence": "Must know that a first-order half-life is independent of initial concentration when comparing the half-lives of the two trials."
+              },
+              {
+                "conceptId": "rate-law",
+                "evidence": "Must predict how the initial rate of a first-order reaction responds to doubling [C2H5Cl]0 from 1.0 M to 2.0 M."
+              }
+            ],
+            "supporting": [],
+            "contextual": [],
+            "actions": [
+              "predict",
+              "interpret"
+            ],
+            "representations": [
+              "table",
+              "chemical-equation"
+            ],
+            "skills": []
+          }
+        ],
+        "aggregate": {
+          "primary": [
+            "integrated-rate-laws",
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": [],
+          "actions": [
+            "predict",
+            "interpret"
+          ],
+          "representations": [
+            "table",
+            "chemical-equation"
+          ]
+        },
+        "uncertainty": "",
+        "reviewStatus": "machine_reviewed",
         "flags": [
-          "crop-issue:wrong-question",
-          "classifier-requested-review"
+          "crop-issue:wrong-question"
         ],
         "validation": {
           "warnings": []
@@ -20427,6 +21678,62 @@
               "warnings": []
             }
           }
+        },
+        {
+          "event": "superseded",
+          "at": "2026-11-14T14:34:32.807Z",
+          "record": {
+            "questionId": "mcq-2024-33-2094",
+            "type": "MCQ",
+            "contentHash": "47b92b88b02a42be",
+            "taxonomyVersion": "1.0.0",
+            "taxonomyHash": "2807830503f6372c",
+            "conceptHashes": {},
+            "promptVersion": "classifier.v1",
+            "method": {
+              "engine": "claude-code-subagent",
+              "model": "claude-opus-5-5",
+              "role": "classifier-pass-a",
+              "runId": "pilot-v1"
+            },
+            "createdAt": "2026-11-14T09:27:35.131Z",
+            "contentStatus": "unreadable",
+            "diagramStatus": "none",
+            "cropIssue": "wrong-question",
+            "sawImage": true,
+            "contentNotes": "Id says Q33, but the crop and page show only printed Q31 (ΔG favorability of 2 PCl3 + O2) and Q32 (gravimetric NaBr error). Q33 is not visible on any provided image, so it cannot be classified.",
+            "readiness": {
+              "status": "needs-visual-check",
+              "reasons": [
+                "question-number-not-confirmed",
+                "refers-to-visual-content",
+                "crop-unverified"
+              ]
+            },
+            "officialTopics": {
+              "primary": "9.3",
+              "additional": []
+            },
+            "parts": [],
+            "aggregate": null,
+            "uncertainty": "Wrong-question crop: target Q33 is not on page 2094; the page holds Q31 and Q32. Needs re-cropping or id correction.",
+            "reviewStatus": "blocked",
+            "flags": [
+              "crop-issue:wrong-question",
+              "classifier-requested-review"
+            ],
+            "validation": {
+              "warnings": []
+            }
+          }
+        },
+        {
+          "event": "review",
+          "at": "2026-11-14T14:34:33.694Z",
+          "reviewer": null,
+          "from": "machine_generated",
+          "to": "machine_reviewed",
+          "notes": "independent pass b agreed"
         }
       ]
     },

@@ -2063,7 +2063,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-1999-7-564",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-1999-7-564#a",
@@ -2161,7 +2161,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2005-1-6",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2005-1-6#a",
@@ -2291,7 +2291,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2005-7-13",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2005-7-13#a-i",
@@ -2364,7 +2364,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2008-3-59",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "part:frq-2008-3-59#a",
@@ -2486,7 +2486,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2008-6-65",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2008-6-65#a",
@@ -2600,7 +2600,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2011-3-933",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2011-3-933#a",
@@ -2690,7 +2690,71 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2011-6-937",
-      "reviewStatus": "blocked"
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "id": "part:frq-2011-6-937#a-i",
+      "label": "frq-2011-6-937 a-i",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 a-i"
+    },
+    {
+      "id": "part:frq-2011-6-937#a-ii",
+      "label": "frq-2011-6-937 a-ii",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 a-ii"
+    },
+    {
+      "id": "part:frq-2011-6-937#b-i",
+      "label": "frq-2011-6-937 b-i",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 b-i"
+    },
+    {
+      "id": "part:frq-2011-6-937#b-ii",
+      "label": "frq-2011-6-937 b-ii",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 b-ii"
+    },
+    {
+      "id": "part:frq-2011-6-937#c-i",
+      "label": "frq-2011-6-937 c-i",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 c-i"
+    },
+    {
+      "id": "part:frq-2011-6-937#c-ii",
+      "label": "frq-2011-6-937 c-ii",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 c-ii"
+    },
+    {
+      "id": "part:frq-2011-6-937#c-iii",
+      "label": "frq-2011-6-937 c-iii",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 c-iii"
+    },
+    {
+      "id": "part:frq-2011-6-937#c-iv",
+      "label": "frq-2011-6-937 c-iv",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2011-6-937 c-iv"
     },
     {
       "id": "question:frq-2017-3-1157",
@@ -2699,7 +2763,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2017-3-1157",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2017-3-1157#a",
@@ -2764,7 +2828,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2020-sample-2-116",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:frq-2020-sample-2-116#a",
@@ -2910,7 +2974,79 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "frq-2024-3-2119",
-      "reviewStatus": "blocked"
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "id": "part:frq-2024-3-2119#a",
+      "label": "frq-2024-3-2119 (a)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (a)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#b",
+      "label": "frq-2024-3-2119 (b)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (b)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#c-i",
+      "label": "frq-2024-3-2119 (c)(i)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (c)(i)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#c-ii",
+      "label": "frq-2024-3-2119 (c)(ii)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (c)(ii)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#d-i",
+      "label": "frq-2024-3-2119 (d)(i)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (d)(i)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#d-ii",
+      "label": "frq-2024-3-2119 (d)(ii)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (d)(ii)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#e",
+      "label": "frq-2024-3-2119 (e)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (e)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#f-i",
+      "label": "frq-2024-3-2119 (f)(i)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (f)(i)"
+    },
+    {
+      "id": "part:frq-2024-3-2119#f-ii",
+      "label": "frq-2024-3-2119 (f)(ii)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "frq-2024-3-2119 (f)(ii)"
     },
     {
       "id": "question:frq-2024-5-2125",
@@ -3011,7 +3147,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-1984-72-131",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-1984-84-135",
@@ -3029,7 +3165,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-1994-63-691",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-1994-65-692",
@@ -3038,7 +3174,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-1994-65-692",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2002-38-614",
@@ -3047,7 +3183,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2002-38-614",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2002-41-759",
@@ -3056,7 +3192,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2002-41-759",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2002-48-760",
@@ -3065,7 +3201,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2002-48-760",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2002-6-606",
@@ -3083,7 +3219,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2002-67-765",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-1-29",
@@ -3092,7 +3228,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-1-29",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2008-10-31",
@@ -3119,7 +3255,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-13-32",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-25-34",
@@ -3128,7 +3264,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-25-34",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2008-3-29",
@@ -3137,7 +3273,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-3-29",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2008-4-31",
@@ -3146,7 +3282,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-4-31",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-41-38",
@@ -3155,7 +3291,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-41-38",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-44-39",
@@ -3173,7 +3309,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-57-41",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2008-59-42",
@@ -3182,7 +3318,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-59-42",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-6-31",
@@ -3191,7 +3327,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-6-31",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2008-8-31",
@@ -3200,7 +3336,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-8-31",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2008-9-31",
@@ -3209,7 +3345,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2008-9-31",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2012-21-1354",
@@ -3218,7 +3354,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2012-21-1354",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-12-176",
@@ -3227,7 +3363,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-12-176",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-15-178",
@@ -3236,7 +3372,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-15-178",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-17-1448",
@@ -3245,7 +3381,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-17-1448",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-21-1450",
@@ -3254,7 +3390,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-21-1450",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2014-22-180",
@@ -3263,7 +3399,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-22-180",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-24-1450",
@@ -3272,7 +3408,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-24-1450",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-29-1453",
@@ -3281,7 +3417,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-29-1453",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2014-30-184",
@@ -3290,7 +3426,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-30-184",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2014-33-185",
@@ -3299,7 +3435,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-33-185",
-      "reviewStatus": "needs_attention"
+      "reviewStatus": "machine_generated"
     },
     {
       "id": "question:mcq-2014-34-186",
@@ -3308,7 +3444,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-34-186",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2014-47-190",
@@ -3317,7 +3453,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-47-190",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2014-9-174",
@@ -3326,7 +3462,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-9-174",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2014-practice-24-180",
@@ -3335,7 +3471,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2014-practice-24-180",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2015-47-1554",
@@ -3344,7 +3480,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2015-47-1554",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2016-24-1063",
@@ -3353,7 +3489,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-24-1063",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2016-26-1064",
@@ -3362,7 +3498,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-26-1064",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2016-27-1064",
@@ -3371,7 +3507,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-27-1064",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2016-37-1070",
@@ -3380,7 +3516,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-37-1070",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2016-5-1053",
@@ -3389,7 +3525,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-5-1053",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2016-9-1056",
@@ -3398,7 +3534,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2016-9-1056",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2017-30-1137",
@@ -3407,7 +3543,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2017-30-1137",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2017-42-1144",
@@ -3425,7 +3561,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-11-1196",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2018-12-1197",
@@ -3434,7 +3570,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-12-1197",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2018-13-1198",
@@ -3443,7 +3579,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-13-1198",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2018-14-1911",
@@ -3452,7 +3588,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-14-1911",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2018-34-1205",
@@ -3461,7 +3597,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-34-1205",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2018-36-1207",
@@ -3470,7 +3606,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-36-1207",
-      "reviewStatus": "blocked"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2018-38-1920",
@@ -3488,7 +3624,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-40-2043",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2018-57-2046",
@@ -3497,7 +3633,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2018-57-2046",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2022-13-1639",
@@ -3506,7 +3642,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-13-1639",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2022-21-1622",
@@ -3515,7 +3651,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-21-1622",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2022-38-1648",
@@ -3524,7 +3660,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-38-1648",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2022-41-1649",
@@ -3533,7 +3669,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-41-1649",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2022-5-1663",
@@ -3542,7 +3678,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-5-1663",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "part:mcq-2022-5-1663#a",
@@ -3583,7 +3719,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-52-1652",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2022-56-1653",
@@ -3592,7 +3728,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-56-1653",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2022-62-1709",
@@ -3601,7 +3737,39 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2022-62-1709",
-      "reviewStatus": "blocked"
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "id": "part:mcq-2022-62-1709#a",
+      "label": "mcq-2022-62-1709 (a)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "mcq-2022-62-1709 (a)"
+    },
+    {
+      "id": "part:mcq-2022-62-1709#b",
+      "label": "mcq-2022-62-1709 (b)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "mcq-2022-62-1709 (b)"
+    },
+    {
+      "id": "part:mcq-2022-62-1709#c",
+      "label": "mcq-2022-62-1709 (c)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "mcq-2022-62-1709 (c)"
+    },
+    {
+      "id": "part:mcq-2022-62-1709#d",
+      "label": "mcq-2022-62-1709 (d)",
+      "kind": "frq-part",
+      "file_type": "concept-graph",
+      "source_file": "research/concepts/classifications.json",
+      "norm_label": "mcq-2022-62-1709 (d)"
     },
     {
       "id": "question:mcq-2023-33-1727",
@@ -3610,7 +3778,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2023-33-1727",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2023-43-1731",
@@ -3619,7 +3787,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2023-43-1731",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2023-67-1808",
@@ -3628,7 +3796,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2023-67-1808",
-      "reviewStatus": "blocked"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2024-19-2088",
@@ -3637,7 +3805,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2024-19-2088",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2024-21-2091",
@@ -3646,7 +3814,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2024-21-2091",
-      "reviewStatus": "blocked"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2024-33-2094",
@@ -3655,7 +3823,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2024-33-2094",
-      "reviewStatus": "blocked"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2024-38-2099",
@@ -3664,7 +3832,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2024-38-2099",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "id": "question:mcq-2024-56-2109",
@@ -3673,7 +3841,7 @@
       "file_type": "concept-graph",
       "source_file": "research/concepts/classifications.json",
       "norm_label": "mcq-2024-56-2109",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "id": "question:mcq-2024-60-2110",
@@ -10025,7 +10193,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain that isotopes share the same number of protons (and electrons) but differ in the number of neutrons.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#b",
@@ -10043,7 +10211,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must write the full ground-state configuration of Se and use the 4p4 subshell (Hund rule) to count unpaired electrons.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#c",
@@ -10061,7 +10229,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain why the Se first ionization energy is lower than that of Br and higher than that of Te.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#c",
@@ -10071,7 +10239,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Explanation requires greater nuclear charge in Br at similar distance, and greater distance and shielding of the valence electron in Te.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#d",
@@ -10089,7 +10257,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must draw the complete Lewis structure of SeF4 with an expanded octet and one lone pair on Se.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#d",
@@ -10099,7 +10267,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must state and justify whether SeF4 is polar.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#d",
@@ -10109,7 +10277,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must sketch the seesaw structure, whose asymmetry is why the bond dipoles do not cancel.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-1999-7-564#d",
@@ -10119,7 +10287,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must count five electron domains on Se, including one lone pair, to reach the seesaw shape.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2003-3-536",
@@ -10373,7 +10541,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must write Ka = [C3H5O2-][H+]/[HC3H5O2] from the given ionization equation.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#b",
@@ -10391,7 +10559,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use Ka = 1.34 × 10^-5 and 0.265 M to solve for [H+] of the weak acid solution.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#b",
@@ -10401,7 +10569,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must convert the calculated [H+] to pH with a logarithm.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#c-i",
@@ -10419,7 +10587,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must convert 0.496 g NaC3H5O2 to moles and divide by 0.0500 L to get the propanoate concentration.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#c-ii",
@@ -10437,7 +10605,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must find [H+] in the propanoic acid/propanoate buffer from Ka and the ratio of conjugate base to acid concentrations.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#d",
@@ -10455,7 +10623,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compute Kb for HCO2- from [OH-] = 4.18 × 10^-6 M in 0.309 M solution, then Ka of HCO2H using Ka·Kb = Kw.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-1-6#e",
@@ -10473,7 +10641,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compare the Ka of propanoic acid with the Ka of methanoic acid from (d) to justify which acid is stronger.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2005-4-10",
@@ -10757,7 +10925,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize NH3 has H bonded to N and therefore hydrogen bonds, unlike NF3.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#a-i",
@@ -10767,7 +10935,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify dipole-dipole attractions as the main intermolecular force in NF3, which has no N-H bond.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#a-i",
@@ -10777,7 +10945,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Identifying dipole-dipole forces in NF3 requires recognizing that the trigonal pyramidal NF3 molecule is polar.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#a-ii",
@@ -10795,7 +10963,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the higher boiling point of NH3 (240 K vs 144 K) by the greater strength of its intermolecular attractions.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#a-ii",
@@ -10805,7 +10973,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "The explanation rests on hydrogen bonding in NH3 outweighing the forces in NF3 despite NF3 having more electrons.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#b-i",
@@ -10823,7 +10991,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify the bonding in KCl and NaCl as ionic.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#b-ii",
@@ -10841,7 +11009,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must account for NaCl melting higher than KCl through stronger lattice attraction from the smaller Na+ ion at equal charge.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#c-i",
@@ -10859,7 +11027,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify that the valence electrons of Si, P and Cl are in the n = 3 level from their electron configurations.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#c-ii",
@@ -10877,7 +11045,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the increasing first ionization energy from Si to P to Cl shown in the table.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#c-ii",
@@ -10887,7 +11055,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "The explanation requires increasing nuclear charge with electrons added to the same shell, giving stronger attraction to the valence electrons.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#d-i",
@@ -10905,7 +11073,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify the element (Cu) from an average atomic mass lying between isotope masses 62.93 and 64.93 amu.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2005-7-13#d-ii",
@@ -10923,7 +11091,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must decide which isotope is more abundant from where the weighted-average atomic mass lies relative to the two isotope masses.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2008-3-59",
@@ -10965,7 +11133,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use E°cell = +0.62 V and E°(Cu2+/Cu) = +0.34 V to solve for E° of the NO3- reduction half-reaction.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#b",
@@ -10983,7 +11151,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must apply ΔG° = -nFE° with E° = +0.62 V for the overall reaction.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#b",
@@ -10993,7 +11161,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must determine n = 6 mol electrons transferred from the balanced overall equation (3 Cu each losing 2 e-).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#c",
@@ -11011,7 +11179,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must predict the sign of ΔS° by comparing the 10 mol of aqueous ions consumed with the 2 mol of gas and 3 mol of ions produced.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#d",
@@ -11029,7 +11197,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compare experiments holding one concentration constant to determine the order in NO and in O2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#e",
@@ -11047,7 +11215,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must write rate = k[NO]^2[O2] from the orders found in (d).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "part:frq-2008-3-59#f",
@@ -11065,7 +11233,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must calculate k from one experiment's rate and concentrations and derive its units for a third-order rate law.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:frq-2008-5-63",
@@ -11307,7 +11475,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain why pyridine dissolves in water while benzene does not, discussing both.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#a",
@@ -11317,7 +11485,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Explanation requires that the N lone pair in pyridine accepts hydrogen bonds from water, which nonpolar benzene cannot.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#b",
@@ -11335,7 +11503,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must account for the higher boiling point of ethanol than dimethyl ether.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#b",
@@ -11345,7 +11513,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify that ethanol has an O-H that hydrogen bonds while dimethyl ether has no H on O.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#c",
@@ -11363,7 +11531,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the melting points by SO2 being a molecular solid (weak intermolecular forces) and SiO2 a covalent-network solid (covalent bonds broken).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#d",
@@ -11381,7 +11549,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must argue Cl2 has a larger, more polarizable electron cloud and stronger dispersion forces than HCl.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#d",
@@ -11391,7 +11559,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must account for the boiling-point difference from intermolecular force strength.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2008-6-65#d",
@@ -11401,7 +11569,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must address that HCl has dipole-dipole forces yet still boils lower, so these are outweighed by the dispersion difference.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2009-5-325",
@@ -11685,7 +11853,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reduce C6H12O6 to its simplest whole-number ratio of atoms.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#b",
@@ -11703,7 +11871,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must scale 39.0 kJ released by 2.50 g of glucose to a per-mole ΔH° with a negative sign for the combustion as written.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#b",
@@ -11713,7 +11881,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must convert 2.50 g glucose to moles using its molar mass, the key step relating the measured heat to ΔH per mole.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#c-i",
@@ -11731,7 +11899,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compute ΔG° from Kp = 8.9 × 10^39 using ΔG° = -RT ln K at 298 K.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#c-ii",
@@ -11749,7 +11917,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must rearrange ΔG° = ΔH° - TΔS° with ΔH° = -68.0 kJ/mol and the ΔG° from (c)(i) to solve for ΔS°.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#c-iii",
@@ -11767,7 +11935,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that because the fermentation is exothermic (ΔH° = -68.0 kJ/mol), raising temperature shifts it toward reactants and lowers K.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2011-3-933#d",
@@ -11785,7 +11953,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must combine the combustion of glucose from (b) with the reversed, halved fermentation equation to obtain ΔH° for ethanol combustion.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2011-3-946",
@@ -11920,6 +12088,214 @@
       "source_file": "research/concepts/taxonomy.v1.json"
     },
     {
+      "source": "question:frq-2011-6-937",
+      "target": "topic:3.1",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:frq-2011-6-937",
+      "target": "topic:3.4",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:frq-2011-6-937",
+      "target": "topic:3.5",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-i",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-i",
+      "target": "concept:hybridization",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Asks for the hybridization of the carbon atom labeled Cw in the given Lewis diagram.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-i",
+      "target": "concept:electron-domains",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must count three electron domains around Cw, treating the C=O double bond as one domain, to assign the hybridization.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-ii",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-ii",
+      "target": "concept:bond-angles",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must estimate the Hy-Cx-O bond angle and explain the basis of the estimate.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#a-ii",
+      "target": "concept:electron-domains",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "The estimate rests on Cx having four bonding domains and no lone pairs, giving a tetrahedral arrangement.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#b-i",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#b-i",
+      "target": "concept:lewis-structures",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must draw the complete Lewis electron-dot diagram of methanoic acid, HCOOH, including the C=O double bond and all lone pairs.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#b-ii",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#b-ii",
+      "target": "concept:hydrogen-bonding",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must draw methanoic acid and water oriented so that an H on O of one molecule points to a lone pair on O of the other, forming a hydrogen bond.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#b-ii",
+      "target": "concept:lewis-structures",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Requires complete Lewis diagrams of both molecules with lone pairs shown, so the acceptor lone pair can be placed.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-i",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-i",
+      "target": "concept:kinetic-molecular-theory",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain the pressure rise as more gas particles (ethyl methanoate vapor) colliding with the walls of the rigid flask.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-i",
+      "target": "concept:particulate-states",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must recognize that liquid ethyl methanoate evaporates, moving molecules from the liquid into the gas phase.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-ii",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-ii",
+      "target": "concept:dynamic-equilibrium",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain the constant pressure after 60 s as the rate of evaporation equaling the rate of condensation at the molecular level.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-iii",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-iii",
+      "target": "concept:partial-pressures",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must obtain the vapor partial pressure as the total pressure read from the graph at 60 s minus the 1.00 atm contributed by argon (Dalton's law).",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-iv",
+      "target": "question:frq-2011-6-937",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2011-6-937#c-iv",
+      "target": "concept:dynamic-equilibrium",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain that with liquid still present the liquid-vapor equilibrium is re-established at the same temperature, so adding more liquid does not change the vapor partial pressure.",
+      "reviewStatus": "needs_attention"
+    },
+    {
       "source": "question:frq-2017-3-1157",
       "target": "topic:2.6",
       "relation": "BELONGS_TO",
@@ -11975,7 +12351,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must draw the Lewis diagram of O3 with a central O bonded to two terminal O atoms.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#a",
@@ -11985,7 +12361,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must include both valid resonance structures of O3.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#b",
@@ -12003,7 +12379,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must state the shape of O3 from the Lewis diagram.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#b",
@@ -12013,7 +12389,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must count three domains on the central O (one lone pair, double bond counted as one) to get the shape.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#c",
@@ -12031,7 +12407,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use dH = bonds broken - bonds formed with 2 O3 (four O-O bonds) and 3 O2 to solve for the average O-O bond enthalpy in O3.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#d-i",
@@ -12049,7 +12425,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must determine the first-order half-life from the time for [O3] to fall to half its initial value on the graph.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#d-ii",
@@ -12067,7 +12443,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must calculate k1 from the first-order half-life relationship k = 0.693/t1/2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#d-ii",
@@ -12077,7 +12453,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must give units of k consistent with a first-order rate law.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#d-iii",
@@ -12095,7 +12471,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain that HSO3- is in large excess so its concentration stays essentially constant, making the second-order rate law appear first order in O3.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2017-3-1157#d-iv",
@@ -12113,7 +12489,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must describe an experiment that varies [HSO3-] and measures the effect on rate to test the dependence on HSO3-.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2020-sample-2-116",
@@ -12171,7 +12547,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must scan the three steps to find the species (CH3OH) consumed in step 1 and regenerated in step 2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#a",
@@ -12181,7 +12557,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must apply the definition of a catalyst as consumed then regenerated, distinguishing it from intermediates HCO2CH3 and HCONH2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#b",
@@ -12199,7 +12575,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must take the rate law from slow step 1 (CH3OH + CO), which does not contain NH3, to justify that adding NH3 leaves the rate unchanged.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#c",
@@ -12217,7 +12593,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that ΔHrxn = -81 kJ/mol is exothermic so products should lie below reactants, whereas the diagram shows them higher.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#d",
@@ -12235,7 +12611,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must see from the structures that both HCOOH and CH3OH have an H bonded to O and therefore hydrogen bond.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#d",
@@ -12245,7 +12621,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must list dipole-dipole attractions, since both molecules are polar.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#d",
@@ -12255,7 +12631,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must list London dispersion forces as present in both substances.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#e",
@@ -12273,7 +12649,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the higher CH3OH vapor mole fraction (higher vapor pressure, 55.6 vs 17.3 kPa) by weaker overall intermolecular attractions in CH3OH than in HCOOH.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#e",
@@ -12283,7 +12659,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must note that both substances hydrogen bond, so the difference must come from the other forces.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#e",
@@ -12293,7 +12669,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must argue that HCOOH, with more electrons, has stronger dispersion forces than CH3OH.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#f",
@@ -12311,7 +12687,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use 16.67 mL of 0.300 M NaOH and the 1:1 equation to find moles of HCOOH in 20.00 mL and its molarity.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#g",
@@ -12329,7 +12705,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must read the final buret meniscus to the correct precision and subtract the 1.12 mL initial reading to report volume dispensed.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:frq-2020-sample-2-116#h",
@@ -12347,7 +12723,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that extra water in the flask does not change moles of HCOOH, so the NaOH volume to reach the endpoint would not increase.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2023-3-448",
@@ -12619,6 +12995,14 @@
     },
     {
       "source": "question:frq-2024-3-2119",
+      "target": "topic:8.4",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:frq-2024-3-2119",
       "target": "topic:7.10",
       "relation": "BELONGS_TO",
       "confidence": "EXTRACTED",
@@ -12648,6 +13032,208 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#a",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#a",
+      "target": "concept:bronsted-lowry",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must identify a conjugate acid-base pair in the piperidine-water reaction and label which member is the acid and which the base.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#b",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#b",
+      "target": "concept:equilibrium-expression",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must write the equilibrium constant expression from the equation, omitting liquid water.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#b",
+      "target": "concept:weak-acid-equilibrium",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "The expression asked for is Kb of a weak base, with the conjugate acid and OH- over piperidine.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#c-i",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#c-i",
+      "target": "concept:ph-poh",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must convert the given equilibrium [OH-] = 3.09 x 10^-2 M to pOH and then to pH at 25 C using Kw.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#c-ii",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#c-ii",
+      "target": "concept:weak-acid-equilibrium",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must compute the percent ionization of the weak base as equilibrium [OH-] (equal to ionized piperidine) divided by the initial 0.750 M.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-i",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-i",
+      "target": "concept:net-ionic-equations",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must write the balanced net ionic equation for added strong acid, as H3O+ (or H+) reacting with piperidine, the major basic species.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-i",
+      "target": "concept:acid-base-mixtures",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must identify that the strong acid reacts essentially completely with the weak base present as the major species in solution.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-ii",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-ii",
+      "target": "concept:reaction-quotient",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain using Q and K that consuming OH- lowers Q below K, so the reaction proceeds forward and forms more C5H10NH2+.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#d-ii",
+      "target": "concept:acid-base-mixtures",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must recognize that the added strong acid neutralizes OH-, which is the change that alters Q.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#e",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#e",
+      "target": "concept:reaction-rate",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "The sketched H2 curve must fall three times as fast as C5H10NH rises, relating rates of reactant loss and product formation through the 3:1 coefficients.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#e",
+      "target": "concept:reaction-stoichiometry",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must use the 3:1 mole ratio with the product pressure read at 30 min to find the remaining H2 partial pressure from its 1.40 atm start.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#f-i",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#f-i",
+      "target": "concept:entropy",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain at the particle level why 4 mol of gaseous reactants forming 1 mol of gaseous product gives a negative entropy change (fewer gas particles, fewer possible arrangements).",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:frq-2024-3-2119#f-ii",
+      "target": "question:frq-2024-3-2119",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:frq-2024-3-2119#f-ii",
+      "target": "concept:gibbs-free-energy",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must combine the negative signs of the given dG and of dS from (f)(i) in dG = dH - TdS to deduce and justify the sign of dH.",
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:frq-2024-5-2125",
@@ -12893,7 +13479,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize the collected gas is mixed with water vapor, so its partial pressure requires subtracting the water vapor pressure, a tabulated value rather than a measurement.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-1984-72-131",
@@ -12903,7 +13489,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must know which quantities (mass, P, V, T) enter M = mRT/PV to determine molecular weight.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-1984-84-135",
@@ -12947,7 +13533,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize the constant half-life of X in the graph (0.20 to 0.10 to 0.05 M each hour) as first-order behavior.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-1994-65-692",
@@ -12973,7 +13559,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that a salt with a basic anion that is insoluble in water dissolves in acid because H+ consumes the anion, shifting the dissolution equilibrium.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-1994-65-692",
@@ -12983,7 +13569,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use the AP solubility facts that ammonium and nitrate salts are soluble to eliminate choices that are already water-soluble.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-38-614",
@@ -13001,7 +13587,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must judge which spectrophotometer practices give valid absorbance readings: the sample must fill the light path and the instrument must be blanked/calibrated, while saturation is irrelevant.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-41-759",
@@ -13035,7 +13621,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must combine ΔH > 0 and ΔS > 0 with the observation that the process occurs spontaneously to conclude ΔG < 0.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-41-759",
@@ -13045,7 +13631,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must infer ΔH > 0 from the temperature drop of the mixture.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-41-759",
@@ -13055,7 +13641,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must infer ΔS > 0 because a gas is produced from two solids.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-48-760",
@@ -13081,7 +13667,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must predict in which solvent ionic NaCl dissolves least, applying like-dissolves-like across five liquids.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-48-760",
@@ -13091,7 +13677,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize CCl4 is nonpolar despite polar C-Cl bonds because its tetrahedral symmetry cancels the bond dipoles, unlike H2O, HF, CH3OH and CH3COOH.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2002-6-606",
@@ -13127,7 +13713,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that vaporization overcomes intermolecular attractions and breaks no covalent bonds, eliminating the bond-breaking choices.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2002-67-765",
@@ -13137,7 +13723,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify the attractions between H2O molecules as hydrogen bonds.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-1-29",
@@ -13155,7 +13741,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that oxidation means removing an electron and that noble gases have the highest first ionization energy in each period.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-10-31",
@@ -13235,7 +13821,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must know that vaporization of water absorbs heat, so ΔH > 0.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-13-32",
@@ -13245,7 +13831,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must predict ΔS > 0 because liquid water becomes gas.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-25-34",
@@ -13263,7 +13849,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must rearrange PV = nRT for P with T in kelvin and the R value matching atm and liters.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-3-29",
@@ -13281,7 +13867,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must predict from periodic position that halogens, one electron short of a noble-gas configuration, gain an electron to form anions, unlike alkali metals, transition elements or noble gases.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-4-31",
@@ -13299,7 +13885,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify the equivalence point as the midpoint of the steep vertical rise on the curve, where moles of OH- added equal initial moles of weak acid.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-41-38",
@@ -13325,7 +13911,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that 3 H2 molecules react with only 1 N2, so H2 is limiting and 2 N2 remain in excess.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-41-38",
@@ -13335,7 +13921,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must choose the particle diagram that conserves atoms: 2 NH3 molecules plus 2 leftover N2 and no H2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-44-39",
@@ -13379,7 +13965,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Asks for the hybridization of the carbon atoms in ethyne.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-57-41",
@@ -13389,7 +13975,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must count two electron domains on each C because the C≡C triple bond counts as one domain, giving sp.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-59-42",
@@ -13415,7 +14001,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must count NO2 and N2O4 particles in the 1.0 L box and substitute into K = [N2O4]/[NO2]^2 to place K relative to 1.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-6-31",
@@ -13433,7 +14019,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must locate the half-equivalence point (B, about half of the ~110 mL equivalence volume in the buffer region) where [HA] equals [A-].",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2008-8-31",
@@ -13451,7 +14037,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize HBr as a strong acid that ionizes completely in water, unlike weak base NH3 and weak acid H2S.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2008-9-31",
@@ -13469,7 +14055,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that at equal temperature all gases have the same average kinetic energy, so the gas with the largest molar mass (HBr) has the lowest speed and effuses slowest.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2012-21-1354",
@@ -13487,7 +14073,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must relate the rate of decrease of [Y] to that of [X] using the 1:2 coefficients in X + 2Y -> Z + 3Q.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-12-176",
@@ -13505,7 +14091,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use the signs of ΔH° and ΔS° in ΔG° = ΔH° - TΔS° to find the reaction that becomes favorable only at high temperature (both positive).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-15-178",
@@ -13531,7 +14117,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must locate point U beyond the equivalence point on the curve and identify that excess OH- is present along with A- and Na+.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-15-178",
@@ -13541,7 +14127,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must pick the particulate diagram whose species match the solution composition at U, distinguishing HA, A-, OH- and Na+.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-17-1448",
@@ -13559,7 +14145,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must read each curve's well depth (bond energy) and minimum position (bond length) to match the curves to H2, N2 and O2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-17-1448",
@@ -13569,7 +14155,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use single, double and triple bond orders in H2, O2 and N2 to predict their relative bond strengths and lengths.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-21-1450",
@@ -13587,7 +14173,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that for an exothermic reaction (ΔH < 0) raising the temperature favors the reverse reaction, so Kc decreases; temperature is the only stress that changes K.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-22-180",
@@ -13613,7 +14199,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use Kb = 4 × 10^-4 for the weak base caffeine at 0.01 M to estimate [OH-] from the base ionization equilibrium.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-22-180",
@@ -13623,7 +14209,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must convert [OH-] to pOH and then to pH using pH + pOH = 14 to pick the range.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-24-1450",
@@ -13641,7 +14227,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that bond breaking absorbs energy and bond formation releases it, and that ΔH equals energy absorbed minus energy released.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-24-1450",
@@ -13651,7 +14237,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use the stimulus sign ΔH < 0 (exothermic) to decide that energy released in forming product bonds exceeds energy absorbed breaking reactant bonds.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-29-1453",
@@ -13677,7 +14263,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must obtain K3 by adding the FeF2 dissolution to twice the F- + H+ reaction, so K3 = K1 × K2^2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-29-1453",
@@ -13687,7 +14273,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must relate whether K3 is greater or less than 1 to whether the overall dissolution is thermodynamically favorable.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-30-184",
@@ -13705,7 +14291,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must know that as PCl5 is consumed the forward rate falls until it equals the reverse rate at a constant nonzero value, rejecting the choices of zero or unchanged rate.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2014-33-185",
@@ -13730,8 +14316,8 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
-      "evidence": "Must choose the graph of reverse rate versus time as the disturbed system returns to a new equilibrium where forward and reverse rates are again equal.",
-      "reviewStatus": "needs_attention"
+      "evidence": "Must choose a reverse-rate-versus-time graph, reasoning about a nonzero reverse rate at the initial equilibrium, its immediate response to added product Cl2, and its evolution as the system re-approaches equal forward and reverse rates.",
+      "reviewStatus": "machine_generated"
     },
     {
       "source": "question:mcq-2014-33-185",
@@ -13740,8 +14326,8 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
-      "evidence": "Must recognize that adding the product Cl2 instantly raises the reverse rate, which then declines as the system shifts toward PCl5 to a new level above the original.",
-      "reviewStatus": "needs_attention"
+      "evidence": "Must recognize that adding the product Cl2 shifts the equilibrium toward PCl5, and must judge where the new equilibrium reverse rate lies relative to the original to distinguish graphs B, C and D.",
+      "reviewStatus": "machine_generated"
     },
     {
       "source": "question:mcq-2014-34-186",
@@ -13759,7 +14345,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reverse the formation reaction (+437 kJ/mol rxn) and scale it to 0.050 mol Cl2 (0.10 mol rxn) to get heat absorbed.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-47-190",
@@ -13777,7 +14363,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must predict how raising [Fe2+] from 1.00 M to 5.00 M changes Q, and therefore the voltage, in cell Y (Fe2+ is a reactant) versus cell Z (Fe2+ is a product).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-9-174",
@@ -13795,7 +14381,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that in an insulated system the thermal energy lost by the metal equals that gained by the water, even though their temperature changes differ.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-practice-24-180",
@@ -13829,7 +14415,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must derive the rate law from slow step 2 and use the fast pre-equilibrium of step 1 to replace intermediate N2O2 with [NO]^2.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2014-practice-24-180",
@@ -13839,7 +14425,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that step 1 (2 NO) is bimolecular, not unimolecular, to reject choice A.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2015-47-1554",
@@ -13857,7 +14443,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must interpret the forces acting at the marked distance x, which lies at the minimum of the potential-energy curve.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-24-1063",
@@ -13883,7 +14469,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that heat released is proportional to the moles of acid and base that actually react.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2016-24-1063",
@@ -13893,7 +14479,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must see that 50 mL of 0.10 M NaOH limits both trials, so the extra HCl in trial 2 does not react and Y = X.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2016-26-1064",
@@ -13919,7 +14505,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must choose the slow first step whose rate law matches the observed rate = k[NO2][F2].",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-26-1064",
@@ -13929,7 +14515,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must write the rate law of each candidate elementary step from its molecularity (e.g. NO2 + F2 bimolecular gives k[NO2][F2]).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-27-1064",
@@ -13947,7 +14533,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compare bond angles in CF4, NF3, SO3 and SO2 to find the smallest.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-27-1064",
@@ -13957,7 +14543,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must count domains on each central atom, including the lone pair on N (four domains) and on S in SO2 (three domains, double bond as one), to judge lone-pair compression.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-37-1070",
@@ -13983,7 +14569,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that doubling S does not change the SO2 yield, so Na2O2 limits both trials.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2016-37-1070",
@@ -13993,7 +14579,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must scale ΔH° = -610 kJ/mol rxn to the 0.10 mol Na2O2 that reacts (0.05 mol rxn) to get q.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2016-37-1070",
@@ -14003,7 +14589,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use the 2:1 Na2O2:S mole ratio to convert moles of the limiting reactant to moles of reaction.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2016-5-1053",
@@ -14029,7 +14615,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must rank N2, O2 and F2 bond enthalpies from their triple, double and single bonds.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-5-1053",
@@ -14039,7 +14625,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Bond multiplicities are not given, so the student must work out the Lewis structures of N2, O2 and F2 to know the bond orders.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-9-1056",
@@ -14065,7 +14651,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must read the curve's initial pH, buffer region and equivalence-point pH to identify the acid and base types titrated.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2016-9-1056",
@@ -14075,7 +14661,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must connect an equivalence point above pH 7 and a gradual buffer region to a weak acid whose conjugate base is basic, versus a strong acid.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2017-30-1137",
@@ -14093,7 +14679,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that the N lone pair of NH3 can bond to the electron-deficient B of BF3 (incomplete octet), judging which connectivity gives valid bonding rather than H- or F-bridged structures.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2017-42-1144",
@@ -14165,7 +14751,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must combine the Ag+/Ag and Zn2+/Zn reduction potentials to get E°cell, without multiplying the Ag potential by its coefficient.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-12-1197",
@@ -14183,7 +14769,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must convert 880 g CO2 to 20 mol and apply the 1:2 CO2:LiOH ratio to find the LiOH mass.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-13-1198",
@@ -14201,7 +14787,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must see that 1/[NO2] rises linearly (by 0.75 L/mol per 100 s) while ln[NO2] does not, indicating second order.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2018-14-1911",
@@ -14227,7 +14813,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must classify vaporization of CH3OH as a physical change in which molecular identity is unchanged.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-14-1911",
@@ -14237,7 +14823,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that vaporization overcomes intermolecular attractions rather than breaking covalent bonds, to reject choices A-C.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-34-1205",
@@ -14255,7 +14841,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that a saturated solution in contact with solid has ion concentrations fixed by Ksp at constant temperature, so losing water causes CuSO4(s) to precipitate rather than [SO4^2-] rising.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2018-36-1207",
@@ -14264,6 +14850,34 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2018-36-1207",
+      "target": "topic:3.4",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2018-36-1207",
+      "target": "concept:mixture-composition",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must find the mass of CaCO3 in a 0.200 g eggshell mixture and express it as a mass percent of the sample.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "question:mcq-2018-36-1207",
+      "target": "concept:partial-pressures",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must recognize the pressure of gas produced is the increase in total pressure (0.870 - 0.800 atm), not the final total pressure, before using the calibration line.",
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2018-38-1920",
@@ -14307,7 +14921,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must identify the particle emitted when 39Ca becomes 39K (mass number unchanged, atomic number down by one, i.e. positron emission).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-57-2046",
@@ -14333,7 +14947,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must apply dG = dH - TdS at the melting point to relate dH and TdS.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2018-57-2046",
@@ -14343,7 +14957,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that solid and liquid are at equilibrium at the normal melting point, so dG = 0.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2022-13-1639",
@@ -14361,7 +14975,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the faster rate with MnO2 as a catalyst providing a lower activation-energy pathway, rejecting changes to ΔH or equilibrium position.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-21-1622",
@@ -14379,7 +14993,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must decide which compound has the higher boiling point from the relative strength of intermolecular attractions.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-21-1622",
@@ -14389,7 +15003,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize propanoic acid has an O-H group able to hydrogen bond while pentane has no H bonded to N, O or F.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-38-1648",
@@ -14415,7 +15029,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must choose the graph whose well depths match the given dissociation energies and whose minima positions reflect the bond lengths.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-38-1648",
@@ -14425,7 +15039,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use that Br atoms are smaller than I atoms, so the Br2 minimum lies at shorter internuclear distance, to eliminate graphs with plausible depths but wrong positions.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-41-1649",
@@ -14443,7 +15057,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that equal masses contain the most molecules for the compound with the smallest molar mass, comparing CO2, SO2, H2O and N2O.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2022-5-1663",
@@ -14493,7 +15107,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must apply q = mcΔT using the 44.40 g total mass, 4.22 J/(g·°C) and the 19.9 to 3.2 °C temperature change from the table.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:mcq-2022-5-1663#b",
@@ -14511,7 +15125,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must explain the slowing temperature change as fewer reactant particles remaining, so collisions between NaHCO3 and citric acid particles become less frequent.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:mcq-2022-5-1663#c",
@@ -14529,7 +15143,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must infer from the falling temperature on the graph that heat flows from the surroundings into the reaction system (endothermic).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:mcq-2022-5-1663#d",
@@ -14547,7 +15161,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that halving the mass of NaHCO3 (the reactant not in excess) halves the moles reacting and therefore the heat absorbed.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "part:mcq-2022-5-1663#d",
@@ -14557,7 +15171,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must connect the smaller heat absorbed by a nearly equal mass of solution to a smaller temperature change via q = mcΔT.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-52-1652",
@@ -14583,7 +15197,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason about the two successive ionizations of diprotic H2C2O4, with the second much smaller than the first, to order H3O+, HC2O4- and C2O4^2-.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-52-1652",
@@ -14593,7 +15207,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize that a weak acid ionizes only partially, so un-ionized H2C2O4 remains the most concentrated species.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-56-1653",
@@ -14619,7 +15233,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must use the orientation of water molecules around each ion to decide which ion is the anion and which the cation.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-56-1653",
@@ -14629,7 +15243,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must interpret the particulate diagram of hydrated ions.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-56-1653",
@@ -14639,7 +15253,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must know O in water carries the partial negative charge and H the partial positive charge to read the orientation.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2022-62-1709",
@@ -14648,6 +15262,112 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2022-62-1709",
+      "target": "topic:5.5",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2022-62-1709",
+      "target": "topic:6.1",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2022-62-1709",
+      "target": "topic:6.6",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#a",
+      "target": "question:mcq-2022-62-1709",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#a",
+      "target": "concept:calorimetry",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must calculate the magnitude of q with q = mc dT using the 44.40 g total mass, 4.22 J/(g C) and the temperature change from the table.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#b",
+      "target": "question:mcq-2022-62-1709",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#b",
+      "target": "concept:collision-model",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must explain the slowing temperature change through fewer collisions per unit time as the reactant concentration falls during the reaction.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#c",
+      "target": "question:mcq-2022-62-1709",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#c",
+      "target": "concept:endo-exothermic",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must claim the direction of heat flow between the reaction system and surroundings consistent with the temperature drop shown in the graph.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#d",
+      "target": "question:mcq-2022-62-1709",
+      "relation": "PART_OF",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#d",
+      "target": "concept:enthalpy-of-reaction",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must reason that with citric acid in excess, halving the NaHCO3 halves the amount reacting and therefore the heat absorbed.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "part:mcq-2022-62-1709#d",
+      "target": "concept:calorimetry",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must connect the smaller heat to a smaller temperature change for a similar mass of mixture through q = mc dT.",
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2023-33-1727",
@@ -14665,7 +15385,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must know that the Ni catalyst provides a lower-activation-energy pathway without changing the energy released overall.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2023-43-1731",
@@ -14691,7 +15411,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must choose the indicator whose color-change pH range brackets the equivalence-point pH of the titration.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2023-43-1731",
@@ -14701,7 +15421,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must locate the steep vertical region of the curve near 15 mL to identify the equivalence-point pH.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2023-67-1808",
@@ -14710,6 +15430,34 @@
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2023-67-1808",
+      "target": "topic:3.7",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2023-67-1808",
+      "target": "concept:beer-lambert",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Parts (a), (c) and (d) require choosing the wavelength of maximum absorbance, reading concentration from the standard curve at A = 0.30, and identifying an error that makes the calibration slope less steep.",
+      "reviewStatus": "needs_attention"
+    },
+    {
+      "source": "question:mcq-2023-67-1808",
+      "target": "concept:dilution",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Part (b) requires M1V1 = M2V2 to find the volume of 0.198 M stock needed for 250.0 mL of 0.0400 M solution.",
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2024-19-2088",
@@ -14727,11 +15475,39 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must rank radii of ions versus parent atoms and isoelectronic species (e.g. S2- vs O vs F, K+ vs Ar vs Cl) to find the only correct largest-to-smallest order.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2024-21-2091",
-      "target": "topic:8.5",
+      "target": "topic:7.9",
+      "relation": "BELONGS_TO",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2024-21-2091",
+      "target": "concept:le-chatelier",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must predict which change (raising or lowering temperature, adding CH3OH, removing H2) shifts the equilibrium so that the amount of CO decreases.",
+      "reviewStatus": "machine_reviewed"
+    },
+    {
+      "source": "question:mcq-2024-21-2091",
+      "target": "concept:endo-exothermic",
+      "relation": "REQUIRES",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must use the negative dH to treat the forward reaction as exothermic, so heat acts as a product when judging the temperature choices.",
+      "reviewStatus": "machine_reviewed"
+    },
+    {
+      "source": "question:mcq-2024-33-2094",
+      "target": "topic:5.3",
       "relation": "BELONGS_TO",
       "confidence": "EXTRACTED",
       "weight": 1,
@@ -14739,11 +15515,31 @@
     },
     {
       "source": "question:mcq-2024-33-2094",
-      "target": "topic:9.3",
+      "target": "topic:5.2",
       "relation": "BELONGS_TO",
       "confidence": "EXTRACTED",
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json"
+    },
+    {
+      "source": "question:mcq-2024-33-2094",
+      "target": "concept:integrated-rate-laws",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must know that a first-order half-life is independent of initial concentration when comparing the half-lives of the two trials.",
+      "reviewStatus": "machine_reviewed"
+    },
+    {
+      "source": "question:mcq-2024-33-2094",
+      "target": "concept:rate-law",
+      "relation": "TESTS",
+      "confidence": "EXTRACTED",
+      "weight": 1,
+      "source_file": "research/concepts/taxonomy.v1.json",
+      "evidence": "Must predict how the initial rate of a first-order reaction responds to doubling [C2H5Cl]0 from 1.0 M to 2.0 M.",
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2024-38-2099",
@@ -14769,7 +15565,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must compare binding energies of corresponding peaks in the two complete PE spectra of species with identical electron configurations.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2024-38-2099",
@@ -14779,7 +15575,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must reason that higher binding energies for the same configuration mean greater nuclear charge, which identifies which species is the neutral atom and which the anion.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "machine_reviewed"
     },
     {
       "source": "question:mcq-2024-56-2109",
@@ -14805,7 +15601,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must match the ion counts and 1:1 positive:negative ratios in the before/after particle diagrams to a balanced equation, ruling out the 2:1 salt choices.",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2024-56-2109",
@@ -14815,7 +15611,7 @@
       "weight": 1,
       "source_file": "research/concepts/taxonomy.v1.json",
       "evidence": "Must recognize which choice actually forms a solid precipitate (e.g. BaCl2 and MnS(aq) as written do not match a precipitate).",
-      "reviewStatus": "machine_generated"
+      "reviewStatus": "needs_attention"
     },
     {
       "source": "question:mcq-2024-60-2110",

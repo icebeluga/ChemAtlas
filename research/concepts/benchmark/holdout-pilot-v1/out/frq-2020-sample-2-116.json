@@ -1,0 +1,64 @@
+{
+  "questionId": "frq-2020-sample-2-116",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "catalysis"
+      ],
+      "supporting": [
+        "reaction-mechanisms"
+      ]
+    },
+    "b": {
+      "primary": [
+        "mechanism-rate-law"
+      ],
+      "supporting": []
+    },
+    "c": {
+      "primary": [
+        "endo-exothermic"
+      ],
+      "supporting": []
+    },
+    "d": {
+      "primary": [
+        "hydrogen-bonding"
+      ],
+      "supporting": [
+        "dipole-dipole",
+        "london-dispersion"
+      ]
+    },
+    "e": {
+      "primary": [
+        "imf-properties"
+      ],
+      "supporting": [
+        "hydrogen-bonding"
+      ]
+    },
+    "f": {
+      "primary": [
+        "titration-analysis"
+      ],
+      "supporting": []
+    },
+    "g": {
+      "primary": [
+        "titration-analysis"
+      ],
+      "supporting": []
+    },
+    "h": {
+      "primary": [
+        "titration-analysis"
+      ],
+      "supporting": [
+        "dilution"
+      ]
+    }
+  },
+  "notes": "Distillation in e is context for a vapor-pressure IMF argument; h needs moles of acid unchanged by added water (dilution); g buret reading is titration-analysis."
+}

@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2008-8-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows stem 8; shared stimulus lists choices A-E (NH3, BH3, H2, H2S, HBr). Complete with stimulus; matches page."
+  },
+  "officialTopics": {
+    "primary": "8.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "Must recognize HBr as a strong acid that ionizes completely in water, unlike weak base NH3 and weak acid H2S."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "classify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

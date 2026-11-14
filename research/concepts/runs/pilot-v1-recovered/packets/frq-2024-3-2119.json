@@ -1,0 +1,533 @@
+{
+  "questionId": "frq-2024-3-2119",
+  "type": "FRQ",
+  "exam": "2024 AP Chemistry FRQ",
+  "year": "2024",
+  "number": 3,
+  "text": "ORIGINAL PAGE 2119\nQuestion 3\n\nBegin your response to QUESTION 3 on this page.\n\n3. Piperidine, CsH,)NH, is a weak organic base. The reaction of CsHj)NH(aq) with H,O(/) is represented by the\nfollowing equation.\n\nCsH,gNH(aq) + H,O(!) =? CsH,gNH,*(ag) + OH (aq)\n\n(a) Identify one Bronsted-Lowry conjugate acid-base pair in the reaction of piperidine with water. Be sure to label\nwhich species is the acid and which is the base.\n\n(b) Write the expression for the equilibrium constant, Ky, for piperidine, CsHjgNH.\n\n(c) A 20.0 mL sample of 0.750 M CsHjgNH(ag) is prepared at 25°C.\n\n(i) The equilibrium concentration of OH™ (ag) in the solution is 3.09 x 10-? Mf. Calculate the pH of the\n0.750 M CsH,oNH(ag) solution at 25°C.\n\n(ii) What is the percent ionization of piperidine in the 0.750 M solution?\n\nUnauthorized copying or reuse of this page is illegal. Page 10 GO ON TO THE NEXT PAGE.\n\nUse a pencil or a pen with black or dark blue ink. Do NOT write your name. Do NOT write outside the,\nS stu id liocu messages.pdf_cover_qr_code_label\n\nmessages.downloaded_by\n\nX-.\niH\n\n\nORIGINAL PAGE 2120\nQuestion 3\n\nContinue your response to QUESTION 3 on this page.\n\n| (d) When a small volume of strong acid is added to the 0.750 M CsHjgNH(aq) solution, the number of moles of\nC5HjoNHy* increases.\n(i) Write the balanced net ionic equation for the reaction that occurs between major species in solution\nwhen the strong acid is added.\n\n(ii) Using Q and K, explain why the moles of CsH,gNHy\" increase when a small amount of strong acid\nis added to the solution.\n\n= copying or reuse of this page Is illegal. Page 11 GO ON TO THE NEXT PAGE.\n\nUse a pencil or a pen with black or dark blue ink. Do NOT write your name. Do NOT write outside the box.\n\nof)\nmessages.pdf_cover_qr_code_label\n© studocu coon e cos\n\n\nORIGINAL PAGE 2121\nQuestion 3 a\n\nContinue your response to QUESTION 3 on this page.\n\nA scientist prepares piperidine, CsH,)NH, by reacting C;HsN and H, in a nickel-coated container at 400. K\naccording to the following reaction equation.\n\nCsHsN(g) +3 Hp(g) <2 CsHipNH(g) = AG? = —42.8 kJ/mol zn\nThe scientist fills a previously evacuated, sealed, rigid container with 1.40 atm of C;HsN and 1.40 atm of Hz and\nrecords the partial pressure of C5H,ygNH(g) as the reaction progresses. The data are shown in the following\n\ngraph.\n\n1.40\n1.20:\n1.00:\n\nPartial Pressure 9.80\n(atm) 0,60:\n\n0.40\n0.20 =\n\nDNS 5 10 15 20 25 30\n\nTime (minutes)\n\n=os5 C;HjoNH\n\n(e) On the graph, sketch a single curve that represents the partial pressure of H,(g) as the reaction proceeds from\n0 minutes to 30 minutes. Your curve should reflect\n\n(i) the rate of change of H>(g) compared to that of CsHjgNH(g) and\n(ii) the initial partial pressure of H2(g) and the partial pressure of Hp(g) at 30 minutes.\n\nUnauthorized copying or reuse of this page Is illegal. Page 12 GO ON TO THE NEXT PAGE.\n\nUse a pencil or a pen with black or dark blue ink, Do NOT write your name. Do NOT write outside ths,\nmessages.pdf_cover_qr_code_label\n© studocu eee econ\n\n",
+  "regions": [
+    {
+      "page": 2119,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 19,
+        "compiledPage": 2119
+      }
+    },
+    {
+      "page": 2120,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 20,
+        "compiledPage": 2120
+      }
+    },
+    {
+      "page": 2121,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 21,
+        "compiledPage": 2121
+      }
+    },
+    {
+      "page": 2122,
+      "rect": null,
+      "role": "continuation",
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 22,
+        "compiledPage": 2122
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "8.4"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "a"
+      }
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "8.3"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "b"
+      }
+    },
+    {
+      "partId": "c-i",
+      "label": "(c)(i)",
+      "catalogTopics": [
+        "8.3"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "c-i"
+      }
+    },
+    {
+      "partId": "c-ii",
+      "label": "(c)(ii)",
+      "catalogTopics": [
+        "8.3"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "c-ii"
+      }
+    },
+    {
+      "partId": "d-i",
+      "label": "(d)(i)",
+      "catalogTopics": [
+        "8.4"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "d-i"
+      }
+    },
+    {
+      "partId": "d-ii",
+      "label": "(d)(ii)",
+      "catalogTopics": [
+        "7.10"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "d-ii"
+      }
+    },
+    {
+      "partId": "e",
+      "label": "(e)",
+      "catalogTopics": [
+        "7.7"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "e"
+      }
+    },
+    {
+      "partId": "f-i",
+      "label": "(f)(i)",
+      "catalogTopics": [
+        "9.2"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "f-i"
+      }
+    },
+    {
+      "partId": "f-ii",
+      "label": "(f)(ii)",
+      "catalogTopics": [
+        "9.3"
+      ],
+      "cover": {
+        "kind": "exact",
+        "id": "f-ii"
+      }
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.3",
+    "secondary": [
+      "7.10",
+      "9.2",
+      "9.3"
+    ],
+    "status": "classified",
+    "method": "Question-part review against current CED; original scan checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Content supplement (add): Part (f)(i)-(ii) is on the scanned page after the three catalog pages ('Continue your response to QUESTION 3', Page 13)."
+  ],
+  "supplement": {
+    "mode": "add",
+    "reason": "Part (f)(i)-(ii) is on the scanned page after the three catalog pages ('Continue your response to QUESTION 3', Page 13).",
+    "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-08 p22 viewed",
+    "catalogCorrection": null
+  },
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "content-supplemented-see-images",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "63cff6f80eef756f",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-r1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 19,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-page1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 19,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-r2.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 20,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-page2.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 20,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-r3.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 21,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-page3.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 21,
+      "rect": null
+    },
+    {
+      "kind": "continuation",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/frq-2024-3-2119-r4.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 22,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:bronsted-lowry",
+        "linked-from:ice-tables",
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:reaction-quotient",
+        "linked-from:ice-tables",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:equilibrium-expression",
+        "linked-from:le-chatelier"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:bronsted-lowry",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:entropy"
+      ]
+    },
+    {
+      "conceptId": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "le-chatelier",
+      "name": "Le Châtelier's principle",
+      "definition": "Predicting how an equilibrium shifts after changes in concentration, volume or pressure, or temperature, and recognizing that only temperature changes K.",
+      "include": "Tag when the direction of a shift or the effect of a stress on amounts or K must be predicted or explained.",
+      "exclude": "Do not tag Q-K calculations alone (tag reaction-quotient); catalysts do not shift equilibrium (tag catalysis if asked).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-quotient"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:le-chatelier"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium",
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-constant-calculation",
+      "name": "Calculating K",
+      "definition": "Calculating an equilibrium constant by substituting equilibrium concentrations or partial pressures, including those obtained from initial amounts and stoichiometry.",
+      "include": "Tag when a numerical value of K must be calculated.",
+      "exclude": "Do not tag when K is given and equilibrium concentrations are found (tag ice-tables).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:equilibrium-expression",
+        "linked-from:ice-tables"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "coupled-reactions",
+      "name": "Coupled reactions",
+      "definition": "Driving a thermodynamically unfavorable process by coupling it with a favorable one so the overall ΔG is negative.",
+      "include": "Tag when free energies of reactions must be added or coupling explained.",
+      "exclude": "Do not tag Hess's-law ΔH addition (tag hess-law).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "linked-from:reaction-quotient",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "acid-strength-structure",
+      "name": "Molecular structure and acid strength",
+      "definition": "Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.",
+      "include": "Tag when acid strengths must be ranked or explained from molecular structure.",
+      "exclude": "Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "common-ion-effect",
+      "name": "Common-ion effect",
+      "definition": "The decrease in solubility of a salt when an ion it shares is already present in solution, predicted qualitatively by Le Châtelier and quantitatively with Ksp.",
+      "include": "Tag when solubility in a solution containing a common ion must be compared or calculated.",
+      "exclude": "Do not tag pH effects on solubility (tag ph-solubility).",
+      "whyCandidate": [
+        "linked-from:le-chatelier"
+      ]
+    },
+    {
+      "conceptId": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "whyCandidate": [
+        "linked-from:entropy"
+      ]
+    }
+  ]
+}

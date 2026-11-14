@@ -29,9 +29,11 @@ research/concepts/
   taxonomy.v1.json             generated: + hashes, micro-label map, research crosswalk
   concept-graph.json           generated chemistry graph (graphify node-link format)
   classifications.json         versioned store: current record + history per question
-  prompts/                     classifier.v1.md, concept-reference.v1.txt
-  runs/<run>/                  selection, packets, results-a/-b, compare, evaluation, review sheet
-  benchmark/                   reference sets for precision/recall
+  content-supplements.json     extra/corrected source pages for questions whose catalog regions miss content (model-located)
+  conventions.json             open boundary conventions; decided only through the review sheet by a named reviewer
+  prompts/                     classifier.v1/.v2, adjudicator.v1, adjudicator.blind.v1, verifier.v1, concept-reference.v1.txt
+  runs/<run>/                  selection, packets, results-a/-b/-c/-v, compare, evaluation-*, crop-issues, review sheet
+  benchmark/                   reference sets: reference-<run> (adjudicated), holdout-reference-<run> (blind), human-reference-<run> (after review)
 lib/concepts/                  taxonomy, content, candidates, records, evaluate, search, graph, review-sheet
 scripts/concepts/cli.mjs       command line (below); render_regions.py renders crops
 tests/concept-*.test.mjs       automated tests
@@ -79,9 +81,15 @@ node scripts/concepts/cli.mjs prepare --run unit2 --unit u2 --type MCQ --skip-cl
 node scripts/concepts/cli.mjs ingest --run pilot-v1 --pass a --dry-run   # validate only
 node scripts/concepts/cli.mjs ingest --run pilot-v1 --pass a             # store (keeps history)
 node scripts/concepts/cli.mjs compare --run pilot-v1 --pass b            # independent second pass
+node scripts/concepts/cli.mjs ingest --run pilot-v1-recovered --pass a --ids mcq-2014-33-185   # re-run single questions
 node scripts/concepts/cli.mjs evaluate --run pilot-v1 --reference research/concepts/benchmark/reference-pilot-v1.json
-node scripts/concepts/cli.mjs review-sheet --run pilot-v1                # HTML for human review
-node scripts/concepts/cli.mjs review --file concept-review-decisions.json
+node scripts/concepts/cli.mjs evaluate --pass a --reference research/concepts/benchmark/reference-pilot-v1.json,research/concepts/benchmark/holdout-reference-pilot-v1.json --tag combined
+node scripts/concepts/cli.mjs evaluate --pass a --conventions --tag bench-conv   # leave undecided boundary cases out
+node scripts/concepts/cli.mjs build-reference --set holdout              # blind adjudications -> holdout reference
+node scripts/concepts/cli.mjs crop-issues --runs pilot-v1,pilot-v1-recovered   # crop/content worklist for the image-review owner
+node scripts/concepts/cli.mjs review-sheet --runs pilot-v1,pilot-v1-recovered  # HTML for human review
+node scripts/concepts/cli.mjs review --file concept-review-decisions-pilot-v1+pilot-v1-recovered.json
+node scripts/concepts/cli.mjs build-reference --from-review              # human-reviewed records -> human reference
 node scripts/concepts/cli.mjs status                                     # counts and stale records
 node scripts/concepts/cli.mjs export-index                               # verified-only search index
 node scripts/concepts/cli.mjs export-index --provisional                 # includes machine output, for testing only
@@ -99,12 +107,23 @@ graphify path "Formal charge" "Topic 2.7 VSEPR and Hybridization" --graph resear
 
 ## 5. Human review
 
-The private question-image review service stores crop approvals in D1/R2 with its own state machine; reusing it would mix concept decisions into crop history. Concept review is a separate, file-based flow: `review-sheet` writes a standalone HTML page per run showing the crop images, every tag with role and evidence, flags, content/diagram status and the second-pass disagreement. A reviewer approves, rejects, flags, unticks tags or adds tags, then downloads a decisions JSON that `cli.mjs review` applies with full history. The sheet never writes anywhere itself.
+The private question-image review service stores crop approvals in D1/R2 with its own state machine; reusing it would mix concept decisions into crop history. Concept review is a separate, file-based flow: `review-sheet` writes a standalone HTML page per run showing the crop images, every tag with role and evidence, flags, content/diagram status and the second-pass disagreement. A reviewer approves, rejects, flags, unticks tags, ticks the second pass's alternatives or adds tags per part, then downloads a decisions JSON that `cli.mjs review` applies with full history. The sheet never writes anywhere itself; work in progress is autosaved in the browser only.
+
+- Benchmark questions are listed first; filters show benchmark, needs-attention, machine-reviewed or undecided questions.
+- An edit must keep at least one primary concept per part and may not put a concept in two roles (checked in the sheet and again in `applyReview`).
+- The conventions panel records the reviewer's choice for each open boundary in `conventions.json` (decision, reviewer, time; earlier decisions kept in `history`). Model suggestions are shown separately and never count as a decision.
+- `build-reference --from-review` turns human-approved or human-edited records into a reference; machine agreement never counts.
+
+Decisions file (v2): `{ format, run, reviewer, exportedAt, decisions: [{ questionId, decision: approve|reject|flag|edit, reviewer, notes, parts? }], conventions: [{ id, decision, notes }] }`. The v1 bare array is still accepted.
+
+### Content supplements
+
+When the classifier reports missing content (continuation page, shared stimulus on another page, wrong page), the fix goes in `content-supplements.json` instead of the catalog: `mode: add` appends regions, `mode: replace` swaps them, and `catalogTextBelongsElsewhere` withholds catalog text that is another question's. A supplement changes the question's content hash, so only that record goes stale and is re-classified. Each entry records who located it (so far always a model) and any proposed catalog correction for the owner.
 
 ## 6. Known limitations
 
-- No human-verified benchmark exists yet. Accuracy numbers in the pilot report are measured against a **model-adjudicated** reference and must be confirmed by a chemistry teacher before broad tagging.
+- No human-verified benchmark exists yet. Accuracy numbers in the pilot report are measured against **model-built** references (one adjudicated, one blind) and must be confirmed by a chemistry teacher before broad tagging.
 - Concept definitions and boundaries are ChemAtlas proposals, not reviewed by a teacher.
 - The micro-label map was produced by patterns; it is for traceability only and is not used to classify questions.
-- Shared stimuli outside the six registered 2008 groups are only visible if they are inside the crop or on the same page; questions whose stimulus is on another page are blocked rather than guessed.
+- Shared stimuli outside the six registered 2008 groups are only visible if they are inside the crop, on the same page, or added as a content supplement; otherwise the question is blocked rather than guessed. Two more unregistered groups were found in the pilot (2018 Q35–38, 2014 practice Q29–33), so more exist in the catalog.
 - The catalog's `primaryUnit` field is inconsistent (section 1); this work does not modify it.

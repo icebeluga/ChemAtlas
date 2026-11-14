@@ -1,0 +1,46 @@
+{
+  "questionId": "mcq-2016-27-1064",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows stem and Lewis diagrams A-D (CF4, NF3, SO3, SO2) plus a partial footer; lone pairs legible."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-angles",
+          "evidence": "Must compare bond angles in CF4, NF3, SO3 and SO2 to find the smallest."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count domains on each central atom, including the lone pair on N (four domains) and on S in SO2 (three domains, double bond as one), to judge lone-pair compression."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

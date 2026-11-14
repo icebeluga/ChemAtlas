@@ -2,17 +2,17 @@
 // ChemAtlas concept classification CLI. Run `node scripts/concepts/cli.mjs help`.
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "node:fs";
 import { spawnSync } from "node:child_process";
-import { dirname, join, resolve } from "node:path";
+import { dirname, join, resolve, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildTaxonomy, catalogTopics, createResolver, sha256 } from "../../lib/concepts/taxonomy.mjs";
 import { buildConceptGraph } from "../../lib/concepts/graph.mjs";
 import { createContentContext, questionContent } from "../../lib/concepts/content.mjs";
 import { candidateConcepts } from "../../lib/concepts/candidates.mjs";
-import { validateResult, upsertRecord, applyReview, staleness, emptyStore } from "../../lib/concepts/records.mjs";
-import { compareClassifications, scoreAgainstReference } from "../../lib/concepts/evaluate.mjs";
+import { validateResult, upsertRecord, applyReview, staleness, emptyStore, applyConventionDecisions } from "../../lib/concepts/records.mjs";
+import { compareClassifications, scoreAgainstReference, humanReference } from "../../lib/concepts/evaluate.mjs";
 import { buildConceptIndex, VERIFIED, PROVISIONAL } from "../../lib/concepts/search.mjs";
 import { renderReviewSheet } from "../../lib/concepts/review-sheet.mjs";
-import { pilotStats } from "../../lib/concepts/report.mjs";
+import { pilotStats, cropWorklist } from "../../lib/concepts/report.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const PATHS = {
@@ -28,6 +28,8 @@ export const PATHS = {
   runs: "research/concepts/runs",
   index: "research/concepts/concept-index.json",
   prompts: "research/concepts/prompts",
+  supplements: "research/concepts/content-supplements.json",
+  conventions: "research/concepts/conventions.json",
 };
 const abs = p => join(ROOT, p);
 export const readJson = p => JSON.parse(readFileSync(abs(p), "utf8"));
@@ -47,7 +49,7 @@ function parseArgs(argv) {
 function loadAll() {
   const catalog = readJson(PATHS.catalog);
   const taxonomy = readJson(PATHS.taxonomy);
-  const ctx = createContentContext({ catalog, stimuli: readJson(PATHS.stimuli), cropReview: readJson(PATHS.cropReview) });
+  const ctx = createContentContext({ catalog, stimuli: readJson(PATHS.stimuli), cropReview: readJson(PATHS.cropReview), supplements: existsSync(abs(PATHS.supplements)) ? readJson(PATHS.supplements) : null });
   return { catalog, taxonomy, ctx, resolver: createResolver(taxonomy), topicIds: new Set(catalogTopics(catalog).keys()), store: existsSync(abs(PATHS.store)) ? readJson(PATHS.store) : emptyStore() };
 }
 
@@ -99,7 +101,7 @@ function packetFor(content, taxonomy, runDir, catalog) {
   const images = [];
   content.regions.forEach((r, i) => {
     if (!r.source) return;
-    images.push({ kind: r.rect ? "crop" : "full-page", path: rel(`${runDir}/images/${content.questionId}-r${i + 1}.png`), pdf: r.source.pdf, page: r.source.localPage, rect: r.rect, zoom: r.rect ? 2 : 1.4 });
+    images.push({ kind: r.role ?? (r.rect ? "crop" : "full-page"), path: rel(`${runDir}/images/${content.questionId}-r${i + 1}.png`), pdf: r.source.pdf, page: r.source.localPage, rect: r.rect, zoom: r.rect ? 2 : 1.4 });
     if (r.rect) images.push({ kind: "page-context", path: rel(`${runDir}/images/${content.questionId}-page${i + 1}.png`), pdf: r.source.pdf, page: r.source.localPage, rect: null, zoom: 1 });
   });
   for (const s of content.stimulus) (s.regions ?? []).forEach((r, i) => {
@@ -112,6 +114,9 @@ function packetFor(content, taxonomy, runDir, catalog) {
   });
   return { ...content, images: images.map(({ zoom, ...i }) => i), candidates, _jobs: images };
 }
+
+// Result files of a run folder, optionally limited with --ids a,b (so re-running one question does not re-ingest the rest).
+const resultFiles = (dir, args) => readdirSync(abs(dir)).filter(f => f.endsWith(".json") && (!args.ids || String(args.ids).split(",").includes(f.slice(0, -5)))).sort();
 
 const commands = {
   "build-taxonomy"(args) {
@@ -164,14 +169,14 @@ const commands = {
     writeJson(`${runDir}/manifest.json`, { run, taxonomyVersion: taxonomy.taxonomyVersion, taxonomyHash: taxonomy.taxonomyHash, preparedAt: new Date().toISOString(), questionIds: packets.map(p => p.questionId) });
   },
 
-  // ingest --run pilot-v1 --pass a [--model claude-opus-5-5] [--prompt classifier.v1] [--dry-run] [--force]
+  // ingest --run pilot-v1 --pass a [--ids a,b] [--model claude-opus-5-5] [--prompt classifier.v1] [--dry-run] [--force]
   ingest(args) {
     const { taxonomy, ctx, resolver, topicIds, store } = loadAll();
     const run = args.run ?? "pilot-v1", pass = args.pass ?? "a", dir = `${PATHS.runs}/${run}/results-${pass}`;
     const method = { engine: args.engine ?? "claude-code-subagent", model: args.model ?? "claude-opus-5-5", role: `classifier-pass-${pass}`, runId: run };
     const promptVersion = args.prompt ?? "classifier.v1";
     const report = { run, pass, accepted: [], blocked: [], invalid: [], kept: [] };
-    for (const file of readdirSync(abs(dir)).filter(f => f.endsWith(".json")).sort()) {
+    for (const file of resultFiles(dir, args)) {
       let result;
       try { result = JSON.parse(readFileSync(abs(`${dir}/${file}`), "utf8")); } catch (e) { report.invalid.push({ questionId: file, errors: [`not valid JSON: ${e.message}`] }); continue; }
       const content = ctx.byId.has(result.questionId) ? questionContent(result.questionId, ctx) : null;
@@ -189,12 +194,12 @@ const commands = {
     if (pass === "a") { writeJson(PATHS.store, store); commands["build-graph"](); }
   },
 
-  // compare --run pilot-v1 --pass b : second independent pass; agreement -> machine_reviewed, disagreement -> needs_attention
+  // compare --run pilot-v1 --pass b [--ids a,b] : second independent pass; agreement -> machine_reviewed, disagreement -> needs_attention
   compare(args) {
     const { taxonomy, ctx, resolver, topicIds, store } = loadAll();
     const run = args.run ?? "pilot-v1", pass = args.pass ?? "b", dir = `${PATHS.runs}/${run}/results-${pass}`;
     const rows = [];
-    for (const file of readdirSync(abs(dir)).filter(f => f.endsWith(".json")).sort()) {
+    for (const file of resultFiles(dir, args)) {
       const result = JSON.parse(readFileSync(abs(`${dir}/${file}`), "utf8"));
       const content = ctx.byId.has(result.questionId) ? questionContent(result.questionId, ctx) : null;
       const { record } = validateResult(result, { content, taxonomy, topicIds, resolver, method: { role: `pass-${pass}` }, promptVersion: "classifier.v1" });
@@ -213,30 +218,51 @@ const commands = {
     const count = k => rows.filter(r => r.agreement === k).length;
     console.log(`compare pass ${pass}: agree ${count("agree")}, partial ${count("partial")}, disagree ${count("disagree")}, not comparable ${count("not-comparable")}`);
     if (args["dry-run"]) return;
-    writeJson(`${PATHS.runs}/${run}/compare-${pass}.json`, rows);
+    const file = `${PATHS.runs}/${run}/compare-${pass}.json`;
+    // With --ids, keep the rows of questions that were not re-compared.
+    const kept = args.ids && existsSync(abs(file)) ? readJson(file).filter(r => !rows.some(x => x.questionId === r.questionId)) : [];
+    writeJson(file, [...kept, ...rows].sort((x, y) => x.questionId.localeCompare(y.questionId)));
     writeJson(PATHS.store, store);
   },
 
-  // build-reference --run pilot-v1 --kind "..." : assemble adjudicator outputs into a reference file
+  // build-reference --run pilot-v1 [--set adjudication|holdout] --kind "..." : assemble adjudicator outputs into a reference file
+  // adjudication = judged two blinded proposals (reference-<run>.json); holdout = blind, no proposals seen (holdout-reference-<run>.json)
   "build-reference"(args) {
-    const run = args.run ?? "pilot-v1", dir = `research/concepts/benchmark/adjudication-${run}/out`;
-    const key = readJson(`research/concepts/benchmark/adjudication-${run}.key.json`);
+    if (args["from-review"]) {
+      // --from-review: questions a named human approved or edited -> benchmark/human-reference-<run>.json
+      const run = args.run ?? "pilot-v1", { store } = loadAll();
+      const ids = readJson(`${PATHS.runs}/${run}/manifest.json`).questionIds;
+      const ref = { ...humanReference(store, ids), createdAt: new Date().toISOString() };
+      if (!Object.keys(ref.questions).length) { console.log("no human-verified records yet; nothing written"); return; }
+      const strata = ["adjudication", "holdout"].map(s => `research/concepts/benchmark/${s}-${run}.key.json`).filter(p => existsSync(abs(p))).map(readJson);
+      for (const [id, q] of Object.entries(ref.questions)) q.stratum = strata.find(k => k[id])?.[id].stratum;
+      const out = `research/concepts/benchmark/human-reference-${run}.json`;
+      writeJson(out, ref);
+      console.log(`${Object.keys(ref.questions).length} human-reviewed questions (${ref.referenceKind}) -> ${out}`);
+      return;
+    }
+    const run = args.run ?? "pilot-v1", set = args.set ?? "adjudication", dir = `research/concepts/benchmark/${set}-${run}/out`;
+    const key = readJson(`research/concepts/benchmark/${set}-${run}.key.json`);
     const questions = {}, verdicts = [];
-    for (const f of readdirSync(abs(dir)).filter(f => f.endsWith(".json")).sort()) {
+    for (const f of resultFiles(dir, args)) {
       const o = readJson(`${dir}/${f}`);
       questions[o.questionId] = { contentStatus: o.contentStatus, parts: o.parts ?? {}, stratum: key[o.questionId]?.stratum, notes: o.notes ?? "" };
       // Un-blind the verdicts: X/Y -> pass a/b.
-      for (const side of ["X", "Y"]) verdicts.push({ questionId: o.questionId, pass: key[o.questionId][side], label: o[`verdict${side}`]?.label, reason: o[`verdict${side}`]?.reason });
+      if (set === "adjudication") for (const side of ["X", "Y"]) verdicts.push({ questionId: o.questionId, pass: key[o.questionId][side], label: o[`verdict${side}`]?.label, reason: o[`verdict${side}`]?.reason });
     }
-    const reference = { referenceKind: args.kind ?? "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified", createdAt: new Date().toISOString(), questions, verdicts };
-    writeJson(`research/concepts/benchmark/reference-${run}.json`, reference);
-    console.log(`${Object.keys(questions).length} reference questions -> research/concepts/benchmark/reference-${run}.json`);
+    const kind = set === "holdout" ? "model-adjudicated blind (claude-opus-5-5, prompt adjudicator.blind.v1, no proposals seen); NOT human-verified" : "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified";
+    const out = set === "adjudication" ? `research/concepts/benchmark/reference-${run}.json` : `research/concepts/benchmark/${set}-reference-${run}.json`;
+    writeJson(out, { referenceKind: args.kind ?? kind, createdAt: new Date().toISOString(), questions, ...(verdicts.length ? { verdicts } : {}) });
+    console.log(`${Object.keys(questions).length} reference questions -> ${out}`);
   },
 
-  // evaluate --run pilot-v1 [--reference file] [--pass a|b] : precision/recall overall and per stratum
+  // evaluate --run pilot-v1 [--reference file] [--pass a|b|c|v] [--conventions] [--tag name] : precision/recall overall and per stratum
+  // --conventions leaves the concepts of undecided boundary cases (research/concepts/conventions.json) out of the score.
   evaluate(args) {
     const run = args.run ?? "pilot-v1", pass = args.pass ?? "a";
-    const reference = readJson(args.reference ?? `research/concepts/benchmark/reference-${run}.json`);
+    // --reference accepts a comma-separated list; later files add questions (the two pilot sets do not overlap).
+    const refs = String(args.reference ?? `research/concepts/benchmark/reference-${run}.json`).split(",").map(readJson);
+    const reference = { referenceKind: [...new Set(refs.map(r => r.referenceKind))].join(" + "), questions: Object.assign({}, ...refs.map(r => r.questions)) };
     const { store, taxonomy, ctx, resolver, topicIds } = loadAll();
     let records;
     if (pass === "a") records = Object.fromEntries(Object.values(store.records).map(e => [e.current.questionId, e.current]));
@@ -250,10 +276,11 @@ const commands = {
       }
     }
     const subset = s => ({ ...reference, questions: Object.fromEntries(Object.entries(reference.questions).filter(([, q]) => q.stratum === s)) });
-    const score = scoreAgainstReference(records, reference);
-    const strata = Object.fromEntries(["agree", "non-agree"].map(s => [s, scoreAgainstReference(records, subset(s)).summary]));
+    const ignore = args.conventions ? readJson("research/concepts/conventions.json").conventions.filter(c => c.status !== "decided").flatMap(c => c.affects) : [];
+    const score = scoreAgainstReference(records, reference, { ignore });
+    const strata = Object.fromEntries(["agree", "non-agree"].map(s => [s, scoreAgainstReference(records, subset(s), { ignore }).summary]));
     console.log(JSON.stringify({ pass, overall: score.summary, strata }, null, 2));
-    if (!args["dry-run"]) writeJson(`${PATHS.runs}/${run}/evaluation-${pass}.json`, { ...score, strata });
+    if (!args["dry-run"]) writeJson(`${PATHS.runs}/${run}/evaluation-${pass}${args.tag ? "-" + args.tag : ""}.json`, { reference: args.reference ?? `research/concepts/benchmark/reference-${run}.json`, conventionsExcluded: ignore.length, ...score, strata });
   },
 
   // report --run pilot-v1 : statistics from stored records + compare/ingest artifacts -> runs/<run>/report.json
@@ -267,10 +294,32 @@ const commands = {
     console.log(JSON.stringify({ processed: stats.processed, byReviewStatus: stats.byReviewStatus, agreement: stats.agreement, cropIssues: stats.cropIssues }, null, 1));
   },
 
+  // crop-issues --run pilot-v1 [--runs a,b] : worklist of crop/content defects for the image-review owner (read-only)
+  "crop-issues"(args) {
+    const { store } = loadAll();
+    const runs = String(args.runs ?? args.run ?? "pilot-v1").split(",");
+    const ids = [...new Set(runs.flatMap(r => readJson(`${PATHS.runs}/${r}/manifest.json`).questionIds))];
+    const supplements = existsSync(abs(PATHS.supplements)) ? readJson(PATHS.supplements).supplements : {};
+    const rows = cropWorklist({ entries: ids.map(id => store.records[id]).filter(Boolean), supplements });
+    const by = {}; for (const r of rows) by[r.cropIssue] = (by[r.cropIssue] ?? 0) + 1;
+    const out = `${PATHS.runs}/${runs[0]}/crop-issues.json`;
+    writeJson(out, { generatedAt: new Date().toISOString(), note: "Found by model classifiers comparing crops with full pages; not human-confirmed. The image-review service was not changed.", counts: by, rows });
+    console.log(`${rows.length} questions with crop/diagram problems ${JSON.stringify(by)} -> ${out}`);
+  },
+
   // review --file decisions.json : [{questionId, decision: approve|reject|flag|edit, reviewer, notes, parts?}]
   review(args) {
     const { store, resolver } = loadAll();
-    const decisions = JSON.parse(readFileSync(resolve(args.file), "utf8"));
+    const file = JSON.parse(readFileSync(resolve(args.file), "utf8"));
+    // v1: a bare array of decisions; v2: { reviewer, decisions, conventions }
+    const decisions = Array.isArray(file) ? file : file.decisions ?? [];
+    if (!Array.isArray(file) && file.conventions?.length) {
+      try {
+        const doc = applyConventionDecisions(readJson(PATHS.conventions), file.conventions, { reviewer: file.reviewer });
+        if (!args["dry-run"]) writeJson(PATHS.conventions, doc);
+        console.log(`conventions decided by ${file.reviewer}: ${file.conventions.map(c => `${c.id}=${c.decision}`).join(", ")}`);
+      } catch (e) { console.error(`conventions: ${e.message}`); process.exitCode = 1; }
+    }
     for (const d of decisions) {
       const unknown = (d.parts ?? []).flatMap(p => ["primary", "supporting", "contextual"].flatMap(r => (p[r] ?? []).map(a => a.conceptId))).filter(id => !resolver.concepts.has(id));
       if (unknown.length) { console.error(`${d.questionId}: unknown concept ids ${unknown.join(", ")}; decision skipped`); process.exitCode = 1; continue; }
@@ -280,16 +329,24 @@ const commands = {
     if (!args["dry-run"]) { writeJson(PATHS.store, store); commands["build-graph"](); }
   },
 
-  // review-sheet --run pilot-v1 : standalone HTML for human review (images load from the run's local images folder)
+  // review-sheet --run pilot-v1 [--runs pilot-v1,pilot-v1-recovered] : standalone HTML for human review, written to the first run's folder.
+  // Later runs override packets and second-pass comparisons for the questions they re-ran. Images load from each run's local images folder.
   "review-sheet"(args) {
     const { taxonomy, store } = loadAll();
-    const run = args.run ?? "pilot-v1", runDir = `${PATHS.runs}/${run}`;
-    const ids = readJson(`${runDir}/manifest.json`).questionIds;
+    const runs = String(args.runs ?? args.run ?? "pilot-v1").split(","), runDir = `${PATHS.runs}/${runs[0]}`;
+    const packets = {}, comparisons = {}, ids = [];
+    for (const r of runs) {
+      const dir = `${PATHS.runs}/${r}`;
+      for (const id of readJson(`${dir}/manifest.json`).questionIds) { if (!ids.includes(id)) ids.push(id); packets[id] = readJson(`${dir}/packets/${id}.json`); }
+      if (existsSync(abs(`${dir}/compare-b.json`))) for (const c of readJson(`${dir}/compare-b.json`)) comparisons[c.questionId] = c;
+    }
     const records = ids.map(id => store.records[id]?.current).filter(Boolean);
-    const packets = Object.fromEntries(ids.map(id => [id, readJson(`${runDir}/packets/${id}.json`)]));
-    const comparisons = existsSync(abs(`${runDir}/compare-b.json`)) ? Object.fromEntries(readJson(`${runDir}/compare-b.json`).map(c => [c.questionId, c])) : {};
-    writeFileSync(abs(`${runDir}/review-sheet.html`), renderReviewSheet({ run, records, packets, comparisons, taxonomy, imageBase: "images/" }));
-    console.log(`${records.length} questions -> ${runDir}/review-sheet.html`);
+    const refFile = `research/concepts/benchmark/reference-${runs[0]}.json`;
+    const benchmarkIds = existsSync(abs(refFile)) ? Object.keys(readJson(refFile).questions) : [];
+    const conventions = existsSync(abs(PATHS.conventions)) ? readJson(PATHS.conventions).conventions : [];
+    const imageSrc = p => rel(relative(abs(runDir), abs(p)));
+    writeFileSync(abs(`${runDir}/review-sheet.html`), renderReviewSheet({ run: runs.join("+"), records, packets, comparisons, taxonomy, imageSrc, benchmarkIds, conventions }));
+    console.log(`${records.length} questions (${benchmarkIds.length} benchmark first, ${conventions.length} conventions) -> ${runDir}/review-sheet.html`);
   },
 
   // status : counts by review status and stale records (content or concept definition changed)

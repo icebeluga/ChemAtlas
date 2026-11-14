@@ -1,0 +1,59 @@
+{
+  "questionId": "frq-2008-5-63",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "ionization-energy"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "ionization-energy"
+      ],
+      "supporting": [
+        "coulombic-attraction"
+      ]
+    },
+    "c": {
+      "primary": [
+        "ionization-energy"
+      ],
+      "supporting": [
+        "coulombic-attraction"
+      ]
+    },
+    "d": {
+      "primary": [
+        "lewis-structures"
+      ],
+      "supporting": []
+    },
+    "e-i": {
+      "primary": [
+        "molecular-geometry"
+      ],
+      "supporting": [
+        "electron-domains"
+      ]
+    },
+    "e-ii": {
+      "primary": [
+        "hybridization"
+      ],
+      "supporting": [
+        "electron-domains"
+      ]
+    },
+    "f": {
+      "primary": [
+        "molecular-polarity"
+      ],
+      "supporting": [
+        "molecular-geometry"
+      ]
+    }
+  },
+  "notes": "Part (e)(ii) needs sp3d2 for six domains, which the reference marks as d-orbital hybridization not assessed on the current exam; still tagged hybridization."
+}

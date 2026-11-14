@@ -1,0 +1,49 @@
+{
+  "questionId": "frq-2011-3-946",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "balanced-equations",
+        "oxidation-numbers"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "equilibrium-expression"
+      ],
+      "supporting": []
+    },
+    "c-i": {
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": [
+        "enthalpy-of-formation"
+      ]
+    },
+    "c-ii": {
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": []
+    },
+    "d-i": {
+      "primary": [
+        "free-energy-equilibrium"
+      ],
+      "supporting": [
+        "reaction-quotient"
+      ]
+    },
+    "d-ii": {
+      "primary": [
+        "free-energy-equilibrium",
+        "reaction-quotient"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Page is 2002 Form B Q3 despite the 2011 id; c-i uses products-minus-reactants with formation values (N2 zero), tagged enthalpy-of-formation as supporting since no dGf concept exists."
+}

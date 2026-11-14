@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-2018-11-1196",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop is the right column only and cuts off the left half of the shared stimulus (Zn half-cell, header, half-reaction labels). Page context shows the full Zn/Ag galvanic cell diagram, the E° table (+0.80 V Ag+/Ag, -0.76 V Zn2+/Zn) and question 11 with choices A-D."
+  },
+  "officialTopics": {
+    "primary": "9.9",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "cell-potential",
+          "evidence": "Must combine the Ag+/Ag and Zn2+/Zn reduction potentials to get E°cell, without multiplying the Ag potential by its coefficient."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "electrochemical-cells",
+          "evidence": "The stimulus shows a Zn/Ag galvanic cell with salt bridge; identifying electrodes is not needed for the value."
+        }
+      ],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "cell-diagram",
+        "potential-table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

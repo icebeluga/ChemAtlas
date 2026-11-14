@@ -1,0 +1,165 @@
+{
+  "questionId": "mcq-2014-33-185",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 33,
+  "text": "equilibrium. Which of the following graphs best\nshows the rate of the reverse reaction as a function\nof time? (Assume that the time for injection and\nmixing of the additional Cl2(g) is negligible.)\n\n(A)\n\n\n\n\n\n(B)\n\n\n\n\n\n(C)\n\n\n\n\n\n(D)",
+  "regions": [
+    {
+      "page": 185,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 185,
+        "compiledPage": 185
+      }
+    },
+    {
+      "page": 184,
+      "rect": null,
+      "role": "stimulus",
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 184,
+        "compiledPage": 184
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "7.2"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "7.2",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Content supplement (add): Shared stimulus for Questions 29-33 (PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid 1.00 L container) is printed on the preceding page; the question depends on which side Cl2 is on."
+  ],
+  "supplement": {
+    "mode": "add",
+    "reason": "Shared stimulus for Questions 29-33 (PCl5(g) <=> PCl3(g) + Cl2(g) in a rigid 1.00 L container) is printed on the preceding page; the question depends on which side Cl2 is on.",
+    "checkedBy": "model (claude-opus-5-5), 2026-11-14: PDF text of bank-01 p184 begins 'Questions 29-33 refer to the following'; found because the blind adjudicator marked the question partial",
+    "catalogCorrection": "Register a shared stimulus for 2014 practice exam Questions 29-33 in research/stimuli.json (page 184)."
+  },
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "content-supplemented-see-images",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "76fca98d5e4a7d82",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2014-33-185-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 185,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2014-33-185-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 185,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2014-33-185-r2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 184,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:dynamic-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "linked-from:reaction-quotient"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "linked-from:reaction-quotient"
+      ]
+    },
+    {
+      "conceptId": "k-magnitude",
+      "name": "Magnitude of K",
+      "definition": "Interpreting the size of K: K much greater than 1 favors products, much less than 1 favors reactants, and K says nothing about reaction speed.",
+      "include": "Tag when the relative amounts of reactants and products at equilibrium must be inferred from K's magnitude.",
+      "exclude": "Do not tag ΔG°-K conversions (tag free-energy-equilibrium) unless magnitude is interpreted.",
+      "whyCandidate": [
+        "linked-from:dynamic-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "le-chatelier",
+      "name": "Le Châtelier's principle",
+      "definition": "Predicting how an equilibrium shifts after changes in concentration, volume or pressure, or temperature, and recognizing that only temperature changes K.",
+      "include": "Tag when the direction of a shift or the effect of a stress on amounts or K must be predicted or explained.",
+      "exclude": "Do not tag Q-K calculations alone (tag reaction-quotient); catalysts do not shift equilibrium (tag catalysis if asked).",
+      "whyCandidate": [
+        "linked-from:reaction-quotient"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "questionId": "frq-2005-7-13",
+  "contentStatus": "complete",
+  "parts": {
+    "a-i": {
+      "primary": [
+        "hydrogen-bonding",
+        "dipole-dipole"
+      ],
+      "supporting": [
+        "molecular-polarity"
+      ]
+    },
+    "a-ii": {
+      "primary": [
+        "imf-properties",
+        "hydrogen-bonding"
+      ],
+      "supporting": []
+    },
+    "b-i": {
+      "primary": [
+        "bonding-types"
+      ],
+      "supporting": []
+    },
+    "b-ii": {
+      "primary": [
+        "lattice-energy"
+      ],
+      "supporting": []
+    },
+    "c-i": {
+      "primary": [
+        "electron-configuration"
+      ],
+      "supporting": []
+    },
+    "c-ii": {
+      "primary": [
+        "ionization-energy"
+      ],
+      "supporting": [
+        "coulombic-attraction"
+      ]
+    },
+    "d-i": {
+      "primary": [
+        "mass-spectrometry"
+      ],
+      "supporting": []
+    },
+    "d-ii": {
+      "primary": [
+        "mass-spectrometry"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Used printed labels (a)(i),(a)(ii),(d)(i),(d)(ii) rather than catalog a and d; ion size in (b)(ii) is an input to the lattice argument so atomic-radius is not tagged."
+}

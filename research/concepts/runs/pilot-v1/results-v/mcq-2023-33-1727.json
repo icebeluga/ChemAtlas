@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2023-33-1727",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows Q33 stem and choices plus the partially cut shared equation; full stimulus with Lewis structures visible on page context. The stimulus is not needed to answer."
+  },
+  "officialTopics": {
+    "primary": "5.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must know that the Ni catalyst provides a lower-activation-energy pathway without changing the energy released overall."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

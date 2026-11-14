@@ -1,0 +1,123 @@
+{
+  "reference": "research/concepts/benchmark/reference-pilot-v1.json",
+  "conventionsExcluded": 11,
+  "summary": {
+    "referenceQuestions": 40,
+    "compared": 40,
+    "missing": 0,
+    "statusMismatch": 0,
+    "primary": {
+      "precision": 1,
+      "recall": 1,
+      "tp": 74,
+      "fp": 0,
+      "fn": 0
+    },
+    "supporting": {
+      "precision": 0.833,
+      "recall": 0.952,
+      "tp": 20,
+      "fp": 4,
+      "fn": 1
+    },
+    "anyRole": {
+      "precision": 0.959,
+      "recall": 0.989,
+      "tp": 94,
+      "fp": 4,
+      "fn": 1
+    },
+    "roleSwaps": 0,
+    "ignoredConceptMentions": 25,
+    "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+  },
+  "errors": [
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "b",
+      "issue": "extra supporting mole-conversions"
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "partId": "d-ii",
+      "issue": "extra supporting rate-law"
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "partId": "stem",
+      "issue": "missed supporting equilibrium-expression"
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "partId": "stem",
+      "issue": "extra supporting reaction-stoichiometry"
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "partId": "stem",
+      "issue": "extra supporting bond-polarity"
+    }
+  ],
+  "strata": {
+    "agree": {
+      "referenceQuestions": 15,
+      "compared": 15,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 15,
+        "fp": 0,
+        "fn": 0
+      },
+      "supporting": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "anyRole": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0
+      },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 4,
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    },
+    "non-agree": {
+      "referenceQuestions": 25,
+      "compared": 25,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 59,
+        "fp": 0,
+        "fn": 0
+      },
+      "supporting": {
+        "precision": 0.789,
+        "recall": 0.938,
+        "tp": 15,
+        "fp": 4,
+        "fn": 1
+      },
+      "anyRole": {
+        "precision": 0.949,
+        "recall": 0.987,
+        "tp": 74,
+        "fp": 4,
+        "fn": 1
+      },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 21,
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    }
+  }
+}

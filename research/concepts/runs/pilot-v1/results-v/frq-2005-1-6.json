@@ -1,0 +1,150 @@
+{
+  "questionId": "frq-2005-1-6",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the section header, the propanoic acid equation with Ka, and question 1 parts (a)-(e) including the methanoate equation; matches page."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "7.3",
+      "3.7",
+      "8.9",
+      "8.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "Must write Ka = [C3H5O2-][H+]/[HC3H5O2] from the given ionization equation."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must use Ka = 1.34 × 10^-5 and 0.265 M to solve for [H+] of the weak acid solution."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "molarity",
+          "evidence": "Must convert 0.496 g NaC3H5O2 to moles and divide by 0.0500 L to get the propanoate concentration."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "henderson-hasselbalch",
+          "evidence": "Must find [H+] in the propanoic acid/propanoate buffer from Ka and the ratio of conjugate base to acid concentrations."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "common-ion-effect",
+          "evidence": "Added propanoate suppresses ionization of the acid, but no solubility comparison is involved."
+        }
+      ],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must compute Kb for HCO2- from [OH-] = 4.18 × 10^-6 M in 0.309 M solution, then Ka of HCO2H using Ka·Kb = Kw."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must compare the Ka of propanoic acid with the Ka of methanoic acid from (d) to justify which acid is stronger."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "b",
+        "change": "removed supporting ph-poh",
+        "reason": "Taking -log[H+] of a weak acid solution is a routine logarithm step included in calculating weak-acid pH, the primary concept."
+      }
+    ]
+  }
+}

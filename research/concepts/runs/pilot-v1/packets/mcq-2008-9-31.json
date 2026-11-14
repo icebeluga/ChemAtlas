@@ -1,0 +1,183 @@
+{
+  "questionId": "mcq-2008-9-31",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 9,
+  "text": "Questions 7-9 refer to the following pure\nsubstances, which are gases at 25°C and 1\natmosphere.\n\n     (A)  NH3 (g)\n      (B)  BH3 (g)\n      (C)  H2 (g)\n     (D)  H2S (g)\n      (E)  HBr (g)\n\n9.  Is the slowest to effuse through a small opening at\n   25°C and 1 atm\n\n   Questions 10-11 refer to the following.\n\n         (A)   Activation energy\n         (B)  Enthalpy of formation\n         (C)  Entropy\n         (D)  Gibbs free energy\n          (E)   Lattice energy",
+  "regions": [
+    {
+      "page": 31,
+      "rect": [
+        320,
+        264,
+        580,
+        302
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 31,
+        "compiledPage": 31
+      }
+    }
+  ],
+  "stimulus": [
+    {
+      "id": "stimulus-2008-mcq-7-9-page31",
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            320,
+            65,
+            580,
+            195
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-7-31",
+        "mcq-2008-8-31",
+        "mcq-2008-9-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 7–9; includes the shared list of pure gaseous substances A-E."
+    }
+  ],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "3.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "3.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Compared complete individual crop for Question 9 against original 2008 source page. Common context is linked via stimulus-2008-mcq-7-9-page31; individual stem and choices are separate and complete."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": []
+  },
+  "contentHash": "8536fb4b87bba24a",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-9-31-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        264,
+        580,
+        302
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-9-31-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1/images/stimulus-2008-mcq-7-9-page31-1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        65,
+        580,
+        195
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "kinetic-molecular-theory",
+      "name": "Kinetic molecular theory",
+      "definition": "Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.",
+      "include": "Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.",
+      "exclude": "Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "collision-model",
+      "name": "Collision model and temperature effects",
+      "definition": "Explaining rate changes through collision frequency, the fraction of collisions with energy at least Ea (Maxwell-Boltzmann distribution), and correct orientation.",
+      "include": "Tag when a change in rate with temperature, concentration or orientation must be explained at the particle level.",
+      "exclude": "Numerical Arrhenius-equation calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:kinetic-molecular-theory"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:kinetic-molecular-theory"
+      ]
+    },
+    {
+      "conceptId": "real-gases",
+      "name": "Deviations from ideal gas behavior",
+      "definition": "Explaining when and why real gases deviate from ideal behavior, through intermolecular attractions at low temperature and particle volume at high pressure.",
+      "include": "Tag when nonideal behavior must be predicted, compared or explained.",
+      "exclude": "Van der Waals equation calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:kinetic-molecular-theory"
+      ]
+    }
+  ]
+}

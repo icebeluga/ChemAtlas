@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-2018-40-2043",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 40,
+  "text": "40. Which of the following particles is emitted by an\n   atom of 39Ca when it decays to produce an atom\n    of 39K ?\n\n   (A)  4 He          2\n    (B)  1 n          0\n    (C)  11H\n   (D) β−\n\n    (E) β+",
+  "regions": [
+    {
+      "page": 2043,
+      "rect": [
+        0,
+        282.3709716796875,
+        306,
+        453.2576599121094
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 243,
+        "compiledPage": 2043
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "31178b0dd13fb485",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-40-2043-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 243,
+      "rect": [
+        0,
+        282.3709716796875,
+        306,
+        453.2576599121094
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-40-2043-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 243,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

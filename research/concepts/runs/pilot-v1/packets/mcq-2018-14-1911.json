@@ -1,0 +1,85 @@
+{
+  "questionId": "mcq-2018-14-1911",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 14,
+  "text": "14. Which of the following best describes the change\n    that takes place immediately after the CH3OH(l)\n     is introduced into the previously evacuated\n    vessel?\n\n   (A) A chemical change takes place because\n         covalent bonds are broken.\n    (B) A chemical change takes place because\n          intermolecular attractions are overcome.\n    (C) A physical change takes place because\n         covalent bonds are broken.\n   (D) A physical change takes place because\n          intermolecular attractions are overcome.",
+  "regions": [
+    {
+      "page": 1911,
+      "rect": [
+        0,
+        55,
+        301.67999267578125,
+        215.90036010742188
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 111,
+        "compiledPage": 1911
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "b7ed4b5b14d8f5bd",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-14-1911-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 111,
+      "rect": [
+        0,
+        55,
+        301.67999267578125,
+        215.90036010742188
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-14-1911-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 111,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "physical-chemical-change",
+      "name": "Physical versus chemical change",
+      "definition": "Distinguishing physical changes, in which particle identity is unchanged, from chemical changes, in which bonds rearrange to form new substances.",
+      "include": "Tag when a process must be classified as physical or chemical, or the classification explained at the particle level.",
+      "exclude": "Do not tag questions that merely involve a reaction without asking about the nature of the change.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

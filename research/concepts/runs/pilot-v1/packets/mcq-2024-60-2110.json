@@ -1,0 +1,149 @@
+{
+  "questionId": "mcq-2024-60-2110",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 60,
+  "text": "57. A reversible reaction at standard conditions has\na negative enthalpy change (AH® < 0) anda\npositive entropy change (AS° > 0). Which of the\nfollowing must be true for the equilibrium\nconstant, K, and the standard cell potential, E°,\nfor the forward reaction?\n\nA] Greaterthan1 Positive\nB| Greater than] Negative\nC} Less than 1 Positive\nD| Less than 1 Negative\n\n(A) A\n() B\n@e\n@) D\n\n58. A 15.0 sample of HyO(l) initially at 20.0°C\nabsorbs 4.60 kJ of heat. The final temperature of\nthe HO(I) is closest to which of the following?\n(Assume the specific heat capacity of H,O(!) is\nconstant at 4.18 J/(g-°C).)\n\n(A) 20.1°C\n(B) 365°C\n(C) 73.4°C\n(D) 93.4°C\n\n(Unauthorized copying or reuse of|\nany part of this page Is Illegal.\n\n© studocu\n\n59, Which of the following elements has the largest\n\nfirst ionization energy?\n\n(A) Be\n(B) Li\n(C) Na\n(D) Mg\n\nMass of Isotope | Percent Abundance\n\n185 amu 37%\n\n187 amu 63%\n\n). A certain element has two naturally occurring\n\nisotopes, as shown in the table. The element’s\naverage atomic mass is closest to which of the\nfollowing?\n\n(A) 185.0 amu\n(B) 185.6 amu\n(©) 186.3 amu\n(D) 187.0 amu\n\nGO ON TO THE NEXT\n\nmessages.pdf_cover_qr_code_label\nmessages.downloaded_by\n\n",
+  "regions": [
+    {
+      "page": 2110,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 10,
+        "compiledPage": 2110
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Question number was not legible in OCR; source page retained and needs visual verification."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "question-number-not-confirmed",
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2d8cc742bd622bc8",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-60-2110-r1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 10,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-60-2110-page1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 10,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "ionization-energy",
+      "name": "Ionization energy",
+      "definition": "Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.",
+      "include": "Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.",
+      "exclude": "Do not tag PES questions unless ionization energy itself is compared outside the spectrum.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "mass-spectrometry",
+      "name": "Mass spectra and isotopes",
+      "definition": "Interpreting mass spectra of elements: identifying isotopes from mass-to-charge peaks and relating relative abundance to average atomic mass.",
+      "include": "Tag when a mass spectrum, isotope abundance data, or weighted-average atomic mass must be used or predicted.",
+      "exclude": "Do not tag simple proton/neutron counting for a named isotope (use electron-configuration/atomic structure); mass spectra of molecules or multiply charged ions are beyond AP scope.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

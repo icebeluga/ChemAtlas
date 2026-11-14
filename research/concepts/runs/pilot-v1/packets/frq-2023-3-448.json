@@ -1,0 +1,408 @@
+{
+  "questionId": "frq-2023-3-448",
+  "type": "FRQ",
+  "exam": "2023 AP Chemistry FRQ",
+  "year": "2023",
+  "number": 3,
+  "text": "3. Answer the following questions about an experiment in which CaCO3(s) is combined with HCl(aq), represented\n  by the following balanced equation.\n\n                        CaCO3(s) + 2 HCl(aq) → CaCl2(aq) + CO2(g) + H2O(l)\n\n   (a) Write the balanced net ionic equation for the reaction.\n\n\n\n\n\n  A student performs an investigation to study factors that affect the rate of the reaction. In each trial the student\n  combines 50.0 mL of HCl(aq) at 21.2° C with 1.00 g of CaCO3(s) and measures the time required for the\n   reaction to go to completion. The data are given in the following table.\n\n\n                                  Concentration of      Particle Size of    Time of Reaction\n                         Trial\n                                HCl(aq) (M )       CaCO3(s )                 (s)\n\n                     1              1.00            Fine powder            67\n\n                     2              1.00           Small chunks          112\n\n                     3              1.00            Large chunk           342\n\n                     4              3.00            Fine powder            22\n\n                     5              3.00           Small chunks           227\n\n                     6              3.00            Large chunk           114\n\n   (b) The student correctly identifies that trial 5 is inconsistent with the other trials. Explain why the student’s claim\n        is correct using the data in the table.\n\n\n\n\n\n                                      GO ON TO THE NEXT PAGE.\n\n\n                        © 2023 College Board\n\nContinue your response to QUESTION 3 on this page.\n\n(c) Based on the reaction conditions and the collisions that occur between particles, explain the reason for the\n   difference in the reaction times for trial 2 and trial 3.\n\n\n\n\n\n(d) The student claims that the reaction is zero order with respect to HCl(aq). Do you agree or disagree with the\n    student’s claim? Justify your answer using the student’s data.\n\n\n\n\n\n(e) The HCl(aq) was present in excess in all trials of the experiment. Determine the molarity of the HCl(aq) in\n   the beaker after the reaction is complete in trial 2. Assume that the volume of the mixture remains constant at\n   50.0 mL throughout the trial. (The molar mass of CaCO3 is 100.09 g/mol.)\n\n\n\n\n\n                                     GO ON TO THE NEXT PAGE.\n\n\n                      © 2023 College Board\n\nContinue your response to QUESTION 3 on this page.\n\n                        CaCO3(s) + 2 HCl(aq) → CaCl2(aq) + CO2(g) + H2O(l)\n\nIn order to measure the enthalpy of the reaction shown, the student repeats trial 1 by mixing 50.0 mL of HCl(aq)\nwith 1.00 g of CaCO3(s) using a coffee cup calorimeter. The student records the temperature of the system every\n20 seconds. The data are given in the following table.\n\n\n\n                                       Measured Temperature of\n                             Time (s)                                                   Solution ( ° C)\n\n                                 0             21.20\n\n                                 20             21.51\n\n                                 40             21.70\n\n                                 60             21.85\n\n                                 80             21.90\n\n                                100            21.90\n\n(f) Is the reaction endothermic or exothermic? Justify your answer using the information in the table.\n\n\n\n\n\n                                     GO ON TO THE NEXT PAGE.\n\n\n                       © 2023 College Board\n\nContinue your response to QUESTION 3 on this page.\n\n(g) Based on the experimental data, the mass of the system is 51.0 g, and the specific heat of the reaction mixture\n    is 4.0 J / (g · ° C).\n       (i) Calculate the magnitude of heat transfer, q, in joules.\n\n\n\n\n\n       (ii) Calculate the enthalpy of reaction in units of kJ/mol rxn . Include the algebraic sign on your answer.\n\n\n\n\n\n                                     GO ON TO THE NEXT PAGE.\n\n\n                     © 2023 College Board",
+  "regions": [
+    {
+      "page": 448,
+      "rect": [
+        0,
+        26,
+        594,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 148,
+        "compiledPage": 448
+      }
+    },
+    {
+      "page": 449,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 149,
+        "compiledPage": 449
+      }
+    },
+    {
+      "page": 450,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 150,
+        "compiledPage": 450
+      }
+    },
+    {
+      "page": 451,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 151,
+        "compiledPage": 451
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "4.2"
+      ]
+    },
+    {
+      "partId": "b–d",
+      "label": "(b–d)",
+      "catalogTopics": [
+        "5.1"
+      ]
+    },
+    {
+      "partId": "e–g",
+      "label": "(e–g)",
+      "catalogTopics": [
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.1",
+    "secondary": [
+      "4.5",
+      "4.2"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "c59dbd2e5c4ac963",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-r1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 148,
+      "rect": [
+        0,
+        26,
+        594,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-page1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 148,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-r2.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 149,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-page2.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 149,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-r3.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 150,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-page3.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 150,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-r4.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 151,
+      "rect": [
+        20,
+        40,
+        574,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2023-3-448-page4.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 151,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:mole-conversions",
+        "linked-from:molarity",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:molarity",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-rate",
+      "name": "Reaction rates",
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-rate"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-rate"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "beer-lambert",
+      "name": "Beer-Lambert law and spectrophotometry",
+      "definition": "Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.",
+      "include": "Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.",
+      "exclude": "Do not tag general spectroscopy questions without an absorbance-concentration relationship.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "dilution",
+      "name": "Dilution",
+      "definition": "Relating concentrations and volumes before and after adding solvent, since moles of solute are unchanged (M1V1 = M2V2).",
+      "include": "Tag when a dilution calculation or the effect of dilution on concentration must be determined.",
+      "exclude": "Do not tag mixing two reacting solutions (tag acid-base-mixtures or reaction-stoichiometry).",
+      "whyCandidate": [
+        "linked-from:molarity"
+      ]
+    },
+    {
+      "conceptId": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "whyCandidate": [
+        "linked-from:mole-conversions"
+      ]
+    },
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "linked-from:molarity"
+      ]
+    }
+  ]
+}

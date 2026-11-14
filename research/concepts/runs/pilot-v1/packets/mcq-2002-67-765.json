@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-2002-67-765",
+  "type": "MCQ",
+  "exam": "2002 AP Chemistry MCQ · Version indicated in source",
+  "year": "2002",
+  "number": 67,
+  "text": "67.  Which of the following describes the changes in\n     forces of attraction that occur as H2O changes phase\n    from a liquid to a vapor?\n\n    A) H–O bonds break as H–H and O–O bonds\n         form.\n    B)  Hydrogen bonds between H2O molecules are\n         broken.\n    C)  Covalent bonds between H2O molecules are\n         broken.\n    D)  Ionic bonds between H+ ions and OH- ions are\n         broken.\n    E)  Covalent bonds between H+ ions and H2O\n         molecules become more effective.",
+  "regions": [
+    {
+      "page": 765,
+      "rect": [
+        0,
+        55,
+        306,
+        267.236328125
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 165,
+        "compiledPage": 765
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2ff706040e59abc4",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-67-765-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 165,
+      "rect": [
+        0,
+        55,
+        306,
+        267.236328125
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-67-765-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 165,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

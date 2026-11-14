@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-2014-24-1450",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 24,
+  "text": "24. Which of the following statements is true about\n   bond energies in this reaction?\n\n   (A) The energy absorbed as the bonds in the\n          reactants are broken is greater than the\n         energy released as the bonds in the product\n          are formed.\n    (B) The energy released as the bonds in the\n          reactants are broken is greater than the\n         energy absorbed as the bonds in the product\n          are formed.\n    (C) The energy absorbed as the bonds in the\n          reactants are broken is less than the energy\n          released as the bonds in the product are\n         formed.\n   (D) The energy released as the bonds in the\n          reactants are broken is less than the energy\n         absorbed as the bonds in the product are\n         formed.",
+  "regions": [
+    {
+      "page": 1450,
+      "rect": [
+        301.67999267578125,
+        193.50511169433594,
+        603.3599853515625,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 250,
+        "compiledPage": 1450
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "89a1ee9acdcb683e",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-24-1450-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": [
+        301.67999267578125,
+        193.50511169433594,
+        603.3599853515625,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-24-1450-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

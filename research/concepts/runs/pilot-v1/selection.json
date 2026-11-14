@@ -1,0 +1,374 @@
+{
+  "run": "pilot-v1",
+  "createdAt": "2026-11-14T06:06:18.822Z",
+  "questions": [
+    {
+      "id": "mcq-2018-36-1207",
+      "reason": "unit 1 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2024-19-2088",
+      "reason": "unit 1 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2024-38-2099",
+      "reason": "unit 1 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2022-41-1649",
+      "reason": "unit 1 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2002-48-760",
+      "reason": "unit 1 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-1984-38-126",
+      "reason": "unit 1 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2008-5-63",
+      "reason": "unit 1 multipart FRQ"
+    },
+    {
+      "id": "frq-1999-7-564",
+      "reason": "unit 1 multipart FRQ"
+    },
+    {
+      "id": "mcq-2016-5-1053",
+      "reason": "unit 2 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2022-38-1648",
+      "reason": "unit 2 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2017-30-1137",
+      "reason": "unit 2 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2016-27-1064",
+      "reason": "unit 2 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2015-47-1554",
+      "reason": "unit 2 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2002-67-765",
+      "reason": "unit 2 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2017-3-1157",
+      "reason": "unit 2 multipart FRQ"
+    },
+    {
+      "id": "frq-2011-6-937",
+      "reason": "unit 2 multipart FRQ"
+    },
+    {
+      "id": "mcq-2022-21-1622",
+      "reason": "unit 3 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2022-56-1653",
+      "reason": "unit 3 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-1984-72-131",
+      "reason": "unit 3 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2008-25-34",
+      "reason": "unit 3 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-1994-65-692",
+      "reason": "unit 3 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2018-57-2046",
+      "reason": "unit 3 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2008-6-65",
+      "reason": "unit 3 multipart FRQ"
+    },
+    {
+      "id": "frq-2005-7-13",
+      "reason": "unit 3 multipart FRQ"
+    },
+    {
+      "id": "mcq-2016-37-1070",
+      "reason": "unit 4 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2018-12-1197",
+      "reason": "unit 4 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-15-178",
+      "reason": "unit 4 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2024-56-2109",
+      "reason": "unit 4 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2018-14-1911",
+      "reason": "unit 4 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2023-33-1727",
+      "reason": "unit 4 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2005-4-10",
+      "reason": "unit 4 multipart FRQ"
+    },
+    {
+      "id": "frq-2024-5-2125",
+      "reason": "unit 4 multipart FRQ"
+    },
+    {
+      "id": "mcq-2008-11-31",
+      "reason": "unit 5 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2018-13-1198",
+      "reason": "unit 5 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2016-26-1064",
+      "reason": "unit 5 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2022-13-1639",
+      "reason": "unit 5 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2012-21-1354",
+      "reason": "unit 5 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-1994-63-691",
+      "reason": "unit 5 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2023-3-448",
+      "reason": "unit 5 multipart FRQ"
+    },
+    {
+      "id": "frq-2008-3-59",
+      "reason": "unit 5 multipart FRQ"
+    },
+    {
+      "id": "mcq-2014-34-186",
+      "reason": "unit 6 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-9-174",
+      "reason": "unit 6 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2016-24-1063",
+      "reason": "unit 6 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2008-13-32",
+      "reason": "unit 6 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2002-41-759",
+      "reason": "unit 6 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2018-40-2043",
+      "reason": "unit 6 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2022-5-1663",
+      "reason": "unit 6 multipart FRQ"
+    },
+    {
+      "id": "frq-2011-3-933",
+      "reason": "unit 6 multipart FRQ"
+    },
+    {
+      "id": "mcq-2018-34-1205",
+      "reason": "unit 7 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2017-42-1144",
+      "reason": "unit 7 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-33-185",
+      "reason": "unit 7 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-30-184",
+      "reason": "unit 7 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-24-1450",
+      "reason": "unit 7 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2014-21-1450",
+      "reason": "unit 7 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2003-3-536",
+      "reason": "unit 7 multipart FRQ"
+    },
+    {
+      "id": "frq-2009-5-325",
+      "reason": "unit 7 multipart FRQ"
+    },
+    {
+      "id": "mcq-2014-22-180",
+      "reason": "unit 8 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2016-9-1056",
+      "reason": "unit 8 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2024-21-2091",
+      "reason": "unit 8 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2022-52-1652",
+      "reason": "unit 8 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2023-43-1731",
+      "reason": "unit 8 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2014-17-1448",
+      "reason": "unit 8 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2024-3-2119",
+      "reason": "unit 8 multipart FRQ"
+    },
+    {
+      "id": "frq-2005-1-6",
+      "reason": "unit 8 multipart FRQ"
+    },
+    {
+      "id": "mcq-2018-11-1196",
+      "reason": "unit 9 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-47-190",
+      "reason": "unit 9 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-12-176",
+      "reason": "unit 9 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2008-10-31",
+      "reason": "unit 9 MCQ (catalog topic reviewed)"
+    },
+    {
+      "id": "mcq-2014-29-1453",
+      "reason": "unit 9 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "mcq-2018-38-1920",
+      "reason": "unit 9 MCQ (catalog topic unreviewed)"
+    },
+    {
+      "id": "frq-2011-3-946",
+      "reason": "unit 9 multipart FRQ"
+    },
+    {
+      "id": "frq-2024-6-2126",
+      "reason": "unit 9 multipart FRQ"
+    },
+    {
+      "id": "mcq-2008-3-29",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-1-29",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-6-31",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-4-31",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-8-31",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-9-31",
+      "reason": "shared-stimulus MCQ"
+    },
+    {
+      "id": "mcq-2008-57-41",
+      "reason": "crop not verified / full page retained"
+    },
+    {
+      "id": "mcq-2002-38-614",
+      "reason": "crop not verified / full page retained"
+    },
+    {
+      "id": "mcq-2014-practice-24-180",
+      "reason": "crop not verified / full page retained"
+    },
+    {
+      "id": "mcq-2024-60-2110",
+      "reason": "question number not confirmed in OCR"
+    },
+    {
+      "id": "mcq-2024-33-2094",
+      "reason": "question number not confirmed in OCR"
+    },
+    {
+      "id": "mcq-2022-62-1709",
+      "reason": "source is answer/scoring page"
+    },
+    {
+      "id": "mcq-2023-67-1808",
+      "reason": "source is answer/scoring page"
+    },
+    {
+      "id": "frq-2020-sample-2-116",
+      "reason": "diagram choices / scanned page"
+    },
+    {
+      "id": "mcq-2008-41-38",
+      "reason": "diagram choices / scanned page"
+    },
+    {
+      "id": "mcq-1984-6-120",
+      "reason": "legacy (possibly beyond current AP)"
+    },
+    {
+      "id": "mcq-2002-6-606",
+      "reason": "legacy (possibly beyond current AP)"
+    },
+    {
+      "id": "mcq-1984-84-135",
+      "reason": "legacy (possibly beyond current AP)"
+    },
+    {
+      "id": "mcq-2008-44-39",
+      "reason": "multi-concept MCQ"
+    },
+    {
+      "id": "mcq-2008-59-42",
+      "reason": "multi-concept MCQ"
+    }
+  ]
+}

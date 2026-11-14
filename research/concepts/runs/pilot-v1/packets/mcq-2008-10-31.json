@@ -1,0 +1,151 @@
+{
+  "questionId": "mcq-2008-10-31",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 10,
+  "text": "Questions 10-11 refer to the following.\n\n     (A)   Activation energy\n      (B)  Enthalpy of formation\n      (C)  Entropy\n     (D)  Gibbs free energy\n      (E)   Lattice energy\n\n10.  Quantity would be zero for a pure, perfect crystal at\n    0 K.",
+  "regions": [
+    {
+      "page": 31,
+      "rect": [
+        320,
+        414,
+        580,
+        449
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 31,
+        "compiledPage": 31
+      }
+    }
+  ],
+  "stimulus": [
+    {
+      "id": "stimulus-2008-mcq-10-11-page31",
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            320,
+            308,
+            580,
+            410
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-10-31",
+        "mcq-2008-11-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 10–11; includes the shared term list A-E."
+    }
+  ],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "9.2"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.2",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Compared complete individual crop for Question 10 against original 2008 source page. Common context is linked via stimulus-2008-mcq-10-11-page31; individual stem and choices are separate and complete."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": []
+  },
+  "contentHash": "7accf81a2db678c5",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-10-31-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        414,
+        580,
+        449
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-10-31-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1/images/stimulus-2008-mcq-10-11-page31-1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        308,
+        580,
+        410
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:entropy"
+      ]
+    },
+    {
+      "conceptId": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "whyCandidate": [
+        "linked-from:entropy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "questionId": "mcq-2014-21-1450",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 21,
+  "text": "Questions 21-24 refer to the following information.\n\n         Æ                   CH3OH(g)  DH < 0  CO(g) + 2 H2(g) ¨\nThe synthesis of CH3OH(g) from CO(g) and H2(g)\nis represented by the equation above. The value of Kc\nfor the reaction at 483 K is 14.5.\n\n21. Which of the following explains the effect on the\n    equilibrium constant, Kc, when the temperature\n    of the reaction system is increased to 650 K?\n\n   (A) Kc will increase because the activation\n         energy of the forward reaction increases\n        more than that of the reverse reaction.\n    (B) Kc will increase because there are more\n          reactant molecules than product molecules.\n    (C) Kc will decrease because the reaction is\n         exothermic.\n   (D) Kc is constant and will not change.",
+  "regions": [
+    {
+      "page": 1450,
+      "rect": [
+        0,
+        40.48701095581055,
+        301.67999267578125,
+        151.59214782714844
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 250,
+        "compiledPage": 1450
+      }
+    },
+    {
+      "page": 1450,
+      "rect": [
+        0,
+        151.59214782714844,
+        301.67999267578125,
+        318.51800537109375
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 250,
+        "compiledPage": 1450
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "f78fef8c849723c4",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-21-1450-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": [
+        0,
+        40.48701095581055,
+        301.67999267578125,
+        151.59214782714844
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-21-1450-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-21-1450-r2.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": [
+        0,
+        151.59214782714844,
+        301.67999267578125,
+        318.51800537109375
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-21-1450-page2.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 250,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

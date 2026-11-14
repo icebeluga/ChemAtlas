@@ -1,0 +1,446 @@
+ChemAtlas canonical concepts 1.0.0 (2807830503f6372c). Use these exact ids.
+
+mole-conversions | Moles, molar mass and particle counts | topics 1.1 (related 1.3,1.4,3.7,4.5,6.5,9.11)
+    Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.
+    INCLUDE: Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.
+    EXCLUDE: Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.
+mass-spectrometry | Mass spectra and isotopes | topics 1.2 (related 1.5)
+    Interpreting mass spectra of elements: identifying isotopes from mass-to-charge peaks and relating relative abundance to average atomic mass.
+    INCLUDE: Tag when a mass spectrum, isotope abundance data, or weighted-average atomic mass must be used or predicted.
+    EXCLUDE: Do not tag simple proton/neutron counting for a named isotope (use electron-configuration/atomic structure); mass spectra of molecules or multiply charged ions are beyond AP scope.
+empirical-formula | Percent composition and empirical formulas | topics 1.3 (related 1.1)
+    Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.
+    INCLUDE: Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.
+    EXCLUDE: Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.
+mixture-composition | Composition of mixtures | topics 1.4 (related 1.3)
+    Using measured masses or other quantitative data to determine the relative amounts of components in a mixture and to distinguish mixtures from pure substances.
+    INCLUDE: Tag when the question requires the mass fraction or percent of a component in a mixture, or a mass balance across mixture components.
+    EXCLUDE: Do not tag percent composition of a single pure compound (use empirical-formula) or solution molarity (use molarity).
+electron-configuration | Electron configurations and atomic structure | topics 1.5 (related 1.6,1.7,1.8)
+    Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.
+    INCLUDE: Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.
+    EXCLUDE: Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.
+photoelectron-spectroscopy | Photoelectron spectroscopy (PES) | topics 1.6 (related 1.5,1.7)
+    Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.
+    INCLUDE: Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.
+    EXCLUDE: Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.
+coulombic-attraction | Coulomb's law and effective nuclear charge | topics 1.7 (related 1.6,1.8,2.1,2.3,3.1)
+    Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.
+    INCLUDE: Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.
+    EXCLUDE: Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.
+atomic-radius | Atomic and ionic radius | topics 1.7 (related 1.8,2.3)
+    Predicting and explaining the sizes of atoms and ions across periods and down groups, including isoelectronic ions and ions versus their parent atoms.
+    INCLUDE: Tag when atomic or ionic size is compared, ranked or explained.
+    EXCLUDE: Do not tag when ion size is only one input to a lattice-energy argument unless the size comparison itself is asked.
+ionization-energy | Ionization energy | topics 1.7 (related 1.6)
+    Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.
+    INCLUDE: Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.
+    EXCLUDE: Do not tag PES questions unless ionization energy itself is compared outside the spectrum.
+electronegativity | Electronegativity trends | topics 1.7 (related 2.1,8.6)
+    The tendency of an atom in a bond to attract shared electrons, its periodic trend, and its explanation from nuclear charge and distance.
+    INCLUDE: Tag when electronegativity values or trends must be compared or explained as the main reasoning.
+    EXCLUDE: Do not tag when electronegativity is only used to decide bond polarity (tag bond-polarity) or acid strength (tag acid-strength-structure).
+ionic-formulas | Ion charges and ionic formulas | topics 1.8 (related 1.5,2.1)
+    Predicting common ion charges from valence electrons and periodic position, and writing charge-neutral ionic formulas.
+    INCLUDE: Tag when the student predicts an ion's charge, the formula of an ionic compound, or explains ion formation from electron configuration.
+    EXCLUDE: Do not tag routine use of a given ionic formula in a calculation.
+bonding-types | Ionic, covalent and metallic bonding | topics 2.1 (related 2.3,2.4,3.2)
+    Classifying bonds as ionic, polar covalent, nonpolar covalent or metallic from the elements involved and electronegativity difference, and predicting properties that follow.
+    INCLUDE: Tag when the bond type must be identified or used to predict a property.
+    EXCLUDE: Do not tag questions about the type of solid (tag solid-types) unless the bond classification itself is asked.
+bond-polarity | Bond polarity and partial charges | topics 2.1 (related 1.7,2.7,3.1,8.6)
+    Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.
+    INCLUDE: Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.
+    EXCLUDE: Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).
+bond-potential-energy | Bond potential-energy curves | topics 2.2 (related 6.7)
+    Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.
+    INCLUDE: Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.
+    EXCLUDE: Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).
+bond-order | Bond order, length and strength | topics 2.2 (related 2.6,2.7,6.7)
+    Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.
+    INCLUDE: Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.
+    EXCLUDE: Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).
+lattice-energy | Ionic solids and lattice attraction | topics 2.3 (related 1.8,3.2,9.6)
+    The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.
+    INCLUDE: Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.
+    EXCLUDE: Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).
+metallic-bonding | Metals and alloys | topics 2.4 (related 3.2)
+    The electron-sea model of metallic bonding, the conductivity, malleability and ductility it explains, and the structures and properties of substitutional and interstitial alloys.
+    INCLUDE: Tag when metallic properties or alloy type and properties must be explained or predicted.
+    EXCLUDE: Do not tag generic identification of an element as a metal.
+lewis-structures | Lewis structures | topics 2.5 (related 2.6,2.7,8.6)
+    Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.
+    INCLUDE: Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.
+    EXCLUDE: Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.
+formal-charge | Formal charge | topics 2.6 (related 2.5,2.7)
+    Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.
+    INCLUDE: Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.
+    EXCLUDE: Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.
+resonance | Resonance and delocalization | topics 2.6 (related 2.7,8.6)
+    Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.
+    INCLUDE: Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.
+    EXCLUDE: Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.
+electron-domains | Electron-domain counting | topics 2.7 (related 2.5)
+    Counting the electron domains around a central atom, where each lone pair and each bond (single, double or triple) counts as one domain.
+    INCLUDE: Tag when the answer depends on counting domains, including the rule that a multiple bond is one domain, as a supporting step for geometry or hybridization.
+    EXCLUDE: Do not tag when geometry or hybridization is simply recalled for a familiar molecule without domain reasoning being needed.
+molecular-geometry | Molecular geometry (VSEPR) | topics 2.7 (related 2.5,3.1)
+    Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.
+    INCLUDE: Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.
+    EXCLUDE: Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).
+bond-angles | Bond angles | topics 2.7
+    Predicting or comparing bond angles from electron-domain geometry, including the compression caused by lone pairs.
+    INCLUDE: Tag when a bond angle must be estimated, compared or explained.
+    EXCLUDE: Do not tag when only a shape name is requested.
+hybridization | Orbital hybridization | topics 2.7 (related 2.5)
+    Assigning sp, sp2 or sp3 hybridization to an atom from its number of electron domains.
+    INCLUDE: Tag when the hybridization of an atom must be stated or used.
+    EXCLUDE: Do not tag geometry-only answers; d-orbital hybridization, drawing hybrid orbitals and molecular-orbital diagrams are not assessed.
+sigma-pi-bonds | Sigma and pi bonds | topics 2.7 (related 2.2)
+    Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.
+    INCLUDE: Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.
+    EXCLUDE: Do not tag simple bond-order comparisons (tag bond-order).
+molecular-polarity | Molecular polarity | topics 2.7 (related 2.1,3.1,3.10)
+    Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.
+    INCLUDE: Tag when the student must determine or justify whether a molecule is polar or nonpolar.
+    EXCLUDE: Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).
+london-dispersion | London dispersion forces | topics 3.1 (related 3.2,3.9,3.10)
+    Attractions arising from temporary dipoles, whose strength increases with the number of electrons (polarizability) and with contact surface area.
+    INCLUDE: Tag when dispersion forces must be identified or compared, especially using polarizability or molecular shape.
+    EXCLUDE: Do not tag merely because dispersion forces exist in every substance; tag only when they matter to the answer.
+dipole-dipole | Dipole-dipole attractions | topics 3.1 (related 2.7,3.9,3.10)
+    Attractions between the permanent dipoles of polar molecules.
+    INCLUDE: Tag when dipole-dipole forces must be identified or compared.
+    EXCLUDE: Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.
+hydrogen-bonding | Hydrogen bonding | topics 3.1 (related 3.2,3.8,3.9,3.10,6.5)
+    The strong dipole attraction between an H atom bonded to N, O or F and a lone pair on a nearby N, O or F atom.
+    INCLUDE: Tag when hydrogen bonding must be identified, drawn, or used to explain a property, including identifying donors and acceptors.
+    EXCLUDE: Do not tag molecules that contain H and O but no H bonded to N, O or F (a common error).
+ion-dipole | Ion-dipole attractions | topics 3.1 (related 3.8,3.10,9.6)
+    Attractions between ions and polar molecules, such as the orientation of water molecules around dissolved ions.
+    INCLUDE: Tag when ion-dipole forces or hydration-shell orientation must be identified, drawn or used.
+    EXCLUDE: Do not tag ionic bonding within a lattice (tag lattice-energy).
+imf-properties | Intermolecular forces and physical properties | topics 3.1 (related 3.3,3.9,6.5)
+    Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.
+    INCLUDE: Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.
+    EXCLUDE: Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.
+solid-types | Types of solids | topics 3.2 (related 2.3,2.4)
+    Classifying solids as ionic, molecular, metallic or covalent-network (and crystalline or amorphous) and relating the particles and forces in each to melting point, hardness and conductivity.
+    INCLUDE: Tag when a solid must be classified or its properties explained by solid type.
+    EXCLUDE: Do not tag a lattice-energy comparison between two ionic solids (tag lattice-energy).
+particulate-states | Particle model of solids, liquids and gases | topics 3.3 (related 3.2,6.5,9.1)
+    Describing the arrangement, spacing and motion of particles in solids, liquids and gases, and recognizing phase changes as physical changes.
+    INCLUDE: Tag when particle arrangement or motion across phases must be described, drawn or interpreted.
+    EXCLUDE: Phase diagrams are not assessed; do not tag energy calculations for phase changes (tag phase-change-energy).
+ideal-gas-law | Ideal gas law | topics 3.4 (related 3.5,4.5)
+    Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.
+    INCLUDE: Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.
+    EXCLUDE: Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).
+partial-pressures | Partial pressures and mole fraction | topics 3.4 (related 7.3,7.4)
+    Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.
+    INCLUDE: Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.
+    EXCLUDE: Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).
+kinetic-molecular-theory | Kinetic molecular theory | topics 3.5 (related 3.4,3.6,5.5)
+    Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.
+    INCLUDE: Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.
+    EXCLUDE: Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.
+real-gases | Deviations from ideal gas behavior | topics 3.6 (related 3.5,3.1)
+    Explaining when and why real gases deviate from ideal behavior, through intermolecular attractions at low temperature and particle volume at high pressure.
+    INCLUDE: Tag when nonideal behavior must be predicted, compared or explained.
+    EXCLUDE: Van der Waals equation calculations are not assessed.
+molarity | Molarity and solution preparation | topics 3.7 (related 3.8,3.13,4.5,4.6)
+    Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.
+    INCLUDE: Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.
+    EXCLUDE: Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.
+dilution | Dilution | topics 3.7 (related 3.13,8.2,8.10)
+    Relating concentrations and volumes before and after adding solvent, since moles of solute are unchanged (M1V1 = M2V2).
+    INCLUDE: Tag when a dilution calculation or the effect of dilution on concentration must be determined.
+    EXCLUDE: Do not tag mixing two reacting solutions (tag acid-base-mixtures or reaction-stoichiometry).
+solution-representations | Particle representations of solutions | topics 3.8 (related 3.7,4.3)
+    Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.
+    INCLUDE: Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.
+    EXCLUDE: Do not tag numerical molarity calculations with no representation.
+separation-techniques | Chromatography and distillation | topics 3.9 (related 3.1,3.10)
+    Separating mixture components by differences in intermolecular attractions: paper or column chromatography (stationary versus mobile phase) and distillation by volatility.
+    INCLUDE: Tag when a separation method is selected, explained or its results (such as a chromatogram) interpreted.
+    EXCLUDE: Do not tag filtration of a precipitate as the only step of a gravimetric calculation.
+solubility-polarity | Solubility and 'like dissolves like' | topics 3.10 (related 3.1,3.8,9.6)
+    Predicting and explaining solubility and miscibility from the relative strength of solute-solute, solvent-solvent and solute-solvent attractions.
+    INCLUDE: Tag when solubility or miscibility must be predicted or explained from molecular structure and forces.
+    EXCLUDE: Do not tag Ksp calculations (tag solubility-product) or solubility rules for precipitates (tag precipitation).
+em-spectrum | Spectroscopy and molecular transitions | topics 3.11 (related 3.12)
+    Matching regions of the electromagnetic spectrum to the molecular changes they cause: microwave to rotation, infrared to vibration, and UV-visible to electronic transitions.
+    INCLUDE: Tag when a type of radiation must be linked to the transition it causes, or absorption versus emission distinguished.
+    EXCLUDE: Do not tag photon energy calculations (tag photon-energy) or PES (tag photoelectron-spectroscopy).
+photon-energy | Photon energy, wavelength and frequency | topics 3.12 (related 1.6,3.11)
+    Using E = hν and c = λν to relate photon energy, frequency and wavelength, and connecting photon energy to energy-level differences.
+    INCLUDE: Tag when photon energy, wavelength or frequency must be calculated or compared.
+    EXCLUDE: Do not tag qualitative matching of radiation region to transition type only (tag em-spectrum).
+beer-lambert | Beer-Lambert law and spectrophotometry | topics 3.13 (related 3.11,5.1)
+    Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.
+    INCLUDE: Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.
+    EXCLUDE: Do not tag general spectroscopy questions without an absorbance-concentration relationship.
+balanced-equations | Writing and balancing chemical equations | topics 4.1 (related 4.3,4.4)
+    Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.
+    INCLUDE: Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.
+    EXCLUDE: Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.
+net-ionic-equations | Net ionic equations | topics 4.2 (related 4.3,4.7,7.11)
+    Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.
+    INCLUDE: Tag when a net ionic equation must be written or chosen, or spectator ions identified.
+    EXCLUDE: Do not tag when the reaction is only described in words and no ionic representation is required.
+reaction-representations | Particle diagrams of reactions | topics 4.3 (related 4.5)
+    Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.
+    INCLUDE: Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.
+    EXCLUDE: Do not tag numerical stoichiometry with no particle representation.
+physical-chemical-change | Physical versus chemical change | topics 4.4 (related 3.3)
+    Distinguishing physical changes, in which particle identity is unchanged, from chemical changes, in which bonds rearrange to form new substances.
+    INCLUDE: Tag when a process must be classified as physical or chemical, or the classification explained at the particle level.
+    EXCLUDE: Do not tag questions that merely involve a reaction without asking about the nature of the change.
+reaction-stoichiometry | Reaction stoichiometry | topics 4.5 (related 4.1,4.6,8.4,9.11)
+    Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.
+    INCLUDE: Tag when an amount of one substance must be calculated from another through a balanced equation.
+    EXCLUDE: Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.
+limiting-reactant | Limiting reactant and yield | topics 4.5 (related 4.3)
+    Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.
+    INCLUDE: Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.
+    EXCLUDE: Do not tag single-reactant stoichiometry with an obvious excess stated.
+titration-analysis | Titration stoichiometry | topics 4.6 (related 8.5)
+    Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.
+    INCLUDE: Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.
+    EXCLUDE: Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.
+reaction-types | Classifying reactions | topics 4.7 (related 4.8,4.9)
+    Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.
+    INCLUDE: Tag when a reaction must be classified by type or its type is the key to predicting products.
+    EXCLUDE: Do not tag when the type is stated and the question asks only for a calculation.
+oxidation-numbers | Oxidation numbers | topics 4.7 (related 4.9,9.8)
+    Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.
+    INCLUDE: Tag when oxidation numbers must be assigned or changes in them used.
+    EXCLUDE: Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.
+precipitation | Precipitation reactions | topics 4.7 (related 4.2,7.11)
+    Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.
+    INCLUDE: Tag when the student must predict or identify a precipitate qualitatively.
+    EXCLUDE: Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.
+bronsted-lowry | Brønsted-Lowry acids, bases and conjugate pairs | topics 4.8 (related 8.1,8.3)
+    Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.
+    INCLUDE: Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.
+    EXCLUDE: Lewis acid-base theory is not assessed.
+redox-half-reactions | Redox half-reactions and balancing | topics 4.9 (related 9.8,9.11)
+    Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.
+    INCLUDE: Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.
+    EXCLUDE: Do not tag simple oxidation-number assignment (tag oxidation-numbers).
+reaction-rate | Reaction rates | topics 5.1 (related 5.2)
+    Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.
+    INCLUDE: Tag when a rate must be calculated from data or slopes, or rates of different species related.
+    EXCLUDE: Do not tag rate-law or order determination (tag rate-law).
+rate-law | Rate laws and reaction order | topics 5.2 (related 5.1,5.3,5.4,5.8)
+    Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.
+    INCLUDE: Tag when orders, a rate law, k, or a predicted rate change must be determined.
+    EXCLUDE: Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).
+integrated-rate-laws | Integrated rate laws and half-life | topics 5.3 (related 5.1,5.2)
+    Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.
+    INCLUDE: Tag when concentration at a time, half-life, or order from a linear plot must be determined.
+    EXCLUDE: Do not tag initial-rate tables (tag rate-law).
+elementary-steps | Elementary reactions and molecularity | topics 5.4 (related 5.7,5.8)
+    Recognizing that an elementary step's rate law follows directly from its molecularity (unimolecular, bimolecular), unlike an overall reaction.
+    INCLUDE: Tag when the rate law or molecularity of an elementary step must be written or identified.
+    EXCLUDE: Do not tag experimental rate laws for overall reactions (tag rate-law).
+collision-model | Collision model and temperature effects | topics 5.5 (related 3.5,5.6)
+    Explaining rate changes through collision frequency, the fraction of collisions with energy at least Ea (Maxwell-Boltzmann distribution), and correct orientation.
+    INCLUDE: Tag when a change in rate with temperature, concentration or orientation must be explained at the particle level.
+    EXCLUDE: Numerical Arrhenius-equation calculations are not assessed.
+activation-energy | Activation energy and energy profiles | topics 5.6,5.10 (related 5.11,9.4)
+    Reading single- and multi-step reaction energy profiles: activation energy, transition states, intermediates, forward and reverse barriers, the rate-limiting barrier, and overall ΔH.
+    INCLUDE: Tag when an energy profile must be read, drawn or used, or activation energies compared.
+    EXCLUDE: Do not tag simple enthalpy diagrams with no activation barrier (tag endo-exothermic).
+reaction-mechanisms | Reaction mechanisms and intermediates | topics 5.7 (related 5.4,5.8,5.11)
+    Combining elementary steps into an overall equation, and identifying intermediates (formed then consumed) and catalysts (consumed then regenerated).
+    INCLUDE: Tag when a mechanism's steps must be added or intermediates and catalysts identified.
+    EXCLUDE: Do not tag rate-law derivation from the mechanism (tag mechanism-rate-law) unless steps are also combined.
+mechanism-rate-law | Mechanisms and rate laws | topics 5.8,5.9 (related 5.7)
+    Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.
+    INCLUDE: Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.
+    EXCLUDE: Do not tag experimental order determination with no mechanism.
+catalysis | Catalysis | topics 5.11 (related 5.6,5.7,9.4)
+    How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.
+    INCLUDE: Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.
+    EXCLUDE: Do not tag intermediates questions without a catalyst.
+endo-exothermic | Endothermic and exothermic processes | topics 6.1,6.2 (related 6.6)
+    Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.
+    INCLUDE: Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.
+    EXCLUDE: Do not tag energy profiles with activation barriers (tag activation-energy).
+heat-transfer | Heat transfer and thermal equilibrium | topics 6.3 (related 6.4,6.1)
+    Heat flows from hotter to colder matter until thermal equilibrium; energy lost by one part equals energy gained by the other; temperature differs from thermal energy.
+    INCLUDE: Tag when the direction of heat flow, final temperature reasoning, or the particle explanation of heat transfer is required.
+    EXCLUDE: Do not tag calorimetry calculations that only use q = mcΔT (tag calorimetry), unless thermal equilibrium itself is reasoned about.
+calorimetry | Calorimetry and specific heat | topics 6.4 (related 6.1,6.3,6.6)
+    Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.
+    INCLUDE: Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.
+    EXCLUDE: Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).
+phase-change-energy | Energy of phase changes | topics 6.5 (related 3.1,3.3)
+    Heat absorbed or released during melting, vaporization, freezing and condensation (q = nΔH), constant temperature during a phase change, and heating or cooling curves.
+    INCLUDE: Tag when enthalpies of fusion or vaporization, heating curves, or phase-change energy must be used.
+    EXCLUDE: Phase diagrams are not assessed.
+enthalpy-of-reaction | Enthalpy of reaction | topics 6.6 (related 6.7,6.8,6.9)
+    The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.
+    INCLUDE: Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.
+    EXCLUDE: Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.
+bond-enthalpy | Bond enthalpies | topics 6.7 (related 2.2,6.6)
+    Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).
+    INCLUDE: Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.
+    EXCLUDE: Do not tag bond-length comparisons (tag bond-order).
+enthalpy-of-formation | Standard enthalpies of formation | topics 6.8 (related 6.6,6.9)
+    Calculating ΔH°rxn as the sum of ΔHf° of products minus reactants, with elements in their standard states assigned zero.
+    INCLUDE: Tag when ΔHf° values are used or a formation reaction must be identified.
+    EXCLUDE: Do not tag Hess's-law manipulations of non-formation equations (tag hess-law).
+hess-law | Hess's law | topics 6.9 (related 6.6,6.8,7.6)
+    Finding the enthalpy change of a target reaction by reversing, scaling and adding equations with known ΔH, because enthalpy is a state function.
+    INCLUDE: Tag when equations must be manipulated and combined to obtain ΔH, or path independence is explained.
+    EXCLUDE: Do not tag the analogous manipulation of K values (tag k-manipulation).
+dynamic-equilibrium | Dynamic equilibrium | topics 7.1,7.2,7.8
+    Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.
+    INCLUDE: Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.
+    EXCLUDE: Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).
+equilibrium-expression | Equilibrium constant expressions | topics 7.3 (related 7.11,8.3)
+    Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.
+    INCLUDE: Tag when an equilibrium or reaction-quotient expression must be written or chosen.
+    EXCLUDE: Converting between Kc and Kp is not assessed.
+reaction-quotient | Reaction quotient Q versus K | topics 7.3,7.2,7.10 (related 7.11,9.5)
+    Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.
+    INCLUDE: Tag when Q must be computed or compared with K to predict direction, including after a disturbance.
+    EXCLUDE: Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).
+equilibrium-constant-calculation | Calculating K | topics 7.4 (related 7.7)
+    Calculating an equilibrium constant by substituting equilibrium concentrations or partial pressures, including those obtained from initial amounts and stoichiometry.
+    INCLUDE: Tag when a numerical value of K must be calculated.
+    EXCLUDE: Do not tag when K is given and equilibrium concentrations are found (tag ice-tables).
+k-magnitude | Magnitude of K | topics 7.5 (related 9.5)
+    Interpreting the size of K: K much greater than 1 favors products, much less than 1 favors reactants, and K says nothing about reaction speed.
+    INCLUDE: Tag when the relative amounts of reactants and products at equilibrium must be inferred from K's magnitude.
+    EXCLUDE: Do not tag ΔG°-K conversions (tag free-energy-equilibrium) unless magnitude is interpreted.
+k-manipulation | Manipulating equilibrium constants | topics 7.6 (related 6.9)
+    Finding K for a modified reaction: reversing gives 1/K, multiplying coefficients by n gives K^n, and adding reactions multiplies their K values.
+    INCLUDE: Tag when K must be calculated for a reversed, scaled or combined equation.
+    EXCLUDE: Do not tag Hess's-law ΔH manipulation (tag hess-law).
+ice-tables | Equilibrium concentrations from ICE tables | topics 7.7 (related 7.4,7.11,8.3)
+    Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.
+    INCLUDE: Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).
+    EXCLUDE: Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.
+le-chatelier | Le Châtelier's principle | topics 7.9,7.10 (related 7.12,8.11)
+    Predicting how an equilibrium shifts after changes in concentration, volume or pressure, or temperature, and recognizing that only temperature changes K.
+    INCLUDE: Tag when the direction of a shift or the effect of a stress on amounts or K must be predicted or explained.
+    EXCLUDE: Do not tag Q-K calculations alone (tag reaction-quotient); catalysts do not shift equilibrium (tag catalysis if asked).
+solubility-product | Solubility equilibria and Ksp | topics 7.11 (related 7.12,4.7)
+    Writing Ksp expressions, converting between Ksp and molar solubility using formula stoichiometry, comparing solubilities, and predicting precipitation with Q versus Ksp.
+    INCLUDE: Tag when Ksp, molar solubility, or a quantitative precipitation test is used.
+    EXCLUDE: Do not tag qualitative precipitate prediction from solubility facts (tag precipitation).
+common-ion-effect | Common-ion effect | topics 7.12 (related 7.11,7.9)
+    The decrease in solubility of a salt when an ion it shares is already present in solution, predicted qualitatively by Le Châtelier and quantitatively with Ksp.
+    INCLUDE: Tag when solubility in a solution containing a common ion must be compared or calculated.
+    EXCLUDE: Do not tag pH effects on solubility (tag ph-solubility).
+strong-weak-acids | Strong versus weak acids and bases | topics 8.1 (related 8.3,8.6)
+    Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.
+    INCLUDE: Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.
+    EXCLUDE: Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).
+ph-poh | pH, pOH and Kw | topics 8.2 (related 8.3,8.4,8.5,3.7)
+    Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.
+    INCLUDE: Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.
+    EXCLUDE: Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.
+weak-acid-equilibrium | Weak acid and base equilibria (Ka, Kb) | topics 8.3 (related 7.3,7.7,8.5,8.7)
+    Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.
+    INCLUDE: Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.
+    EXCLUDE: Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).
+acid-base-mixtures | Acid-base reactions and mixtures | topics 8.4 (related 4.8,8.5,8.8)
+    Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.
+    INCLUDE: Tag when the composition or pH after mixing an acid and a base must be determined.
+    EXCLUDE: Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.
+titration-curves | Acid-base titration curves | topics 8.5 (related 4.6,8.7,8.8)
+    Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.
+    INCLUDE: Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.
+    EXCLUDE: Numerical species concentrations along polyprotic curves are not assessed.
+acid-strength-structure | Molecular structure and acid strength | topics 8.6 (related 2.1,2.6)
+    Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.
+    INCLUDE: Tag when acid strengths must be ranked or explained from molecular structure.
+    EXCLUDE: Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).
+pka-speciation | pH, pKa and predominant species | topics 8.7 (related 8.5,8.9)
+    Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.
+    INCLUDE: Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.
+    EXCLUDE: Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).
+buffers | Buffers | topics 8.8 (related 8.5,8.9,8.10)
+    Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.
+    INCLUDE: Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.
+    EXCLUDE: Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.
+henderson-hasselbalch | Henderson-Hasselbalch equation | topics 8.9 (related 8.8,8.7)
+    Calculating buffer pH from pKa and the ratio of conjugate base to acid, or the ratio needed for a target pH, including after small additions.
+    INCLUDE: Tag when a buffer pH or component ratio must be calculated.
+    EXCLUDE: Do not tag qualitative buffer explanations (tag buffers).
+buffer-capacity | Buffer capacity | topics 8.10 (related 8.8)
+    How much acid or base a buffer can absorb depends on the amounts of its components, and is distinct from the buffer's pH.
+    INCLUDE: Tag when buffers must be compared by capacity or the effect of component amounts or dilution on capacity explained.
+    EXCLUDE: Do not tag buffer pH calculations alone.
+ph-solubility | pH and solubility | topics 8.11 (related 7.11,7.9)
+    Qualitatively predicting how pH affects the solubility of salts with basic anions or hydroxides through acid-base reactions that shift the dissolution equilibrium.
+    INCLUDE: Tag when the effect of pH on a salt's solubility must be predicted or explained.
+    EXCLUDE: Numerical solubility as a function of pH is not assessed.
+entropy | Entropy | topics 9.1,9.2 (related 9.3,9.6)
+    Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.
+    INCLUDE: Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.
+    EXCLUDE: Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).
+gibbs-free-energy | Gibbs free energy and favorability | topics 9.3 (related 9.4,9.6,9.7)
+    Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.
+    INCLUDE: Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.
+    EXCLUDE: Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).
+thermodynamic-kinetic-control | Thermodynamic versus kinetic control | topics 9.4 (related 5.6,5.11)
+    Distinguishing whether a process is thermodynamically favored from how fast it occurs: favorable processes can be slow when activation energy is large.
+    INCLUDE: Tag when the student must explain why a favorable process is not observed, or separate favorability from rate.
+    EXCLUDE: Do not tag pure ΔG calculations or pure rate questions.
+free-energy-equilibrium | Free energy and equilibrium | topics 9.5 (related 7.5,9.9)
+    Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.
+    INCLUDE: Tag when K and ΔG° must be interconverted or their signs and magnitudes related.
+    EXCLUDE: Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).
+dissolution-thermodynamics | Thermodynamics of dissolution | topics 9.6 (related 2.3,3.10,9.1)
+    Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.
+    INCLUDE: Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.
+    EXCLUDE: Do not tag Ksp calculations (tag solubility-product).
+coupled-reactions | Coupled reactions | topics 9.7 (related 9.3)
+    Driving a thermodynamically unfavorable process by coupling it with a favorable one so the overall ΔG is negative.
+    INCLUDE: Tag when free energies of reactions must be added or coupling explained.
+    EXCLUDE: Do not tag Hess's-law ΔH addition (tag hess-law).
+electrochemical-cells | Galvanic and electrolytic cells | topics 9.8 (related 4.9,9.9,9.11)
+    Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.
+    INCLUDE: Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.
+    EXCLUDE: Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).
+cell-potential | Cell potential and free energy | topics 9.9 (related 9.5,9.8)
+    Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.
+    INCLUDE: Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.
+    EXCLUDE: Do not tag concentration effects on voltage (tag nernst-nonstandard).
+nernst-nonstandard | Cell potential under nonstandard conditions | topics 9.10 (related 9.9,7.3)
+    Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.
+    INCLUDE: Tag when the effect of concentration on cell potential must be predicted or explained.
+    EXCLUDE: Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.
+electrolysis-faraday | Electrolysis and Faraday's law | topics 9.11 (related 4.9,9.8)
+    Relating current, time, charge (Q = It), moles of electrons (Faraday constant) and the amount of substance deposited or produced in electrolysis.
+    INCLUDE: Tag when an amount of product, current or time in electrolysis must be calculated.
+    EXCLUDE: Do not tag qualitative identification of electrodes only (tag electrochemical-cells).
+colligative-properties | Colligative properties and molality | topics - (related 3.7,3.8) | BEYOND CURRENT AP
+    Freezing-point depression, boiling-point elevation, osmotic pressure and vapor-pressure lowering, and molality. Removed from the current AP Chemistry exam.
+    INCLUDE: Tag legacy questions that require these calculations or explanations.
+    EXCLUDE: Never present as current AP exam content.
+nuclear-chemistry | Nuclear chemistry | topics - (related 1.5,5.3) | BEYOND CURRENT AP
+    Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).
+    INCLUDE: Tag legacy questions about decay particles, nuclear equations or transmutation.
+    EXCLUDE: Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.
+organic-chemistry | Organic nomenclature and functional groups | topics - (related 2.5,3.1) | BEYOND CURRENT AP
+    Naming organic compounds, identifying functional groups and isomers as a goal in itself. Not assessed on the current AP Chemistry exam.
+    INCLUDE: Tag legacy questions whose main demand is organic naming, isomer counting or functional-group identification.
+    EXCLUDE: Do not tag questions that merely use organic molecules as context for Lewis structures or intermolecular forces.
+descriptive-chemistry | Descriptive reaction prediction | topics - (related 4.1,4.7) | BEYOND CURRENT AP
+    Recall-based prediction of products for named reaction classes (complex ions, decomposition of specific compounds, flame tests, qualitative analysis schemes) beyond the AP-specified solubility and reaction-type knowledge.
+    INCLUDE: Tag legacy questions that require memorized descriptive chemistry not supported by the current CED.
+    EXCLUDE: Do not tag predictions that follow from current AP reaction-type reasoning.
+
+SKILLS (problem-solving skills, not concepts; put in "skills"):
+dimensional-analysis | Dimensional analysis and unit conversion
+logarithms | Logarithm and exponent algebra
+graph-analysis | Reading and constructing graphs
+experimental-design | Experimental design and procedure
+error-analysis | Error analysis and uncertainty
+particulate-modeling | Drawing and reading particulate diagrams

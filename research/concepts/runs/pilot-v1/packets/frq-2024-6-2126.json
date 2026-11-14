@@ -1,0 +1,181 @@
+{
+  "questionId": "frq-2024-6-2126",
+  "type": "FRQ",
+  "exam": "2024 AP Chemistry FRQ",
+  "year": "2024",
+  "number": 6,
+  "text": "ORIGINAL PAGE 2126\nQuestion 6\n\nBegin your response to QUESTION 6 on this page.\n\n6. Molten lithium chloride, LiCl(/), is electrolyzed using an external power supply and inert electrodes, as\nrepresented in the following diagram. Liquid lithium metal and chlorine gas are produced.\n\nPower\n\nSource\n\nMolten LiCl\n\nP Cl(s)\n\nThe reduction potentials for the half-reactions associated with this process are shown in the following table.\n\nHalf-Reaction\n\nE (Vv)\n\nCh+2e 32Cr”\n\n—1.36\n\nLit+e SLi\n\n—2.10\n\n(a) On the diagram, draw an arrow to show the direction of electron flow in the wire.\n\n(b) Use the half-reactions in the table to write the balanced net ionic equation for the reaction that occurs in the\n\nelectrolytic cell.\n\n(c) Calculate the average current, in C/s, that must flow through the cell to produce 0.18 g of lithium metal in\n\n3200. seconds.\n\nUnauthorized copying or reuse of this page is illegal. Page 17\n\nGO ON TO THE NEXT PAGE.\n\nUse a pencil or a pen with black or dark blue ink. Do NOT write your name. Do NOT write outside the box.\n\n© studocu\n\nmessages.pdf_cover_qr_code_label\n\nmessages.downloaded by\n\n",
+  "regions": [
+    {
+      "page": 2126,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 26,
+        "compiledPage": 2126
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "9.8"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "9.8"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "9.11"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.8",
+    "secondary": [
+      "9.11"
+    ],
+    "status": "classified",
+    "method": "Question-part review against current CED; original scan checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "9d7fc636a2e04001",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2024-6-2126-r1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 26,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2024-6-2126-page1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 26,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:electrolysis-faraday"
+      ]
+    },
+    {
+      "conceptId": "electrolysis-faraday",
+      "name": "Electrolysis and Faraday's law",
+      "definition": "Relating current, time, charge (Q = It), moles of electrons (Faraday constant) and the amount of substance deposited or produced in electrolysis.",
+      "include": "Tag when an amount of product, current or time in electrolysis must be calculated.",
+      "exclude": "Do not tag qualitative identification of electrodes only (tag electrochemical-cells).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:electrochemical-cells"
+      ]
+    },
+    {
+      "conceptId": "redox-half-reactions",
+      "name": "Redox half-reactions and balancing",
+      "definition": "Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.",
+      "include": "Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.",
+      "exclude": "Do not tag simple oxidation-number assignment (tag oxidation-numbers).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electrochemical-cells",
+        "linked-from:electrolysis-faraday"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "cell-potential",
+      "name": "Cell potential and free energy",
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electrochemical-cells"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electrolysis-faraday"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "oxidation-numbers",
+      "name": "Oxidation numbers",
+      "definition": "Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.",
+      "include": "Tag when oxidation numbers must be assigned or changes in them used.",
+      "exclude": "Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

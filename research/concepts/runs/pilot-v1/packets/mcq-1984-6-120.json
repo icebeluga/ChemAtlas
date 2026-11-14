@@ -1,0 +1,120 @@
+{
+  "questionId": "mcq-1984-6-120",
+  "type": "MCQ",
+  "exam": "1984 AP Chemistry MCQ · Version indicated in source",
+  "year": "1984",
+  "number": 6,
+  "text": "Use the following answers for questions 4 - 7.\n\n       (A) Hydrofluoric acid\n\n       (B) Carbon dioxide\n\n       (C) Aluminum hydroxide\n\n       (D) Ammonia\n\n        (E) Hydrogen peroxide\n\n6.  Is used extensively for the production of fertilizers",
+  "regions": [
+    {
+      "page": 120,
+      "rect": [
+        0,
+        74.5162582397461,
+        306,
+        224.03652954101562
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 120,
+        "compiledPage": 120
+      }
+    },
+    {
+      "page": 120,
+      "rect": [
+        0,
+        311.1562194824219,
+        306,
+        354.716064453125
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 120,
+        "compiledPage": 120
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "legacy",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [
+    "Descriptive industrial chemistry"
+  ],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "446f61f9ca1cec2f",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-6-120-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 120,
+      "rect": [
+        0,
+        74.5162582397461,
+        306,
+        224.03652954101562
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-6-120-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 120,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-6-120-r2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 120,
+      "rect": [
+        0,
+        311.1562194824219,
+        306,
+        354.716064453125
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-6-120-page2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 120,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "descriptive-chemistry",
+      "name": "Descriptive reaction prediction",
+      "definition": "Recall-based prediction of products for named reaction classes (complex ions, decomposition of specific compounds, flame tests, qualitative analysis schemes) beyond the AP-specified solubility and reaction-type knowledge.",
+      "include": "Tag legacy questions that require memorized descriptive chemistry not supported by the current CED.",
+      "exclude": "Do not tag predictions that follow from current AP reaction-type reasoning.",
+      "whyCandidate": [
+        "legacy-concept-note"
+      ]
+    }
+  ]
+}

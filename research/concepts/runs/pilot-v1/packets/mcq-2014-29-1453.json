@@ -1,0 +1,75 @@
+{
+  "questionId": "mcq-2014-29-1453",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 29,
+  "text": "29. On the basis of the information above, the dissolution of FeF2(s) in acidic solution is\n\n   (A) thermodynamically favorable, because K2 > 1\n    (B) thermodynamically favorable, because K3 > 1\n    (C) not thermodynamically favorable, because K1 < 1\n   (D) not thermodynamically favorable, because K3 < 1",
+  "regions": [
+    {
+      "page": 1453,
+      "rect": [
+        0,
+        460.0580139160156,
+        603.3599853515625,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 253,
+        "compiledPage": 1453
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "cf413f3d3aa44365",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-29-1453-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 253,
+      "rect": [
+        0,
+        460.0580139160156,
+        603.3599853515625,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-29-1453-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 253,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

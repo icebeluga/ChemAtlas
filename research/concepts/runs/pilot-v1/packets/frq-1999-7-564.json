@@ -1,0 +1,387 @@
+{
+  "questionId": "frq-1999-7-564",
+  "type": "FRQ",
+  "exam": "1999 AP Chemistry FRQ",
+  "year": "1999",
+  "number": 7,
+  "text": "Answer EITHER Question 7 below OR Question 8 printed on page 13. Only one of these two questions will be\ngraded. If you start both questions, be sure to cross out the question you do not want graded. The Section II score\nweighting for the question you choose is 15 percent.\n\n\n 7. Answer the following questions about the element selenium, Se (atomic number 34).\n\n\n    (a) Samples of natural selenium contain six stable isotopes. In terms of atomic structure, explain what these\n        isotopes have in common, and how they differ.\n\n    (b) Write the complete electron configuration (e.g., 1s2 2s2. . . etc.) for a selenium atom in the ground state.\n        Indicate the number of unpaired electrons in the ground-state atom, and explain your reasoning.\n\n\n    (c) In terms of atomic structure, explain why the first ionization energy of selenium is\n\n           (i) less than that of bromine (atomic number 35), and\n\n           (ii) greater than that of tellurium (atomic number 52).\n\n    (d) Selenium reacts with fluorine to form SeF4. Draw the complete Lewis electron-dot structure for SeF4 and\n       sketch the molecular structure. Indicate whether the molecule is polar or nonpolar, and justify your answer.\n\n\n\n\n\n   Copyright © 2000 College Entrance Examination Board and Educational Testing Service. All rights reserved.\n              AP is a registered trademark of the College Entrance Examination Board.",
+  "regions": [
+    {
+      "page": 564,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 264,
+        "compiledPage": 564
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "1.5",
+        "1.2"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "1.5"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "1.7"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "2.5",
+        "2.7"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "1.5",
+    "secondary": [
+      "1.2",
+      "1.7",
+      "2.5",
+      "2.7"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "0f043781ba239663",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-1999-7-564-r1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 264,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-1999-7-564-page1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 264,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "electron-configuration",
+      "name": "Electron configurations and atomic structure",
+      "definition": "Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.",
+      "include": "Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.",
+      "exclude": "Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:mass-spectrometry",
+        "linked-from:coulombic-attraction",
+        "linked-from:atomic-radius",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "molecular-geometry",
+      "name": "Molecular geometry (VSEPR)",
+      "definition": "Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.",
+      "include": "Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.",
+      "exclude": "Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:lewis-structures",
+        "linked-from:electron-domains",
+        "linked-from:bond-angles",
+        "linked-from:hybridization",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "electron-domains",
+      "name": "Electron-domain counting",
+      "definition": "Counting the electron domains around a central atom, where each lone pair and each bond (single, double or triple) counts as one domain.",
+      "include": "Tag when the answer depends on counting domains, including the rule that a multiple bond is one domain, as a supporting step for geometry or hybridization.",
+      "exclude": "Do not tag when geometry or hybridization is simply recalled for a familiar molecule without domain reasoning being needed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:lewis-structures",
+        "linked-from:molecular-geometry",
+        "linked-from:bond-angles",
+        "linked-from:hybridization"
+      ]
+    },
+    {
+      "conceptId": "ionization-energy",
+      "name": "Ionization energy",
+      "definition": "Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.",
+      "include": "Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.",
+      "exclude": "Do not tag PES questions unless ionization energy itself is compared outside the spectrum.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:coulombic-attraction",
+        "linked-from:atomic-radius"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:electron-domains",
+        "linked-from:sigma-pi-bonds"
+      ]
+    },
+    {
+      "conceptId": "mass-spectrometry",
+      "name": "Mass spectra and isotopes",
+      "definition": "Interpreting mass spectra of elements: identifying isotopes from mass-to-charge peaks and relating relative abundance to average atomic mass.",
+      "include": "Tag when a mass spectrum, isotope abundance data, or weighted-average atomic mass must be used or predicted.",
+      "exclude": "Do not tag simple proton/neutron counting for a named isotope (use electron-configuration/atomic structure); mass spectra of molecules or multiply charged ions are beyond AP scope.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:atomic-radius",
+        "linked-from:ionization-energy",
+        "linked-from:electronegativity"
+      ]
+    },
+    {
+      "conceptId": "hybridization",
+      "name": "Orbital hybridization",
+      "definition": "Assigning sp, sp2 or sp3 hybridization to an atom from its number of electron domains.",
+      "include": "Tag when the hybridization of an atom must be stated or used.",
+      "exclude": "Do not tag geometry-only answers; d-orbital hybridization, drawing hybrid orbitals and molecular-orbital diagrams are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:electron-domains",
+        "linked-from:molecular-geometry",
+        "linked-from:sigma-pi-bonds"
+      ]
+    },
+    {
+      "conceptId": "atomic-radius",
+      "name": "Atomic and ionic radius",
+      "definition": "Predicting and explaining the sizes of atoms and ions across periods and down groups, including isoelectronic ions and ions versus their parent atoms.",
+      "include": "Tag when atomic or ionic size is compared, ranked or explained.",
+      "exclude": "Do not tag when ion size is only one input to a lattice-energy argument unless the size comparison itself is asked.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:coulombic-attraction",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "bond-angles",
+      "name": "Bond angles",
+      "definition": "Predicting or comparing bond angles from electron-domain geometry, including the compression caused by lone pairs.",
+      "include": "Tag when a bond angle must be estimated, compared or explained.",
+      "exclude": "Do not tag when only a shape name is requested.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molecular-geometry"
+      ]
+    },
+    {
+      "conceptId": "molecular-polarity",
+      "name": "Molecular polarity",
+      "definition": "Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.",
+      "include": "Tag when the student must determine or justify whether a molecule is polar or nonpolar.",
+      "exclude": "Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molecular-geometry"
+      ]
+    },
+    {
+      "conceptId": "sigma-pi-bonds",
+      "name": "Sigma and pi bonds",
+      "definition": "Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.",
+      "include": "Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.",
+      "exclude": "Do not tag simple bond-order comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:hybridization"
+      ]
+    },
+    {
+      "conceptId": "electronegativity",
+      "name": "Electronegativity trends",
+      "definition": "The tendency of an atom in a bond to attract shared electrons, its periodic trend, and its explanation from nuclear charge and distance.",
+      "include": "Tag when electronegativity values or trends must be compared or explained as the main reasoning.",
+      "exclude": "Do not tag when electronegativity is only used to decide bond polarity (tag bond-polarity) or acid strength (tag acid-strength-structure).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "bond-polarity",
+      "name": "Bond polarity and partial charges",
+      "definition": "Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.",
+      "include": "Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.",
+      "exclude": "Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electronegativity",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "ionic-formulas",
+      "name": "Ion charges and ionic formulas",
+      "definition": "Predicting common ion charges from valence electrons and periodic position, and writing charge-neutral ionic formulas.",
+      "include": "Tag when the student predicts an ion's charge, the formula of an ionic compound, or explains ion formation from electron configuration.",
+      "exclude": "Do not tag routine use of a given ionic formula in a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electron-configuration",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "photoelectron-spectroscopy",
+      "name": "Photoelectron spectroscopy (PES)",
+      "definition": "Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.",
+      "include": "Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.",
+      "exclude": "Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electron-configuration",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "bond-order",
+      "name": "Bond order, length and strength",
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:sigma-pi-bonds"
+      ]
+    },
+    {
+      "conceptId": "dipole-dipole",
+      "name": "Dipole-dipole attractions",
+      "definition": "Attractions between the permanent dipoles of polar molecules.",
+      "include": "Tag when dipole-dipole forces must be identified or compared.",
+      "exclude": "Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "formal-charge",
+      "name": "Formal charge",
+      "definition": "Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.",
+      "include": "Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.",
+      "exclude": "Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "resonance",
+      "name": "Resonance and delocalization",
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "organic-chemistry",
+      "name": "Organic nomenclature and functional groups",
+      "definition": "Naming organic compounds, identifying functional groups and isomers as a goal in itself. Not assessed on the current AP Chemistry exam.",
+      "include": "Tag legacy questions whose main demand is organic naming, isomer counting or functional-group identification.",
+      "exclude": "Do not tag questions that merely use organic molecules as context for Lewis structures or intermolecular forces.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "whyCandidate": [
+        "linked-from:coulombic-attraction"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "questionId": "mcq-2015-47-1554",
+  "type": "MCQ",
+  "exam": "2015 AP Chemistry MCQ",
+  "year": "2015",
+  "number": 47,
+  "text": "47. The potential energy of a system of two atoms as a function\n    of their internuclear distance is shown in the diagram above.\n   Which of the following is true regarding the forces between\n    the atoms when their internuclear distance is x ?\n\n   (A) The attractive and repulsive forces are balanced, so the\n        atoms will maintain an average internuclear distance x.\n    (B) There is a net repulsive force pushing the atoms apart, so\n          the atoms will move further apart.\n    (C) There is a net attractive force pulling the atoms together,\n         so the atoms will move closer together.\n   (D) It cannot be determined whether the forces between\n        atoms are balanced, attractive, or repulsive, because the\n        diagram shows only the potential energy.",
+  "regions": [
+    {
+      "page": 1554,
+      "rect": [
+        40,
+        35,
+        465,
+        425
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 54,
+        "compiledPage": 1554
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "429077a1f53e1eaa",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2015-47-1554-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 54,
+      "rect": [
+        40,
+        35,
+        465,
+        425
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2015-47-1554-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 54,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

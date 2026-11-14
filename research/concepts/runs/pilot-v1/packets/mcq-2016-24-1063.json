@@ -1,0 +1,220 @@
+{
+  "questionId": "mcq-2016-24-1063",
+  "type": "MCQ",
+  "exam": "2016 AP Chemistry MCQ",
+  "year": "2016",
+  "number": 24,
+  "text": "24. A student conducted an expe\n    the reaction between HCl(aq\n    ran two trials using the volum\n    indicated in the table above,\n    heat released. Which of the f\n    relationship between X and\n\n   (A) Y = 2X, because the vo\n          twice the volume used\n\n    (B) Y = X, because the num\n          reacting with each othe\n\n         2X\n    (C) Y =        , because the h\n            3\n           particles in trial 2 than\n\n   (D) The relationship betwee",
+  "regions": [
+    {
+      "page": 1063,
+      "rect": [
+        0,
+        165.7332305908203,
+        306,
+        401.7830505371094
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 163,
+        "compiledPage": 1063
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "6.6",
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.6",
+    "secondary": [
+      "4.5"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2e17a7ac539931c6",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-24-1063-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 163,
+      "rect": [
+        0,
+        165.7332305908203,
+        306,
+        401.7830505371094
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-24-1063-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 163,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-formation",
+      "name": "Standard enthalpies of formation",
+      "definition": "Calculating ΔH°rxn as the sum of ΔHf° of products minus reactants, with elements in their standard states assigned zero.",
+      "include": "Tag when ΔHf° values are used or a formation reaction must be identified.",
+      "exclude": "Do not tag Hess's-law manipulations of non-formation equations (tag hess-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "hess-law",
+      "name": "Hess's law",
+      "definition": "Finding the enthalpy change of a target reaction by reversing, scaling and adding equations with known ΔH, because enthalpy is a state function.",
+      "include": "Tag when equations must be manipulated and combined to obtain ΔH, or path independence is explained.",
+      "exclude": "Do not tag the analogous manipulation of K values (tag k-manipulation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

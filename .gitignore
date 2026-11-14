@@ -45,3 +45,7 @@ yarn-error.log*
 .DS_Store
 
 # Large source PDF is delivered in the built Site archive, not the Git source repo.
+
+# Concept-classification rendered images are regenerable with `node scripts/concepts/cli.mjs prepare`
+research/concepts/runs/*/images/
+research/concepts/runs/*/render-job.json

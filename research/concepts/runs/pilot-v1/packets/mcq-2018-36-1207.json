@@ -1,0 +1,118 @@
+{
+  "questionId": "mcq-2018-36-1207",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 36,
+  "text": "36. The mass percent of CaCO3(s) in the eggshell\n   sample is closest to\n   (A) 30%\n    (B) 45%\n    (C) 60%\n   (D) 75%",
+  "regions": [
+    {
+      "page": 1207,
+      "rect": [
+        0,
+        155.90582275390625,
+        603.3599853515625,
+        256.15325927734375
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 7,
+        "compiledPage": 1207
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "1.4"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "1.4",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "710a885ff484dac0",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-36-1207-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 7,
+      "rect": [
+        0,
+        155.90582275390625,
+        603.3599853515625,
+        256.15325927734375
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-36-1207-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 7,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "mixture-composition",
+      "name": "Composition of mixtures",
+      "definition": "Using measured masses or other quantitative data to determine the relative amounts of components in a mixture and to distinguish mixtures from pure substances.",
+      "include": "Tag when the question requires the mass fraction or percent of a component in a mixture, or a mass balance across mixture components.",
+      "exclude": "Do not tag percent composition of a single pure compound (use empirical-formula) or solution molarity (use molarity).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:mixture-composition"
+      ]
+    },
+    {
+      "conceptId": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "whyCandidate": [
+        "linked-from:mixture-composition"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:mixture-composition"
+      ]
+    }
+  ]
+}

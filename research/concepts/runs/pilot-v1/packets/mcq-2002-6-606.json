@@ -1,0 +1,120 @@
+{
+  "questionId": "mcq-2002-6-606",
+  "type": "MCQ",
+  "exam": "2002 AP Chemistry MCQ",
+  "year": "2002",
+  "number": 6,
+  "text": "Questions5-7 refer to the phasediagram below of a\n  pure substance.\n\n\n\n\n\n P\natm)\n\n\n             ’ lb ’ io  ’      ’    do ’ iio’ i30-\n                  T (“Q\n\n                    (A) Sublimation\n                     (B) Condensation\n                    (C) Solvation\n                    (D) Fusion\n                     (E) Freezing\n\n6.  If the temperaturedecreasesfrom 110” C to 40” C at\n  a constantpressureof 1.1 atmospheres,which of\n   the processesoccurs?",
+  "regions": [
+    {
+      "page": 606,
+      "rect": [
+        302,
+        135.28805541992188,
+        604,
+        397.1279602050781
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 6,
+        "compiledPage": 606
+      }
+    },
+    {
+      "page": 606,
+      "rect": [
+        302,
+        447.7679443359375,
+        604,
+        497.92791748046875
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 6,
+        "compiledPage": 606
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "legacy",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [
+    "phase diagrams"
+  ],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "07822b40d34c8b73",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-6-606-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 6,
+      "rect": [
+        302,
+        135.28805541992188,
+        604,
+        397.1279602050781
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-6-606-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 6,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-6-606-r2.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 6,
+      "rect": [
+        302,
+        447.7679443359375,
+        604,
+        497.92791748046875
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-6-606-page2.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 6,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "ion-dipole",
+      "name": "Ion-dipole attractions",
+      "definition": "Attractions between ions and polar molecules, such as the orientation of water molecules around dissolved ions.",
+      "include": "Tag when ion-dipole forces or hydration-shell orientation must be identified, drawn or used.",
+      "exclude": "Do not tag ionic bonding within a lattice (tag lattice-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

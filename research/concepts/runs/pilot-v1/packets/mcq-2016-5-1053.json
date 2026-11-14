@@ -1,0 +1,155 @@
+{
+  "questionId": "mcq-2016-5-1053",
+  "type": "MCQ",
+  "exam": "2016 AP Chemistry MCQ",
+  "year": "2016",
+  "number": 5,
+  "text": "5. Which of the following arranges the molecules\n   N2, O2, and F2 in order of their bond enthalpies,\n   from least to greatest?\n\n   (A)  F2 < O2 < N2\n   (B)  O2 < N2 < F2\n   (C)  N2 < O2 < F2\n   (D)  N2 < F2 < O2\n\n\n\n\n\n         GO ON TO THE NEXT PAGE.",
+  "regions": [
+    {
+      "page": 1053,
+      "rect": [
+        306,
+        502.9886779785156,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 153,
+        "compiledPage": 1053
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "2.2"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "2.2",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "0d052f72c97994b4",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-5-1053-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 153,
+      "rect": [
+        306,
+        502.9886779785156,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-5-1053-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 153,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:bond-potential-energy",
+        "linked-from:bond-order"
+      ]
+    },
+    {
+      "conceptId": "bond-order",
+      "name": "Bond order, length and strength",
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:bond-potential-energy",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:bond-order",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "linked-from:bond-order",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "sigma-pi-bonds",
+      "name": "Sigma and pi bonds",
+      "definition": "Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.",
+      "include": "Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.",
+      "exclude": "Do not tag simple bond-order comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "resonance",
+      "name": "Resonance and delocalization",
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "whyCandidate": [
+        "linked-from:bond-order"
+      ]
+    }
+  ]
+}

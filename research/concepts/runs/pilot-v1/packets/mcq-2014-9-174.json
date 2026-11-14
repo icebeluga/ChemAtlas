@@ -1,0 +1,120 @@
+{
+  "questionId": "mcq-2014-9-174",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 9,
+  "text": "and then quickly transferred to an insulated\ncontainer holding 100 g of water at 22∞C. The\ntemperature of the water rose to reach a final\ntemperature of 35∞C. Which of the following\ncan be concluded?\n\n(A) The metal temperature changed more than the\n     water temperature did; therefore the metal\n       lost more thermal energy than the water\n      gained.\n(B) The metal temperature changed more than the\n     water temperature did, but the metal lost the\n     same amount of thermal energy as the water\n      gained.\n(C) The metal temperature changed more than the\n     water temperature did; therefore the heat\n      capacity of the metal must be greater than\n      the heat capacity of the water.\n(D) The final temperature is less than the average\n      starting temperature of the metal and the\n      water; therefore the total energy of the\n     metal and water decreased.",
+  "regions": [
+    {
+      "page": 174,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 174,
+        "compiledPage": 174
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "6.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.3",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "85a4e270a8828947",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-9-174-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 174,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-9-174-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 174,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:heat-transfer"
+      ]
+    },
+    {
+      "conceptId": "heat-transfer",
+      "name": "Heat transfer and thermal equilibrium",
+      "definition": "Heat flows from hotter to colder matter until thermal equilibrium; energy lost by one part equals energy gained by the other; temperature differs from thermal energy.",
+      "include": "Tag when the direction of heat flow, final temperature reasoning, or the particle explanation of heat transfer is required.",
+      "exclude": "Do not tag calorimetry calculations that only use q = mcΔT (tag calorimetry), unless thermal equilibrium itself is reasoned about.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:calorimetry"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "linked-from:heat-transfer"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "linked-from:calorimetry"
+      ]
+    }
+  ]
+}

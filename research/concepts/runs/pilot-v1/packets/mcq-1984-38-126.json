@@ -1,0 +1,97 @@
+{
+  "questionId": "mcq-1984-38-126",
+  "type": "MCQ",
+  "exam": "1984 AP Chemistry MCQ · Version indicated in source",
+  "year": "1984",
+  "number": 38,
+  "text": "38.  The radioactive decay of 146 C to 147 N occurs by the\n     process of\n\n    A)  beta particle emission\n    B)  alpha particle emission\n    C)  positron emission\n    D)  electron capture\n    E)  neutron capture",
+  "regions": [
+    {
+      "page": 126,
+      "rect": [
+        0,
+        203.09634399414062,
+        306,
+        324.8957824707031
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 126,
+        "compiledPage": 126
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "legacy",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [
+    "Nuclear decay"
+  ],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2120d094747a76ca",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-38-126-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 126,
+      "rect": [
+        0,
+        203.09634399414062,
+        306,
+        324.8957824707031
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-38-126-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 126,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "em-spectrum",
+      "name": "Spectroscopy and molecular transitions",
+      "definition": "Matching regions of the electromagnetic spectrum to the molecular changes they cause: microwave to rotation, infrared to vibration, and UV-visible to electronic transitions.",
+      "include": "Tag when a type of radiation must be linked to the transition it causes, or absorption versus emission distinguished.",
+      "exclude": "Do not tag photon energy calculations (tag photon-energy) or PES (tag photoelectron-spectroscopy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "whyCandidate": [
+        "legacy-concept-note"
+      ]
+    }
+  ]
+}

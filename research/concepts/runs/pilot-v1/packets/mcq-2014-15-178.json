@@ -1,0 +1,139 @@
+{
+  "questionId": "mcq-2014-15-178",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 15,
+  "text": "representation of the species (other than H2O) that\nare present in significant concentrations in the\nsolution at point U in the titration?\n\n(A)\n\n\n\n\n\n(B)\n\n\n\n\n\n(C)\n\n\n\n\n\n(D)",
+  "regions": [
+    {
+      "page": 178,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 178,
+        "compiledPage": 178
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "4.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "4.3",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "28ad411ee8cea9d8",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-15-178-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 178,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-15-178-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 178,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-representations"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-representations"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "solution-representations",
+      "name": "Particle representations of solutions",
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

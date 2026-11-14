@@ -1,0 +1,107 @@
+{
+  "questionId": "mcq-2014-47-190",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 47,
+  "text": "M Al(NO3)3(aq)\nM Cu(NO3)2(aq)\nM Fe(NO3)2(aq)\n\non                   Ecell (V)\n\nAl3+(aq) + 3 Cu(s)        2.00\nAl3+(aq) + 3 Fe(s)        1.22\ne2+(aq) + Cu(s)             ?\n\n\n\n\n    47. If the half-cell containing 1.00 M Fe(NO3)2(aq)\n         in galvanic cells Y and Z is replaced with a\n         half-cell containing 5.00 M Fe(NO3)2(aq), what\n         will be the effect on the cell voltage of the two\n        galvanic cells?\n\n       (A) The voltage will increase in both cells.\n        (B) The voltage will decrease in both cells.\n        (C) The voltage will increase in cell Y and\n              decrease in cell Z.\n       (D) The voltage will decrease in cell Y and\n              increase in cell Z.",
+  "regions": [
+    {
+      "page": 190,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 190,
+        "compiledPage": 190
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "9.10"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.10",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "b8f2d72f94c1e5dd",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-47-190-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 190,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-47-190-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 190,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "nernst-nonstandard",
+      "name": "Cell potential under nonstandard conditions",
+      "definition": "Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.",
+      "include": "Tag when the effect of concentration on cell potential must be predicted or explained.",
+      "exclude": "Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "cell-potential",
+      "name": "Cell potential and free energy",
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "whyCandidate": [
+        "linked-from:nernst-nonstandard"
+      ]
+    },
+    {
+      "conceptId": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "whyCandidate": [
+        "linked-from:nernst-nonstandard"
+      ]
+    }
+  ]
+}

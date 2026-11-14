@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-2002-41-759",
+  "type": "MCQ",
+  "exam": "2002 AP Chemistry MCQ · Version indicated in source",
+  "year": "2002",
+  "number": 41,
+  "text": "greatest percentage of which compound can be recovered by\n0ºC to 30ºC?\n\n\n\n\n\n     41. When solid NH4SCN is mixed with solid Ba(OH)2\n           in a closed container, the temperature drops and a\n         gas is produced. Which of the following indicates\n          the correct signs for ΔG, ΔH, and ΔS for the\n          process?\n\n          ΔG ΔH  ΔS\n        A)     –    –      –\n        B)     –    +     –\n        C)     –    +    +\n        D)    +    –    +\n         E)    +    –     –\n\n\n\n\n\n8",
+  "regions": [
+    {
+      "page": 759,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 159,
+        "compiledPage": 759
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "d8f5d165408065f0",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-41-759-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 159,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-41-759-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 159,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

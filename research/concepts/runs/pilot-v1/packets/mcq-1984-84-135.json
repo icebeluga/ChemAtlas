@@ -1,0 +1,97 @@
+{
+  "questionId": "mcq-1984-84-135",
+  "type": "MCQ",
+  "exam": "1984 AP Chemistry MCQ · Version indicated in source",
+  "year": "1984",
+  "number": 84,
+  "text": "84.  Which of the following aqueous solutions has the\n     highest boiling point?\n\n    A)  0.10 M potassium sulfate, K2SO4\n    B)  0.10 M hydrochloric acid, HCl\n    C)  0.10 M ammonium nitrate, NH4NO3\n    D)  0.10 M magnesium sulfate, MgSO4\n    E)  0.20 M sucrose, C12H22O11",
+  "regions": [
+    {
+      "page": 135,
+      "rect": [
+        0,
+        55,
+        612,
+        191.03683471679688
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 135,
+        "compiledPage": 135
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "legacy",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [
+    "colligative properties / boiling-point elevation"
+  ],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2bee14a55d30c4d9",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-84-135-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 135,
+      "rect": [
+        0,
+        55,
+        612,
+        191.03683471679688
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-84-135-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 135,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "colligative-properties",
+      "name": "Colligative properties and molality",
+      "definition": "Freezing-point depression, boiling-point elevation, osmotic pressure and vapor-pressure lowering, and molality. Removed from the current AP Chemistry exam.",
+      "include": "Tag legacy questions that require these calculations or explanations.",
+      "exclude": "Never present as current AP exam content.",
+      "whyCandidate": [
+        "legacy-concept-note"
+      ]
+    },
+    {
+      "conceptId": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "questionId": "mcq-2024-21-2091",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 21,
+  "text": "21. Which sample of acid would require the largest 25, Which statement correctly explains why the pH\nnumber of moles of NaOH to neutratize tt value of sample 3 is the greatest?\n\ncompletely?\n(A) Ithas the smallest value of [HO],\n\n(A) Sample | (DB) Ithas the smallest value of [(OH™],\n(Q) Sample 2 (C) Ithas the weakest conjugate base,\n(C) Sample 3 (D) Itis the strongest acid,\n\n(D) Sample 4\n\nM4, Which sample of acid has the smallest value of\nK,?\n(A) Sample |\n(B) Sample 2\n(C) Sample 3\n(D) Sample 4\n\nUnauthorized copying or reuse of “17+ GO ON TO THE NEXT PAGE.\nany part of this page le tilegel. ior:\n\nmessages.pdf_cover_qr_code_label\n© studocu eee econ\n\n",
+  "regions": [
+    {
+      "page": 2091,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 291,
+        "compiledPage": 2091
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "8.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "1db26eaf473758b0",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-21-2091-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 291,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-21-2091-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 291,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "titration-curves",
+      "name": "Acid-base titration curves",
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "questionId": "mcq-2012-21-1354",
+  "type": "MCQ",
+  "exam": "2012 AP Chemistry MCQ",
+  "year": "2012",
+  "number": 21,
+  "text": "21. For the reaction represented above, the initial rate\n    of decrease in [X] was 2.8 × 10-3 mol L-1 s-1.\n   What was the initial rate of decrease in [Y] ?\n   (A) 7.0 × 10-4 mol L-1 s-1\n    (B) 1.4 × 10-3 mol L-1 s-1\n    (C) 2.8 × 10-3 mol L-1 s-1\n   (D) 5.6 × 10-3 mol L-1 s-1\n    (E) 1.1 × 10-2 mol L-1 s-1",
+  "regions": [
+    {
+      "page": 1354,
+      "rect": [
+        301.67999267578125,
+        264.8683776855469,
+        603.3599853515625,
+        394.7067565917969
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 154,
+        "compiledPage": 1354
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "e8c62846e55d5e11",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2012-21-1354-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 154,
+      "rect": [
+        301.67999267578125,
+        264.8683776855469,
+        603.3599853515625,
+        394.7067565917969
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2012-21-1354-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 154,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

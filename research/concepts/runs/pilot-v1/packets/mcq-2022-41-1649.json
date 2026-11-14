@@ -1,0 +1,108 @@
+{
+  "questionId": "mcq-2022-41-1649",
+  "type": "MCQ",
+  "exam": "2022 AP Chemistry MCQ",
+  "year": "2022",
+  "number": 41,
+  "text": "41. A 100.0 g sample of which of the following compounds\n    contains the most molecules?\n\n    (A) CO2\n     (B) SO2\n     (C) H2O\n    (D) N2O",
+  "regions": [
+    {
+      "page": 1649,
+      "rect": [
+        0,
+        547.519775390625,
+        306,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 149,
+        "compiledPage": 1649
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "1.1"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "1.1",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "75e6ae081c20815c",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-41-1649-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 149,
+      "rect": [
+        0,
+        547.519775390625,
+        306,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-41-1649-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 149,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:mole-conversions"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:mole-conversions"
+      ]
+    }
+  ]
+}

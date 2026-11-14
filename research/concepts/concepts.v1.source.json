@@ -1,0 +1,5015 @@
+{
+  "taxonomyVersion": "1.0.0",
+  "status": "draft-for-review",
+  "notice": "ChemAtlas canonical concepts v1. Units and topics are official College Board AP Chemistry (CED effective Fall 2024). Concepts, definitions and boundaries are ChemAtlas proposals derived from the research inputs in research/concept-taxonomy and have not been reviewed by a chemistry teacher. Edit this file, never the generated taxonomy.v1.json. Changing a concept's definition, include or exclude text changes its hash and marks classifications that used it as stale.",
+  "groups": [
+    {
+      "id": "atomic-structure",
+      "name": "Atoms and the periodic table"
+    },
+    {
+      "id": "bonding-structure",
+      "name": "Bonding and molecular structure"
+    },
+    {
+      "id": "imf-properties",
+      "name": "Intermolecular forces and properties"
+    },
+    {
+      "id": "gases",
+      "name": "Gases"
+    },
+    {
+      "id": "solutions",
+      "name": "Solutions and separations"
+    },
+    {
+      "id": "light-spectroscopy",
+      "name": "Light and spectroscopy"
+    },
+    {
+      "id": "reactions",
+      "name": "Reactions and stoichiometry"
+    },
+    {
+      "id": "kinetics",
+      "name": "Kinetics"
+    },
+    {
+      "id": "thermochemistry",
+      "name": "Thermochemistry"
+    },
+    {
+      "id": "equilibrium",
+      "name": "Equilibrium"
+    },
+    {
+      "id": "acids-bases",
+      "name": "Acids and bases"
+    },
+    {
+      "id": "thermodynamics",
+      "name": "Entropy and free energy"
+    },
+    {
+      "id": "electrochemistry",
+      "name": "Electrochemistry"
+    },
+    {
+      "id": "extension",
+      "name": "Beyond the current AP course"
+    }
+  ],
+  "skills": [
+    {
+      "id": "dimensional-analysis",
+      "name": "Dimensional analysis and unit conversion",
+      "patterns": [
+        "dimensional analysis",
+        "unit conversion",
+        "unit consistency"
+      ]
+    },
+    {
+      "id": "logarithms",
+      "name": "Logarithm and exponent algebra",
+      "patterns": [
+        "natural-log",
+        "logarithm",
+        "\\bln\\b(?! concentration)"
+      ]
+    },
+    {
+      "id": "graph-analysis",
+      "name": "Reading and constructing graphs",
+      "patterns": [
+        "slope",
+        "graph interpolation",
+        "from graph",
+        "diagram axes",
+        "diagram scale"
+      ]
+    },
+    {
+      "id": "experimental-design",
+      "name": "Experimental design and procedure",
+      "patterns": [
+        "experimental design",
+        "experimental solvent",
+        "selecting a separation",
+        "measurement over time"
+      ]
+    },
+    {
+      "id": "error-analysis",
+      "name": "Error analysis and uncertainty",
+      "patterns": [
+        "error analysis",
+        "uncertainty"
+      ]
+    },
+    {
+      "id": "particulate-modeling",
+      "name": "Drawing and reading particulate diagrams",
+      "patterns": [
+        "particulate",
+        "particle-level",
+        "particle drawings",
+        "particle diagrams",
+        "particle-scale"
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.1"
+        ],
+        "related": [
+          "1.3",
+          "1.4",
+          "3.7",
+          "4.5",
+          "6.5",
+          "9.11"
+        ]
+      },
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "examples": {
+        "positive": "How many oxygen atoms are in 0.50 mol of Al2(SO4)3?",
+        "negative": "A titration calculation where moles of titrant come from M x V (tag titration, not this)."
+      },
+      "aliases": [
+        "moles",
+        "Avogadro's number",
+        "molar mass",
+        "mole concept"
+      ],
+      "related": [
+        "reaction-stoichiometry",
+        "empirical-formula"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "mole-conversions"
+      ],
+      "microPatterns": [
+        "mole concept",
+        "avogadro",
+        "mass-to-mole",
+        "mole-to-particle",
+        "particle-to-mass",
+        "molar mass from",
+        "counting atoms",
+        "relative quantities"
+      ]
+    },
+    {
+      "id": "mass-spectrometry",
+      "name": "Mass spectra and isotopes",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.2"
+        ],
+        "related": [
+          "1.5"
+        ]
+      },
+      "definition": "Interpreting mass spectra of elements: identifying isotopes from mass-to-charge peaks and relating relative abundance to average atomic mass.",
+      "include": "Tag when a mass spectrum, isotope abundance data, or weighted-average atomic mass must be used or predicted.",
+      "exclude": "Do not tag simple proton/neutron counting for a named isotope (use electron-configuration/atomic structure); mass spectra of molecules or multiply charged ions are beyond AP scope.",
+      "examples": {
+        "positive": "Given peaks at m/z 35 and 37 with heights 3:1, estimate the average atomic mass of chlorine.",
+        "negative": "How many neutrons are in carbon-14?"
+      },
+      "aliases": [
+        "isotopes",
+        "average atomic mass",
+        "mass spec"
+      ],
+      "related": [
+        "electron-configuration"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "spectroscopy"
+      ],
+      "microPatterns": [
+        "isotop",
+        "mass-to-charge",
+        "mass-spectrum",
+        "mass spectrum",
+        "weighted-average atomic",
+        "abundance"
+      ]
+    },
+    {
+      "id": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.3"
+        ],
+        "related": [
+          "1.1"
+        ]
+      },
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "examples": {
+        "positive": "A compound is 40.0% C, 6.7% H and 53.3% O by mass. Find its empirical formula.",
+        "negative": "What is the molar mass of glucose?"
+      },
+      "aliases": [
+        "percent composition",
+        "empirical formula",
+        "molecular formula",
+        "combustion analysis"
+      ],
+      "related": [
+        "mole-conversions",
+        "mixture-composition"
+      ],
+      "prerequisites": [
+        "mole-conversions"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "empirical formula",
+        "molecular formula",
+        "mass percent",
+        "combustion",
+        "elemental mass",
+        "elemental-analysis",
+        "whole-number mole"
+      ]
+    },
+    {
+      "id": "mixture-composition",
+      "name": "Composition of mixtures",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.4"
+        ],
+        "related": [
+          "1.3"
+        ]
+      },
+      "definition": "Using measured masses or other quantitative data to determine the relative amounts of components in a mixture and to distinguish mixtures from pure substances.",
+      "include": "Tag when the question requires the mass fraction or percent of a component in a mixture, or a mass balance across mixture components.",
+      "exclude": "Do not tag percent composition of a single pure compound (use empirical-formula) or solution molarity (use molarity).",
+      "examples": {
+        "positive": "A 2.00 g mixture of NaCl and KCl contains 1.10 g of chloride. Find the mass percent of NaCl.",
+        "negative": "Calculate the percent by mass of Na in NaCl."
+      },
+      "aliases": [
+        "mixture analysis",
+        "mass fraction"
+      ],
+      "related": [
+        "empirical-formula",
+        "reaction-stoichiometry"
+      ],
+      "prerequisites": [
+        "mole-conversions"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "mixture",
+        "mass balance",
+        "identifying components"
+      ]
+    },
+    {
+      "id": "electron-configuration",
+      "name": "Electron configurations and atomic structure",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.5"
+        ],
+        "related": [
+          "1.6",
+          "1.7",
+          "1.8"
+        ]
+      },
+      "definition": "Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.",
+      "include": "Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.",
+      "exclude": "Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.",
+      "examples": {
+        "positive": "Write the ground-state electron configuration of Fe3+.",
+        "negative": "Explain why Na has a larger radius than Mg (tag atomic-radius and coulombic-attraction)."
+      },
+      "aliases": [
+        "electron configuration",
+        "orbitals",
+        "subshells",
+        "Aufbau",
+        "Hund's rule"
+      ],
+      "related": [
+        "photoelectron-spectroscopy",
+        "ionic-formulas"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "atomic-structure"
+      ],
+      "microPatterns": [
+        "electron configuration",
+        "orbital and subshell",
+        "aufbau",
+        "hund",
+        "pauli",
+        "core vs valence",
+        "protons neutrons",
+        "atomic number",
+        "isotopes and ionic"
+      ]
+    },
+    {
+      "id": "photoelectron-spectroscopy",
+      "name": "Photoelectron spectroscopy (PES)",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.6"
+        ],
+        "related": [
+          "1.5",
+          "1.7"
+        ]
+      },
+      "definition": "Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.",
+      "include": "Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.",
+      "exclude": "Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.",
+      "examples": {
+        "positive": "Which peak in the PES spectrum of Mg corresponds to the 3s electrons, and why is it at the lowest energy?",
+        "negative": "Rank Na, Mg and Al by first ionization energy."
+      },
+      "aliases": [
+        "PES",
+        "binding energy",
+        "photoelectron spectrum"
+      ],
+      "related": [
+        "electron-configuration",
+        "ionization-energy",
+        "coulombic-attraction"
+      ],
+      "prerequisites": [
+        "electron-configuration"
+      ],
+      "researchGroups": [
+        "spectroscopy"
+      ],
+      "microPatterns": [
+        "photoelectron",
+        "\\bpes\\b",
+        "binding energy",
+        "energy required to remove",
+        "valence vs core electron identification"
+      ]
+    },
+    {
+      "id": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.6",
+          "1.8",
+          "2.1",
+          "2.3",
+          "3.1"
+        ]
+      },
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "examples": {
+        "positive": "Explain, using Coulomb's law, why the first ionization energy of F is greater than that of O.",
+        "negative": "Which element has the larger atomic radius, K or Ca? (choice only; tag atomic-radius)"
+      },
+      "aliases": [
+        "Coulomb's law",
+        "effective nuclear charge",
+        "Zeff",
+        "shielding",
+        "electrostatic attraction"
+      ],
+      "related": [
+        "atomic-radius",
+        "ionization-energy",
+        "lattice-energy"
+      ],
+      "prerequisites": [
+        "electron-configuration"
+      ],
+      "researchGroups": [
+        "coulombic-forces"
+      ],
+      "microPatterns": [
+        "coulomb",
+        "effective nuclear",
+        "shielding",
+        "electrostatic"
+      ]
+    },
+    {
+      "id": "atomic-radius",
+      "name": "Atomic and ionic radius",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.8",
+          "2.3"
+        ]
+      },
+      "definition": "Predicting and explaining the sizes of atoms and ions across periods and down groups, including isoelectronic ions and ions versus their parent atoms.",
+      "include": "Tag when atomic or ionic size is compared, ranked or explained.",
+      "exclude": "Do not tag when ion size is only one input to a lattice-energy argument unless the size comparison itself is asked.",
+      "examples": {
+        "positive": "Rank O2-, F- and Na+ in order of increasing radius.",
+        "negative": "Which has the higher melting point, NaF or NaCl? (tag lattice-energy)"
+      },
+      "aliases": [
+        "atomic radius",
+        "ionic radius",
+        "atomic size",
+        "isoelectronic"
+      ],
+      "related": [
+        "coulombic-attraction",
+        "ionization-energy"
+      ],
+      "prerequisites": [
+        "electron-configuration"
+      ],
+      "researchGroups": [
+        "periodic-trends"
+      ],
+      "microPatterns": [
+        "radius",
+        "isoelectronic"
+      ]
+    },
+    {
+      "id": "ionization-energy",
+      "name": "Ionization energy",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.6"
+        ]
+      },
+      "definition": "Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.",
+      "include": "Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.",
+      "exclude": "Do not tag PES questions unless ionization energy itself is compared outside the spectrum.",
+      "examples": {
+        "positive": "An element's third ionization energy is far larger than its second. In which group is it?",
+        "negative": "Identify the element from its PES spectrum (tag photoelectron-spectroscopy)."
+      },
+      "aliases": [
+        "ionization energy",
+        "IE",
+        "successive ionization energies"
+      ],
+      "related": [
+        "coulombic-attraction",
+        "photoelectron-spectroscopy",
+        "atomic-radius"
+      ],
+      "prerequisites": [
+        "electron-configuration"
+      ],
+      "researchGroups": [
+        "periodic-trends"
+      ],
+      "microPatterns": [
+        "ionization energ"
+      ]
+    },
+    {
+      "id": "electronegativity",
+      "name": "Electronegativity trends",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "2.1",
+          "8.6"
+        ]
+      },
+      "definition": "The tendency of an atom in a bond to attract shared electrons, its periodic trend, and its explanation from nuclear charge and distance.",
+      "include": "Tag when electronegativity values or trends must be compared or explained as the main reasoning.",
+      "exclude": "Do not tag when electronegativity is only used to decide bond polarity (tag bond-polarity) or acid strength (tag acid-strength-structure).",
+      "examples": {
+        "positive": "Which element is the most electronegative: N, P, O or S? Justify.",
+        "negative": "Which bond is most polar: C-H, C-O or C-C? (tag bond-polarity)"
+      },
+      "aliases": [
+        "electronegativity",
+        "EN"
+      ],
+      "related": [
+        "bond-polarity",
+        "coulombic-attraction"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "periodic-trends"
+      ],
+      "microPatterns": [
+        "electronegativity and bond polarity",
+        "periodic trend exceptions",
+        "periodic-table position"
+      ]
+    },
+    {
+      "id": "ionic-formulas",
+      "name": "Ion charges and ionic formulas",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.8"
+        ],
+        "related": [
+          "1.5",
+          "2.1"
+        ]
+      },
+      "definition": "Predicting common ion charges from valence electrons and periodic position, and writing charge-neutral ionic formulas.",
+      "include": "Tag when the student predicts an ion's charge, the formula of an ionic compound, or explains ion formation from electron configuration.",
+      "exclude": "Do not tag routine use of a given ionic formula in a calculation.",
+      "examples": {
+        "positive": "What is the formula of the compound formed between Al and S?",
+        "negative": "Calculate the mass of 0.25 mol of Al2S3."
+      },
+      "aliases": [
+        "ionic charge",
+        "ionic formula",
+        "valence electrons",
+        "formula unit"
+      ],
+      "related": [
+        "electron-configuration",
+        "bonding-types",
+        "lattice-energy"
+      ],
+      "prerequisites": [
+        "electron-configuration"
+      ],
+      "researchGroups": [
+        "valence-electrons"
+      ],
+      "microPatterns": [
+        "ionic charge",
+        "ion formation",
+        "ionic formula",
+        "charge-neutral",
+        "formula-unit ratio",
+        "valence electron counting",
+        "metal vs nonmetal ion",
+        "electron transfer and ionic"
+      ]
+    },
+    {
+      "id": "bonding-types",
+      "name": "Ionic, covalent and metallic bonding",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.1"
+        ],
+        "related": [
+          "2.3",
+          "2.4",
+          "3.2"
+        ]
+      },
+      "definition": "Classifying bonds as ionic, polar covalent, nonpolar covalent or metallic from the elements involved and electronegativity difference, and predicting properties that follow.",
+      "include": "Tag when the bond type must be identified or used to predict a property.",
+      "exclude": "Do not tag questions about the type of solid (tag solid-types) unless the bond classification itself is asked.",
+      "examples": {
+        "positive": "Which compound has bonds with the greatest ionic character: NaCl, HCl, Cl2 or CCl4?",
+        "negative": "Why is diamond harder than graphite? (tag solid-types)"
+      },
+      "aliases": [
+        "chemical bonds",
+        "ionic bond",
+        "covalent bond",
+        "metallic bond"
+      ],
+      "related": [
+        "bond-polarity",
+        "solid-types",
+        "metallic-bonding"
+      ],
+      "prerequisites": [
+        "electronegativity"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "ionic bonding",
+        "covalent bonding",
+        "metallic bonding",
+        "continuum of bond",
+        "bonding type",
+        "electrostatic basis",
+        "properties predicted from bonding"
+      ]
+    },
+    {
+      "id": "bond-polarity",
+      "name": "Bond polarity and partial charges",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.1"
+        ],
+        "related": [
+          "1.7",
+          "2.7",
+          "3.1",
+          "8.6"
+        ]
+      },
+      "definition": "Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.",
+      "include": "Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.",
+      "exclude": "Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).",
+      "examples": {
+        "positive": "In an H-F bond, which atom carries the partial negative charge and why?",
+        "negative": "Is CCl4 polar? (tag molecular-polarity; bond-polarity is supporting only if bond dipoles are discussed)"
+      },
+      "aliases": [
+        "polar bond",
+        "bond dipole",
+        "partial charge",
+        "electronegativity difference"
+      ],
+      "related": [
+        "electronegativity",
+        "molecular-polarity"
+      ],
+      "prerequisites": [
+        "electronegativity"
+      ],
+      "researchGroups": [
+        "bond-polarity"
+      ],
+      "microPatterns": [
+        "bond dipole",
+        "electronegativity difference",
+        "partial charge"
+      ]
+    },
+    {
+      "id": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.2"
+        ],
+        "related": [
+          "6.7"
+        ]
+      },
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "examples": {
+        "positive": "On the potential-energy curve for H2, what does the depth of the minimum represent?",
+        "negative": "Which is shorter, a C=C or a C-C bond?"
+      },
+      "aliases": [
+        "potential energy curve",
+        "bond energy diagram",
+        "internuclear distance"
+      ],
+      "related": [
+        "bond-order",
+        "bond-enthalpy"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "potential-energy curve",
+        "potential energy",
+        "equilibrium bond distance",
+        "attractive and repulsive",
+        "dissociation energy",
+        "interatomic",
+        "energy to break vs form",
+        "relative bond energetics"
+      ]
+    },
+    {
+      "id": "bond-order",
+      "name": "Bond order, length and strength",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.2"
+        ],
+        "related": [
+          "2.6",
+          "2.7",
+          "6.7"
+        ]
+      },
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "examples": {
+        "positive": "Rank the C-O bond lengths in CO, CO2 and CO3^2-.",
+        "negative": "Estimate ΔH using average bond enthalpies (tag bond-enthalpy)."
+      },
+      "aliases": [
+        "bond order",
+        "bond length",
+        "bond strength",
+        "multiple bond"
+      ],
+      "related": [
+        "resonance",
+        "bond-potential-energy",
+        "bond-enthalpy"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "bond-order"
+      ],
+      "microPatterns": [
+        "bond order",
+        "bond length",
+        "single double and triple",
+        "fractional bond",
+        "bond strength"
+      ]
+    },
+    {
+      "id": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.3"
+        ],
+        "related": [
+          "1.8",
+          "3.2",
+          "9.6"
+        ]
+      },
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "examples": {
+        "positive": "Explain why MgO has a much higher melting point than NaF.",
+        "negative": "Which of these substances is an ionic solid? (tag solid-types)"
+      },
+      "aliases": [
+        "lattice energy",
+        "ionic lattice",
+        "ionic crystal"
+      ],
+      "related": [
+        "coulombic-attraction",
+        "atomic-radius",
+        "solid-types",
+        "dissolution-thermodynamics"
+      ],
+      "prerequisites": [
+        "ionic-formulas"
+      ],
+      "researchGroups": [
+        "lattice-energy"
+      ],
+      "microPatterns": [
+        "ionic bond strength",
+        "lattice",
+        "alternating cation",
+        "formula unit vs",
+        "ionic solid",
+        "ionic conductivity",
+        "brittleness",
+        "ion charge and",
+        "ion size and"
+      ]
+    },
+    {
+      "id": "metallic-bonding",
+      "name": "Metals and alloys",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.4"
+        ],
+        "related": [
+          "3.2"
+        ]
+      },
+      "definition": "The electron-sea model of metallic bonding, the conductivity, malleability and ductility it explains, and the structures and properties of substitutional and interstitial alloys.",
+      "include": "Tag when metallic properties or alloy type and properties must be explained or predicted.",
+      "exclude": "Do not tag generic identification of an element as a metal.",
+      "examples": {
+        "positive": "Why is steel, an interstitial alloy of iron and carbon, less malleable than pure iron?",
+        "negative": "Which element is a transition metal?"
+      },
+      "aliases": [
+        "electron sea",
+        "alloys",
+        "metallic bonding",
+        "interstitial alloy",
+        "substitutional alloy"
+      ],
+      "related": [
+        "bonding-types",
+        "solid-types"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "metal",
+        "alloy",
+        "delocalized valence",
+        "electron-sea",
+        "malleab",
+        "electrical and thermal"
+      ]
+    },
+    {
+      "id": "lewis-structures",
+      "name": "Lewis structures",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.5"
+        ],
+        "related": [
+          "2.6",
+          "2.7",
+          "8.6"
+        ]
+      },
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "examples": {
+        "positive": "Draw the complete Lewis electron-dot diagram for the SO3 molecule.",
+        "negative": "Using the given Lewis diagram of CH2O, state the hybridization of C (tag hybridization)."
+      },
+      "aliases": [
+        "Lewis diagram",
+        "electron-dot structure",
+        "Lewis dot",
+        "octet rule"
+      ],
+      "related": [
+        "formal-charge",
+        "resonance",
+        "molecular-geometry",
+        "electron-domains"
+      ],
+      "prerequisites": [
+        "ionic-formulas"
+      ],
+      "researchGroups": [
+        "lewis-structures",
+        "valence-electrons"
+      ],
+      "microPatterns": [
+        "lewis",
+        "valence electron count",
+        "central atom",
+        "bonding pairs",
+        "octet",
+        "multiple bonds$",
+        "polyatomic-ion bracket"
+      ]
+    },
+    {
+      "id": "formal-charge",
+      "name": "Formal charge",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.6"
+        ],
+        "related": [
+          "2.5",
+          "2.7"
+        ]
+      },
+      "definition": "Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.",
+      "include": "Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.",
+      "exclude": "Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.",
+      "examples": {
+        "positive": "Of two Lewis structures for N2O, which is better supported? Justify using formal charges.",
+        "negative": "Draw the Lewis structure of CH4."
+      },
+      "aliases": [
+        "FC",
+        "formal charges"
+      ],
+      "related": [
+        "lewis-structures",
+        "resonance",
+        "oxidation-numbers"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "formal-charge"
+      ],
+      "microPatterns": [
+        "formal charge",
+        "charge placement"
+      ]
+    },
+    {
+      "id": "resonance",
+      "name": "Resonance and delocalization",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.6"
+        ],
+        "related": [
+          "2.7",
+          "8.6"
+        ]
+      },
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "examples": {
+        "positive": "Explain why both N-O bonds in NO2- have the same length.",
+        "negative": "Draw the Lewis structure for NH3."
+      },
+      "aliases": [
+        "resonance structures",
+        "resonance hybrid",
+        "delocalized electrons"
+      ],
+      "related": [
+        "lewis-structures",
+        "formal-charge",
+        "bond-order"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "resonance"
+      ],
+      "microPatterns": [
+        "resonance",
+        "delocalized electrons",
+        "charge conservation in resonance"
+      ]
+    },
+    {
+      "id": "electron-domains",
+      "name": "Electron-domain counting",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5"
+        ]
+      },
+      "definition": "Counting the electron domains around a central atom, where each lone pair and each bond (single, double or triple) counts as one domain.",
+      "include": "Tag when the answer depends on counting domains, including the rule that a multiple bond is one domain, as a supporting step for geometry or hybridization.",
+      "exclude": "Do not tag when geometry or hybridization is simply recalled for a familiar molecule without domain reasoning being needed.",
+      "examples": {
+        "positive": "How many electron domains surround the central atom in CO2, and what does that imply for its hybridization?",
+        "negative": "Name the shape shown in a ball-and-stick picture."
+      },
+      "aliases": [
+        "electron domains",
+        "steric number",
+        "electron groups",
+        "AXE"
+      ],
+      "related": [
+        "molecular-geometry",
+        "hybridization"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "molecular-geometry"
+      ],
+      "microPatterns": [
+        "electron-domain counting",
+        "one electron domain",
+        "bonding domains",
+        "axe notation"
+      ]
+    },
+    {
+      "id": "molecular-geometry",
+      "name": "Molecular geometry (VSEPR)",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5",
+          "3.1"
+        ]
+      },
+      "definition": "Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.",
+      "include": "Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.",
+      "exclude": "Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).",
+      "examples": {
+        "positive": "What is the molecular geometry of XeF4?",
+        "negative": "What is the hybridization of carbon in CH4?"
+      },
+      "aliases": [
+        "VSEPR",
+        "shape of molecule",
+        "molecular shape",
+        "electron-domain geometry"
+      ],
+      "related": [
+        "electron-domains",
+        "bond-angles",
+        "hybridization",
+        "molecular-polarity"
+      ],
+      "prerequisites": [
+        "electron-domains"
+      ],
+      "researchGroups": [
+        "molecular-geometry"
+      ],
+      "microPatterns": [
+        "geometry",
+        "lewis structure as prerequisite"
+      ]
+    },
+    {
+      "id": "bond-angles",
+      "name": "Bond angles",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": []
+      },
+      "definition": "Predicting or comparing bond angles from electron-domain geometry, including the compression caused by lone pairs.",
+      "include": "Tag when a bond angle must be estimated, compared or explained.",
+      "exclude": "Do not tag when only a shape name is requested.",
+      "examples": {
+        "positive": "Explain why the H-O-H angle in water is less than 109.5°.",
+        "negative": "Name the shape of NH3."
+      },
+      "aliases": [
+        "bond angle",
+        "lone-pair repulsion"
+      ],
+      "related": [
+        "molecular-geometry",
+        "electron-domains"
+      ],
+      "prerequisites": [
+        "molecular-geometry"
+      ],
+      "researchGroups": [
+        "molecular-geometry"
+      ],
+      "microPatterns": [
+        "bond angle"
+      ]
+    },
+    {
+      "id": "hybridization",
+      "name": "Orbital hybridization",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5"
+        ]
+      },
+      "definition": "Assigning sp, sp2 or sp3 hybridization to an atom from its number of electron domains.",
+      "include": "Tag when the hybridization of an atom must be stated or used.",
+      "exclude": "Do not tag geometry-only answers; d-orbital hybridization, drawing hybrid orbitals and molecular-orbital diagrams are not assessed.",
+      "examples": {
+        "positive": "What is the hybridization of the central atom in CO2?",
+        "negative": "What is the shape of CO2? (tag molecular-geometry)"
+      },
+      "aliases": [
+        "sp",
+        "sp2",
+        "sp3",
+        "hybrid orbitals"
+      ],
+      "related": [
+        "electron-domains",
+        "molecular-geometry",
+        "sigma-pi-bonds"
+      ],
+      "prerequisites": [
+        "electron-domains"
+      ],
+      "researchGroups": [
+        "hybridization"
+      ],
+      "microPatterns": [
+        "hybridization"
+      ]
+    },
+    {
+      "id": "sigma-pi-bonds",
+      "name": "Sigma and pi bonds",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.2"
+        ]
+      },
+      "definition": "Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.",
+      "include": "Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.",
+      "exclude": "Do not tag simple bond-order comparisons (tag bond-order).",
+      "examples": {
+        "positive": "How many sigma and pi bonds are in a molecule of HCN?",
+        "negative": "Which bond is longer, C=O or C-O?"
+      },
+      "aliases": [
+        "sigma bond",
+        "pi bond"
+      ],
+      "related": [
+        "hybridization",
+        "bond-order"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "sigma and pi",
+        "restricted rotation"
+      ]
+    },
+    {
+      "id": "molecular-polarity",
+      "name": "Molecular polarity",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.1",
+          "3.1",
+          "3.10"
+        ]
+      },
+      "definition": "Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.",
+      "include": "Tag when the student must determine or justify whether a molecule is polar or nonpolar.",
+      "exclude": "Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).",
+      "examples": {
+        "positive": "Explain why CO2 is nonpolar even though C=O bonds are polar.",
+        "negative": "Given that HCl is polar, which force exists between HCl molecules besides dispersion?"
+      },
+      "aliases": [
+        "net dipole",
+        "polar molecule",
+        "nonpolar molecule",
+        "dipole moment"
+      ],
+      "related": [
+        "bond-polarity",
+        "molecular-geometry",
+        "dipole-dipole",
+        "solubility-polarity"
+      ],
+      "prerequisites": [
+        "molecular-geometry",
+        "bond-polarity"
+      ],
+      "researchGroups": [
+        "molecular-polarity"
+      ],
+      "microPatterns": [
+        "polarity and net dipole",
+        "molecular polarity"
+      ]
+    },
+    {
+      "id": "london-dispersion",
+      "name": "London dispersion forces",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.2",
+          "3.9",
+          "3.10"
+        ]
+      },
+      "definition": "Attractions arising from temporary dipoles, whose strength increases with the number of electrons (polarizability) and with contact surface area.",
+      "include": "Tag when dispersion forces must be identified or compared, especially using polarizability or molecular shape.",
+      "exclude": "Do not tag merely because dispersion forces exist in every substance; tag only when they matter to the answer.",
+      "examples": {
+        "positive": "Explain why I2 is a solid at room temperature while F2 is a gas.",
+        "negative": "Why does H2O boil higher than H2S? (hydrogen bonding is the deciding force)"
+      },
+      "aliases": [
+        "LDF",
+        "dispersion forces",
+        "polarizability",
+        "London forces"
+      ],
+      "related": [
+        "imf-properties",
+        "dipole-dipole"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "london-dispersion"
+      ],
+      "microPatterns": [
+        "london",
+        "dispersion",
+        "polarizability",
+        "surface area"
+      ]
+    },
+    {
+      "id": "dipole-dipole",
+      "name": "Dipole-dipole attractions",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "2.7",
+          "3.9",
+          "3.10"
+        ]
+      },
+      "definition": "Attractions between the permanent dipoles of polar molecules.",
+      "include": "Tag when dipole-dipole forces must be identified or compared.",
+      "exclude": "Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.",
+      "examples": {
+        "positive": "Which force accounts for acetone being more soluble in water than propane is? (dipole-related)",
+        "negative": "Why does CH4 have a low boiling point?"
+      },
+      "aliases": [
+        "dipole forces",
+        "dipolar interactions",
+        "permanent dipole"
+      ],
+      "related": [
+        "molecular-polarity",
+        "london-dispersion",
+        "hydrogen-bonding"
+      ],
+      "prerequisites": [
+        "molecular-polarity"
+      ],
+      "researchGroups": [
+        "dipole-dipole"
+      ],
+      "microPatterns": [
+        "dipole-dipole"
+      ]
+    },
+    {
+      "id": "hydrogen-bonding",
+      "name": "Hydrogen bonding",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.2",
+          "3.8",
+          "3.9",
+          "3.10",
+          "6.5"
+        ]
+      },
+      "definition": "The strong dipole attraction between an H atom bonded to N, O or F and a lone pair on a nearby N, O or F atom.",
+      "include": "Tag when hydrogen bonding must be identified, drawn, or used to explain a property, including identifying donors and acceptors.",
+      "exclude": "Do not tag molecules that contain H and O but no H bonded to N, O or F (a common error).",
+      "examples": {
+        "positive": "Draw a hydrogen bond between two CH3OH molecules.",
+        "negative": "Can CH3OCH3 molecules hydrogen bond with each other? (requires recognizing no donor; still tag)"
+      },
+      "aliases": [
+        "H-bond",
+        "H bonding",
+        "hydrogen bond donor",
+        "hydrogen bond acceptor"
+      ],
+      "related": [
+        "dipole-dipole",
+        "imf-properties",
+        "solubility-polarity"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "hydrogen-bonding"
+      ],
+      "microPatterns": [
+        "hydrogen bond",
+        "hydrogen-bond"
+      ]
+    },
+    {
+      "id": "ion-dipole",
+      "name": "Ion-dipole attractions",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.8",
+          "3.10",
+          "9.6"
+        ]
+      },
+      "definition": "Attractions between ions and polar molecules, such as the orientation of water molecules around dissolved ions.",
+      "include": "Tag when ion-dipole forces or hydration-shell orientation must be identified, drawn or used.",
+      "exclude": "Do not tag ionic bonding within a lattice (tag lattice-energy).",
+      "examples": {
+        "positive": "In a particulate drawing of Na+ in water, which end of each water molecule should face the ion?",
+        "negative": "Compare the lattice energies of NaCl and MgO."
+      },
+      "aliases": [
+        "hydration",
+        "ion-solvent force",
+        "solvation"
+      ],
+      "related": [
+        "solution-representations",
+        "solubility-polarity",
+        "dissolution-thermodynamics"
+      ],
+      "prerequisites": [
+        "molecular-polarity"
+      ],
+      "researchGroups": [
+        "ion-dipole"
+      ],
+      "microPatterns": [
+        "ion-dipole",
+        "hydration-shell",
+        "ionic solvation"
+      ]
+    },
+    {
+      "id": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.3",
+          "3.9",
+          "6.5"
+        ]
+      },
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "examples": {
+        "positive": "Rank CH4, C2H6 and C3H8 by boiling point and justify.",
+        "negative": "Which bond in ethanol breaks during combustion?"
+      },
+      "aliases": [
+        "intermolecular forces",
+        "IMF",
+        "boiling point",
+        "vapor pressure",
+        "volatility"
+      ],
+      "related": [
+        "london-dispersion",
+        "dipole-dipole",
+        "hydrogen-bonding",
+        "phase-change-energy"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "boiling point",
+        "vapor pressure and",
+        "surface tension",
+        "intermolecular vs intramolecular",
+        "relative attraction",
+        "molecular shape and"
+      ]
+    },
+    {
+      "id": "solid-types",
+      "name": "Types of solids",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.2"
+        ],
+        "related": [
+          "2.3",
+          "2.4"
+        ]
+      },
+      "definition": "Classifying solids as ionic, molecular, metallic or covalent-network (and crystalline or amorphous) and relating the particles and forces in each to melting point, hardness and conductivity.",
+      "include": "Tag when a solid must be classified or its properties explained by solid type.",
+      "exclude": "Do not tag a lattice-energy comparison between two ionic solids (tag lattice-energy).",
+      "examples": {
+        "positive": "Explain why SiO2 melts at a far higher temperature than CO2.",
+        "negative": "Compare the melting points of NaCl and KCl."
+      },
+      "aliases": [
+        "network solid",
+        "molecular solid",
+        "ionic solid",
+        "metallic solid",
+        "crystalline",
+        "amorphous"
+      ],
+      "related": [
+        "lattice-energy",
+        "metallic-bonding",
+        "bonding-types"
+      ],
+      "prerequisites": [
+        "bonding-types"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "solids$",
+        "solid bonding",
+        "crystalline vs amorphous structure",
+        "conductivity by solid",
+        "hardness",
+        "diamond",
+        "macromolecular",
+        "interstitial alloy properties"
+      ]
+    },
+    {
+      "id": "particulate-states",
+      "name": "Particle model of solids, liquids and gases",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.3"
+        ],
+        "related": [
+          "3.2",
+          "6.5",
+          "9.1"
+        ]
+      },
+      "definition": "Describing the arrangement, spacing and motion of particles in solids, liquids and gases, and recognizing phase changes as physical changes.",
+      "include": "Tag when particle arrangement or motion across phases must be described, drawn or interpreted.",
+      "exclude": "Phase diagrams are not assessed; do not tag energy calculations for phase changes (tag phase-change-energy).",
+      "examples": {
+        "positive": "Which particulate diagram best represents liquid bromine?",
+        "negative": "How much heat is needed to melt 10 g of ice?"
+      },
+      "aliases": [
+        "states of matter",
+        "phases",
+        "solid liquid gas"
+      ],
+      "related": [
+        "imf-properties",
+        "physical-chemical-change"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "states-of-matter"
+      ],
+      "microPatterns": [
+        "particle arrangement",
+        "particle motion",
+        "gas particle spacing",
+        "fixed shape",
+        "crystalline vs amorphous packing",
+        "macroscopic phase",
+        "phase change vs",
+        "molar volume",
+        "interparticle attractions across"
+      ]
+    },
+    {
+      "id": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.4"
+        ],
+        "related": [
+          "3.5",
+          "4.5"
+        ]
+      },
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "examples": {
+        "positive": "What volume does 0.25 mol of N2 occupy at 300 K and 1.2 atm?",
+        "negative": "Why do gas particles at the same temperature have the same average kinetic energy?"
+      },
+      "aliases": [
+        "PV=nRT",
+        "gas laws",
+        "Boyle's law",
+        "Charles's law"
+      ],
+      "related": [
+        "partial-pressures",
+        "kinetic-molecular-theory",
+        "reaction-stoichiometry"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "ideal-gas-law"
+      ],
+      "microPatterns": [
+        "ideal gas equation",
+        "pressure volume temperature",
+        "boyle",
+        "charles",
+        "avogadro's law",
+        "gas-law",
+        "gas density",
+        "gas stoichiometry",
+        "changes in moles and total"
+      ]
+    },
+    {
+      "id": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.4"
+        ],
+        "related": [
+          "7.3",
+          "7.4"
+        ]
+      },
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "examples": {
+        "positive": "A mixture has 2.0 mol He and 3.0 mol Ar at 10.0 atm. What is the partial pressure of He?",
+        "negative": "Write the Kp expression for N2 + 3H2 ⇌ 2NH3."
+      },
+      "aliases": [
+        "Dalton's law",
+        "partial pressure",
+        "mole fraction"
+      ],
+      "related": [
+        "ideal-gas-law"
+      ],
+      "prerequisites": [
+        "ideal-gas-law"
+      ],
+      "researchGroups": [
+        "ideal-gas-law"
+      ],
+      "microPatterns": [
+        "dalton",
+        "partial pressure and mole fraction"
+      ]
+    },
+    {
+      "id": "kinetic-molecular-theory",
+      "name": "Kinetic molecular theory",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.5"
+        ],
+        "related": [
+          "3.4",
+          "3.6",
+          "5.5"
+        ]
+      },
+      "definition": "Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.",
+      "include": "Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.",
+      "exclude": "Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.",
+      "examples": {
+        "positive": "Which gas at 298 K has the greatest average speed: He, N2 or CO2? Explain.",
+        "negative": "Calculate the pressure of 1.0 mol of gas in 10.0 L at 273 K."
+      },
+      "aliases": [
+        "KMT",
+        "Maxwell-Boltzmann",
+        "average kinetic energy",
+        "effusion",
+        "molecular speed"
+      ],
+      "related": [
+        "ideal-gas-law",
+        "real-gases",
+        "collision-model"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "gas-kinetic-model"
+      ],
+      "microPatterns": [
+        "kinetic energy",
+        "particle speed",
+        "maxwell-boltzmann speed",
+        "collision frequency and gas",
+        "temperature changes and particle",
+        "diffusion",
+        "root-mean-square",
+        "ideal gas particle"
+      ]
+    },
+    {
+      "id": "real-gases",
+      "name": "Deviations from ideal gas behavior",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.6"
+        ],
+        "related": [
+          "3.5",
+          "3.1"
+        ]
+      },
+      "definition": "Explaining when and why real gases deviate from ideal behavior, through intermolecular attractions at low temperature and particle volume at high pressure.",
+      "include": "Tag when nonideal behavior must be predicted, compared or explained.",
+      "exclude": "Van der Waals equation calculations are not assessed.",
+      "examples": {
+        "positive": "Under which conditions does NH3 deviate most from ideal behavior, and why?",
+        "negative": "Use PV = nRT to find the moles of gas."
+      },
+      "aliases": [
+        "nonideal gas",
+        "real gas",
+        "van der Waals"
+      ],
+      "related": [
+        "kinetic-molecular-theory",
+        "imf-properties"
+      ],
+      "prerequisites": [
+        "kinetic-molecular-theory"
+      ],
+      "researchGroups": [
+        "gas-kinetic-model"
+      ],
+      "microPatterns": [
+        "real vs ideal",
+        "intermolecular attraction at low",
+        "finite particle volume",
+        "nonideal",
+        "liquefaction",
+        "ideal conditions",
+        "molecular size effects",
+        "real-gas"
+      ]
+    },
+    {
+      "id": "molarity",
+      "name": "Molarity and solution preparation",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.7"
+        ],
+        "related": [
+          "3.8",
+          "3.13",
+          "4.5",
+          "4.6"
+        ]
+      },
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "examples": {
+        "positive": "What mass of KOH is needed to prepare 250.0 mL of 0.200 M KOH?",
+        "negative": "A 10.0 mL sample is diluted to 100.0 mL; find the new concentration (tag dilution)."
+      },
+      "aliases": [
+        "molar concentration",
+        "M",
+        "concentration"
+      ],
+      "related": [
+        "dilution",
+        "reaction-stoichiometry",
+        "titration-analysis"
+      ],
+      "prerequisites": [
+        "mole-conversions"
+      ],
+      "researchGroups": [
+        "molarity"
+      ],
+      "microPatterns": [
+        "molarity",
+        "solute moles",
+        "solution preparation",
+        "solute solvent and solution",
+        "homogeneous vs heterogeneous",
+        "solvent vs solution volume"
+      ]
+    },
+    {
+      "id": "dilution",
+      "name": "Dilution",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.7"
+        ],
+        "related": [
+          "3.13",
+          "8.2",
+          "8.10"
+        ]
+      },
+      "definition": "Relating concentrations and volumes before and after adding solvent, since moles of solute are unchanged (M1V1 = M2V2).",
+      "include": "Tag when a dilution calculation or the effect of dilution on concentration must be determined.",
+      "exclude": "Do not tag mixing two reacting solutions (tag acid-base-mixtures or reaction-stoichiometry).",
+      "examples": {
+        "positive": "What volume of 6.0 M HCl is needed to make 500. mL of 0.30 M HCl?",
+        "negative": "Find the pH after mixing equal volumes of HCl and NaOH."
+      },
+      "aliases": [
+        "M1V1=M2V2",
+        "dilute solution"
+      ],
+      "related": [
+        "molarity",
+        "ph-poh"
+      ],
+      "prerequisites": [
+        "molarity"
+      ],
+      "researchGroups": [
+        "solution-dilution"
+      ],
+      "microPatterns": [
+        "dilution",
+        "concentration changes on"
+      ]
+    },
+    {
+      "id": "solution-representations",
+      "name": "Particle representations of solutions",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.8"
+        ],
+        "related": [
+          "3.7",
+          "4.3"
+        ]
+      },
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "examples": {
+        "positive": "Which diagram best represents an aqueous solution of K2SO4?",
+        "negative": "Calculate the molarity of 0.10 mol K2SO4 in 0.50 L."
+      },
+      "aliases": [
+        "electrolytes",
+        "dissociation",
+        "particulate diagram of solution"
+      ],
+      "related": [
+        "ion-dipole",
+        "molarity"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "aqueous solutions",
+        "ion dissociation",
+        "relative solution concentration",
+        "solute-to-solvent",
+        "electrolyte",
+        "charges and particle",
+        "mixed solution representations",
+        "solute-solvent interactions",
+        "dissolved ionic vs molecular"
+      ]
+    },
+    {
+      "id": "separation-techniques",
+      "name": "Chromatography and distillation",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.9"
+        ],
+        "related": [
+          "3.1",
+          "3.10"
+        ]
+      },
+      "definition": "Separating mixture components by differences in intermolecular attractions: paper or column chromatography (stationary versus mobile phase) and distillation by volatility.",
+      "include": "Tag when a separation method is selected, explained or its results (such as a chromatogram) interpreted.",
+      "exclude": "Do not tag filtration of a precipitate as the only step of a gravimetric calculation.",
+      "examples": {
+        "positive": "In paper chromatography with a nonpolar solvent, which dye travels farthest, and why?",
+        "negative": "Calculate the mass of precipitate collected by filtration."
+      },
+      "aliases": [
+        "chromatography",
+        "stationary phase",
+        "mobile phase",
+        "distillation",
+        "Rf"
+      ],
+      "related": [
+        "imf-properties",
+        "solubility-polarity"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "separation-science"
+      ],
+      "microPatterns": [
+        "chromatogra",
+        "distillation",
+        "migration",
+        "relative polarity inference",
+        "vapor pressure and separation",
+        "filtration",
+        "separation method"
+      ]
+    },
+    {
+      "id": "solubility-polarity",
+      "name": "Solubility and 'like dissolves like'",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.10"
+        ],
+        "related": [
+          "3.1",
+          "3.8",
+          "9.6"
+        ]
+      },
+      "definition": "Predicting and explaining solubility and miscibility from the relative strength of solute-solute, solvent-solvent and solute-solvent attractions.",
+      "include": "Tag when solubility or miscibility must be predicted or explained from molecular structure and forces.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product) or solubility rules for precipitates (tag precipitation).",
+      "examples": {
+        "positive": "Explain why ethanol is miscible with water but hexane is not.",
+        "negative": "Calculate the molar solubility of AgCl from Ksp."
+      },
+      "aliases": [
+        "like dissolves like",
+        "miscibility",
+        "polar solvent",
+        "nonpolar solvent"
+      ],
+      "related": [
+        "molecular-polarity",
+        "hydrogen-bonding",
+        "ion-dipole",
+        "dissolution-thermodynamics"
+      ],
+      "prerequisites": [
+        "molecular-polarity"
+      ],
+      "researchGroups": [
+        "solubility-qualitative"
+      ],
+      "microPatterns": [
+        "like-dissolves",
+        "polar vs nonpolar",
+        "miscib",
+        "solubility from molecular",
+        "solute-solvent interaction",
+        "water and ionic"
+      ]
+    },
+    {
+      "id": "em-spectrum",
+      "name": "Spectroscopy and molecular transitions",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.11"
+        ],
+        "related": [
+          "3.12"
+        ]
+      },
+      "definition": "Matching regions of the electromagnetic spectrum to the molecular changes they cause: microwave to rotation, infrared to vibration, and UV-visible to electronic transitions.",
+      "include": "Tag when a type of radiation must be linked to the transition it causes, or absorption versus emission distinguished.",
+      "exclude": "Do not tag photon energy calculations (tag photon-energy) or PES (tag photoelectron-spectroscopy).",
+      "examples": {
+        "positive": "Infrared radiation absorbed by CO2 causes which kind of molecular change?",
+        "negative": "Calculate the energy of a photon with λ = 500 nm."
+      },
+      "aliases": [
+        "electromagnetic spectrum",
+        "infrared",
+        "UV-visible",
+        "microwave",
+        "absorption",
+        "emission"
+      ],
+      "related": [
+        "photon-energy",
+        "beer-lambert"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "spectroscopy"
+      ],
+      "microPatterns": [
+        "absorption vs emission",
+        "rotational",
+        "vibrational",
+        "electronic transitions",
+        "photon energy levels",
+        "spectral region",
+        "electromagnetic",
+        "discrete molecular"
+      ]
+    },
+    {
+      "id": "photon-energy",
+      "name": "Photon energy, wavelength and frequency",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.12"
+        ],
+        "related": [
+          "1.6",
+          "3.11"
+        ]
+      },
+      "definition": "Using E = hν and c = λν to relate photon energy, frequency and wavelength, and connecting photon energy to energy-level differences.",
+      "include": "Tag when photon energy, wavelength or frequency must be calculated or compared.",
+      "exclude": "Do not tag qualitative matching of radiation region to transition type only (tag em-spectrum).",
+      "examples": {
+        "positive": "What is the wavelength of light whose photons carry 3.0 × 10^-19 J?",
+        "negative": "Which region of the spectrum causes molecular vibrations?"
+      },
+      "aliases": [
+        "E=hv",
+        "c=λν",
+        "Planck's constant",
+        "photon"
+      ],
+      "related": [
+        "em-spectrum",
+        "photoelectron-spectroscopy"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "photon-energy"
+      ],
+      "microPatterns": [
+        "photon",
+        "e=h",
+        "c=λν",
+        "wavelength frequency",
+        "frequency and wavelength",
+        "energy-level transitions",
+        "spectral comparison"
+      ]
+    },
+    {
+      "id": "beer-lambert",
+      "name": "Beer-Lambert law and spectrophotometry",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.13"
+        ],
+        "related": [
+          "3.11",
+          "5.1"
+        ]
+      },
+      "definition": "Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.",
+      "include": "Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.",
+      "exclude": "Do not tag general spectroscopy questions without an absorbance-concentration relationship.",
+      "examples": {
+        "positive": "Using the calibration curve, what is the concentration of a solution with absorbance 0.42?",
+        "negative": "Which transition does UV light cause?"
+      },
+      "aliases": [
+        "Beer's law",
+        "absorbance",
+        "calibration curve",
+        "spectrophotometer"
+      ],
+      "related": [
+        "molarity",
+        "em-spectrum"
+      ],
+      "prerequisites": [
+        "molarity"
+      ],
+      "researchGroups": [
+        "beer-lambert"
+      ],
+      "microPatterns": [
+        "absorbance",
+        "beer-lambert",
+        "calibration",
+        "path length",
+        "absorptivity",
+        "spectrophotometry"
+      ]
+    },
+    {
+      "id": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.1"
+        ],
+        "related": [
+          "4.3",
+          "4.4"
+        ]
+      },
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "examples": {
+        "positive": "Write a balanced equation for the complete combustion of propane.",
+        "negative": "Using the balanced equation given, find the mass of product."
+      },
+      "aliases": [
+        "balancing equations",
+        "chemical equation",
+        "coefficients"
+      ],
+      "related": [
+        "reaction-stoichiometry",
+        "net-ionic-equations"
+      ],
+      "prerequisites": [
+        "ionic-formulas"
+      ],
+      "researchGroups": [
+        "chemical-stoichiometry"
+      ],
+      "microPatterns": [
+        "balanced chemical",
+        "conservation of atoms$",
+        "coefficients vs subscripts",
+        "reaction states",
+        "equations from observations",
+        "macroscopic to symbolic",
+        "reactant and product identification",
+        "reaction stoichiometric ratios"
+      ]
+    },
+    {
+      "id": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.2"
+        ],
+        "related": [
+          "4.3",
+          "4.7",
+          "7.11"
+        ]
+      },
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "examples": {
+        "positive": "Write the net ionic equation for the reaction of AgNO3(aq) with NaCl(aq).",
+        "negative": "Classify the reaction of AgNO3 and NaCl as precipitation (tag reaction-types)."
+      },
+      "aliases": [
+        "net ionic",
+        "spectator ions",
+        "complete ionic equation"
+      ],
+      "related": [
+        "precipitation",
+        "balanced-equations",
+        "reaction-types"
+      ],
+      "prerequisites": [
+        "balanced-equations"
+      ],
+      "researchGroups": [
+        "net-ionic"
+      ],
+      "microPatterns": [
+        "ionic equation",
+        "spectator",
+        "aqueous ionic dissociation",
+        "strong electrolyte dissociation",
+        "soluble ions",
+        "charge and atom conservation"
+      ]
+    },
+    {
+      "id": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.3"
+        ],
+        "related": [
+          "4.5"
+        ]
+      },
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "examples": {
+        "positive": "Draw the particles present after the reaction in the box shown goes to completion.",
+        "negative": "Find the theoretical yield in grams."
+      },
+      "aliases": [
+        "particulate reaction diagram",
+        "particle drawing"
+      ],
+      "related": [
+        "limiting-reactant",
+        "balanced-equations"
+      ],
+      "prerequisites": [
+        "balanced-equations"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "particle-level reaction",
+        "reactant-to-product particle",
+        "conservation in particle",
+        "limiting reactant from particles",
+        "excess reactants in diagrams",
+        "representing ions",
+        "bridging symbolic",
+        "model consistency with balanced"
+      ]
+    },
+    {
+      "id": "physical-chemical-change",
+      "name": "Physical versus chemical change",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.4"
+        ],
+        "related": [
+          "3.3"
+        ]
+      },
+      "definition": "Distinguishing physical changes, in which particle identity is unchanged, from chemical changes, in which bonds rearrange to form new substances.",
+      "include": "Tag when a process must be classified as physical or chemical, or the classification explained at the particle level.",
+      "exclude": "Do not tag questions that merely involve a reaction without asking about the nature of the change.",
+      "examples": {
+        "positive": "Is dissolving sugar in water a physical or chemical change? Justify at the particle level.",
+        "negative": "Balance the equation for the reaction of Mg with HCl."
+      },
+      "aliases": [
+        "physical change",
+        "chemical change"
+      ],
+      "related": [
+        "particulate-states",
+        "balanced-equations"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "physical vs chemical",
+        "particle identity",
+        "bond rearrangement",
+        "macroscopic evidence",
+        "dissolution from reaction",
+        "before and after changes",
+        "without chemical identity",
+        "conservation of atoms through"
+      ]
+    },
+    {
+      "id": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.5"
+        ],
+        "related": [
+          "4.1",
+          "4.6",
+          "8.4",
+          "9.11"
+        ]
+      },
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "examples": {
+        "positive": "How many grams of CO2 form when 10.0 g of C3H8 burns completely?",
+        "negative": "Calculate the pH of 0.010 M HCl."
+      },
+      "aliases": [
+        "stoichiometry",
+        "mole ratios",
+        "mass-to-mass"
+      ],
+      "related": [
+        "limiting-reactant",
+        "mole-conversions",
+        "balanced-equations"
+      ],
+      "prerequisites": [
+        "mole-conversions",
+        "balanced-equations"
+      ],
+      "researchGroups": [
+        "chemical-stoichiometry"
+      ],
+      "microPatterns": [
+        "mole ratios",
+        "mass-to-mass",
+        "solution stoichiometry",
+        "molarity-volume reaction",
+        "conservation of matter",
+        "gas stoichiometry"
+      ]
+    },
+    {
+      "id": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.5"
+        ],
+        "related": [
+          "4.3"
+        ]
+      },
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "examples": {
+        "positive": "2.0 mol H2 reacts with 1.5 mol O2. Which is limiting and how much water forms?",
+        "negative": "How many moles of water form from 2.0 mol H2 with excess O2?"
+      },
+      "aliases": [
+        "limiting reagent",
+        "excess reactant",
+        "theoretical yield",
+        "percent yield"
+      ],
+      "related": [
+        "reaction-stoichiometry",
+        "reaction-representations"
+      ],
+      "prerequisites": [
+        "reaction-stoichiometry"
+      ],
+      "researchGroups": [
+        "limiting-reactants"
+      ],
+      "microPatterns": [
+        "limiting reactant calc",
+        "theoretical product",
+        "excess reactant remaining",
+        "percent yield"
+      ]
+    },
+    {
+      "id": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.6"
+        ],
+        "related": [
+          "8.5"
+        ]
+      },
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "examples": {
+        "positive": "25.0 mL of HCl requires 18.4 mL of 0.100 M NaOH. Find [HCl].",
+        "negative": "What is the pH at the half-equivalence point of a weak-acid titration?"
+      },
+      "aliases": [
+        "titration",
+        "equivalence point",
+        "titrant",
+        "analyte",
+        "endpoint"
+      ],
+      "related": [
+        "reaction-stoichiometry",
+        "titration-curves",
+        "molarity"
+      ],
+      "prerequisites": [
+        "reaction-stoichiometry",
+        "molarity"
+      ],
+      "researchGroups": [
+        "titration"
+      ],
+      "microPatterns": [
+        "titrant",
+        "standardized",
+        "equivalence point$",
+        "endpoint vs",
+        "titration stoichiometry",
+        "buret",
+        "unknown concentration from titration",
+        "indicator observation",
+        "quantitative reaction completion"
+      ]
+    },
+    {
+      "id": "reaction-types",
+      "name": "Classifying reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.8",
+          "4.9"
+        ]
+      },
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "examples": {
+        "positive": "Which of these reactions is an oxidation-reduction reaction?",
+        "negative": "Given the redox equation, calculate E°cell."
+      },
+      "aliases": [
+        "reaction types",
+        "precipitation reaction",
+        "acid-base reaction",
+        "redox reaction",
+        "combustion"
+      ],
+      "related": [
+        "oxidation-numbers",
+        "precipitation",
+        "bronsted-lowry"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "reaction identification",
+        "combustion as redox",
+        "classifying by observable"
+      ]
+    },
+    {
+      "id": "oxidation-numbers",
+      "name": "Oxidation numbers",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.9",
+          "9.8"
+        ]
+      },
+      "definition": "Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.",
+      "include": "Tag when oxidation numbers must be assigned or changes in them used.",
+      "exclude": "Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.",
+      "examples": {
+        "positive": "What is the oxidation number of Cr in Cr2O7^2-?",
+        "negative": "Calculate the formal charge on S in SO4^2- (tag formal-charge)."
+      },
+      "aliases": [
+        "oxidation state",
+        "oxidation number"
+      ],
+      "related": [
+        "redox-half-reactions",
+        "reaction-types",
+        "formal-charge"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "oxidation-state"
+      ],
+      "microPatterns": [
+        "oxidation-number",
+        "oxidation number",
+        "electrons transferred in redox"
+      ]
+    },
+    {
+      "id": "precipitation",
+      "name": "Precipitation reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.2",
+          "7.11"
+        ]
+      },
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "examples": {
+        "positive": "When Pb(NO3)2(aq) and KI(aq) are mixed, what is the precipitate?",
+        "negative": "Will a precipitate form if [Ag+][Cl-] exceeds Ksp? (tag solubility-product)"
+      },
+      "aliases": [
+        "precipitate",
+        "solubility rules",
+        "insoluble salt"
+      ],
+      "related": [
+        "net-ionic-equations",
+        "solubility-product"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "precipitation"
+      ],
+      "microPatterns": [
+        "precipitate",
+        "basic solubility facts"
+      ]
+    },
+    {
+      "id": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "4.8"
+        ],
+        "related": [
+          "8.1",
+          "8.3"
+        ]
+      },
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "examples": {
+        "positive": "In HCO3- + H2O ⇌ CO3^2- + H3O+, identify the conjugate acid-base pairs.",
+        "negative": "Calculate the pH of 0.10 M acetic acid (tag weak-acid-equilibrium)."
+      },
+      "aliases": [
+        "Bronsted-Lowry",
+        "conjugate pair",
+        "conjugate base",
+        "conjugate acid",
+        "proton transfer",
+        "amphiprotic"
+      ],
+      "related": [
+        "weak-acid-equilibrium",
+        "strong-weak-acids"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "conjugate-acid-base"
+      ],
+      "microPatterns": [
+        "brønsted",
+        "bronsted",
+        "conjugate acid-base",
+        "proton-transfer",
+        "amphiprotic",
+        "acid-base species identification",
+        "hydronium formation",
+        "hydroxide formation",
+        "proton donor",
+        "proton acceptor"
+      ]
+    },
+    {
+      "id": "redox-half-reactions",
+      "name": "Redox half-reactions and balancing",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.9"
+        ],
+        "related": [
+          "9.8",
+          "9.11"
+        ]
+      },
+      "definition": "Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.",
+      "include": "Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.",
+      "exclude": "Do not tag simple oxidation-number assignment (tag oxidation-numbers).",
+      "examples": {
+        "positive": "Balance MnO4- + Fe2+ → Mn2+ + Fe3+ in acidic solution.",
+        "negative": "What is the oxidation number of Mn in MnO4-?"
+      },
+      "aliases": [
+        "half reaction",
+        "balancing redox",
+        "electron transfer",
+        "redox"
+      ],
+      "related": [
+        "oxidation-numbers",
+        "electrochemical-cells",
+        "cell-potential"
+      ],
+      "prerequisites": [
+        "oxidation-numbers"
+      ],
+      "researchGroups": [
+        "redox"
+      ],
+      "microPatterns": [
+        "half-reaction",
+        "electron loss",
+        "electron cancellation",
+        "balancing charge",
+        "balanced redox",
+        "electron stoichiometry in redox"
+      ]
+    },
+    {
+      "id": "reaction-rate",
+      "name": "Reaction rates",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.1"
+        ],
+        "related": [
+          "5.2"
+        ]
+      },
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "examples": {
+        "positive": "If O2 forms at 0.020 M/s in 2N2O5 → 4NO2 + O2, how fast does N2O5 disappear?",
+        "negative": "Determine the order of reaction with respect to NO from initial-rate data."
+      },
+      "aliases": [
+        "reaction rate",
+        "rate of reaction",
+        "average rate",
+        "instantaneous rate"
+      ],
+      "related": [
+        "rate-law",
+        "integrated-rate-laws"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "kinetics-graphs"
+      ],
+      "microPatterns": [
+        "reaction rate$",
+        "average reaction",
+        "instantaneous",
+        "sign convention",
+        "stoichiometric rate",
+        "initial vs later",
+        "reactant disappearance"
+      ]
+    },
+    {
+      "id": "rate-law",
+      "name": "Rate laws and reaction order",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.2"
+        ],
+        "related": [
+          "5.1",
+          "5.3",
+          "5.4",
+          "5.8"
+        ]
+      },
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "examples": {
+        "positive": "Doubling [A] quadruples the rate. What is the order with respect to A?",
+        "negative": "Which step of the proposed mechanism is rate determining?"
+      },
+      "aliases": [
+        "rate law",
+        "reaction order",
+        "initial rates",
+        "rate constant",
+        "k"
+      ],
+      "related": [
+        "reaction-rate",
+        "integrated-rate-laws",
+        "mechanism-rate-law"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "rate-law"
+      ],
+      "microPatterns": [
+        "rate law$",
+        "initial rates",
+        "reaction order",
+        "overall reaction order",
+        "rate constant k",
+        "rate constant units",
+        "rate vs concentration",
+        "predicting rate",
+        "order from stoichiometric"
+      ]
+    },
+    {
+      "id": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.3"
+        ],
+        "related": [
+          "5.1",
+          "5.2"
+        ]
+      },
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "examples": {
+        "positive": "A plot of ln[A] versus time is linear with slope -0.035 min^-1. Find the half-life.",
+        "negative": "Use initial-rate data to find the order in B."
+      },
+      "aliases": [
+        "half-life",
+        "first order",
+        "second order",
+        "ln[A] vs time",
+        "integrated rate law"
+      ],
+      "related": [
+        "rate-law",
+        "reaction-rate"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "kinetics-graphs"
+      ],
+      "microPatterns": [
+        "integrated rate",
+        "linearized",
+        "ln concentration",
+        "inverse concentration",
+        "rate constant from graph",
+        "half-life",
+        "decay fraction",
+        "choosing order"
+      ]
+    },
+    {
+      "id": "elementary-steps",
+      "name": "Elementary reactions and molecularity",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.4"
+        ],
+        "related": [
+          "5.7",
+          "5.8"
+        ]
+      },
+      "definition": "Recognizing that an elementary step's rate law follows directly from its molecularity (unimolecular, bimolecular), unlike an overall reaction.",
+      "include": "Tag when the rate law or molecularity of an elementary step must be written or identified.",
+      "exclude": "Do not tag experimental rate laws for overall reactions (tag rate-law).",
+      "examples": {
+        "positive": "Write the rate law for the elementary step NO + O3 → NO2 + O2.",
+        "negative": "Write the rate law from the initial-rate data table."
+      },
+      "aliases": [
+        "elementary step",
+        "molecularity",
+        "bimolecular",
+        "unimolecular"
+      ],
+      "related": [
+        "reaction-mechanisms",
+        "mechanism-rate-law",
+        "collision-model"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "reaction-mechanism"
+      ],
+      "microPatterns": [
+        "elementary",
+        "molecularity",
+        "unimolecular",
+        "collision participants",
+        "termolecular"
+      ]
+    },
+    {
+      "id": "collision-model",
+      "name": "Collision model and temperature effects",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.5"
+        ],
+        "related": [
+          "3.5",
+          "5.6"
+        ]
+      },
+      "definition": "Explaining rate changes through collision frequency, the fraction of collisions with energy at least Ea (Maxwell-Boltzmann distribution), and correct orientation.",
+      "include": "Tag when a change in rate with temperature, concentration or orientation must be explained at the particle level.",
+      "exclude": "Numerical Arrhenius-equation calculations are not assessed.",
+      "examples": {
+        "positive": "Use a Maxwell-Boltzmann distribution to explain why a 10 °C rise can double the rate.",
+        "negative": "Determine the rate constant from a ln[A] plot."
+      },
+      "aliases": [
+        "collision theory",
+        "effective collisions",
+        "orientation",
+        "Maxwell-Boltzmann energy distribution"
+      ],
+      "related": [
+        "activation-energy",
+        "kinetic-molecular-theory",
+        "catalysis"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "activation-energy"
+      ],
+      "microPatterns": [
+        "collision orientation",
+        "activation energy threshold",
+        "collision frequency$",
+        "temperature and collision",
+        "maxwell-boltzmann energy",
+        "energetic collisions",
+        "concentration and collision",
+        "kinetic explanation",
+        "molecular orientation"
+      ]
+    },
+    {
+      "id": "activation-energy",
+      "name": "Activation energy and energy profiles",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.6",
+          "5.10"
+        ],
+        "related": [
+          "5.11",
+          "9.4"
+        ]
+      },
+      "definition": "Reading single- and multi-step reaction energy profiles: activation energy, transition states, intermediates, forward and reverse barriers, the rate-limiting barrier, and overall ΔH.",
+      "include": "Tag when an energy profile must be read, drawn or used, or activation energies compared.",
+      "exclude": "Do not tag simple enthalpy diagrams with no activation barrier (tag endo-exothermic).",
+      "examples": {
+        "positive": "From the energy profile, what is the activation energy of the reverse reaction?",
+        "negative": "Is a reaction with ΔH = -50 kJ/mol exothermic?"
+      },
+      "aliases": [
+        "Ea",
+        "transition state",
+        "activated complex",
+        "energy profile",
+        "reaction coordinate diagram"
+      ],
+      "related": [
+        "collision-model",
+        "catalysis",
+        "reaction-mechanisms",
+        "endo-exothermic"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "activation-energy",
+        "reaction-energy-profile"
+      ],
+      "microPatterns": [
+        "activation energ",
+        "transition.state",
+        "activated complex",
+        "energy profile",
+        "energy levels$",
+        "single-step energy",
+        "exothermic vs endothermic profile",
+        "multiple peaks",
+        "intermediate valleys",
+        "rate-limiting energy",
+        "relative activation",
+        "overall enthalpy from multistep",
+        "pathway barriers",
+        "reaction enthalpy vs activation"
+      ]
+    },
+    {
+      "id": "reaction-mechanisms",
+      "name": "Reaction mechanisms and intermediates",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.7"
+        ],
+        "related": [
+          "5.4",
+          "5.8",
+          "5.11"
+        ]
+      },
+      "definition": "Combining elementary steps into an overall equation, and identifying intermediates (formed then consumed) and catalysts (consumed then regenerated).",
+      "include": "Tag when a mechanism's steps must be added or intermediates and catalysts identified.",
+      "exclude": "Do not tag rate-law derivation from the mechanism (tag mechanism-rate-law) unless steps are also combined.",
+      "examples": {
+        "positive": "Identify the intermediate in the two-step mechanism shown.",
+        "negative": "Determine the order of the reaction from initial rates."
+      },
+      "aliases": [
+        "mechanism",
+        "intermediate",
+        "multistep reaction"
+      ],
+      "related": [
+        "elementary-steps",
+        "mechanism-rate-law",
+        "catalysis"
+      ],
+      "prerequisites": [
+        "elementary-steps"
+      ],
+      "researchGroups": [
+        "reaction-mechanism"
+      ],
+      "microPatterns": [
+        "multi-step reaction mechanism",
+        "intermediates formed",
+        "catalysts consumed",
+        "adding steps",
+        "mechanism consistency with net",
+        "distinguishing intermediates",
+        "rate-determining step identification"
+      ]
+    },
+    {
+      "id": "mechanism-rate-law",
+      "name": "Mechanisms and rate laws",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.8",
+          "5.9"
+        ],
+        "related": [
+          "5.7"
+        ]
+      },
+      "definition": "Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.",
+      "include": "Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.",
+      "exclude": "Do not tag experimental order determination with no mechanism.",
+      "examples": {
+        "positive": "Is the proposed mechanism with a slow first step consistent with rate = k[NO2]^2? Justify.",
+        "negative": "Find k from the initial-rate table."
+      },
+      "aliases": [
+        "rate-determining step",
+        "slow step",
+        "pre-equilibrium"
+      ],
+      "related": [
+        "reaction-mechanisms",
+        "rate-law",
+        "elementary-steps"
+      ],
+      "prerequisites": [
+        "elementary-steps",
+        "rate-law"
+      ],
+      "researchGroups": [
+        "rate-law",
+        "reaction-mechanism"
+      ],
+      "microPatterns": [
+        "rate-determining step$",
+        "slow elementary",
+        "rate law agreement",
+        "testing proposed",
+        "fast vs slow",
+        "intermediate elimination",
+        "overall rate vs",
+        "mechanism evidence",
+        "pre-equilibrium",
+        "slow step after",
+        "intermediate concentration substitution",
+        "derived rate law",
+        "eliminating intermediates",
+        "mechanism compatibility",
+        "slow-first-step"
+      ]
+    },
+    {
+      "id": "catalysis",
+      "name": "Catalysis",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.11"
+        ],
+        "related": [
+          "5.6",
+          "5.7",
+          "9.4"
+        ]
+      },
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "examples": {
+        "positive": "How does adding a catalyst affect the activation energy and the value of K?",
+        "negative": "Identify the intermediate in the mechanism."
+      },
+      "aliases": [
+        "catalyst",
+        "enzyme",
+        "heterogeneous catalyst",
+        "homogeneous catalyst"
+      ],
+      "related": [
+        "activation-energy",
+        "reaction-mechanisms"
+      ],
+      "prerequisites": [
+        "activation-energy"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "catalys",
+        "catalyzed",
+        "alternative reaction mechanism",
+        "without thermodynamic",
+        "enzyme",
+        "energy-profile comparison",
+        "catalyst"
+      ]
+    },
+    {
+      "id": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.1",
+          "6.2"
+        ],
+        "related": [
+          "6.6"
+        ]
+      },
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "examples": {
+        "positive": "When NH4NO3 dissolves, the water cools. Is the process endothermic or exothermic?",
+        "negative": "Calculate ΔH° from bond enthalpies."
+      },
+      "aliases": [
+        "endothermic",
+        "exothermic",
+        "heat flow",
+        "energy diagram",
+        "system and surroundings"
+      ],
+      "related": [
+        "heat-transfer",
+        "calorimetry",
+        "enthalpy-of-reaction"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "reaction-enthalpy"
+      ],
+      "microPatterns": [
+        "absorbed vs released",
+        "system vs surroundings",
+        "sign of heat",
+        "endothermic vs exothermic observ",
+        "enthalpy sign",
+        "temperature change vs heat",
+        "energy transfer during",
+        "energy diagram",
+        "endothermic product",
+        "exothermic product",
+        "energy change from vertical",
+        "distinguishing energy diagrams",
+        "reactant vs product energy"
+      ]
+    },
+    {
+      "id": "heat-transfer",
+      "name": "Heat transfer and thermal equilibrium",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.3"
+        ],
+        "related": [
+          "6.4",
+          "6.1"
+        ]
+      },
+      "definition": "Heat flows from hotter to colder matter until thermal equilibrium; energy lost by one part equals energy gained by the other; temperature differs from thermal energy.",
+      "include": "Tag when the direction of heat flow, final temperature reasoning, or the particle explanation of heat transfer is required.",
+      "exclude": "Do not tag calorimetry calculations that only use q = mcΔT (tag calorimetry), unless thermal equilibrium itself is reasoned about.",
+      "examples": {
+        "positive": "A hot metal is placed in cool water. Explain at the particle level how the water warms.",
+        "negative": "Find the specific heat from q, m and ΔT."
+      },
+      "aliases": [
+        "thermal equilibrium",
+        "heat flow",
+        "heat lost equals heat gained"
+      ],
+      "related": [
+        "calorimetry",
+        "endo-exothermic"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "calorimetry"
+      ],
+      "microPatterns": [
+        "hot to cold",
+        "thermal equilibrium",
+        "system-surroundings heat",
+        "temperature vs thermal",
+        "conservation of transferred",
+        "heat lost equals",
+        "particle collisions in heat",
+        "energy exchange direction",
+        "energy conservation in heat"
+      ]
+    },
+    {
+      "id": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.4"
+        ],
+        "related": [
+          "6.1",
+          "6.3",
+          "6.6"
+        ]
+      },
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "examples": {
+        "positive": "50.0 mL of solution warms by 6.2 °C during a reaction. Find ΔH per mole of the limiting reactant.",
+        "negative": "How much heat melts 2.0 mol of ice?"
+      },
+      "aliases": [
+        "q=mcΔT",
+        "specific heat",
+        "coffee-cup calorimeter",
+        "heat capacity"
+      ],
+      "related": [
+        "heat-transfer",
+        "enthalpy-of-reaction"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "calorimetry"
+      ],
+      "microPatterns": [
+        "q=mc",
+        "specific heat",
+        "heat capacity",
+        "calorimet",
+        "reaction heat from solution",
+        "heat lost and gained sign"
+      ]
+    },
+    {
+      "id": "phase-change-energy",
+      "name": "Energy of phase changes",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.5"
+        ],
+        "related": [
+          "3.1",
+          "3.3"
+        ]
+      },
+      "definition": "Heat absorbed or released during melting, vaporization, freezing and condensation (q = nΔH), constant temperature during a phase change, and heating or cooling curves.",
+      "include": "Tag when enthalpies of fusion or vaporization, heating curves, or phase-change energy must be used.",
+      "exclude": "Phase diagrams are not assessed.",
+      "examples": {
+        "positive": "How much energy is needed to vaporize 36.0 g of water at 100 °C?",
+        "negative": "Rank three liquids by boiling point using their structures (tag imf-properties)."
+      },
+      "aliases": [
+        "heat of fusion",
+        "heat of vaporization",
+        "heating curve",
+        "cooling curve"
+      ],
+      "related": [
+        "imf-properties",
+        "calorimetry",
+        "particulate-states"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "states-of-matter"
+      ],
+      "microPatterns": [
+        "fusion",
+        "vaporization",
+        "q=nδh",
+        "heating and cooling curve",
+        "constant temperature during",
+        "segment-wise",
+        "intermolecular attractions and phase",
+        "melting boiling"
+      ]
+    },
+    {
+      "id": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.6"
+        ],
+        "related": [
+          "6.7",
+          "6.8",
+          "6.9"
+        ]
+      },
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "examples": {
+        "positive": "ΔH = -890 kJ/mol for CH4 combustion. How much heat is released by burning 8.0 g of CH4?",
+        "negative": "Use ΔHf° values to calculate ΔH°rxn (tag enthalpy-of-formation)."
+      },
+      "aliases": [
+        "ΔH",
+        "enthalpy change",
+        "thermochemical equation",
+        "heat of reaction"
+      ],
+      "related": [
+        "calorimetry",
+        "hess-law",
+        "enthalpy-of-formation",
+        "bond-enthalpy"
+      ],
+      "prerequisites": [
+        "endo-exothermic"
+      ],
+      "researchGroups": [
+        "reaction-enthalpy"
+      ],
+      "microPatterns": [
+        "enthalpy change for reaction",
+        "scaling of δh",
+        "reversing reaction reverses",
+        "exothermic vs endothermic δh",
+        "enthalpy per mole",
+        "thermochemical equations",
+        "reaction vs surroundings heat",
+        "constant pressure"
+      ]
+    },
+    {
+      "id": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.7"
+        ],
+        "related": [
+          "2.2",
+          "6.6"
+        ]
+      },
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "examples": {
+        "positive": "Use average bond enthalpies to estimate ΔH for H2 + Cl2 → 2HCl.",
+        "negative": "Which bond is shorter, N≡N or N=N?"
+      },
+      "aliases": [
+        "bond energy",
+        "bond dissociation enthalpy",
+        "bonds broken",
+        "bonds formed"
+      ],
+      "related": [
+        "enthalpy-of-reaction",
+        "bond-order",
+        "bond-potential-energy"
+      ],
+      "prerequisites": [
+        "lewis-structures"
+      ],
+      "researchGroups": [
+        "reaction-enthalpy"
+      ],
+      "microPatterns": [
+        "bond breaking",
+        "bond formation",
+        "bond enthalpy",
+        "bonds broken",
+        "bond order and bond strength",
+        "comparative reaction energies",
+        "bond rearrangements in molecular"
+      ]
+    },
+    {
+      "id": "enthalpy-of-formation",
+      "name": "Standard enthalpies of formation",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.8"
+        ],
+        "related": [
+          "6.6",
+          "6.9"
+        ]
+      },
+      "definition": "Calculating ΔH°rxn as the sum of ΔHf° of products minus reactants, with elements in their standard states assigned zero.",
+      "include": "Tag when ΔHf° values are used or a formation reaction must be identified.",
+      "exclude": "Do not tag Hess's-law manipulations of non-formation equations (tag hess-law).",
+      "examples": {
+        "positive": "Using ΔHf° data, calculate ΔH° for 2CO + O2 → 2CO2.",
+        "negative": "Combine the two given equations to find ΔH for the target reaction."
+      },
+      "aliases": [
+        "ΔHf",
+        "heat of formation",
+        "standard state"
+      ],
+      "related": [
+        "hess-law",
+        "enthalpy-of-reaction"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "reaction-enthalpy",
+        "hess-law"
+      ],
+      "microPatterns": [
+        "enthalpy of formation",
+        "reference states",
+        "formation enthalpies",
+        "products minus reactants method",
+        "δhf",
+        "reference zero",
+        "formation data",
+        "enthalpy tables"
+      ]
+    },
+    {
+      "id": "hess-law",
+      "name": "Hess's law",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.9"
+        ],
+        "related": [
+          "6.6",
+          "6.8",
+          "7.6"
+        ]
+      },
+      "definition": "Finding the enthalpy change of a target reaction by reversing, scaling and adding equations with known ΔH, because enthalpy is a state function.",
+      "include": "Tag when equations must be manipulated and combined to obtain ΔH, or path independence is explained.",
+      "exclude": "Do not tag the analogous manipulation of K values (tag k-manipulation).",
+      "examples": {
+        "positive": "Use the three given reactions and their ΔH values to find ΔH for C + 2H2 → CH4.",
+        "negative": "Reverse a reaction and find the new K."
+      },
+      "aliases": [
+        "Hess law",
+        "path independence",
+        "state function"
+      ],
+      "related": [
+        "enthalpy-of-formation",
+        "enthalpy-of-reaction",
+        "k-manipulation"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "hess-law"
+      ],
+      "microPatterns": [
+        "path independence",
+        "reaction reversal and δh",
+        "scaling equations",
+        "addition of chemical",
+        "canceling intermediates",
+        "hess",
+        "missing reaction enthalpy",
+        "state function"
+      ]
+    },
+    {
+      "id": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.1",
+          "7.2",
+          "7.8"
+        ],
+        "related": []
+      },
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "examples": {
+        "positive": "At equilibrium, which statement about the forward and reverse reaction rates is true?",
+        "negative": "Calculate K from equilibrium concentrations."
+      },
+      "aliases": [
+        "equilibrium",
+        "reversible reaction",
+        "forward and reverse rates"
+      ],
+      "related": [
+        "reaction-quotient",
+        "k-magnitude"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": [
+        "reversible",
+        "dynamic equilibrium",
+        "rates equal",
+        "constant concentrations",
+        "extent vs equilibrium",
+        "closed-system",
+        "particle-scale dynamic",
+        "equilibrium vs reaction completion",
+        "forward vs reverse direction",
+        "approach to equilibrium",
+        "rate changes approaching",
+        "particle diagrams at equilibrium",
+        "relative reactant and product counts",
+        "forward and reverse reaction arrows",
+        "concentration-time equilibrium",
+        "equal rates",
+        "particle evidence",
+        "macroscopic stability",
+        "consistency between k"
+      ]
+    },
+    {
+      "id": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.3"
+        ],
+        "related": [
+          "7.11",
+          "8.3"
+        ]
+      },
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "examples": {
+        "positive": "Write the Kc expression for CaCO3(s) ⇌ CaO(s) + CO2(g).",
+        "negative": "Calculate K from given concentrations (tag equilibrium-constant-calculation)."
+      },
+      "aliases": [
+        "Kc",
+        "Kp",
+        "equilibrium constant",
+        "law of mass action"
+      ],
+      "related": [
+        "reaction-quotient",
+        "equilibrium-constant-calculation"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "equilibrium-expression"
+      ],
+      "microPatterns": [
+        "equilibrium expression",
+        "reaction quotient expression",
+        "exclude pure",
+        "stoichiometric exponents",
+        "product over reactant",
+        "qc vs kc",
+        "qp vs kp",
+        "partial pressures in gas"
+      ]
+    },
+    {
+      "id": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.3",
+          "7.2",
+          "7.10"
+        ],
+        "related": [
+          "7.11",
+          "9.5"
+        ]
+      },
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "examples": {
+        "positive": "Given initial pressures, calculate Qp and predict whether more NH3 forms.",
+        "negative": "Predict the shift when the volume is decreased."
+      },
+      "aliases": [
+        "Q vs K",
+        "Qc",
+        "Qp",
+        "reaction direction"
+      ],
+      "related": [
+        "equilibrium-expression",
+        "le-chatelier",
+        "free-energy-equilibrium"
+      ],
+      "prerequisites": [
+        "equilibrium-expression"
+      ],
+      "researchGroups": [
+        "reaction-quotient"
+      ],
+      "microPatterns": [
+        "quotient q",
+        "q vs k",
+        "q-k analysis",
+        "q after",
+        "initial concentration and reaction direction",
+        "net reaction direction",
+        "equilibrium composition prediction",
+        "reaction direction to restore"
+      ]
+    },
+    {
+      "id": "equilibrium-constant-calculation",
+      "name": "Calculating K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.4"
+        ],
+        "related": [
+          "7.7"
+        ]
+      },
+      "definition": "Calculating an equilibrium constant by substituting equilibrium concentrations or partial pressures, including those obtained from initial amounts and stoichiometry.",
+      "include": "Tag when a numerical value of K must be calculated.",
+      "exclude": "Do not tag when K is given and equilibrium concentrations are found (tag ice-tables).",
+      "examples": {
+        "positive": "At equilibrium, [H2] = 0.10 M, [I2] = 0.20 M and [HI] = 0.80 M. Calculate Kc.",
+        "negative": "K = 50. Find [HI] at equilibrium from initial values."
+      },
+      "aliases": [
+        "calculate K",
+        "K from data"
+      ],
+      "related": [
+        "equilibrium-expression",
+        "ice-tables"
+      ],
+      "prerequisites": [
+        "equilibrium-expression"
+      ],
+      "researchGroups": [
+        "equilibrium-expression"
+      ],
+      "microPatterns": [
+        "substitution",
+        "k calculation",
+        "k from ice",
+        "stoichiometric concentration changes",
+        "equilibrium value from experimental",
+        "mathematical interpretation of k",
+        "checking balanced equation in k"
+      ]
+    },
+    {
+      "id": "k-magnitude",
+      "name": "Magnitude of K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.5"
+        ],
+        "related": [
+          "9.5"
+        ]
+      },
+      "definition": "Interpreting the size of K: K much greater than 1 favors products, much less than 1 favors reactants, and K says nothing about reaction speed.",
+      "include": "Tag when the relative amounts of reactants and products at equilibrium must be inferred from K's magnitude.",
+      "exclude": "Do not tag ΔG°-K conversions (tag free-energy-equilibrium) unless magnitude is interpreted.",
+      "examples": {
+        "positive": "For a reaction with K = 2 × 10^-12, which species predominate at equilibrium?",
+        "negative": "Calculate K from ΔG°."
+      },
+      "aliases": [
+        "large K",
+        "small K",
+        "product-favored",
+        "reactant-favored"
+      ],
+      "related": [
+        "dynamic-equilibrium",
+        "free-energy-equilibrium"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "equilibrium-expression"
+      ],
+      "microPatterns": [
+        "large k",
+        "small k",
+        "k near one",
+        "relative equilibrium concentrations",
+        "extent vs reaction speed",
+        "comparing equilibrium positions",
+        "significant species",
+        "qualitative equilibrium reasoning"
+      ]
+    },
+    {
+      "id": "k-manipulation",
+      "name": "Manipulating equilibrium constants",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.6"
+        ],
+        "related": [
+          "6.9"
+        ]
+      },
+      "definition": "Finding K for a modified reaction: reversing gives 1/K, multiplying coefficients by n gives K^n, and adding reactions multiplies their K values.",
+      "include": "Tag when K must be calculated for a reversed, scaled or combined equation.",
+      "exclude": "Do not tag Hess's-law ΔH manipulation (tag hess-law).",
+      "examples": {
+        "positive": "If K = 4.0 for A ⇌ 2B, what is K for B ⇌ ½A?",
+        "negative": "Combine equations to find ΔH."
+      },
+      "aliases": [
+        "1/K",
+        "K^n",
+        "combining equilibria"
+      ],
+      "related": [
+        "equilibrium-expression",
+        "hess-law"
+      ],
+      "prerequisites": [
+        "equilibrium-expression"
+      ],
+      "researchGroups": [
+        "equilibrium-expression"
+      ],
+      "microPatterns": [
+        "1/k",
+        "raises k",
+        "multiplies k",
+        "transforming equilibrium",
+        "combining reaction steps",
+        "matching k to equation",
+        "corresponding q transformations"
+      ]
+    },
+    {
+      "id": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.7"
+        ],
+        "related": [
+          "7.4",
+          "7.11",
+          "8.3"
+        ]
+      },
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "examples": {
+        "positive": "K = 0.040 and initial [PCl5] = 0.50 M. Find [Cl2] at equilibrium.",
+        "negative": "Write the K expression."
+      },
+      "aliases": [
+        "ICE table",
+        "initial change equilibrium",
+        "RICE",
+        "small x approximation"
+      ],
+      "related": [
+        "equilibrium-constant-calculation",
+        "weak-acid-equilibrium",
+        "solubility-product"
+      ],
+      "prerequisites": [
+        "equilibrium-expression"
+      ],
+      "researchGroups": [
+        "ice-tables"
+      ],
+      "microPatterns": [
+        "ice table",
+        "initial change equilibrium",
+        "x relationships",
+        "equilibrium equation solving",
+        "initial and equilibrium amount",
+        "small-x",
+        "quadratic",
+        "nonnegative",
+        "missing equilibrium species"
+      ]
+    },
+    {
+      "id": "le-chatelier",
+      "name": "Le Châtelier's principle",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.9",
+          "7.10"
+        ],
+        "related": [
+          "7.12",
+          "8.11"
+        ]
+      },
+      "definition": "Predicting how an equilibrium shifts after changes in concentration, volume or pressure, or temperature, and recognizing that only temperature changes K.",
+      "include": "Tag when the direction of a shift or the effect of a stress on amounts or K must be predicted or explained.",
+      "exclude": "Do not tag Q-K calculations alone (tag reaction-quotient); catalysts do not shift equilibrium (tag catalysis if asked).",
+      "examples": {
+        "positive": "For an exothermic reaction at equilibrium, how does raising the temperature affect K and [products]?",
+        "negative": "Calculate K from equilibrium pressures."
+      },
+      "aliases": [
+        "Le Chatelier",
+        "equilibrium shift",
+        "stress",
+        "LeChatelier"
+      ],
+      "related": [
+        "reaction-quotient",
+        "common-ion-effect",
+        "ph-solubility"
+      ],
+      "prerequisites": [
+        "dynamic-equilibrium"
+      ],
+      "researchGroups": [
+        "le-chatelier"
+      ],
+      "microPatterns": [
+        "stress",
+        "inert gas",
+        "adding pure solids",
+        "shift vs change",
+        "new equilibrium position",
+        "immediate concentration change",
+        "partial-pressure changes after",
+        "temperature-dependent k",
+        "shift from equilibrium constant",
+        "evidence for qualitative shifts",
+        "endothermic vs exothermic temperature"
+      ]
+    },
+    {
+      "id": "solubility-product",
+      "name": "Solubility equilibria and Ksp",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.11"
+        ],
+        "related": [
+          "7.12",
+          "4.7"
+        ]
+      },
+      "definition": "Writing Ksp expressions, converting between Ksp and molar solubility using formula stoichiometry, comparing solubilities, and predicting precipitation with Q versus Ksp.",
+      "include": "Tag when Ksp, molar solubility, or a quantitative precipitation test is used.",
+      "exclude": "Do not tag qualitative precipitate prediction from solubility facts (tag precipitation).",
+      "examples": {
+        "positive": "Ksp of CaF2 is 3.9 × 10^-11. Calculate its molar solubility.",
+        "negative": "Which product of mixing NaCl and AgNO3 precipitates?"
+      },
+      "aliases": [
+        "Ksp",
+        "molar solubility",
+        "solubility product"
+      ],
+      "related": [
+        "common-ion-effect",
+        "precipitation",
+        "ice-tables"
+      ],
+      "prerequisites": [
+        "equilibrium-expression"
+      ],
+      "researchGroups": [
+        "solubility-product"
+      ],
+      "microPatterns": [
+        "ksp",
+        "dissolution-precipitation",
+        "molar solubility",
+        "qsp",
+        "dissolving ionic solids",
+        "solubility of salts",
+        "solubility vs"
+      ]
+    },
+    {
+      "id": "common-ion-effect",
+      "name": "Common-ion effect",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.12"
+        ],
+        "related": [
+          "7.11",
+          "7.9"
+        ]
+      },
+      "definition": "The decrease in solubility of a salt when an ion it shares is already present in solution, predicted qualitatively by Le Châtelier and quantitatively with Ksp.",
+      "include": "Tag when solubility in a solution containing a common ion must be compared or calculated.",
+      "exclude": "Do not tag pH effects on solubility (tag ph-solubility).",
+      "examples": {
+        "positive": "Is AgCl more or less soluble in 0.10 M NaCl than in pure water? Calculate its solubility in the NaCl solution.",
+        "negative": "Why does Mg(OH)2 dissolve in acid?"
+      },
+      "aliases": [
+        "common ion"
+      ],
+      "related": [
+        "solubility-product",
+        "le-chatelier"
+      ],
+      "prerequisites": [
+        "solubility-product"
+      ],
+      "researchGroups": [
+        "solubility-product",
+        "le-chatelier"
+      ],
+      "microPatterns": [
+        "common ion",
+        "common-ion",
+        "solubility decrease",
+        "shift in dissolution",
+        "precipitation from added",
+        "pure water vs",
+        "ion concentration and solid"
+      ]
+    },
+    {
+      "id": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.1"
+        ],
+        "related": [
+          "8.3",
+          "8.6"
+        ]
+      },
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "examples": {
+        "positive": "Which particulate diagram represents a 0.1 M solution of a weak acid HA?",
+        "negative": "Calculate Ka from pH."
+      },
+      "aliases": [
+        "strong acid",
+        "weak acid",
+        "strong base",
+        "weak base",
+        "ionization"
+      ],
+      "related": [
+        "bronsted-lowry",
+        "weak-acid-equilibrium",
+        "acid-strength-structure"
+      ],
+      "prerequisites": [
+        "bronsted-lowry"
+      ],
+      "researchGroups": [
+        "conjugate-acid-base"
+      ],
+      "microPatterns": [
+        "strong vs weak acid",
+        "strong vs weak base",
+        "complete vs partial",
+        "strength vs concentration",
+        "particulate models",
+        "relative conjugate strengths",
+        "hydronium and hydroxide"
+      ]
+    },
+    {
+      "id": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.2"
+        ],
+        "related": [
+          "8.3",
+          "8.4",
+          "8.5",
+          "3.7"
+        ]
+      },
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "examples": {
+        "positive": "What is the pH of 0.0050 M Ba(OH)2?",
+        "negative": "Write the Ka expression for HF."
+      },
+      "aliases": [
+        "pH",
+        "pOH",
+        "Kw",
+        "hydronium concentration"
+      ],
+      "related": [
+        "dilution",
+        "weak-acid-equilibrium"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "ph-logarithms"
+      ],
+      "microPatterns": [
+        "ph logarithmic",
+        "poh logarithmic",
+        "kw and",
+        "strong acid concentration",
+        "strong base concentration",
+        "interconversion",
+        "dilution effect on ph",
+        "tenfold",
+        "acidic neutral and basic"
+      ]
+    },
+    {
+      "id": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.3"
+        ],
+        "related": [
+          "7.3",
+          "7.7",
+          "8.5",
+          "8.7"
+        ]
+      },
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "examples": {
+        "positive": "Calculate the pH of 0.20 M HCN (Ka = 6.2 × 10^-10).",
+        "negative": "Find the pH of a buffer with equal [HA] and [A-]."
+      },
+      "aliases": [
+        "Ka",
+        "Kb",
+        "percent ionization",
+        "weak acid pH",
+        "acid dissociation constant"
+      ],
+      "related": [
+        "ice-tables",
+        "ph-poh",
+        "strong-weak-acids"
+      ],
+      "prerequisites": [
+        "equilibrium-expression",
+        "ph-poh"
+      ],
+      "researchGroups": [
+        "weak-acid-equilibrium"
+      ],
+      "microPatterns": [
+        "ka equilibrium",
+        "kb equilibrium",
+        "weak acid ionization",
+        "weak base ionization",
+        "percent ionization",
+        "ionization vs initial",
+        "ka-kb-kw",
+        "strength from equilibrium constant",
+        "relative species at equilibrium",
+        "initial concentration from ph"
+      ]
+    },
+    {
+      "id": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.4"
+        ],
+        "related": [
+          "4.8",
+          "8.5",
+          "8.8"
+        ]
+      },
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "examples": {
+        "positive": "Find the pH after mixing 50.0 mL of 0.10 M HCl with 30.0 mL of 0.10 M NaOH.",
+        "negative": "Identify the buffer region on the titration curve."
+      },
+      "aliases": [
+        "neutralization",
+        "post-mixing pH",
+        "major species"
+      ],
+      "related": [
+        "reaction-stoichiometry",
+        "titration-curves",
+        "buffers"
+      ],
+      "prerequisites": [
+        "reaction-stoichiometry",
+        "ph-poh"
+      ],
+      "researchGroups": [
+        "chemical-stoichiometry"
+      ],
+      "microPatterns": [
+        "neutralization",
+        "strong acid weak base reaction",
+        "weak acid strong base reaction",
+        "weak acid weak base",
+        "major species after",
+        "excess acid",
+        "acid-base reaction stoichiometry",
+        "post-mixing",
+        "proton-transfer favorability"
+      ]
+    },
+    {
+      "id": "titration-curves",
+      "name": "Acid-base titration curves",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.5"
+        ],
+        "related": [
+          "4.6",
+          "8.7",
+          "8.8"
+        ]
+      },
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "examples": {
+        "positive": "At which point on the weak acid-strong base curve is pH equal to pKa?",
+        "negative": "Calculate [HCl] from the equivalence volume only (tag titration-analysis)."
+      },
+      "aliases": [
+        "titration curve",
+        "half-equivalence",
+        "equivalence point pH",
+        "polyprotic titration"
+      ],
+      "related": [
+        "titration-analysis",
+        "pka-speciation",
+        "buffers"
+      ],
+      "prerequisites": [
+        "acid-base-mixtures"
+      ],
+      "researchGroups": [
+        "titration"
+      ],
+      "microPatterns": [
+        "titration curve",
+        "curves$",
+        "equivalence-point ph",
+        "half-equivalence",
+        "buffer region",
+        "major species along",
+        "equivalence volume",
+        "polyprotic titration",
+        "indicator choice"
+      ]
+    },
+    {
+      "id": "acid-strength-structure",
+      "name": "Molecular structure and acid strength",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.6"
+        ],
+        "related": [
+          "2.1",
+          "2.6"
+        ]
+      },
+      "definition": "Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.",
+      "include": "Tag when acid strengths must be ranked or explained from molecular structure.",
+      "exclude": "Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).",
+      "examples": {
+        "positive": "Explain why HClO3 is a stronger acid than HClO.",
+        "negative": "Ka(HF) > Ka(HCN); which is the stronger acid?"
+      },
+      "aliases": [
+        "acid strength",
+        "oxyacid",
+        "inductive effect"
+      ],
+      "related": [
+        "resonance",
+        "bond-polarity",
+        "strong-weak-acids"
+      ],
+      "prerequisites": [
+        "bond-polarity"
+      ],
+      "researchGroups": [],
+      "microPatterns": [
+        "acid strength and",
+        "oxyacid",
+        "resonance stabilization",
+        "inductive",
+        "charge and conjugate",
+        "proton donor tendency",
+        "relative acid strength from structure"
+      ]
+    },
+    {
+      "id": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.7"
+        ],
+        "related": [
+          "8.5",
+          "8.9"
+        ]
+      },
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "examples": {
+        "positive": "At pH 7.0, which form of an acid with pKa 4.8 predominates?",
+        "negative": "Calculate the pH of a buffer from component concentrations."
+      },
+      "aliases": [
+        "pKa",
+        "predominant species",
+        "indicator",
+        "protonation state"
+      ],
+      "related": [
+        "henderson-hasselbalch",
+        "titration-curves"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "weak-acid-equilibrium"
+      ],
+      "microPatterns": [
+        "pka definition",
+        "ph vs pka",
+        "predominant",
+        "ph=pka",
+        "indicator color",
+        "indicator selection",
+        "species distribution",
+        "concentration ratio inference"
+      ]
+    },
+    {
+      "id": "buffers",
+      "name": "Buffers",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.8"
+        ],
+        "related": [
+          "8.5",
+          "8.9",
+          "8.10"
+        ]
+      },
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "examples": {
+        "positive": "Write the net ionic equation for the reaction that occurs when HCl is added to an NH3/NH4Cl buffer.",
+        "negative": "Calculate the pH of 0.10 M NH3."
+      },
+      "aliases": [
+        "buffer",
+        "buffer solution",
+        "conjugate pair buffer"
+      ],
+      "related": [
+        "henderson-hasselbalch",
+        "buffer-capacity",
+        "acid-base-mixtures"
+      ],
+      "prerequisites": [
+        "bronsted-lowry"
+      ],
+      "researchGroups": [
+        "buffers"
+      ],
+      "microPatterns": [
+        "buffer",
+        "added strong acid",
+        "added strong base",
+        "resistance to ph",
+        "unbuffered"
+      ]
+    },
+    {
+      "id": "henderson-hasselbalch",
+      "name": "Henderson-Hasselbalch equation",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.9"
+        ],
+        "related": [
+          "8.8",
+          "8.7"
+        ]
+      },
+      "definition": "Calculating buffer pH from pKa and the ratio of conjugate base to acid, or the ratio needed for a target pH, including after small additions.",
+      "include": "Tag when a buffer pH or component ratio must be calculated.",
+      "exclude": "Do not tag qualitative buffer explanations (tag buffers).",
+      "examples": {
+        "positive": "What is the pH of a solution 0.20 M in HF and 0.30 M in NaF (pKa 3.17)?",
+        "negative": "Explain why the pH barely changes when a little NaOH is added to the buffer."
+      },
+      "aliases": [
+        "Henderson-Hasselbalch",
+        "buffer pH",
+        "[A-]/[HA]"
+      ],
+      "related": [
+        "buffers",
+        "pka-speciation"
+      ],
+      "prerequisites": [
+        "buffers"
+      ],
+      "researchGroups": [
+        "buffers"
+      ],
+      "microPatterns": [
+        "henderson",
+        "conjugate acid-base ratio",
+        "ratio from ph",
+        "equal component",
+        "buffer ph after",
+        "post-neutralization",
+        "logarithmic relationship",
+        "buffer design"
+      ]
+    },
+    {
+      "id": "buffer-capacity",
+      "name": "Buffer capacity",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.10"
+        ],
+        "related": [
+          "8.8"
+        ]
+      },
+      "definition": "How much acid or base a buffer can absorb depends on the amounts of its components, and is distinct from the buffer's pH.",
+      "include": "Tag when buffers must be compared by capacity or the effect of component amounts or dilution on capacity explained.",
+      "exclude": "Do not tag buffer pH calculations alone.",
+      "examples": {
+        "positive": "Which buffer can neutralize more added HCl: 0.10 M or 1.0 M acetic acid/acetate (same ratio)?",
+        "negative": "Calculate the buffer's pH."
+      },
+      "aliases": [
+        "buffer capacity",
+        "buffer exhaustion"
+      ],
+      "related": [
+        "buffers",
+        "henderson-hasselbalch"
+      ],
+      "prerequisites": [
+        "buffers"
+      ],
+      "researchGroups": [
+        "buffers"
+      ],
+      "microPatterns": [
+        "capacity",
+        "buffer exhaustion",
+        "relative acid and base component",
+        "added acid vs added base",
+        "buffer formulations"
+      ]
+    },
+    {
+      "id": "ph-solubility",
+      "name": "pH and solubility",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.11"
+        ],
+        "related": [
+          "7.11",
+          "7.9"
+        ]
+      },
+      "definition": "Qualitatively predicting how pH affects the solubility of salts with basic anions or hydroxides through acid-base reactions that shift the dissolution equilibrium.",
+      "include": "Tag when the effect of pH on a salt's solubility must be predicted or explained.",
+      "exclude": "Numerical solubility as a function of pH is not assessed.",
+      "examples": {
+        "positive": "Why is CaCO3 more soluble in acidic solution than in pure water?",
+        "negative": "Calculate the solubility of CaF2 in 0.10 M NaF (tag common-ion-effect)."
+      },
+      "aliases": [
+        "pH-dependent solubility",
+        "acid dissolves salt"
+      ],
+      "related": [
+        "solubility-product",
+        "le-chatelier"
+      ],
+      "prerequisites": [
+        "solubility-product"
+      ],
+      "researchGroups": [
+        "le-chatelier",
+        "solubility-product"
+      ],
+      "microPatterns": [
+        "ph-dependent",
+        "protonation of basic anion",
+        "acid-enhanced",
+        "hydroxide salt solubility",
+        "qualitative common-ion",
+        "with acid-base reactions",
+        "insensitive to ph",
+        "ph-solubility graph"
+      ]
+    },
+    {
+      "id": "entropy",
+      "name": "Entropy",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.1",
+          "9.2"
+        ],
+        "related": [
+          "9.3",
+          "9.6"
+        ]
+      },
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "examples": {
+        "positive": "Predict the sign of ΔS° for 2SO2(g) + O2(g) → 2SO3(g) and justify.",
+        "negative": "Calculate ΔG° from given ΔH° and ΔS° (entropy given; tag gibbs-free-energy)."
+      },
+      "aliases": [
+        "ΔS",
+        "entropy change",
+        "dispersal",
+        "standard molar entropy"
+      ],
+      "related": [
+        "gibbs-free-energy",
+        "dissolution-thermodynamics"
+      ],
+      "prerequisites": [],
+      "researchGroups": [
+        "entropy"
+      ],
+      "microPatterns": [
+        "entropy",
+        "dispersal",
+        "number of gas particles",
+        "gas expansion",
+        "energy distribution",
+        "disorder",
+        "standard molar",
+        "s°"
+      ]
+    },
+    {
+      "id": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.3"
+        ],
+        "related": [
+          "9.4",
+          "9.6",
+          "9.7"
+        ]
+      },
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "examples": {
+        "positive": "ΔH° = +40 kJ/mol and ΔS° = +120 J/(mol·K). Above what temperature is the reaction favorable?",
+        "negative": "Calculate K from ΔG°."
+      },
+      "aliases": [
+        "ΔG",
+        "thermodynamic favorability",
+        "spontaneity",
+        "free energy"
+      ],
+      "related": [
+        "entropy",
+        "free-energy-equilibrium",
+        "thermodynamic-kinetic-control"
+      ],
+      "prerequisites": [
+        "entropy",
+        "enthalpy-of-reaction"
+      ],
+      "researchGroups": [
+        "gibbs-free-energy"
+      ],
+      "microPatterns": [
+        "δg=δh",
+        "δg sign",
+        "temperature threshold",
+        "enthalpy entropy competition",
+        "constant-temperature δg",
+        "δg and equilibrium state",
+        "thermodynamically favored vs",
+        "sign combinations"
+      ]
+    },
+    {
+      "id": "thermodynamic-kinetic-control",
+      "name": "Thermodynamic versus kinetic control",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.4"
+        ],
+        "related": [
+          "5.6",
+          "5.11"
+        ]
+      },
+      "definition": "Distinguishing whether a process is thermodynamically favored from how fast it occurs: favorable processes can be slow when activation energy is large.",
+      "include": "Tag when the student must explain why a favorable process is not observed, or separate favorability from rate.",
+      "exclude": "Do not tag pure ΔG calculations or pure rate questions.",
+      "examples": {
+        "positive": "Diamond converting to graphite has ΔG° < 0. Why does diamond persist?",
+        "negative": "Calculate ΔG° at 298 K."
+      },
+      "aliases": [
+        "kinetic control",
+        "thermodynamic control",
+        "favorable but slow"
+      ],
+      "related": [
+        "gibbs-free-energy",
+        "activation-energy"
+      ],
+      "prerequisites": [
+        "gibbs-free-energy",
+        "activation-energy"
+      ],
+      "researchGroups": [
+        "gibbs-free-energy",
+        "activation-energy"
+      ],
+      "microPatterns": [
+        "favorability vs observable",
+        "kinetic barrier",
+        "slow but",
+        "catalysis and rate vs",
+        "energy profile vs free",
+        "spontaneity not",
+        "kinetic persistence",
+        "mechanism and energy barrier"
+      ]
+    },
+    {
+      "id": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.5"
+        ],
+        "related": [
+          "7.5",
+          "9.9"
+        ]
+      },
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "examples": {
+        "positive": "If ΔG° = +10 kJ/mol at 298 K, is K greater or less than 1? Calculate K.",
+        "negative": "Calculate ΔG° from ΔH° and ΔS°."
+      },
+      "aliases": [
+        "ΔG°=-RTlnK",
+        "K from ΔG"
+      ],
+      "related": [
+        "gibbs-free-energy",
+        "k-magnitude",
+        "cell-potential"
+      ],
+      "prerequisites": [
+        "gibbs-free-energy"
+      ],
+      "researchGroups": [
+        "gibbs-free-energy",
+        "equilibrium-expression"
+      ],
+      "microPatterns": [
+        "-rt ln",
+        "rt ln q",
+        "δg direction with q",
+        "δg equals zero",
+        "k from δg",
+        "δg° from k",
+        "standard vs nonstandard free",
+        "favorability and equilibrium composition"
+      ]
+    },
+    {
+      "id": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.6"
+        ],
+        "related": [
+          "2.3",
+          "3.10",
+          "9.1"
+        ]
+      },
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "examples": {
+        "positive": "NH4NO3 dissolves endothermically yet spontaneously. Explain using ΔH and ΔS.",
+        "negative": "Calculate molar solubility from Ksp."
+      },
+      "aliases": [
+        "free energy of dissolution",
+        "hydration energy",
+        "heat of solution"
+      ],
+      "related": [
+        "lattice-energy",
+        "ion-dipole",
+        "entropy",
+        "solubility-polarity"
+      ],
+      "prerequisites": [
+        "entropy",
+        "lattice-energy"
+      ],
+      "researchGroups": [
+        "lattice-energy",
+        "entropy"
+      ],
+      "microPatterns": [
+        "dissolution",
+        "hydration vs lattice",
+        "dissolving salt",
+        "soluble and poorly soluble"
+      ]
+    },
+    {
+      "id": "coupled-reactions",
+      "name": "Coupled reactions",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.7"
+        ],
+        "related": [
+          "9.3"
+        ]
+      },
+      "definition": "Driving a thermodynamically unfavorable process by coupling it with a favorable one so the overall ΔG is negative.",
+      "include": "Tag when free energies of reactions must be added or coupling explained.",
+      "exclude": "Do not tag Hess's-law ΔH addition (tag hess-law).",
+      "examples": {
+        "positive": "How can an unfavorable reaction with ΔG° = +20 kJ/mol be driven by ATP hydrolysis?",
+        "negative": "Find ΔH for a target reaction from three equations."
+      },
+      "aliases": [
+        "coupling",
+        "coupled reaction"
+      ],
+      "related": [
+        "gibbs-free-energy"
+      ],
+      "prerequisites": [
+        "gibbs-free-energy"
+      ],
+      "researchGroups": [
+        "gibbs-free-energy"
+      ],
+      "microPatterns": [
+        "coupled",
+        "adding free energies",
+        "unfavorable step driven",
+        "net gibbs",
+        "driving force",
+        "energy transfer by coupling"
+      ]
+    },
+    {
+      "id": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.8"
+        ],
+        "related": [
+          "4.9",
+          "9.9",
+          "9.11"
+        ]
+      },
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "examples": {
+        "positive": "In the Zn/Cu galvanic cell shown, in which direction do electrons flow through the wire?",
+        "negative": "Calculate E°cell from standard reduction potentials."
+      },
+      "aliases": [
+        "voltaic cell",
+        "galvanic cell",
+        "electrolytic cell",
+        "anode",
+        "cathode",
+        "salt bridge"
+      ],
+      "related": [
+        "redox-half-reactions",
+        "cell-potential",
+        "electrolysis-faraday"
+      ],
+      "prerequisites": [
+        "redox-half-reactions"
+      ],
+      "researchGroups": [
+        "electrochemical-cells"
+      ],
+      "microPatterns": [
+        "anode",
+        "cathode",
+        "external circuit",
+        "salt bridge",
+        "galvanic vs electrolytic",
+        "spontaneous vs driven",
+        "electrode mass",
+        "cell diagram",
+        "identifying half-reactions",
+        "charge conservation in cell"
+      ]
+    },
+    {
+      "id": "cell-potential",
+      "name": "Cell potential and free energy",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.9"
+        ],
+        "related": [
+          "9.5",
+          "9.8"
+        ]
+      },
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "examples": {
+        "positive": "Using the table of reduction potentials, calculate E° for Zn + Cu2+ → Zn2+ + Cu and ΔG°.",
+        "negative": "Predict how increasing [Zn2+] changes the measured voltage."
+      },
+      "aliases": [
+        "E cell",
+        "standard potential",
+        "reduction potential",
+        "ΔG=-nFE"
+      ],
+      "related": [
+        "electrochemical-cells",
+        "free-energy-equilibrium",
+        "nernst-nonstandard"
+      ],
+      "prerequisites": [
+        "redox-half-reactions"
+      ],
+      "researchGroups": [
+        "cell-potential"
+      ],
+      "microPatterns": [
+        "reduction potentials",
+        "cell voltage calculation",
+        "cathode minus anode",
+        "positive ecell",
+        "nfe",
+        "balancing electron transfer n",
+        "cell potential vs electron",
+        "oxidizing and reducing tendencies",
+        "e° and k"
+      ]
+    },
+    {
+      "id": "nernst-nonstandard",
+      "name": "Cell potential under nonstandard conditions",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.10"
+        ],
+        "related": [
+          "9.9",
+          "7.3"
+        ]
+      },
+      "definition": "Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.",
+      "include": "Tag when the effect of concentration on cell potential must be predicted or explained.",
+      "exclude": "Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.",
+      "examples": {
+        "positive": "As the galvanic cell operates, why does its voltage decrease over time?",
+        "negative": "Calculate E°cell from the table."
+      },
+      "aliases": [
+        "Nernst equation",
+        "concentration cell",
+        "nonstandard cell potential"
+      ],
+      "related": [
+        "cell-potential",
+        "reaction-quotient"
+      ],
+      "prerequisites": [
+        "cell-potential"
+      ],
+      "researchGroups": [
+        "cell-potential",
+        "reaction-quotient"
+      ],
+      "microPatterns": [
+        "nernst",
+        "quotient for electrochemical",
+        "voltage dependence",
+        "concentration cell",
+        "zero cell potential",
+        "nonstandard cell",
+        "logarithm in nernst",
+        "as the cell discharges"
+      ]
+    },
+    {
+      "id": "electrolysis-faraday",
+      "name": "Electrolysis and Faraday's law",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.11"
+        ],
+        "related": [
+          "4.9",
+          "9.8"
+        ]
+      },
+      "definition": "Relating current, time, charge (Q = It), moles of electrons (Faraday constant) and the amount of substance deposited or produced in electrolysis.",
+      "include": "Tag when an amount of product, current or time in electrolysis must be calculated.",
+      "exclude": "Do not tag qualitative identification of electrodes only (tag electrochemical-cells).",
+      "examples": {
+        "positive": "How many grams of Cu plate out when 2.00 A flows for 30.0 min through Cu2+(aq)?",
+        "negative": "At which electrode does oxidation occur?"
+      },
+      "aliases": [
+        "electroplating",
+        "Faraday constant",
+        "Q=It",
+        "electrolysis"
+      ],
+      "related": [
+        "electrochemical-cells",
+        "redox-half-reactions",
+        "reaction-stoichiometry"
+      ],
+      "prerequisites": [
+        "redox-half-reactions"
+      ],
+      "researchGroups": [
+        "faraday-electrolysis"
+      ],
+      "microPatterns": [
+        "q=it",
+        "faraday",
+        "electrons transferred to moles",
+        "electroplating",
+        "electrolysis",
+        "redox electron stoichiometry",
+        "mass deposited",
+        "electrolytic reaction product",
+        "charge-to-mole"
+      ]
+    },
+    {
+      "id": "colligative-properties",
+      "name": "Colligative properties and molality",
+      "group": "extension",
+      "scope": "beyond-ap",
+      "topics": {
+        "primary": [],
+        "related": [
+          "3.7",
+          "3.8"
+        ]
+      },
+      "definition": "Freezing-point depression, boiling-point elevation, osmotic pressure and vapor-pressure lowering, and molality. Removed from the current AP Chemistry exam.",
+      "include": "Tag legacy questions that require these calculations or explanations.",
+      "exclude": "Never present as current AP exam content.",
+      "examples": {
+        "positive": "Calculate the freezing point of a 0.50 m aqueous glucose solution.",
+        "negative": "Calculate the molarity of a NaCl solution."
+      },
+      "aliases": [
+        "molality",
+        "freezing point depression",
+        "boiling point elevation",
+        "osmotic pressure",
+        "van't Hoff factor"
+      ],
+      "related": [
+        "molarity"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": []
+    },
+    {
+      "id": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "group": "extension",
+      "scope": "beyond-ap",
+      "topics": {
+        "primary": [],
+        "related": [
+          "1.5",
+          "5.3"
+        ]
+      },
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "examples": {
+        "positive": "Complete the nuclear equation for the alpha decay of U-238.",
+        "negative": "A sample decays with a 5.0-day half-life; how much remains after 15 days? (tag integrated-rate-laws)"
+      },
+      "aliases": [
+        "radioactivity",
+        "alpha decay",
+        "beta decay",
+        "nuclear equation"
+      ],
+      "related": [
+        "integrated-rate-laws"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": []
+    },
+    {
+      "id": "organic-chemistry",
+      "name": "Organic nomenclature and functional groups",
+      "group": "extension",
+      "scope": "beyond-ap",
+      "topics": {
+        "primary": [],
+        "related": [
+          "2.5",
+          "3.1"
+        ]
+      },
+      "definition": "Naming organic compounds, identifying functional groups and isomers as a goal in itself. Not assessed on the current AP Chemistry exam.",
+      "include": "Tag legacy questions whose main demand is organic naming, isomer counting or functional-group identification.",
+      "exclude": "Do not tag questions that merely use organic molecules as context for Lewis structures or intermolecular forces.",
+      "examples": {
+        "positive": "How many structural isomers does C5H12 have?",
+        "negative": "Explain why ethanol has a higher boiling point than dimethyl ether (tag hydrogen-bonding)."
+      },
+      "aliases": [
+        "functional groups",
+        "isomers",
+        "organic nomenclature"
+      ],
+      "related": [
+        "lewis-structures"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": []
+    },
+    {
+      "id": "descriptive-chemistry",
+      "name": "Descriptive reaction prediction",
+      "group": "extension",
+      "scope": "beyond-ap",
+      "topics": {
+        "primary": [],
+        "related": [
+          "4.1",
+          "4.7"
+        ]
+      },
+      "definition": "Recall-based prediction of products for named reaction classes (complex ions, decomposition of specific compounds, flame tests, qualitative analysis schemes) beyond the AP-specified solubility and reaction-type knowledge.",
+      "include": "Tag legacy questions that require memorized descriptive chemistry not supported by the current CED.",
+      "exclude": "Do not tag predictions that follow from current AP reaction-type reasoning.",
+      "examples": {
+        "positive": "Write the formula of the complex ion formed when excess NH3 is added to Cu2+(aq).",
+        "negative": "Predict the precipitate formed from Pb(NO3)2 and KI."
+      },
+      "aliases": [
+        "complex ions",
+        "qualitative analysis",
+        "flame test"
+      ],
+      "related": [
+        "reaction-types",
+        "precipitation"
+      ],
+      "prerequisites": [],
+      "researchGroups": [],
+      "microPatterns": []
+    }
+  ]
+}

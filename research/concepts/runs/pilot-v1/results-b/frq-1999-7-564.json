@@ -1,0 +1,143 @@
+{
+  "questionId": "frq-1999-7-564",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full question 7 parts (a)-(d); nothing missing."
+  },
+  "officialTopics": {
+    "primary": "1.5",
+    "additional": [
+      "1.7",
+      "2.5",
+      "2.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must state isotopes share the same number of protons (and electrons) but differ in neutron number."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must write the full ground-state configuration of Se (34 electrons) and use Hund's rule to count unpaired electrons in 4p."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must explain why Se has a lower first ionization energy than Br."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Reasoning rests on Br's larger nuclear charge with electrons in the same shell and similar shielding, giving stronger attraction."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must explain why Se has a higher first ionization energy than Te."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Te's valence electrons are in a higher n level, farther from the nucleus and more shielded, so attraction is weaker."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw the complete SeF4 Lewis structure, finding 34 valence electrons and the lone pair on Se."
+        },
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must sketch the molecular shape (seesaw) from five electron domains including one lone pair."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Counting five domains around Se (4 bonds + 1 lone pair) is needed for the shape."
+        },
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must decide whether the bond dipoles cancel in the sketched shape and justify polar vs nonpolar."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "represent",
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "lewis-structure",
+        "molecular-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

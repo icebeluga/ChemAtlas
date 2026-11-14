@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2014-34-186",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["enthalpy-of-reaction"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "over-tagged", "reason": "Adds endo-exothermic; reversing the sign of a given thermochemical equation is part of enthalpy-of-reaction scaling, not a separate evidence-based heat-flow judgment." },
+  "notes": "Reversing and scaling a given thermochemical equation is fully covered by enthalpy-of-reaction."
+}

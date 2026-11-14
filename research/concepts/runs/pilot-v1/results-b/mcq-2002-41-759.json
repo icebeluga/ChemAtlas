@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2002-41-759",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop includes part of Q39 solubility graph; Q41 stem and choices A-E are complete."
+  },
+  "officialTopics": {
+    "primary": "9.3",
+    "additional": [
+      "6.1",
+      "9.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must give signs of dG, dH and dS; a spontaneous process has negative dG."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Temperature drop shows the process absorbs heat, so dH is positive."
+        },
+        {
+          "conceptId": "entropy",
+          "evidence": "A gas is produced from solids, so dS is positive."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "predict"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

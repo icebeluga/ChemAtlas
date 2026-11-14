@@ -1,0 +1,47 @@
+{
+ "questionId": "mcq-2008-41-38",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "no-crop",
+  "notes": "Full page shows Q41 initial diagram, equation and choices A-E."
+ },
+ "officialTopics": {
+  "primary": "4.5",
+  "additional": [
+   "4.3"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "limiting-reactant",
+     "evidence": "Must count N2 and H2 in the diagram and decide which is limiting and what excess remains using 1:3."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "reaction-representations",
+     "evidence": "Must represent the products and leftover reactant in particle form."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "predict",
+    "represent"
+   ],
+   "representations": [
+    "particulate-diagram"
+   ],
+   "skills": [
+    "particulate-modeling"
+   ]
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

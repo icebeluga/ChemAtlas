@@ -1,0 +1,78 @@
+{
+ "questionId": "mcq-2014-34-186",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2014-34-186.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crops cut off the right side of the stimulus (ΔH° = -437 kJ/mol rxn and the ΔH° column of the table); page context shows them. Stem and choices complete."
+  },
+  "officialTopics": {
+   "primary": "6.6",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must reverse the formation reaction (+437 kJ/mol rxn) and scale it to 0.050 mol Cl2 (0.10 mol rxn) to get heat absorbed."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": [
+     "dimensional-analysis"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crops are cut off on the right; page context shows dH = -437 kJ/mol for K + 1/2 Cl2 -> KCl and the process table. Classified from page."
+  },
+  "officialTopics": {
+   "primary": "6.6",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must scale the given dH per mole of reaction to the amount of Cl2 formed (0.050 mol)."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Forming Cl2 from KCl is the reverse of the given exothermic reaction, so heat is absorbed."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "chemical-equation",
+     "table"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

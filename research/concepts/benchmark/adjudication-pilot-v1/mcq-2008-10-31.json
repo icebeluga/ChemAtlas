@@ -1,0 +1,70 @@
+{
+ "questionId": "mcq-2008-10-31",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2008-10-31.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows stem; shared stimulus lists options A-E (activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy). Both legible."
+  },
+  "officialTopics": {
+   "primary": "9.2",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "entropy",
+      "evidence": "Must know the entropy of a perfect crystal at 0 K is zero (third law), distinguishing it from the other listed energy quantities."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows question 10; stimulus image shows the shared choice list A-E (activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy). Matches page."
+  },
+  "officialTopics": {
+   "primary": "9.1",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "entropy",
+      "evidence": "Must recall that a pure, perfect crystal at 0 K has only one possible arrangement, so its absolute entropy is zero (third law)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

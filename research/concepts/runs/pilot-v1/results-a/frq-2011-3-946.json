@@ -1,0 +1,97 @@
+{
+  "questionId": "frq-2011-3-946",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem, parts (a)-(d)(ii) and the ΔGf° table; matches page context (2002 Form B Q3)."
+  },
+  "officialTopics": {
+    "primary": "9.5",
+    "additional": [
+      "9.3",
+      "4.7",
+      "7.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "balanced-equations",
+          "evidence": "Must write and balance 2 NO + 2 CO -> N2 + 2 CO2 from the verbal description."
+        },
+        {
+          "conceptId": "oxidation-numbers",
+          "evidence": "Must justify that C is oxidized by showing its oxidation number rises from +2 in CO to +4 in CO2."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "Must write Kp with partial pressures of N2 and CO2 over NO and CO raised to their coefficients."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-onward",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "(c)(i) computes ΔG° from ΔGf° values (products minus reactants) and (c)(ii) rearranges ΔG° = ΔH° - TΔS° to solve for ΔS° at 298 K."
+        },
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "(d)(i) relates ΔG at the given urban pressures to ΔG° (or K) and Q, and (d)(ii) uses the sign of ΔG to decide the spontaneous direction."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "reaction-quotient",
+          "evidence": "(d) requires computing Qp from the four given partial pressures and comparing it with Kp = 3.3 x 10^120."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "predict",
+        "explain"
+      ],
+      "representations": [
+        "table",
+        "text-only"
+      ],
+      "skills": [
+        "logarithms",
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Catalog part c-onward covers (c)(i)-(d)(ii); refined ids were rejected by the validator, so they are merged. Taxonomy gap: no concept for ΔG°rxn from standard free energies of formation (enthalpy-of-formation covers only ΔHf°); tagged gibbs-free-energy. ΔG = ΔG° + RT ln Q is beyond the current CED equation set."
+}

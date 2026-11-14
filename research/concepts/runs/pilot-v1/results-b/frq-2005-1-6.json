@@ -1,0 +1,185 @@
+{
+  "questionId": "frq-2005-1-6",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows all of question 1 parts (a)-(e); parts (d) and (e) refined to d-i, d-ii and e."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "8.9",
+      "3.7",
+      "8.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must write the Ka expression for ionization of propanoic acid."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must calculate [H+] and pH for a 0.265 M weak acid from Ka."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "ice-tables",
+          "evidence": "Must set up initial, change and equilibrium amounts, using the small-x approximation."
+        },
+        {
+          "conceptId": "ph-poh",
+          "evidence": "Final step converts [H+] to pH by -log."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "molarity",
+          "evidence": "Must find [propanoate] from moles of added salt in 50.0 mL of solution."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "mole-conversions",
+          "evidence": "Must convert 0.496 g of NaC3H5O2 to moles using molar mass."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "buffers",
+          "evidence": "The mixture forms a buffer but the part only asks for a concentration."
+        }
+      ],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "henderson-hasselbalch",
+          "evidence": "Must find [H+] in the weak acid plus conjugate base mixture from Ka and the base/acid ratio."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Uses the Ka expression with the given acid and propanoate concentrations."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "common-ion-effect",
+          "evidence": "The added propanoate is a common ion but the part only needs the resulting [H+]."
+        }
+      ],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    },
+    {
+      "partId": "d-i",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must compute Kb for methanoate from the equilibrium [OH-] and initial concentration."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-ii",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must use Ka x Kb = Kw to get Ka of methanoic acid."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must compare Ka values of propanoic and methanoic acid to decide which is stronger."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

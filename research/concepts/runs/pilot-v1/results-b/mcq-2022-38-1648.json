@@ -1,0 +1,49 @@
+{
+  "questionId": "mcq-2022-38-1648",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows table, stem and all four curve diagrams with labels."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": [
+      "6.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must choose the curves whose well depth (bond energy) and equilibrium distance match the given dissociation energies for Br2 versus I2."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "bond-order",
+          "evidence": "Must relate the larger atom I to a longer bond length and the weaker bond (151 vs 193 kJ/mol) to a shallower well."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "table",
+        "energy-diagram",
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

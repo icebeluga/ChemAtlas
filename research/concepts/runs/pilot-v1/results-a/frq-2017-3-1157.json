@@ -1,0 +1,170 @@
+{
+  "questionId": "frq-2017-3-1157",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Two crops cover parts (a)-(c), the [O3] vs time graph, and part (d)(i)-(iv); both match page context."
+  },
+  "officialTopics": {
+    "primary": "2.6",
+    "additional": [
+      "2.7",
+      "6.7",
+      "5.2",
+      "5.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw the Lewis diagram of O3 with a central O bonded to two terminal O atoms."
+        },
+        {
+          "conceptId": "resonance",
+          "evidence": "Must include both valid resonance structures of O3."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must state the shape of O3 from the Lewis diagram."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count three domains on the central O (one lone pair, double bond counted as one) to get the shape."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "bond-enthalpy",
+          "evidence": "Must use dH = bonds broken - bonds formed with 2 O3 (four O-O bonds) and 3 O2 to solve for the average O-O bond enthalpy in O3."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-i",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must determine the first-order half-life from the time for [O3] to fall to half its initial value on the graph."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "d-ii",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must calculate k1 from the first-order half-life relationship k = 0.693/t1/2."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must give units of k consistent with a first-order rate law."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "d-iii",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must explain that HSO3- is in large excess so its concentration stays essentially constant, making the second-order rate law appear first order in O3."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-iv",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must describe an experiment that varies [HSO3-] and measures the effect on rate to test the dependence on HSO3-."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

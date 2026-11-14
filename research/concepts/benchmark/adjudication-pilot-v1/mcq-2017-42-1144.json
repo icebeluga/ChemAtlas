@@ -1,0 +1,95 @@
+{
+ "questionId": "mcq-2017-42-1144",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2017-42-1144.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop is the whole page: shared stimulus (equation, Kp, three-step mechanism with ΔH values), question 42 with choices A-D, and the neighbouring question 43."
+  },
+  "officialTopics": {
+   "primary": "9.5",
+   "additional": [
+    "9.3",
+    "9.4"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "free-energy-equilibrium",
+      "evidence": "Must connect the very large Kp (2 × 10^30) to a large negative ΔG° for the overall reaction."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "gibbs-free-energy",
+      "evidence": "Must reason through ΔG° = ΔH° - TΔS° that a large negative ΔH°, not a small ΔS°, makes ΔG° strongly negative."
+     },
+     {
+      "conceptId": "thermodynamic-kinetic-control",
+      "evidence": "Must reject the activation-energy choices because Ea governs rate, not the magnitude of K."
+     }
+    ],
+    "contextual": [
+     {
+      "conceptId": "reaction-mechanisms",
+      "evidence": "The stimulus gives a three-step mechanism with slow and fast steps that is not needed for this item."
+     }
+    ],
+    "actions": [
+     "explain"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop includes shared stimulus (equation, K and mechanism) plus Q43; only Q42 classified. Stem and choices legible."
+  },
+  "officialTopics": {
+   "primary": "7.5",
+   "additional": [
+    "9.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "k-magnitude",
+      "evidence": "Must explain why K = 2x10^30 is large, linking product favorability to overall reaction thermodynamics rather than rate."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "free-energy-equilibrium",
+      "evidence": "Must connect a very large K to a strongly negative dG, driven by large negative overall dH, rather than activation energies."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "explain",
+     "identify"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

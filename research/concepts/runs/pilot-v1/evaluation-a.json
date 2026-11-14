@@ -1,0 +1,170 @@
+{
+  "summary": {
+    "referenceQuestions": 40,
+    "compared": 40,
+    "missing": 0,
+    "statusMismatch": 0,
+    "primary": {
+      "precision": 0.951,
+      "recall": 0.987,
+      "tp": 77,
+      "fp": 4,
+      "fn": 1
+    },
+    "supporting": {
+      "precision": 0.8,
+      "recall": 0.828,
+      "tp": 24,
+      "fp": 6,
+      "fn": 5
+    },
+    "anyRole": {
+      "precision": 0.955,
+      "recall": 0.991,
+      "tp": 106,
+      "fp": 5,
+      "fn": 1
+    },
+    "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+  },
+  "errors": [
+    {
+      "questionId": "frq-1999-7-564",
+      "partId": "d",
+      "issue": "extra primary molecular-polarity"
+    },
+    {
+      "questionId": "frq-1999-7-564",
+      "partId": "d",
+      "issue": "missed primary molecular-geometry"
+    },
+    {
+      "questionId": "frq-1999-7-564",
+      "partId": "d",
+      "issue": "extra supporting molecular-geometry"
+    },
+    {
+      "questionId": "frq-1999-7-564",
+      "partId": "d",
+      "issue": "missed supporting molecular-polarity"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "partId": "b",
+      "issue": "extra supporting mole-conversions"
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "partId": "d-ii",
+      "issue": "extra supporting rate-law"
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "partId": "stem",
+      "issue": "extra primary hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "partId": "stem",
+      "issue": "missed supporting hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "partId": "stem",
+      "issue": "extra supporting collision-model"
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "partId": "stem",
+      "issue": "missed supporting equilibrium-expression"
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "partId": "stem",
+      "issue": "extra supporting reaction-stoichiometry"
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "partId": "stem",
+      "issue": "extra primary hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "partId": "stem",
+      "issue": "missed supporting hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "partId": "stem",
+      "issue": "extra primary solution-representations"
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "partId": "stem",
+      "issue": "extra supporting bond-polarity"
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "partId": "stem",
+      "issue": "missed supporting solution-representations"
+    }
+  ],
+  "strata": {
+    "agree": {
+      "referenceQuestions": 15,
+      "compared": 15,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 15,
+        "fp": 0,
+        "fn": 0
+      },
+      "supporting": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "anyRole": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 22,
+        "fp": 0,
+        "fn": 0
+      },
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    },
+    "non-agree": {
+      "referenceQuestions": 25,
+      "compared": 25,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 0.939,
+        "recall": 0.984,
+        "tp": 62,
+        "fp": 4,
+        "fn": 1
+      },
+      "supporting": {
+        "precision": 0.739,
+        "recall": 0.773,
+        "tp": 17,
+        "fp": 6,
+        "fn": 5
+      },
+      "anyRole": {
+        "precision": 0.944,
+        "recall": 0.988,
+        "tp": 84,
+        "fp": 5,
+        "fn": 1
+      },
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "questionId": "frq-2020-sample-2-116",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Three full-page images cover the whole question: mechanism and energy diagram (a)-(c), structures/vapor-pressure table and titration data (d)-(f), buret drawing (g) and (h). All legible."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.7",
+      "6.1",
+      "3.1",
+      "4.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "reaction-mechanisms",
+          "evidence": "Must scan the three steps to find the species (CH3OH) consumed in step 1 and regenerated in step 2."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must apply the definition of a catalyst as consumed then regenerated, distinguishing it from intermediates HCO2CH3 and HCONH2."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must take the rate law from slow step 1 (CH3OH + CO), which does not contain NH3, to justify that adding NH3 leaves the rate unchanged."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must recognize that ΔHrxn = -81 kJ/mol is exothermic so products should lie below reactants, whereas the diagram shows them higher."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "justify"
+      ],
+      "representations": [
+        "energy-diagram"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must see from the structures that both HCOOH and CH3OH have an H bonded to O and therefore hydrogen bond."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "dipole-dipole",
+          "evidence": "Must list dipole-dipole attractions, since both molecules are polar."
+        },
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Must list London dispersion forces as present in both substances."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must explain the higher CH3OH vapor mole fraction (higher vapor pressure, 55.6 vs 17.3 kPa) by weaker overall intermolecular attractions in CH3OH than in HCOOH."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must note that both substances hydrogen bond, so the difference must come from the other forces."
+        },
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Must argue that HCOOH, with more electrons, has stronger dispersion forces than CH3OH."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "separation-techniques",
+          "evidence": "Distillation is the setting but the answer rests on comparing the forces."
+        }
+      ],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "lewis-structure",
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must use 16.67 mL of 0.300 M NaOH and the 1:1 equation to find moles of HCOOH in 20.00 mL and its molarity."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "g",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must read the final buret meniscus to the correct precision and subtract the 1.12 mL initial reading to report volume dispensed."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "calculate"
+      ],
+      "representations": [
+        "apparatus-diagram",
+        "experimental-data"
+      ],
+      "skills": [
+        "error-analysis"
+      ]
+    },
+    {
+      "partId": "h",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must reason that extra water in the flask does not change moles of HCOOH, so the NaOH volume to reach the endpoint would not increase."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-error",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "error-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,84 @@
+{
+ "questionId": "mcq-2016-5-1053",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2016-5-1053.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop shows full stem and choices A-D plus a partial footer line."
+  },
+  "officialTopics": {
+   "primary": "2.2",
+   "additional": [
+    "2.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "bond-order",
+      "evidence": "Must rank N2, O2 and F2 bond enthalpies from their triple, double and single bonds."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "lewis-structures",
+      "evidence": "Bond multiplicities are not given, so the student must work out the Lewis structures of N2, O2 and F2 to know the bond orders."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "rank"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows full stem and choices A-D."
+  },
+  "officialTopics": {
+   "primary": "2.2",
+   "additional": [
+    "2.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "bond-order",
+      "evidence": "Bond enthalpy increases with bond order: N2 triple, O2 double, F2 single bond."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "lewis-structures",
+      "evidence": "Bond orders are not shown; student must derive N2, O2 and F2 Lewis structures to know the number of shared pairs."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "rank"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

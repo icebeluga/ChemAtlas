@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2018-14-1911",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["physical-chemical-change"], "supporting": ["imf-properties"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Shared stimulus for Q14-17 is on a previous page and not shown, but the stem and choices are self-sufficient, so content is treated as complete."
+}

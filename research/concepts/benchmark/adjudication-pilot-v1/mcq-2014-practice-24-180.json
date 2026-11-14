@@ -1,0 +1,87 @@
+{
+ "questionId": "mcq-2014-practice-24-180",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2014-practice-24-180.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "no-crop",
+   "notes": "Full-page image only; Q24 (overall equation, two-step mechanism with fast reversible step 1 and slow step 2, choices A-D) is fully legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+   "primary": "5.8",
+   "additional": [
+    "5.9",
+    "5.4"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "mechanism-rate-law",
+      "evidence": "Must derive the rate law from slow step 2 and use the fast pre-equilibrium of step 1 to replace intermediate N2O2 with [NO]^2."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "elementary-steps",
+      "evidence": "Must recognize that step 1 (2 NO) is bimolecular, not unimolecular, to reject choice A."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "derive",
+     "identify"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "no-crop",
+   "notes": "Full page only; Q24 stem, mechanism and choices A-D are legible on the right column."
+  },
+  "officialTopics": {
+   "primary": "5.8",
+   "additional": [
+    "5.4",
+    "5.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "mechanism-rate-law",
+      "evidence": "Must derive the rate law from the slow step with a fast reversible first step and judge statements against it."
+     },
+     {
+      "conceptId": "elementary-steps",
+      "evidence": "Must judge molecularity of step 1 (2 NO combine, so not unimolecular)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "evaluate-error",
+     "identify"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

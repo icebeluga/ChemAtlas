@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2018-13-1198",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["integrated-rate-laws"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "over-tagged", "reason": "Adds rate-law; matching the order found from the linear 1/[NO2] column to a listed rate law is trivial, not an initial-rates determination." },
+  "notes": "Order is read from which transformed column changes linearly, so integrated-rate-laws alone; rate-law excluded per its integrated-plot exclusion."
+}

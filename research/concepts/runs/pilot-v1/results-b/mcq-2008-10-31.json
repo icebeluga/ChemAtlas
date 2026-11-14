@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-10-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows stem; shared stimulus lists options A-E (activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy). Both legible."
+  },
+  "officialTopics": {
+    "primary": "9.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must know the entropy of a perfect crystal at 0 K is zero (third law), distinguishing it from the other listed energy quantities."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2012-21-1354",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["reaction-rate"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Relating rates of different species through coefficients is squarely reaction-rate; the equation is above the crop on the page."
+}

@@ -1,0 +1,503 @@
+{
+  "run": "pilot-v1",
+  "pass": "a",
+  "accepted": [
+    {
+      "questionId": "frq-1999-7-564",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2003-3-536",
+      "reviewStatus": "needs_attention",
+      "warnings": [
+        "part a refines catalog part (a)–(b)",
+        "part b refines catalog part (a)–(b)",
+        "part c-i refines catalog part (c)",
+        "part c-ii refines catalog part (c)",
+        "part d refines catalog part (d onward)",
+        "part e refines catalog part (d onward)"
+      ]
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "reviewStatus": "machine_generated",
+      "warnings": [
+        "part a-i refines catalog part (a)",
+        "part a-ii refines catalog part (a)",
+        "part d-i refines catalog part (d)",
+        "part d-ii refines catalog part (d)"
+      ]
+    },
+    {
+      "questionId": "frq-2008-3-59",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2008-5-63",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "reviewStatus": "needs_attention",
+      "warnings": [
+        "part a refines catalog part (a–c)",
+        "part b refines catalog part (a–c)",
+        "part c refines catalog part (a–c)",
+        "part e refines catalog part (e–f)",
+        "part f-i refines catalog part (e–f)",
+        "part f-ii refines catalog part (e–f)",
+        "part f-iii refines catalog part (e–f)"
+      ]
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "reviewStatus": "machine_generated",
+      "warnings": [
+        "part c-i refines catalog part (c onward)",
+        "part c-ii refines catalog part (c onward)",
+        "part c-iii refines catalog part (c onward)",
+        "part d refines catalog part (c onward)"
+      ]
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2023-3-448",
+      "reviewStatus": "needs_attention",
+      "warnings": [
+        "part b refines catalog part (b–d)",
+        "part c refines catalog part (b–d)",
+        "part d refines catalog part (b–d)",
+        "part e refines catalog part (e–g)",
+        "part f refines catalog part (e–g)",
+        "part g-i refines catalog part (e–g)",
+        "part g-ii refines catalog part (e–g)"
+      ]
+    },
+    {
+      "questionId": "frq-2024-5-2125",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2024-6-2126",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1984-38-126",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1984-6-120",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1984-72-131",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1984-84-135",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1994-63-691",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-1994-65-692",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2002-38-614",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2002-41-759",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2002-48-760",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2002-6-606",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-1-29",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-10-31",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-13-32",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-25-34",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-3-29",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-4-31",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-41-38",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-44-39",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-57-41",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-6-31",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-8-31",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2008-9-31",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2012-21-1354",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-12-176",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-15-178",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-17-1448",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-21-1450",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-22-180",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-24-1450",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-29-1453",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-30-184",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-33-185",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-34-186",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-47-190",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-9-174",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2015-47-1554",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-24-1063",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-26-1064",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-27-1064",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-5-1053",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2016-9-1056",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2017-30-1137",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2017-42-1144",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-11-1196",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-12-1197",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-13-1198",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-14-1911",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-34-1205",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-38-1920",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-40-2043",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-57-2046",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-13-1639",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-38-1648",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-41-1649",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-5-1663",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-52-1652",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2023-33-1727",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2023-43-1731",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-19-2088",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-38-2099",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-56-2109",
+      "reviewStatus": "machine_generated",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-60-2110",
+      "reviewStatus": "needs_attention",
+      "warnings": []
+    }
+  ],
+  "blocked": [
+    {
+      "questionId": "frq-2011-6-937",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "frq-2024-3-2119",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2018-36-1207",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2022-62-1709",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2023-67-1808",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-21-2091",
+      "reviewStatus": "blocked",
+      "warnings": []
+    },
+    {
+      "questionId": "mcq-2024-33-2094",
+      "reviewStatus": "blocked",
+      "warnings": []
+    }
+  ],
+  "invalid": [],
+  "kept": []
+}

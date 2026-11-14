@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2002-48-760",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.10",
+    "additional": [
+      "2.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "solubility-polarity",
+          "evidence": "Must predict in which solvent ionic NaCl dissolves least, applying like-dissolves-like across five liquids."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must recognize CCl4 is nonpolar despite polar C-Cl bonds because its tetrahedral symmetry cancels the bond dipoles, unlike H2O, HF, CH3OH and CH3COOH."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

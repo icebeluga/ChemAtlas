@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2015-47-1554",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the potential-energy curve with minimum labeled x, full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must interpret the potential-energy curve: x is at the energy minimum (equilibrium distance) where attraction and repulsion balance."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

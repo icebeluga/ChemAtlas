@@ -1,0 +1,16 @@
+{
+  "questionId": "frq-2017-3-1157",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["lewis-structures", "resonance"], "supporting": [] },
+    "b": { "primary": ["molecular-geometry"], "supporting": ["electron-domains"] },
+    "c": { "primary": ["bond-enthalpy"], "supporting": [] },
+    "d-i": { "primary": ["integrated-rate-laws"], "supporting": [] },
+    "d-ii": { "primary": ["integrated-rate-laws"], "supporting": [] },
+    "d-iii": { "primary": ["rate-law"], "supporting": [] },
+    "d-iv": { "primary": ["rate-law"], "supporting": [] }
+  },
+  "verdictX": { "label": "over-tagged", "reason": "d-ii adds rate-law for the units of k; first-order units follow directly from the half-life relation and are not a separate order determination." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "d-iii (pseudo-first-order) and d-iv (vary [HSO3-]) assess reaction order, so rate-law rather than integrated-rate-laws."
+}

@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2016-9-1056",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["titration-curves"], "supporting": ["strong-weak-acids"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "strong-weak-acids is supporting because every choice turns on classifying the acid (and base) as strong or weak from the curve."
+}

@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2023-33-1727",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop is cut off at left and shows only part of the reaction; page context shows the full CO2 + 4H2 -> CH4 + 2H2O equation. Stem and choices complete; reaction not needed to answer."
+  },
+  "officialTopics": {
+    "primary": "5.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must state the effect of a solid Ni catalyst: alternative pathway with lower activation energy, overall energy change unchanged."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "activation-energy",
+          "evidence": "Choices contrast lower versus greater activation energy for the reaction pathway."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation",
+        "lewis-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

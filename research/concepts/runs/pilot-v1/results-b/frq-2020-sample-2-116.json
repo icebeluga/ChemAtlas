@@ -1,0 +1,216 @@
+{
+  "questionId": "frq-2020-sample-2-116",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Full pages 5-7 viewed: mechanism, energy diagram, IMF structures/vapor pressure table, titration table and buret picture all legible."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.7",
+      "6.2",
+      "3.1",
+      "4.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "reaction-mechanisms",
+          "evidence": "Must test each species across the three steps to find the one consumed then regenerated (catalyst) versus intermediates and reactants."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must use the slow step 1 (CH3OH + CO) to see NH3 enters only in a later fast step, so added NH3 does not change rate."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "elementary-steps",
+          "evidence": "Rate law of the slow elementary step follows from its molecularity."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must compare dH = -81 kJ (exothermic) with a diagram showing products higher than reactants."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "interpret"
+      ],
+      "representations": [
+        "energy-diagram"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Both HCOOH and CH3OH have O-H bonds that can donate to lone pairs on O, so hydrogen bonding must be identified."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Both substances also have dispersion forces."
+        },
+        {
+          "conceptId": "dipole-dipole",
+          "evidence": "Both are polar molecules with permanent dipoles."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure",
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must explain the higher vapor-phase fraction of CH3OH (higher vapor pressure) from weaker overall intermolecular forces than HCOOH."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must compare hydrogen bonding in each substance."
+        },
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Must note dispersion strength differences from electron count and size."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "separation-techniques",
+          "evidence": "Distillation is the context but the answer rests on forces."
+        }
+      ],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "table",
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must use 16.67 mL of 0.300 M NaOH at the endpoint with 1:1 stoichiometry to find [HCOOH]."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "g",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must read the buret meniscus to proper precision and subtract the initial reading (1.12 mL) to get dispensed volume."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "calculate"
+      ],
+      "representations": [
+        "apparatus-diagram"
+      ],
+      "skills": [
+        "error-analysis"
+      ]
+    },
+    {
+      "partId": "h",
+      "primary": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must judge whether residual water in the flask changes the moles of HCOOH and thus the NaOH volume at the endpoint."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "dilution",
+          "evidence": "Added water changes concentration but not moles of acid, so the equivalence volume is unchanged."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "evaluate-error",
+        "justify"
+      ],
+      "representations": [
+        "experimental-data"
+      ],
+      "skills": [
+        "experimental-design",
+        "error-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

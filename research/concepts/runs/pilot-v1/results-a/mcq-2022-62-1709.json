@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2022-62-1709",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "partial",
+    "diagramStatus": "partially-readable",
+    "cropIssue": "missing-content",
+    "notes": "Scoring-guide page shows the shared stem (baking soda + citric acid calorimetry), data table, temperature-time graph and parts (a) and (b) only; catalog parts (c) and (d) are on a continuation page that is not provided."
+  },
+  "officialTopics": {
+    "primary": "6.4",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Parts (c) and (d) missing; source is a scoring-guide page rather than a clean question page."
+}

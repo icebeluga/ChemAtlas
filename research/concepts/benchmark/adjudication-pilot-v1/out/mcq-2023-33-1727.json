@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2023-33-1727",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["catalysis"], "supporting": [] } },
+  "verdictX": { "label": "over-tagged", "reason": "Adds activation-energy; the lower-Ea alternative pathway is the definition of catalysis, and no energy profile is read." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Crop clips the shared equation, but the page context shows it and it is not needed to answer."
+}

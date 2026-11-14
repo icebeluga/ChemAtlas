@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2002-38-614",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows several adjacent questions (35-39) and cuts off the top of question 38; the page context shows the full question 38 stem (spectrophotometer, absorbance) with statements I-III and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.13",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "beer-lambert",
+          "evidence": "Must judge which conditions ensure correct absorbance readings (sample covering the light path, resetting with a standard), relating to Beer-Lambert measurement."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-procedure"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

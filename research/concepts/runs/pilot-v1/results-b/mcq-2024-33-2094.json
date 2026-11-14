@@ -1,0 +1,18 @@
+{
+ "questionId": "mcq-2024-33-2094",
+ "contentCheck": {
+  "status": "partial",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "wrong-question",
+  "notes": "Crop shows both Q31 (thermodynamic favorability) and Q32 (gravimetric error) and the id number does not match either; cannot tell which question is meant."
+ },
+ "officialTopics": {
+  "primary": "9.3",
+  "additional": []
+ },
+ "parts": [],
+ "answerKeyUsed": false,
+ "needsAttention": true,
+ "uncertainty": "Ambiguous question identity."
+}

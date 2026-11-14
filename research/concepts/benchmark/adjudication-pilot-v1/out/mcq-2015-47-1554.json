@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2015-47-1554",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["bond-potential-energy"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Forces at the energy minimum of the PE curve; no other concept needed."
+}

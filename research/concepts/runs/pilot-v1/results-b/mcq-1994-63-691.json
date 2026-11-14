@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-1994-63-691",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows only stem and choices; graph is missing from crop but visible on page context: X decays exponentially while Y stays constant (large excess)."
+  },
+  "officialTopics": {
+    "primary": "5.3",
+    "additional": [
+      "5.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must read the concentration-time curve of X (constant successive half-lives) to infer order in X."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must reason that a large excess of Y keeps [Y] constant, so only the order in X is determinable."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "identify"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

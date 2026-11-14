@@ -1,0 +1,9 @@
+{
+  "questionId": "frq-2024-3-2119",
+  "contentCheck": { "status": "partial", "sawImage": true, "diagramStatus": "partially-readable", "cropIssue": "missing-content", "notes": "Crops r1-r3 (pages 10-12 of the scan) show parts (a), (b), (c)(i)-(ii), (d)(i)-(ii) and (e)(i)-(ii) with the C5H10NH partial-pressure graph, all legible. The catalog lists parts f-i and f-ii, but the continuation page carrying part (f) is not in the packet and is not visible on any page context." },
+  "officialTopics": { "primary": "8.3", "additional": ["4.8", "7.3", "8.2", "4.2", "7.10", "5.1", "9.2", "9.3"] },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (f)(i)-(ii) page missing (scan page 13). Parts (a)-(e) are complete and could be classified once the packet includes the continuation page."
+}

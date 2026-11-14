@@ -1,0 +1,387 @@
+{
+ "questionId": "frq-2023-3-448",
+ "packet": "research/concepts/runs/pilot-v1/packets/frq-2023-3-448.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Four crops show parts a-g with both data tables; complete."
+  },
+  "officialTopics": {
+   "primary": "5.5",
+   "additional": [
+    "4.2",
+    "5.2",
+    "4.5",
+    "6.4",
+    "6.6"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "net-ionic-equations",
+      "evidence": "Must write net ionic equation keeping solid CaCO3 intact and omitting spectator Cl-."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "write-equation"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "collision-model",
+      "evidence": "Must use trends for concentration and particle size to show trial 5 time is out of line."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "reaction-rate",
+      "evidence": "Needs relation between reaction time and rate."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "explain",
+     "evaluate-error"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "collision-model",
+      "evidence": "Smaller chunks expose more surface area, giving more frequent collisions and faster reaction."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "explain"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "rate-law",
+      "evidence": "Must judge order in HCl from how time changes when concentration changes."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "reaction-rate",
+      "evidence": "Must infer rate from reaction time."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "justify",
+     "evaluate-error"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "e",
+    "primary": [
+     {
+      "conceptId": "reaction-stoichiometry",
+      "evidence": "Must use 2:1 HCl to CaCO3 to find HCl consumed and remaining."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "molarity",
+      "evidence": "Must convert remaining moles of HCl to molarity at 50.0 mL."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "f",
+    "primary": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Temperature of solution rises, indicating heat released to the solution."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "justify",
+     "interpret"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "g-i",
+    "primary": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must apply q = mc delta T with given mass, specific heat and temperature change."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "g-ii",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must convert q to kJ per mole of reaction with correct sign."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "mole-conversions",
+      "evidence": "Must convert 1.00 g CaCO3 to moles to scale q per mole."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Four crops cover all parts (a)-(g) with both data tables; they match the page contexts. Catalog groups parts as b–d and e–g; refined to individual printed parts."
+  },
+  "officialTopics": {
+   "primary": "5.1",
+   "additional": [
+    "4.2",
+    "4.5",
+    "5.2",
+    "5.5",
+    "6.1",
+    "6.4",
+    "6.6"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "net-ionic-equations",
+      "evidence": "Must write CaCO3(s) + 2H+ -> Ca2+ + CO2 + H2O, removing Cl- spectators while keeping CaCO3 as a solid."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "write-equation"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "reaction-rate",
+      "evidence": "Must use the trend that higher [HCl] and smaller particles shorten reaction time to show trial 5 (227 s) is slower than trial 2 (112 s) despite higher [HCl]."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "evaluate-error",
+     "justify"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": [
+     "error-analysis"
+    ]
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "collision-model",
+      "evidence": "Must explain that small chunks expose more surface area than a large chunk, giving more frequent collisions between HCl and CaCO3."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "explain"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "rate-law",
+      "evidence": "Must judge the zero-order claim by comparing trials with equal particle size (e.g. 1 vs 4) where changing [HCl] changes the reaction time."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "evaluate-procedure",
+     "justify"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "e",
+    "primary": [
+     {
+      "conceptId": "reaction-stoichiometry",
+      "evidence": "Must convert 1.00 g CaCO3 to moles and use the 1:2 ratio to find HCl consumed."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "molarity",
+      "evidence": "Must find initial moles HCl from 1.00 M x 0.0500 L and divide the remaining moles by 0.0500 L to get the final molarity."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "chemical-equation",
+     "table"
+    ],
+    "skills": [
+     "dimensional-analysis"
+    ]
+   },
+   {
+    "partId": "f",
+    "primary": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Must infer an exothermic reaction from the rising solution temperature (21.20 to 21.90 °C)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "justify"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "g-i",
+    "primary": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must apply q = mcΔT with 51.0 g, 4.0 J/(g·°C) and ΔT = 0.70 °C."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "experimental-data"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "g-ii",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must divide the heat by moles of CaCO3 reacted (mol rxn) and assign a negative sign for the exothermic reaction."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must take q of the reaction as the negative of the heat absorbed by the solution from part (g)(i)."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "experimental-data"
+    ],
+    "skills": [
+     "dimensional-analysis"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-13-32",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["entropy", "phase-change-energy"], "supporting": [] } },
+  "verdictX": { "label": "wrong-primary", "reason": "Uses endo-exothermic for the sign of ΔH; knowing vaporization absorbs heat is phase-change-energy, not an evidence-based heat-flow judgment." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Boundary: sign of ΔH for a phase change recalled from the process itself fits phase-change-energy better than endo-exothermic (which centers on temperature/q evidence or diagrams)."
+}

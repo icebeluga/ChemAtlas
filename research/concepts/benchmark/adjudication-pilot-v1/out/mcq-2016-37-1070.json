@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2016-37-1070",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["limiting-reactant", "enthalpy-of-reaction"], "supporting": [] } },
+  "verdictX": { "label": "wrong-primary", "reason": "Demotes enthalpy-of-reaction to supporting, yet the q column (scaling -610 kJ to the amount reacting) is half of every answer choice." },
+  "verdictY": { "label": "over-tagged", "reason": "Adds reaction-stoichiometry; the 2:1 mole ratio is the inner step of the limiting-reactant and ΔH-scaling work already tagged." },
+  "notes": "Crops cut the ΔH value and choice table, but the page context shows them, so content is complete."
+}

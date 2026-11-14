@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-41-38",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["reaction-representations", "limiting-reactant"], "supporting": [] } },
+  "verdictX": { "label": "wrong-primary", "reason": "Demotes reaction-representations to supporting, although choosing the particle diagram of products plus excess N2 is as central as finding the limiting reactant." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "reaction-representations explicitly covers showing limiting and excess reactants in particle form, so both are assessed equally."
+}

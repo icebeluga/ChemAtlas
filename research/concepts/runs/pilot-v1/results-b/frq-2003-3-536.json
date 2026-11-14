@@ -1,0 +1,166 @@
+{
+ "questionId": "frq-2003-3-536",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "none",
+  "notes": "Crop shows (a)-(e) and the particulate diagram; complete."
+ },
+ "officialTopics": {
+  "primary": "8.8",
+  "additional": [
+   "7.3",
+   "7.4",
+   "8.9",
+   "8.10",
+   "4.2"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "a",
+   "primary": [
+    {
+     "conceptId": "equilibrium-expression",
+     "evidence": "Must write Kp from partial pressures for the given equation."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "b",
+   "primary": [
+    {
+     "conceptId": "equilibrium-constant-calculation",
+     "evidence": "Must compute Kp from equilibrium partial pressures."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "ice-tables",
+     "evidence": "Must find equilibrium pressures of N2 and O2 from initial pressures and NO formed using 1:1:2 stoichiometry."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "chemical-equation",
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c-i",
+   "primary": [
+    {
+     "conceptId": "buffers",
+     "evidence": "Partial neutralization of weak acid leaves HNO2 and NO2- in solution."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "net-ionic-equations",
+     "evidence": "Must write HNO2 + OH- to NO2- + H2O."
+    },
+    {
+     "conceptId": "acid-base-mixtures",
+     "evidence": "Must reason about NaOH reacting with limited HNO2."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c-ii",
+   "primary": [
+    {
+     "conceptId": "henderson-hasselbalch",
+     "evidence": "pH equals pKa so [A-] = [HA], requiring half of the acid neutralized."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "acid-base-mixtures",
+     "evidence": "Must convert half-neutralization to a volume of NaOH."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate",
+    "justify"
+   ],
+   "representations": [
+    "text-only"
+   ],
+   "skills": [
+    "logarithms"
+   ]
+  },
+  {
+   "partId": "d",
+   "primary": [
+    {
+     "conceptId": "buffer-capacity",
+     "evidence": "Must compare buffers by total concentrations of HA and A-."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "compare",
+    "justify"
+   ],
+   "representations": [
+    "text-only"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "e",
+   "primary": [
+    {
+     "conceptId": "henderson-hasselbalch",
+     "evidence": "Must compare ratio of NO2- to HNO2 in the diagram with 1 to decide pH versus pKa."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "solution-representations",
+     "evidence": "Must count particles of each type in the particulate diagram."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "predict",
+    "justify"
+   ],
+   "representations": [
+    "particulate-diagram"
+   ],
+   "skills": [
+    "particulate-modeling"
+   ]
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

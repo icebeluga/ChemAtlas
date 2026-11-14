@@ -1,0 +1,85 @@
+{
+ "questionId": "mcq-2018-13-1198",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2018-13-1198.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows the data table ([NO2], ln[NO2], 1/[NO2] vs time), stem and choices A-D."
+  },
+  "officialTopics": {
+   "primary": "5.3",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "integrated-rate-laws",
+      "evidence": "Must see that 1/[NO2] rises linearly (by 0.75 L/mol per 100 s) while ln[NO2] does not, indicating second order."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "interpret"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows data table with [NO2], ln[NO2] and 1/[NO2], stem and choices."
+  },
+  "officialTopics": {
+   "primary": "5.3",
+   "additional": [
+    "5.2"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "integrated-rate-laws",
+      "evidence": "Must test whether ln[A] or 1/[A] changes linearly with time (1/[NO2] rises 0.75 per 100 s) to determine second order."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "rate-law",
+      "evidence": "Must translate the determined order into the corresponding rate law expression."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "interpret"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ }
+}

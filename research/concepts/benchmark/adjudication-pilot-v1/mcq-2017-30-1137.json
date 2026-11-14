@@ -1,0 +1,72 @@
+{
+ "questionId": "mcq-2017-30-1137",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2017-30-1137.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "extra-content",
+   "notes": "Crop includes unrelated Q31 and its table; Q30 stem and structures A-D fully visible."
+  },
+  "officialTopics": {
+   "primary": "2.5",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "lewis-structures",
+      "evidence": "Must pick the structural diagram of the NH3-BF3 adduct, requiring the N lone pair to form a bond to B so N and B each have four bonds and F/H stay terminal."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "predict"
+    ],
+    "representations": [
+     "lewis-structure",
+     "molecular-structure"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "extra-content",
+   "notes": "Crop is the whole page and also contains Q31 (half-reaction table); Q30 stem and structural diagrams A-D are complete."
+  },
+  "officialTopics": {
+   "primary": "2.5",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "lewis-structures",
+      "evidence": "Must recognize that the N lone pair of NH3 can bond to the electron-deficient B of BF3 (incomplete octet), judging which connectivity gives valid bonding rather than H- or F-bridged structures."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "molecular-structure"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

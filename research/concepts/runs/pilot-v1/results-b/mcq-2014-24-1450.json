@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2014-24-1450",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the shared reaction CO + 2H2 <=> CH3OH, dH < 0; page context shows it."
+  },
+  "officialTopics": {
+    "primary": "6.7",
+    "additional": [
+      "6.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-enthalpy",
+          "evidence": "Must compare energy absorbed breaking reactant bonds with energy released forming product bonds."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Given dH < 0, net energy released, so bond-forming energy exceeds bond-breaking energy."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "compare"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

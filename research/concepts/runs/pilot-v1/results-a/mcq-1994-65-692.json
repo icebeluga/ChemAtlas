@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-1994-65-692",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "8.11",
+    "additional": [
+      "4.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ph-solubility",
+          "evidence": "Must recognize that a salt with a basic anion that is insoluble in water dissolves in acid because H+ consumes the anion, shifting the dissolution equilibrium."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must use the AP solubility facts that ammonium and nitrate salts are soluble to eliminate choices that are already water-soluble."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

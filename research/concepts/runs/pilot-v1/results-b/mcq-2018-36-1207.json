@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2018-36-1207",
+  "contentCheck": {
+    "status": "partial",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Question asks the mass percent of CaCO3 in an eggshell sample, but the experimental data (the stimulus for Q35-38, presumably on the previous page) is not in the crop or page context. Cannot be classified without it."
+  },
+  "officialTopics": {
+    "primary": "1.4",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Missing stimulus data; likely mixture-composition but not verifiable."
+}

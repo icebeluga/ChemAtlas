@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2014-practice-24-180",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "no-crop",
+    "notes": "Full page only; Q24 stem, mechanism and choices A-D are legible on the right column."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.4",
+      "5.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must derive the rate law from the slow step with a fast reversible first step and judge statements against it."
+        },
+        {
+          "conceptId": "elementary-steps",
+          "evidence": "Must judge molecularity of step 1 (2 NO combine, so not unimolecular)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-error",
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Choices span several concepts; collision-model could be supporting for the rate-constant statement."
+}

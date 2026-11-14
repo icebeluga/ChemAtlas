@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2017-42-1144",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop includes shared stimulus (equation, K and mechanism) plus Q43; only Q42 classified. Stem and choices legible."
+  },
+  "officialTopics": {
+    "primary": "7.5",
+    "additional": [
+      "9.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "k-magnitude",
+          "evidence": "Must explain why K = 2x10^30 is large, linking product favorability to overall reaction thermodynamics rather than rate."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "Must connect a very large K to a strongly negative dG, driven by large negative overall dH, rather than activation energies."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Activation-energy distractors could also suggest thermodynamic-kinetic-control; chose free-energy-equilibrium as supporting."
+}

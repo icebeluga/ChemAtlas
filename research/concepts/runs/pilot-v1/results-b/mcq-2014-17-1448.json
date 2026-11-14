@@ -1,0 +1,49 @@
+{
+  "questionId": "mcq-2014-17-1448",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows PE curves for X2, Y2, Z2 (wells near -450, -950, -500 kJ/mol), stem and assignment table A-D."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": [
+      "6.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must read well depth (bond energy) and equilibrium distance of each curve to match them to H2, N2, O2."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "bond-order",
+          "evidence": "Must know the N2 triple bond gives the deepest well, and H2 is shortest versus O2 double bond."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "graph",
+        "energy-diagram",
+        "table"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Matching relies on recalled bond strengths of H2, O2, N2; judged bond-order supporting."
+}

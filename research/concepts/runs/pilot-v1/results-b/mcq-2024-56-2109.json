@@ -1,0 +1,53 @@
+{
+  "questionId": "mcq-2024-56-2109",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows complete particle diagram with key, stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "4.3",
+    "additional": [
+      "4.7",
+      "4.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "reaction-representations",
+          "evidence": "Must interpret the before and after ion diagrams (including the precipitate) and match the ion counts and ratios to one balanced equation."
+        },
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must know which products are insoluble solids and which stay dissolved to find the equation showing a precipitate with ions remaining."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must separate the ions removed in the precipitate from spectator ions left in solution."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "particulate-diagram",
+        "chemical-equation"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

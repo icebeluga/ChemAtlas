@@ -1,0 +1,45 @@
+{
+ "questionId": "mcq-2024-38-2099",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "none",
+  "notes": "Crop shows both PES spectra and choices A-D; legible."
+ },
+ "officialTopics": {
+  "primary": "1.6",
+  "additional": [
+   "1.7"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "photoelectron-spectroscopy",
+     "evidence": "Must compare peak binding energies of two spectra with the same number and pattern of peaks to infer relative nuclear charge."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "coulombic-attraction",
+     "evidence": "Must connect higher binding energies to greater nuclear charge for the same electron configuration, and recognize an anion has fewer protons than the neutral atom."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "interpret",
+    "justify"
+   ],
+   "representations": [
+    "spectrum"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

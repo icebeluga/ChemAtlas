@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2024-19-2088",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop includes Q19 (left) and Q20 (right); only Q19 classified. Stem and choices A-D legible."
+  },
+  "officialTopics": {
+    "primary": "1.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "atomic-radius",
+          "evidence": "Must rank atoms, anions and a cation by size, e.g. S2- larger than S, Mg2+ smaller than Mg, K+ versus Ar versus Cl."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

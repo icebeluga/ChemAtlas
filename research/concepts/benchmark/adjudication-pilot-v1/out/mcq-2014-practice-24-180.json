@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2014-practice-24-180",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["mechanism-rate-law"], "supporting": ["elementary-steps"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "Makes elementary-steps co-primary; molecularity is a step toward judging the mechanism-derived rate law, not an equally assessed goal." },
+  "notes": "Elementary-step rate laws (and the molecularity of step 1) are a supporting step inside the pre-equilibrium derivation."
+}

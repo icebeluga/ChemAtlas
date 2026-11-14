@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2018-14-1911",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop starts mid-line at top but stem and choices A-D are legible; page context shows the complete question."
+  },
+  "officialTopics": {
+    "primary": "4.4",
+    "additional": [
+      "3.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "physical-chemical-change",
+          "evidence": "Must classify the vaporization of CH3OH(l) as a physical change."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must recognize that evaporation overcomes intermolecular attractions rather than breaking covalent bonds."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "classify",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

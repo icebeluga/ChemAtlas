@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-2022-38-1648",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the bond-dissociation table, stem and four potential-energy graphs A-D; all curves and labels legible."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": [
+      "1.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must choose the graph whose well depths match the given dissociation energies and whose minima positions reflect the bond lengths."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "atomic-radius",
+          "evidence": "Must use that Br atoms are smaller than I atoms, so the Br2 minimum lies at shorter internuclear distance, to eliminate graphs with plausible depths but wrong positions."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph",
+        "table"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

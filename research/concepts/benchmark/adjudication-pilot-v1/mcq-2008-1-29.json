@@ -1,0 +1,70 @@
+{
+ "questionId": "mcq-2008-1-29",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2008-1-29.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop shows item 1 only; choices A-E (noble gases ... actinides) are in the stimulus image."
+  },
+  "officialTopics": {
+   "primary": "1.7",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "ionization-energy",
+      "evidence": "Must link difficulty of oxidation (losing electrons) in a period to the highest ionization energy, held by noble gases."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows only stem 1; shared stimulus shows choices A-E (element families). Complete with stimulus; matches page."
+  },
+  "officialTopics": {
+   "primary": "1.7",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "ionization-energy",
+      "evidence": "Must recognize that oxidation means removing an electron and that noble gases have the highest first ionization energy in each period."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

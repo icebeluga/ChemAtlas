@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2008-4-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows only the question 4 stem; shared stimulus shows the titration curve with points A-E. Both legible."
+  },
+  "officialTopics": {
+    "primary": "8.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must locate on the weak acid-strong base curve the labeled point where moles of base equal initial moles of acid."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "titration-analysis",
+          "evidence": "Must apply the definition of equivalence point to the steep region of the curve."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "titration-curve"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

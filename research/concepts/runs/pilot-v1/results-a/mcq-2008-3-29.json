@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2008-3-29",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "none", "notes": "Crop shows only stem 3; shared stimulus shows choices A-E (element families). Complete with stimulus; matches page." },
+  "officialTopics": { "primary": "1.8", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "ionic-formulas", "evidence": "Must predict from periodic position that halogens, one electron short of a noble-gas configuration, gain an electron to form anions, unlike alkali metals, transition elements or noble gases." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["text-only"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

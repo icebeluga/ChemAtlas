@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-3-29",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows only the Q3 stem; stimulus image and page give choices A-E (noble gases, alkali metals, halogens, transition elements, actinides)."
+  },
+  "officialTopics": {
+    "primary": "1.8",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ionic-formulas",
+          "evidence": "Must predict which group gains electrons to form anions from periodic position."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

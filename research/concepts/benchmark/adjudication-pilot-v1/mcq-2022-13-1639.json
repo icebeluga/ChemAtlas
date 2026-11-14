@@ -1,0 +1,76 @@
+{
+ "questionId": "mcq-2022-13-1639",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2022-13-1639.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows stem and choices A-D. The reaction context (MnO2 with H2O2) is in an earlier stimulus not shown but not needed to reason about the catalyst effect."
+  },
+  "officialTopics": {
+   "primary": "5.11",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "catalysis",
+      "evidence": "Must explain the much slower rate without MnO2 as the catalyst providing a lower-activation-energy pathway, while not changing DeltaH or the equilibrium position."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "activation-energy",
+      "evidence": "Must connect a lower activation barrier to faster rate."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "explain",
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop shows full stem and choices A-D. The shared stimulus (H2O2 decomposition with MnO2) is on the previous page and not shown; it is not needed to answer."
+  },
+  "officialTopics": {
+   "primary": "5.11",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "catalysis",
+      "evidence": "Must explain the faster rate with MnO2 as a catalyst providing a lower activation-energy pathway, rejecting changes to ΔH or equilibrium position."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "explain"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

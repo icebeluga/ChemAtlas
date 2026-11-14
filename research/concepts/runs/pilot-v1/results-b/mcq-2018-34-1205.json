@@ -1,0 +1,46 @@
+{
+  "questionId": "mcq-2018-34-1205",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the beaker figure (saturated CuSO4(aq) with solid CuSO4 crystals); page context shows it."
+  },
+  "officialTopics": {
+    "primary": "7.11",
+    "additional": [
+      "7.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "solubility-product",
+          "evidence": "Saturated solution in contact with solid keeps constant ion concentration at fixed temperature as water evaporates; excess solid precipitates."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Must treat the saturated solution as a dissolution equilibrium with the solid."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "justify"
+      ],
+      "representations": [
+        "text-only",
+        "apparatus-diagram"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Could also be argued as le-chatelier or dynamic-equilibrium primary."
+}

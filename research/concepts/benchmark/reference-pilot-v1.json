@@ -1,0 +1,1266 @@
+{
+  "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified",
+  "createdAt": "2026-11-14T09:25:30.106Z",
+  "questions": {
+    "frq-1999-7-564": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "c-i": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "c-ii": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "d": {
+          "primary": [
+            "lewis-structures",
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains",
+            "molecular-polarity"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Part (c) is split into printed subparts (i) and (ii); in (d) polarity is judged supporting because it is justified from the sketched shape."
+    },
+    "frq-2003-3-536": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "ice-tables"
+          ]
+        },
+        "c-i": {
+          "primary": [
+            "buffers"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        },
+        "c-ii": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": [
+            "acid-base-mixtures"
+          ]
+        },
+        "d": {
+          "primary": [
+            "buffer-capacity"
+          ],
+          "supporting": []
+        },
+        "e": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Page is the 2017 FRQ 3 despite the id; parts refined to printed labels a, b, c-i, c-ii, d, e."
+    },
+    "frq-2011-3-933": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "empirical-formula"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": []
+        },
+        "c-i": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": []
+        },
+        "c-ii": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        },
+        "c-iii": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Heat is given directly in (b), so calorimetry is at most contextual."
+    },
+    "frq-2017-3-1157": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "lewis-structures",
+            "resonance"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "c": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        },
+        "d-i": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        },
+        "d-ii": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        },
+        "d-iii": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "d-iv": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "d-iii (pseudo-first-order) and d-iv (vary [HSO3-]) assess reaction order, so rate-law rather than integrated-rate-laws."
+    },
+    "frq-2023-3-448": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "e": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": [
+            "molarity"
+          ]
+        },
+        "f": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "g-i": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        },
+        "g-ii": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Catalog groups b-d and e-g; reference uses the printed parts. Converting reaction time to rate is treated as routine in (d)."
+    },
+    "frq-2024-5-2125": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        },
+        "b": {
+          "primary": [
+            "solution-representations"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Part (b) is mostly experimental design; solution-representations (dissolved ions as electrolytes) is the closest concept."
+    },
+    "mcq-1984-6-120": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Pure recall of an industrial use of a compound; legacy descriptive content."
+    },
+    "mcq-2002-41-759": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "endo-exothermic",
+            "entropy"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Favorability frames the item; ΔH sign from the temperature drop and ΔS sign from gas formation are both required supporting inferences."
+    },
+    "mcq-2002-6-606": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "particulate-states"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Legacy phase-diagram reading has no dedicated concept (phase diagrams are excluded from the CED); particulate-states is the closest fit for naming the phase change, flagged for teacher review."
+    },
+    "mcq-2002-67-765": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Distractors all propose intramolecular bond breaking, so imf-properties (inter- vs intramolecular) is the designed target."
+    },
+    "mcq-2008-1-29": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "'Most difficult to oxidize' means hardest to remove an electron, i.e. the ionization-energy trend; choices come from the shared stimulus."
+    },
+    "mcq-2008-10-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Third-law recall about absolute entropy; other listed quantities are distractors only."
+    },
+    "mcq-2008-11-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "activation-energy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Recall of the experimental route to Ea; no Arrhenius calculation or collision reasoning is needed."
+    },
+    "mcq-2008-13-32": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "entropy",
+            "phase-change-energy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Boundary: sign of ΔH for a phase change recalled from the process itself fits phase-change-energy better than endo-exothermic (which centers on temperature/q evidence or diagrams)."
+    },
+    "mcq-2008-41-38": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-representations",
+            "limiting-reactant"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "reaction-representations explicitly covers showing limiting and excess reactants in particle form, so both are assessed equally."
+    },
+    "mcq-2008-59-42": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "equilibrium-expression"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "K is evaluated from particle counts, so this is calculating K rather than k-magnitude (which infers amounts from a given K)."
+    },
+    "mcq-2012-21-1354": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Relating rates of different species through coefficients is squarely reaction-rate; the equation is above the crop on the page."
+    },
+    "mcq-2014-15-178": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Crop lacks the shared curve but page context shows it, so content is complete."
+    },
+    "mcq-2014-21-1450": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Temperature effect on K for a reaction stated to be exothermic is le-chatelier alone."
+    },
+    "mcq-2014-34-186": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Reversing and scaling a given thermochemical equation is fully covered by enthalpy-of-reaction."
+    },
+    "mcq-2014-practice-24-180": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Elementary-step rate laws (and the molecularity of step 1) are a supporting step inside the pre-equilibrium derivation."
+    },
+    "mcq-2015-47-1554": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Forces at the energy minimum of the PE curve; no other concept needed."
+    },
+    "mcq-2016-24-1063": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "limiting-reactant"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Context is a ΔHrxn experiment, so the heat-amount relationship is the assessed idea."
+    },
+    "mcq-2016-27-1064": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-angles"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Shape naming is not required to rank the angles, so molecular-geometry is left out."
+    },
+    "mcq-2016-37-1070": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "limiting-reactant",
+            "enthalpy-of-reaction"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Crops cut the ΔH value and choice table, but the page context shows them, so content is complete."
+    },
+    "mcq-2016-5-1053": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-order"
+          ],
+          "supporting": [
+            "lewis-structures"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Bond multiplicities are not given, so deriving the Lewis structures is a non-trivial supporting step; not bond-enthalpy (no ΔH estimate)."
+    },
+    "mcq-2016-9-1056": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "strong-weak-acids is supporting because every choice turns on classifying the acid (and base) as strong or weak from the curve."
+    },
+    "mcq-2017-30-1137": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Lewis acid-base theory is outside AP, but the item is answerable from N's lone pair and B's incomplete octet, i.e. Lewis structure reasoning."
+    },
+    "mcq-2017-42-1144": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "gibbs-free-energy",
+            "thermodynamic-kinetic-control"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Two distractors offer activation energies, so separating rate from favorability is a material step."
+    },
+    "mcq-2018-13-1198": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Order is read from which transformed column changes linearly, so integrated-rate-laws alone; rate-law excluded per its integrated-plot exclusion."
+    },
+    "mcq-2018-14-1911": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "physical-chemical-change"
+          ],
+          "supporting": [
+            "imf-properties"
+          ]
+        }
+      },
+      "stratum": "agree",
+      "notes": "Shared stimulus for Q14-17 is on a previous page and not shown, but the stem and choices are self-sufficient, so content is treated as complete."
+    },
+    "mcq-2018-34-1205": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "solubility-product"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Fixed molar solubility of a saturated solution at constant T is a qualitative 7.11 idea; no separate equilibrium-nature tag needed."
+    },
+    "mcq-2018-40-2043": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "Decay-particle identification is legacy beyond-AP content."
+    },
+    "mcq-2022-13-1639": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Shared stimulus on the previous page is not needed; all distractors test catalyst misconceptions (ΔH, equilibrium, heat)."
+    },
+    "mcq-2022-21-1622": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "imf-properties is primary per its rule to pair with the specific deciding force; dispersion is non-decisive (similar molar masses) and is omitted."
+    },
+    "mcq-2022-41-1649": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mole-conversions"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "agree",
+      "notes": "The item isolates the mass-to-particle conversion, so mole-conversions is primary."
+    },
+    "mcq-2022-5-1663": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": []
+        },
+        "c": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "d": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Excess citric acid is given, so limiting-reactant is excluded by its 'obvious excess stated' rule; despite the mcq id this is a 4-part FRQ."
+    },
+    "mcq-2022-52-1652": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Ranking requires partial ionization (H2C2O4 largest) plus Ka2 << Ka1, so the equilibrium concept is primary."
+    },
+    "mcq-2022-56-1653": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ion-dipole"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Water orientation alone fixes the ion charges and a unique choice, so ion size (atomic-radius) is not required."
+    },
+    "mcq-2023-33-1727": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": []
+        }
+      },
+      "stratum": "non-agree",
+      "notes": "Crop clips the shared equation, but the page context shows it and it is not needed to answer."
+    }
+  },
+  "verdicts": [
+    {
+      "questionId": "frq-1999-7-564",
+      "pass": "a",
+      "label": "wrong-primary",
+      "reason": "d makes molecular-polarity primary and demotes molecular-geometry, though drawing the structure and sketching the seesaw shape are the main demands and polarity follows from them; tag set otherwise matches."
+    },
+    {
+      "questionId": "frq-1999-7-564",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "frq-2003-3-536",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "frq-2003-3-536",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Part (e) uses henderson-hasselbalch, but no calculation is needed: the predominant species vs pH/pKa comparison is the point (pka-speciation). Also adds acid-base-mixtures to (c-i), which is over-tagging."
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "pass": "a",
+      "label": "over-tagged",
+      "reason": "b adds mole-conversions; converting 2.50 g glucose to moles is the routine first step of scaling heat to ΔH per mole, already captured by enthalpy-of-reaction."
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "b adds mole-conversions; also lumps c(i)-(iii) and the separately printed part (d) into one 'c-onward' part, so hess-law and le-chatelier are not attached to their own parts."
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "pass": "a",
+      "label": "over-tagged",
+      "reason": "d-ii adds rate-law for the units of k; first-order units follow directly from the half-life relation and are not a separate order determination."
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "frq-2023-3-448",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "b makes collision-model primary though (b) asks only for a data-based argument about factors affecting rate (particle reasoning is (c)); also adds reaction-rate to d and mole-conversions instead of calorimetry to g-ii."
+    },
+    {
+      "questionId": "frq-2023-3-448",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "frq-2024-5-2125",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds net-ionic-equations to (b) (naming spectators is not needed to describe a conductivity-type test) and ionic-formulas to (d) (Mg2+ charge is given by Mg(NO3)2 and the word cation)."
+    },
+    {
+      "questionId": "frq-2024-5-2125",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-1984-6-120",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-1984-6-120",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2002-41-759",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2002-41-759",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2002-6-606",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2002-6-606",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "pass": "a",
+      "label": "wrong-primary",
+      "reason": "Makes hydrogen-bonding co-primary; the item mainly tests that vaporization breaks intermolecular, not covalent or ionic, attractions."
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-1-29",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-1-29",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-10-31",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-10-31",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "pass": "a",
+      "label": "over-tagged",
+      "reason": "Adds collision-model; the item only asks which quantity is found from rates at several temperatures, with no particle-level explanation required."
+    },
+    {
+      "questionId": "mcq-2008-13-32",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Uses endo-exothermic for the sign of ΔH; knowing vaporization absorbs heat is phase-change-energy, not an evidence-based heat-flow judgment."
+    },
+    {
+      "questionId": "mcq-2008-13-32",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-41-38",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Demotes reaction-representations to supporting, although choosing the particle diagram of products plus excess N2 is as central as finding the limiting reactant."
+    },
+    {
+      "questionId": "mcq-2008-41-38",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "pass": "a",
+      "label": "under-tagged",
+      "reason": "Omits equilibrium-expression; the squared [NO2] term is what decides the value relative to 1."
+    },
+    {
+      "questionId": "mcq-2012-21-1354",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2012-21-1354",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2014-15-178",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds acid-base-mixtures; identifying species at a point on the curve is already within titration-curves and no post-mixing calculation is required."
+    },
+    {
+      "questionId": "mcq-2014-15-178",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2014-21-1450",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2014-21-1450",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds endo-exothermic; the sign ΔH < 0 is given, not determined from evidence."
+    },
+    {
+      "questionId": "mcq-2014-34-186",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2014-34-186",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds endo-exothermic; reversing the sign of a given thermochemical equation is part of enthalpy-of-reaction scaling, not a separate evidence-based heat-flow judgment."
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Makes elementary-steps co-primary; molecularity is a step toward judging the mechanism-derived rate law, not an equally assessed goal."
+    },
+    {
+      "questionId": "mcq-2015-47-1554",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2015-47-1554",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-24-1063",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-24-1063",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Swaps roles: the item assesses how heat released scales with the amount reacting; identifying NaOH as limiting is the supporting step."
+    },
+    {
+      "questionId": "mcq-2016-27-1064",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds molecular-geometry; no shape must be named, the comparison rests on domain counts and lone-pair compression."
+    },
+    {
+      "questionId": "mcq-2016-27-1064",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Demotes enthalpy-of-reaction to supporting, yet the q column (scaling -610 kJ to the amount reacting) is half of every answer choice."
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "pass": "a",
+      "label": "over-tagged",
+      "reason": "Adds reaction-stoichiometry; the 2:1 mole ratio is the inner step of the limiting-reactant and ΔH-scaling work already tagged."
+    },
+    {
+      "questionId": "mcq-2016-5-1053",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-5-1053",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-9-1056",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2016-9-1056",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2017-30-1137",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2017-30-1137",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2017-42-1144",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2017-42-1144",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Makes k-magnitude primary, but K's size is given; the question asks for its thermodynamic cause via the ΔG°-K link, and Y omits the ΔH/ΔS and kinetics-versus-thermodynamics reasoning."
+    },
+    {
+      "questionId": "mcq-2018-13-1198",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2018-13-1198",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds rate-law; matching the order found from the linear 1/[NO2] column to a listed rate law is trivial, not an initial-rates determination."
+    },
+    {
+      "questionId": "mcq-2018-14-1911",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2018-14-1911",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2018-34-1205",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds dynamic-equilibrium; recognizing the saturated solution as a dissolution equilibrium is inherent to the solubility-equilibrium concept already tagged."
+    },
+    {
+      "questionId": "mcq-2018-34-1205",
+      "pass": "a",
+      "label": "correct",
+      "reason": "Contextual endo-exothermic is harmless (distractor only)."
+    },
+    {
+      "questionId": "mcq-2018-40-2043",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2018-40-2043",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-13-1639",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds activation-energy; the lower-barrier pathway is the catalysis explanation itself and no energy profile is used."
+    },
+    {
+      "questionId": "mcq-2022-13-1639",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "pass": "a",
+      "label": "wrong-primary",
+      "reason": "Makes hydrogen-bonding a co-primary; the part assesses boiling point from IMF strength, with hydrogen bonding as the deciding supporting force."
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-41-1649",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-41-1649",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-5-1663",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-5-1663",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "d makes calorimetry primary when the point is heat scaling with the amount of NaHCO3 reacting; also adds reaction-rate (b), heat-transfer (c) and limiting-reactant (d), where excess citric acid is stated."
+    },
+    {
+      "questionId": "mcq-2022-52-1652",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-52-1652",
+      "pass": "b",
+      "label": "wrong-primary",
+      "reason": "Makes strong-weak-acids co-primary; partial ionization is a supporting step toward ranking species in the stepwise diprotic equilibrium."
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "pass": "b",
+      "label": "correct",
+      "reason": ""
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "pass": "a",
+      "label": "over-tagged",
+      "reason": "Promotes solution-representations to co-primary and adds bond-polarity, which is a routine prerequisite (knowing water's partial charges)."
+    },
+    {
+      "questionId": "mcq-2023-33-1727",
+      "pass": "b",
+      "label": "over-tagged",
+      "reason": "Adds activation-energy; the lower-Ea alternative pathway is the definition of catalysis, and no energy profile is read."
+    },
+    {
+      "questionId": "mcq-2023-33-1727",
+      "pass": "a",
+      "label": "correct",
+      "reason": ""
+    }
+  ]
+}

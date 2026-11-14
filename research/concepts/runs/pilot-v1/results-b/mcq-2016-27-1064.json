@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-2016-27-1064",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop and page show all four Lewis diagrams A-D."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-angles",
+          "evidence": "Must compare the bond angles of the four molecules and pick the smallest, accounting for lone-pair compression and domain geometry."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must determine the shape of each species (tetrahedral, trigonal pyramidal, trigonal planar, bent) from its drawn Lewis structure."
+        },
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count domains including lone pairs on N and S, and treat double bonds as one domain."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "rank"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

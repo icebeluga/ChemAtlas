@@ -1,0 +1,96 @@
+{
+ "questionId": "mcq-2002-41-759",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2002-41-759.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop includes part of Q39 solubility graph; Q41 stem and choices A-E are complete."
+  },
+  "officialTopics": {
+   "primary": "9.3",
+   "additional": [
+    "6.1",
+    "9.1"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "gibbs-free-energy",
+      "evidence": "Must give signs of dG, dH and dS; a spontaneous process has negative dG."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Temperature drop shows the process absorbs heat, so dH is positive."
+     },
+     {
+      "conceptId": "entropy",
+      "evidence": "A gas is produced from solids, so dS is positive."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "predict"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop includes the end of the previous question's solubility graph; Q41 stem and choices A-E are complete."
+  },
+  "officialTopics": {
+   "primary": "9.3",
+   "additional": [
+    "6.1",
+    "9.1"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "gibbs-free-energy",
+      "evidence": "Must combine ΔH > 0 and ΔS > 0 with the observation that the process occurs spontaneously to conclude ΔG < 0."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Must infer ΔH > 0 from the temperature drop of the mixture."
+     },
+     {
+      "conceptId": "entropy",
+      "evidence": "Must infer ΔS > 0 because a gas is produced from two solids."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "justify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

@@ -1,0 +1,21 @@
+{
+  "questionId": "frq-2011-6-937",
+  "contentCheck": {
+    "status": "partial",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content",
+    "notes": "Crop shows (a)(i), (a)(ii) and (b)(i) only. Catalog part remaining-visible-parts (later subparts of (b) onward) is not shown on the crop or page, so the question is incomplete and parts are left empty."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": [
+      "2.5",
+      "3.1"
+    ]
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Catalog part remaining-visible-parts has no visible content; continuation not shown."
+}

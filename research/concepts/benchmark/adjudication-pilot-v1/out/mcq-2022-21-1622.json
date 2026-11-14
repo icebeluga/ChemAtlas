@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2022-21-1622",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["imf-properties"], "supporting": ["hydrogen-bonding"] } },
+  "verdictX": { "label": "wrong-primary", "reason": "Makes hydrogen-bonding a co-primary; the part assesses boiling point from IMF strength, with hydrogen bonding as the deciding supporting force." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "imf-properties is primary per its rule to pair with the specific deciding force; dispersion is non-decisive (similar molar masses) and is omitted."
+}

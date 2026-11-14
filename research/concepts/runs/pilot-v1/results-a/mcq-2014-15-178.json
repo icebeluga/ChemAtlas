@@ -1,0 +1,49 @@
+{
+  "questionId": "mcq-2014-15-178",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the start of the stem and the shared titration curve (questions 14-17); page context shows the curve with point U at about 60 mL, past equivalence, and particulate choices A-D."
+  },
+  "officialTopics": {
+    "primary": "8.5",
+    "additional": [
+      "3.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must locate point U beyond the equivalence point on the curve and identify that excess OH- is present along with A- and Na+."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "solution-representations",
+          "evidence": "Must pick the particulate diagram whose species match the solution composition at U, distinguishing HA, A-, OH- and Na+."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "titration-curve",
+        "particulate-diagram"
+      ],
+      "skills": [
+        "graph-analysis",
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "Catalog topic 4.3 seems off; the item assesses species along a titration curve (8.5)."
+}

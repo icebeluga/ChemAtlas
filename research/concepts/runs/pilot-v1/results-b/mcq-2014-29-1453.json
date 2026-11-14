@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2014-29-1453",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the three equilibria with K1, K2, K3; page context shows them."
+  },
+  "officialTopics": {
+    "primary": "7.6",
+    "additional": [
+      "7.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "k-manipulation",
+          "evidence": "Must find K3 by adding the dissolution equilibrium and twice the HF formation (K3 = K1 x K2^2)."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "k-magnitude",
+          "evidence": "Must judge favorability from K3 being greater than 1."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "derive",
+        "justify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

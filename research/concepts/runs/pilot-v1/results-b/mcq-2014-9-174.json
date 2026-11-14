@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2014-9-174",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop starts mid-sentence; page context shows full stem (100 g metal at 100 C into 100 g water at 22 C, final 35 C). Choices A-D complete."
+  },
+  "officialTopics": {
+    "primary": "6.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "heat-transfer",
+          "evidence": "Must conclude heat lost by the metal equals heat gained by the water in an insulated container, despite different temperature changes."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must reason with q = mc dT that different dT does not mean different q, and that heat capacity cannot be concluded from dT alone."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

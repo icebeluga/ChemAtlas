@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["weak-acid-equilibrium"], "supporting": ["strong-weak-acids"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "Makes strong-weak-acids co-primary; partial ionization is a supporting step toward ranking species in the stepwise diprotic equilibrium." },
+  "notes": "Ranking requires partial ionization (H2C2O4 largest) plus Ka2 << Ka1, so the equilibrium concept is primary."
+}

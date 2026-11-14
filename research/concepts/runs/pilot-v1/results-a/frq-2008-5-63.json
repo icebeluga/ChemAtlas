@@ -1,0 +1,176 @@
+{
+  "questionId": "frq-2008-5-63",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Two crops cover parts (a)-(c) with the ionization-energy table and parts (d)-(f) with the Lewis-structure boxes; both match page context."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": [
+      "1.7",
+      "2.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must write the gas-phase equation F(g) -> F+(g) + e- that defines the first ionization energy."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must account for F having a higher first ionization energy than O, discussing both atoms."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Explanation requires the greater nuclear charge of F with valence electrons in the same shell, giving stronger attraction for the removed electron."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must predict whether the Xe first ionization energy is greater or less than that of F and justify."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Justification rests on Xe valence electrons being much farther from the nucleus and more shielded than those of F."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw complete Lewis diagrams for XeO3 and XeF4, counting valence electrons and placing lone pairs on Xe with an expanded octet."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e-i",
+      "primary": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must name the shape of XeO3 from the Lewis diagram drawn in (d)."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count four electron domains on Xe (three bonds and one lone pair) to get trigonal pyramidal rather than trigonal planar."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e-ii",
+      "primary": [
+        {
+          "conceptId": "hybridization",
+          "evidence": "Must state the hybridization of the Xe valence orbitals in XeF4."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count six electron domains on Xe (four bonds and two lone pairs) to assign the hybridization."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must predict and justify whether XeO3 is polar."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Justification depends on the trigonal pyramidal shape, whose Xe-O bond dipoles do not cancel."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (e)(ii) requires d-orbital (sp3d2) hybridization, which the current CED does not assess; tagged hybridization anyway."
+}

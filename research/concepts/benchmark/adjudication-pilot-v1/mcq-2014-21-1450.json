@@ -1,0 +1,84 @@
+{
+ "questionId": "mcq-2014-21-1450",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2014-21-1450.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Crop r1 shows the shared stimulus (CO + 2 H2 <=> CH3OH, ΔH < 0, Kc = 14.5 at 483 K); crop r2 shows question 21 with choices A-D. Matches page."
+  },
+  "officialTopics": {
+   "primary": "7.9",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "le-chatelier",
+      "evidence": "Must reason that for an exothermic reaction (ΔH < 0) raising the temperature favors the reverse reaction, so Kc decreases; temperature is the only stress that changes K."
+     }
+    ],
+    "supporting": [],
+    "contextual": [
+     {
+      "conceptId": "activation-energy",
+      "evidence": "Distractor A attributes the K change to changes in activation energies."
+     }
+    ],
+    "actions": [
+     "predict",
+     "explain"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Two crops: r1 shows shared stimulus (equation, dH<0, Kc), r2 shows Q21 stem and choices A-D. Only Q21 classified."
+  },
+  "officialTopics": {
+   "primary": "7.9",
+   "additional": [
+    "6.2"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "le-chatelier",
+      "evidence": "Must predict that raising T shifts an exothermic equilibrium toward reactants so Kc decreases (only temperature changes K)."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Must use dH < 0 to know the forward reaction releases heat and how added heat affects K."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "explain",
+     "predict"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

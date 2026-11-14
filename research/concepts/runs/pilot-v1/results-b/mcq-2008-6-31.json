@@ -1,0 +1,45 @@
+{
+ "questionId": "mcq-2008-6-31",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "none",
+  "notes": "Crop shows Q6 text; stimulus image shows titration curve with points A-E; complete."
+ },
+ "officialTopics": {
+  "primary": "8.5",
+  "additional": [
+   "8.8"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "titration-curves",
+     "evidence": "Must locate on the weak acid titration curve the half-equivalence point."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "buffers",
+     "evidence": "Equal HA and A- occurs in the buffer region at half the equivalence volume."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "identify",
+    "interpret"
+   ],
+   "representations": [
+    "titration-curve"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-1984-6-120",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Two crops: the shared answer list (A-E) and the question 6 stem. Both legible."
+  },
+  "officialTopics": {
+    "primary": "4.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "descriptive-chemistry",
+          "evidence": "Requires recalling a memorized industrial use of a listed substance; not derivable from AP reaction or structure principles."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "No clear CED topic; topic 4.1 used as a nearest placeholder for an out-of-scope recall question."
+}

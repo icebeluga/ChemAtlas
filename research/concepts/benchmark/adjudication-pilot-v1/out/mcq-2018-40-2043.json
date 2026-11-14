@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2018-40-2043",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["nuclear-chemistry"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Decay-particle identification is legacy beyond-AP content."
+}

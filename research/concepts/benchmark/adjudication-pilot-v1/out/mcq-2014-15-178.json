@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2014-15-178",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["titration-curves"], "supporting": ["solution-representations"] } },
+  "verdictX": { "label": "over-tagged", "reason": "Adds acid-base-mixtures; identifying species at a point on the curve is already within titration-curves and no post-mixing calculation is required." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Crop lacks the shared curve but page context shows it, so content is complete."
+}

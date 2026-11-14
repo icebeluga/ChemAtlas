@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2018-36-1207",
+  "contentCheck": {
+    "status": "partial",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content",
+    "notes": "Crop and page show only the stem and choices; the eggshell experiment stimulus (sample mass and measured data) shared by Q35-38 is on an earlier page not included in the packet, so the required data cannot be seen."
+  },
+  "officialTopics": {
+    "primary": "1.4",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Shared stimulus for the eggshell question set is missing; cannot determine what data the student uses."
+}

@@ -1,0 +1,185 @@
+{
+ "questionId": "frq-2005-4-10",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "none",
+  "notes": "Crop shows all eight situations (a)-(h) and the example; any five are graded."
+ },
+ "officialTopics": {
+  "primary": "4.2",
+  "additional": [
+   "4.7"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "a",
+   "primary": [
+    {
+     "conceptId": "reaction-types",
+     "evidence": "Zn reduces Ni2+ in a single-displacement redox reaction."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "net-ionic-equations",
+     "evidence": "Must write only Zn, Ni2+, Zn2+, Ni omitting nitrate."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "b",
+   "primary": [
+    {
+     "conceptId": "descriptive-chemistry",
+     "evidence": "Must know Al(OH)3 is amphoteric and dissolves in OH- forming a hydroxo complex."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "predict"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c",
+   "primary": [
+    {
+     "conceptId": "reaction-types",
+     "evidence": "Combustion of a hydrocarbon gives CO2 and H2O."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "d",
+   "primary": [
+    {
+     "conceptId": "net-ionic-equations",
+     "evidence": "Must keep solid CaCO3 and weak acid HC2H3O2 as formulas, writing Ca2+, CO2, H2O."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "strong-weak-acids",
+     "evidence": "Must recognize acetic acid is weak so it is not written as ions."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "e",
+   "primary": [
+    {
+     "conceptId": "descriptive-chemistry",
+     "evidence": "Must predict Li reacts with N2 to form Li3N."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "predict"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "f",
+   "primary": [
+    {
+     "conceptId": "descriptive-chemistry",
+     "evidence": "Must predict Lewis acid-base adduct F3B-NH3 from BF3 and NH3."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "predict"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "g",
+   "primary": [
+    {
+     "conceptId": "descriptive-chemistry",
+     "evidence": "Must predict acidic oxide SO3 reacts with OH- to give sulfate and water."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "predict"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "h",
+   "primary": [
+    {
+     "conceptId": "precipitation",
+     "evidence": "Must identify PbI2 as the insoluble product when Pb2+ and I- mix."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "net-ionic-equations",
+     "evidence": "Must omit spectator ions Mg2+ and NO3-."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "predict"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

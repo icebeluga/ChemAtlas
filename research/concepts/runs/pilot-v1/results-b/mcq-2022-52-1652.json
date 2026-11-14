@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "8.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "Must recognise that a weak acid is mostly un-ionized, so H2C2O4 has the highest concentration."
+        },
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must reason that the first ionization exceeds the second (Ka1 >> Ka2), ordering H3O+, HC2O4- and C2O4 2-."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

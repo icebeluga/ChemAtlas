@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-1984-84-135",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.8",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "colligative-properties",
+          "evidence": "Must compare boiling-point elevation, which depends on total particle molarity, across solutions."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "solution-representations",
+          "evidence": "Must determine how many particles each solute gives on dissociation (K2SO4 three ions, HCl two, NH4NO3 two, sucrose none)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "rank",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Legacy colligative content (beyond AP); no CED topic, so closest CED topic 3.8 used since none exists."
+}

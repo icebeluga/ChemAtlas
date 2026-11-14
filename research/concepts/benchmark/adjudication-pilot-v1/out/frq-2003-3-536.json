@@ -1,0 +1,15 @@
+{
+  "questionId": "frq-2003-3-536",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["equilibrium-expression"], "supporting": [] },
+    "b": { "primary": ["equilibrium-constant-calculation"], "supporting": ["ice-tables"] },
+    "c-i": { "primary": ["buffers"], "supporting": ["net-ionic-equations"] },
+    "c-ii": { "primary": ["henderson-hasselbalch"], "supporting": ["acid-base-mixtures"] },
+    "d": { "primary": ["buffer-capacity"], "supporting": [] },
+    "e": { "primary": ["pka-speciation"], "supporting": ["solution-representations"] }
+  },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "Part (e) uses henderson-hasselbalch, but no calculation is needed: the predominant species vs pH/pKa comparison is the point (pka-speciation). Also adds acid-base-mixtures to (c-i), which is over-tagging." },
+  "notes": "Page is the 2017 FRQ 3 despite the id; parts refined to printed labels a, b, c-i, c-ii, d, e."
+}

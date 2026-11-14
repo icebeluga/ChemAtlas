@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2008-13-32",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows only the stem; answer choices are in the shared stimulus image (Delta H and Delta S combinations A-E). Both are legible."
+  },
+  "officialTopics": {
+    "primary": "9.2",
+    "additional": [
+      "6.1",
+      "6.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must predict the sign of Delta S for liquid water becoming vapor (more dispersal, gas formed)."
+        },
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must determine the sign of Delta H for evaporation, which absorbs heat."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

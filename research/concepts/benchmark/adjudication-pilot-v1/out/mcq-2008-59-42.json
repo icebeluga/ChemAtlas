@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-59-42",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["equilibrium-constant-calculation"], "supporting": ["equilibrium-expression"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "under-tagged", "reason": "Omits equilibrium-expression; the squared [NO2] term is what decides the value relative to 1." },
+  "notes": "K is evaluated from particle counts, so this is calculating K rather than k-magnitude (which infers amounts from a given K)."
+}

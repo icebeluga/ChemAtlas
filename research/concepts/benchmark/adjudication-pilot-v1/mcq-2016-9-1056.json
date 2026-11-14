@@ -1,0 +1,89 @@
+{
+ "questionId": "mcq-2016-9-1056",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2016-9-1056.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows titration curve (start pH about 3, equivalence near 26 mL), stem and choices A-D."
+  },
+  "officialTopics": {
+   "primary": "8.5",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "titration-curves",
+      "evidence": "Must read the curve: starting pH about 3 and equivalence pH above 7 identify a weak acid titrated with a strong base."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "strong-weak-acids",
+      "evidence": "Must distinguish weak from strong acid by the initial pH and buffer-like region."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "interpret",
+     "justify"
+    ],
+    "representations": [
+     "titration-curve",
+     "graph"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows the pH versus volume-of-base titration curve and question 9 with choices A-D; matches page."
+  },
+  "officialTopics": {
+   "primary": "8.5",
+   "additional": [
+    "8.1"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "titration-curves",
+      "evidence": "Must read the curve's initial pH, buffer region and equivalence-point pH to identify the acid and base types titrated."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "strong-weak-acids",
+      "evidence": "Must connect an equivalence point above pH 7 and a gradual buffer region to a weak acid whose conjugate base is basic, versus a strong acid."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "interpret",
+     "classify"
+    ],
+    "representations": [
+     "titration-curve"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ }
+}

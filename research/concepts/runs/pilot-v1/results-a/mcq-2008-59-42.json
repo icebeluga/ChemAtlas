@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2008-59-42",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "complete",
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Full-page image only; Q59 particle diagram (NO2 and N2O4 in 1.0 L), equation and choices A-E are legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+    "primary": "7.4",
+    "additional": [
+      "7.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "equilibrium-constant-calculation",
+          "evidence": "Must count NO2 and N2O4 particles in the 1.0 L box and substitute into K = [N2O4]/[NO2]^2 to place K relative to 1."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "particulate-diagram"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

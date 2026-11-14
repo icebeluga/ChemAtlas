@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2008-11-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows only the item line; the shared choice list (A-E) for questions 10-11 is in the stimulus image and on the page."
+  },
+  "officialTopics": {
+    "primary": "5.5",
+    "additional": [
+      "5.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "activation-energy",
+          "evidence": "Must identify activation energy as the quantity obtained from how the rate changes between two temperatures."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "collision-model",
+          "evidence": "Requires knowing that the temperature dependence of rate reflects the fraction of collisions with energy at least Ea."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Item relies on Arrhenius-type determination of Ea from rates at two temperatures; numerical Arrhenius work is not assessed in the current CED."
+}

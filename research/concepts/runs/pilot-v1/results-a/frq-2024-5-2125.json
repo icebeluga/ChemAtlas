@@ -1,0 +1,103 @@
+{
+  "questionId": "frq-2024-5-2125",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Scanned page; crop shows stem, parts (a)-(d) and the orbital energy diagram for Mg2+ legibly."
+  },
+  "officialTopics": {
+    "primary": "4.2",
+    "additional": [
+      "1.5",
+      "1.8",
+      "4.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write Mg2+ + CO3^2- -> MgCO3(s), omitting Na+ and NO3- spectators."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must identify MgCO3 as the white solid because sodium and nitrate salts are soluble."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "solution-representations",
+          "evidence": "Must recognize that the filtrate still contains dissolved Na+ and NO3- ions, so it behaves as an electrolyte (e.g. conducts electricity)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-procedure",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "ionic-formulas",
+          "evidence": "Must recognize that a 2:1 cation:anion ratio with CO3^2- requires a +1 cation, i.e. another group 1 metal."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must fill the orbital diagram for Mg2+ (1s2 2s2 2p6) with paired arrows, removing the two 3s electrons."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "energy-diagram"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (b): no concept for 'electrical conductivity of electrolyte solutions / detecting ions'; solution-representations is the closest fit. A precipitation test would also be a valid answer route."
+}

@@ -12,6 +12,7 @@ import { validateResult, upsertRecord, applyReview, staleness, emptyStore } from
 import { compareClassifications, scoreAgainstReference } from "../../lib/concepts/evaluate.mjs";
 import { buildConceptIndex, VERIFIED, PROVISIONAL } from "../../lib/concepts/search.mjs";
 import { renderReviewSheet } from "../../lib/concepts/review-sheet.mjs";
+import { pilotStats } from "../../lib/concepts/report.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 export const PATHS = {
@@ -216,15 +217,54 @@ const commands = {
     writeJson(PATHS.store, store);
   },
 
-  // evaluate --run pilot-v1 --reference research/concepts/benchmark/reference-pilot-v1.json [--pass a]
+  // build-reference --run pilot-v1 --kind "..." : assemble adjudicator outputs into a reference file
+  "build-reference"(args) {
+    const run = args.run ?? "pilot-v1", dir = `research/concepts/benchmark/adjudication-${run}/out`;
+    const key = readJson(`research/concepts/benchmark/adjudication-${run}.key.json`);
+    const questions = {}, verdicts = [];
+    for (const f of readdirSync(abs(dir)).filter(f => f.endsWith(".json")).sort()) {
+      const o = readJson(`${dir}/${f}`);
+      questions[o.questionId] = { contentStatus: o.contentStatus, parts: o.parts ?? {}, stratum: key[o.questionId]?.stratum, notes: o.notes ?? "" };
+      // Un-blind the verdicts: X/Y -> pass a/b.
+      for (const side of ["X", "Y"]) verdicts.push({ questionId: o.questionId, pass: key[o.questionId][side], label: o[`verdict${side}`]?.label, reason: o[`verdict${side}`]?.reason });
+    }
+    const reference = { referenceKind: args.kind ?? "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified", createdAt: new Date().toISOString(), questions, verdicts };
+    writeJson(`research/concepts/benchmark/reference-${run}.json`, reference);
+    console.log(`${Object.keys(questions).length} reference questions -> research/concepts/benchmark/reference-${run}.json`);
+  },
+
+  // evaluate --run pilot-v1 [--reference file] [--pass a|b] : precision/recall overall and per stratum
   evaluate(args) {
-    const run = args.run ?? "pilot-v1";
+    const run = args.run ?? "pilot-v1", pass = args.pass ?? "a";
     const reference = readJson(args.reference ?? `research/concepts/benchmark/reference-${run}.json`);
-    const { store } = loadAll();
-    const records = Object.fromEntries(Object.values(store.records).map(e => [e.current.questionId, e.current]));
+    const { store, taxonomy, ctx, resolver, topicIds } = loadAll();
+    let records;
+    if (pass === "a") records = Object.fromEntries(Object.values(store.records).map(e => [e.current.questionId, e.current]));
+    else {
+      records = {};
+      const dir = `${PATHS.runs}/${run}/results-${pass}`;
+      for (const f of readdirSync(abs(dir)).filter(f => f.endsWith(".json"))) {
+        const res = readJson(`${dir}/${f}`);
+        const { record } = validateResult(res, { content: ctx.byId.has(res.questionId) ? questionContent(res.questionId, ctx) : null, taxonomy, topicIds, resolver, method: { role: `pass-${pass}` }, promptVersion: "classifier.v1" });
+        if (record) records[record.questionId] = record;
+      }
+    }
+    const subset = s => ({ ...reference, questions: Object.fromEntries(Object.entries(reference.questions).filter(([, q]) => q.stratum === s)) });
     const score = scoreAgainstReference(records, reference);
-    console.log(JSON.stringify(score.summary, null, 2));
-    if (!args["dry-run"]) writeJson(`${PATHS.runs}/${run}/evaluation.json`, score);
+    const strata = Object.fromEntries(["agree", "non-agree"].map(s => [s, scoreAgainstReference(records, subset(s)).summary]));
+    console.log(JSON.stringify({ pass, overall: score.summary, strata }, null, 2));
+    if (!args["dry-run"]) writeJson(`${PATHS.runs}/${run}/evaluation-${pass}.json`, { ...score, strata });
+  },
+
+  // report --run pilot-v1 : statistics from stored records + compare/ingest artifacts -> runs/<run>/report.json
+  report(args) {
+    const { taxonomy, store } = loadAll();
+    const run = args.run ?? "pilot-v1", runDir = `${PATHS.runs}/${run}`;
+    const opt = p => (existsSync(abs(p)) ? readJson(p) : undefined);
+    const ids = readJson(`${runDir}/manifest.json`).questionIds;
+    const stats = pilotStats({ records: ids.map(id => store.records[id]?.current).filter(Boolean), comparisons: opt(`${runDir}/compare-b.json`), ingest: opt(`${runDir}/ingest-a.json`), selection: opt(`${runDir}/selection.json`), taxonomy });
+    writeJson(`${runDir}/report.json`, stats);
+    console.log(JSON.stringify({ processed: stats.processed, byReviewStatus: stats.byReviewStatus, agreement: stats.agreement, cropIssues: stats.cropIssues }, null, 1));
   },
 
   // review --file decisions.json : [{questionId, decision: approve|reject|flag|edit, reviewer, notes, parts?}]

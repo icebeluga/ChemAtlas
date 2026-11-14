@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2024-60-2110",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows Q57-Q60; only Q60 (isotope table 185 amu 37%, 187 amu 63%) classified. Table and choices A-D legible."
+  },
+  "officialTopics": {
+    "primary": "1.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mass-spectrometry",
+          "evidence": "Must compute the weighted-average atomic mass from isotope masses and percent abundances."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

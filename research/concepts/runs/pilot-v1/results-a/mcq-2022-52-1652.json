@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "none", "notes": "Crop shows question 52 with choices A-D; matches page." },
+  "officialTopics": { "primary": "8.3", "additional": ["8.1"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "weak-acid-equilibrium", "evidence": "Must reason about the two successive ionizations of diprotic H2C2O4, with the second much smaller than the first, to order H3O+, HC2O4- and C2O4^2-." }],
+      "supporting": [{ "conceptId": "strong-weak-acids", "evidence": "Must recognize that a weak acid ionizes only partially, so un-ionized H2C2O4 remains the most concentrated species." }],
+      "contextual": [],
+      "actions": ["rank"],
+      "representations": ["text-only"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

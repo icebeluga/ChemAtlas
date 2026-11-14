@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2008-4-31",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "none", "notes": "Crop shows stem 4; shared stimulus shows the weak acid-KOH titration curve with points A-E. Complete with stimulus; matches page." },
+  "officialTopics": { "primary": "8.5", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "titration-curves", "evidence": "Must identify the equivalence point as the midpoint of the steep vertical rise on the curve, where moles of OH- added equal initial moles of weak acid." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["titration-curve"],
+      "skills": ["graph-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

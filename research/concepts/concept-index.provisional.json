@@ -1,0 +1,2365 @@
+{
+  "schemaVersion": 1,
+  "taxonomyVersion": "1.0.0",
+  "taxonomyHash": "2807830503f6372c",
+  "includedStatuses": [
+    "human_verified",
+    "machine_reviewed",
+    "machine_generated"
+  ],
+  "questionCount": 33,
+  "concepts": {
+    "mole-conversions": {
+      "name": "Moles, molar mass and particle counts",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.1"
+        ],
+        "related": [
+          "1.3",
+          "1.4",
+          "3.7",
+          "4.5",
+          "6.5",
+          "9.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2022-41-1649"
+      ]
+    },
+    "mass-spectrometry": {
+      "name": "Mass spectra and isotopes",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.2"
+        ],
+        "related": [
+          "1.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "empirical-formula": {
+      "name": "Percent composition and empirical formulas",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.3"
+        ],
+        "related": [
+          "1.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "mixture-composition": {
+      "name": "Composition of mixtures",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.4"
+        ],
+        "related": [
+          "1.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "electron-configuration": {
+      "name": "Electron configurations and atomic structure",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.5"
+        ],
+        "related": [
+          "1.6",
+          "1.7",
+          "1.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "photoelectron-spectroscopy": {
+      "name": "Photoelectron spectroscopy (PES)",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.6"
+        ],
+        "related": [
+          "1.5",
+          "1.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2024-38-2099"
+      ]
+    },
+    "coulombic-attraction": {
+      "name": "Coulomb's law and effective nuclear charge",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.6",
+          "1.8",
+          "2.1",
+          "2.3",
+          "3.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2024-38-2099"
+      ]
+    },
+    "atomic-radius": {
+      "name": "Atomic and ionic radius",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.8",
+          "2.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2024-19-2088"
+      ]
+    },
+    "ionization-energy": {
+      "name": "Ionization energy",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "1.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-1-29"
+      ]
+    },
+    "electronegativity": {
+      "name": "Electronegativity trends",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.7"
+        ],
+        "related": [
+          "2.1",
+          "8.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "ionic-formulas": {
+      "name": "Ion charges and ionic formulas",
+      "group": "atomic-structure",
+      "topics": {
+        "primary": [
+          "1.8"
+        ],
+        "related": [
+          "1.5",
+          "2.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-3-29"
+      ]
+    },
+    "bonding-types": {
+      "name": "Ionic, covalent and metallic bonding",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.1"
+        ],
+        "related": [
+          "2.3",
+          "2.4",
+          "3.2"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "bond-polarity": {
+      "name": "Bond polarity and partial charges",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.1"
+        ],
+        "related": [
+          "1.7",
+          "2.7",
+          "3.1",
+          "8.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "bond-potential-energy": {
+      "name": "Bond potential-energy curves",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.2"
+        ],
+        "related": [
+          "6.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-17-1448",
+        "mcq-2015-47-1554"
+      ]
+    },
+    "bond-order": {
+      "name": "Bond order, length and strength",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.2"
+        ],
+        "related": [
+          "2.6",
+          "2.7",
+          "6.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-17-1448",
+        "mcq-2016-5-1053"
+      ]
+    },
+    "lattice-energy": {
+      "name": "Ionic solids and lattice attraction",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.3"
+        ],
+        "related": [
+          "1.8",
+          "3.2",
+          "9.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "metallic-bonding": {
+      "name": "Metals and alloys",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.4"
+        ],
+        "related": [
+          "3.2"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "lewis-structures": {
+      "name": "Lewis structures",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.5"
+        ],
+        "related": [
+          "2.6",
+          "2.7",
+          "8.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2016-5-1053",
+        "mcq-2017-30-1137"
+      ]
+    },
+    "formal-charge": {
+      "name": "Formal charge",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.6"
+        ],
+        "related": [
+          "2.5",
+          "2.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "resonance": {
+      "name": "Resonance and delocalization",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.6"
+        ],
+        "related": [
+          "2.7",
+          "8.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "electron-domains": {
+      "name": "Electron-domain counting",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-57-41",
+        "mcq-2016-27-1064"
+      ]
+    },
+    "molecular-geometry": {
+      "name": "Molecular geometry (VSEPR)",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5",
+          "3.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "bond-angles": {
+      "name": "Bond angles",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": []
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2016-27-1064"
+      ]
+    },
+    "hybridization": {
+      "name": "Orbital hybridization",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-57-41"
+      ]
+    },
+    "sigma-pi-bonds": {
+      "name": "Sigma and pi bonds",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.2"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "molecular-polarity": {
+      "name": "Molecular polarity",
+      "group": "bonding-structure",
+      "topics": {
+        "primary": [
+          "2.7"
+        ],
+        "related": [
+          "2.1",
+          "3.1",
+          "3.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2002-48-760"
+      ]
+    },
+    "london-dispersion": {
+      "name": "London dispersion forces",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.2",
+          "3.9",
+          "3.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "dipole-dipole": {
+      "name": "Dipole-dipole attractions",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "2.7",
+          "3.9",
+          "3.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "hydrogen-bonding": {
+      "name": "Hydrogen bonding",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.2",
+          "3.8",
+          "3.9",
+          "3.10",
+          "6.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "ion-dipole": {
+      "name": "Ion-dipole attractions",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.8",
+          "3.10",
+          "9.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "imf-properties": {
+      "name": "Intermolecular forces and physical properties",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.1"
+        ],
+        "related": [
+          "3.3",
+          "3.9",
+          "6.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2018-14-1911"
+      ]
+    },
+    "solid-types": {
+      "name": "Types of solids",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.2"
+        ],
+        "related": [
+          "2.3",
+          "2.4"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "particulate-states": {
+      "name": "Particle model of solids, liquids and gases",
+      "group": "imf-properties",
+      "topics": {
+        "primary": [
+          "3.3"
+        ],
+        "related": [
+          "3.2",
+          "6.5",
+          "9.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "ideal-gas-law": {
+      "name": "Ideal gas law",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.4"
+        ],
+        "related": [
+          "3.5",
+          "4.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-25-34"
+      ]
+    },
+    "partial-pressures": {
+      "name": "Partial pressures and mole fraction",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.4"
+        ],
+        "related": [
+          "7.3",
+          "7.4"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "kinetic-molecular-theory": {
+      "name": "Kinetic molecular theory",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.5"
+        ],
+        "related": [
+          "3.4",
+          "3.6",
+          "5.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-9-31"
+      ]
+    },
+    "real-gases": {
+      "name": "Deviations from ideal gas behavior",
+      "group": "gases",
+      "topics": {
+        "primary": [
+          "3.6"
+        ],
+        "related": [
+          "3.5",
+          "3.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "molarity": {
+      "name": "Molarity and solution preparation",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.7"
+        ],
+        "related": [
+          "3.8",
+          "3.13",
+          "4.5",
+          "4.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "dilution": {
+      "name": "Dilution",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.7"
+        ],
+        "related": [
+          "3.13",
+          "8.2",
+          "8.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "solution-representations": {
+      "name": "Particle representations of solutions",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.8"
+        ],
+        "related": [
+          "3.7",
+          "4.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-15-178"
+      ]
+    },
+    "separation-techniques": {
+      "name": "Chromatography and distillation",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.9"
+        ],
+        "related": [
+          "3.1",
+          "3.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "solubility-polarity": {
+      "name": "Solubility and 'like dissolves like'",
+      "group": "solutions",
+      "topics": {
+        "primary": [
+          "3.10"
+        ],
+        "related": [
+          "3.1",
+          "3.8",
+          "9.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2002-48-760"
+      ]
+    },
+    "em-spectrum": {
+      "name": "Spectroscopy and molecular transitions",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.11"
+        ],
+        "related": [
+          "3.12"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "photon-energy": {
+      "name": "Photon energy, wavelength and frequency",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.12"
+        ],
+        "related": [
+          "1.6",
+          "3.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "beer-lambert": {
+      "name": "Beer-Lambert law and spectrophotometry",
+      "group": "light-spectroscopy",
+      "topics": {
+        "primary": [
+          "3.13"
+        ],
+        "related": [
+          "3.11",
+          "5.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2002-38-614"
+      ]
+    },
+    "balanced-equations": {
+      "name": "Writing and balancing chemical equations",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.1"
+        ],
+        "related": [
+          "4.3",
+          "4.4"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "net-ionic-equations": {
+      "name": "Net ionic equations",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.2"
+        ],
+        "related": [
+          "4.3",
+          "4.7",
+          "7.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "reaction-representations": {
+      "name": "Particle diagrams of reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.3"
+        ],
+        "related": [
+          "4.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "physical-chemical-change": {
+      "name": "Physical versus chemical change",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.4"
+        ],
+        "related": [
+          "3.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2018-14-1911"
+      ]
+    },
+    "reaction-stoichiometry": {
+      "name": "Reaction stoichiometry",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.5"
+        ],
+        "related": [
+          "4.1",
+          "4.6",
+          "8.4",
+          "9.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2018-12-1197"
+      ]
+    },
+    "limiting-reactant": {
+      "name": "Limiting reactant and yield",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.5"
+        ],
+        "related": [
+          "4.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "titration-analysis": {
+      "name": "Titration stoichiometry",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.6"
+        ],
+        "related": [
+          "8.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "reaction-types": {
+      "name": "Classifying reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.8",
+          "4.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "oxidation-numbers": {
+      "name": "Oxidation numbers",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.9",
+          "9.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "precipitation": {
+      "name": "Precipitation reactions",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.7"
+        ],
+        "related": [
+          "4.2",
+          "7.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-1994-65-692"
+      ]
+    },
+    "bronsted-lowry": {
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "4.8"
+        ],
+        "related": [
+          "8.1",
+          "8.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "redox-half-reactions": {
+      "name": "Redox half-reactions and balancing",
+      "group": "reactions",
+      "topics": {
+        "primary": [
+          "4.9"
+        ],
+        "related": [
+          "9.8",
+          "9.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "frq-2008-3-59"
+      ]
+    },
+    "reaction-rate": {
+      "name": "Reaction rates",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.1"
+        ],
+        "related": [
+          "5.2"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2012-21-1354"
+      ]
+    },
+    "rate-law": {
+      "name": "Rate laws and reaction order",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.2"
+        ],
+        "related": [
+          "5.1",
+          "5.3",
+          "5.4",
+          "5.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "frq-2008-3-59"
+      ]
+    },
+    "integrated-rate-laws": {
+      "name": "Integrated rate laws and half-life",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.3"
+        ],
+        "related": [
+          "5.1",
+          "5.2"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "elementary-steps": {
+      "name": "Elementary reactions and molecularity",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.4"
+        ],
+        "related": [
+          "5.7",
+          "5.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2016-26-1064"
+      ]
+    },
+    "collision-model": {
+      "name": "Collision model and temperature effects",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.5"
+        ],
+        "related": [
+          "3.5",
+          "5.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "activation-energy": {
+      "name": "Activation energy and energy profiles",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.6",
+          "5.10"
+        ],
+        "related": [
+          "5.11",
+          "9.4"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "reaction-mechanisms": {
+      "name": "Reaction mechanisms and intermediates",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.7"
+        ],
+        "related": [
+          "5.4",
+          "5.8",
+          "5.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "mechanism-rate-law": {
+      "name": "Mechanisms and rate laws",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.8",
+          "5.9"
+        ],
+        "related": [
+          "5.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2016-26-1064"
+      ]
+    },
+    "catalysis": {
+      "name": "Catalysis",
+      "group": "kinetics",
+      "topics": {
+        "primary": [
+          "5.11"
+        ],
+        "related": [
+          "5.6",
+          "5.7",
+          "9.4"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "endo-exothermic": {
+      "name": "Endothermic and exothermic processes",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.1",
+          "6.2"
+        ],
+        "related": [
+          "6.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2002-41-759",
+        "mcq-2014-24-1450"
+      ]
+    },
+    "heat-transfer": {
+      "name": "Heat transfer and thermal equilibrium",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.3"
+        ],
+        "related": [
+          "6.4",
+          "6.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "calorimetry": {
+      "name": "Calorimetry and specific heat",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.4"
+        ],
+        "related": [
+          "6.1",
+          "6.3",
+          "6.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "phase-change-energy": {
+      "name": "Energy of phase changes",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.5"
+        ],
+        "related": [
+          "3.1",
+          "3.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "enthalpy-of-reaction": {
+      "name": "Enthalpy of reaction",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.6"
+        ],
+        "related": [
+          "6.7",
+          "6.8",
+          "6.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "bond-enthalpy": {
+      "name": "Bond enthalpies",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.7"
+        ],
+        "related": [
+          "2.2",
+          "6.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-24-1450"
+      ]
+    },
+    "enthalpy-of-formation": {
+      "name": "Standard enthalpies of formation",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.8"
+        ],
+        "related": [
+          "6.6",
+          "6.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "hess-law": {
+      "name": "Hess's law",
+      "group": "thermochemistry",
+      "topics": {
+        "primary": [
+          "6.9"
+        ],
+        "related": [
+          "6.6",
+          "6.8",
+          "7.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "dynamic-equilibrium": {
+      "name": "Dynamic equilibrium",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.1",
+          "7.2",
+          "7.8"
+        ],
+        "related": []
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-30-184"
+      ]
+    },
+    "equilibrium-expression": {
+      "name": "Equilibrium constant expressions",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.3"
+        ],
+        "related": [
+          "7.11",
+          "8.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "reaction-quotient": {
+      "name": "Reaction quotient Q versus K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.3",
+          "7.2",
+          "7.10"
+        ],
+        "related": [
+          "7.11",
+          "9.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "equilibrium-constant-calculation": {
+      "name": "Calculating K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.4"
+        ],
+        "related": [
+          "7.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "k-magnitude": {
+      "name": "Magnitude of K",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.5"
+        ],
+        "related": [
+          "9.5"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "k-manipulation": {
+      "name": "Manipulating equilibrium constants",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.6"
+        ],
+        "related": [
+          "6.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "ice-tables": {
+      "name": "Equilibrium concentrations from ICE tables",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.7"
+        ],
+        "related": [
+          "7.4",
+          "7.11",
+          "8.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "le-chatelier": {
+      "name": "Le Châtelier's principle",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.9",
+          "7.10"
+        ],
+        "related": [
+          "7.12",
+          "8.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "solubility-product": {
+      "name": "Solubility equilibria and Ksp",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.11"
+        ],
+        "related": [
+          "7.12",
+          "4.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "common-ion-effect": {
+      "name": "Common-ion effect",
+      "group": "equilibrium",
+      "topics": {
+        "primary": [
+          "7.12"
+        ],
+        "related": [
+          "7.11",
+          "7.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "strong-weak-acids": {
+      "name": "Strong versus weak acids and bases",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.1"
+        ],
+        "related": [
+          "8.3",
+          "8.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2008-8-31",
+        "mcq-2016-9-1056"
+      ]
+    },
+    "ph-poh": {
+      "name": "pH, pOH and Kw",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.2"
+        ],
+        "related": [
+          "8.3",
+          "8.4",
+          "8.5",
+          "3.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-22-180"
+      ]
+    },
+    "weak-acid-equilibrium": {
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.3"
+        ],
+        "related": [
+          "7.3",
+          "7.7",
+          "8.5",
+          "8.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-22-180"
+      ]
+    },
+    "acid-base-mixtures": {
+      "name": "Acid-base reactions and mixtures",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.4"
+        ],
+        "related": [
+          "4.8",
+          "8.5",
+          "8.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "titration-curves": {
+      "name": "Acid-base titration curves",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.5"
+        ],
+        "related": [
+          "4.6",
+          "8.7",
+          "8.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2014-15-178",
+        "mcq-2016-9-1056",
+        "mcq-2023-43-1731"
+      ]
+    },
+    "acid-strength-structure": {
+      "name": "Molecular structure and acid strength",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.6"
+        ],
+        "related": [
+          "2.1",
+          "2.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "pka-speciation": {
+      "name": "pH, pKa and predominant species",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.7"
+        ],
+        "related": [
+          "8.5",
+          "8.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2023-43-1731"
+      ]
+    },
+    "buffers": {
+      "name": "Buffers",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.8"
+        ],
+        "related": [
+          "8.5",
+          "8.9",
+          "8.10"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "henderson-hasselbalch": {
+      "name": "Henderson-Hasselbalch equation",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.9"
+        ],
+        "related": [
+          "8.8",
+          "8.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "buffer-capacity": {
+      "name": "Buffer capacity",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.10"
+        ],
+        "related": [
+          "8.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "ph-solubility": {
+      "name": "pH and solubility",
+      "group": "acids-bases",
+      "topics": {
+        "primary": [
+          "8.11"
+        ],
+        "related": [
+          "7.11",
+          "7.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-1994-65-692"
+      ]
+    },
+    "entropy": {
+      "name": "Entropy",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.1",
+          "9.2"
+        ],
+        "related": [
+          "9.3",
+          "9.6"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "frq-2008-3-59",
+        "mcq-2002-41-759"
+      ]
+    },
+    "gibbs-free-energy": {
+      "name": "Gibbs free energy and favorability",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.3"
+        ],
+        "related": [
+          "9.4",
+          "9.6",
+          "9.7"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2002-41-759",
+        "mcq-2014-12-176",
+        "mcq-2018-57-2046"
+      ]
+    },
+    "thermodynamic-kinetic-control": {
+      "name": "Thermodynamic versus kinetic control",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.4"
+        ],
+        "related": [
+          "5.6",
+          "5.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "free-energy-equilibrium": {
+      "name": "Free energy and equilibrium",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.5"
+        ],
+        "related": [
+          "7.5",
+          "9.9"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "mcq-2018-57-2046"
+      ]
+    },
+    "dissolution-thermodynamics": {
+      "name": "Thermodynamics of dissolution",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.6"
+        ],
+        "related": [
+          "2.3",
+          "3.10",
+          "9.1"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "coupled-reactions": {
+      "name": "Coupled reactions",
+      "group": "thermodynamics",
+      "topics": {
+        "primary": [
+          "9.7"
+        ],
+        "related": [
+          "9.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "electrochemical-cells": {
+      "name": "Galvanic and electrolytic cells",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.8"
+        ],
+        "related": [
+          "4.9",
+          "9.9",
+          "9.11"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "cell-potential": {
+      "name": "Cell potential and free energy",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.9"
+        ],
+        "related": [
+          "9.5",
+          "9.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": [
+        "frq-2008-3-59",
+        "mcq-2018-11-1196"
+      ]
+    },
+    "nernst-nonstandard": {
+      "name": "Cell potential under nonstandard conditions",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.10"
+        ],
+        "related": [
+          "9.9",
+          "7.3"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "electrolysis-faraday": {
+      "name": "Electrolysis and Faraday's law",
+      "group": "electrochemistry",
+      "topics": {
+        "primary": [
+          "9.11"
+        ],
+        "related": [
+          "4.9",
+          "9.8"
+        ]
+      },
+      "scope": "ap",
+      "questionIds": []
+    },
+    "colligative-properties": {
+      "name": "Colligative properties and molality",
+      "group": "extension",
+      "topics": {
+        "primary": [],
+        "related": [
+          "3.7",
+          "3.8"
+        ]
+      },
+      "scope": "beyond-ap",
+      "questionIds": []
+    },
+    "nuclear-chemistry": {
+      "name": "Nuclear chemistry",
+      "group": "extension",
+      "topics": {
+        "primary": [],
+        "related": [
+          "1.5",
+          "5.3"
+        ]
+      },
+      "scope": "beyond-ap",
+      "questionIds": [
+        "mcq-2018-40-2043"
+      ]
+    },
+    "organic-chemistry": {
+      "name": "Organic nomenclature and functional groups",
+      "group": "extension",
+      "topics": {
+        "primary": [],
+        "related": [
+          "2.5",
+          "3.1"
+        ]
+      },
+      "scope": "beyond-ap",
+      "questionIds": []
+    },
+    "descriptive-chemistry": {
+      "name": "Descriptive reaction prediction",
+      "group": "extension",
+      "topics": {
+        "primary": [],
+        "related": [
+          "4.1",
+          "4.7"
+        ]
+      },
+      "scope": "beyond-ap",
+      "questionIds": []
+    }
+  },
+  "questions": {
+    "frq-2008-3-59": {
+      "type": "FRQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "5.2",
+        "9.9",
+        "9.1"
+      ],
+      "units": [
+        "u5",
+        "u9"
+      ],
+      "primary": [
+        "cell-potential",
+        "entropy",
+        "rate-law"
+      ],
+      "supporting": [
+        "redox-half-reactions"
+      ],
+      "parts": [
+        {
+          "partId": "a",
+          "label": "(a)",
+          "concepts": [
+            "cell-potential"
+          ]
+        },
+        {
+          "partId": "b",
+          "label": "(b)",
+          "concepts": [
+            "cell-potential",
+            "redox-half-reactions"
+          ]
+        },
+        {
+          "partId": "c",
+          "label": "(c)",
+          "concepts": [
+            "entropy"
+          ]
+        },
+        {
+          "partId": "d",
+          "label": "(d)",
+          "concepts": [
+            "rate-law"
+          ]
+        },
+        {
+          "partId": "e",
+          "label": "(e)",
+          "concepts": [
+            "rate-law"
+          ]
+        },
+        {
+          "partId": "f",
+          "label": "(f)",
+          "concepts": [
+            "rate-law"
+          ]
+        }
+      ]
+    },
+    "mcq-1994-65-692": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.11",
+        "4.7"
+      ],
+      "units": [
+        "u8",
+        "u4"
+      ],
+      "primary": [
+        "ph-solubility"
+      ],
+      "supporting": [
+        "precipitation"
+      ],
+      "parts": []
+    },
+    "mcq-2002-38-614": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "3.13"
+      ],
+      "units": [
+        "u3"
+      ],
+      "primary": [
+        "beer-lambert"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2002-41-759": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "9.3",
+        "6.1",
+        "9.1"
+      ],
+      "units": [
+        "u9",
+        "u6"
+      ],
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": [
+        "endo-exothermic",
+        "entropy"
+      ],
+      "parts": []
+    },
+    "mcq-2002-48-760": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "3.10",
+        "2.7"
+      ],
+      "units": [
+        "u3",
+        "u2"
+      ],
+      "primary": [
+        "solubility-polarity"
+      ],
+      "supporting": [
+        "molecular-polarity"
+      ],
+      "parts": []
+    },
+    "mcq-2008-1-29": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.7"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "ionization-energy"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2008-25-34": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "3.4"
+      ],
+      "units": [
+        "u3"
+      ],
+      "primary": [
+        "ideal-gas-law"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2008-3-29": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.8"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "ionic-formulas"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2008-57-41": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.7"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "hybridization"
+      ],
+      "supporting": [
+        "electron-domains"
+      ],
+      "parts": []
+    },
+    "mcq-2008-8-31": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.1"
+      ],
+      "units": [
+        "u8"
+      ],
+      "primary": [
+        "strong-weak-acids"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2008-9-31": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "3.5"
+      ],
+      "units": [
+        "u3"
+      ],
+      "primary": [
+        "kinetic-molecular-theory"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2012-21-1354": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "5.1"
+      ],
+      "units": [
+        "u5"
+      ],
+      "primary": [
+        "reaction-rate"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2014-12-176": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "9.3"
+      ],
+      "units": [
+        "u9"
+      ],
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2014-15-178": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.5",
+        "3.8",
+        "4.3"
+      ],
+      "units": [
+        "u8",
+        "u3",
+        "u4"
+      ],
+      "primary": [
+        "titration-curves"
+      ],
+      "supporting": [
+        "solution-representations"
+      ],
+      "parts": []
+    },
+    "mcq-2014-17-1448": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.2"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "bond-potential-energy"
+      ],
+      "supporting": [
+        "bond-order"
+      ],
+      "parts": []
+    },
+    "mcq-2014-22-180": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.3",
+        "8.2"
+      ],
+      "units": [
+        "u8"
+      ],
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": [
+        "ph-poh"
+      ],
+      "parts": []
+    },
+    "mcq-2014-24-1450": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "6.7"
+      ],
+      "units": [
+        "u6"
+      ],
+      "primary": [
+        "bond-enthalpy"
+      ],
+      "supporting": [
+        "endo-exothermic"
+      ],
+      "parts": []
+    },
+    "mcq-2014-30-184": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "7.1"
+      ],
+      "units": [
+        "u7"
+      ],
+      "primary": [
+        "dynamic-equilibrium"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2015-47-1554": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.2"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "bond-potential-energy"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2016-26-1064": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "5.8",
+        "5.4"
+      ],
+      "units": [
+        "u5"
+      ],
+      "primary": [
+        "mechanism-rate-law"
+      ],
+      "supporting": [
+        "elementary-steps"
+      ],
+      "parts": []
+    },
+    "mcq-2016-27-1064": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.7"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "bond-angles"
+      ],
+      "supporting": [
+        "electron-domains"
+      ],
+      "parts": []
+    },
+    "mcq-2016-5-1053": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.2",
+        "2.5"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "bond-order"
+      ],
+      "supporting": [
+        "lewis-structures"
+      ],
+      "parts": []
+    },
+    "mcq-2016-9-1056": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.5",
+        "8.1"
+      ],
+      "units": [
+        "u8"
+      ],
+      "primary": [
+        "titration-curves"
+      ],
+      "supporting": [
+        "strong-weak-acids"
+      ],
+      "parts": []
+    },
+    "mcq-2017-30-1137": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "2.5"
+      ],
+      "units": [
+        "u2"
+      ],
+      "primary": [
+        "lewis-structures"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2018-11-1196": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "9.9"
+      ],
+      "units": [
+        "u9"
+      ],
+      "primary": [
+        "cell-potential"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2018-12-1197": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "4.5"
+      ],
+      "units": [
+        "u4"
+      ],
+      "primary": [
+        "reaction-stoichiometry"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2018-14-1911": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "4.4",
+        "3.1"
+      ],
+      "units": [
+        "u4",
+        "u3"
+      ],
+      "primary": [
+        "physical-chemical-change"
+      ],
+      "supporting": [
+        "imf-properties"
+      ],
+      "parts": []
+    },
+    "mcq-2018-40-2043": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.5"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "nuclear-chemistry"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2018-57-2046": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "9.3",
+        "9.5"
+      ],
+      "units": [
+        "u9"
+      ],
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": [
+        "free-energy-equilibrium"
+      ],
+      "parts": []
+    },
+    "mcq-2022-41-1649": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.1"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "mole-conversions"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2023-43-1731": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "8.7",
+        "8.5"
+      ],
+      "units": [
+        "u8"
+      ],
+      "primary": [
+        "pka-speciation"
+      ],
+      "supporting": [
+        "titration-curves"
+      ],
+      "parts": []
+    },
+    "mcq-2024-19-2088": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.7"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "atomic-radius"
+      ],
+      "supporting": [],
+      "parts": []
+    },
+    "mcq-2024-38-2099": {
+      "type": "MCQ",
+      "status": "machine_reviewed",
+      "topics": [
+        "1.6",
+        "1.7"
+      ],
+      "units": [
+        "u1"
+      ],
+      "primary": [
+        "photoelectron-spectroscopy"
+      ],
+      "supporting": [
+        "coulombic-attraction"
+      ],
+      "parts": []
+    }
+  }
+}

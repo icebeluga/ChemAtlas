@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2022-41-1649",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["mole-conversions"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "The item isolates the mass-to-particle conversion, so mole-conversions is primary."
+}

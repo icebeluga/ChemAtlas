@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-2002-48-760",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.10",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "solubility-polarity",
+          "evidence": "Must predict that ionic NaCl is least soluble in nonpolar CCl4 versus polar or hydrogen-bonding liquids."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must recognize CCl4 is nonpolar (symmetric tetrahedral) while H2O, HF, CH3OH and CH3COOH are polar."
+        },
+        {
+          "conceptId": "ion-dipole",
+          "evidence": "Solvation of Na+ and Cl- depends on ion-dipole attractions available only with polar solvents."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

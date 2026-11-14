@@ -1,0 +1,20 @@
+{
+  "questionId": "mcq-2023-67-1808",
+  "contentCheck": {
+    "status": "partial",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Source is a scoring-guide page. Visible: spectrum, parts (a) wavelength choice and (b) dilution to 250.0 mL, and a calibration curve; the question likely continues (use of curve to find unknown) with no continuation visible. Not a clean single stem, so left unclassified."
+  },
+  "officialTopics": {
+    "primary": "3.13",
+    "additional": [
+      "3.7"
+    ]
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Likely beer-lambert and dilution, but the question set is incomplete and partId stem does not fit the sub-parts."
+}

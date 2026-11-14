@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-1994-65-692",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E (OCR text is garbled; image legible)."
+  },
+  "officialTopics": {
+    "primary": "8.11",
+    "additional": [
+      "4.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ph-solubility",
+          "evidence": "Must pick the compound insoluble in water that dissolves in acid: a hydroxide whose basic anion reacts with H+."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must use solubility facts (ammonium, nitrate salts soluble) to eliminate choices that already dissolve in water."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2008-9-31",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "none", "notes": "Crop shows stem 9; shared stimulus lists choices A-E (NH3, BH3, H2, H2S, HBr). Complete with stimulus; matches page." },
+  "officialTopics": { "primary": "3.5", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "kinetic-molecular-theory", "evidence": "Must reason that at equal temperature all gases have the same average kinetic energy, so the gas with the largest molar mass (HBr) has the lowest speed and effuses slowest." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["text-only"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

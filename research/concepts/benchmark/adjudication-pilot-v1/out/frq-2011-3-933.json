@@ -1,0 +1,15 @@
+{
+  "questionId": "frq-2011-3-933",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["empirical-formula"], "supporting": [] },
+    "b": { "primary": ["enthalpy-of-reaction"], "supporting": [] },
+    "c-i": { "primary": ["free-energy-equilibrium"], "supporting": [] },
+    "c-ii": { "primary": ["gibbs-free-energy"], "supporting": [] },
+    "c-iii": { "primary": ["le-chatelier"], "supporting": [] },
+    "d": { "primary": ["hess-law"], "supporting": [] }
+  },
+  "verdictX": { "label": "over-tagged", "reason": "b adds mole-conversions; converting 2.50 g glucose to moles is the routine first step of scaling heat to ΔH per mole, already captured by enthalpy-of-reaction." },
+  "verdictY": { "label": "over-tagged", "reason": "b adds mole-conversions; also lumps c(i)-(iii) and the separately printed part (d) into one 'c-onward' part, so hess-law and le-chatelier are not attached to their own parts." },
+  "notes": "Heat is given directly in (b), so calorimetry is at most contextual."
+}

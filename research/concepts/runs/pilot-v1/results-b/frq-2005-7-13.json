@@ -1,0 +1,207 @@
+{
+  "questionId": "frq-2005-7-13",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows (a)-(d) including the ionization energy table; complete."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": [
+      "2.1",
+      "2.3",
+      "1.7",
+      "1.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a-i",
+      "primary": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "NH3 has H bonded to N, so hydrogen bonding must be identified for NH3."
+        },
+        {
+          "conceptId": "dipole-dipole",
+          "evidence": "NF3 is polar with no H on N, so its permanent dipole attractions must be identified."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Both substances also have dispersion forces and must be listed."
+        },
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must decide that pyramidal NF3 is polar to assign dipole-dipole."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "a-ii",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must explain the higher boiling point of NH3 by stronger intermolecular attractions."
+        },
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "The difference is decided by hydrogen bonding in NH3 versus only weaker forces in NF3."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "NF3 has more electrons so dispersion alone would not explain the order; must note this."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b-i",
+      "primary": [
+        {
+          "conceptId": "bonding-types",
+          "evidence": "Must identify both KCl and NaCl as ionic from metal-nonmetal combination."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "classify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b-ii",
+      "primary": [
+        {
+          "conceptId": "lattice-energy",
+          "evidence": "Must explain NaCl melting higher than KCl through stronger lattice attraction from the smaller cation at the same charge."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "atomic-radius",
+          "evidence": "Must compare Na+ and K+ ion sizes (K+ larger)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must give the principal quantum level of the valence electrons of Si, P and Cl (all n = 3)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must explain why first ionization energy increases from Si to P to Cl."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Rising nuclear charge with valence electrons in the same shell and little added shielding increases attraction."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-i",
+      "primary": [
+        {
+          "conceptId": "mass-spectrometry",
+          "evidence": "Must use the given isotope masses (62.93 and 64.93) to find the weighted average atomic mass lying between them and identify the element."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "d-ii",
+      "primary": [
+        {
+          "conceptId": "mass-spectrometry",
+          "evidence": "Must compare the average atomic mass to the two isotope masses to decide which isotope is more abundant."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

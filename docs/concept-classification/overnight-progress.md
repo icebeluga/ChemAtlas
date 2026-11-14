@@ -23,3 +23,9 @@ Review the benchmark in the sheet, decide the conventions, confirm the supplemen
 - Package built and verified: 85 questions (40 benchmark + 45 held-out), 150 parts, 195 source images, 109 concepts, 7 conventions, 8 corrections; 379 files, 39 MB. Saved to the owner's Downloads folder (not committed).
 - `research/concepts/catalog-issues.json` collects the catalog problems found so far.
 - 24 concept tests pass.
+
+## Round 4 (2026-11-14): GPT-6 audit imported
+- GPT-6 results (85 questions, 174 parts) validated with 0 errors and imported as an independent AI review; raw files kept in `research/concepts/ai-reviews/source/`. Batch files and Phase-1 snapshots were not provided.
+- Cross-family agreement: primary ~0.82, supporting ~0.5 (vs 0.93 / 0.77 within Claude). Of the 23 primary disagreements, Claude matches the taxonomy rules in 10, GPT-6 is right in 1 (+2 where Claude omitted entropy), 1 taxonomy gap, 4 legacy-format, 4 role calls, 1 unresolved.
+- GPT-6 advice recorded on 7 conventions (all still undecided); 2 new conventions (C7, C8); all 8 page corrections independently confirmed; 4 catalog issues added.
+- Validation now flags `exclude-rule-check`. Analysis: `gpt6-audit-analysis.md`.

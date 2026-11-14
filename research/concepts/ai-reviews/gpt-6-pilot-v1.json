@@ -1,0 +1,3073 @@
+{
+  "referenceKind": "independent AI review (GPT-6); NOT human-verified",
+  "reviewKind": "independent-ai-review",
+  "humanVerified": false,
+  "reviewer": {
+    "model": "GPT-6",
+    "interface": "ChatGPT",
+    "notes": "Independent GPT-6 AI review from question text, source pages/crop contact sheets and stimuli, before comparing each batch with Claude. The original independent phase-1 snapshots are preserved separately. Some questions were previously discussed, so this is not a perfectly blind controlled benchmark. Some boundary decisions are inherently subjective, and original OCR text is not always reliable. This is an independent AI opinion, NOT human or teacher verification; do not automatically approve or publish tags."
+  },
+  "reviewedAt": "2026-11-14T20:44:42Z",
+  "importedAt": "2026-11-14T20:49:48.770Z",
+  "sourceSha256": "0b5a5f5dc01872dd1460dbc21da425089efc7d84f51f3506bffbbc1c8a109004",
+  "questions": {
+    "frq-1999-7-564": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "lewis-structures",
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "molecular-polarity",
+            "electron-domains"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Part (d) directly assesses three distinct outcomes—Lewis structure, geometry, and polarity—yet the output schema permits at most two primary tags. Molecular polarity is placed in supporting solely to comply; this is a schema limitation. Prior conversational exposure to this case prevents a fully blind review. Claude tags polarity as primary and geometry as supporting in part (d); my first-pass allocation does the reverse. Both are explicitly requested, as is Lewis structure. The two-primary schema forces an arbitrary third-item demotion; do not score this as objective model error without a policy."
+    },
+    "frq-2003-3-536": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "ice-tables"
+          ],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "buffers",
+            "net-ionic-equations"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "acid-base-mixtures"
+          ],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "buffer-capacity"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "solution-representations"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "c-i",
+            "conceptId": "net-ionic-equations",
+            "issue": "wrong-role",
+            "claudeRole": "supporting",
+            "proposedRole": "primary",
+            "explanation": "The printed subpart separately asks for a balanced net ionic equation; it is itself an assessed deliverable, not merely a step toward defining a buffer."
+          },
+          {
+            "partId": "c-ii",
+            "conceptId": "pka-speciation",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "With pH numerically equal to pKa, the directly assessed relationship is equality of conjugate acid and base populations; the actual algebra is neutralization stoichiometry."
+          },
+          {
+            "partId": "c-ii",
+            "conceptId": "henderson-hasselbalch",
+            "issue": "unnecessary",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The ratio follows immediately from pH=pKa; formal Henderson–Hasselbalch equation use is optional rather than the core demand of the part."
+          }
+        ]
+      },
+      "notes": "The physical image identifies the exam as 2017 despite this record’s 2003 filename. The printed (c) has (i)/(ii), so those parts should be separated."
+    },
+    "frq-2011-3-933": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "empirical-formula"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": [
+            "gibbs-free-energy"
+          ],
+          "contextual": []
+        },
+        "c-iii": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "b",
+            "conceptId": "mole-conversions",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "Converting a supplied glucose mass to moles is routine arithmetic within a molar reaction-enthalpy calculation, not a separate chemistry concept requirement."
+          },
+          {
+            "partId": "c-ii",
+            "conceptId": "entropy",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The required output is ΔS°; the thermodynamic identity is used to isolate entropy change."
+          },
+          {
+            "partId": "c-ii",
+            "conceptId": "gibbs-free-energy",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "ΔG° is a quantity established in the preceding part and used as an input, not the requested final concept in this part."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "frq-2017-3-1157": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "lewis-structures",
+            "resonance"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-i": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-ii": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-iii": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-iv": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "d-ii",
+            "conceptId": "rate-law",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "The first-order rate law is supplied; the part calculates k from the half-life, already covered by integrated-rate-laws."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "frq-2023-3-448": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "reaction-stoichiometry",
+            "molarity"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "g-i": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "g-ii": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "calorimetry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The source lists explicitly separate subparts (b)–(d) and (e)–(g); the independent review splits the catalog’s range markers. My addition of reaction-types as supporting in (a) is optional: a student could write the net ionic equation without separately classifying the acid–carbonate reaction. For part (e), the core is reaction stoichiometry; the use of concentration is directly asked but may be treated as a routine conversion rather than co-primary. My saved first-pass tags are unchanged."
+    },
+    "frq-2024-5-2125": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "bonding-types"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "b",
+            "conceptId": "solution-representations",
+            "issue": "incorrect",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The filtrate experiment is a demonstration of conductivity by mobile aqueous ions; no particle diagram of a solution is shown or interpreted."
+          },
+          {
+            "partId": "b",
+            "conceptId": "bonding-types",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The closest existing concept concerns ionic bonding and mobile dissolved ions, but a dedicated electrolyte-conductivity concept is missing; prefer adding that instead of silently treating the label as validated."
+          }
+        ]
+      },
+      "notes": "The taxonomy lacks an explicit electrolyte-conductivity concept; bonding-types is an approximate fit for part (b)."
+    },
+    "mcq-1984-6-120": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "Legacy descriptive chemistry outside the current AP CED."
+    },
+    "mcq-2002-41-759": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy",
+            "entropy"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The stem directly asks for three independent thermodynamic signs but the classification format allows only two primary concepts. Three signs ΔG, ΔH and ΔS are explicitly asked. Claude makes entropy supporting while my first pass treats entropy co-primary; a two-primary maximum makes the roles contestable."
+    },
+    "mcq-2002-6-606": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "particulate-states"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "The current taxonomy lacks a phase-diagram interpretation concept; this legacy item lies beyond the current scope, so particulate-states is a nearest available label."
+    },
+    "mcq-2002-67-765": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "imf-properties",
+            "issue": "unnecessary",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The prompt directly asks which attraction changes during vaporization, not which physical property a force explains; hydrogen bonding alone is an informative primary tag."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2008-1-29": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-10-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-11-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "activation-energy"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "collision-model",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "Selecting activation energy from the matching list based on temperature-dependent rates does not require separately applying collision-frequency or collision-orientation analysis."
+          }
+        ]
+      },
+      "notes": "The shared matching list is essential and was included in the source image."
+    },
+    "mcq-2008-13-32": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "phase-change-energy",
+            "entropy"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-41-38": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-representations"
+          ],
+          "supporting": [
+            "reaction-stoichiometry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Claude treats limiting-reactant reasoning as co-primary while my first pass treats reaction stoichiometry as the supporting step for interpreting particulate-product choices; both are defensible ways of categorizing a multistep diagram task."
+    },
+    "mcq-2008-59-42": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "equilibrium-expression"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The extra equilibrium-expression supporting tag may be routine because a student could know the K expression as part of equilibrium constant calculation. Preserve as borderline, not definite omission."
+    },
+    "mcq-2012-21-1354": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": [
+            "reaction-stoichiometry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "under-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "reaction-stoichiometry",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "supporting",
+            "explanation": "Determining the relative disappearance rates uses the nontrivial 1:2 coefficient relationship, not merely reading a graph of reaction rate."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2014-15-178": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "solution-representations"
+          ],
+          "supporting": [
+            "titration-curves"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "solution-representations",
+            "issue": "wrong-role",
+            "claudeRole": "supporting",
+            "proposedRole": "primary",
+            "explanation": "The explicit requested answer is a particulate representation; identifying ionic and molecular species in the diagram is directly assessed."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "titration-curves",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "The titration graph supplies the chemical state at point U, a necessary step toward selecting the requested particle diagram."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2014-21-1450": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2014-34-186": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2014-practice-24-180": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2015-47-1554": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2016-24-1063": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "limiting-reactant"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "limiting-reactant",
+            "issue": "wrong-role",
+            "claudeRole": "supporting",
+            "proposedRole": "primary",
+            "explanation": "The observed equal heat output follows from NaOH being limiting in both trials despite extra HCl; recognizing which reactant limits reaction extent is central."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "enthalpy-of-reaction",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "The heat comparison follows from the equal reaction extent, without requiring an enthalpy-of-reaction value or bond-energy calculation."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2016-27-1064": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-angles"
+          ],
+          "supporting": [
+            "molecular-geometry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Comparing candidate bond angles uses molecular shapes and lone-pair domains. Claude adds electron-domains; my first pass adds molecular-geometry; both capture an intermediate VSEPR step."
+    },
+    "mcq-2016-37-1070": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "limiting-reactant"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The question separately asks for the limiting reactant and the heat q, so Claude’s co-primary enthalpy tag may be defensible. My first pass put enthalpy in supporting; reaction-stoichiometry can be a routine step."
+    },
+    "mcq-2016-5-1053": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [
+            "bond-order"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "bond-enthalpy",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The requested ordering is explicitly of bond enthalpies; the bond-strength concept is the target, with bond-order knowledge supporting the comparison."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "bond-order",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "Single-, double-, and triple-bond distinctions inform relative bond dissociation enthalpies but are not the output named by the question."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "lewis-structures",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "The student need not construct complete electron-dot structures to compare well-known F2, O2 and N2 bond enthalpy trends."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2016-9-1056": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2017-30-1137": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": [
+            "bonding-types"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "A Lewis acid–base coordination-adduct concept is absent from the allowed taxonomy; this legacy-style question deserves an explicit extension tag. I initially tagged general bonding-types as supporting, but it does not specifically encode coordinate/dative bonding. A new Lewis acid–base adduct concept is more faithful; Claude’s sole Lewis-structures tag is a defensible current-taxonomy fallback."
+    },
+    "mcq-2017-42-1144": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "gibbs-free-energy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "thermodynamic-kinetic-control",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "Activation energies are distractors contrasted with equilibrium K; recognizing the distinction is already implicit in free-energy-equilibrium and need not be a second searchable concept."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2018-13-1198": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [
+            "integrated-rate-laws"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "rate-law",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The question explicitly asks which differential rate law fits the tabulated measurements."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "integrated-rate-laws",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "Linear 1/[NO2] versus time provides the diagnostic link used to infer rate order before choosing the differential rate law."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2018-14-1911": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "physical-chemical-change"
+          ],
+          "supporting": [
+            "imf-properties"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2018-34-1205": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "solubility-product"
+          ],
+          "supporting": [
+            "precipitation"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "under-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "precipitation",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "supporting",
+            "explanation": "Maintaining saturated ion concentration while solvent evaporates requires dissolved solute to leave solution as additional precipitated CuSO4 solid."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2018-40-2043": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "Outside-current-AP nuclear-chemistry concept."
+    },
+    "mcq-2022-13-1639": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": [
+            "activation-energy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "under-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "activation-energy",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "supporting",
+            "explanation": "The direct explanation of the catalyst’s influence on rate is the lower-energy reaction pathway; this is a meaningful activation-energy relationship, not only a word in the distractors."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2022-21-1622": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "hydrogen-bonding",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "The exam compares boiling points; hydrogen bonding is the specific type of intermolecular force explaining why one compound has a higher boiling point."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2022-41-1649": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mole-conversions"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2022-5-1663": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "heat-transfer",
+            "endo-exothermic"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": [
+            "calorimetry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "c",
+            "conceptId": "heat-transfer",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "Part (c) explicitly asks to identify the direction of heat transfer between the reacting system and its surrounding solution, in addition to endothermic/exothermic interpretation."
+          },
+          {
+            "partId": "d",
+            "conceptId": "reaction-stoichiometry",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "Halving limiting NaHCO3 changes moles reacted and total absorbed energy; reaction amount is the decisive variable for comparing temperature changes."
+          },
+          {
+            "partId": "d",
+            "conceptId": "enthalpy-of-reaction",
+            "issue": "incorrect",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The problem gives no molar reaction enthalpy and does not ask for one; the conceptual comparison turns on reaction extent and heat balance."
+          }
+        ]
+      },
+      "notes": "The record ID begins mcq, but the source is an actual multipart FRQ; independently classified by its printed parts."
+    },
+    "mcq-2022-52-1652": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "strong-weak-acids",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "The weak-acid status is explicitly supplied in the stem; ranking the species concentrations instead requires analyzing successive dissociation equilibria."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2022-56-1653": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ion-dipole"
+          ],
+          "supporting": [
+            "bond-polarity"
+          ],
+          "contextual": [
+            "solution-representations"
+          ]
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "solution-representations",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "contextual",
+            "explanation": "The diagram is a delivery medium for testing ion–dipole orientation; students are not being asked to construct a solution particle model independently."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-2023-33-1727": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": [
+            "activation-energy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "under-tagged",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "activation-energy",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "supporting",
+            "explanation": "The effect of the catalyst is explained by lowering the reaction pathway’s activation energy; the test distinguishes that from a change to reaction enthalpy."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "frq-2005-1-6": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "molarity"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "buffers"
+          ],
+          "supporting": [
+            "weak-acid-equilibrium"
+          ],
+          "contextual": []
+        },
+        "d-i": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-ii": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The source explicitly prints separate (d)(i) and (d)(ii); the manifest groups them as (d), so they are split. The manifest collapses two distinctly printed (d) parts; split into d-i and d-ii for more useful search. A buffer may be handled by Ka mass-action without specifically invoking logarithmic Henderson-Hasselbalch. Both models recognize same acid-base relationship."
+    },
+    "frq-2005-4-10": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "net-ionic-equations",
+            "oxidation-numbers"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "balanced-equations",
+            "reaction-types"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "net-ionic-equations",
+            "reaction-types"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "balanced-equations",
+            "ionic-formulas"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": [
+            "bonding-types"
+          ],
+          "contextual": []
+        },
+        "g": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ],
+          "contextual": []
+        },
+        "h": {
+          "primary": [
+            "net-ionic-equations",
+            "precipitation"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "d",
+            "conceptId": "strong-weak-acids",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "Writing weak acetic acid as molecular CH3COOH in a net ionic equation is part of the equation-writing rule; an extra strong/weak-acid tag is not a distinguishable skill unless students must choose its dissociation degree independently."
+          }
+        ]
+      },
+      "notes": "This legacy question intentionally tests reaction types and some out-of-scope coordination/adduct chemistry; source prints all eight parts even though examinees answered five. Historical reaction-prediction format uses several atypical compounds; a dedicated acid–base adduct / amphoteric hydroxide category is missing. Generic descriptive-chemistry is a defensible legacy placeholder for parts (b), (f), (g), but it should not crowd out equation-writing objectives."
+    },
+    "frq-2005-7-13": {
+      "contentStatus": "complete",
+      "parts": {
+        "a-i": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "dipole-dipole",
+            "london-dispersion"
+          ],
+          "contextual": []
+        },
+        "a-ii": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ],
+          "contextual": []
+        },
+        "b-i": {
+          "primary": [
+            "bonding-types"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b-ii": {
+          "primary": [
+            "lattice-energy"
+          ],
+          "supporting": [
+            "atomic-radius"
+          ],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        },
+        "d-i": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-ii": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Source actually prints (a)(i,ii), (b)(i,ii), (c)(i,ii), (d)(i,ii); manifest groups two of those ranges, which are split here. Actual source prints four pairs of distinct (i)/(ii) subparts, all split by this review. Both models recognize the main hydrogen-bonding, lattice-attraction, ionization-energy, and isotope reasoning; differences concern whether subordinate bonding/size relationships deserve supporting tags."
+    },
+    "frq-2008-3-59": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "cell-potential"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-i": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d-ii": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "b",
+            "conceptId": "gibbs-free-energy",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "Part (b) explicitly asks for standard free-energy change from -nFE°, not for another cell potential; ΔG is the output concept."
+          },
+          {
+            "partId": "b",
+            "conceptId": "cell-potential",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "The cell voltage is supplied or derived as an input to ΔG°=-nFE°, so it is supporting rather than the requested outcome."
+          },
+          {
+            "partId": "b",
+            "conceptId": "redox-half-reactions",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "The balanced six-electron overall reaction and cell potential are provided; separate half-reaction construction is not asked in part (b)."
+          }
+        ]
+      },
+      "notes": "Two printed subparts under (d) are distinguished as d-i and d-ii. The question prints independent order-in-NO and order-in-O2 subparts under (d), and this review separates them as d-i/d-ii."
+    },
+    "frq-2008-5-63": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "e-i": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ],
+          "contextual": []
+        },
+        "e-ii": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ],
+          "contextual": []
+        },
+        "f": {
+          "primary": [
+            "molecular-polarity"
+          ],
+          "supporting": [
+            "molecular-geometry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "XeF4 commonly receives sp3d2 in legacy examinations; d-orbital hybridization is excluded under the current AP Chemistry CED and not represented by the canonical hybridization tag. Need beyond-AP exception."
+    },
+    "frq-2008-6-65": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "solid-types"
+          ],
+          "supporting": [
+            "imf-properties"
+          ],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "london-dispersion"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "For boiling point or melting point comparisons, the physical-property comparison is primary and a specific force or bonding subtype is supporting when necessary. Claude co-primary tags in (b),(d) are a boundary convention, not automatically invalid."
+    },
+    "frq-2009-5-325": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "thermodynamic-kinetic-control"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f-i": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f-ii": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "f-iii": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "reaction-quotient"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "under-tagged",
+        "findings": [
+          {
+            "partId": "d",
+            "conceptId": "enthalpy-of-reaction",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "supporting",
+            "explanation": "The relative total bond-breaking and bond-forming energies are inferred explicitly from the positive reaction enthalpy; this role is defensible as a non-routine supporting relationship."
+          }
+        ]
+      },
+      "notes": "The manifest groups a–c/e–f and may hide the printed f(i-iii); actual printed labels are separately classified. Reaction Z changes 2 CO(g) to CO2(g)+C(s), decreasing gas moles at fixed temperature. Both reviews support a favorable direction and pressure decrease; primary Gibbs versus free-energy-equilibrium is a reasonable boundary choice."
+    },
+    "frq-2011-3-946": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "balanced-equations",
+            "oxidation-numbers"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-i": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "c-ii": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": [
+            "gibbs-free-energy"
+          ],
+          "contextual": []
+        },
+        "d-i": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "reaction-quotient"
+          ],
+          "contextual": []
+        },
+        "d-ii": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "This is printed as 2002 AP Chemistry Form B Q3, though catalog id begins 2011; classify the visible source and flag the catalog year. Source actually says 2002 Form B Q3, and manifest aggregates (c onward); review separately identifies c-i, c-ii, d-i, d-ii. A comparison with Claude’s range tags is inherently coarse, not necessarily a chemistry error."
+    },
+    "frq-2020-sample-2-116": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "reaction-mechanisms"
+          ],
+          "supporting": [
+            "catalysis"
+          ],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ],
+          "contextual": []
+        },
+        "d": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "dipole-dipole",
+            "london-dispersion"
+          ],
+          "contextual": []
+        },
+        "e": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ],
+          "contextual": []
+        },
+        "f": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": [
+            "reaction-stoichiometry"
+          ],
+          "contextual": []
+        },
+        "g": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "h": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "over-tagged",
+        "findings": [
+          {
+            "partId": "c",
+            "conceptId": "enthalpy-of-reaction",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The diagram is assessed against a stated -81 kJ/mol reaction enthalpy; sign of ΔH determines whether products should be energetically above or below reactants, making reaction enthalpy central."
+          },
+          {
+            "partId": "e",
+            "conceptId": "london-dispersion",
+            "issue": "unnecessary",
+            "claudeRole": "supporting",
+            "proposedRole": "none",
+            "explanation": "Both molecules have dispersion and hydrogen bonding; the distinction in volatility may be explained by overall attraction and relative hydrogen-bonding network, without requiring a separately assessed dispersion-force prediction."
+          }
+        ]
+      },
+      "notes": "All eight parts are visible across scanned source pages 116–118, including the buret meniscus and structures. The requirement to list *all* intermolecular force types in (d) makes dipole-dipole and London dispersion appropriate supporting concepts. Routine neutralization stoichiometry in (f) is not necessarily a separate tag."
+    },
+    "frq-2024-6-2126": {
+      "contentStatus": "complete",
+      "parts": {
+        "a": {
+          "primary": [
+            "electrochemical-cells"
+          ],
+          "supporting": [],
+          "contextual": []
+        },
+        "b": {
+          "primary": [
+            "redox-half-reactions"
+          ],
+          "supporting": [
+            "electrolysis-faraday"
+          ],
+          "contextual": []
+        },
+        "c": {
+          "primary": [
+            "electrolysis-faraday"
+          ],
+          "supporting": [
+            "mole-conversions"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Visible molten LiCl electrolysis problem; ions and potentials verified from scan. The redox chemistry is accurately recognized by Claude; the additional electrolysis context in (b) and mole conversion in (c) may be ordinary prerequisites already encompassed by the main labels."
+    },
+    "mcq-1984-38-126": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "Legacy nuclear topic beyond the current AP framework."
+    },
+    "mcq-1984-72-131": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "partial-pressures"
+          ],
+          "supporting": [
+            "ideal-gas-law"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "partial-pressures",
+            "issue": "wrong-role",
+            "claudeRole": "supporting",
+            "proposedRole": "primary",
+            "explanation": "The specific requested item is saturated-water vapor pressure, used to remove water contribution from a gas collected over water; Dalton partial pressures are the direct assessed idea, while ideal gas law is a subsequent calculation."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "ideal-gas-law",
+            "issue": "wrong-role",
+            "claudeRole": "primary",
+            "proposedRole": "supporting",
+            "explanation": "The ideal-gas relation explains the eventual molar-mass calculation, but is not needed to identify which measurement can be obtained from a table."
+          }
+        ]
+      },
+      "notes": ""
+    },
+    "mcq-1984-84-135": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "colligative-properties"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "Legacy colligative-properties question beyond current AP course."
+    },
+    "mcq-1994-63-691": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [
+            "rate-law"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Original graph is required; graphical slope or curvature determines kinetic order, so no answer is inferred from OCR alone. A rate-law inference from an observed concentration-time plot can reasonably be labeled either integrated-rate-laws alone or integrated-rate-laws with rate-law support; source graph is necessary."
+    },
+    "mcq-1994-65-692": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ph-solubility"
+          ],
+          "supporting": [
+            "precipitation"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2002-38-614": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "beer-lambert"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "The OCR merges question 35 left-column text; actual Q38 is top of right column and asks about spectrophotometer absorbance."
+    },
+    "mcq-2002-48-760": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "bonding-types"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Bonding type and solvent polarity can both explain NaCl solubility. The primary solubility-polarity concept matches in both classifications."
+    },
+    "mcq-2008-25-34": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ideal-gas-law"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-3-29": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": [
+            "electron-configuration"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The common halogen-anion group trend is captured in ionic-formulas; electron configuration as an extra supporting tag is optional rather than a clear omission."
+    },
+    "mcq-2008-4-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-44-39": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "electrochemical-cells"
+          ],
+          "supporting": [
+            "oxidation-numbers"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Read complete page and any companion stimulus for electrode orientation; initial source summary gives only the reaction context. The physical question directly invokes a spontaneous redox cell and relative reduction potentials. Claude’s cell-potential label is a better narrow primary; my pre-comparison electrochemical-cells and oxidation-numbers labels are overly broad. Source questions are legible only on the full page."
+    },
+    "mcq-2008-57-41": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2008-6-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "pka-speciation"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Equal weak acid/conjugate base is the half-equivalence concept; tagging pKa-speciation separately is optional because no pH calculation is requested."
+    },
+    "mcq-2008-8-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "strong-weak-acids"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": "Taxonomy currently lacks a broad standalone electrolyte conductivity/dissociation concept."
+    },
+    "mcq-2008-9-31": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "kinetic-molecular-theory"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2014-12-176": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "entropy",
+            "enthalpy-of-reaction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Comparing ΔH and ΔS signs is necessary to infer the effect of T on ΔG; these may be treated as routine inputs under broad Gibbs free-energy concept."
+    },
+    "mcq-2014-17-1448": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-enthalpy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Bond energy and bond order are both plausible supports to potential-well identification; exact depths and positions come from the original graph."
+    },
+    "mcq-2014-22-180": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2014-24-1450": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Bond-enthalpy primary agrees; sign of enthalpy or endothermic/exothermic direction is another useful supporting tag, but the conceptual boundaries overlap."
+    },
+    "mcq-2014-29-1453": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "ph-solubility"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-role",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "k-manipulation",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The question requires determining the composite equilibrium constant K3 from K1 and K2 before assessing favorability; this should be the primary retrieval tag."
+          }
+        ]
+      },
+      "notes": "The equilibrium constants K1–K3 appear in surrounding stimuli; image provides them. Choice depends on overall K, not one isolated inequality. On viewing Claude’s evidence, the explicit need to combine K1 and K2 into K3 means k-manipulation is the stronger primary than my original free-energy-equilibrium tag; preserve original independent judgment for honest comparison."
+    },
+    "mcq-2014-30-184": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "dynamic-equilibrium"
+          ],
+          "supporting": [
+            "reaction-rate"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The nonzero forward rate at equilibrium belongs to dynamic-equilibrium. Generic reaction-rate as a supporting tag may be unnecessary."
+    },
+    "mcq-2014-33-185": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [
+            "dynamic-equilibrium"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "medium",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The necessary PCl5 shared stimulus is on the preceding page, as documented in source supplements. The graph asks for instantaneous and long-term rate response following adding Cl2 to PCl5 equilibrium. Whether dynamic-equilibrium or Le Châtelier gets primary is debatable; both are materially involved."
+    },
+    "mcq-2014-47-190": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "nernst-nonstandard"
+          ],
+          "supporting": [
+            "electrochemical-cells"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "The Nernst nonstandard-concentration effect is primary; invoking galvanic-cell identity as supporting is usually routine."
+    },
+    "mcq-2014-9-174": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "heat-transfer"
+          ],
+          "supporting": [
+            "calorimetry"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Insulated energy conservation is the key; calorimetry as support is optional since the question does not require numerical q=mcΔT calculation."
+    },
+    "mcq-2016-26-1064": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2018-11-1196": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2018-12-1197": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2018-38-1920": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "coupled-reactions"
+          ],
+          "supporting": [
+            "gibbs-free-energy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "coupled-reactions",
+            "issue": "missing",
+            "claudeRole": "none",
+            "proposedRole": "primary",
+            "explanation": "The question specifically combines standard free-energy changes of multiple reaction equations to obtain an overall ΔG°. The reusable category coupled-reactions captures Gibbs-energy additivity without mislabeling it as an enthalpy-only Hess law task."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "hess-law",
+            "issue": "incorrect",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The taxonomy’s Hess law definition is about enthalpy ΔH; this question gives ΔG° values. They are additive because Gibbs energy is a state function, but the present Hess tag is misleading."
+          }
+        ]
+      },
+      "notes": "The stem explicitly provides three reactions with ΔG° and seeks a sum; this is not bond enthalpy. Summing/scaling ΔG° values is analogous to Hess law but is not an enthalpy calculation. Coupled-reactions is the more specific existing category than hess-law, though the concept taxonomy should clarify this boundary."
+    },
+    "mcq-2018-57-2046": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "phase-change-energy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "At a melting point, ΔG=0 so ΔH=TΔS; this is simultaneously a free-energy/phase equilibrium relation. The second supporting concept is a discretionary classification boundary."
+    },
+    "mcq-2022-38-1648": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-enthalpy"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Claude’s atomic radius support is persuasive because internuclear separation matters for well minima; my bond-enthalpy support alone explains depths, not positions. Preserve pre-comparison tags; suggest adding radii or bond-length support."
+    },
+    "mcq-2023-43-1731": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "titration-analysis"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "wrong-primary",
+        "findings": [
+          {
+            "partId": "stem",
+            "conceptId": "titration-curves",
+            "issue": "wrong-role",
+            "claudeRole": "supporting",
+            "proposedRole": "primary",
+            "explanation": "Selecting an appropriate indicator from its pH transition interval requires locating the steep equivalence-point region on the plotted titration curve."
+          },
+          {
+            "partId": "stem",
+            "conceptId": "pka-speciation",
+            "issue": "incorrect",
+            "claudeRole": "primary",
+            "proposedRole": "none",
+            "explanation": "The curve and indicator ranges do not require qualitative conjugate acid/base speciation relative to pKa; the target is equivalence-point pH."
+          }
+        ]
+      },
+      "notes": "The actual question asks which indicator changes color at the correct titration endpoint; titration-curves should be primary. pKa-speciation does not need to be invoked, as a pKa value is neither supplied nor calculated."
+    },
+    "mcq-2024-19-2088": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "atomic-radius"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "Core ionic-size ranking is correct; nuclear-charge attraction may be treated as routine explanatory support."
+    },
+    "mcq-2024-38-2099": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "photoelectron-spectroscopy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    },
+    "mcq-2024-56-2109": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "precipitation"
+          ],
+          "supporting": [
+            "reaction-representations"
+          ],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "minor-differences",
+        "findings": []
+      },
+      "notes": "This is an explicit particle-representation matching task and precipitation identification, so either may be primary depending on the convention; both labels belong."
+    },
+    "mcq-2024-60-2110": {
+      "contentStatus": "complete",
+      "parts": {
+        "stem": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": [],
+          "contextual": []
+        }
+      },
+      "confidence": "high",
+      "contentIssues": [],
+      "comparison": {
+        "verdict": "agree",
+        "findings": []
+      },
+      "notes": ""
+    }
+  },
+  "conventions": [
+    {
+      "id": "C0-specific-imf-role",
+      "recommendation": "other",
+      "proposedRule": "When a question primarily asks to compare or explain a physical property (boiling point, melting point, viscosity), tag imf-properties primary and the specific force supporting. When it directly asks which intermolecular attractions are broken or present, tag the specific force primary; do not add imf-properties merely because a phase change appears.",
+      "rationale": "Boiling-point comparisons genuinely assess the macroscopic-property explanation, but the 2002 vaporization question asks specifically to identify hydrogen bonds; requiring imf-properties primary there would obscure the actual target.",
+      "confidence": "high"
+    },
+    {
+      "id": "C1-shape-vs-polarity",
+      "recommendation": "C",
+      "proposedRule": "When shape and polarity are separately requested, make both primary; where Lewis-structure construction is also separately requested, do not silently demote the third assessed target solely due to a two-primary schema cap. Extend the schema or represent distinct rubric objectives.",
+      "rationale": "The selenium FRQ separately asks for a Lewis drawing, shape sketch, and polarity judgment. Geometry is not merely an invisible step when it is an explicit deliverable.",
+      "confidence": "high"
+    },
+    {
+      "id": "C2-collision-vs-activation-energy",
+      "recommendation": "other",
+      "proposedRule": "Qualitative explanations of increased collision frequency/effectiveness on changing temperature: collision-model primary, activation-energy supporting only if a threshold-energy fraction or distribution is explicitly required. If the stem directly asks what quantity is inferred from rates at several temperatures, activation-energy is primary; collision-model is not automatically supporting.",
+      "rationale": "MCQ 2008 Q11 is a matching-list question asking which measurable quantity is obtained from temperature-dependent rates, not why increasing temperature speeds up the reaction.",
+      "confidence": "high"
+    },
+    {
+      "id": "C3-phase-change-vs-endo-exo",
+      "recommendation": "A",
+      "proposedRule": "",
+      "rationale": "A direct phase-change enthalpy or heating-curve question should be searchable primarily under phase-change energy; endothermic/exothermic is often a sign interpretation. If ΔS is also separately tested, entropy may independently be primary.",
+      "confidence": "high"
+    },
+    {
+      "id": "C4-pka-speciation-vs-henderson-hasselbalch",
+      "recommendation": "A",
+      "proposedRule": "",
+      "rationale": "Comparing pH with pKa to infer predominant forms or equal conjugate amounts is primarily speciation. Require an actual use of the Henderson–Hasselbalch equation to compute pH or a non-obvious ratio before giving that as primary.",
+      "confidence": "high"
+    },
+    {
+      "id": "C5-strong-weak-identity-as-supporting",
+      "recommendation": "B",
+      "proposedRule": "",
+      "rationale": "When an acid is already given as weak, recognizing that adjective is not an independent assessed skill. A strong/weak tag is useful when identifying acid type from a titration curve or comparing complete versus partial ionization is an explicit discriminating objective.",
+      "confidence": "high"
+    },
+    {
+      "id": "C6-particle-diagram-solution-representations",
+      "recommendation": "B",
+      "proposedRule": "",
+      "rationale": "Reading any diagram should not automatically create a chemistry concept tag. Use the representations metadata for the medium; tag solution-representations as a concept when selecting, constructing, or assessing the adequacy of a particle depiction is itself an explicit task.",
+      "confidence": "medium"
+    }
+  ],
+  "taxonomyIssues": [
+    {
+      "kind": "schema-limitation",
+      "detail": "The two-primary cap cannot represent an FRQ part that explicitly asks for a Lewis structure, a molecular shape, and polarity; preserve three separate assessable objectives or use subskills/rubric subparts.",
+      "conceptIds": [
+        "lewis-structures",
+        "molecular-geometry",
+        "molecular-polarity"
+      ],
+      "questionIds": [
+        "frq-1999-7-564"
+      ]
+    },
+    {
+      "kind": "missing-concept",
+      "detail": "The current taxonomy has no proper label for interpreting a pressure-temperature phase diagram in legacy questions; particulate-states is only an approximate substitute and modern AP scope should be respected.",
+      "conceptIds": [
+        "particulate-states",
+        "phase-change-energy"
+      ],
+      "questionIds": [
+        "mcq-2002-6-606"
+      ]
+    },
+    {
+      "kind": "missing-concept",
+      "detail": "Electrolyte conductivity / presence of dissolved mobile ions is explicitly tested in 2024 FRQ 5(b), but neither bonding-types nor solution-representations precisely captures it.",
+      "conceptIds": [
+        "bonding-types",
+        "solution-representations"
+      ],
+      "questionIds": [
+        "frq-2024-5-2125"
+      ]
+    },
+    {
+      "kind": "missing-concept",
+      "detail": "The ammonia–BF3 Lewis acid–base coordination adduct is not represented by a specific available concept; Lewis structure is a fallback, not a fully faithful description.",
+      "conceptIds": [
+        "lewis-structures",
+        "bonding-types"
+      ],
+      "questionIds": [
+        "mcq-2017-30-1137"
+      ]
+    },
+    {
+      "kind": "taxonomy-boundary",
+      "detail": "When an FRQ explicitly requests multiple independent products, primary/supporting should follow separately scored demands rather than a rigid maximum; identify nontrivial support separately from routine computations.",
+      "conceptIds": [
+        "gibbs-free-energy",
+        "entropy",
+        "endo-exothermic"
+      ],
+      "questionIds": [
+        "mcq-2002-41-759",
+        "frq-1999-7-564"
+      ]
+    },
+    {
+      "kind": "missing-concept",
+      "detail": "Aqueous electrolyte conductivity and ion mobility are not a distinct concept, although legacy and current questions use it.",
+      "questionIds": [
+        "mcq-2008-8-31",
+        "frq-2020-sample-2-116"
+      ]
+    },
+    {
+      "kind": "missing-concept",
+      "detail": "The BF3/NH3 Lewis acid–base coordinate adduct and amphoteric hydroxide complex formation are legacy reactions with no precise canonical taxonomy concept; do not map them to unrelated descriptive-chemistry without an explicit scope note.",
+      "questionIds": [
+        "frq-2005-4-10"
+      ]
+    },
+    {
+      "kind": "scope-exclusion",
+      "detail": "Legacy XeF4 sp3d2 hybridization appears on a 2008 FRQ but contemporary AP Chemistry limits assessed hybridization to sp, sp2, and sp3; require a beyond-scope marker for this part.",
+      "questionIds": [
+        "frq-2008-5-63"
+      ]
+    },
+    {
+      "kind": "definition-boundary",
+      "detail": "The standard Gibbs-energy additivity of combined reactions should be distinguishable from Hess law of enthalpy; add a clear Gibbs/coupled-reaction search rule.",
+      "questionIds": [
+        "mcq-2018-38-1920",
+        "frq-2009-5-325"
+      ]
+    }
+  ],
+  "correctionChecks": [
+    {
+      "questionId": "mcq-2018-36-1207",
+      "result": "confirmed",
+      "note": "The preceding bank-05 p006 visibly contains the shared Questions 35–38 eggshell experiment, gas-pressure calibration graph, and mass/pressure table; p007 begins with numbered questions."
+    },
+    {
+      "questionId": "frq-2011-6-937",
+      "result": "confirmed",
+      "note": "bank-04 p038 visibly continues Question 6 with (b)(ii) and (c)(i–iv), after p037 ends during part (b)."
+    },
+    {
+      "questionId": "frq-2024-3-2119",
+      "result": "confirmed",
+      "note": "bank-08 p022 is headed Continue your response to QUESTION 3 and includes (f)(i) and (ii)."
+    },
+    {
+      "questionId": "mcq-2024-21-2091",
+      "result": "confirmed",
+      "note": "bank-07 p291 prints questions 23–25; bank-07 p289 prints Question 21 about changing CO/H2/CH3OH equilibrium yield."
+    },
+    {
+      "questionId": "mcq-2024-33-2094",
+      "result": "confirmed",
+      "note": "bank-07 p294 prints questions 31–32, whereas bank-07 p295 prints Question 33 about evidence for first-order C2H5Cl decomposition."
+    },
+    {
+      "questionId": "mcq-2014-33-185",
+      "result": "confirmed",
+      "note": "bank-01 p184 displays the PCl5 ⇌ PCl3+Cl2 common setup for Questions 29–33, whereas p185 contains Question 33 and assumes the earlier stimulus."
+    },
+    {
+      "questionId": "mcq-2022-62-1709",
+      "result": "confirmed",
+      "note": "The original bank-06 p209 is a 2022 scoring-guide free-response question; p210 continues printed (c) and (d) and even includes rubric text. The item should not be classified as MCQ."
+    },
+    {
+      "questionId": "mcq-2023-67-1808",
+      "result": "confirmed",
+      "note": "The original bank-07 p008 is a 2023 scoring-guide free-response spectroscopy question; p009 contains (c)/(d) plus rubric material. The item should not be classified as MCQ."
+    }
+  ],
+  "catalogIssues": [
+    {
+      "questionId": "frq-2003-3-536",
+      "kind": "wrong-exam-year",
+      "detail": "Question image is explicitly printed ©2017 College Board, and the question corresponds to 2017 AP Chemistry Question 3 although the catalog ID starts 2003."
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "kind": "wrong-exam-year",
+      "detail": "Document text explicitly reads ©2002 and the item is a 2002 Form B FRQ 3, not 2011; correction package lists it."
+    },
+    {
+      "questionId": "mcq-2022-62-1709",
+      "kind": "wrong-question-type",
+      "detail": "The source is a scoring-guide multipart free-response item (part c/d continuation), not a conventional MCQ."
+    },
+    {
+      "questionId": "mcq-2023-67-1808",
+      "kind": "wrong-question-type",
+      "detail": "The source is a scoring-guide multipart free-response spectroscopy item, not a conventional MCQ."
+    },
+    {
+      "questionId": "mcq-2024-21-2091",
+      "kind": "wrong-question-page",
+      "detail": "Catalog points to printed Q23–25; printed Q21 is on source bank-07 p289."
+    },
+    {
+      "questionId": "mcq-2024-33-2094",
+      "kind": "wrong-question-page",
+      "detail": "Catalog points to Q31–32 on bank-07 p294, but printed Q33 is on p295."
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "kind": "wrong-year",
+      "detail": "The source page is headed 2002 AP Chemistry Form B Question 3 but the catalog ID and extracted label say 2011."
+    },
+    {
+      "questionId": "mcq-2002-38-614",
+      "kind": "OCR",
+      "detail": "The OCR interleaves two newspaper-style columns and contains unrelated question 35 text. The source Q38 is about spectrophotometry."
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "kind": "subparts",
+      "detail": "The source contains separate (i)/(ii) parts under a,b,c,d, some of which are grouped in the manifest."
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "kind": "subparts",
+      "detail": "The catalog aggregates (c onward); the source separately asks (c)(i)/(ii) and (d)(i)/(ii)."
+    }
+  ],
+  "packageIssues": []
+}

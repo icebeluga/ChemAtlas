@@ -135,6 +135,8 @@ The package holds the 40 benchmark and 45 held-out questions: crops, full source
 
 `import-ai-review` validates the results (`chematlas-ai-review/v1`; schema in `research/concepts/review-package/review-results.schema.json`): every concept id, every part id (printed subparts of range parts are accepted), roles, verdicts and convention options. It then writes `research/concepts/ai-reviews/<model>-<run>.json`, which is also a valid `--reference`. It does not change `classifications.json`, does not mark anything `human_verified`, does not decide conventions, and refuses to overwrite an earlier import without `--force`.
 
+The first such review (GPT-6, all 85 questions) is imported as `research/concepts/ai-reviews/gpt-6-pilot-v1.json`, with the raw files in `ai-reviews/source/`; the analysis is in `gpt6-audit-analysis.md`.
+
 ## 7. Known limitations
 
 - No human-verified benchmark exists yet. Accuracy numbers in the pilot report are measured against **model-built** references (one adjudicated, one blind) and must be confirmed by a chemistry teacher before broad tagging.

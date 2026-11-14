@@ -67,6 +67,14 @@ test("conventions file is well formed and only a named reviewer can decide a con
   assert.equal(c.history[0].decidedBy, "T", "a changed decision keeps the earlier one");
 });
 
+test("exclude-rule check flags a routine step tagged next to the concept that covers it", async () => {
+  const { excludeConflicts } = await import("../lib/concepts/records.mjs");
+  const byId = new Map(taxonomy.concepts.map(c => [c.id, c]));
+  assert.deepEqual(excludeConflicts(["titration-analysis", "reaction-stoichiometry"], byId), [["reaction-stoichiometry", "titration-analysis"]]);
+  assert.deepEqual(excludeConflicts(["gibbs-free-energy", "entropy"], byId), []);
+  for (const c of conventions.conventions.filter(c => c.aiRecommendations)) for (const r of c.aiRecommendations) assert.match(r.reviewer, /not a decision/);
+});
+
 test("human reference includes only records a named human approved or edited", () => {
   const store = emptyStore();
   for (const id of ["q1", "q2", "q3"]) upsertRecord(store, record(id, [part("stem", ["entropy"])]));

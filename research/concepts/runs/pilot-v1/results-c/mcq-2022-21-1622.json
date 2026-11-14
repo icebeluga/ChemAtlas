@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2022-21-1622",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-D; structures for pentane and propanoic acid are in the shared table on the page context, but the choices are answerable from the names."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must compare the boiling points of pentane and propanoic acid by the relative strength of their intermolecular attractions."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must recognize that propanoic acid has an O-H group that can hydrogen bond while pentane (only C-H) cannot, which decides the comparison and rejects the hydrogen-bonding distractor for pentane."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "A distractor cites greater dispersion forces in pentane; not the deciding factor."
+        }
+      ],
+      "actions": [
+        "compare",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

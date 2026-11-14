@@ -1,0 +1,46 @@
+{
+  "questionId": "mcq-2016-24-1063",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cuts off the right side of the stem and choices and omits the data table of HCl/NaOH volumes; the page context shows the full table, stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "6.6",
+    "additional": [
+      "4.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must recognize that the heat released scales with the moles of acid and base that actually react, not with total solution volume."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "limiting-reactant",
+          "evidence": "Must compare moles of HCl and NaOH in each trial to decide which reactant limits and whether the amount reacting changes between trials."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "explain"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

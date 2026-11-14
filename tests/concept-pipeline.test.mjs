@@ -142,6 +142,10 @@ test("second-pass comparison and precision/recall scoring", () => {
   const c = validateResult(result(MCQ, [part("stem", ["buffers"])]), opts(MCQ)).record;
   assert.equal(compareClassifications(a, b).agreement, "agree");
   assert.equal(compareClassifications(a, c).agreement, "disagree");
+  const p = (partId, primary) => ({ partId, primary: primary.map(conceptId => ({ conceptId })), supporting: [] });
+  const printed = { contentStatus: "complete", parts: [p("a", ["entropy"]), p("b", ["gibbs-free-energy"])] };
+  const coarse = { contentStatus: "complete", parts: [p("a–b", ["entropy", "gibbs-free-energy"])] };
+  assert.notEqual(compareClassifications(printed, coarse).agreement, "disagree", "a coarse catalog range part is compared with the printed parts it covers");
   const ref = { referenceKind: "test", questions: { [MCQ]: { contentStatus: "complete", parts: { stem: { primary: ["titration-curves"], supporting: ["pka-speciation", "buffers"] } } } } };
   const s = scoreAgainstReference({ [MCQ]: a }, ref).summary;
   assert.equal(s.primary.precision, 1);

@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2018-13-1198",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the data table (t, [NO2], ln[NO2], 1/[NO2]), full stem and choices A-D; matches page."
+  },
+  "officialTopics": {
+    "primary": "5.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must recognize which transformed column ([NO2], ln[NO2] or 1/[NO2]) changes linearly with time to deduce the reaction order and matching rate law."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

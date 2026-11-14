@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2012-21-1354",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows the stem and choices A-E but omits the equation X + 2Y -> Z + 3Q given above the question; the page context shows it."
+  },
+  "officialTopics": {
+    "primary": "5.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "reaction-rate",
+          "evidence": "Must relate the rate of decrease of Y to that of X using the 1:2 coefficients in the equation."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2023-33-1727",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cuts off the left side of the shared stimulus (CO2 + 4 H2 -> CH4 + 2 H2O with Ni(s)); page context shows it fully, along with question 33 choices A-D."
+  },
+  "officialTopics": {
+    "primary": "5.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must know how a catalyst alters the reaction pathway and activation energy versus the overall energy change, to choose among the four statements."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

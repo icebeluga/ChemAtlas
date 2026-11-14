@@ -1,0 +1,104 @@
+{
+  "questionId": "frq-2024-5-2125",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the full question 5 stem and parts (a)-(d), including the incomplete orbital energy diagram for Mg2+ with only 1s filled."
+  },
+  "officialTopics": {
+    "primary": "4.2",
+    "additional": [
+      "4.7",
+      "3.8",
+      "1.8",
+      "1.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write the net ionic equation for the precipitation, removing Na+ and NO3- as spectator ions."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must decide which product is the white solid using the fact that all sodium and nitrate salts are soluble."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "solution-representations",
+          "evidence": "Must use the idea that the filtrate still contains dissolved ions (a strong electrolyte solution) to propose a test that shows ions remain."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "evaluate-procedure",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "ionic-formulas",
+          "evidence": "Must identify another metal that forms a +1 cation so that two cations balance the 2- carbonate ion in M2CO3."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must place the electrons of the Mg2+ cation (Mg minus two electrons) in the orbital diagram following Aufbau, Pauli and Hund."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "energy-diagram"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (b) has no exact concept; solution-representations (electrolyte ions in solution) chosen as closest."
+}

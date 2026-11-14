@@ -1,0 +1,46 @@
+{
+  "questionId": "mcq-2014-practice-24-180",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "no-crop",
+    "notes": "Full page shown; question 24 with equation, two-step mechanism (fast reversible step 1, slow step 2) and choices A-D is fully legible. Other questions on the page ignored."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.4",
+      "5.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must derive the rate law from the slow step, using the fast pre-equilibrium to eliminate the N2O2 intermediate, and test the statements against it."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "elementary-steps",
+          "evidence": "Must recognize that step 1 (2 NO) is bimolecular, not unimolecular, to reject that statement."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "derive"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

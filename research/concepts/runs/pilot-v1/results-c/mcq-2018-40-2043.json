@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2018-40-2043",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "nuclear-chemistry",
+          "evidence": "Must balance the nuclear decay of Ca-39 to K-39 (same mass number, atomic number decreases by one) to identify the emitted particle."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

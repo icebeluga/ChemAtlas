@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2022-41-1649",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "1.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mole-conversions",
+          "evidence": "Must convert an equal mass of each compound to moles (and molecules) using molar mass, recognizing the smallest molar mass gives the most molecules."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

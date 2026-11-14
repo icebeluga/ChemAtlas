@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2016-27-1064",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the full stem and Lewis diagrams A-D (CF4, NF3, SO3, SO2) with lone pairs shown."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-angles",
+          "evidence": "Must compare bond angles across the four molecules and recognize that lone-pair repulsion compresses angles below the ideal values for the electron-domain geometry."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count electron domains around each central atom, counting the S=O double bond as one domain and each lone pair as one, to tell tetrahedral (NF3, CF4) from trigonal planar (SO3, SO2) arrangements."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

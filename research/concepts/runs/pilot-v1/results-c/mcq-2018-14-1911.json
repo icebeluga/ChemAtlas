@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2018-14-1911",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cuts off the first line of the stem; the page context shows the full stem and choices A-D. The shared setup describing CH3OH in the evacuated vessel is presumably on a preceding page but is not needed to answer."
+  },
+  "officialTopics": {
+    "primary": "4.4",
+    "additional": [
+      "3.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "physical-chemical-change",
+          "evidence": "Must classify the vaporization of CH3OH in the evacuated vessel as physical or chemical based on whether molecular identity changes."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must distinguish overcoming intermolecular attractions during vaporization from breaking covalent bonds, which the distractors claim."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "classify",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

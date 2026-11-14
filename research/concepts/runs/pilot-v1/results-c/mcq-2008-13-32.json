@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2008-13-32",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows item 13; the shared answer list of dH and dS sign combinations (A-E) is in the stimulus image for questions 12-14."
+  },
+  "officialTopics": {
+    "primary": "9.1",
+    "additional": [
+      "6.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must recognize that evaporation (liquid to gas) increases dispersal of matter, so dS > 0."
+        },
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must recognize that evaporation absorbs energy to overcome intermolecular attractions, so dH > 0; choices differ in both signs."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "predict"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Two primaries used because the choice requires both the dH sign and the dS sign; phase-change-energy could substitute for endo-exothermic."
+}

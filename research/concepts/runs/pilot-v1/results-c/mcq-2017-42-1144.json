@@ -1,0 +1,56 @@
+{
+  "questionId": "mcq-2017-42-1144",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop/page show the overall equation with Kp = 2e30, three-step mechanism with step enthalpies, and question 42 choices A-D. Question 43 on same page ignored."
+  },
+  "officialTopics": {
+    "primary": "9.5",
+    "additional": [
+      "7.5",
+      "9.3",
+      "9.4"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "Must relate a very large K to a large negative delta G degree via delta G = -RT ln K."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must weigh the delta H and T delta S contributions to delta G degree to decide which drives the large K."
+        },
+        {
+          "conceptId": "thermodynamic-kinetic-control",
+          "evidence": "Must reject choices about activation energies because Ea affects rate, not the magnitude of K."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "hess-law",
+          "evidence": "Step enthalpies are given; summing them shows overall delta H is negative."
+        }
+      ],
+      "actions": [
+        "explain",
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

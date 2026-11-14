@@ -1,0 +1,53 @@
+{
+  "questionId": "mcq-2022-56-1653",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the particle diagram of ions X and Y surrounded by water molecules, the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "3.8",
+    "additional": [
+      "3.1",
+      "1.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ion-dipole",
+          "evidence": "Must use the orientation of water molecules around each ion (oxygen end toward a cation, hydrogen ends toward an anion) to decide the charge of X and Y."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "atomic-radius",
+          "evidence": "Must compare the drawn sizes of X and Y with the relative radii of Na+, K+, Cl- and F- to choose between the remaining ion pairs."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "solution-representations",
+          "evidence": "The question is presented as a particulate diagram of a solution."
+        }
+      ],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "particulate-diagram"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Unsure whether ion size is decisive or only orientation; atomic-radius kept as supporting."
+}

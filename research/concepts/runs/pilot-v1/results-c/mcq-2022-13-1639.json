@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2022-13-1639",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-D; the shared H2O2/MnO2 stimulus from the previous page is not shown but is not needed to answer."
+  },
+  "officialTopics": {
+    "primary": "5.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must recognize MnO2 as a catalyst and know how a catalyst affects pathway, activation energy, delta H and equilibrium to choose the explanation."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

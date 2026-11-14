@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2002-41-759",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows the full stem and choices A-E for question 41 but also includes part of question 39's solubility graph and stem above."
+  },
+  "officialTopics": {
+    "primary": "9.3",
+    "additional": [
+      "6.1",
+      "9.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must determine the sign of dG for a process that occurs on its own and relate it to the signs of dH and dS."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must infer from the temperature drop that the process absorbs heat, so dH > 0."
+        },
+        {
+          "conceptId": "entropy",
+          "evidence": "Must infer from the gas produced from two solids that dS > 0."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "predict"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

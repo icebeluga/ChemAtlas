@@ -1050,13 +1050,13 @@
   {
     "questionId": "frq-2009-5-325",
     "agreement": "disagree",
-    "summary": "a: primary equilibrium-expression vs -; supporting - vs - | b: primary le-chatelier vs -; supporting - vs - | c: primary free-energy-equilibrium vs -; supporting - vs - | e: primary thermodynamic-kinetic-control vs -; supporting - vs - | f-i: primary entropy vs -; supporting - vs - | f-ii: primary hess-law vs -; supporting - vs - | f-iii: primary gibbs-free-energy vs -; supporting ideal-gas-law vs -",
+    "summary": "a: primary equilibrium-expression vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | b: primary le-chatelier vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | c: primary free-energy-equilibrium vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | e: primary thermodynamic-kinetic-control vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-i: primary entropy vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-ii: primary hess-law vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-iii: primary gibbs-free-energy vs thermodynamic-kinetic-control+entropy; supporting ideal-gas-law vs hess-law+gibbs-free-energy+ideal-gas-law",
     "parts": [
       {
         "partId": "a",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "equilibrium-expression"
@@ -1064,15 +1064,21 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
         }
       },
       {
         "partId": "b",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "le-chatelier"
@@ -1080,15 +1086,21 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
         }
       },
       {
         "partId": "c",
         "primaryEqual": false,
         "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "free-energy-equilibrium"
@@ -1096,8 +1108,14 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
         }
       },
       {
@@ -1121,8 +1139,8 @@
       {
         "partId": "e",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "thermodynamic-kinetic-control"
@@ -1130,15 +1148,22 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
         }
       },
       {
         "partId": "f-i",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "entropy"
@@ -1146,15 +1171,22 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
         }
       },
       {
         "partId": "f-ii",
         "primaryEqual": false,
         "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "hess-law"
@@ -1162,15 +1194,22 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
         }
       },
       {
         "partId": "f-iii",
         "primaryEqual": false,
         "primaryOverlap": false,
-        "supportingJaccard": 0,
+        "supportingJaccard": 0.33,
         "a": {
           "primary": [
             "gibbs-free-energy"
@@ -1180,8 +1219,15 @@
           ]
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
         }
       }
     ]
@@ -1189,7 +1235,7 @@
   {
     "questionId": "frq-2011-3-933",
     "agreement": "disagree",
-    "summary": "c-i: primary free-energy-equilibrium vs -; supporting - vs - | c-ii: primary gibbs-free-energy vs -; supporting - vs - | c-iii: primary le-chatelier vs -; supporting - vs - | d: primary hess-law vs -; supporting - vs -",
+    "summary": "c-i: primary free-energy-equilibrium vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-ii: primary gibbs-free-energy vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-iii: primary le-chatelier vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | d: primary hess-law vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law",
     "parts": [
       {
         "partId": "a",
@@ -1234,8 +1280,8 @@
       {
         "partId": "c-i",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "free-energy-equilibrium"
@@ -1243,15 +1289,21 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
         }
       },
       {
         "partId": "c-ii",
         "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "gibbs-free-energy"
@@ -1259,15 +1311,21 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
         }
       },
       {
         "partId": "c-iii",
         "primaryEqual": false,
         "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "le-chatelier"
@@ -1275,15 +1333,21 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
         }
       },
       {
         "partId": "d",
         "primaryEqual": false,
         "primaryOverlap": false,
-        "supportingJaccard": 1,
+        "supportingJaccard": 0,
         "a": {
           "primary": [
             "hess-law"
@@ -1291,16 +1355,22 @@
           "supporting": []
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
         }
       }
     ]
   },
   {
     "questionId": "frq-2011-3-946",
-    "agreement": "disagree",
-    "summary": "c-onward: primary gibbs-free-energy+free-energy-equilibrium vs -; supporting reaction-quotient vs -",
+    "agreement": "agree",
+    "summary": "",
     "parts": [
       {
         "partId": "a",
@@ -1342,9 +1412,9 @@
       },
       {
         "partId": "c-onward",
-        "primaryEqual": false,
-        "primaryOverlap": false,
-        "supportingJaccard": 0,
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
         "a": {
           "primary": [
             "gibbs-free-energy",
@@ -1355,8 +1425,14 @@
           ]
         },
         "b": {
-          "primary": [],
-          "supporting": []
+          "primary": [
+            "gibbs-free-energy",
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "entropy",
+            "reaction-quotient"
+          ]
         }
       }
     ]

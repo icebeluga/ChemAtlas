@@ -1,0 +1,167 @@
+{
+  "questionId": "frq-2017-3-1157",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Two full pages show parts (a)-(d)(iv), the reaction equations, and the [O3] vs time graph; crops equal the page contexts."
+  },
+  "officialTopics": {
+    "primary": "5.3",
+    "additional": [
+      "2.5",
+      "2.6",
+      "2.7",
+      "6.7",
+      "5.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw the O3 Lewis diagram, placing 18 valence electrons with one double bond and lone pairs on the central O."
+        },
+        {
+          "conceptId": "resonance",
+          "evidence": "Explicitly requires all valid resonance structures, i.e. both placements of the O=O double bond."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Asks for the shape of O3 based on the drawn Lewis structure."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count three electron domains on the central O, including one lone pair, to determine the shape."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "bond-enthalpy",
+          "evidence": "Must use bonds broken minus bonds formed with the given O2 bond enthalpy and reaction enthalpy to solve for the average O-O bond enthalpy in O3, counting two O-O bonds per O3."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-i",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must read the time for [O3] to fall from 1.0e-5 to 5.0e-6 M on the graph to obtain the first-order half-life."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "d-ii",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must use the first-order relation k = 0.693/t1/2 with the half-life to get k1 in s^-1."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "d-iii",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must explain that because [HSO3-] is in large excess and stays essentially constant, the second-order rate law reduces to an apparent first-order dependence on [O3]."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph",
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d-iv",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must propose varying the initial [HSO3-] while monitoring the rate (or observed k) to show first-order dependence on HSO3-."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "experimental-design"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

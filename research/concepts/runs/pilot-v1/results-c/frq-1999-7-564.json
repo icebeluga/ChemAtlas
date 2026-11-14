@@ -1,0 +1,117 @@
+{
+  "questionId": "frq-1999-7-564",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop and page show question 7 parts (a)-(d) completely."
+  },
+  "officialTopics": {
+    "primary": "1.5",
+    "additional": [
+      "1.7",
+      "2.5",
+      "2.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must explain isotopes share the same number of protons (and electrons) but differ in number of neutrons."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "electron-configuration",
+          "evidence": "Must write the full ground-state configuration of Se and apply Hund's rule to the 4p4 subshell to count the unpaired electrons."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must explain why Se has lower first ionization energy than Br and higher than Te."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "coulombic-attraction",
+          "evidence": "Must invoke greater nuclear charge at similar distance (Br) and greater distance/shielding of valence electrons (Te) to justify each comparison."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw SeF4 with four Se-F bonds, a lone pair on Se and lone pairs on each F."
+        },
+        {
+          "conceptId": "molecular-polarity",
+          "evidence": "Must decide and justify the polarity of SeF4 from whether its bond dipoles cancel in its shape."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must sketch the molecular structure, which is the basis of the polarity argument."
+        },
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count five electron domains on Se, including one lone pair, to determine the molecular shape."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "represent",
+        "justify"
+      ],
+      "representations": [
+        "lewis-structure",
+        "molecular-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,42 @@
+{
+  "questionId": "mcq-2008-10-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the item stem; the shared answer list (A-E: activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy) is in the stimulus image."
+  },
+  "officialTopics": {
+    "primary": "9.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must identify the quantity that is zero for a pure perfect crystal at 0 K (third-law reference point for absolute entropy)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "enthalpy-of-formation",
+          "evidence": "Listed as a distractor quantity that is zero only for elements in standard states."
+        }
+      ],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -71,7 +71,7 @@
   "flags": [
     [
       "second-pass-disagreement",
-      46
+      45
     ],
     [
       "classifier-requested-review",
@@ -270,8 +270,8 @@
   "topicChangedFromCatalog": 11,
   "agreement": {
     "partial": 34,
-    "disagree": 13,
-    "agree": 45
+    "disagree": 12,
+    "agree": 46
   },
   "disagreements": [
     {
@@ -307,17 +307,12 @@
     {
       "questionId": "frq-2009-5-325",
       "agreement": "disagree",
-      "summary": "a: primary equilibrium-expression vs -; supporting - vs - | b: primary le-chatelier vs -; supporting - vs - | c: primary free-energy-equilibrium vs -; supporting - vs - | e: primary thermodynamic-kinetic-control vs -; supporting - vs - | f-i: primary entropy vs -; supporting - vs - | f-ii: primary hess-law vs -; supporting - vs - | f-iii: primary gibbs-free-energy vs -; supporting ideal-gas-law vs -"
+      "summary": "a: primary equilibrium-expression vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | b: primary le-chatelier vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | c: primary free-energy-equilibrium vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | e: primary thermodynamic-kinetic-control vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-i: primary entropy vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-ii: primary hess-law vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-iii: primary gibbs-free-energy vs thermodynamic-kinetic-control+entropy; supporting ideal-gas-law vs hess-law+gibbs-free-energy+ideal-gas-law"
     },
     {
       "questionId": "frq-2011-3-933",
       "agreement": "disagree",
-      "summary": "c-i: primary free-energy-equilibrium vs -; supporting - vs - | c-ii: primary gibbs-free-energy vs -; supporting - vs - | c-iii: primary le-chatelier vs -; supporting - vs - | d: primary hess-law vs -; supporting - vs -"
-    },
-    {
-      "questionId": "frq-2011-3-946",
-      "agreement": "disagree",
-      "summary": "c-onward: primary gibbs-free-energy+free-energy-equilibrium vs -; supporting reaction-quotient vs -"
+      "summary": "c-i: primary free-energy-equilibrium vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-ii: primary gibbs-free-energy vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-iii: primary le-chatelier vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | d: primary hess-law vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law"
     },
     {
       "questionId": "frq-2017-3-1157",

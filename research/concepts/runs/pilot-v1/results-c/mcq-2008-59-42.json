@@ -1,0 +1,54 @@
+{
+  "questionId": "mcq-2008-59-42",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Full page shown; question 59 particle diagram (NO2 and N2O4 particles in 1.0 L), equation and choices A-E legible."
+  },
+  "officialTopics": {
+    "primary": "7.4",
+    "additional": [
+      "7.3",
+      "7.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "equilibrium-constant-calculation",
+          "evidence": "Must count NO2 and N2O4 particles in the 1.0 L container at equilibrium and substitute the amounts into K to decide its value range."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "Must write K = [N2O4]/[NO2]^2 with the coefficient 2 as an exponent, which decides the comparison with 1."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "k-magnitude",
+          "evidence": "Choices are phrased as K relative to 0 and 1."
+        }
+      ],
+      "actions": [
+        "interpret",
+        "calculate"
+      ],
+      "representations": [
+        "particulate-diagram",
+        "chemical-equation"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Particle counts are not molar concentrations, so bounding K relative to 1 depends on treating particles per liter as concentration units; the \"not enough information\" choice is also plausible."
+}

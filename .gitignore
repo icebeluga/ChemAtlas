@@ -49,3 +49,4 @@ yarn-error.log*
 # Concept-classification rendered images are regenerable with `node scripts/concepts/cli.mjs prepare`
 research/concepts/runs/*/images/
 research/concepts/runs/*/render-job.json
+research/concepts/cache/

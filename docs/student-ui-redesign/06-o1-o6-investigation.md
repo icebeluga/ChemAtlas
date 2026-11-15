@@ -7,7 +7,7 @@ Scope: owner decisions O1 (`fix/local-workers-runtime`) and O6 (a UI-only Vite c
 - Base is `4f965e3` (production code on `main`). The branch tip is `eba3977`; `b5ceab5` is its parent; merge-base with `4f965e3` is `4f965e3`. Verified with `git rev-parse` and `git merge-base`.
 - Branch-side line numbers are from `git show fix/local-workers-runtime:<path>` (tip `eba3977`). Base-side line numbers are from `4f965e3:<path>`. The redesign worktree `d7a6aca` has the same production files as `4f965e3` (`git diff --stat 4f965e3 HEAD -- scripts .github worker lib vite.config.ts package.json tsconfig.json eslint.config.mjs .gitignore wrangler.student.jsonc` printed nothing).
 - Hunks are counted with `git diff -U0` (the smallest units). At default context the TSX file has 9 hunks.
-- The redesign worktree has no `node_modules`. Where I read Vite, vinext or Cloudflare plugin source, it is from the main checkout, `C:\Users\Johnson\Projects\ChemAtlas\node_modules`: vite 8.0.13, vinext 1.0.0-beta.5 (both match `4f965e3:package.json`), and `@cloudflare/vite-plugin` 1.67.0 (the branch's version; base pins 1.37.1). Statements from those files say so.
+- The redesign worktree has no `node_modules`. Where I read Vite, vinext or Cloudflare plugin source, it is from the main checkout, `..\ChemAtlas\node_modules`: vite 8.0.13, vinext 1.0.0-beta.5 (both match `4f965e3:package.json`), and `@cloudflare/vite-plugin` 1.67.0 (the branch's version; base pins 1.37.1). Statements from those files say so.
 - Nothing was built. Where the answer depends on build output, this document says what the configuration specifies and lists it under "Not verified".
 
 ---
@@ -250,7 +250,7 @@ Component names are from 02-architecture §7. All "Exclude: superseded".
 
 ## O6
 
-Candidate: untracked `C:\Users\Johnson\Projects\ChemAtlas\vite.design.local.config.ts` (7 lines: 3 comment lines, two imports, a blank line, `export default defineConfig({ plugins: [vinext({ appDir: "student" })] });`). It is git-excluded by `.git/info/exclude` lines 10 and 12 (the common git dir, shared by worktrees). Neighbour `vite.preview.local.config.ts` (18 lines) is the same app with `cloudflare({ configPath: "./wrangler.student.jsonc", config: { compatibility_date: "2026-11-08" }, viteEnvironment: …, inspectorPort: false })`, so it keeps the Worker and the Access check. The owner's launch config `chematlas-ui-only` runs the design config on port 5192 (`.claude/launch.json`); the memory note says it ran, taking about 2.5 minutes on first start. I did not run it.
+Candidate: untracked `..\ChemAtlas\vite.design.local.config.ts` (7 lines: 3 comment lines, two imports, a blank line, `export default defineConfig({ plugins: [vinext({ appDir: "student" })] });`). It is git-excluded by `.git/info/exclude` lines 10 and 12 (the common git dir, shared by worktrees). Neighbour `vite.preview.local.config.ts` (18 lines) is the same app with `cloudflare({ configPath: "./wrangler.student.jsonc", config: { compatibility_date: "2026-11-08" }, viteEnvironment: …, inspectorPort: false })`, so it keeps the Worker and the Access check. The owner's launch config `chematlas-ui-only` runs the design config on port 5192 (`.claude/launch.json`); the memory note says it ran, taking about 2.5 minutes on first start. I did not run it.
 
 ### O6.1 How production is built and deployed today
 

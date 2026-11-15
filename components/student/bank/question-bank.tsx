@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
 import stimulusDocument from "../../../research/stimuli.json";
 import { planWorksheet } from "../../../lib/worksheet.mjs";
@@ -16,7 +17,7 @@ type Filters = { unit?: string; topic?: string; type?: string; query?: string };
 type ImageMode = "full" | "crop";
 
 type Props = {
-  catalog: Catalog; topics: Topic[]; questions: Question[]; loadFailed: boolean;
+  catalog: Catalog; topics: Topic[]; questions: Question[]; loadFailed: boolean; wide: boolean;
   unit: string; topic: string; type: string; query: string;
   /** Question named in the URL (`view=detail&question=`); empty when none. */
   selectedId: string;
@@ -29,16 +30,14 @@ type Props = {
 
 const PAGE = 100;
 const emptyFiles: NonNullable<Catalog["sourceFiles"]> = [];
-const wideQuery = "(min-width: 701px)";
-const subscribeWide = (callback: () => void) => { const media = matchMedia(wideQuery); media.addEventListener("change", callback); return () => media.removeEventListener("change", callback); };
 const originalPagesFor = (q: Question) => q.sourcePagesOriginal?.length ? q.sourcePagesOriginal : (q.pages?.length ? q.pages : [1]);
 // four heat steps, by square root so sparse topics stay visible
 const density = (count: number, max: number) => count ? [.15, .4, .7, 1][Math.min(3, Math.floor(Math.sqrt(count / max) * 4))] : 0;
 
 /** Unified Question Bank: course band, question list, printed-question pane and worksheet strip. */
 export function QuestionBank(props: Props) {
-  const { catalog, topics, questions, loadFailed, unit, topic, type, query, selectedId, onFilters, onSelect, onClosePane, worksheetIds, canEdit, onToggle, bankName } = props;
-  const wide = useSyncExternalStore(subscribeWide, () => matchMedia(wideQuery).matches, () => true);
+  const { catalog, topics, questions, loadFailed, wide, unit, topic, type, query, selectedId, onFilters, onSelect, onClosePane, worksheetIds, canEdit, onToggle, bankName } = props;
+  const paneOpen = !!selectedId && !wide;
   const { content } = useExportData();
   const [year, setYear] = useState("all");
   const [reviewedOnly, setReviewedOnly] = useState(false);
@@ -46,6 +45,10 @@ export function QuestionBank(props: Props) {
   const [mode, setMode] = useState<ImageMode>("full");
   const rows = useRef<HTMLOListElement>(null);
   const sheet = useRef<HTMLDialogElement>(null);
+  const listHeading = useRef<HTMLHeadingElement>(null);
+  const paneHeading = useRef<HTMLHeadingElement>(null);
+  const paneOpener = useRef<HTMLElement>(null);
+  const restoreOnClose = useRef(false);
 
   const unitOf = useMemo(() => new Map(topics.map(t => [t.id, t.unit])), [topics]);
   const topicName = useMemo(() => new Map(topics.map(t => [t.id, t.name])), [topics]);
@@ -72,6 +75,7 @@ export function QuestionBank(props: Props) {
 
   const byId = useMemo(() => new Map(questions.map(q => [q.id, q])), [questions]);
   const current = (selectedId ? byId.get(selectedId) : undefined) ?? (wide ? results[0] : undefined);
+  const paneQuestionId = current?.id;
   const currentIndex = current ? results.findIndex(q => q.id === current.id) : -1;
   const activeUnit = catalog.units.find(u => u.id === unit);
   const activeUnitNumber = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
@@ -80,6 +84,24 @@ export function QuestionBank(props: Props) {
   const loading = !catalog.units.length && !loadFailed;
 
   useEffect(() => { rows.current?.scrollTo(0, 0); }, [unit, topic, type, query, year, reviewedOnly]);
+
+  useEffect(() => {
+    if (paneOpen) {
+      restoreOnClose.current = true;
+      paneHeading.current?.focus({ preventScroll: true });
+    } else if (!selectedId && restoreOnClose.current) {
+      restoreOnClose.current = false;
+      const target = paneOpener.current?.isConnected ? paneOpener.current
+        : rows.current?.querySelector<HTMLButtonElement>(".ca-row-open") ?? listHeading.current;
+      paneOpener.current = null;
+      target?.focus({ preventScroll: true });
+    }
+  }, [paneOpen, paneQuestionId, selectedId]);
+
+  function openPane(id: string, opener: HTMLElement) {
+    if (!wide && !paneOpen) paneOpener.current = opener;
+    onSelect(id, wide || paneOpen);
+  }
 
   const step = useCallback((delta: number) => {
     const next = results[Math.max(0, Math.min(results.length - 1, currentIndex + delta))];
@@ -107,8 +129,8 @@ export function QuestionBank(props: Props) {
   function clearFilters() { setYear("all"); setReviewedOnly(false); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
   function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
 
-  return <div className="ca-bank" data-pane={selectedId && !wide ? "" : undefined}>
-    <nav className="ca-course" aria-label="Units and topics">
+  return <div className="ca-bank" data-pane={paneOpen ? "" : undefined}>
+    <nav className="ca-course" aria-label="Units and topics" inert={paneOpen}>
       <h2 className="ca-sr">Browse by unit</h2>
       <div className="ca-units">
         <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => onFilters({ unit: "all", topic: "all" })}>
@@ -146,11 +168,11 @@ export function QuestionBank(props: Props) {
     </nav>
 
     <div className="ca-work">
-      <section className="ca-list" aria-label="Questions">
+      <section className="ca-list" aria-label="Questions" inert={paneOpen}>
         <div className="ca-list-head">
           <div className="ca-list-title" data-u={activeUnit?.id}>
             {activeTopic ? <span className="ca-code">{activeTopic}</span> : activeUnit ? <span className="ca-code">Unit {activeUnitNumber}</span> : null}
-            <h1>{activeTopic ? topicName.get(activeTopic) : activeUnit ? activeUnit.name : "Every unit"}</h1>
+            <h1 ref={listHeading} tabIndex={-1}>{activeTopic ? topicName.get(activeTopic) : activeUnit ? activeUnit.name : "Every unit"}</h1>
             <small role="status">{loading ? "Loading…" : `${results.length.toLocaleString()} question${results.length === 1 ? "" : "s"}`}</small>
           </div>
           {activeTopic && catalog.topicDetails?.[activeTopic] && <p>{catalog.topicDetails[activeTopic].description}</p>}
@@ -173,7 +195,7 @@ export function QuestionBank(props: Props) {
             const on = worksheetIds.includes(q.id);
             const label = `${q.year ?? "Undated"} ${q.type} ${q.number}`;
             return <li key={q.id} className="ca-row catalog-row" data-id={q.id} data-u={unitOf.get(code)} data-current={q.id === current?.id ? "" : undefined}>
-              <button type="button" className="ca-row-open" aria-current={q.id === current?.id ? "true" : undefined} onClick={() => onSelect(q.id, wide)}>
+              <button type="button" className="ca-row-open" aria-current={q.id === current?.id ? "true" : undefined} onClick={event => openPane(q.id, event.currentTarget)}>
                 <span className="ca-code">{code}</span>
                 <span>
                   <span className="ca-row-line"><span className="ca-tag" data-t={q.type}>{q.type}</span><b>{q.year ?? "Undated"} · {q.number}</b>
@@ -204,11 +226,15 @@ export function QuestionBank(props: Props) {
 
       <section className="ca-pane" aria-label="Printed question">
         {current ? <QuestionPane key={current.id} question={current} index={currentIndex} total={results.length} activeTopic={activeTopic}
+          heading={paneHeading}
           mode={mode} onMode={setMode} files={catalog.sourceFiles ?? emptyFiles} unitOf={unitOf} topicName={topicName} bankName={bankName}
           reviewed={content ? hasLayout(current.id) : undefined} reviewNote={content?.review?.[current.id]}
           onWorksheet={worksheetIds.includes(current.id)} canEdit={canEdit && (worksheetIds.includes(current.id) || worksheetIds.length < 500)}
           onToggle={() => onToggle(current.id)} onStep={step} onBack={onClosePane} />
-          : <div className="ca-empty"><b>{loading ? "Loading the catalog…" : "Pick a question"}</b>The printed question appears here, with what it tests.</div>}
+          : paneOpen ? <div className="ca-pane-head">
+            <button type="button" className="ca-icon ca-back" aria-label="Back to results" onClick={onClosePane}><ChevronLeft size={18} aria-hidden="true" /></button>
+            <h2 ref={paneHeading} tabIndex={-1}>{loading ? "Loading the catalog…" : loadFailed ? "The catalog did not load" : "Question not found"}</h2>
+          </div> : <div className="ca-empty"><b>{loading ? "Loading the catalog…" : "Pick a question"}</b>The printed question appears here, with what it tests.</div>}
       </section>
 
       <aside className="ca-dock" aria-label="Worksheet">
@@ -216,7 +242,7 @@ export function QuestionBank(props: Props) {
         {worksheetIds.length ? <ol>{worksheetIds.map((id, i) => { const q = byId.get(id);
           return <li key={id}><button type="button" data-u={q ? unitOf.get(q.displayTopic ?? "") : undefined} aria-current={id === current?.id ? "true" : undefined}
             aria-label={`Worksheet question ${i + 1}${q ? `: ${q.year ?? "Undated"} ${q.type} ${q.number}` : ""}`} title={q ? `${q.year ?? "Undated"} ${q.type} ${q.number} · ${q.displayTopic ?? ""} ${q.displayName ?? ""}` : id}
-            disabled={!q} onClick={() => q && onSelect(q.id, wide)}>{i + 1}</button></li>; })}</ol>
+            disabled={!q} onClick={event => q && openPane(q.id, event.currentTarget)}>{i + 1}</button></li>; })}</ol>
           : <span className="ca-hint">Empty. Add questions and they line up here in order.</span>}
         <a className={`ca-btn ${worksheetIds.length ? "is-primary" : "is-quiet"}`} href="/practice-builder">
           {worksheetIds.length ? <>Arrange {worksheetIds.length}<span className="ca-long">&nbsp;in Practice builder</span></> : "Practice builder"}<ChevronRight size={15} aria-hidden="true" />
@@ -228,19 +254,19 @@ export function QuestionBank(props: Props) {
 
 type PaneProps = {
   question: Question; index: number; total: number; activeTopic: string; mode: ImageMode; onMode: (mode: ImageMode) => void;
+  heading: RefObject<HTMLHeadingElement | null>;
   files: NonNullable<Catalog["sourceFiles"]>; unitOf: Map<string, string>; topicName: Map<string, string>; bankName: (id?: string) => string;
   /** undefined while the print-layout data is still loading */
   reviewed: boolean | undefined; reviewNote?: string;
   onWorksheet: boolean; canEdit: boolean; onToggle: () => void; onStep: (delta: number) => void; onBack: () => void;
 };
 
-function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, files, unitOf, topicName, bankName, reviewed, reviewNote, onWorksheet, canEdit, onToggle, onStep, onBack }: PaneProps) {
+function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, heading, files, unitOf, topicName, bankName, reviewed, reviewNote, onWorksheet, canEdit, onToggle, onStep, onBack }: PaneProps) {
   const [pageIndex, setPageIndex] = useState(0);
   const [zoom, setZoom] = useState<ViewerZoom>("width");
   const [scale, setScale] = useState(1);
   const [fullscreen, setFullscreen] = useState(false);
   const viewer = useRef<HTMLDivElement>(null);
-  const heading = useRef<HTMLHeadingElement>(null);
   const onScale = useCallback((value: number) => setScale(value), []);
 
   useEffect(() => {

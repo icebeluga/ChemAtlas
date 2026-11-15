@@ -9,13 +9,14 @@ type Props = {
   current: "bank" | "worksheet" | "other";
   worksheetCount: number;
   reviewCount: number;
+  inert: boolean;
   onBank: () => void;
   onOpen: (destination: TopBarDestination) => void;
   search?: { value: string; onChange: (value: string) => void };
 };
 
 // Shared top bar for every student screen: two primary destinations plus the older tools under "More".
-export function AppTopBar({ current, worksheetCount, reviewCount, onBank, onOpen, search }: Props) {
+export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank, onOpen, search }: Props) {
   const [open, setOpen] = useState(false);
   const more = useRef<HTMLDivElement>(null);
   const input = useRef<HTMLInputElement>(null);
@@ -31,7 +32,7 @@ export function AppTopBar({ current, worksheetCount, reviewCount, onBank, onOpen
   }, [open]);
 
   useEffect(() => {
-    if (!search) return;
+    if (!search || inert) return;
     function focusSearch(event: KeyboardEvent) {
       const target = event.target as HTMLElement | null;
       if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey || target?.closest("input,select,textarea,[contenteditable]")) return;
@@ -40,12 +41,12 @@ export function AppTopBar({ current, worksheetCount, reviewCount, onBank, onOpen
     }
     document.addEventListener("keydown", focusSearch);
     return () => document.removeEventListener("keydown", focusSearch);
-  }, [search]);
+  }, [search, inert]);
 
   const item = (destination: TopBarDestination, label: string, extra?: string) =>
     <button type="button" role="menuitem" onClick={() => { setOpen(false); onOpen(destination); }}>{label}{extra && <span>{extra}</span>}</button>;
 
-  return <header className="ca-bar">
+  return <header className="ca-bar" inert={inert}>
     <span className="ca-mark">ChemAtlas</span>
     <nav className="ca-nav" aria-label="Main navigation">
       <button type="button" aria-current={current === "bank" ? "page" : undefined} onClick={onBank}>Question bank</button>

@@ -34,11 +34,22 @@ function subscribeToNavigation(callback: () => void) {
 }
 const getNavigationSnapshot = () => window.location.href;
 const getServerNavigationSnapshot = () => "https://chematlas.invalid/";
+const bankViewportQuery = "(min-width: 701px)";
+function subscribeToBankViewport(callback: () => void) {
+  const viewport = matchMedia(bankViewportQuery);
+  viewport.addEventListener("change", callback);
+  return () => viewport.removeEventListener("change", callback);
+}
+const getWideBankViewport = () => matchMedia(bankViewportQuery).matches;
+const getServerBankViewport = () => true;
 
 export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
+  const wideBank = useSyncExternalStore(subscribeToBankViewport, getWideBankViewport, getServerBankViewport);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
   const view = route.view as AppView;
+  const bankView = !worksheet && (view === "desk" || view === "unit" || view === "library" || view === "detail");
+  const phonePane = bankView && !wideBank && view === "detail" && !!route.questionId;
   const selectedUnit = route.unit;
   const selectedTopic = route.topic;
   const typeFilter = route.type;
@@ -52,6 +63,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, onCatalogError);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
+  const wasBankView = useRef(bankView);
   const { backup, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets(restoredBackup, next => browserState.set("backup", next), setNotice);
   const openWorksheetPdf = useCallback(async (url?: string, bankId?: string) => {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
@@ -74,12 +86,17 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const [newQuestionTopic, setNewQuestionTopic] = useState(""); const [, setShowAddQuestion] = useState(false);
   const [uploading, setUploading] = useState(false);
 
-  function navigate(next: AppView, updates: RouteUpdates = {}, replace = false) {
+  function navigate(next: AppView, updates: RouteUpdates = {}, replace = false, openPhonePane = false) {
     if (worksheet) { window.location.assign(buildChemAtlasUrl(new URL("/", locationHref).href, next, updates)); return; }
     const nextUrl = buildChemAtlasUrl(window.location.href, next, updates);
     const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (nextUrl !== currentUrl) {
-      const state = { ...(window.history.state || {}), chemAtlas: true, view: next };
+      const state = {
+        ...window.history.state,
+        chemAtlas: true,
+        view: next,
+        bankPane: next === "detail" && (openPhonePane || (replace && window.history.state?.bankPane === true)),
+      };
       if (replace) window.history.replaceState(state, "", nextUrl);
       else window.history.pushState(state, "", nextUrl);
     }
@@ -149,10 +166,11 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     return () => window.removeEventListener("popstate", resetPracticeAfterHistoryNavigation);
   }, []);
   useEffect(() => {
-    if (!worksheet && (view === "detail" || view === "library")) {
+    if (bankView && !wasBankView.current && !phonePane) {
       mainRef.current?.focus({ preventScroll: true });
     }
-  }, [view, worksheet]);
+    wasBankView.current = bankView;
+  }, [bankView, phonePane]);
   const reviewQuestions = questions.filter(q => q.status === "review" || (!q.displayTopic && q.status!=="legacy"));
   const legacyQuestions = questions.filter(q=>q.status==="legacy");
   const reviewList = (reviewKind==="legacy"?legacyQuestions:reviewQuestions).filter(q=>!query || `${q.id} ${q.number} ${q.year} ${q.textPreview} ${q.reviewReason} ${q.legacyConcepts?.join(" ")}`.toLowerCase().includes(query.toLowerCase()));
@@ -239,10 +257,13 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     }
   }
 
-  const bankView = !worksheet && (view === "desk" || view === "unit" || view === "library" || view === "detail");
   // Filters live in the URL. A selected question keeps the "detail" view so its id stays in the address.
   function bankFilters(updates: Pick<RouteUpdates, "unit" | "topic" | "type" | "query">) {
     if (view === "detail") updateFilters(updates); else navigate("library", updates, true);
+  }
+  function closeBankPane() {
+    if (window.history.state?.bankPane === true) window.history.back();
+    else navigate("library", {}, true);
   }
   function toggleWorksheetQuestion(id: string) {
     if (!backup || !activeDraft) return;
@@ -252,16 +273,17 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     saveWorksheets({ ...backup, drafts: backup.drafts.map(draft => draft.id === activeDraft.id ? next : draft) });
   }
   return <div className="ca2">
-    <a className="ca-skip" href="#main-content">Skip to content</a>
+    <a className="ca-skip" href="#main-content" inert={phonePane}>Skip to content</a>
     <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length} reviewCount={reviewQuestions.length}
+      inert={phonePane}
       onBank={() => navigate("library")}
       onOpen={destination => { if (destination === "review" || destination === "legacy") { setReviewKind(destination); navigate("review"); } else navigate(destination); }}
       search={bankView ? { value: query, onChange: value => bankFilters({ query: value }) } : undefined} />
-    {notice && <div className="ca-notice" role="status">{notice}<button type="button" aria-label="Dismiss message" onClick={()=>setNotice("")}>×</button></div>}
+    {notice && <div className="ca-notice" role="status" inert={phonePane}>{notice}<button type="button" aria-label="Dismiss message" onClick={()=>setNotice("")}>×</button></div>}
     {bankView ? <main id="main-content" tabIndex={-1} ref={mainRef}>
-      <QuestionBank catalog={catalog} topics={topics} questions={questions} loadFailed={catalogLoadFailed}
+      <QuestionBank catalog={catalog} topics={topics} questions={questions} loadFailed={catalogLoadFailed} wide={wideBank}
         unit={selectedUnit} topic={selectedTopic} type={typeFilter} query={query} selectedId={view === "detail" ? route.questionId : ""}
-        onFilters={bankFilters} onSelect={(id, replace) => navigate("detail", { questionId: id }, replace)} onClosePane={() => navigate("library")}
+        onFilters={bankFilters} onSelect={(id, replace) => navigate("detail", { questionId: id }, replace, !replace)} onClosePane={closeBankPane}
         worksheetIds={worksheetIds} canEdit={!!backup && !!activeDraft} onToggle={toggleWorksheetQuestion} bankName={bankName} />
     </main> : worksheet ? <main id="main-content" tabIndex={-1} ref={mainRef}>
       {backup ? <PracticeBuilder questions={questions} topics={topics} progress={progress} onOpenBank={() => navigate("library")}

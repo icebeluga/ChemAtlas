@@ -46,13 +46,21 @@ const steps = [
   { name: "selection survives reload", js: `await until(()=>$$('.ca-dock li').length>0||$('.ca-dock .ca-hint'));return{dock:$$('.ca-dock li').length,nav:$('.ca-count').textContent}` },
   { goto: "/?view=progress" }, { name: "legacy view in new shell", js: `await until(()=>$('.page-title'));await settle();return{title:$('.page-title').innerText,bar:!!$('.ca-bar'),overflow:overflow()}` }, { shot: "legacy-progress-desktop" },
   { goto: "/practice-builder" },
-  { name: "builder receives selection", js: `await until(()=>$$('h1').some(h=>h.textContent.trim()==='Practice Builder'));await settle();return{heading:true,count:($('.ca-b-count')||$('.worksheet-count')||{}).textContent,overflow:overflow()}` },
+  { name: "builder receives selection", js: `await until(()=>$$('h1').some(h=>h.textContent.trim()==='Practice Builder'));await until(()=>$$('.ca-b-item').length>0);return{count:$('.ca-b-count').textContent,items:$$('.ca-b-item').length,overflow:overflow()}` },
+  { name: "builder: add two more from the bank's storage, then real PDF preview", js: `const k='chematlas-worksheets-v1';const b=JSON.parse(localStorage.getItem(k));const d=b.drafts.find(x=>x.id===b.active);for(const id of ['frq-2006-3-22','mcq-2008-1-29','mcq-2022-2-1617'])if(!d.entries.some(e=>e.id===id))d.entries.push({id,breakBefore:false});localStorage.setItem(k,JSON.stringify(b));location.reload();return 'seeded'` },
+  { pause: 2500 },
+  { name: "builder: PDF preview drawn", js: `await until(()=>$$('.ca-b-item').length>=3);const ok=await until(()=>$$('.worksheet-paper canvas').some(c=>c.width>200),90000);await settle();return{items:$$('.ca-b-item').length,pdfDrawn:ok,state:$('.ca-b-state').textContent,download:!!$$('.ca-b-export a').find(a=>/Download PDF/.test(a.textContent)),note:$('.ca-b-note').textContent.slice(0,120),overflow:overflow()}` },
   { shot: "builder-desktop" },
+  { name: "builder: reorder, remove, undo", js: `const order=()=>$$('.ca-b-item .ca-b-what b').map(b=>b.innerText.trim());const a=order();$$('.ca-b-item')[0].querySelector('[aria-label*="down"]').click();await wait(300);const b=order();$$('.ca-b-item')[1].querySelector('.ca-b-remove').click();await wait(300);const c=order().length;$$('.ca-b-outline-head .ca-btn')[0].click();await wait(300);return{moved:a[0]===b[1]&&a[1]===b[0],afterRemove:c,afterUndo:order().length,stored:JSON.parse(localStorage.getItem('chematlas-worksheets-v1')).drafts.find(d=>d.entries.length).entries.length}` },
+  { name: "builder: layout tab", js: `$$('.ca-b-tabs button').find(b=>b.textContent==='Layout').click();await settle();return{legacy:!!$('.ca-b-legacy'),presets:$$('.worksheet-preset option').length}` },
+  { shot: "builder-layout-desktop" },
+  { name: "builder: add tab", js: `$$('.ca-b-tabs button').find(b=>b.textContent==='Add questions').click();await until(()=>$$('.worksheet-row').length>0);await settle();return{rows:$$('.worksheet-row').length}` },
+  { shot: "builder-add-desktop" },
 
   { size: TABLET }, { goto: "/?view=library&unit=u8&topic=8.3" },
   { name: "bank tablet", js: `await until(()=>$$('.ca-row[data-id]').length>0);$$('.ca-row[data-id]')[1].querySelector('.ca-row-open').click();const ok=await drawn();await settle();return{drawn:ok,overflow:overflow()}` },
   { shot: "bank-tablet" },
-  { goto: "/practice-builder" }, { name: "builder tablet", js: `await until(()=>$$('h1').some(h=>h.textContent.trim()==='Practice Builder'));await settle();return{overflow:overflow()}` }, { shot: "builder-tablet" },
+  { goto: "/practice-builder" }, { name: "builder tablet", js: `await until(()=>$$('.ca-b-item').length>0);const ok=await until(()=>$$('.worksheet-paper canvas').some(c=>c.width>200),90000);await settle();return{pdfDrawn:ok,overflow:overflow()}` }, { shot: "builder-tablet" },
 
   { size: PHONE }, { goto: "/?view=library&unit=u8" },
   { name: "bank phone", js: `await until(()=>$$('.ca-row[data-id]').length>0);await settle();return{overflow:overflow(),unitsVisible:$$('.ca-unit:not(.is-all)').every(u=>{const r=u.getBoundingClientRect();return r.left>=0&&r.right<=innerWidth}),paneHidden:getComputedStyle($('.ca-pane')).visibility,small:small()}` },
@@ -61,7 +69,11 @@ const steps = [
   { name: "phone: choose topic, open question", js: `$$('.ca-sheet li button')[3].click();await wait(400);const heading=$('.ca-list-title').innerText;$$('.ca-row[data-id]')[1].querySelector('.ca-row-open').click();const ok=await drawn();await settle();return{heading,drawn:ok,pane:$('.ca-bank').hasAttribute('data-pane'),dockVisible:$('.ca-dock').getBoundingClientRect().top<innerHeight,overflow:overflow(),small:small()}` },
   { shot: "bank-question-phone" },
   { name: "phone: back returns to the list", js: `history.back();await wait(500);return{pane:$('.ca-bank').hasAttribute('data-pane'),rows:$$('.ca-row[data-id]').length}` },
-  { goto: "/practice-builder" }, { name: "builder phone", js: `await until(()=>$$('h1').some(h=>h.textContent.trim()==='Practice Builder'));await settle();return{overflow:overflow(),small:small()}` }, { shot: "builder-phone" },
+  { goto: "/practice-builder" },
+  { name: "builder phone: outline tab", js: `await until(()=>$$('.ca-b-tabs button').length>0);$$('.ca-b-tabs button').find(b=>b.textContent==='Outline').click();await until(()=>$$('.ca-b-item').length>0);await settle();return{items:$$('.ca-b-item').length,sideHidden:getComputedStyle($('.ca-b-side')).display,overflow:overflow(),small:small()}` },
+  { shot: "builder-outline-phone" },
+  { name: "builder phone: preview tab", js: `$$('.ca-b-tabs button').find(b=>b.textContent==='Preview').click();const ok=await until(()=>$$('.worksheet-paper canvas').some(c=>c.width>200),90000);await settle();return{pdfDrawn:ok,outlineHidden:getComputedStyle($('.ca-b-outline')).display,overflow:overflow()}` },
+  { shot: "builder-preview-phone" },
 ];
 
 const chrome = spawn(CHROME, ["--headless=new", `--remote-debugging-port=${PORT}`, `--user-data-dir=${mkdtempSync(join(tmpdir(), "chematlas-capture-"))}`, "--no-first-run", "--no-default-browser-check", "about:blank"], { stdio: "ignore" });
@@ -85,6 +97,7 @@ try {
     if (step.size) { const [width, height] = step.size, mobile = width < 700; await send("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: mobile ? 2 : 1, mobile }); await send("Emulation.setTouchEmulationEnabled", { enabled: mobile }); }
     else if (step.goto) { await send("Page.navigate", { url: BASE + step.goto }); await sleep(1500); }
     else if (step.reload) { await send("Page.reload"); await sleep(1500); }
+    else if (step.pause) await sleep(step.pause);
     else if (step.key) { const key = step.key, code = key.length === 1 ? (key === "/" ? "Slash" : "Key" + key.toUpperCase()) : key, vk = { ArrowDown: 40, ArrowUp: 38, "/": 191 }[key] ?? key.toUpperCase().charCodeAt(0);
       for (const type of ["keyDown", "keyUp"]) await send("Input.dispatchKeyEvent", { type, key, code, windowsVirtualKeyCode: vk }); await sleep(250); }
     else if (step.shot) { const { data } = await send("Page.captureScreenshot", { format: "png" }); writeFileSync(join(out, step.shot + ".png"), Buffer.from(data, "base64")); console.log("  shot", step.shot + ".png"); }

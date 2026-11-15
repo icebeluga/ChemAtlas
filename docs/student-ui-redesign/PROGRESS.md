@@ -2,6 +2,10 @@
 
 Running record for the ChemAtlas student UI redesign. Newest state first. Read this before anything else in the folder.
 
+## Visual sprint (after Phase A)
+
+The redesigned Question Bank and Practice Builder are now in the real app on `feature/student-ui-redesign` (commits `8631f29`, `68bfa82`, `b3aa689`). What was built, what differs from the prototypes, test evidence and the ordered next steps are in `VISUAL-SPRINT-HANDOFF.md`. Release smoke test not yet run. Nothing pushed.
+
 ## Owner approvals, 2026-11-15 (after reviewing O1 and O6)
 
 - **O1 approved as recommended**: port the viewer improvements from `eba3977`; exclude the authentication change, the Worker dependency changes and the detail-page layout; `fix/local-workers-runtime` stays unchanged; the verified-crop default is deferred (O8); viewer work is separate from structural refactoring.

@@ -992,7 +992,15 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
         nearby = [a for a in anchors if prior.x0 - 30 <= a["rect"].x0 <= prior.x1 + 30 and prior.y0 - 100 <= a["rect"].y0 <= prior.y1]
         if len(nearby) == 1 and (not expected or nearby[0]["number"] == expected):
             anchor = nearby[0]
-    if anchor is None:
+    # A correctly recognized stem on a scanned response sheet still needs the
+    # same gap-based segmentation as a continuation page.
+    response_start = None
+    if anchor and question_type == "FRQ" and prior and ocr_used and _is_full_page_raster(page):
+        response_start = next((line for line in lines
+                               if line["rect"].y1 <= anchor["rect"].y0
+                               and re.match(rf"^\s*begin\s+your\s+response\s+to\s+question\s+{anchor['number']}\b",
+                                            line["text"], re.I)), None)
+    if anchor is None or response_start:
         if question_type == "MCQ":
             shared_only = _shared_context_only(page, question, lines, anchors, visual, page_number,
                                                source_quality_flags, source_years, metadata_year,
@@ -1012,7 +1020,7 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
             continuation_parts = [line for line in lines
                                   if SUBPART_CONTINUATION.match(line["text"])
                                   and prior.x0 - 40 <= line["rect"].x0 + line["rect"].width / 2 <= prior.x1 + 40]
-            continuation_header = next((line for line in lines
+            continuation_header = response_start or next((line for line in lines
                                          if re.search(r"(?:begin|continue)\s+your\s+response\s+to\s+question", line["text"], re.I)), None)
         if continuation_parts or continuation_header:
             first_part = min(continuation_parts, key=lambda line: line["rect"].y0) if continuation_parts else continuation_header
@@ -1100,7 +1108,11 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                                     "sourceMetadataMismatch": metadata_year_mismatch},
                         "reasons": ["Continuation markers were present but no measurable text or graphic content was found; stored coordinates are retained only as diagnostics."]}
             score = 0.36 if text_chars >= 25 else 0.08
-            continuation_reasons = ["No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."]
+            continuation_reasons = [
+                "The numbered FRQ stem was found below its response banner; scanned prompt segments require manual review."
+                if response_start else
+                "No repeated numbered FRQ heading was found; the page continuation was bounded from its explicit continuation heading and remains manual-review only."
+            ]
             if continuation_context:
                 continuation_reasons.append("Setup text above the first detected subpart was retained with the continuation page.")
             if source_quality_flags:
@@ -1131,8 +1143,9 @@ def analyze_page(page: fitz.Page, question: dict[str, Any], region: dict[str, An
                     "confidence": 0.36 if segment_text >= 25 else 0.08,
                     "confidenceBand": "low", "manualReview": True,
                     "segmentRole": "questionBody", "extractionStatus": "continuation-segment-needs-manual-verification",
-                    "signals": {"textCharacters": segment_text, "questionStartFound": False,
-                                "continuationPageDetected": True, "continuationSegmentIndex": segment_index + 1,
+                    "signals": {"textCharacters": segment_text,
+                                "questionStartFound": bool(anchor and any(line["rect"] == anchor["rect"] and line["text"] == anchor["text"] for line in group)),
+                                "continuationPageDetected": anchor is None, "continuationSegmentIndex": segment_index + 1,
                                 "continuationSegmentCount": len(text_groups), "frqSubpartLabels": segment_labels,
                                 "graphicsIncluded": len(visual_continuation),
                                 "rasterGraphicsUnverified": raster_graphics_unverified,

@@ -3,6 +3,7 @@ import importlib.util
 import json
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import fitz
 
@@ -92,6 +93,38 @@ class AdjacentPageAssociationRegressions(unittest.TestCase):
         self.assertIn("a", q["regions"][0]["signals"]["frqSubpartLabels"])
         self.assertIn("b", q["regions"][1]["signals"]["frqSubpartLabels"])
         self.assertIn("c", q["regions"][2]["signals"]["frqSubpartLabels"])
+
+    def test_recognized_scanned_frq_stem_still_splits_response_space(self):
+        question = self.by_id["frq-2024-4-2123"]
+        region = question["sourceRegions"][0]
+        lines = [
+            {"text": text, "rect": fitz.Rect(*rect)}
+            for text, rect in (
+                ("Begin your response to QUESTION 4 on this page.", (163, 52, 430, 69)),
+                ("4. A student conducts a calorimetry experiment.", (15, 81, 525, 95)),
+                ("The following table has the experimental data.", (29, 117, 242, 129)),
+                ("Mass of water", (290, 233, 357, 243)),
+                ("Mass of CaBr2", (290, 253, 359, 265)),
+                ("(a) Explain why a lid is important.", (30, 362, 527, 391)),
+                ("(b) Justify the sign of the enthalpy change.", (30, 532, 547, 546)),
+                ("GO ON TO THE NEXT PAGE.", (399, 747, 575, 759)),
+            )
+        ]
+        with fitz.open(ROOT / "public/source/bank-08.pdf") as document:
+            with patch.object(DETECTOR, "_content_lines", return_value=(lines, 73, True)):
+                first = DETECTOR.analyze_page(document[22], question, region, [question], {}, 2123)
+
+        second, = first["additionalRegions"]
+        self.assertTrue(first["signals"]["questionStartFound"])
+        self.assertEqual(first["signals"]["questionStartMatches"], 1)
+        self.assertFalse(second["signals"]["questionStartFound"])
+        self.assertEqual([part["signals"]["frqSubpartLabels"] for part in (first, second)], [["a"], ["b"]])
+        self.assertTrue(all(part["manualReview"] and part["signals"]["rasterGraphicsUnverified"]
+                            for part in (first, second)))
+        self.assertGreaterEqual(first["rect"][1], lines[0]["rect"].y1)
+        self.assertLess(first["rect"][3], 420)
+        self.assertGreater(second["rect"][1], 500)
+        self.assertLess(second["rect"][3], 600)
 
     def test_unmeasurable_frq_continuation_rejects_prior_as_crop(self):
         document = fitz.open()

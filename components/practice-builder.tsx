@@ -52,6 +52,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   // step doubles as the visible tab: 1 outline (phones only), 3 preview, 2 layout, 0 add questions
   const [step, setStep] = useState(() => draft.entries.length ? 3 : 0);
   const wide = useSyncExternalStore(subscribeWide, () => matchMedia(wideQuery).matches, () => true);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const pane = step === 1 && wide ? 3 : step;
   const [filters, setFilters] = useState(filterDefaults);
   const [page, setPage] = useState(0);
@@ -197,34 +198,38 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
 
   // The outline is the editing surface; the Preview tab shows the PDF the real generator produces.
   return <div className="ca-build student-workspace" data-tab={step}>
-    <header className="ca-b-head">
+    <header className="ca-b-head" data-settings-open={settingsOpen ? "" : undefined}>
       <div className="ca-b-title">
         <h1>Practice Builder</h1>
         <span className="ca-b-count" aria-live="polite">{draft.entries.length} selected</span>
       </div>
-      <label className="ca-b-field ca-b-name">Worksheet title<input maxLength={100} value={draft.name} onChange={e => update({ ...draft, name: e.target.value })} /></label>
-      <label className="ca-b-field">Saved worksheets<select value={draft.id} onChange={e => switchDraft(e.target.value)}>
-        {backup.drafts.map(d => <option key={d.id} value={d.id}>{d.name || "Untitled worksheet"}</option>)}
-      </select></label>
-      <div className="ca-b-actions">
-        <button type="button" className="ca-btn is-quiet" onClick={() => open(newDraft())}>New worksheet</button>
-        <details className="ca-b-more"><summary className="ca-btn is-quiet">Drafts <ChevronDown size={15} aria-hidden="true" /></summary><div className="ca-b-menu">
-          <button type="button" onClick={e => { open({ ...draft, id: newWorksheetId(), name: `${draft.name.slice(0, 93)} (copy)` }); e.currentTarget.closest("details")?.removeAttribute("open"); }}>Duplicate this worksheet</button>
-          <button type="button" onClick={backupDownload}>Download drafts</button>
-          <label>Import drafts<input type="file" accept=".json,application/json" onChange={async e => {
-            const file = e.target.files?.[0]; e.target.value = ""; if (!file) return;
-            try {
-              if (file.size > 2_000_000) throw new Error();
-              const parsed = backupSchema.parse(JSON.parse(await file.text()));
-              if (backup.drafts.length + parsed.drafts.length > 100) { setNotice("Import would exceed the 100-worksheet limit."); return; }
-              const restored = parsed.drafts.map(d => ({ ...d, id: newWorksheetId() }));
-              save({ ...backup, drafts: [...backup.drafts, ...restored], active: restored[parsed.drafts.findIndex(d => d.id === parsed.active)].id });
-              setStep(3); setUndo(undefined); setReplacement(""); setNotice("Worksheet drafts imported.");
-            } catch { setNotice("Could not import that worksheet backup."); }
-          }} /></label>
-        </div></details>
+      <button type="button" className="ca-btn is-quiet ca-b-settings-toggle" aria-controls="worksheet-settings" aria-expanded={settingsOpen}
+        onClick={() => setSettingsOpen(open => !open)}>Worksheet settings <ChevronDown size={15} aria-hidden="true" /></button>
+      <div className="ca-b-settings" id="worksheet-settings" hidden={!wide && !settingsOpen}>
+        <label className="ca-b-field ca-b-name">Worksheet title<input maxLength={100} value={draft.name} onChange={e => update({ ...draft, name: e.target.value })} /></label>
+        <label className="ca-b-field">Saved worksheets<select value={draft.id} onChange={e => switchDraft(e.target.value)}>
+          {backup.drafts.map(d => <option key={d.id} value={d.id}>{d.name || "Untitled worksheet"}</option>)}
+        </select></label>
+        <div className="ca-b-actions">
+          <button type="button" className="ca-btn is-quiet" onClick={() => open(newDraft())}>New worksheet</button>
+          <details className="ca-b-more"><summary className="ca-btn is-quiet">Drafts <ChevronDown size={15} aria-hidden="true" /></summary><div className="ca-b-menu">
+            <button type="button" onClick={e => { open({ ...draft, id: newWorksheetId(), name: `${draft.name.slice(0, 93)} (copy)` }); e.currentTarget.closest("details")?.removeAttribute("open"); }}>Duplicate this worksheet</button>
+            <button type="button" onClick={backupDownload}>Download drafts</button>
+            <label>Import drafts<input type="file" accept=".json,application/json" onChange={async e => {
+              const file = e.target.files?.[0]; e.target.value = ""; if (!file) return;
+              try {
+                if (file.size > 2_000_000) throw new Error();
+                const parsed = backupSchema.parse(JSON.parse(await file.text()));
+                if (backup.drafts.length + parsed.drafts.length > 100) { setNotice("Import would exceed the 100-worksheet limit."); return; }
+                const restored = parsed.drafts.map(d => ({ ...d, id: newWorksheetId() }));
+                save({ ...backup, drafts: [...backup.drafts, ...restored], active: restored[parsed.drafts.findIndex(d => d.id === parsed.active)].id });
+                setStep(3); setUndo(undefined); setReplacement(""); setNotice("Worksheet drafts imported.");
+              } catch { setNotice("Could not import that worksheet backup."); }
+            }} /></label>
+          </div></details>
+        </div>
       </div>
-      <p className="ca-b-status" role="status">{notice || "Drafts save in this browser. Download drafts to move them to another device."}</p>
+      <p className="ca-b-status" role="status">{notice || <span className="ca-b-draft-help">Drafts save in this browser. Download drafts to move them to another device.</span>}</p>
     </header>
     {error && <p className="ca-b-error" role="alert">{error}</p>}
 

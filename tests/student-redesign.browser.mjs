@@ -203,3 +203,29 @@ test("builder tabs retain the layout, picker and PDF toolbar controls", async (t
   assert.ok(await toolbar.getByText("100%", { exact: true }).isVisible());
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 768);
 });
+
+test("phone builder settings collapse into a compact disclosure and keep draft data", async (t) => {
+  const page = await openPage(390, "/practice-builder");
+  t.after(() => page.close());
+  const disclosure = page.getByRole("button", { name: "Worksheet settings" });
+  const title = page.getByRole("textbox", { name: "Worksheet title" });
+  const header = page.locator(".ca-b-head");
+  await disclosure.waitFor();
+  assert.equal(await disclosure.getAttribute("aria-expanded"), "false");
+  assert.equal(await title.count(), 0);
+  assert.ok((await header.boundingBox()).height <= 65);
+  await disclosure.click();
+  await title.fill("Saved phone worksheet");
+  await page.getByRole("combobox", { name: "Saved worksheets" }).waitFor();
+  await page.getByRole("button", { name: "New worksheet" }).waitFor();
+  await page.getByText("Drafts", { exact: true }).waitFor();
+  await disclosure.click();
+  assert.equal(await disclosure.getAttribute("aria-expanded"), "false");
+  await page.reload();
+  await disclosure.click();
+  assert.equal(await title.inputValue(), "Saved phone worksheet");
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 390);
+  await page.setViewportSize({ width: 768, height: 900 });
+  await disclosure.waitFor({ state: "hidden" });
+  await title.waitFor();
+});

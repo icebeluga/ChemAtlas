@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, steps, worksheetSource } from "@/lib/worksheet";
+import { filterQuestions } from "@/lib/question-filter";
 import type { Backup, Draft, ExportMode, Format, Region, Registry, SourceFile } from "@/lib/worksheet";
 import type { WorksheetContent } from "@/lib/worksheet-content";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
@@ -107,18 +108,18 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const years = useMemo(() => [...new Set(questions.map(q => q.year).filter((y): y is string => !!y))].sort().reverse(), [questions]);
   const sources = useMemo(() => [...new Set(questions.map(q => q.source))].sort(), [questions]);
   const units = useMemo(() => [...new Map(topics.map(t => [t.unit, t.unitName]))], [topics]);
-  const candidates = useMemo(() => questions.filter(q => {
-    const tagged = q.relatedTopics?.length ? q.relatedTopics : [q.displayTopic];
-    const sourceRecord = registry?.questions[q.id];
-    const year = sourceRecord?.exam?.match(/^\d{4}/)?.[0] ?? q.year;
-    return (filters.print !== "ready" || !!content?.questions[q.id])
-      && (filters.unit === "all" || tagged.some(t => t?.split(".")[0] === filters.unit.replace(/^U/i, "")))
-      && (filters.topic === "all" || tagged.includes(filters.topic))
-      && (filters.type === "all" || q.type === filters.type)
-      && (filters.year === "all" || year === filters.year)
-      && (filters.source === "all" || q.source === filters.source)
-      && (filters.history === "all" || (filters.history === "attempted" ? !!progress[q.id]?.attempts : !!progress[q.id]?.wrong))
-      && (!filters.search.trim() || `${sourceRecord?.exam ?? q.exam} ${q.number} ${q.displayName} ${q.textPreview}`.toLowerCase().includes(filters.search.trim().toLowerCase()));
+  const candidates = useMemo(() => filterQuestions(questions, {
+    unit: filters.unit.replace(/^U/i, ""), topic: filters.topic, type: filters.type,
+    unitForTopic: id => id?.split(".")[0],
+    topicsFor: q => q.relatedTopics?.length ? q.relatedTopics : [q.displayTopic],
+    include: q => {
+      const year = registry?.questions[q.id]?.exam?.match(/^\d{4}/)?.[0] ?? q.year;
+      return (filters.print !== "ready" || !!content?.questions[q.id])
+        && (filters.year === "all" || year === filters.year)
+        && (filters.source === "all" || q.source === filters.source)
+        && (filters.history === "all" || (filters.history === "attempted" ? !!progress[q.id]?.attempts : !!progress[q.id]?.wrong));
+    },
+    search: { query: filters.search.trim(), text: q => `${registry?.questions[q.id]?.exam ?? q.exam} ${q.number} ${q.displayName} ${q.textPreview}` },
   }), [questions, filters, registry, progress, content]);
 
   function update(next: Draft, remember = false) {

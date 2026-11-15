@@ -11,6 +11,7 @@ import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
 import { PracticeBuilder } from "@/components/practice-builder";
 import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
+import { filterQuestions } from "@/lib/question-filter";
 import { addEntries, backupSchema, newDraft, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup } from "@/lib/worksheet";
 
@@ -354,12 +355,14 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const attempts = Object.values(progress).reduce((n, p) => n + p.attempts, 0);
   const misses = Object.values(progress).reduce((n, p) => n + p.wrong, 0);
   const mastered = Object.values(progress).filter(p => p.correct >= 3 && p.wrong === 0).length;
-  const filteredQuestions = questions.filter(q => {
-    const related=q.relatedTopics || [];
-    const matchingUnits=related.map(id=>topics.find(x=>x.id===id)?.unit).filter(Boolean);
-    return (includeReview || q.status === "classified") && (selectedUnit === "all" || matchingUnits.includes(selectedUnit)) &&
-      (selectedTopic === "all" || related.includes(selectedTopic)) && (typeFilter === "Mixed" || q.type === typeFilter) &&
-      (!query || `${q.year} ${q.exam} ${q.number} ${q.textPreview} ${q.displayName}`.toLowerCase().includes(query.toLowerCase()));
+  const catalogFilters = {
+    unit: selectedUnit, topic: selectedTopic, type: typeFilter === "Mixed" ? "all" : typeFilter,
+    unitForTopic: (id: string | undefined) => topics.find(topic => topic.id === id)?.unit,
+    include: (q: Question) => includeReview || q.status === "classified",
+  };
+  const filteredQuestions = filterQuestions(questions, {
+    ...catalogFilters,
+    search: { query, text: q => `${q.year} ${q.exam} ${q.number} ${q.textPreview} ${q.displayName}` },
   });
   useEffect(() => {
     bankResultsRef.current?.scrollTo(0, 0);
@@ -376,12 +379,10 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
 
   function topicFor(q: Question) { return overrides[q.id] ?? q.primaryTopic ?? undefined; }
   function startSession(focus?: string) {
-    const pool = questions.filter(q => {
-      return (includeReview || q.status === "classified") &&
-        (focus === "weak" ? (progress[q.id]?.wrong || 0) > 0 : !focus || (q.relatedTopics||[]).includes(focus)) &&
-        (selectedUnit === "all" || (q.relatedTopics||[]).some(id=>topics.find(t=>t.id===id)?.unit===selectedUnit)) &&
-        (selectedTopic === "all" || (q.relatedTopics||[]).includes(selectedTopic)) &&
-        (typeFilter === "Mixed" || q.type === typeFilter);
+    const pool = filterQuestions(questions, {
+      ...catalogFilters,
+      include: q => catalogFilters.include(q) &&
+        (focus === "weak" ? (progress[q.id]?.wrong || 0) > 0 : !focus || !!q.relatedTopics?.includes(focus)),
     });
     const shuffled = [...pool].sort(() => Math.random() - .5).slice(0, sessionSize);
     setQueue(shuffled); setIndex(0); setPageIndex(0); setSelfResult(null); setWork(""); setSubmitted(false); browserState.set("sessions", s => s + (shuffled.length ? 1 : 0));

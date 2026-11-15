@@ -2,6 +2,17 @@
 
 Running record for the ChemAtlas student UI redesign. Newest state first. Read this before anything else in the folder.
 
+## Owner approvals, 2026-11-15 (after reviewing O1 and O6)
+
+- **O1 approved as recommended**: port the viewer improvements from `eba3977`; exclude the authentication change, the Worker dependency changes and the detail-page layout; `fix/local-workers-runtime` stays unchanged; the verified-crop default is deferred (O8); viewer work is separate from structural refactoring.
+- **O6 approved**: a dedicated `vite.ui.config.ts` for local UI development only, with a tested build-refusing safeguard and proof that production builds and releases cannot select it. No `package.json` script.
+- **Fonts under `public/fonts/` deferred** until release-input impact and licensing are verified.
+- **Phase A will be implemented by Codex, not Claude.** The assignment is `CODEX-PHASE-A-HANDOFF.md`, split into A1 (structural refactoring, no behaviour change), A2 (hand-port of the viewer), A3 (UI-only dev config). It supersedes the Phase A section of `SESSION-3-HANDOFF.md`.
+- Moved out of Phase A as a result: the token stylesheet and contrast script, self-hosted fonts, the client-navigation spike, and the additions to worksheet state (storage-event sync, recovery key, memory-only status). They now open Phase B.
+- Still not authorized: Phase B onward, pushing, merging, deploying.
+
+Note for O8: the base already bundles one research file into the student app (`components/student-app.tsx` L6 imports `research/stimuli.json`). That is precedent, not approval, for `research/crop-visual-review.json`.
+
 ## Current state (2026-11-15, end of Session 2)
 
 - **Session 1** (design): approved by the owner. Prototypes in `design-previews/v2`, committed at `7f720f9`.

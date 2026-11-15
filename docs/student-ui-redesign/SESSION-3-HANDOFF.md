@@ -1,5 +1,7 @@
 # Session 3 handoff: implementation assignment
 
+> **Phase A is superseded by `CODEX-PHASE-A-HANDOFF.md`** (owner decision, 2026-11-15). Use that file for Phase A. The tokens, fonts, contrast script, navigation spike and worksheet-state additions described in section 3 below now belong to the start of Phase B. Sections 1, 2, 4 and 5 still apply.
+
 For the engineer or agent who implements the redesign. You should not need to rediscover the codebase: `01-existing-system.md` maps it with `path:line`, `02-architecture.md` says what to build, `03-risks-and-roadmap.md` says in what order and how it is accepted, `04` lists the fate of every existing control, `05` lists the tests.
 
 **Do not start until the owner has authorized Session 3 and answered O1 and O6 in `PROGRESS.md`.** This document assumes the recommended answers (O1 option A, O6 commit the config). If the owner chose differently, adjust tasks A4 and A7 and nothing else.

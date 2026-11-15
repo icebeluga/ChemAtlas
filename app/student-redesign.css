@@ -209,7 +209,10 @@
 .ca-b-outline-head{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-bottom:1px solid var(--ca-line)}
 .ca-b-outline-head p{flex:1;font-size:14px;color:var(--ca-ink-2)}.ca-b-outline-head b{color:var(--ca-ink)}
 .ca-b-warn{color:var(--ca-note)}
-.ca-b-items{list-style:none;padding:0;overflow:auto;flex:1}
+.ca-b-items{overflow:auto;flex:1}
+.ca-b-items ol{list-style:none;padding:0}
+.ca-b-section{padding:6px 14px;background:var(--ca-sunk);font:600 14px var(--ca-display);color:var(--ca-ink-2)}
+.ca2 .ca-b-item:focus-visible{outline-offset:-2px}
 .ca-b-item{display:grid;grid-template-columns:18px 24px minmax(0,1fr) auto;gap:0 8px;align-items:center;padding:6px 6px 6px 10px;border-bottom:1px solid var(--ca-line-2);border-left:4px solid var(--mid,transparent);background:var(--ca-surface);transition:background var(--ca-fast),opacity var(--ca-fast)}
 .ca-b-item:hover{background:var(--ca-canvas)}
 .ca-b-item[data-dragging]{opacity:.35}

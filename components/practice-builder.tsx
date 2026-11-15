@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, worksheetSource } from "@/lib/worksheet";
@@ -31,6 +31,23 @@ const resultSize = 20;
 const wideQuery = "(min-width: 701px)";
 const subscribeWide = (callback: () => void) => { const media = matchMedia(wideQuery); media.addEventListener("change", callback); return () => media.removeEventListener("change", callback); };
 
+function outlineSections(draft: Draft, questions: Map<string, Candidate>) {
+  const { grouping, mcqTitle, frqTitle } = draft.format;
+  const sections = new Map<string, { key: string; label: string; rows: { entry: Draft["entries"][number]; index: number }[] }>();
+  draft.entries.forEach((entry, index) => {
+    const question = questions.get(entry.id);
+    // Match the composer's type and topic order without loading the PDF bundle.
+    const key = grouping === "type" ? question?.type === "MCQ" ? "0" : "1"
+      : grouping === "topic" ? question?.displayTopic ?? "~" : "";
+    const label = grouping === "type" ? key === "0" ? mcqTitle || "Multiple choice" : frqTitle || "Free response"
+      : grouping === "topic" ? [question?.displayTopic, question?.displayName].filter(Boolean).join(" · ") || "Other topics" : "";
+    const section = sections.get(key) ?? { key, label, rows: [] };
+    section.rows.push({ entry, index });
+    sections.set(key, section);
+  });
+  return [...sections.values()].sort((a, b) => a.key.localeCompare(b.key, "en", { numeric: true }));
+}
+
 export function PracticeBuilder({ questions, topics, files, progress, backup, save, openPdf, renderSource, onOpenBank }: Props) {
   const draft = backup.drafts.find(d => d.id === backup.active)!;
   // step doubles as the visible tab: 1 outline (phones only), 3 preview, 2 layout, 0 add questions
@@ -47,6 +64,8 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const [dragged, setDragged] = useState("");
   const [source, setSource] = useState<{ id: string; part: number }>();
   const [mode, setMode] = useState<ExportMode>("questions");
+  const outlineItems = useRef<HTMLDivElement>(null);
+  const movedEntry = useRef("");
   const hasAnswers = draft.entries.some(e => registry?.questions[e.id]?.answer);
   if (!hasAnswers && mode !== "questions") setMode("questions");
 
@@ -94,6 +113,14 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
 
   const selected = useMemo(() => new Set(draft.entries.map(e => e.id)), [draft.entries]);
   const byId = useMemo(() => new Map(questions.map(q => [q.id, q])), [questions]);
+  const sections = useMemo(() => outlineSections(draft, byId), [draft, byId]);
+  const outlinePositions = useMemo(() => new Map(sections.flatMap(section => section.rows)
+    .map(({ entry }, index) => [entry.id, index + 1])), [sections]);
+  useLayoutEffect(() => {
+    if (!movedEntry.current) return;
+    outlineItems.current?.querySelector<HTMLElement>(`[data-entry-id="${CSS.escape(movedEntry.current)}"]`)?.focus();
+    movedEntry.current = "";
+  }, [draft.entries]);
   const years = useMemo(() => [...new Set(questions.map(q => q.year).filter((y): y is string => !!y))].sort().reverse(), [questions]);
   const sources = useMemo(() => [...new Set(questions.map(q => q.source))].sort(), [questions]);
   const units = useMemo(() => [...new Map(topics.map(t => [t.unit, t.unitName]))], [topics]);
@@ -134,9 +161,23 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
     if (added) update(next, true);
     setNotice(added ? `Added ${added} ${added === 1 ? "question" : "questions"}.` : "No eligible questions to add.");
   }
-  function move(from: number, to: number) {
-    const next = moveEntry(draft, from, to);
-    if (next !== draft) update(next, true);
+  function move(from: number, to: number, restoreFocus = false) {
+    if (from === to) return;
+    const entry = draft.entries[from];
+    const target = draft.entries[to];
+    if (!entry || !target) return;
+    let next: Draft;
+    if (draft.format.grouping === "none") {
+      next = moveEntry(draft, from, to);
+    } else {
+      const entries = [...draft.entries];
+      entries[from] = target;
+      entries[to] = entry;
+      next = { ...draft, entries };
+    }
+    if (restoreFocus) movedEntry.current = entry.id;
+    update(next, true);
+    setNotice(`Question ${outlinePositions.get(entry.id)} moved to position ${outlinePositions.get(target.id)} of ${draft.entries.length}.`);
   }
   function changeFormat<K extends keyof Format>(key: K, value: Format[K]) {
     update({ ...draft, format: { ...draft.format, [key]: value } });
@@ -200,41 +241,60 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
             : "No questions yet."}</p>
           <button type="button" className="ca-btn is-quiet" disabled={!undo || undo.id !== draft.id} onClick={() => { if (undo) { update(undo); setUndo(undefined); setNotice("Last worksheet change undone."); } }}><Undo2 size={15} aria-hidden="true" />Undo</button>
         </div>
-        <ol className="ca-b-items">
-          {draft.entries.map((entry, i) => {
-            const q = byId.get(entry.id);
-            const unit = q?.displayTopic ? `u${q.displayTopic.split(".")[0]}` : undefined;
-            const title = q ? `${registry?.questions[q.id]?.exam?.match(/^\d{4}/)?.[0] ?? q.year ?? "Undated"} · ${q.number}` : entry.id;
-            return <li key={entry.id} className="ca-b-item" data-u={unit} data-dragging={dragged === entry.id ? "" : undefined}
-              onDragOver={e => e.preventDefault()} onDrop={e => { e.preventDefault(); if (dragged) move(draft.entries.findIndex(item => item.id === dragged), i); setDragged(""); }}>
-              <span className="ca-b-grip" aria-hidden="true" draggable onDragStart={e => { e.dataTransfer.setData("text/plain", entry.id); setDragged(entry.id); }} onDragEnd={() => setDragged("")}><GripVertical size={16} /></span>
-              <span className="ca-b-num">{i + 1}</span>
-              <span className="ca-b-what">
-                <b>{q && <span className="ca-tag" data-t={q.type}>{q.type}</span>}{title}</b>
-                <small>{q ? <><span className="ca-code">{q.displayTopic}</span> {q.displayName}</> : "Missing catalog record"}</small>
-                {content && !content.questions[entry.id] && <small className="ca-b-warn"><TriangleAlert size={13} aria-hidden="true" /> Prints as its full source page</small>}
-                {content?.review?.[entry.id] && <small>{content.review[entry.id]}</small>}
-              </span>
-              <span className="ca-b-tools">
-                <button type="button" className="ca-icon" disabled={i === 0} aria-label={`Move question ${i + 1} up`} onClick={() => move(i, i - 1)}><ArrowUp size={16} aria-hidden="true" /></button>
-                <button type="button" className="ca-icon" disabled={i === draft.entries.length - 1} aria-label={`Move question ${i + 1} down`} onClick={() => move(i, i + 1)}><ArrowDown size={16} aria-hidden="true" /></button>
-                <button type="button" className="ca-icon ca-b-remove" aria-label={`Remove question ${i + 1}`} onClick={() => { update({ ...draft, entries: draft.entries.filter(e => e.id !== entry.id) }, true); setNotice("Question removed. Use Undo to bring it back."); }}><X size={16} aria-hidden="true" /></button>
-              </span>
-              <details className="ca-b-options">
-                <summary>Options{entry.breakBefore ? " · page break before" : ""}{entry.lines !== undefined ? ` · ${entry.lines} lines` : ""}</summary>
-                <div>
-                  <label className="ca-check"><input type="checkbox" checked={entry.breakBefore} onChange={e => update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, breakBefore: e.target.checked } : item) }, true)} /> Page break before</label>
-                  {q?.type === "FRQ" && <label className="ca-b-inline">Response lines<input type="number" min={0} max={12} value={entry.lines ?? f.lines} onChange={e => {
-                    const lines = Math.min(12, Math.max(0, Number(e.target.value) || 0));
-                    update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, lines } : item) }, true);
-                  }} /></label>}
-                  <button type="button" className="ca-btn is-quiet" onClick={() => { setReplacement(entry.id); setStep(0); }}>Replace…</button>
-                </div>
-              </details>
-            </li>;
+        <div className="ca-b-items" ref={outlineItems}>
+          {sections.map(({ key, label, rows }, sectionIndex) => {
+            const headingId = `worksheet-section-${sectionIndex}`;
+            const sourceInSection = rows.find(row => row.entry.id === dragged);
+            return <section key={key} aria-labelledby={label ? headingId : undefined}>
+              {label && <h3 className="ca-b-section" id={headingId}>{label}</h3>}
+              <ol start={outlinePositions.get(rows[0].entry.id)}>
+                {rows.map(({ entry, index }, i) => {
+                  const q = byId.get(entry.id);
+                  const position = outlinePositions.get(entry.id);
+                  const previous = rows[i - 1];
+                  const next = rows[i + 1];
+                  const unit = q?.displayTopic ? `u${q.displayTopic.split(".")[0]}` : undefined;
+                  const title = q ? `${registry?.questions[q.id]?.exam?.match(/^\d{4}/)?.[0] ?? q.year ?? "Undated"} · ${q.number}` : entry.id;
+                  return <li key={entry.id} className="ca-b-item" data-entry-id={entry.id} data-u={unit} data-dragging={dragged === entry.id ? "" : undefined}
+                    tabIndex={0} aria-keyshortcuts="Alt+ArrowUp Alt+ArrowDown"
+                    onKeyDown={event => {
+                      if (!event.altKey || event.ctrlKey || event.metaKey || (event.target as HTMLElement).closest("input,select,textarea")) return;
+                      const destination = event.key === "ArrowUp" ? previous : event.key === "ArrowDown" ? next : undefined;
+                      if (destination) { event.preventDefault(); move(index, destination.index, true); }
+                    }}
+                    onDragOver={e => { if (sourceInSection) e.preventDefault(); }}
+                    onDrop={e => { if (sourceInSection) { e.preventDefault(); move(sourceInSection.index, index); } setDragged(""); }}>
+                    <span className="ca-b-grip" aria-hidden="true" draggable onDragStart={e => { e.dataTransfer.setData("text/plain", entry.id); setDragged(entry.id); }} onDragEnd={() => setDragged("")}><GripVertical size={16} /></span>
+                    <span className="ca-b-num" aria-hidden="true">{position}</span>
+                    <span className="ca-b-what">
+                      <b>{q && <span className="ca-tag" data-t={q.type}>{q.type}</span>}{title}</b>
+                      <small>{q ? <><span className="ca-code">{q.displayTopic}</span> {q.displayName}</> : "Missing catalog record"}</small>
+                      {content && !content.questions[entry.id] && <small className="ca-b-warn"><TriangleAlert size={13} aria-hidden="true" /> Prints as its full source page</small>}
+                      {content?.review?.[entry.id] && <small>{content.review[entry.id]}</small>}
+                    </span>
+                    <span className="ca-b-tools">
+                      <button type="button" className="ca-icon" disabled={!previous} aria-label={`Move question ${position} up`} onClick={() => previous && move(index, previous.index, true)}><ArrowUp size={16} aria-hidden="true" /></button>
+                      <button type="button" className="ca-icon" disabled={!next} aria-label={`Move question ${position} down`} onClick={() => next && move(index, next.index, true)}><ArrowDown size={16} aria-hidden="true" /></button>
+                      <button type="button" className="ca-icon ca-b-remove" aria-label={`Remove question ${position}`} onClick={() => { update({ ...draft, entries: draft.entries.filter(e => e.id !== entry.id) }, true); setNotice("Question removed. Use Undo to bring it back."); }}><X size={16} aria-hidden="true" /></button>
+                    </span>
+                    <details className="ca-b-options">
+                      <summary>Options{entry.breakBefore ? " · page break before" : ""}{entry.lines !== undefined ? ` · ${entry.lines} lines` : ""}</summary>
+                      <div>
+                        <label className="ca-check"><input type="checkbox" checked={entry.breakBefore} onChange={e => update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, breakBefore: e.target.checked } : item) }, true)} /> Page break before</label>
+                        {q?.type === "FRQ" && <label className="ca-b-inline">Response lines<input type="number" min={0} max={12} value={entry.lines ?? f.lines} onChange={e => {
+                          const lines = Math.min(12, Math.max(0, Number(e.target.value) || 0));
+                          update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, lines } : item) }, true);
+                        }} /></label>}
+                        <button type="button" className="ca-btn is-quiet" onClick={() => { setReplacement(entry.id); setStep(0); }}>Replace…</button>
+                      </div>
+                    </details>
+                  </li>;
+                })}
+              </ol>
+            </section>;
           })}
-          {!draft.entries.length && <li className="ca-empty"><b>No questions yet</b>Pick questions in the Question bank and they arrive here in the order you added them.<br /><button type="button" className="ca-btn" onClick={onOpenBank}>Open the Question bank</button></li>}
-        </ol>
+          {!draft.entries.length && <div className="ca-empty"><b>No questions yet</b>Pick questions in the Question bank and they arrive here in the order you added them.<br /><button type="button" className="ca-btn" onClick={onOpenBank}>Open the Question bank</button></div>}
+        </div>
         <div className="ca-b-outline-foot"><button type="button" className="ca-btn is-quiet" onClick={onOpenBank}><Plus size={15} aria-hidden="true" />Add from the Question bank</button></div>
       </section>
 

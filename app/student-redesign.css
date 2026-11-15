@@ -182,6 +182,10 @@
 /* —— Practice Builder: outline beside the PDF the real generator produces —— */
 .ca-build{height:calc(100dvh - 50px);display:grid;grid-template-rows:auto auto auto minmax(0,1fr);background:var(--ca-canvas);color:var(--ca-ink);font:400 15px/1.5 var(--ca-body)}
 .ca-b-head{display:flex;flex-wrap:wrap;align-items:end;gap:8px 14px;padding:10px 16px;background:var(--ca-surface);border-bottom:1px solid var(--ca-line)}
+.ca-build > .ca-b-head{grid-row:1}
+.ca-build > .ca-b-error{grid-row:2}
+.ca-build > .ca-b-tabs{grid-row:3}
+.ca-build > .ca-b-body{grid-row:4}
 .ca-b-title{display:flex;align-items:baseline;gap:10px;margin-right:6px;align-self:center}
 .ca-b-title h1{font:600 20px/1.2 var(--ca-display);letter-spacing:-.015em;color:var(--ca-ink)}
 .ca-b-count{font-size:14px;color:var(--ca-ink-2);font-variant-numeric:tabular-nums}
@@ -239,6 +243,10 @@
 .ca-b-export{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
 .ca-b-state{margin-left:auto;font-size:14px;color:var(--ca-ink-2)}
 .ca-b-note{font-size:14px;color:var(--ca-ink-2);max-width:76ch}
+.ca-b-freshness{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 10px;background:var(--ca-note-soft);color:var(--ca-note);border-radius:var(--ca-r);font-size:14px}
+.ca-b-freshness[data-error]{background:var(--ca-danger-soft);color:var(--ca-danger)}
+.ca-b-pdf-display{min-width:0}
+.ca-b-pdf-display[data-stale] .worksheet-paper{opacity:.55}
 .ca-b-generating{display:grid;gap:10px;background:#fff;padding:36px;max-width:816px;margin:0 auto;width:100%;box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35)}
 .ca-b-preview .ca-empty{background:#fff;max-width:816px;margin:0 auto;width:100%;padding:48px;box-shadow:0 1px 2px rgb(20 35 58/.14)}
 /* the existing WorksheetPreview component, set on the desk */

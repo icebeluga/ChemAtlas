@@ -75,10 +75,18 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     assert.equal(await worksheetTitle.inputValue(), "Saved practice draft");
     assert.equal(await page.evaluate(() => localStorage.getItem("chematlas-worksheets-v1")), draftsBeforeReload);
 
+    const steps = page.getByRole("group", { name: "Builder view" });
+    const exportStep = steps.getByRole("button", { name: "Preview", exact: true });
+    const download = page.getByRole("link", { name: "Download PDF" });
+    await download.waitFor();
+    const initialUrl = await download.getAttribute("href");
+    await steps.getByRole("button", { name: "Add questions", exact: true }).click();
+    await page.waitForFunction(url => window.previewAudit.revoked.includes(url), initialUrl);
     await page.getByRole("textbox", { name: "Search" }).fill("no-match-worksheet-fixture-2026");
     await page.getByText("0 matches", { exact: true }).waitFor();
     await page.getByRole("button", { name: "Clear filters" }).click();
     await page.getByRole("button", { name: "Add to Worksheet" }).first().waitFor();
+    await page.evaluate(() => { window.previewAudit = { created: [], revoked: [], aborted: 0 }; });
 
     let first = true;
     await page.route(`${origin.origin}/worksheet-fragments.pdf`, async route => {
@@ -88,9 +96,6 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
       }
       await route.fallback();
     });
-    const steps = page.getByRole("navigation", { name: "Worksheet steps" });
-    const exportStep = steps.getByRole("button", { name: /Export PDF/ });
-    const download = page.getByRole("link", { name: "Download PDF" });
     const firstPreview = page.waitForRequest(`${origin.origin}/worksheet-fragments.pdf`);
     await exportStep.click();
     await firstPreview;
@@ -103,7 +108,7 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     const answerUrl = await download.getAttribute("href");
     assert.deepEqual(await page.evaluate(() => window.previewAudit.created), [answerUrl]);
 
-    await steps.getByRole("button", { name: /Format/ }).click();
+    await steps.getByRole("button", { name: "Layout", exact: true }).click();
     await page.waitForFunction(url => window.previewAudit.revoked.includes(url), answerUrl);
     const printedTitle = page.getByRole("textbox", { name: "Title", exact: true });
     await printedTitle.fill("Intermediate title");
@@ -115,8 +120,7 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     await page.waitForFunction(() => document.querySelector(".worksheet-preview canvas")?.width > 300);
 
     await mode.selectOption("answers");
-    await steps.getByRole("button", { name: /Arrange/ }).click();
-    await page.getByRole("button", { name: "Remove", exact: true }).click();
+    await page.getByRole("button", { name: "Remove question 1", exact: true }).click();
     await page.getByText("0 selected", { exact: true }).waitFor();
     await exportStep.click();
     await page.getByText("This worksheet has no verified answer key.", { exact: true }).waitFor();

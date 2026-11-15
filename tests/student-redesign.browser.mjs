@@ -229,3 +229,42 @@ test("phone builder settings collapse into a compact disclosure and keep draft d
   await disclosure.waitFor({ state: "hidden" });
   await title.waitFor();
 });
+
+test("the last real worksheet preview remains visible during an update and a failed request", async (t) => {
+  const page = await openPage(1440, "/practice-builder", ["mcq-2008-1-29", "mcq-2008-2-29", "mcq-2018-23-2039"]);
+  t.after(() => page.close());
+  const download = page.getByRole("link", { name: "Download PDF" });
+  await download.waitFor();
+  const originalUrl = await download.getAttribute("href");
+  const canvas = page.locator(".worksheet-preview canvas");
+  await page.waitForFunction(() => document.querySelector(".worksheet-preview canvas")?.width > 300);
+  const original = await canvas.evaluate(node => node.toDataURL());
+  let releaseRequest;
+  const blockedRequest = new Promise(resolve => { releaseRequest = resolve; });
+  try {
+    await page.route(`${origin.origin}/worksheet-fragments.pdf`, async route => {
+      await blockedRequest;
+      await route.fulfill({ status: 503, body: "preview test failure" });
+    }, { times: 1 });
+    const request = page.waitForRequest(`${origin.origin}/worksheet-fragments.pdf`);
+    await page.getByRole("button", { name: "Move question 1 down", exact: true }).click();
+    await request;
+    await page.getByText("Updating…", { exact: true }).waitFor();
+    assert.equal(await canvas.evaluate(node => node.toDataURL()), original);
+    assert.ok(await page.locator(".ca-b-pdf-display[data-stale]").isVisible());
+    assert.equal(await download.count(), 0);
+    assert.ok(await page.getByRole("button", { name: "Download PDF", exact: true }).isDisabled());
+    assert.ok(await page.getByRole("button", { name: "Open PDF to print", exact: true }).isDisabled());
+    releaseRequest();
+    const retry = page.getByRole("button", { name: "Retry preview" });
+    await retry.waitFor();
+    assert.match(await page.getByRole("alert").innerText(), /last successful PDF/);
+    assert.equal(await canvas.evaluate(node => node.toDataURL()), original);
+    await retry.click();
+    await download.waitFor();
+    assert.notEqual(await download.getAttribute("href"), originalUrl);
+    assert.equal(await page.locator(".ca-b-pdf-display[data-stale]").count(), 0);
+  } finally {
+    releaseRequest();
+  }
+});

@@ -64,28 +64,29 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const [dragged, setDragged] = useState("");
   const [source, setSource] = useState<{ id: string; part: number }>();
   const [mode, setMode] = useState<ExportMode>("questions");
+  const [retry, setRetry] = useState(0);
   const outlineItems = useRef<HTMLDivElement>(null);
   const movedEntry = useRef("");
   const hasAnswers = draft.entries.some(e => registry?.questions[e.id]?.answer);
   if (!hasAnswers && mode !== "questions") setMode("questions");
 
   const request = useMemo(() => pane === 3 && registry && content && draft.entries.length
-    ? { draft, questions, registry, mode, files, openPdf, content }
-    : undefined, [pane, draft, questions, registry, mode, files, openPdf, content]);
-  type PreviewResult = { request: NonNullable<typeof request> } & (
-    { bytes: Uint8Array; url: string; count: number } | { error: string }
-  );
-  const [result, setResult] = useState<PreviewResult>();
-  if (result && result.request !== request) setResult(undefined);
-  const current = result?.request === request ? result : undefined;
-  const { bytes, url, count = 0 } = current && "bytes" in current ? current : {};
-  const generating = !!request && !current;
-  const error = current && "error" in current ? current.error : contentError;
+    ? { draft, questions, registry, mode, files, openPdf, content, retry }
+    : undefined, [pane, draft, questions, registry, mode, files, openPdf, content, retry]);
+  type PreviewRequest = NonNullable<typeof request>;
+  type PreviewPdf = { request: PreviewRequest; bytes: Uint8Array; url: string; count: number };
+  const [preview, setPreview] = useState<{ pdf?: PreviewPdf; failure?: { request: PreviewRequest; message: string } }>({});
+  const displayed = draft.entries.length && preview.pdf?.request.draft.id === draft.id ? preview.pdf : undefined;
+  const current = displayed?.request === request ? displayed : undefined;
+  const failure = preview.failure?.request === request ? preview.failure?.message : undefined;
+  const generating = !!request && !current && !failure;
+  const stale = !!displayed && !current;
+  const displayedBytes = displayed?.bytes;
   const setCount = useCallback((count: number) => {
-    setResult(previous => previous && previous.request === request && "bytes" in previous
-      ? { ...previous, count }
+    setPreview(previous => previous.pdf && previous.pdf.bytes === displayedBytes
+      ? { ...previous, pdf: { ...previous.pdf, count } }
       : previous);
-  }, [request]);
+  }, [displayedBytes]);
 
   useEffect(() => {
     if (!request) return;
@@ -99,11 +100,14 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
         const bytes = await renderWorksheet(draft, questions, registry, mode, files, openPdf, controller.signal, content);
         if (controller.signal.aborted) return;
         previewUrl = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }));
-        setResult({ request, bytes, url: previewUrl, count: 0 });
+        setPreview({ pdf: { request, bytes, url: previewUrl, count: 0 } });
       } catch (e) {
-        if (!controller.signal.aborted) setResult({ request, error: e instanceof Error ? e.message : "PDF generation failed." });
+        if (!controller.signal.aborted) {
+          const message = e instanceof Error ? e.message : "PDF generation failed.";
+          setPreview(previous => ({ ...previous, failure: { request, message } }));
+        }
       }
-    }, 120);
+    }, matchMedia(wideQuery).matches ? 600 : 120);
     return () => {
       clearTimeout(timer);
       controller.abort();
@@ -231,7 +235,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
       </div>
       <p className="ca-b-status" role="status">{notice || <span className="ca-b-draft-help">Drafts save in this browser. Download drafts to move them to another device.</span>}</p>
     </header>
-    {error && <p className="ca-b-error" role="alert">{error}</p>}
+    {contentError && <p className="ca-b-error" role="alert">{contentError}</p>}
 
     <div className="ca-b-tabs" role="group" aria-label="Builder view">
       {tabs.map(([value, label]) => <button type="button" key={value} className={value === 1 ? "ca-b-tab-outline" : undefined} aria-pressed={pane === value} onClick={() => { setStep(value); if (value !== 0) setReplacement(""); }}>{label}</button>)}
@@ -308,16 +312,26 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
             <label className="ca-b-inline">PDF contents<select value={mode} onChange={e => setMode(e.target.value as ExportMode)}>
               <option value="questions">Questions only</option><option value="answers" disabled={!hasAnswers}>Separate answer key</option><option value="combined" disabled={!hasAnswers}>Questions and answer key</option>
             </select></label>
-            {bytes && url && !generating && <>
-              <a className="ca-btn is-primary" href={url} download={`${(f.title || draft.name).replace(/[^\w -]/g, "").trim() || "worksheet"}${mode === "answers" ? " - answer key" : ""}.pdf`}>Download PDF</a>
-              <a className="ca-btn is-quiet" href={url} target="_blank" rel="noreferrer">Open PDF to print</a>
-            </>}
-            <span className="ca-b-state" role="status">{!draft.entries.length ? "" : generating ? "Generating the PDF…" : bytes ? `PDF ready${count > 0 ? ` · ${count} ${count === 1 ? "page" : "pages"}` : ""}` : ""}</span>
+            {!!draft.entries.length && (current ? <>
+              <a className="ca-btn is-primary" href={current.url} download={`${(f.title || draft.name).replace(/[^\w -]/g, "").trim() || "worksheet"}${mode === "answers" ? " - answer key" : ""}.pdf`}>Download PDF</a>
+              <a className="ca-btn is-quiet" href={current.url} target="_blank" rel="noreferrer">Open PDF to print</a>
+            </> : <>
+              <button type="button" className="ca-btn is-primary" disabled>Download PDF</button>
+              <button type="button" className="ca-btn is-quiet" disabled>Open PDF to print</button>
+            </>)}
+            <span className="ca-b-state" role="status">{current && `PDF ready${current.count > 0 ? ` · ${current.count} ${current.count === 1 ? "page" : "pages"}` : ""}`}</span>
           </div>
           {!!draft.entries.length && <p className="ca-b-note">This is the PDF itself, made by the same generator as the download.{fallbackCount > 0 && <> {fallbackCount} of {draft.entries.length} question{draft.entries.length === 1 ? "" : "s"} print{fallbackCount === 1 && draft.entries.length === 1 ? "s" : ""} as full source pages, which can include neighbouring questions or printed answers. Check before sharing.</>}{!hasAnswers && " This worksheet has no verified answer key."}</p>}
-          {!draft.entries.length && <div className="ca-empty"><b>Nothing to preview yet</b>Add questions and the worksheet PDF appears here.</div>}
-          {generating && <div className="ca-b-generating" aria-hidden="true"><span className="ca-skel" /><span className="ca-skel" /><span className="ca-skel" /></div>}
-          {bytes && <WorksheetPreview bytes={bytes} count={count} onCount={setCount} />}
+          {!draft.entries.length && <div className="ca-empty"><b>Nothing to preview yet</b>Add questions and the worksheet PDF appears here.<p>This worksheet has no verified answer key.</p></div>}
+          {generating && <p className="ca-b-freshness" role="status">{stale ? "Updating…" : "Generating the PDF…"}</p>}
+          {failure && <div className="ca-b-freshness" data-error="">
+            <p role="alert">{failure}{stale && " The preview shows the last successful PDF."}</p>
+            <button type="button" className="ca-btn is-quiet" onClick={() => setRetry(attempt => attempt + 1)}>Retry preview</button>
+          </div>}
+          {generating && !displayed && <div className="ca-b-generating" aria-hidden="true"><span className="ca-skel" /><span className="ca-skel" /><span className="ca-skel" /></div>}
+          {displayed && <div className="ca-b-pdf-display" data-stale={stale ? "" : undefined}>
+            <WorksheetPreview key={displayed.url} bytes={displayed.bytes} count={displayed.count} onCount={setCount} />
+          </div>}
         </div>}
 
         {pane === 2 && <div className="ca-b-form">

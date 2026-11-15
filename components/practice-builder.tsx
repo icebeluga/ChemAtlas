@@ -5,7 +5,8 @@ import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, worksheetSource } from "@/lib/worksheet";
 import { filterQuestions } from "@/lib/question-filter";
-import { moveEntry, replaceEntry } from "@/lib/worksheet-edits";
+import { applyUndo, moveEntry, replaceEntry } from "@/lib/worksheet-edits";
+import type { UndoStep } from "@/lib/worksheet-edits";
 import type { Backup, Draft, ExportMode, Format, Region, SourceFile } from "@/lib/worksheet";
 import { useExportData } from "@/components/student/hooks/use-export-data";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
@@ -59,7 +60,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const [amount, setAmount] = useState(5);
   const { registry, content, contentError } = useExportData();
   const [notice, setNotice] = useState("");
-  const [undo, setUndo] = useState<Draft>();
+  const [undo, setUndo] = useState<UndoStep>();
   const [replacement, setReplacement] = useState("");
   const [dragged, setDragged] = useState("");
   const [source, setSource] = useState<{ id: string; part: number }>();
@@ -143,7 +144,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   }), [questions, filters, registry, progress, content]);
 
   function update(next: Draft, remember = false) {
-    if (remember) setUndo(draft);
+    if (remember) setUndo({ before: draft, after: next });
     save({ ...backup, drafts: backup.drafts.map(d => d.id === draft.id ? next : d) });
   }
   function open(next: Draft) {
@@ -192,6 +193,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
     setTimeout(() => URL.revokeObjectURL(link), 1000);
   }
   const f = draft.format;
+  const undone = applyUndo(draft, undo);
   const tabs = [[1, "Outline"], [3, "Preview"], [2, "Layout"], [0, "Add questions"]] as const;
   const fallbackCount = content ? draft.entries.filter(entry => !content.questions[entry.id]).length : 0;
   const frqCount = draft.entries.filter(entry => byId.get(entry.id)?.type === "FRQ").length;
@@ -247,7 +249,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
           <p>{draft.entries.length
             ? <><b>{draft.entries.length} question{draft.entries.length === 1 ? "" : "s"}</b>: {draft.entries.length - frqCount} multiple choice, {frqCount} free response.{fallbackCount > 0 && <span className="ca-b-warn"> {fallbackCount} without a reviewed print layout.</span>}</>
             : "No questions yet."}</p>
-          <button type="button" className="ca-btn is-quiet" disabled={!undo || undo.id !== draft.id} onClick={() => { if (undo) { update(undo); setUndo(undefined); setNotice("Last worksheet change undone."); } }}><Undo2 size={15} aria-hidden="true" />Undo</button>
+          <button type="button" className="ca-btn is-quiet" disabled={!undone} onClick={() => { if (undone) { update(undone); setUndo(undefined); setNotice("Last worksheet change undone."); } }}><Undo2 size={15} aria-hidden="true" />Undo</button>
         </div>
         <div className="ca-b-items" ref={outlineItems}>
           {sections.map(({ key, label, rows }, sectionIndex) => {

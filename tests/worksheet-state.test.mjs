@@ -6,12 +6,12 @@ import { fileURLToPath } from "node:url";
 const { build } = createRequire(import.meta.resolve("vite"))("esbuild");
 const output = await build({
   stdin: {
-    contents: 'export { planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } from "./components/student/hooks/use-worksheets"; export { moveEntry, replaceEntry } from "./lib/worksheet-edits"; export { defaultFormat } from "./lib/worksheet";',
+    contents: 'export { planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } from "./components/student/hooks/use-worksheets"; export { applyUndo, moveEntry, replaceEntry } from "./lib/worksheet-edits"; export { defaultFormat } from "./lib/worksheet";',
     resolveDir: fileURLToPath(new URL("..", import.meta.url)),
   },
   bundle: true, format: "esm", platform: "node", write: false,
 });
-const { defaultFormat, moveEntry, replaceEntry, planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } =
+const { applyUndo, defaultFormat, moveEntry, replaceEntry, planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } =
   await import(`data:text/javascript;base64,${Buffer.from(output.outputFiles[0].text).toString("base64")}`);
 
 const legacyKey = "chematlas-student-worksheet-v1";
@@ -195,4 +195,41 @@ test("an earlier recovery copy is never overwritten and valid backups create non
     restoreWorksheetBackup();
     assert.equal(storage.getItem(worksheetRecoveryKey), "{first");
   });
+});
+
+test("undo reverses a reorder without discarding a later rename", () => {
+  const original = draft("D", [entry("a"), entry("b"), entry("c")]);
+  const moved = moveEntry(original, 0, 2);
+  const step = { before: original, after: moved };
+  const renamed = { ...moved, name: "Renamed later" };
+  const undone = applyUndo(renamed, step);
+  assert.deepEqual(undone.entries.map(e => e.id), ["a", "b", "c"]);
+  assert.equal(undone.name, "Renamed later");
+  assert.equal(undone.format, renamed.format);
+});
+
+test("undo keeps later format edits after an entry change and later entry edits after a preset", () => {
+  const original = draft("D", [entry("a"), entry("b")]);
+  const removed = { ...original, entries: [entry("a")] };
+  const formatted = { ...removed, format: { ...removed.format, paper: "A4" } };
+  const undone = applyUndo(formatted, { before: original, after: removed });
+  assert.deepEqual(undone.entries, original.entries);
+  assert.equal(undone.format.paper, "A4");
+
+  const preset = { ...original, format: { ...defaultFormat, lines: 6 } };
+  const renamed = { ...preset, name: "After preset" };
+  const reverted = applyUndo(renamed, { before: original, after: preset });
+  assert.equal(reverted.format, original.format);
+  assert.equal(reverted.name, "After preset");
+});
+
+test("undo becomes unavailable after an incompatible edit to the same field or on another draft", () => {
+  const original = draft("D", [entry("a"), entry("b")]);
+  const moved = moveEntry(original, 0, 1);
+  const step = { before: original, after: moved };
+  assert.equal(applyUndo({ ...moved, entries: [...moved.entries, entry("c")] }, step), undefined);
+  const preset = { ...original, format: { ...defaultFormat, lines: 6 } };
+  assert.equal(applyUndo({ ...preset, format: { ...preset.format, title: "Edited" } }, { before: original, after: preset }), undefined);
+  assert.equal(applyUndo(draft("Other"), step), undefined);
+  assert.equal(applyUndo(moved, undefined), undefined);
 });

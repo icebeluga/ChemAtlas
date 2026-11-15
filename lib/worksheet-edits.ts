@@ -12,3 +12,15 @@ export function moveEntry(draft: Draft, from: number, to: number): Draft {
 export function replaceEntry(draft: Draft, oldId: string, newId: string): Draft {
   return { ...draft, entries: draft.entries.map(entry => entry.id === oldId ? { ...entry, id: newId, lines: undefined } : entry) };
 }
+
+export type UndoStep = { before: Draft; after: Draft };
+const undoFields = ["name", "format", "entries"] as const;
+
+// Reverts only the fields the remembered step changed, and only while each is still exactly what that step
+// produced; later edits to other fields survive, and a later edit to the same field makes Undo unavailable.
+export function applyUndo(current: Draft, step: UndoStep | undefined): Draft | undefined {
+  if (!step || current.id !== step.after.id) return undefined;
+  const changed = undoFields.filter(key => step.before[key] !== step.after[key]);
+  if (!changed.length || changed.some(key => current[key] !== step.after[key])) return undefined;
+  return { ...current, ...Object.fromEntries(changed.map(key => [key, step.before[key]])) };
+}

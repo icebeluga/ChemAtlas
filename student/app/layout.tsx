@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/app/globals.css";
 import "@/app/student-workspace.css";
+import "@/app/student-redesign.css";
 
 export const metadata: Metadata = {
   title: "AP Chemistry Question Catalog",

@@ -1,21 +1,21 @@
 "use client";
 
 import { ChangeEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { Activity, ArrowUpRight, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, ListChecks, Maximize2, Menu, Minimize2, Minus, MoveHorizontal, Plus, RotateCcw, Scan } from "lucide-react";
+import { ArrowUpRight, BookOpen, FileText, FlaskConical } from "lucide-react";
 import stimulusDocument from "../research/stimuli.json";
 import { planWorksheet } from "../lib/worksheet.mjs";
 import { buildChemAtlasUrl, parseChemAtlasLocation } from "../app/navigation.mjs";
 import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
 
 import { PracticeBuilder } from "@/components/practice-builder";
+import { AppTopBar } from "@/components/student/app-top-bar";
+import { QuestionBank } from "@/components/student/bank/question-bank";
 import { useCatalog } from "@/components/student/hooks/use-catalog";
 import type { Catalog, Question } from "@/components/student/hooks/use-catalog";
 import { PdfQuestionPage } from "@/components/student/pdf-question-page";
 import { readPdf, savePdf } from "@/components/student/pdf-bank-store";
-import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
-import { MAX_ZOOM, MIN_ZOOM, stepZoom, type ViewerZoom } from "@/lib/viewer-scale";
 import { addEntries } from "@/lib/worksheet";
 import { restoreWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
 
@@ -49,7 +49,6 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     setCatalogLoadFailed(true);
     setNotice(message);
   }, []);
-  const [approvedImages] = useState<Record<string, string[]>>({});
   const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, onCatalogError);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
@@ -61,42 +60,13 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     if (bankId && bankId !== "mega" && !data) throw new Error("Restore the added bank PDF to open this question.");
     return pdfjs.getDocument(data ? { data } : { url: url ?? "/ap-chemistry-mega.pdf", rangeChunkSize: 65536 }).promise;
   }, []);
-  const bankResultsRef = useRef<HTMLDivElement>(null);
   const worksheetRef = useRef<HTMLElement>(null);
-  const [unitMenuOpen, setUnitMenuOpen] = useState(false);
-  const [toolsOpen, setToolsOpen] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [resultPage, setResultPage] = useState(0);
   const [reviewKind, setReviewKind] = useState("review");
   const [auditPage, setAuditPage] = useState(1);
   const includeReview = false;
   const [queue, setQueue] = useState<Question[]>([]); const [index, setIndex] = useState(0);
   const [pageIndex, setPageIndex] = useState(0); const [selfResult, setSelfResult] = useState<"correct" | "missed" | "unsure" | null>(null);
-  const [imageMode, setImageMode] = useState<"full" | "crop" | "approved">("full");
-  const [viewerZoom, setViewerZoom] = useState<{ id: string; zoom: ViewerZoom }>();
-  const [viewerScale, setViewerScale] = useState(1);
-  const onViewerScale = useCallback((scale: number) => setViewerScale(scale), []);
-  const imagePanel = useRef<HTMLElement>(null);
-  const [fullscreen, setFullscreen] = useState(false);
-  useEffect(() => {
-    function syncFullscreen() {
-      setFullscreen(!!imagePanel.current && document.fullscreenElement === imagePanel.current);
-    }
-    document.addEventListener("fullscreenchange", syncFullscreen);
-    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
-  }, []);
-
-  async function toggleViewerFullscreen() {
-    const panel = imagePanel.current;
-    if (!panel) return;
-    try {
-      if (document.fullscreenElement === panel) await document.exitFullscreen();
-      else await panel.requestFullscreen();
-    } catch {
-      setNotice("Fullscreen is not available in this browser.");
-    }
-  }
-
   const [work, setWork] = useState(""); const [submitted, setSubmitted] = useState(false);
   const [sessionSize, setSessionSize] = useState(10);
   const [newQuestionPage, setNewQuestionPage] = useState(""); const [newQuestionType, setNewQuestionType] = useState<"MCQ" | "FRQ">("FRQ");
@@ -114,8 +84,6 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       else window.history.pushState(state, "", nextUrl);
     }
     setShowWorksheet(false);
-    setToolsOpen(false);
-    setMobileMenuOpen(false);
     setResultPage(0);
     window.dispatchEvent(new Event("chematlas:navigate"));
   }
@@ -188,7 +156,6 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const reviewQuestions = questions.filter(q => q.status === "review" || (!q.displayTopic && q.status!=="legacy"));
   const legacyQuestions = questions.filter(q=>q.status==="legacy");
   const reviewList = (reviewKind==="legacy"?legacyQuestions:reviewQuestions).filter(q=>!query || `${q.id} ${q.number} ${q.year} ${q.textPreview} ${q.reviewReason} ${q.legacyConcepts?.join(" ")}`.toLowerCase().includes(query.toLowerCase()));
-  const available = questions.filter(q => q.status === "classified" && !!q.displayTopic);
   const attempts = Object.values(progress).reduce((n, p) => n + p.attempts, 0);
   const misses = Object.values(progress).reduce((n, p) => n + p.wrong, 0);
   const mastered = Object.values(progress).filter(p => p.correct >= 3 && p.wrong === 0).length;
@@ -201,12 +168,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     ...catalogFilters,
     search: { query, text: q => `${q.year} ${q.exam} ${q.number} ${q.textPreview} ${q.displayName}` },
   });
-  useEffect(() => {
-    bankResultsRef.current?.scrollTo(0, 0);
-  }, [resultPage, selectedUnit, selectedTopic, typeFilter, query]);
 
-  const detailSequence = filteredQuestions.some(q => q.id === current?.id) ? filteredQuestions : questions;
-  const detailIndex = current ? detailSequence.findIndex(q => q.id === current.id) : -1;
   const weakRows = useMemo(() => questions.filter(q => progress[q.id]?.wrong).sort((a,b) => (progress[b.id]?.wrong || 0) - (progress[a.id]?.wrong || 0)), [questions, progress]);
   const weakConcepts = useMemo(() => {
     const counts: Record<string, { id: string; name: string; wrong: number; attempts: number; ids: Set<string> }> = {};
@@ -259,31 +221,12 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   }
   function updateClassification(q: Question, value: string) { browserState.set("overrides", old=>({...old,[q.id]:value})); setNotice("Topic assignment saved."); }
   function addReviewItem(q: Question) { browserState.set("overrides", old=>({...old,[q.id]:old[q.id] || ""})); }
-  function openQuestion(q: Question) { setViewerZoom(undefined); setQueue([q]); setIndex(0); setPageIndex(0); setImageMode(approvedImages[q.id]?.length?"approved":"full"); setSubmitted(false); setSelfResult(null); setWork(""); navigate("detail", { questionId: q.id }); }
-  function partsForTopic(q: Question, topicId?: string) { return (q.topicParts||[]).filter(part=>!topicId || part.topics.includes(topicId)); }
+  function openQuestion(q: Question) { setQueue([q]); setIndex(0); setPageIndex(0); setSubmitted(false); setSelfResult(null); setWork(""); navigate("detail", { questionId: q.id }); }
 
   const bankName = (id?: string) => banks.find(b=>b.id===(id || "mega"))?.name || "AP Chemistry MEGA Compiled Test Bank.pdf";
   const originalPagesFor = (q?: Question) => q?.sourcePagesOriginal?.length ? q.sourcePagesOriginal : (q?.pages?.length?q.pages:[1]);
   const pagesFor = (q?: Question) => q?.sourceBank && q.sourceBank!=="mega" ? q.pages : originalPagesFor(q).map(p=>{const file=catalog.sourceFiles?.find(f=>p>=f.from&&p<=f.to);return file?p-file.from+1:p;});
   const sourceAssetFor = (q:Question,i:number) => q.sourceBank && q.sourceBank!=="mega" ? undefined : catalog.sourceFiles?.find(f=>originalPagesFor(q)[i]>=f.from&&originalPagesFor(q)[i]<=f.to)?.url;
-  const zoom = viewerZoom && viewerZoom.id === current?.id ? viewerZoom.zoom : "width";
-  function selectViewerZoom(next: ViewerZoom) {
-    if (current) setViewerZoom({ id: current.id, zoom: next });
-  }
-  const detailPages = current && view === "detail" ? originalPagesFor(current) : [];
-  const detailPage = detailPages[pageIndex] ?? detailPages[0] ?? 1;
-  const detailSource = sourcePageLocation(detailPage, catalog.sourceFiles ?? emptySourceFiles, current?.sourceBank);
-  const detailHighlights = current && view === "detail"
-    ? partsForTopic(current, selectedTopic !== "all" && current.relatedTopics?.includes(selectedTopic) ? selectedTopic : undefined).map(part => part.label)
-    : [];
-  const cropSegments = current && view === "detail" && imageMode === "crop"
-    ? planWorksheet([current], stimulusDocument.stimuli, originalPagesFor)[0].segments
-    : [];
-  const cropFit = cropSegments.length > 1 && cropSegments.every(segment => segment.regions.length)
-    ? {
-      width: Math.max(...cropSegments.map(({ regions }) => Math.max(...regions.map(r => r.rect[2])) - Math.min(...regions.map(r => r.rect[0])))),
-      height: cropSegments.reduce((sum, { regions }) => sum + Math.max(...regions.map(r => r.rect[3])) - Math.min(...regions.map(r => r.rect[1])), 0),
-    } : undefined;
 
   function printWorksheet() {
     if (worksheetRef.current?.querySelector(".pdf-error")) {
@@ -296,36 +239,32 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     }
   }
 
-  return <div className="app-shell student-workspace">
-    <a className="student-skip-link" href="#main-content">Skip to content</a>
-    <header className="site-nav">
-      <button className="mobile-menu-toggle" aria-label="Toggle navigation" aria-expanded={mobileMenuOpen} onClick={()=>setMobileMenuOpen(open=>!open)}><Menu size={21}/></button>
-      <button className="brand-lockup" onClick={()=>worksheet ? window.location.assign("/") : navigate("desk")} aria-label="ChemAtlas home"><span className="brandmark">C<span>✦</span></span><span className="brand-copy"><b>ChemAtlas</b><small>AP Chemistry Studio</small></span></button>
-      <nav className={`top-navigation ${mobileMenuOpen?"mobile-open":""}`} aria-label="Main navigation">
-        <div className="student-unit-nav" onKeyDown={event => { if (event.key === "Escape") { setUnitMenuOpen(false); event.currentTarget.querySelector<HTMLButtonElement>(".unit-menu-toggle")?.focus(); } }}>
-          <button className={`top-nav-item ${!worksheet && (view === "desk" || view === "unit") ? "selected" : ""}`}
-            aria-current={!worksheet && view === "desk" ? "page" : undefined}
-            onClick={() => { navigate("desk"); setUnitMenuOpen(false); setMobileMenuOpen(false); }}>
-            <BookOpen size={21}/><span>Browse by unit</span>
-          </button>
-          <button className="unit-menu-toggle" aria-label="Show all units" aria-expanded={unitMenuOpen}
-            aria-controls="student-unit-menu" onClick={() => { setUnitMenuOpen(open => !open); setToolsOpen(false); }}><ChevronDown size={16}/></button>
-          {unitMenuOpen && <div id="student-unit-menu" className="student-unit-menu">{catalog.units.map((unit, i) =>
-            <button key={unit.id} onClick={() => { navigate("unit", { unit: unit.id, topic: "all", type: "Mixed", query: "" }); setUnitMenuOpen(false); setMobileMenuOpen(false); }}>
-              <small>Unit {i + 1}</small>{unit.name}
-            </button>)}</div>}
-        </div>
-        <button className={`top-nav-item ${view==="library"||view==="detail"?"selected":""}`} aria-current={view==="library"?"page":undefined} onClick={()=>{navigate("library");setMobileMenuOpen(false);}}><LibraryBig size={20}/><span>Question bank</span></button>
-        <a className={`top-nav-item ${worksheet?"selected":""}`} href="/practice-builder" aria-current={worksheet?"page":undefined}><FileText size={20}/><span>Practice Builder</span></a>
-        <button className={`top-nav-item ${view==="builder"||view==="practice"?"selected":""}`} aria-current={view==="builder"?"page":undefined} onClick={()=>{navigate("builder");setMobileMenuOpen(false);}}><Activity size={20}/><span>Practice sessions</span></button>
-        <div className="tools-menu"><button className={`top-nav-item tools-toggle ${["progress","review","audit","banks"].includes(view)?"selected":""}`} aria-haspopup="menu" aria-expanded={toolsOpen} onClick={()=>setToolsOpen(open=>!open)}><LayoutGrid size={20}/><span>Tools</span><ChevronDown size={16}/></button>
-          {toolsOpen&&<div className="tools-popover" role="menu"><button role="menuitem" onClick={()=>{navigate("progress");setToolsOpen(false);setMobileMenuOpen(false);}}><Activity size={17}/> Progress</button><button role="menuitem" onClick={()=>{setReviewKind("review");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><span className="menu-count">{reviewQuestions.length}</span> Review queue</button><button role="menuitem" onClick={()=>{navigate("audit");setToolsOpen(false);setMobileMenuOpen(false);}}><FileText size={17}/> Source page audit</button><button role="menuitem" onClick={()=>{setReviewKind("legacy");navigate("review");setToolsOpen(false);setMobileMenuOpen(false);}}><BookOpen size={17}/> Legacy content</button><button role="menuitem" onClick={()=>{navigate("banks");setToolsOpen(false);setMobileMenuOpen(false);}}><Beaker size={17}/> Manage test banks</button></div>}
-        </div>
-      </nav>
-      <div className="nav-profile" title="Study profile">J</div>
-    </header>
+  const bankView = !worksheet && (view === "desk" || view === "unit" || view === "library" || view === "detail");
+  // Filters live in the URL. A selected question keeps the "detail" view so its id stays in the address.
+  function bankFilters(updates: Pick<RouteUpdates, "unit" | "topic" | "type" | "query">) {
+    if (view === "detail") updateFilters(updates); else navigate("library", updates, true);
+  }
+  function toggleWorksheetQuestion(id: string) {
+    if (!backup || !activeDraft) return;
+    const next = worksheetIds.includes(id)
+      ? { ...activeDraft, entries: activeDraft.entries.filter(entry => entry.id !== id) }
+      : addEntries(activeDraft, [id]);
+    saveWorksheets({ ...backup, drafts: backup.drafts.map(draft => draft.id === activeDraft.id ? next : draft) });
+  }
+  return <div className="ca2">
+    <a className="ca-skip" href="#main-content">Skip to content</a>
+    <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length} reviewCount={reviewQuestions.length}
+      onBank={() => navigate("library")}
+      onOpen={destination => { if (destination === "review" || destination === "legacy") { setReviewKind(destination); navigate("review"); } else navigate(destination); }}
+      search={bankView ? { value: query, onChange: value => bankFilters({ query: value }) } : undefined} />
+    {notice && <div className="ca-notice" role="status">{notice}<button type="button" aria-label="Dismiss message" onClick={()=>setNotice("")}>×</button></div>}
+    {bankView ? <main id="main-content" tabIndex={-1} ref={mainRef}>
+      <QuestionBank catalog={catalog} topics={topics} questions={questions} loadFailed={catalogLoadFailed}
+        unit={selectedUnit} topic={selectedTopic} type={typeFilter} query={query} selectedId={view === "detail" ? route.questionId : ""}
+        onFilters={bankFilters} onSelect={(id, replace) => navigate("detail", { questionId: id }, replace)} onClosePane={() => navigate("library")}
+        worksheetIds={worksheetIds} canEdit={!!backup && !!activeDraft} onToggle={toggleWorksheetQuestion} bankName={bankName} />
+    </main> : <div className="app-shell student-workspace">
     <main className="main" id="main-content" tabIndex={-1} ref={mainRef}>
-      {notice && <div className="notice" role="status">{notice}<button onClick={()=>setNotice("")}>×</button></div>}
 
       {worksheet ? backup ? <PracticeBuilder questions={questions} topics={topics} progress={progress}
         files={catalog.sourceFiles ?? emptySourceFiles} backup={backup} save={saveWorksheets} openPdf={openWorksheetPdf}
@@ -334,151 +273,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
           return <PdfQuestionPage page={location.page} sourcePage={region.page} bankId={location.bankId}
             bankName={question.source} sourceAsset={location.url} cropView={!!region.rect.length} sourceRegions={region.rect.length ? [region] : []} />;
         }} /> : <p role="status">Loading Practice Builder…</p> : <>
-      {view === "desk" && <div className="page dashboard-page">
-        <section className="dashboard-heading"><div><h1>Browse by unit</h1><p>Choose a College Board unit to explore its topics and original questions.</p></div></section>
-        <div className="stats catalog-stats atlas-metrics">
-          <div className="stat atlas-metric--brand"><span className="stat-icon"><LibraryBig size={18} aria-hidden="true" /></span><div><small>QUESTION RECORDS</small><b>{questions.length.toLocaleString()}</b></div></div>
-          <div className="stat atlas-metric--blue"><span className="stat-icon"><BookOpen size={18} aria-hidden="true" /></span><div><small>CURRICULUM TOPICS</small><b>{topics.length}</b></div></div>
-          <div className="stat atlas-metric--amber"><span className="stat-icon"><ListChecks size={18} aria-hidden="true" /></span><div><small>TOTAL MCQs</small><b>{questions.filter(q=>q.type==="MCQ").length.toLocaleString()}</b></div></div>
-          <div className="stat atlas-metric--teal"><span className="stat-icon"><FileText size={18} aria-hidden="true" /></span><div><small>TOTAL FRQs</small><b>{questions.filter(q=>q.type==="FRQ").length.toLocaleString()}</b></div></div>
-        </div>
-        <div className="section-head topic-head"><div><div className="eyebrow">COLLEGE BOARD COURSE FRAMEWORK</div><h2>All nine units</h2></div></div>
-        <div className="unit-grid">{catalog.units.map((u,i)=>{const count=available.filter(q=>(q.relatedTopics||[]).some(id=>topics.find(t=>t.id===id)?.unit===u.id)).length;return <UnitDirectoryCard key={u.id} unit={i+1} label={`Unit ${i+1}`} title={u.name} onClick={()=>navigate("unit", { unit: u.id, topic: "all", type: "Mixed", query: "" })}>{u.topics.length} topics · {count.toLocaleString()} classified questions</UnitDirectoryCard>})}</div>
-        <div className="footnote">Question images are rendered from the original PDF pages. Topic assignments include a reasoning note. Legacy material and unresolved source items are kept separately. <a href="/classification-method.md" target="_blank" rel="noreferrer">Read the classification method</a> · <a href="/student-page-audit.json" target="_blank" rel="noreferrer">Source coverage audit</a></div>
-      </div>}
-
-      {view === "unit" && <div className="page unit-detail-page">
-        <button className="back" onClick={() => navigate("desk")}>← All units</button>
-        <header className="unit-detail-heading">
-          <div><h1 className="page-title">{catalog.units.find(unit => unit.id === selectedUnit)?.name ?? "Choose a unit"}</h1>
-            <p className="muted">Choose a topic to browse its original AP Chemistry questions.</p></div>
-          {selectedUnit !== "all" && <button className="primary" onClick={() => navigate("library", { topic: "all" })}>View unit questions →</button>}
-        </header>
-        <div className="unit-topic-page-grid">{topics.filter(topic => topic.unit === selectedUnit).map(topic =>
-          <DirectoryCard key={topic.id} label={topic.id} title={topic.name} onClick={() => navigate("library", { topic: topic.id })}>
-            {available.filter(question => question.relatedTopics?.includes(topic.id)).length} classified questions
-          </DirectoryCard>)}</div>
-      </div>}
-      {view === "library" && <div className="page bank-page">
-        <div className="bank-fixed">
-          <h1 className="page-title">Question bank</h1>
-          <p className="muted">Filter by unit, topic, type, or keyword. Multi-concept FRQs appear under each matched topic.</p>
-        <div className="library-filters"><label>UNIT<select value={selectedUnit} onChange={e=>{updateFilters({ unit: e.target.value, topic: "all" });}}><option value="all">All units</option>{catalog.units.map(u=><option key={u.id} value={u.id}>{u.id.toUpperCase()} · {u.name}</option>)}</select></label><label>TOPIC<select value={selectedTopic} onChange={e=>updateFilters({ topic: e.target.value })}><option value="all">All topics</option>{topics.filter(t=>selectedUnit==="all"||t.unit===selectedUnit).map(t=><option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label><label>TYPE<select value={typeFilter} onChange={e=>updateFilters({ type: e.target.value })}><option>Mixed</option><option>MCQ</option><option>FRQ</option></select></label><label className="search-label">SEARCH<input value={query} onChange={e=>updateFilters({ query: e.target.value })} placeholder="Year, question number, keyword"/></label></div>
-          {(selectedUnit !== "all" || selectedTopic !== "all" || typeFilter !== "Mixed" || query) &&
-            <button className="bank-view-question" onClick={() => updateFilters({ unit: "all", topic: "all", type: "Mixed", query: "" })}>Clear filters</button>}
-        </div>
-        <div className="library-results-head"><b>{selectedTopic==="all"?(selectedUnit==="all"?"All classified questions":`${catalog.units.find(u=>u.id===selectedUnit)?.name} · all topics`):`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`}</b><span role="status">{filteredQuestions.length.toLocaleString()} catalog entries · uncertain matches are in Review</span></div>
-        {worksheetIds.length > 0 && <div className="bank-worksheet-bar">
-          <a className="outline" href="/practice-builder">View worksheet ({worksheetIds.length})</a>
-        </div>}
-        <div className="bank-results-scroll" ref={bankResultsRef} role="region" aria-label="Question bank results" tabIndex={0}>
-        {selectedTopic!=="all" && catalog.topicDetails?.[selectedTopic] && <div className="topic-definition"><b>{selectedTopic} · {topics.find(t=>t.id===selectedTopic)?.name}</b><p>{catalog.topicDetails[selectedTopic].description}</p><small>College Board CED · learning objectives {catalog.topicDetails[selectedTopic].learningObjectives?.join(", ") || "see curriculum reference"}</small></div>}
-        <div className="question-list">{filteredQuestions.slice(resultPage*50,(resultPage+1)*50).map(q=>{
-          const context = topics.find(t=>t.id===selectedTopic) ?? topics.find(t=>t.id===q.displayTopic);
-          const original = originalPagesFor(q);
-          const relevantParts = partsForTopic(q, selectedTopic === "all" ? undefined : selectedTopic);
-          const secondary = (q.relatedTopics||[]).filter(id=>id!==q.displayTopic).map(id=>topics.find(t=>t.id===id)).filter(Boolean);
-          return <article className="catalog-row atlas-result" key={q.id}>
-            <div className="atlas-result-head">
-              <span className={`type-chip ${q.type.toLowerCase()}`}>{q.type}</span>
-              <div className="atlas-result-identity"><h2>{q.year || "Added bank"} · Question {q.number}</h2>
-                <p>{q.exam} · Original PDF {original.length===1 ? `page ${original[0]}` : `pages ${original[0]}–${original.at(-1)}`}</p>
-              </div>
-              <button type="button" className="bank-view-question" onClick={()=>openQuestion(q)} aria-label={`View question ${q.number} · ${q.exam}`}>View question <span aria-hidden="true">↗</span></button>
-            </div>
-            <div className="atlas-result-body">
-              {context && <p><strong>{context.id===q.displayTopic ? "Primary topic" : "Also filed under"}</strong> · <b className="atlas-topic-code">{context.id}</b> {context.name}</p>}
-              {!relevantParts.length && q.textPreview && <p className="preview-line">{q.textPreview}</p>}
-              <div className="atlas-result-actions"><button type="button" className="outline worksheet-add" disabled={!backup || !activeDraft || worksheetIds.includes(q.id) || worksheetIds.length >= 500}
-                  onClick={() => {
-                    if (backup && activeDraft) saveWorksheets({ ...backup, drafts: backup.drafts.map(draft => draft.id === activeDraft.id ? addEntries(draft, [q.id]) : draft) });
-                  }}>
-                  {worksheetIds.includes(q.id) ? "Added to worksheet" : "Add to Worksheet"}
-                </button>{q.status==="review" && <span className="atlas-chip atlas-tone-review">Needs topic review</span>}{!!relevantParts.length && <span>{relevantParts.length} mapped {relevantParts.length===1 ? "part" : "parts"}</span>}</div>
-              <details className="atlas-result-classification">
-                <summary>Classification details</summary>
-                <p>{q.displayTopic ? `Primary topic · ${q.displayTopic} ${q.displayName ?? ""}` : "Topic unassigned"}</p>
-                {q.classificationRationale && <p>{q.classificationRationale}</p>}
-                {!!secondary.length && <p>Secondary topics · {secondary.map(t=>`${t!.id} ${t!.name}`).join(" · ")}</p>}
-                {!!relevantParts.length && <ul>{relevantParts.map((part,i)=><li key={`${part.label}-${i}`}><strong>{part.label}</strong> {part.textPreview || part.rationale || part.topicNames.join(", ")}</li>)}</ul>}
-              </details>
-            </div>
-          </article>;
-        })}{filteredQuestions.length>50&&<div className="catalog-pagination"><button className="outline" disabled={resultPage===0} onClick={()=>setResultPage(p=>p-1)}>← Previous</button><span>Page {resultPage+1} of {Math.ceil(filteredQuestions.length/50)}</span><button className="outline" disabled={(resultPage+1)*50>=filteredQuestions.length} onClick={()=>setResultPage(p=>p+1)}>Next →</button></div>}{!filteredQuestions.length&&<div className="empty-state"><span>⌕</span><b>No classified questions in this view</b><p>Try another topic, or see uncertain matches in the Review section.</p><button className="outline" onClick={()=>navigate("review")}>Open classification review</button></div>}</div>
-          <div className="curriculum-note"><b>Curriculum source</b> · AP Chemistry Course and Exam Description, College Board. Topic codes and names follow its nine-unit framework.</div>
-        </div>
-      </div>}
-
       {view === "builder" && <div className="page builder-page"><section className="builder-intro"><span className="eyebrow">BUILD A FOCUSED PRACTICE SET</span><h1 className="page-title">Practice sessions</h1><p className="muted">Choose a unit, topic, and question type. ChemAtlas will draw a randomized set from the indexed source questions that match.</p></section><div className="builder-layout"><section className="panel builder-panel"><div className="panel-head"><div><span className="eyebrow">YOUR QUESTION SET</span><h2>Set the practice scope</h2></div><span className="builder-symbol"><FileText size={22}/></span></div><div className="builder-controls"><label>UNIT<select value={selectedUnit} onChange={e=>{updateFilters({ unit: e.target.value, topic: "all" });}}><option value="all">All units</option>{catalog.units.map(u=><option key={u.id} value={u.id}>{u.id.toUpperCase()} · {u.name}</option>)}</select></label><label>TOPIC<select value={selectedTopic} onChange={e=>updateFilters({ topic: e.target.value })}><option value="all">All topics</option>{topics.filter(t=>selectedUnit==="all"||t.unit===selectedUnit).map(t=><option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label><label>QUESTION TYPE<select value={typeFilter} onChange={e=>updateFilters({ type: e.target.value })}><option>Mixed</option><option>MCQ</option><option>FRQ</option></select></label><label>QUESTION COUNT<select value={sessionSize} onChange={e=>setSessionSize(Number(e.target.value))}>{[5,10,15,20,30].map(n=><option key={n} value={n}>{n} questions</option>)}</select></label></div><div className="builder-summary"><span className="builder-summary-icon"><BookOpen size={21}/></span><div><b>{filteredQuestions.length.toLocaleString()} matching questions</b><small>Only classified records appear in this set. Original PDF pages open during practice.</small></div></div><button className="primary builder-start" disabled={!filteredQuestions.length} onClick={()=>startSession()}>{filteredQuestions.length?`Start ${Math.min(sessionSize,filteredQuestions.length)}-question practice`:"No questions match these filters"}<ArrowUpRight size={18}/></button></section><aside className="builder-side"><div className="builder-side-icon"><FlaskConical size={23}/></div><h2>Practice from the source</h2><p>Questions stay linked to their original PDF pages. Submit your response, then record a self-check to build your personal progress map.</p><button className="text-button" onClick={()=>navigate("library")}>Browse the question bank →</button></aside></div></div>}
-
-      {view === "detail" && current && <div className="page detail-page"><button className="back" onClick={()=>navigate("library")}>← Back to catalog</button><div className="detail-heading"><div><div className="eyebrow">{current.exam}</div><h1 className="page-title">{current.type} {current.number}{current.year?` · ${current.year}`:""}</h1></div><span className={current.status==="review"?"review-label":"ready-label"}>{current.status==="review"?"Needs topic review":"Classified"}</span></div><p className="muted">{bankName(current.sourceBank)} · original PDF page{originalPagesFor(current).length===1?"":"s"} {originalPagesFor(current).join(", ")}</p>
-        <div className="detail-navigation"><button className="outline" disabled={detailIndex <= 0} onClick={()=>openQuestion(detailSequence[detailIndex-1])}>← Previous question</button><span>{detailIndex >= 0 ? `Question ${detailIndex+1} of ${detailSequence.length}` : "Question details"}</span><button className="outline" disabled={detailIndex < 0 || detailIndex+1 >= detailSequence.length} onClick={()=>openQuestion(detailSequence[detailIndex+1])}>Next question →</button></div>
-        <div className="detail-topic-map"><div className="primary-topic-callout"><span>PRIMARY TOPIC</span><b>{current.displayTopic?`${current.displayTopic} · ${current.displayName}`:"Needs classification"}</b></div><div className="related-topic-list"><span>ALSO FILED UNDER</span>{(current.relatedTopics||[]).filter(id=>id!==current.displayTopic).length?(current.relatedTopics||[]).filter(id=>id!==current.displayTopic).map(id=>{const t=topics.find(x=>x.id===id);return t?<span className="secondary-tag" key={id}>{t.unit.toUpperCase()} · {t.id} · {t.name}</span>:null;}):<small>No additional topic matches recorded.</small>}</div></div>
-        <section className="panel detail-match-panel"><div className="panel-head"><div><div className="eyebrow">WHY THIS QUESTION APPEARS HERE</div><h2>{selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`:"Topic mapping"}</h2></div><span className="multi-tag">{current.multiConcept?"MULTI-CONCEPT FRQ":"SOURCE QUESTION"}</span></div>{partsForTopic(current,selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?selectedTopic:undefined).length?<div className="detail-parts">{partsForTopic(current,selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?selectedTopic:undefined).map((part,i)=><div className="detail-part" key={`${part.label}-${i}`}><mark>{part.label}</mark><p>{part.rationale || part.textPreview}</p><small>{part.topicNames.map((n,j)=><span key={`${n}-${j}`}>{n}</span>)}</small></div>)}</div>:<p className="muted detail-whole-match">This item is indexed as a whole-question match. The source image below lets you inspect the original prompt before changing its topic assignment.</p>}</section>
-        {current.classificationRationale && <section className="classification-evidence"><b>Classification evidence</b><p>{current.classificationRationale}</p><small>{current.classificationMethod || "Question-content review"}{current.evidencePages?.length?` · supporting bank pages ${current.evidencePages.join(", ")}`:""}</small>{!!current.legacyConcepts?.length && <p><b>Legacy concepts:</b> {current.legacyConcepts.join(", ")}</p>}</section>}
-        <div className="detail-meta-grid"><div><small>QUESTION TYPE</small><b>{current.type==="FRQ"?"Free response":"Multiple choice"}</b></div><div><small>YEAR</small><b>{current.year||"Not identified"}</b></div><div><small>QUESTION NUMBER</small><b>{current.number}</b></div><div><small>EXAM / VERSION</small><b>{current.exam}</b></div><div><small>SOURCE PAGES</small><b>{originalPagesFor(current).join(", ")}</b></div><div><small>CLASSIFICATION STATUS</small><b>{current.status==="classified"?"Topic assigned":current.status==="legacy"?"Outside current framework":"Needs review"}</b></div></div>
-        <section className="panel detail-image-panel" ref={imagePanel}>
-          <div className="panel-head">
-            <div><div className="eyebrow">SOURCE IMAGE</div><h2>Question as printed</h2></div>
-            <div className="image-mode-tabs" role="group" aria-label="Image mode">
-              {approvedImages[current.id]?.length ? <button type="button" className={imageMode === "approved" ? "selected" : ""} aria-pressed={imageMode === "approved"} onClick={() => setImageMode("approved")}>Approved image</button> : null}
-              <button type="button" className={imageMode === "full" ? "selected" : ""} aria-pressed={imageMode === "full"} onClick={() => setImageMode("full")}>Full page</button>
-              <button type="button" className={imageMode === "crop" ? "selected" : ""} aria-pressed={imageMode === "crop"} onClick={() => setImageMode("crop")}>Question crop</button>
-            </div>
-          </div>
-          <p className="muted">{imageMode === "approved" ? "Current accepted image revision. The original PDF remains available below in Full page or Question crop mode." : "Yellow marks indicate the FRQ parts linked to the topic shown above. Use Full page to see shared instructions, diagrams, and surrounding context."}</p>
-          {imageMode === "approved" && approvedImages[current.id]?.length ? <div className="approved-image-stack">
-            {approvedImages[current.id].map((src, i) => <figure key={src}>
-              <img src={src} loading="lazy" alt={current.type + " " + current.number + " approved image segment " + (i + 1)} />
-              {approvedImages[current.id].length > 1 ? <figcaption>Segment {i + 1} of {approvedImages[current.id].length}</figcaption> : null}
-            </figure>)}
-          </div> : <div className="viewer-shell">
-            <div className="viewer-toolbar" role="toolbar" aria-label="Image zoom">
-              <div className="viewer-group" role="group" aria-label="Zoom level controls">
-                <button type="button" aria-label="Zoom out" disabled={viewerScale <= MIN_ZOOM} onClick={() => selectViewerZoom(stepZoom(viewerScale, -1))}><Minus size={16} aria-hidden="true" /></button>
-                <output aria-live="polite" aria-label="Zoom level">{Math.round(viewerScale * 100)}%</output>
-                <button type="button" aria-label="Zoom in" disabled={viewerScale >= MAX_ZOOM} onClick={() => selectViewerZoom(stepZoom(viewerScale, 1))}><Plus size={16} aria-hidden="true" /></button>
-              </div>
-              <div className="viewer-group" role="group" aria-label="Image fit">
-                <button type="button" aria-pressed={zoom === "width"} onClick={() => selectViewerZoom("width")}><MoveHorizontal size={16} aria-hidden="true" />Fit width</button>
-                <button type="button" aria-pressed={zoom === "page"} onClick={() => selectViewerZoom("page")}><Scan size={16} aria-hidden="true" />Fit page</button>
-                <button type="button" aria-label="Actual size (1:1)" aria-pressed={zoom === 1} onClick={() => selectViewerZoom(1)}>1:1</button>
-              </div>
-              <div className="viewer-group viewer-actions" role="group" aria-label="Viewer actions">
-                <button type="button" onClick={() => {
-                  setViewerZoom(undefined);
-                  setPageIndex(0);
-                  setImageMode(approvedImages[current.id]?.length ? "approved" : "full");
-                  imagePanel.current?.querySelector("[data-pdf-viewport]")?.scrollTo(0, 0);
-                }}><RotateCcw size={16} aria-hidden="true" />Reset</button>
-                <button type="button" aria-pressed={fullscreen} onClick={toggleViewerFullscreen}>
-                  {fullscreen ? <Minimize2 size={16} aria-hidden="true" /> : <Maximize2 size={16} aria-hidden="true" />}
-                  {fullscreen ? "Exit full screen" : "Full screen"}
-                </button>
-              </div>
-            </div>
-            {imageMode === "full" && <div className="pdf-tabs">
-              {detailPages.map((page, i) => <button type="button" key={page} className={detailPage === page ? "selected" : ""} aria-pressed={detailPage === page} onClick={() => setPageIndex(i)}>Original page {page}</button>)}
-            </div>}
-            <div className="viewer-viewport" data-pdf-viewport key={current.id + ":" + imageMode + ":" + detailPage}>
-              {imageMode === "crop" ? cropSegments.map(({ page, regions, stimulusId }, i) => {
-                const source = sourcePageLocation(page, catalog.sourceFiles ?? emptySourceFiles, current.sourceBank);
-                return <div className="viewer-segment" key={(stimulusId ?? "question") + ":" + page + ":" + i}>
-                  {stimulusId && <div className="viewer-segment-label">Shared stimulus</div>}
-                  <PdfQuestionPage page={source.page} sourcePage={page} bankId={source.bankId} bankName={bankName(current.sourceBank)}
-                    sourceAsset={source.url} sourceRegions={regions} questionNumber={current.number} cropView
-                    highlightLabels={stimulusId ? [] : detailHighlights} zoom={zoom} fitBox={cropFit} onScale={i === 0 ? onViewerScale : undefined} />
-                </div>;
-              }) : <PdfQuestionPage page={detailSource.page} sourcePage={detailPage} bankId={detailSource.bankId} bankName={bankName(current.sourceBank)}
-                sourceAsset={detailSource.url} sourceRegions={current.sourceRegions} questionNumber={current.number}
-                highlightLabels={detailHighlights} zoom={zoom} onScale={onViewerScale} />}
-            </div>
-          </div>}
-        </section>
-      </div>}
-      {view === "detail" && !current && !catalog.sourcePages && !catalogLoadFailed &&
-        <div className="page narrow"><p className="empty-state" role="status">Loading question…</p></div>}
-      {view === "detail" && !current && (catalog.sourcePages > 0 || catalogLoadFailed) && <div className="page narrow"><div className="empty-state"><b>Question not found</b><p>This question ID is not present in the currently loaded catalog.</p><button className="outline" onClick={()=>navigate("library")}>Back to Question Bank</button></div></div>}
 
       {view === "practice" && current && !showWorksheet && <div className="page practice-page"><div className="session-top"><button className="back" onClick={()=>navigate("desk")}>← Exit session</button><button className="outline compact" onClick={() => setShowWorksheet(true)}>Worksheet</button><div className="session-step-controls"><button className="outline compact" disabled={activeIndex <= 0} onClick={()=>goToPracticeIndex(activeIndex-1)}>← Previous</button><span className="session-count">QUESTION {activeIndex+1} <i>/</i> {activeQueue.length}</span></div></div><div className="progress-line"><i style={{width:`${((activeIndex+(submitted?1:0))/activeQueue.length)*100}%`}}/></div><div className="question-meta"><span className={`type-chip ${current.type.toLowerCase()}`}>{current.type==="MCQ"?"MULTIPLE CHOICE":"FREE RESPONSE"}</span><span>{current.displayTopic ? `${current.displayTopic} · ${current.displayName}` : "Needs topic review"}</span><span>·</span><span>{current.year || current.exam}</span></div>
         <div className="question-card source-question"><div className="source-question-head"><div><div className="eyebrow">ORIGINAL QUESTION PAGE</div><h2>{current.year || "Source bank"} · {current.type} {current.number}</h2><p>Exact page image from <b>{bankName(current.sourceBank)}</b></p></div><span className="source-page-count">{pageIndex+1} / {pagesFor(current).length} source page{pagesFor(current).length===1?"":"s"}</span></div>
@@ -526,6 +321,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       <footer className="footer">College Board unit/topic map <span>·</span> Original source pages <span>·</span> Progress saved locally</footer>
       </>}
     </main>
+    </div>}
   </div>;
 }
 

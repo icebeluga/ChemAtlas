@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, steps, worksheetSource } from "@/lib/worksheet";
@@ -34,17 +34,33 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const [amount, setAmount] = useState(5);
   const [registry, setRegistry] = useState<Registry>();
   const [content, setContent] = useState<WorksheetContent>();
-  const [error, setError] = useState("");
+  const [contentError, setContentError] = useState("");
   const [notice, setNotice] = useState("");
   const [undo, setUndo] = useState<Draft>();
   const [replacement, setReplacement] = useState("");
   const [dragged, setDragged] = useState("");
   const [source, setSource] = useState<{ id: string; part: number }>();
   const [mode, setMode] = useState<ExportMode>("questions");
-  const [bytes, setBytes] = useState<Uint8Array>();
-  const [url, setUrl] = useState("");
-  const [count, setCount] = useState(0);
-  const [generating, setGenerating] = useState(false);
+  const hasAnswers = draft.entries.some(e => registry?.questions[e.id]?.answer);
+  if (!hasAnswers && mode !== "questions") setMode("questions");
+
+  const request = useMemo(() => step === 3 && registry && content && draft.entries.length
+    ? { draft, questions, registry, mode, files, openPdf, content }
+    : undefined, [step, draft, questions, registry, mode, files, openPdf, content]);
+  type PreviewResult = { request: NonNullable<typeof request> } & (
+    { bytes: Uint8Array; url: string; count: number } | { error: string }
+  );
+  const [result, setResult] = useState<PreviewResult>();
+  if (result && result.request !== request) setResult(undefined);
+  const current = result?.request === request ? result : undefined;
+  const { bytes, url, count = 0 } = current && "bytes" in current ? current : {};
+  const generating = !!request && !current;
+  const error = current && "error" in current ? current.error : contentError;
+  const setCount = useCallback((count: number) => {
+    setResult(previous => previous && previous.request === request && "bytes" in previous
+      ? { ...previous, count }
+      : previous);
+  }, [request]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -57,36 +73,34 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
       if (!controller.signal.aborted) setRegistry(emptyRegistry);
     });
     getJson<WorksheetContent>("/worksheet-content.json").then(setContent).catch(() => {
-      if (!controller.signal.aborted) setError("The reviewed worksheet content could not be loaded. Refresh and try again.");
+      if (!controller.signal.aborted) setContentError("The reviewed worksheet content could not be loaded. Refresh and try again.");
     });
     return () => controller.abort();
   }, []);
 
   useEffect(() => {
-    setBytes(undefined); setCount(0);
-    if (step !== 3 || !registry || !content || !draft.entries.length) {
-      setGenerating(false); return;
-    }
+    if (!request) return;
+    const { draft, questions, registry, mode, files, openPdf, content } = request;
     const controller = new AbortController();
-    setGenerating(true); setError("");
-    const timer = setTimeout(() => {
-      import("@/lib/worksheet-render").then(({ renderWorksheet }) =>
-        renderWorksheet(draft, questions, registry, mode, files, openPdf, controller.signal, content)
-      ).then(result => {
-        if (!controller.signal.aborted) setBytes(result);
-      }).catch(e => {
-        if (!controller.signal.aborted) setError(e instanceof Error ? e.message : "PDF generation failed.");
-      }).finally(() => { if (!controller.signal.aborted) setGenerating(false); });
+    let previewUrl: string | undefined;
+    const timer = setTimeout(async () => {
+      try {
+        const { renderWorksheet } = await import("@/lib/worksheet-render");
+        if (controller.signal.aborted) return;
+        const bytes = await renderWorksheet(draft, questions, registry, mode, files, openPdf, controller.signal, content);
+        if (controller.signal.aborted) return;
+        previewUrl = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }));
+        setResult({ request, bytes, url: previewUrl, count: 0 });
+      } catch (e) {
+        if (!controller.signal.aborted) setResult({ request, error: e instanceof Error ? e.message : "PDF generation failed." });
+      }
     }, 120);
-    return () => { clearTimeout(timer); controller.abort(); };
-  }, [content, draft, files, mode, openPdf, questions, registry, step]);
-
-  useEffect(() => {
-    if (!bytes) { setUrl(""); return; }
-    const link = URL.createObjectURL(new Blob([new Uint8Array(bytes)], { type: "application/pdf" }));
-    setUrl(link);
-    return () => URL.revokeObjectURL(link);
-  }, [bytes]);
+    return () => {
+      clearTimeout(timer);
+      controller.abort();
+      if (previewUrl) URL.revokeObjectURL(previewUrl);
+    };
+  }, [request]);
 
   const selected = useMemo(() => new Set(draft.entries.map(e => e.id)), [draft.entries]);
   const byId = useMemo(() => new Map(questions.map(q => [q.id, q])), [questions]);
@@ -146,10 +160,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
     setTimeout(() => URL.revokeObjectURL(link), 1000);
   }
   const labels = ["Select questions", "Arrange worksheet", "Format document", "Preview and export"];
-  const hasAnswers = draft.entries.some(e => registry?.questions[e.id]?.answer);
-
   const f = draft.format;
-  useEffect(() => { if (!hasAnswers && mode !== "questions") setMode("questions"); }, [hasAnswers, mode]);
 
   return <div className="page worksheet-page">
     <header className="worksheet-heading">

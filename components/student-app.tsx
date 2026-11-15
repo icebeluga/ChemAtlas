@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { ChangeEvent, type SetStateAction, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Activity, ArrowUpRight, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, ListChecks, Menu } from "lucide-react";
 import stimulusDocument from "../research/stimuli.json";
@@ -134,6 +134,77 @@ function PdfQuestionPage({ page, sourcePage, bankId, bankName, questionNumber=0,
   </div>;
 }
 
+function restoreWorksheetBackup(): Backup {
+  const draft = newDraft();
+  let next: Backup = { version: 1, active: draft.id, drafts: [draft] };
+  try {
+    const saved = backupSchema.safeParse(JSON.parse(localStorage.getItem(worksheetStorageKey) || "null"));
+    if (saved.success) next = saved.data;
+    const legacy: unknown = JSON.parse(localStorage.getItem(BANK_WORKSHEET_KEY) || "null");
+    if (Array.isArray(legacy)) {
+      const ids = legacy.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 200);
+      if (ids.length) {
+        const target = next.drafts.length < 100 && saved.success ? newDraft("Imported Question Bank selection") : next.drafts.find(item => item.id === next.active)!;
+        const migrated = addEntries(target, ids);
+        const drafts = next.drafts.some(item => item.id === target.id)
+          ? next.drafts.map(item => item.id === target.id ? migrated : item)
+          : [...next.drafts, migrated];
+        next = { ...next, active: migrated.id, drafts };
+        localStorage.setItem(worksheetStorageKey, JSON.stringify(next));
+        if (ids.every(id => migrated.entries.some(entry => entry.id === id))) localStorage.removeItem(BANK_WORKSHEET_KEY);
+      }
+    }
+  } catch { /* Retain the in-memory draft when browser storage is unavailable. */ }
+  return next;
+}
+
+type BrowserState = Omit<Saved, "sourcePages"> & { backup?: Backup };
+
+function restoreBrowserState(initial: BrowserState): BrowserState {
+  const state = { ...initial, backup: restoreWorksheetBackup() };
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
+    const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
+    const migrated = Object.fromEntries(Object.entries(prior.progress || {}).map(([id,p]) => [id, {
+      attempts:p.attempts || 0, wrong:p.wrong || 0, correct:p.correct || 0, last:p.last || "",
+      history:(p.history || []).map(h=>({date:h.date,result:h.correct ? "correct" as const : "missed" as const}))
+    }]));
+    state.progress = { ...migrated, ...(saved.progress || {}) };
+    state.overrides = saved.overrides || {};
+    state.sessions = saved.sessions || 0;
+    if (saved.banks?.length) state.banks = [...initial.banks, ...saved.banks.filter(b => b.id !== "mega")];
+    if (saved.questions?.length) state.questions = saved.questions.filter(q => q.sourceBank);
+  } catch { /* Keep the bundled bank usable if browser storage is damaged. */ }
+  return state;
+}
+
+function createBrowserState() {
+  const initial: BrowserState = {
+    progress: {}, overrides: {}, sessions: 0, questions: [],
+    banks: [{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }],
+  };
+  let snapshot = initial;
+  const listeners = new Set<() => void>();
+  function publish(state: BrowserState) {
+    snapshot = state;
+    listeners.forEach(listener => listener());
+  }
+  return {
+    getServerSnapshot: () => initial,
+    getSnapshot: () => snapshot,
+    subscribe(listener: () => void) {
+      // Subscriptions begin after hydration, when browser storage is available.
+      listeners.add(listener);
+      if (snapshot === initial) publish(restoreBrowserState(initial));
+      return () => { listeners.delete(listener); };
+    },
+    set<Key extends keyof BrowserState>(key: Key, update: SetStateAction<BrowserState[Key]>) {
+      const value = typeof update === "function" ? update(snapshot[key]) : update;
+      if (!Object.is(value, snapshot[key])) publish({ ...snapshot, [key]: value });
+    },
+  };
+}
+
 export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
@@ -142,40 +213,17 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const selectedTopic = route.topic;
   const typeFilter = route.type;
   const query = route.query;
-  const [catalog, setCatalog] = useState<Catalog>({ units: [], questions: [], sourcePages: 0, stats: {} });
+  const [bundledCatalog, setBundledCatalog] = useState<Catalog>({ units: [], questions: [], sourcePages: 0, stats: {} });
   const [approvedImages] = useState<Record<string, string[]>>({});
-  const [progress, setProgress] = useState<Record<string, Attempt>>({});
-  const [overrides, setOverrides] = useState<Record<string, string>>({});
-  const [banks, setBanks] = useState<Bank[]>([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }]);
-  const [sessions, setSessions] = useState(0);
+  const [browserState] = useState(createBrowserState);
+  const { backup, progress, overrides, banks, sessions, questions: userQuestions } = useSyncExternalStore(browserState.subscribe, browserState.getSnapshot, browserState.getServerSnapshot);
+  const catalog = useMemo(() => userQuestions.length
+    ? { ...bundledCatalog, questions: [...bundledCatalog.questions, ...userQuestions] }
+    : bundledCatalog, [bundledCatalog, userQuestions]);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
-  const [backup, setBackup] = useState<Backup>();
-  useEffect(() => {
-    const draft = newDraft();
-    let next: Backup = { version: 1, active: draft.id, drafts: [draft] };
-    try {
-      const saved = backupSchema.safeParse(JSON.parse(localStorage.getItem(worksheetStorageKey) || "null"));
-      if (saved.success) next = saved.data;
-      const legacy: unknown = JSON.parse(localStorage.getItem(BANK_WORKSHEET_KEY) || "null");
-      if (Array.isArray(legacy)) {
-        const ids = legacy.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 200);
-        if (ids.length) {
-          const target = next.drafts.length < 100 && saved.success ? newDraft("Imported Question Bank selection") : next.drafts.find(item => item.id === next.active)!;
-          const migrated = addEntries(target, ids);
-          const drafts = next.drafts.some(item => item.id === target.id)
-            ? next.drafts.map(item => item.id === target.id ? migrated : item)
-            : [...next.drafts, migrated];
-          next = { ...next, active: migrated.id, drafts };
-          localStorage.setItem(worksheetStorageKey, JSON.stringify(next));
-          if (ids.every(id => migrated.entries.some(entry => entry.id === id))) localStorage.removeItem(BANK_WORKSHEET_KEY);
-        }
-      }
-    } catch { /* Retain the in-memory draft when browser storage is unavailable. */ }
-    setBackup(next);
-  }, []);
   function saveWorksheets(next: Backup) {
-    setBackup(next);
+    browserState.set("backup", next);
     try { localStorage.setItem(worksheetStorageKey, JSON.stringify(next)); }
     catch { setNotice("Draft changes could not be saved in this browser. Download a worksheet backup before leaving."); }
   }
@@ -234,18 +282,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   }
 
   useEffect(() => {
-    fetch("/student-questions.json").then(r => r.json()).then(raw => { const data=raw as Catalog; setCatalog(old=>({...data,questions:[...data.questions,...old.questions.filter(q=>q.sourceBank)]})); }).catch(() => setNotice("Question catalog could not be loaded."));
-    try {
-      const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
-      const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
-      const migrated = Object.fromEntries(Object.entries(prior.progress || {}).map(([id,p]) => [id, {
-        attempts:p.attempts || 0, wrong:p.wrong || 0, correct:p.correct || 0, last:p.last || "",
-        history:(p.history || []).map(h=>({date:h.date,result:h.correct ? "correct" as const : "missed" as const}))
-      }]));
-      setProgress({ ...migrated, ...(saved.progress || {}) }); setOverrides(saved.overrides || {}); setSessions(saved.sessions || 0);
-      if (saved.banks?.length) setBanks([{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }, ...saved.banks.filter(b => b.id !== "mega")]);
-      if (saved.questions?.length) setCatalog(old => ({ ...old, questions: [...old.questions, ...saved.questions!.filter(q => q.sourceBank)] }));
-    } catch { /* keep the bundled bank usable if browser storage is damaged */ }
+    fetch("/student-questions.json").then(r => r.json()).then(data => setBundledCatalog(data as Catalog)).catch(() => setNotice("Question catalog could not be loaded."));
   }, []);
   useEffect(() => { if (catalog.questions.length) localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress, overrides, banks: banks.filter(b => b.id !== "mega"), questions: catalog.questions.filter(q => q.sourceBank), sessions } satisfies Saved)); }, [catalog.questions, progress, overrides, banks, sessions]);
 
@@ -270,9 +307,9 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     try {
       const imported = parseProgress(await file.text());
       if (!window.confirm("Replace this browser's progress, classifications, and session count with the imported copy? This cannot be undone.")) return;
-      setProgress(imported.progress);
-      setOverrides(imported.overrides);
-      setSessions(imported.sessions);
+      browserState.set("progress", imported.progress);
+      browserState.set("overrides", imported.overrides);
+      browserState.set("sessions", imported.sessions);
       setNotice("Progress imported. Your bundled catalog and source PDFs were not changed.");
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "Unable to read the progress file.");
@@ -347,13 +384,13 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
         (typeFilter === "Mixed" || q.type === typeFilter);
     });
     const shuffled = [...pool].sort(() => Math.random() - .5).slice(0, sessionSize);
-    setQueue(shuffled); setIndex(0); setPageIndex(0); setSelfResult(null); setWork(""); setSubmitted(false); setSessions(s => s + (shuffled.length ? 1 : 0));
+    setQueue(shuffled); setIndex(0); setPageIndex(0); setSelfResult(null); setWork(""); setSubmitted(false); browserState.set("sessions", s => s + (shuffled.length ? 1 : 0));
     if (!shuffled.length) setNotice("No matched questions fit those filters yet. Check Review or change the topic/type."); else { setNotice(""); navigate("practice", { questionId: shuffled[0].id, sessionIds: shuffled.map(q => q.id), step: 0 }); }
   }
   function markSelfCheck(result: "correct" | "missed" | "unsure") {
     if (!current || !submitted) return;
     const date = new Date().toISOString().slice(0,10);
-    setProgress(old => { const p = old[current.id] || { attempts:0, wrong:0, correct:0, last:"", history:[] }; return { ...old, [current.id]: { attempts:p.attempts+1, wrong:p.wrong+(result === "missed" ? 1 : 0), correct:p.correct+(result === "correct" ? 1 : 0), last:date, history:[...p.history,{ date, result }] } }; });
+    browserState.set("progress", old => { const p = old[current.id] || { attempts:0, wrong:0, correct:0, last:"", history:[] }; return { ...old, [current.id]: { attempts:p.attempts+1, wrong:p.wrong+(result === "missed" ? 1 : 0), correct:p.correct+(result === "correct" ? 1 : 0), last:date, history:[...p.history,{ date, result }] } }; });
     setSelfResult(result);
   }
   function goToPracticeIndex(nextIndex: number) {
@@ -371,7 +408,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     try {
       const id = `bank-${crypto.randomUUID()}`; await savePdf(id, file);
       const bank = { id, name:file.name, size:file.size, addedAt:new Date().toISOString() };
-      setBanks(old => [...old,bank]); setNewQuestionBank(id); setNotice(`${file.name} is saved. Add page references below to put its questions into your catalog.`);
+      browserState.set("banks", old => [...old,bank]); setNewQuestionBank(id); setNotice(`${file.name} is saved. Add page references below to put its questions into your catalog.`);
     } catch { setNotice("The PDF could not be saved in this browser. Check available storage and try again."); }
     finally { setUploading(false); }
   }
@@ -380,10 +417,10 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     if (!bank || !Number.isInteger(page) || page < 1 || !Number.isInteger(number) || number < 1 || !newQuestionTopic) { setNotice("Add a valid source page, question number, and primary topic."); return; }
     const topic = topics.find(t=>t.id===newQuestionTopic)!; const id=`manual-${newQuestionBank}-${page}-${number}-${Date.now()}`;
     const q: Question = { id, type:newQuestionType, year:null, exam:"Added source bank", number, pages:[page], primaryUnit:topic.unit, unitName:topic.unitName, primaryTopic:topic.id, topicName:topic.name, secondaryTopics:[], secondaryTopicNames:[], multiConcept:false, classificationConfidence:1, status:"classified", textPreview:"Manually indexed source page. Open the page image to verify the question and topic.", source:bank.name, sourceBank:newQuestionBank };
-    setCatalog(c=>({...c,questions:[...c.questions,q]})); setShowAddQuestion(false); setNewQuestionPage(""); setNewQuestionNumber(""); setNotice("Question added. Progress and existing questions were preserved.");
+    browserState.set("questions", old => [...old, q]); setShowAddQuestion(false); setNewQuestionPage(""); setNewQuestionNumber(""); setNotice("Question added. Progress and existing questions were preserved.");
   }
-  function updateClassification(q: Question, value: string) { setOverrides(old=>({...old,[q.id]:value})); setNotice("Topic assignment saved."); }
-  function addReviewItem(q: Question) { setOverrides(old=>({...old,[q.id]:old[q.id] || ""})); }
+  function updateClassification(q: Question, value: string) { browserState.set("overrides", old=>({...old,[q.id]:value})); setNotice("Topic assignment saved."); }
+  function addReviewItem(q: Question) { browserState.set("overrides", old=>({...old,[q.id]:old[q.id] || ""})); }
   function openQuestion(q: Question) { setQueue([q]); setIndex(0); setPageIndex(0); setImageMode(approvedImages[q.id]?.length?"approved":"full"); setSubmitted(false); setSelfResult(null); setWork(""); navigate("detail", { questionId: q.id }); }
   function partsForTopic(q: Question, topicId?: string) { return (q.topicParts||[]).filter(part=>!topicId || part.topics.includes(topicId)); }
 

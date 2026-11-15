@@ -90,7 +90,8 @@ export function PdfQuestionPage({
   const renderId = JSON.stringify([contentId, zoom, sizeVersion, fitWidth, fitHeight]);
   const busy = result?.renderId !== renderId;
   const error = result?.renderId === renderId ? result.error : undefined;
-  const fitted = zoom === "width" || zoom === "page";
+  const fitToHeight = zoom === "page";
+  const fitted = zoom === "width" || fitToHeight;
 
   useEffect(() => {
     const frame = wrap.current;
@@ -98,14 +99,15 @@ export function PdfQuestionPage({
     const viewport = frame.closest<HTMLElement>("[data-pdf-viewport]") ?? frame;
     let { clientWidth: width, clientHeight: height } = viewport;
     const observer = new ResizeObserver(() => {
-      if (width === viewport.clientWidth && height === viewport.clientHeight) return;
+      // A width-fitted phone viewer grows with its content, including its loading message.
+      if (width === viewport.clientWidth && (!fitToHeight || height === viewport.clientHeight)) return;
       width = viewport.clientWidth;
       height = viewport.clientHeight;
       setSizeVersion(previous => previous + 1);
     });
     observer.observe(viewport);
     return () => observer.disconnect();
-  }, [fitted]);
+  }, [fitted, fitToHeight]);
 
   useEffect(() => {
     const frame = wrap.current;

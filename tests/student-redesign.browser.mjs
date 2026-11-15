@@ -335,6 +335,46 @@ async function waitForQuestionCanvases(page, count) {
   }, count);
 }
 
+test("phone fit-width rendering settles and ignores height-only changes", async (t) => {
+  const page = await openPage(390, "/?view=detail&question=frq-2005-2-7&unit=u1&topic=1.3");
+  t.after(() => page.close());
+  await waitForQuestionCanvases(page, 1);
+  const result = await page.locator(".ca-viewport").evaluate(async viewport => {
+    const width = viewport.clientWidth;
+    const height = viewport.clientHeight;
+    let loading = false;
+    const observer = new MutationObserver(records => {
+      loading ||= records.some(record => Array.from(record.addedNodes).some(node =>
+        node instanceof HTMLElement && node.matches(".pdf-wait")));
+    });
+    observer.observe(viewport, { childList: true, subtree: true });
+    const observeFrames = () => new Promise(resolve => {
+      let frames = 0;
+      function tick() {
+        if (++frames === 12) resolve();
+        else requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+    await observeFrames();
+    const settled = !loading && !viewport.querySelector(".pdf-wait");
+    loading = false;
+    viewport.style.flex = "none";
+    viewport.style.height = `${height + 40}px`;
+    await observeFrames();
+    observer.disconnect();
+    return { settled, loading: loading || !!viewport.querySelector(".pdf-wait"), width, height,
+      changedWidth: viewport.clientWidth, changedHeight: viewport.clientHeight };
+  });
+  assert.ok(result.settled, "the loading message stays gone once the source has rendered");
+  assert.equal(result.changedWidth, result.width);
+  assert.notEqual(result.changedHeight, result.height);
+  assert.equal(result.loading, false, "height-only changes do not restart a width-fitted render");
+  const before = await page.locator(".ca-viewport canvas").evaluate(canvas => parseFloat(canvas.style.width));
+  await page.setViewportSize({ width: 430, height: 844 });
+  await page.waitForFunction(width => parseFloat(document.querySelector(".ca-viewport canvas")?.style.width) > width, before);
+});
+
 test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", async (t) => {
   const page = await openPage(390, "/?view=detail&question=mcq-2008-1-29");
   t.after(() => page.close());

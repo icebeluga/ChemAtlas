@@ -2,8 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
-import { Minus, Plus } from "lucide-react";
-import { AtlasButton } from "./ui/atlas-controls";
+import { ChevronLeft, ChevronRight, Minus, MoveHorizontal, Plus, Scan } from "lucide-react";
 
 export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array; count: number; onCount: (n: number) => void }) {
   const host = useRef<HTMLDivElement>(null);
@@ -60,15 +59,15 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
   }, [doc, page, zoom, width, fitHeight]);
 
   return <div className="worksheet-preview">
-    <div className="worksheet-actions" role="group" aria-label="PDF preview controls">
-      <AtlasButton variant="ghost" disabled={page === 1} onClick={() => setPage(page - 1)}>Previous</AtlasButton>
+    <div className="ca-b-preview-bar" role="group" aria-label="PDF preview controls">
+      <button type="button" className="ca-icon" aria-label="Previous page" title="Previous page" disabled={page === 1} onClick={() => setPage(page - 1)}><ChevronLeft size={16} aria-hidden="true" /></button>
       <span aria-live="polite">Page {page} of {count || "…"}</span>
-      <AtlasButton variant="ghost" disabled={page >= count} onClick={() => setPage(page + 1)}>Next</AtlasButton>
-      <AtlasButton variant="icon" aria-label="Zoom out" disabled={zoom <= .5} onClick={() => setZoom(Math.max(.5, zoom - .25))}><Minus size={16} aria-hidden="true" /></AtlasButton>
+      <button type="button" className="ca-icon" aria-label="Next page" title="Next page" disabled={page >= count} onClick={() => setPage(page + 1)}><ChevronRight size={16} aria-hidden="true" /></button>
+      <button type="button" className="ca-icon" aria-label="Zoom out" title="Zoom out" disabled={zoom <= .5} onClick={() => setZoom(Math.max(.5, zoom - .25))}><Minus size={16} aria-hidden="true" /></button>
       <span aria-live="polite">{Math.round(zoom * 100)}%</span>
-      <AtlasButton variant="icon" aria-label="Zoom in" disabled={zoom >= 2} onClick={() => setZoom(Math.min(2, zoom + .25))}><Plus size={16} aria-hidden="true" /></AtlasButton>
-      <AtlasButton variant="ghost" aria-pressed={!fitPage} onClick={() => { setZoom(1); setFitPage(false); }}>Fit width</AtlasButton>
-      <AtlasButton variant="ghost" aria-pressed={fitPage} onClick={() => { setZoom(1); setFitPage(true); }}>Fit page</AtlasButton>
+      <button type="button" className="ca-icon" aria-label="Zoom in" title="Zoom in" disabled={zoom >= 2} onClick={() => setZoom(Math.min(2, zoom + .25))}><Plus size={16} aria-hidden="true" /></button>
+      <button type="button" className="ca-icon" aria-label="Fit width" title="Fit width" aria-pressed={!fitPage} onClick={() => { setZoom(1); setFitPage(false); }}><MoveHorizontal size={16} aria-hidden="true" /></button>
+      <button type="button" className="ca-icon" aria-label="Fit page" title="Fit page" aria-pressed={fitPage} onClick={() => { setZoom(1); setFitPage(true); }}><Scan size={16} aria-hidden="true" /></button>
     </div>
     <div className="worksheet-paper" data-fit-page={fitPage} ref={host} role="region" aria-label="Worksheet PDF" tabIndex={0}>
       {error && <p role="alert">{error}</p>}

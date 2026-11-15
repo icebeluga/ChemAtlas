@@ -10,7 +10,6 @@ import type { Backup, Draft, ExportMode, Format, Region, SourceFile } from "@/li
 import { useExportData } from "@/components/student/hooks/use-export-data";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
 import { ArrowDown, ArrowUp, Check, ChevronDown, GripVertical, Plus, TriangleAlert, Undo2, X } from "lucide-react";
-import { AtlasButton } from "./ui/atlas-controls";
 import { WorksheetPreview } from "./worksheet-preview";
 
 type Candidate = WorksheetQuestion & { year: string | null; relatedTopics?: (string | undefined)[]; textPreview: string };
@@ -316,82 +315,82 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
           {bytes && <WorksheetPreview bytes={bytes} count={count} onCount={setCount} />}
         </div>}
 
-        {pane === 2 && <div className="worksheet-page ca-b-legacy">
-          <label className="worksheet-preset">Apply a preset<select value="" onChange={e => {
+        {pane === 2 && <div className="ca-b-form">
+          <label className="ca-b-field ca-b-preset">Apply a preset<select value="" onChange={e => {
             const preset = presets[Number(e.target.value)]; if (!preset) return;
             update({ ...draft, format: { ...defaultFormat, ...preset.format } }, true);
             setFilter("type", preset.type); setNotice(`Applied ${preset.name}.`);
           }}><option value="" disabled>Choose a preset</option>{presets.map((preset, i) => <option value={i} key={preset.name}>{preset.name}</option>)}</select></label>
-          <fieldset className="worksheet-format-group"><legend>Document details</legend><div className="worksheet-fields">
-            <label>Title<input maxLength={100} value={f.title} onChange={e => changeFormat("title", e.target.value)} /></label>
-            <label>Subtitle<input maxLength={120} value={f.subtitle} onChange={e => changeFormat("subtitle", e.target.value)} /></label>
-          </div><label>Worksheet instructions<textarea rows={3} maxLength={320} value={f.instructions} onChange={e => changeFormat("instructions", e.target.value)} /></label></fieldset>
-          <fieldset className="worksheet-format-group"><legend>Page layout</legend><div className="worksheet-fields">
-            <label>Paper size<select value={f.paper} onChange={e => changeFormat("paper", e.target.value as Format["paper"])}><option>Letter</option><option>A4</option></select></label>
-            <label>Orientation<select value={f.landscape ? "Landscape" : "Portrait"} onChange={e => changeFormat("landscape", e.target.value === "Landscape")}><option>Portrait</option><option>Landscape</option></select></label>
+          <fieldset className="ca-b-form-group"><legend>Document details</legend><div className="ca-b-fields">
+            <label className="ca-b-field">Title<input maxLength={100} value={f.title} onChange={e => changeFormat("title", e.target.value)} /></label>
+            <label className="ca-b-field">Subtitle<input maxLength={120} value={f.subtitle} onChange={e => changeFormat("subtitle", e.target.value)} /></label>
+          </div><label className="ca-b-field">Worksheet instructions<textarea rows={3} maxLength={320} value={f.instructions} onChange={e => changeFormat("instructions", e.target.value)} /></label></fieldset>
+          <fieldset className="ca-b-form-group"><legend>Page layout</legend><div className="ca-b-fields">
+            <label className="ca-b-field">Paper size<select value={f.paper} onChange={e => changeFormat("paper", e.target.value as Format["paper"])}><option>Letter</option><option>A4</option></select></label>
+            <label className="ca-b-field">Orientation<select value={f.landscape ? "Landscape" : "Portrait"} onChange={e => changeFormat("landscape", e.target.value === "Landscape")}><option>Portrait</option><option>Landscape</option></select></label>
             {([["margin", "Margins (pt)", 24, 72], ["font", "Document text (pt)", 9, 16], ["gap", "Question spacing (pt)", 4, 36], ["lines", "FRQ response lines", 0, 12]] as const).map(([key, label, min, max]) =>
-              <label key={key}>{label}<input type="range" min={min} max={max} value={f[key]} onChange={e => changeFormat(key, Number(e.target.value))} /><output>{f[key]}</output></label>)}
+              <label className="ca-b-field" key={key}>{label}<input type="range" min={min} max={max} value={f[key]} onChange={e => changeFormat(key, Number(e.target.value))} /><output>{f[key]}</output></label>)}
           </div></fieldset>
-          <fieldset className="worksheet-format-group"><legend>Question sections</legend><div className="worksheet-fields">
-            <label>Group by<select value={f.grouping} onChange={e => changeFormat("grouping", e.target.value as Format["grouping"])}><option value="none">Custom order</option><option value="type">MCQ and FRQ</option><option value="topic">Topic</option></select></label>
-            <label>MCQ section heading<input maxLength={80} value={f.mcqTitle} onChange={e => changeFormat("mcqTitle", e.target.value)} /></label>
-            <label>FRQ section heading<input maxLength={80} value={f.frqTitle} onChange={e => changeFormat("frqTitle", e.target.value)} /></label>
+          <fieldset className="ca-b-form-group"><legend>Question sections</legend><div className="ca-b-fields">
+            <label className="ca-b-field">Group by<select value={f.grouping} onChange={e => changeFormat("grouping", e.target.value as Format["grouping"])}><option value="none">Custom order</option><option value="type">MCQ and FRQ</option><option value="topic">Topic</option></select></label>
+            <label className="ca-b-field">MCQ section heading<input maxLength={80} value={f.mcqTitle} onChange={e => changeFormat("mcqTitle", e.target.value)} /></label>
+            <label className="ca-b-field">FRQ section heading<input maxLength={80} value={f.frqTitle} onChange={e => changeFormat("frqTitle", e.target.value)} /></label>
           </div>
-          {f.grouping === "type" && <div className="worksheet-fields">
-            <label>MCQ section instructions<textarea rows={2} maxLength={240} value={f.mcqInstructions} onChange={e => changeFormat("mcqInstructions", e.target.value)} /></label>
-            <label>FRQ section instructions<textarea rows={2} maxLength={240} value={f.frqInstructions} onChange={e => changeFormat("frqInstructions", e.target.value)} /></label>
+          {f.grouping === "type" && <div className="ca-b-fields">
+            <label className="ca-b-field">MCQ section instructions<textarea rows={2} maxLength={240} value={f.mcqInstructions} onChange={e => changeFormat("mcqInstructions", e.target.value)} /></label>
+            <label className="ca-b-field">FRQ section instructions<textarea rows={2} maxLength={240} value={f.frqInstructions} onChange={e => changeFormat("frqInstructions", e.target.value)} /></label>
           </div>}</fieldset>
-          <fieldset className="worksheet-format-group"><legend>Printed fields and references</legend><div className="worksheet-actions">{([["name", "Name field"], ["date", "Date field"], ["classField", "Class field"], ["pageNumbers", "Page numbers"], ["numbering", "Worksheet numbering"], ["citations", "Original source citations"], ["references", "AP reference tables"]] as const).map(([key, label]) =>
-            <label key={key} className="worksheet-check"><input type="checkbox" checked={f[key]} onChange={e => changeFormat(key, e.target.checked)} /> {label}</label>)}</div></fieldset>
-          <p className="muted">Grouping sets the section order and keeps your order within each section. Original question labels and answer-choice spacing are preserved inside the source image.</p>
+          <fieldset className="ca-b-form-group"><legend>Printed fields and references</legend><div className="ca-b-form-actions">{([["name", "Name field"], ["date", "Date field"], ["classField", "Class field"], ["pageNumbers", "Page numbers"], ["numbering", "Worksheet numbering"], ["citations", "Original source citations"], ["references", "AP reference tables"]] as const).map(([key, label]) =>
+            <label key={key} className="ca-check"><input type="checkbox" checked={f[key]} onChange={e => changeFormat(key, e.target.checked)} /> {label}</label>)}</div></fieldset>
+          <p className="ca-b-help">Grouping sets the section order and keeps your order within each section. Original question labels and answer-choice spacing are preserved inside the source image.</p>
           <button type="button" className="ca-btn is-primary" onClick={() => setStep(3)}>Preview the PDF</button>
         </div>}
 
-        {pane === 0 && <div className="worksheet-page ca-b-legacy">
-          <p className="muted">{replacement ? "Choose an unselected question to replace the current item." : "Any question can be added here, including ones awaiting classification. The Question bank is the faster way to browse by unit and topic."}</p>
-          <div className="worksheet-fields worksheet-filters">
-            <label>Search<input value={filters.search} onChange={e => setFilter("search", e.target.value)} placeholder="Question, year, or keyword" /></label>
-            <label>Unit<select value={filters.unit} onChange={e => setFilter("unit", e.target.value)}><option value="all">All units</option>{units.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
-            <label>Topic<select value={filters.topic} onChange={e => setFilter("topic", e.target.value)}><option value="all">All topics</option>{topics.filter(t => filters.unit === "all" || t.unit === filters.unit).map(t => <option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label>
-            <label>Type<select value={filters.type} onChange={e => setFilter("type", e.target.value)}><option value="all">All types</option><option>MCQ</option><option>FRQ</option></select></label>
+        {pane === 0 && <div className="ca-b-form">
+          <p className="ca-b-help">{replacement ? "Choose an unselected question to replace the current item." : "Any question can be added here, including ones awaiting classification. The Question bank is the faster way to browse by unit and topic."}</p>
+          <div className="ca-b-fields">
+            <label className="ca-b-field">Search<input value={filters.search} onChange={e => setFilter("search", e.target.value)} placeholder="Question, year, or keyword" /></label>
+            <label className="ca-b-field">Unit<select value={filters.unit} onChange={e => setFilter("unit", e.target.value)}><option value="all">All units</option>{units.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select></label>
+            <label className="ca-b-field">Topic<select value={filters.topic} onChange={e => setFilter("topic", e.target.value)}><option value="all">All topics</option>{topics.filter(t => filters.unit === "all" || t.unit === filters.unit).map(t => <option key={t.id} value={t.id}>{t.id} · {t.name}</option>)}</select></label>
+            <label className="ca-b-field">Type<select value={filters.type} onChange={e => setFilter("type", e.target.value)}><option value="all">All types</option><option>MCQ</option><option>FRQ</option></select></label>
           </div>
-          <details className="worksheet-more-filters"><summary>Additional filters{[filters.year, filters.source, filters.print, filters.history].some(value => value !== "all") && " · active"}</summary><div className="worksheet-fields">
-            <label>Exam year<select value={filters.year} onChange={e => setFilter("year", e.target.value)}><option value="all">All years</option>{[...new Set([...years, "2008"])].sort().reverse().map(y => <option key={y}>{y}</option>)}</select></label>
-            <label>Original source<select value={filters.source} onChange={e => setFilter("source", e.target.value)}><option value="all">All sources</option>{sources.map(s => <option key={s}>{s}</option>)}</select></label>
-            <label>Print status<select value={filters.print} onChange={e => setFilter("print", e.target.value)}><option value="all">All questions</option><option value="ready">Reviewed print layout</option></select></label>
-            <label>Practice history<select value={filters.history} onChange={e => setFilter("history", e.target.value)}><option value="all">Any history</option><option value="attempted">Previously attempted</option><option value="missed">Previously missed</option></select></label>
+          <details className="ca-b-filters"><summary>Additional filters{[filters.year, filters.source, filters.print, filters.history].some(value => value !== "all") && " · active"}</summary><div className="ca-b-fields">
+            <label className="ca-b-field">Exam year<select value={filters.year} onChange={e => setFilter("year", e.target.value)}><option value="all">All years</option>{[...new Set([...years, "2008"])].sort().reverse().map(y => <option key={y}>{y}</option>)}</select></label>
+            <label className="ca-b-field">Original source<select value={filters.source} onChange={e => setFilter("source", e.target.value)}><option value="all">All sources</option>{sources.map(s => <option key={s}>{s}</option>)}</select></label>
+            <label className="ca-b-field">Print status<select value={filters.print} onChange={e => setFilter("print", e.target.value)}><option value="all">All questions</option><option value="ready">Reviewed print layout</option></select></label>
+            <label className="ca-b-field">Practice history<select value={filters.history} onChange={e => setFilter("history", e.target.value)}><option value="all">Any history</option><option value="attempted">Previously attempted</option><option value="missed">Previously missed</option></select></label>
           </div></details>
-          <div className="worksheet-actions worksheet-filter-actions">
-            <AtlasButton variant="ghost" onClick={() => { setFilters(filterDefaults); setPage(0); }}>Clear filters</AtlasButton>
-            {!replacement && <><label className="worksheet-inline">Auto-add count<input type="number" min={1} max={50} value={amount} onChange={e => setAmount(Math.min(50, Math.max(1, Number(e.target.value) || 1)))} /></label>
-            <button className="outline" onClick={() => add(candidates.filter(q => !selected.has(q.id)).slice(0, amount).map(q => q.id))}>Auto-add from matches</button></>}
+          <div className="ca-b-form-actions">
+            <button type="button" className="ca-btn is-quiet" onClick={() => { setFilters(filterDefaults); setPage(0); }}>Clear filters</button>
+            {!replacement && <><label className="ca-b-inline">Auto-add count<input type="number" min={1} max={50} value={amount} onChange={e => setAmount(Math.min(50, Math.max(1, Number(e.target.value) || 1)))} /></label>
+            <button type="button" className="ca-btn is-quiet" onClick={() => add(candidates.filter(q => !selected.has(q.id)).slice(0, amount).map(q => q.id))}>Auto-add from matches</button></>}
           </div>
-          <div className="worksheet-actions"><b role="status">{candidates.length.toLocaleString()} matches</b>{replacement && <button className="outline" onClick={() => { setReplacement(""); setStep(3); }}>Cancel replacement</button>}</div>
+          <div className="ca-b-form-actions"><b role="status">{candidates.length.toLocaleString()} matches</b>{replacement && <button type="button" className="ca-btn is-quiet" onClick={() => { setReplacement(""); setStep(3); }}>Cancel replacement</button>}</div>
           {candidates.slice(page * resultSize, (page + 1) * resultSize).map(q => {
             const original = worksheetSource(q, registry);
             const reviewed = content?.questions[q.id];
             const previewRegions = [...(reviewed?.context ? content?.contexts[reviewed.context] ?? [] : []), ...(reviewed?.blocks ?? [])]
               .filter(block => block.kind === "region");
             const print = { ...original, pages: previewRegions.length ? previewRegions : original.pages };
-            return <article className="worksheet-row" key={q.id} data-selected={selected.has(q.id)}>
-              <div><b className="worksheet-question-title"><span className={`type-chip ${q.type.toLowerCase()}`}>{q.type}</span> {q.number} · {print.exam ?? q.exam}</b>
+            return <article className="ca-b-result" key={q.id} data-selected={selected.has(q.id)}>
+              <div><b className="ca-b-result-title"><span className="ca-tag" data-t={q.type}>{q.type}</span> {q.number} · {print.exam ?? q.exam}</b>
                 <small>{q.displayTopic} {q.displayName}{print.answer ? " · Verified answer" : ""}</small>
-                {content && <small className={`atlas-chip atlas-tone-${reviewed ? "success" : "review"}`}>{reviewed ? "Reviewed print layout" : "Full source page fallback"}</small>}
+                {content && <small className="ca-b-result-status" data-reviewed={!!reviewed}>{reviewed ? "Reviewed print layout" : "Full source page fallback"}</small>}
                 {content?.review?.[q.id] && <small>{content.review[q.id]}</small>}
               </div>
-              <div className="worksheet-actions">
-                {print.pages.length > 0 && <button className="outline" aria-expanded={source?.id === q.id} onClick={() => setSource(source?.id === q.id ? undefined : { id: q.id, part: 0 })}>{source?.id === q.id ? "Close preview" : "Preview"}</button>}
-                <AtlasButton variant={selected.has(q.id) ? "tertiary" : "secondary"} disabled={selected.has(q.id)} onClick={() => add([q.id])}>{selected.has(q.id) ? <><Check size={16} aria-hidden="true" /> Added</> : replacement ? "Use replacement" : "Add to Worksheet"}</AtlasButton>
+              <div className="ca-b-form-actions">
+                {print.pages.length > 0 && <button type="button" className="ca-btn is-quiet" aria-expanded={source?.id === q.id} onClick={() => setSource(source?.id === q.id ? undefined : { id: q.id, part: 0 })}>{source?.id === q.id ? "Close preview" : "Preview"}</button>}
+                <button type="button" className="ca-btn" disabled={selected.has(q.id)} onClick={() => add([q.id])}>{selected.has(q.id) ? <><Check size={16} aria-hidden="true" /> Added</> : replacement ? "Use replacement" : "Add to Worksheet"}</button>
               </div>
-              {source?.id === q.id && print.pages.length > 0 && <div className="worksheet-source">
-                {print.pages.length > 1 && <div className="worksheet-actions">{print.pages.map((p, i) => <button key={i} className="outline" aria-pressed={source.part === i} onClick={() => setSource({ id: q.id, part: i })}>Source page {p.page}{print.pages.some((other, j) => j !== i && other.page === p.page) ? ` · region ${i + 1}` : ""}</button>)}</div>}
+              {source?.id === q.id && print.pages.length > 0 && <div className="ca-b-source">
+                {print.pages.length > 1 && <div className="ca-b-form-actions">{print.pages.map((p, i) => <button key={i} className="outline" aria-pressed={source.part === i} onClick={() => setSource({ id: q.id, part: i })}>Source page {p.page}{print.pages.some((other, j) => j !== i && other.page === p.page) ? ` · region ${i + 1}` : ""}</button>)}</div>}
                 {renderSource(q, print.pages[source.part] ?? print.pages[0])}
               </div>}
             </article>;
           })}
-          <div className="worksheet-actions"><button className="outline" disabled={page === 0} onClick={() => setPage(page - 1)}>Previous results</button>
+          <div className="ca-b-form-actions"><button type="button" className="ca-btn is-quiet" disabled={page === 0} onClick={() => setPage(page - 1)}>Previous results</button>
             <span>Page {page + 1} of {Math.max(1, Math.ceil(candidates.length / resultSize))}</span>
-            <button className="outline" disabled={(page + 1) * resultSize >= candidates.length} onClick={() => setPage(page + 1)}>Next results</button></div>
+            <button type="button" className="ca-btn is-quiet" disabled={(page + 1) * resultSize >= candidates.length} onClick={() => setPage(page + 1)}>Next results</button></div>
         </div>}
       </section>
     </div>

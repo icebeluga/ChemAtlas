@@ -166,3 +166,40 @@ test("grouped outline movements stay within their section and preserve unrelated
   await outline.getByRole("button", { name: "Move question 1 down" }).click();
   assert.deepEqual(await saved(), [mcq3, frq1, frq2, mcq1, mcq2]);
 });
+
+test("builder tabs retain the layout, picker and PDF toolbar controls", async (t) => {
+  const page = await openPage(768, "/practice-builder", ["mcq-2008-1-29", "mcq-2008-2-29", "mcq-2018-23-2039", "frq-2006-3-22"]);
+  t.after(() => page.close());
+  const tabs = page.getByRole("group", { name: "Builder view" });
+  await tabs.getByRole("button", { name: "Layout", exact: true }).click();
+  const layout = page.getByRole("region", { name: "Layout" });
+  await layout.waitFor();
+  for (const label of ["Apply a preset", "Title", "Subtitle", "Worksheet instructions", "Paper size", "Orientation",
+    "Group by", "MCQ section heading", "FRQ section heading", "MCQ section instructions", "FRQ section instructions"]) {
+    await layout.getByLabel(new RegExp(`^${label}`)).waitFor({ timeout: 4000 });
+  }
+  assert.equal(await layout.getByRole("slider").count(), 4);
+  assert.equal(await layout.getByRole("checkbox").count(), 7);
+  await tabs.getByRole("button", { name: "Add questions", exact: true }).click();
+  const picker = page.getByRole("region", { name: "Add questions" });
+  await picker.getByText("Additional filters", { exact: true }).click();
+  for (const label of ["Search", "Unit", "Topic", "Type", "Exam year", "Original source", "Print status", "Practice history", "Auto-add count"]) {
+    await picker.getByLabel(new RegExp(`^${label}`)).waitFor({ timeout: 4000 });
+  }
+  await picker.getByRole("button", { name: "Preview", exact: true }).first().click();
+  await picker.getByRole("button", { name: "Close preview", exact: true }).waitFor();
+
+  await tabs.getByRole("button", { name: "Preview", exact: true }).click();
+  const toolbar = page.getByRole("group", { name: "PDF preview controls" });
+  await toolbar.getByText(/Page 1 of [2-9]\d*/).waitFor();
+  assert.ok(await toolbar.getByRole("button", { name: "Previous page" }).isDisabled());
+  await toolbar.getByRole("button", { name: "Next page" }).click();
+  await toolbar.getByText(/Page 2 of \d+/).waitFor();
+  await toolbar.getByRole("button", { name: "Zoom in" }).click();
+  assert.ok(await toolbar.getByText("125%", { exact: true }).isVisible());
+  await toolbar.getByRole("button", { name: "Fit page" }).click();
+  assert.equal(await toolbar.getByRole("button", { name: "Fit page" }).getAttribute("aria-pressed"), "true");
+  await toolbar.getByRole("button", { name: "Fit width" }).click();
+  assert.ok(await toolbar.getByText("100%", { exact: true }).isVisible());
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 768);
+});

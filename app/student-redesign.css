@@ -190,6 +190,7 @@
 .ca2 .ca-build :where(input:not([type=checkbox],[type=range],[type=file]),select,textarea){height:34px;border:1px solid var(--ca-line);border-radius:var(--ca-r);background:var(--ca-surface);padding:0 9px;font:400 15px var(--ca-body);color:var(--ca-ink);min-width:0;transition:border-color var(--ca-fast)}
 .ca2 .ca-build :where(textarea){height:auto;padding:7px 9px}
 .ca2 .ca-build :where(input,select,textarea):focus{border-color:var(--ca-ink);outline:0}
+.ca2 .ca-build :where(input,select,textarea):focus-visible{outline:2px solid var(--ca-pencil);outline-offset:2px}
 .ca2 .ca-b-name input{font:600 15px var(--ca-display)}
 .ca-b-actions{display:flex;gap:8px;align-items:center}
 .ca-b-more{position:relative}
@@ -239,11 +240,33 @@
 .ca-b-preview .ca-empty{background:#fff;max-width:816px;margin:0 auto;width:100%;padding:48px;box-shadow:0 1px 2px rgb(20 35 58/.14)}
 /* the existing WorksheetPreview component, set on the desk */
 .ca2 .ca-b-preview .worksheet-preview{display:grid;gap:10px}
-.ca2 .ca-b-preview .worksheet-preview .worksheet-actions{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;padding:4px 8px;background:var(--ca-surface);border:1px solid var(--ca-line);border-radius:var(--ca-r);font-size:14px;margin:0}
+.ca-b-preview-bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:4px 8px;background:var(--ca-surface);border:1px solid var(--ca-line);border-radius:var(--ca-r);font-size:14px;font-variant-numeric:tabular-nums}
+.ca-b-preview-bar span{min-width:3ch;text-align:center}
+.ca2 .ca-b-preview-bar .ca-icon{width:34px;height:34px}
+.ca2 .ca-b-preview-bar .ca-icon[aria-pressed=true]{background:var(--ca-sunk);border-color:var(--ca-ink)}
 .ca2 .ca-b-preview .worksheet-paper{background:none;border:0;padding:0;overflow:auto;display:grid;justify-items:center}
 .ca2 .ca-b-preview .worksheet-paper canvas{background:#fff;box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35);max-width:none}
 /* Layout and Add questions keep their existing controls inside the new frame */
-.ca-b-legacy{background:var(--ca-surface);margin:14px clamp(12px,3vw,28px);padding:16px;border:1px solid var(--ca-line);border-radius:var(--ca-r);display:grid;gap:12px;max-width:900px}
+.ca-b-form{background:var(--ca-surface);margin:14px clamp(12px,3vw,28px);padding:16px;border:1px solid var(--ca-line);border-radius:var(--ca-r);display:grid;gap:14px;max-width:900px}
+.ca-b-form .ca-b-field{font-size:14px;min-width:0}
+.ca-b-form > .ca-btn{justify-self:start}
+.ca-b-form-group{min-width:0;margin:0;border:1px solid var(--ca-line);border-radius:var(--ca-r);padding:10px 12px 12px;display:grid;gap:12px}
+.ca-b-form-group legend{padding:0 6px;font:600 15px var(--ca-display)}
+.ca-b-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,175px),1fr));gap:10px 12px}
+.ca-b-preset{max-width:24rem}
+.ca-b-form input[type=range]{accent-color:var(--ca-ink)}
+.ca-b-form-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.ca-b-help,.ca-b-form output{font-size:14px;color:var(--ca-ink-2)}
+.ca-b-filters{border:1px solid var(--ca-line);border-radius:var(--ca-r);padding:8px 12px;background:var(--ca-canvas)}
+.ca-b-filters summary{cursor:pointer;font-weight:600}
+.ca-b-filters > div{padding-top:8px}
+.ca-b-result{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px 14px;padding:10px 12px;border:1px solid var(--ca-line);border-radius:var(--ca-r);overflow-wrap:anywhere}
+.ca-b-result[data-selected=true]{background:var(--ca-canvas)}
+.ca-b-result small{display:block;color:var(--ca-ink-2);margin-top:3px}
+.ca-b-result-title{display:flex;flex-wrap:wrap;align-items:center;gap:6px;font:600 15px var(--ca-display)}
+.ca-b-result small.ca-b-result-status{display:inline-block;color:var(--ca-note);background:var(--ca-note-soft);padding:1px 5px;border-radius:var(--ca-r)}
+.ca-b-result small.ca-b-result-status[data-reviewed=true]{color:var(--ca-ink);background:var(--ca-sunk)}
+.ca-b-source{grid-column:1/-1;display:grid;min-width:0;gap:8px}
 
 .ca2 dialog.ca-sheet{border:0;padding:0;margin:auto 0 0;width:100vw;max-width:none;max-height:80dvh;border-radius:10px 10px 0 0;color:var(--ca-ink);background:var(--ca-surface);box-shadow:var(--ca-lift)}
 .ca2 dialog.ca-sheet::backdrop{background:rgb(20 35 58/.35)}
@@ -311,7 +334,8 @@
   .ca2 .ca-b-tools .ca-icon{width:44px;height:44px}
   .ca-b-side{overflow:visible;min-height:60dvh}
   .ca-b-preview{padding:10px 8px 32px}
-  .ca-b-legacy{margin:10px 8px}
+  .ca-b-form{margin:10px 8px;padding:12px}
+  .ca-b-result{grid-template-columns:minmax(0,1fr)}
 }
 @media (prefers-reduced-motion:reduce){.ca2 *,.ca2 *::before,.ca2 *::after{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
 @media print{.ca-bar{display:none}}

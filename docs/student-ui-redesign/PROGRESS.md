@@ -101,6 +101,46 @@ Reported for the owner; outside the redesign's scope and left as they are.
 - `primaryUnit` disagrees with the unit of `primaryTopic` in 569 of 735 classified records. Nothing reads it for filtering.
 - Lint is not run in CI.
 
+## O1 and O6: refined recommendations after investigation (2026-11-15)
+
+Evidence is in `06-o1-o6-investigation.md` (Sonnet 5.5, read-only, nothing built or run). These replace the shorter recommendations above. Awaiting the owner's answer.
+
+### O1 — `fix/local-workers-runtime`, by category
+
+| Category | Where | Recommendation |
+|---|---|---|
+| Authentication change | `b5ceab5`, `worker/index.ts` L18–24: `import.meta.env.DEV ? { ok: true } : await authenticateStudentRequest(...)` | **Exclude** from the redesign and from `main` in this form. With DEV true, every non-admin request skips the check. DEV is a build-time flag: `vite build` sets production only when `NODE_ENV` is unset, so a shell or `.env` value of `development` would build the bypass in. The only guard is the 403 assertion in `scripts/release/smoke.cjs` L56–66 (run by `validate.sh`; not run by `cloudflare-student-check.yml`). O6 removes the need for it |
+| Local Worker dev fixes | `b5ceab5`: `package.json`, `pnpm-lock.yaml` (vite plugin 1.37.1 → 1.67.0, wrangler 4.140.0 → 4.158.0, Miniflare to pre-release versions), `vite.config.ts` serve-only changes | **Defer** to its own branch and review, separate from the redesign. The lockfile hash is part of the sealed release inputs, so this is a release-relevant change. Not needed for UI work once O6 is in place |
+| Viewer improvements | `eba3977`, `components/student-app.tsx`: `PdfQuestionPage` and helpers (about 162 lines), toolbar and zoom state (about 31), crop stacking (about 17), about 42 lines of `.viewer-*` CSS | **Retain by porting** in Phase A as its own commit, crediting `eba3977`. It cannot be cherry-picked: the commit mixes viewer and layout. Re-home the CSS in the student stylesheet without the `--dv-*` tokens, and use the existing `lib/question-source.ts` `sourcePageLocation` instead of the branch's duplicate `segmentSource` |
+| Default "crop only when verified" policy | `eba3977`, reads `research/crop-visual-review.json` and `research/stimuli.json` (both tracked at the base; 96 reviews, 94 verified; 92 of 1,564 records would open as a crop) | **Defer**, new decision O8: is that research file an approved student-facing data source? It is not among the release input hashes and is maintained on another work branch. Until answered, the viewer keeps today's default |
+| Detail-page layout | `eba3977`: two-column layout, classification sidebar, header and nav rules (about 88 TSX lines, 77 CSS lines) | **Exclude**: superseded by `QuestionPane`. The branch itself is kept untouched as the record |
+
+Correction to earlier text: `verifiedCropReviews` does have a source at the base (`research/crop-visual-review.json`). What is unknown is who maintains it and whether it is meant to ship to students.
+
+Side effects of the viewer port on other screens: practice sessions, the session print view, the audit view and the builder's source preview all use `PdfQuestionPage`. They keep the old scaling path but gain the shared PDF cache, render cancelling and hide-until-drawn. The smoke test's canvas check covers the detail URL only, so Phase A adds a manual check of each of those screens.
+
+### O6 — UI-only development config
+
+Recommendation: **commit one new file, `vite.ui.config.ts`, and change nothing else.** No `package.json` script (it is an extra-review file); run it with `pnpm exec vite dev --config vite.ui.config.ts --host 127.0.0.1`.
+
+Contents: `vinext({ appDir: "student" })` with no Cloudflare plugin, written as a config function that **throws when `command === "build"`**, with a header comment saying it is for local UI work only.
+
+Why it is needed: the documented dev server puts the Worker in the request path, and `lib/student-access.mjs` L34–36 answers 503 when the Access settings are absent. The student UI needs only static files from `public/` (catalog JSON, worksheet JSON and PDF, source PDFs, the pdf.js worker) plus browser storage; it calls no API route.
+
+Why it is isolated (each point referenced in `06`):
+- It contains no authentication code and touches no Worker, Wrangler or access file.
+- Vite auto-discovers only `vite.config.*`. No script, release tool or workflow passes a Vite `--config` or globs for other config files.
+- With no Cloudflare plugin it specifies no Worker output, and `check:private`, `validate.sh`, the smoke run and the manifest all require `dist/server/wrangler.json`.
+- The build guard stops anyone producing output from it by mistake. Without the guard, a manual `vite build --config vite.ui.config.ts` would write into `dist/`.
+
+Residual risks: it is type-checked and linted like any other file, so it must pass both; `appDir` could drift from `vite.config.ts` (one line, noted in the comment); the dev server it starts has no `no-store` headers, admin 404s or Access identity, which is acceptable for a server bound to 127.0.0.1 and is the reason it must never be used to judge security behaviour. The throw-on-build guard has not been run yet; Phase A verifies it.
+
+Alternative kept available: the README's simulated Access JWT, for gate-in-path testing. No helper for a local JWKS exists today, so it is more work and is not needed for UI development.
+
+### O8 — May `research/crop-visual-review.json` drive the student viewer's default? (before Phase B)
+
+Options: (A) yes, treat it as approved student-facing data and add it to the release inputs; (B) no, keep it out of the student bundle. Recommendation: decide with whoever maintains that file; until then B.
+
 ## Unresolved facts
 
 - Where `worksheet-content.json`, `worksheet-fragments.pdf` and `worksheet-sources.json` are generated, and what approves an entry.

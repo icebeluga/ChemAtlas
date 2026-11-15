@@ -132,7 +132,7 @@ Commit `eba3977` on that branch rewrites the detail view and substantially impro
 
 **Recommendation (owner decision O1):** take the *viewer* from `eba3977` as the starting point for the extracted `PdfQuestionPage`, by cherry-picking or porting it onto the redesign branch with its author's agreement; let the redesign's `QuestionPane` replace that commit's two-column detail *layout*. Nothing on that branch is discarded: it stays as it is, and what is not adopted is listed in the migration matrix.
 
-Its `verifiedCropReviews` data has no source on `main` (section 9). Until that is explained, the pane defaults to the Question view and offers Full page, without calling anything "verified".
+Its `verifiedCropReviews` data is a static import of `research/crop-visual-review.json`, which is tracked at the base but is not among the release inputs and is maintained on another work branch (`06-o1-o6-investigation.md`). Whether it may ship to students is owner decision O8. Until that is answered it is not imported, and nothing in the UI is called "verified".
 
 ## 5. Practice Builder and worksheet state
 

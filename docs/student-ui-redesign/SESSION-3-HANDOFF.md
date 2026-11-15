@@ -72,7 +72,7 @@ Tests (`tests/use-worksheets.test.mjs`, proposed; test the pure reducer function
 
 ### A4. `components/student/pdf-question-page.tsx` (moved)
 
-Move `PdfQuestionPage` and its helpers (about L77–134 plus the IndexedDB helpers it needs) out of `components/student-app.tsx` unchanged. Then, under O1 option A, port the viewer improvements from commit `eba3977` on `fix/local-workers-runtime` into it as a separate commit: zoom, fit width, fit page, 1:1, fullscreen, ref-counted PDF cache, 16-megapixel cap, refit on resize, loading state, stale-canvas hiding. Do **not** port that commit's detail-page layout, and do not port `verifiedCropReviews` until its data source is explained (default to the existing behaviour). Credit the original commit in the message. Do not modify the source branch.
+Move `PdfQuestionPage` and its helpers (about L77–134 plus the IndexedDB helpers it needs) out of `components/student-app.tsx` unchanged. Then, under O1 option A, port the viewer improvements from commit `eba3977` on `fix/local-workers-runtime` into it as a separate commit: zoom, fit width, fit page, 1:1, fullscreen, ref-counted PDF cache, 16-megapixel cap, refit on resize, loading state, stale-canvas hiding. Do **not** port that commit's detail-page layout, and do not port the `verifiedCropReviews` default-crop policy or import `research/crop-visual-review.json` (owner decision O8; keep today's default). Port by hand, not by cherry-pick: the commit mixes viewer and layout. Put the `.viewer-*` rules in the student stylesheet without the `--dv-*` tokens, use the existing `sourcePageLocation` in `lib/question-source.ts` instead of the branch's `segmentSource`, and keep `onScale` a stable callback. `06-o1-o6-investigation.md` lists the hunks by category. After the port, check by hand that practice sessions, the session print view, the audit view and the builder's source preview still draw. Credit the original commit in the message. Do not modify the source branch.
 
 ### A5. `components/student/hooks/use-export-data.ts` (new, lifted)
 
@@ -86,7 +86,7 @@ Move the lazy loading of `worksheet-content.json` and `worksheet-sources.json` o
 
 ### A7. Dev config and navigation spike
 
-- Add `vite.ui.config.ts` (student app without the Worker; comment that it is for local UI work only and is never built for deployment) and a `dev:ui` script. Confirm `pnpm run build` and `check:private` are unaffected.
+- Add `vite.ui.config.ts` only (no `package.json` script): the student app without the Worker, as a config function that throws when `command === "build"`, with a header comment that it is for local UI work only. The proposed content is in `06-o1-o6-investigation.md`. Run it with `pnpm exec vite dev --config vite.ui.config.ts --host 127.0.0.1`. Verify: the dev server starts and serves the app; `pnpm exec vite build --config vite.ui.config.ts` refuses; `pnpm run check`, `pnpm run build` and `check:private` are unaffected.
 - Spike, time-boxed to 30 minutes: can the top navigation move between `/` and `/practice-builder` client-side under vinext without a full reload? Report yes or no with evidence. Do not ship it in this phase.
 
 ### Phase A acceptance

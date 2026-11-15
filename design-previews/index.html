@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChemAtlas design directions</title>
+<style>
+:root{--ink:#18202B;--ink-2:#556070;--line:#D9DEE5;--bg:#F7F8FA;--card:#fff;--a:#0F5E57;--b:#1F4FD6;--c:#1B1E23}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 system-ui,"Segoe UI",sans-serif}
+main{max-width:70rem;margin:auto;padding:clamp(1.25rem,4vw,3.5rem) clamp(1rem,4vw,2.5rem) 5rem}
+h1{font-size:clamp(1.9rem,4vw,2.75rem);line-height:1.1;letter-spacing:-.02em;margin:0 0 .75rem;text-wrap:balance}
+h2{font-size:1.5rem;line-height:1.2;letter-spacing:-.01em;margin:3.5rem 0 .75rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+h3{font-size:1.1rem;margin:1.75rem 0 .35rem}
+p,li{max-width:72ch}
+.lead{font-size:1.15rem;color:var(--ink-2)}
+a{color:var(--b)}
+ul{padding-left:1.2rem}li{margin:.3rem 0}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem;margin:1rem 0}
+.shots.wide{grid-template-columns:minmax(0,2.4fr) minmax(0,1fr)}
+figure{margin:0}
+figure img{display:block;width:100%;border:1px solid var(--line);border-radius:4px;background:#fff}
+figure.phone img{max-height:34rem;width:auto;max-width:100%}
+figcaption{font-size:.875rem;color:var(--ink-2);margin-top:.35rem}
+.dir{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:clamp(1rem,3vw,2rem);margin:1.5rem 0}
+.dir h3{font-size:1.6rem;margin:0;letter-spacing:-.015em}
+.dir .open{display:inline-block;margin:.75rem 0 1rem;padding:.5rem 1rem;border-radius:4px;color:#fff;text-decoration:none;font-weight:600;background:var(--tone)}
+.dir dl{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.4rem 1rem;margin:1rem 0 0;font-size:.95rem}
+.dir dt{font-weight:600}.dir dd{margin:0;max-width:66ch}
+.table{overflow-x:auto}
+table{border-collapse:collapse;font-size:.95rem;min-width:40rem;width:100%}
+th,td{text-align:left;padding:.55rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;white-space:nowrap}
+td b{white-space:nowrap}
+.pick{border-left:4px solid var(--a);background:var(--card);padding:1rem 1.25rem;margin:1rem 0;border-radius:0 6px 6px 0}
+code{font-size:.9em;background:#ECEFF3;padding:.1em .35em;border-radius:3px}
+@media (max-width:640px){.shots.wide{grid-template-columns:1fr}.dir dl{grid-template-columns:1fr}.dir dt{margin-top:.5rem}}
+</style>
+</head>
+<body>
+<main>
+<h1>ChemAtlas: audit, strategy and three design directions</h1>
+<p class="lead">First deliverable. Each direction below is a working page that reads the real catalog (<code>public/student-questions.json</code>, 714 classified questions with verified crops) and draws real question images from the source PDFs. Nothing in the app itself has been changed.</p>
+
+<h2>1. Audit of the current interface</h2>
+<div class="shots">
+  <figure><img src="screenshots/current-home-desktop.jpg" alt="Current home screen"><figcaption>Home: four count tiles sit above the thing people came for.</figcaption></figure>
+  <figure><img src="screenshots/current-bank-desktop.jpg" alt="Current question bank"><figcaption>Question bank: three results per screen, and no question content in them.</figcaption></figure>
+  <figure><img src="screenshots/current-question-desktop.jpg" alt="Current question page"><figcaption>Question page: the question itself is below four panels about its classification.</figcaption></figure>
+  <figure><img src="screenshots/current-builder-desktop.jpg" alt="Current Practice Builder"><figcaption>Practice Builder: a second copy of the bank, with the worksheet out of sight.</figcaption></figure>
+</div>
+<h3>What works and should be kept</h3>
+<ul>
+  <li>The College Board unit and topic framework as the spine of everything. It is the mental model students and teachers already have.</li>
+  <li>Questions shown as printed, cropped from the original PDF, with shared stimuli and per-part topic mapping for free-response questions.</li>
+  <li>URL-addressable views, working back and forward, a skip link, real labels and <code>aria</code> states. The redesign must not lose any of this.</li>
+  <li>The worksheet pipeline: drafts, undo, reorder, presets, PDF export.</li>
+</ul>
+<h3>What gets in the way</h3>
+<ul>
+  <li><b>You cannot see a question while browsing.</b> A bank row shows year, number, topic and three controls. Reading the question means leaving the list for a separate page, then scrolling past topic map, mapping, evidence and a six-cell metadata grid to reach the image. Free-response rows show no question text at all.</li>
+  <li><b>Low density.</b> About three results per desktop screen and one and a half on a phone, for a 735-question list paged 50 at a time.</li>
+  <li><b>Three screens to pick a topic.</b> Browse by unit, then a unit page, then the bank, which repeats the same choice as two dropdowns.</li>
+  <li><b>The worksheet is invisible while you build it.</b> Adding a question changes a button label and a count. Practice Builder is a separate route with its own copy of the filters and a four-step wizard.</li>
+  <li><b>Two things are called a worksheet</b> (Practice Builder, and the print view inside a practice session), and the Tools menu mixes study features with catalog maintenance (review queue, source page audit, test banks).</li>
+  <li><b>Visual sameness.</b> Every surface is a white rounded card with a soft shadow, most headings carry a small capitals label above them, and five accent colours appear without a rule for what each means.</li>
+  <li><b>Almost no motion</b>, so filter changes and adds give little feedback about what just happened.</li>
+  <li><b>Maintainability.</b> The whole student UI is one 578-line component with very long lines and inline styles; styling is 560 lines of page-specific CSS beside an unused shadcn token set.</li>
+</ul>
+<h3>Data notes found along the way (not design problems)</h3>
+<ul>
+  <li>Some text previews carry OCR debris (for example 2005 FRQ 3). Any design that shows preview text will expose it.</li>
+  <li>Some crops are incomplete on their own: matching-style 2008 multiple-choice questions need their shared answer list, and 2022 MCQ 1 (source page 1636) is cut at a column edge. The previews draw only each question's own regions; the app's shared-stimulus linking is not wired into them.</li>
+</ul>
+
+<h2>2. Design strategy</h2>
+<ul>
+  <li><b>The question is the content.</b> Show the printed question as early as possible; classification detail is one step behind it, not in front.</li>
+  <li><b>The course framework is the navigation.</b> Unit and topic are always one action away, never a page away.</li>
+  <li><b>The worksheet is always present.</b> Adding, removing and reordering are visible where you are working.</li>
+  <li><b>One list, one filter model</b> shared by browsing and worksheet building.</li>
+  <li><b>Colour carries meaning or stays out.</b> No decorative accents.</li>
+  <li><b>Light surfaces only.</b> The questions are black-on-white scans, so a dark interface would make every question glare.</li>
+  <li><b>Study features and maintenance tools are separated</b> in the navigation. The private review system is out of scope and untouched.</li>
+</ul>
+<h3>Motion system (shared by all three)</h3>
+<ul>
+  <li><b>Three durations.</b> Fast, about 130 ms, for hover, press and toggles. Medium, about 280 ms, for panels, drawers and list moves. Slow, about 500 ms, for the few structural changes such as opening a unit on the map.</li>
+  <li><b>Two curves.</b> A decelerating curve for anything entering or moving; a slight overshoot reserved for confirmations (the worksheet count when you add).</li>
+  <li><b>Motion answers an action.</b> The only unprompted animation is one load sequence in Atlas.</li>
+  <li><b>Lists keep their place.</b> When a filter or reorder changes a list, rows slide from where they were to where they are. This is a 15-line helper on the Web Animations API, no library.</li>
+  <li><b>Tested and rejected:</b> whole-page view transitions. They looked good but blocked clicks for the length of each animation, which made quick filtering feel stuck.</li>
+  <li><code>prefers-reduced-motion</code> turns all of it off; nothing depends on an animation finishing.</li>
+</ul>
+
+<h2>3. Three directions</h2>
+
+<section class="dir" style="--tone:var(--a)">
+  <h3>A. Atlas</h3>
+  <p>The whole course on one sheet. The nine units stand side by side as columns of topic blocks, tinted by how many questions each topic has. Open a unit and its column widens to show names and counts while the others narrow to coloured strips.</p>
+  <a class="open" href="atlas.html">Open the Atlas preview</a>
+  <div class="shots wide">
+    <figure><img src="screenshots/a-atlas-desktop.jpg" alt="Atlas, desktop"><figcaption>Unit 3 open, topic 3.4 chosen, one question expanded in place.</figcaption></figure>
+    <figure class="phone"><img src="screenshots/a-atlas-mobile.jpg" alt="Atlas, phone"><figcaption>Phone, Unit 8 open.</figcaption></figure>
+  </div>
+  <div class="shots"><figure><img src="screenshots/a-atlas-worksheet-desktop.jpg" alt="Atlas worksheet drawer"><figcaption>Worksheet drawer with reorder and remove.</figcaption></figure></div>
+  <dl>
+    <dt>Idea</dt><dd>ChemAtlas takes its name literally: a map you read at a glance and then zoom into. Replaces the home page, the unit page and both filter dropdowns with one control.</dd>
+    <dt>Type</dt><dd>Bricolage Grotesque for headings and topic codes (its narrow width fits codes into small blocks); Atkinson Hyperlegible Next for reading text, chosen for students.</dd>
+    <dt>Colour</dt><dd>Nine unit hues in the order of a map's elevation tints, sea blue at Unit 1 to plum at Unit 9, so colour also tells you where in the course you are. Navy ink for all controls. No separate accent.</dd>
+    <dt>Layout</dt><dd>Map on the left and always visible, results on the right. On phones the map sits above the list.</dd>
+    <dt>Preview</dt><dd>A row opens in place to show the printed question and what each part tests. You never leave the list.</dd>
+    <dt>Worksheet</dt><dd>A floating counter with one dot per recent question in its unit colour; opens a drawer to reorder.</dd>
+    <dt>Motion</dt><dd>Columns rise in once on load. Opening a unit slides the columns. The counter bumps on add.</dd>
+    <dt>Risks</dt><dd>Unopened columns show codes only, so newcomers must open a unit to read names. Nine hues need contrast checks. The map takes most of the first phone screen.</dd>
+  </dl>
+</section>
+
+<section class="dir" style="--tone:var(--b)">
+  <h3>B. Workbench</h3>
+  <p>Three panes, like a mail client: units and topics on the left, a dense one-line-per-question list in the middle, the printed question on the right. Built for getting through many questions quickly.</p>
+  <a class="open" href="workbench.html">Open the Workbench preview</a>
+  <div class="shots wide">
+    <figure><img src="screenshots/b-workbench-desktop.jpg" alt="Workbench, desktop"><figcaption>Topic 6.4 selected; the right pane follows the highlighted row.</figcaption></figure>
+    <figure class="phone"><img src="screenshots/b-workbench-mobile.jpg" alt="Workbench, phone"><figcaption>Phone list. Tapping a row slides the question in.</figcaption></figure>
+  </div>
+  <dl>
+    <dt>Idea</dt><dd>A tool, not a site. Around twenty questions visible at once, the selected one readable beside them.</dd>
+    <dt>Type</dt><dd>Hanken Grotesk only, 14 px, tabular figures so years and numbers line up.</dd>
+    <dt>Colour</dt><dd>Cool greys, one cobalt for selection and actions, amber marks free-response questions.</dd>
+    <dt>Layout</dt><dd>Collapsible sidebar, list, preview. On phones the sidebar and preview become sliding sheets.</dd>
+    <dt>Preview</dt><dd>Right pane with previous and next. Arrow keys or J and K move through the list, A adds or removes, slash focuses search.</dd>
+    <dt>Worksheet</dt><dd>A second tab in the right pane with drag and arrow reordering.</dd>
+    <dt>Motion</dt><dd>Quick and small: pane content fades in, sidebar slides, topic lists unfold, the tab count pulses on add.</dd>
+    <dt>Risks</dt><dd>The least distinctive of the three; it could be any well-made productivity app. Density may feel severe to a student arriving for the first time.</dd>
+  </dl>
+</section>
+
+<section class="dir" style="--tone:var(--c)">
+  <h3>C. Proof</h3>
+  <p>The worksheet is the interface. A real page sits on a desk beside the bank. Click a question to try it on the page, outlined in pencil blue, then keep it or put it back. What you see is the sheet you will print.</p>
+  <a class="open" href="proof.html">Open the Proof preview</a>
+  <div class="shots wide">
+    <figure><img src="screenshots/c-proof-desktop.jpg" alt="Proof, desktop"><figcaption>Two questions kept on the page, shown at print scale.</figcaption></figure>
+    <figure class="phone"><img src="screenshots/c-proof-sheet-mobile.jpg" alt="Proof, phone"><figcaption>Phone, worksheet tab.</figcaption></figure>
+  </div>
+  <dl>
+    <dt>Idea</dt><dd>Teachers come to make a sheet of paper, so show the paper. Select, arrange and preview become one screen. The Print button in the preview works.</dd>
+    <dt>Type</dt><dd>STIX Two Text, the typeface of scientific publishing, for the page and headings; Instrument Sans for controls.</dd>
+    <dt>Colour</dt><dd>Grey desk, white paper, black ink. Pencil blue for anything provisional, red only for removal.</dd>
+    <dt>Layout</dt><dd>Bank on the left, page on the right. On phones, two tabs.</dd>
+    <dt>Preview</dt><dd>On the page itself, in position, at the size it will print.</dd>
+    <dt>Worksheet</dt><dd>Hover a question on the page to move or remove it; drag to reorder.</dd>
+    <dt>Motion</dt><dd>The page reflows as questions arrive and leave, and scrolls to the one you just placed.</dd>
+    <dt>Risks</dt><dd>Highest engineering cost: the on-screen page and the exported PDF are two renderers that must agree, and real page breaks are not shown yet. Weakest for a student who only wants to browse. Print scale is too small on phones, so the phone view enlarges questions and stops being exact.</dd>
+  </dl>
+</section>
+
+<h2>4. Comparison</h2>
+<div class="table"><table>
+<tr><th></th><th>A. Atlas</th><th>B. Workbench</th><th>C. Proof</th></tr>
+<tr><th>Distinctive identity</th><td><b>Strong.</b> The map is ChemAtlas and nothing else.</td><td>Weak. Competent and familiar.</td><td>Strong, for worksheet building.</td></tr>
+<tr><th>Finding a question</th><td>Strong. Whole course visible, one click to a topic.</td><td><b>Strongest</b> for volume and keyboard use.</td><td>Adequate. Plain dropdowns.</td></tr>
+<tr><th>Reading a question</th><td>In place, in the list.</td><td>Beside the list, with next and previous.</td><td>On the page, at print size.</td></tr>
+<tr><th>Building a worksheet</th><td>Good. Drawer, out of the way.</td><td>Good. Tab beside the list.</td><td><b>Best.</b> Direct and visible.</td></tr>
+<tr><th>Students</th><td><b>Best.</b> Shows the shape of the course.</td><td>Efficient but dry.</td><td>Not aimed at them.</td></tr>
+<tr><th>Teachers</th><td>Good.</td><td>Very good.</td><td><b>Best.</b></td></tr>
+<tr><th>Phone</th><td>Good; map is tall.</td><td>Good.</td><td>Compromised.</td></tr>
+<tr><th>Build effort</th><td>Medium. One new component; the rest restyles existing views.</td><td>Medium. New shell, existing data.</td><td>High. Live page must match the PDF.</td></tr>
+<tr><th>Accessibility</th><td>Needs care with nine hues; all text passes on its own.</td><td>Simplest to get right.</td><td>Fine for controls; the page is images either way.</td></tr>
+<tr><th>Upkeep</th><td>Unit colours are nine tokens; map is data-driven.</td><td>Lowest.</td><td>Highest.</td></tr>
+</table></div>
+
+<h2>5. Recommendation</h2>
+<div class="pick">
+<p><b>Build A, Atlas.</b> It is the only direction that gives ChemAtlas an identity of its own, it removes the most steps from the most common task (three screens to pick a topic become one), and it serves students and teachers equally. It fits the existing data and views without touching the catalog, crops or export.</p>
+<p>Take two things from the others while building it: Workbench's keyboard movement and next/previous for the open question, and, as a later and separately approved step, Proof's live page as the Arrange and Preview stage of Practice Builder.</p>
+</div>
+
+<h2>6. Roadmap after approval</h2>
+<ol>
+  <li><b>Branch.</b> You name the approved base commit (AGENTS.md requires it); I create a dedicated branch in its own worktree and record the SHA. Nothing is pushed or deployed without your say.</li>
+  <li><b>Tokens.</b> One set of colour, type, spacing, radius and motion tokens replacing the page-specific variables. Fonts self-hosted in the Worker assets, not loaded from Google.</li>
+  <li><b>Shell and navigation.</b> New header; study views separated from maintenance tools. Routes and URLs unchanged.</li>
+  <li><b>Question bank.</b> Course map, denser rows, in-place question preview, keyboard movement. Replaces the home, unit and bank views.</li>
+  <li><b>Question page.</b> Printed question first; classification behind a disclosure.</li>
+  <li><b>Worksheet.</b> Always-visible tray wired to the existing drafts; Practice Builder restyled on the same list and filters.</li>
+  <li><b>Practice sessions and progress</b> brought onto the same tokens and components.</li>
+  <li><b>Maintenance tools</b> (review queue, page audit, test banks) get tokens only. The private admin review system is not touched.</li>
+  <li><b>Polish and proof.</b> Motion pass, contrast and keyboard pass, desktop, tablet and phone screenshots of every screen and state, then <code>pnpm run check</code>, <code>lint</code> and <code>test</code>.</li>
+</ol>
+<p>Each step is one reviewable commit. The 578-line component is split only where a step needs it.</p>
+
+<h2>Decisions I need from you</h2>
+<ul>
+  <li>Which direction (or which mix).</li>
+  <li>The approved base branch and commit to build from.</li>
+  <li>Whether review queue, source page audit and test banks should stay reachable from the student navigation or move behind a separate maintenance entry.</li>
+</ul>
+</main>
+</body>
+</html>

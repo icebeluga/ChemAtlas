@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChemAtlas · Direction A · Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F8FA; --sheet:#fff; --ink:#14233A; --ink-2:#4B5B70; --line:#D6DEE6; --line-2:#E8EDF2;
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Atkinson Hyperlegible Next",system-ui,sans-serif;
+  --fast:140ms; --med:280ms; --slow:520ms; --out:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.3,1.4,.5,1);
+  --r:4px;
+}
+/* unit colour = hypsometric tint: sea blue at Unit 1 climbing to plum at Unit 9 */
+[data-u]{--tint:oklch(.95 .035 var(--h));--mid:oklch(.80 .095 var(--h));--deep:oklch(.44 .115 var(--h))}
+[data-u=u1]{--h:250}[data-u=u2]{--h:218}[data-u=u3]{--h:188}[data-u=u4]{--h:158}[data-u=u5]{--h:128}
+[data-u=u6]{--h:98}[data-u=u7]{--h:68}[data-u=u8]{--h:38}[data-u=u9]{--h:352}
+*{box-sizing:border-box}
+html{background:var(--paper);color:var(--ink);font:400 16px/1.5 var(--body);-webkit-text-size-adjust:100%}
+body{margin:0}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0;text-align:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.bar{display:flex;align-items:center;gap:1rem;padding:.75rem clamp(1rem,3vw,2.5rem);border-bottom:1px solid var(--line);background:var(--sheet);position:sticky;top:0;z-index:5}
+.mark{font:700 1.25rem/1 var(--display);letter-spacing:-.02em;margin-right:auto;display:flex;align-items:baseline;gap:.5rem}
+.mark small{font:400 .8125rem var(--body);color:var(--ink-2);letter-spacing:0}
+.search{flex:0 1 22rem;display:flex;align-items:center;gap:.5rem;border:1px solid var(--line);border-radius:var(--r);padding:.4rem .7rem;background:var(--paper);transition:border-color var(--fast),background var(--fast)}
+.search:focus-within{border-color:var(--ink);background:var(--sheet)}
+.search input{border:0;background:none;outline:0;width:100%;min-width:0}
+.search svg{flex:none;color:var(--ink-2)}
+main{display:grid;grid-template-columns:minmax(0,30rem) minmax(0,1fr);gap:clamp(1.25rem,3vw,3rem);padding:clamp(1rem,2.5vw,2rem) clamp(1rem,3vw,2.5rem) 7rem;max-width:92rem;margin:auto;align-items:start}
+
+/* —— the plate: the whole course on one sheet —— */
+.map{position:sticky;top:4.5rem}
+.map h2{font:600 1.0625rem/1.2 var(--display);margin:0 0 .75rem;display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.map h2 button{font:400 .875rem var(--body);color:var(--ink-2);text-decoration:underline;text-underline-offset:3px}
+.plate{display:grid;gap:3px;transition:grid-template-columns var(--slow) var(--out)}
+.col{display:grid;grid-auto-rows:1.875rem;gap:3px;min-width:0;align-content:start}
+.col>*{min-width:0;border-radius:2px;overflow:hidden;white-space:nowrap}
+.head{grid-row:span 2;background:var(--deep);color:#fff;padding:.35rem .45rem;display:flex;flex-direction:column;justify-content:space-between;transition:filter var(--fast)}
+.head b{font:700 1.25rem/1 var(--display)}
+.head span{font-size:.75rem;line-height:1.15;white-space:normal;opacity:0;transition:opacity var(--fast)}
+.cell{display:flex;align-items:center;gap:.5rem;padding:0 .4rem;font:500 .8125rem/1 var(--display);font-stretch:80%;
+  background:color-mix(in oklch,var(--mid) calc(var(--d)*100%),var(--tint));color:var(--ink);transition:background var(--fast),color var(--fast),transform var(--fast) var(--out)}
+.cell[data-empty]{background:none;box-shadow:inset 0 0 0 1px var(--line);color:var(--ink-2)}
+.cell span{flex:1;overflow:hidden;text-overflow:ellipsis;font:400 .8125rem var(--body);opacity:0;transition:opacity var(--fast)}
+.cell i{font-style:normal;font-variant-numeric:tabular-nums;color:var(--ink-2);opacity:0;transition:opacity var(--fast)}
+.cell:hover,.head:hover{filter:brightness(.94)}
+.cell:active{transform:scale(.97)}
+.cell[aria-pressed=true]{background:var(--deep);color:#fff}
+.cell[aria-pressed=true] i{color:#fff}
+.col[data-open] .cell span,.col[data-open] .cell i,.col[data-open] .head span{opacity:1;transition-delay:.16s}
+.plate[data-focus] .col:not([data-open]) .cell b{opacity:0}
+.cell b{font-weight:600;transition:opacity var(--fast)}
+.readout{margin-top:1rem;padding-top:.875rem;border-top:1px solid var(--line);min-height:6.5rem;font-size:.9375rem;color:var(--ink-2)}
+.readout b{display:block;font:600 1.0625rem/1.25 var(--display);color:var(--ink);margin-bottom:.2rem}
+.scale{display:flex;align-items:center;gap:.5rem;font-size:.8125rem;margin-top:.6rem}
+.scale i{display:flex;gap:2px}.scale i u{width:1.25rem;height:.5rem;border-radius:1px;background:color-mix(in oklch,oklch(.80 .095 218) calc(var(--d)*100%),oklch(.95 .035 218))}
+@media (prefers-reduced-motion:no-preference){
+  .col{animation:rise var(--slow) var(--out) both;animation-delay:calc(var(--i)*45ms)}
+  @keyframes rise{from{opacity:0;transform:translateY(14px)}}
+}
+
+/* —— results —— */
+.results-head{display:flex;flex-wrap:wrap;align-items:end;gap:.75rem 1.5rem;margin-bottom:1rem}
+.results-head h1{font:600 clamp(1.625rem,3vw,2.25rem)/1.08 var(--display);letter-spacing:-.025em;margin:0;flex:1 1 16rem;text-wrap:balance}
+.results-head h1 small{display:block;font:400 .9375rem/1.4 var(--body);letter-spacing:0;color:var(--ink-2);margin-top:.4rem}
+.seg{display:flex;border:1px solid var(--line);border-radius:var(--r);padding:2px;background:var(--sheet)}
+.seg button{padding:.3rem .8rem;border-radius:2px;font-size:.9375rem;transition:background var(--fast),color var(--fast)}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff}
+.list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:3.75rem minmax(0,1fr) auto;column-gap:1rem;align-items:start;border-bottom:1px solid var(--line);background:var(--paper);transition:background var(--fast)}
+.row:hover,.row[data-open]{background:var(--sheet)}
+.open{grid-column:1/3;display:grid;grid-template-columns:subgrid;padding:.85rem 0;align-items:start}
+.code{font:600 1.0625rem/1.5rem var(--display);color:var(--deep);padding-left:.6rem;border-left:4px solid var(--mid);font-variant-numeric:tabular-nums}
+.what b{font:600 1rem/1.5rem var(--display)}
+.what em{font-style:normal;color:var(--ink-2);margin-left:.6rem;font-size:.9375rem}
+.what p{margin:.15rem 0 0;color:var(--ink-2);font-size:.9375rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;max-width:70ch}
+.add{margin:.75rem .25rem 0 0;display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--ink);border-radius:var(--r);padding:.3rem .7rem .3rem .5rem;font-size:.9375rem;background:var(--sheet);transition:background var(--fast),color var(--fast),transform var(--fast) var(--spring)}
+.add:hover{background:var(--ink);color:#fff}.add:active{transform:scale(.94)}
+.add[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.more-wrap{display:grid;grid-template-rows:0fr;grid-column:1/-1;transition:grid-template-rows var(--med) var(--out)}
+.row[data-open] .more-wrap{grid-template-rows:1fr}
+.more{overflow:hidden;min-height:0}
+.detail{display:grid;grid-template-columns:minmax(0,1fr);gap:1.25rem;padding:.25rem .75rem 1.25rem 4.75rem}
+.detail canvas{width:100%;max-width:min(46rem,calc(var(--pt,612)*1.3px));height:auto;border:1px solid var(--line);background:#fff;opacity:0;transition:opacity var(--med)}
+.detail canvas[data-ready]{opacity:1}
+.shimmer{max-width:46rem;height:9rem;border:1px solid var(--line);background:linear-gradient(100deg,var(--line-2) 30%,#fff 50%,var(--line-2) 70%) 0/300% 100%;animation:shimmer 1.4s linear infinite}
+canvas[data-ready]+.shimmer{display:none}
+@keyframes shimmer{to{background-position:-150% 0}}
+.parts{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.3rem 1rem;font-size:.9375rem;max-width:46rem}
+.parts dt{font-weight:700}.parts dd{margin:0}.parts .t{font:600 .875rem var(--display);color:var(--deep);font-variant-numeric:tabular-nums}
+.note{font-size:.875rem;color:var(--ink-2);margin:0}
+.empty{padding:3rem 0;color:var(--ink-2)}.empty b{display:block;font:600 1.25rem var(--display);color:var(--ink)}
+.empty button,.showmore{margin-top:1rem;border:1px solid var(--ink);border-radius:var(--r);padding:.45rem 1rem}
+.showmore:hover,.empty button:hover{background:var(--ink);color:#fff}
+
+/* —— worksheet tray —— */
+.tray{position:fixed;right:clamp(1rem,3vw,2.5rem);bottom:1.25rem;z-index:6;display:flex;align-items:center;gap:.75rem;background:var(--ink);color:#fff;border-radius:var(--r);padding:.7rem 1rem;box-shadow:0 8px 24px -8px rgb(20 35 58/.5);transition:transform var(--med) var(--spring)}
+.tray:hover{transform:translateY(-2px)}
+.tray .n{font:700 1.125rem/1 var(--display);font-variant-numeric:tabular-nums;display:inline-block}
+.tray.bump .n{animation:bump var(--med) var(--spring)}
+@keyframes bump{40%{transform:scale(1.5)}}
+.dots{display:flex}.dots i{width:.75rem;height:.75rem;border-radius:50%;background:var(--mid);border:2px solid var(--ink);margin-left:-.25rem;animation:pop var(--med) var(--spring)}
+@keyframes pop{from{transform:scale(0)}}
+dialog{border:0;padding:0;margin:0 0 0 auto;height:100dvh;max-height:none;width:min(27rem,100vw);background:var(--sheet);color:var(--ink);box-shadow:-16px 0 40px -16px rgb(20 35 58/.3);
+  transform:translateX(100%);transition:transform var(--med) var(--out),overlay var(--med) allow-discrete,display var(--med) allow-discrete}
+dialog[open]{transform:none}
+@starting-style{dialog[open]{transform:translateX(100%)}}
+dialog::backdrop{background:rgb(20 35 58/.25)}
+.drawer{display:flex;flex-direction:column;height:100%}
+.drawer header{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.25rem;border-bottom:1px solid var(--line)}
+.drawer h2{font:600 1.375rem var(--display);margin:0}
+.drawer ol{list-style:none;margin:0;padding:.5rem 1.25rem;overflow:auto;flex:1}
+.item{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.75rem;align-items:center;padding:.6rem 0;border-bottom:1px solid var(--line-2);background:var(--sheet)}
+.item[draggable]{cursor:grab}.item.dragging{opacity:.4}
+.item .num{font:600 1rem var(--display);width:1.5rem;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.item b{font:600 .9375rem var(--display);display:block}.item small{color:var(--ink-2);font-size:.875rem;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item small u{text-decoration:none;color:var(--deep);font-weight:700}
+.tools{display:flex}.tools button{width:2rem;height:2rem;display:grid;place-items:center;border-radius:var(--r);color:var(--ink-2)}
+.tools button:hover:not(:disabled){background:var(--line-2);color:var(--ink)}.tools button:disabled{opacity:.3;cursor:default}
+.drawer footer{padding:1rem 1.25rem;border-top:1px solid var(--line);font-size:.875rem;color:var(--ink-2)}
+.x{width:2.25rem;height:2.25rem;display:grid;place-items:center;border-radius:var(--r)}.x:hover{background:var(--line-2)}
+
+@media (max-width:900px){
+  main{grid-template-columns:minmax(0,1fr)}
+  .map{position:static}
+  .mark small,.readout .scale{display:none}
+  .readout{min-height:0}
+  .col{grid-auto-rows:1.625rem}
+  .cell{padding:0 .25rem;font-size:.75rem}
+  .detail{padding-left:.75rem}
+  .row{grid-template-columns:3.25rem minmax(0,1fr) auto;column-gap:.6rem}
+  .add span{display:none}.add{padding:.4rem}
+  .tray{left:1rem;right:1rem;justify-content:center}
+  dialog{margin:auto 0 0;width:100vw;max-width:none;height:82dvh;transform:translateY(100%);border-radius:10px 10px 0 0}
+  @starting-style{dialog[open]{transform:translateY(100%)}}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="mark">ChemAtlas <small>AP Chemistry question bank</small></div>
+  <label class="search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3.5 3.5"/></svg>
+    <input id="q" type="search" placeholder="Search year, number or wording" aria-label="Search questions"></label>
+</header>
+<main>
+  <section class="map" aria-label="Course map">
+    <h2>The course, unit by unit <button id="reset" hidden>Show all units</button></h2>
+    <div class="plate" id="plate"></div>
+    <div class="readout" id="readout" aria-live="polite"></div>
+  </section>
+  <section aria-label="Questions">
+    <div class="results-head"><h1 id="heading"></h1>
+      <div class="seg" role="group" aria-label="Question type" id="seg"></div></div>
+    <ol class="list" id="list"></ol>
+    <div id="after"></div>
+  </section>
+</main>
+<button class="tray" id="tray" aria-haspopup="dialog"></button>
+<dialog id="drawer" aria-labelledby="drawer-title"><div class="drawer">
+  <header><h2 id="drawer-title">Worksheet</h2><button class="x" id="close" aria-label="Close worksheet"><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="1.6"><path d="m3 3 10 10M13 3 3 13"/></svg></button></header>
+  <ol id="items"></ol>
+  <footer>Drag a row or use the arrows to reorder. In the full app this list is the Practice Builder draft, and export stays there.</footer>
+</div></dialog>
+
+<script type="module">
+import { loadCatalog, filterQuestions, renderCrop, createSheet, flip, esc } from "./shared.js";
+const $ = id => document.getElementById(id);
+const icon = { plus: '<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8" fill="none"><path d="M7 2v10M2 7h10"/></svg>',
+  check: '<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.8" fill="none"><path d="M2 7.5 5.5 11 12 3.5"/></svg>',
+  up: '<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M7 11V3M3.5 6.5 7 3l3.5 3.5"/></svg>',
+  down: '<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.6" fill="none"><path d="M7 3v8M3.5 7.5 7 11l3.5-3.5"/></svg>',
+  x: '<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.6" fill="none"><path d="m3 3 8 8M11 3l-8 8"/></svg>' };
+const catalog = await loadCatalog();
+const sheet = createSheet("chematlas-preview-atlas");
+const state = { unit: "all", topic: "all", type: "all", query: "", open: "", shown: 30 };
+const max = Math.max(...catalog.units.flatMap(u => u.topics.map(t => t.count)));
+const density = n => n ? [.12, .4, .7, 1][Math.min(3, Math.floor(Math.sqrt(n / max) * 4))] : 0;
+
+function drawPlate() {
+  const plate = $("plate");
+  plate.style.gridTemplateColumns = catalog.units.map(u => state.unit === u.id ? "minmax(0,7.5fr)" : "minmax(0,1fr)").join(" ");
+  plate.toggleAttribute("data-focus", state.unit !== "all");
+  if (!plate.children.length) plate.innerHTML = catalog.units.map((u, i) => `<div class="col" data-u="${u.id}" style="--i:${i}">
+    <button class="head" data-unit="${u.id}" aria-label="Unit ${u.n}, ${esc(u.name)}, ${u.count} questions"><b>${u.n}</b><span>${esc(u.name)}</span></button>
+    ${u.topics.map(t => `<button class="cell" data-topic="${t.id}" data-unit="${u.id}" style="--d:${density(t.count)}" ${t.count ? "" : "data-empty"} aria-pressed="false" aria-label="${t.id} ${esc(t.name)}, ${t.count} questions"><b>${t.id}</b><span>${esc(t.name)}</span><i>${t.count}</i></button>`).join("")}</div>`).join("");
+  plate.querySelectorAll(".col").forEach(col => col.toggleAttribute("data-open", col.dataset.u === state.unit));
+  plate.querySelectorAll(".cell").forEach(cell => cell.setAttribute("aria-pressed", cell.dataset.topic === state.topic));
+  $("reset").hidden = state.unit === "all";
+  readout();
+}
+function readout(hoverTopic, hoverUnit) {
+  const topicId = hoverTopic ?? (state.topic !== "all" ? state.topic : ""), unitId = hoverUnit ?? state.unit;
+  const unit = catalog.units.find(u => u.id === unitId), topic = unit?.topics.find(t => t.id === topicId);
+  $("readout").innerHTML = topic ? `<b>${topic.id} ${esc(topic.name)}</b>${esc(catalog.topicDetails[topic.id]?.description ?? "")} ${topic.count} question${topic.count === 1 ? "" : "s"}.`
+    : unit ? `<b>Unit ${unit.n}: ${esc(unit.name)}</b>${unit.topics.length} topics, ${unit.count} questions. Pick a topic to narrow the list.`
+    : `<b>Nine units, ${catalog.topicName.size} topics</b>Each block is one College Board topic. Open a unit to read its topics.
+       <div class="scale">Fewer questions <i>${[.12, .4, .7, 1].map(d => `<u style="--d:${d}"></u>`).join("")}</i> more</div>`;
+}
+function results() { return filterQuestions(catalog.questions, state); }
+function drawList() {
+  const all = results(), unit = catalog.units.find(u => u.id === state.unit), topic = unit?.topics.find(t => t.id === state.topic);
+  $("heading").innerHTML = `${topic ? `${topic.id} ${esc(topic.name)}` : unit ? esc(unit.name) : "Every classified question"}
+    <small>${all.length.toLocaleString()} ${state.type === "all" ? "" : state.type + " "}question${all.length === 1 ? "" : "s"}${state.query ? ` matching “${esc(state.query)}”` : ""}${topic ? `, Unit ${unit.n}` : ""}</small>`;
+  $("seg").innerHTML = [["all", "All"], ["MCQ", "Multiple choice"], ["FRQ", "Free response"]].map(([v, l]) => `<button data-type="${v}" aria-pressed="${state.type === v}">${l}</button>`).join("");
+  $("list").innerHTML = all.slice(0, state.shown).map(q => {
+    const code = state.topic !== "all" ? state.topic : q.primaryTopic, added = sheet.has(q.id), open = state.open === q.id;
+    return `<li class="row" data-id="${q.id}" data-u="${catalog.topicUnit.get(code)}" ${open ? "data-open" : ""}>
+      <button class="open" aria-expanded="${open}"><span class="code">${code}</span>
+        <span class="what"><b>${esc(q.title)}</b><em>${esc(catalog.topicName.get(code))}</em><p>${esc(q.text)}</p></span></button>
+      <button class="add" aria-pressed="${added}" aria-label="${added ? "Remove from" : "Add to"} worksheet: ${esc(q.title)}">${added ? icon.check : icon.plus}<span>${added ? "On worksheet" : "Add"}</span></button>
+      <div class="more-wrap"><div class="more">${open ? detail(q) : ""}</div></div></li>`;
+  }).join("") || "";
+  $("after").innerHTML = !all.length ? `<div class="empty"><b>Nothing here yet</b>No classified question matches this view. Try a neighbouring topic or clear the search.<br><button data-clear>Show every question</button></div>`
+    : all.length > state.shown ? `<button class="showmore" data-more>Show 30 more of ${(all.length - state.shown).toLocaleString()}</button>` : "";
+  const row = state.open && $("list").querySelector(`[data-id="${CSS.escape(state.open)}"] canvas`);
+  if (row) renderCrop(catalog, catalog.byId.get(state.open), row, Math.min(736, row.parentElement.clientWidth));
+}
+function detail(q) {
+  const parts = (q.topicParts ?? []).filter(p => p.topics.length);
+  return `<div class="detail"><div><canvas aria-label="${esc(q.title)} as printed"></canvas><div class="shimmer"></div></div>
+    ${parts.length ? `<dl class="parts">${parts.map(p => `<dt>${esc(p.label)}</dt><dd>${esc(p.rationale || p.topicNames.join(", "))}</dd><dd class="t" data-u="${catalog.topicUnit.get(p.topics[0])}">${p.topics.join(" · ")}</dd>`).join("")}</dl>` : ""}
+    <p class="note">${esc(q.exam)}, source page ${q.sourceRegions[0].page}</p></div>`;
+}
+function drawTray(bump) {
+  const n = sheet.ids.length, tray = $("tray");
+  tray.innerHTML = `<span class="dots">${sheet.ids.slice(-5).map(id => `<i data-u="${catalog.byId.get(id)?.unit}"></i>`).join("")}</span><span>Worksheet</span><span class="n">${n}</span>`;
+  tray.setAttribute("aria-label", `Open worksheet, ${n} question${n === 1 ? "" : "s"}`);
+  if (bump) { tray.classList.remove("bump"); void tray.offsetWidth; tray.classList.add("bump"); }
+  $("items").innerHTML = sheet.ids.map((id, i) => { const q = catalog.byId.get(id); if (!q) return "";
+    return `<li class="item" draggable="true" data-id="${id}" data-u="${q.unit}"><span class="num">${i + 1}</span>
+      <span><b>${esc(q.title)}</b><small><u>${q.primaryTopic}</u> ${esc(q.topicName)}</small></span>
+      <span class="tools"><button data-move="-1" ${i ? "" : "disabled"} aria-label="Move up">${icon.up}</button><button data-move="1" ${i < n - 1 ? "" : "disabled"} aria-label="Move down">${icon.down}</button><button data-remove aria-label="Remove ${esc(q.title)}">${icon.x}</button></span></li>`;
+  }).join("") || `<li class="empty"><b>No questions yet</b>Add questions from the list and they collect here, in order.</li>`;
+}
+const set = patch => { Object.assign(state, patch, { shown: 30 }); drawPlate(); flip($("list"), drawList); };
+
+$("plate").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  if (b.classList.contains("head")) set({ unit: state.unit === b.dataset.unit ? "all" : b.dataset.unit, topic: "all", open: "" });
+  else set({ unit: b.dataset.unit, topic: state.topic === b.dataset.topic ? "all" : b.dataset.topic, open: "" });
+});
+$("plate").addEventListener("pointerover", e => { const b = e.target.closest("button"); if (b) readout(b.dataset.topic ?? "", b.dataset.unit); });
+$("plate").addEventListener("pointerleave", () => readout());
+$("reset").onclick = () => set({ unit: "all", topic: "all", open: "" });
+$("seg").addEventListener("click", e => e.target.dataset.type && set({ type: e.target.dataset.type, open: "" }));
+$("q").addEventListener("input", e => { Object.assign(state, { query: e.target.value, shown: 30, open: "" }); drawList(); });
+$("list").addEventListener("click", e => {
+  const row = e.target.closest(".row"); if (!row) return; const id = row.dataset.id;
+  if (e.target.closest(".add")) { sheet.toggle(id); return; }
+  if (e.target.closest(".open")) { state.open = state.open === id ? "" : id; drawList(); }
+});
+$("after").addEventListener("click", e => {
+  if (e.target.dataset.more !== undefined) { state.shown += 30; drawList(); }
+  if (e.target.dataset.clear !== undefined) { $("q").value = ""; set({ unit: "all", topic: "all", type: "all", query: "", open: "" }); }
+});
+$("tray").onclick = () => $("drawer").showModal();
+$("close").onclick = () => $("drawer").close();
+$("drawer").addEventListener("click", e => { if (e.target === $("drawer")) $("drawer").close(); });
+let dragged = "";
+$("items").addEventListener("click", e => {
+  const item = e.target.closest(".item"), b = e.target.closest("button"); if (!item || !b) return; const i = sheet.ids.indexOf(item.dataset.id);
+  b.dataset.move ? sheet.move(i, i + Number(b.dataset.move)) : sheet.remove(item.dataset.id);
+});
+$("items").addEventListener("dragstart", e => { dragged = e.target.closest(".item")?.dataset.id ?? ""; e.target.closest(".item")?.classList.add("dragging"); });
+$("items").addEventListener("dragend", () => { dragged = ""; drawTray(); });
+$("items").addEventListener("dragover", e => { e.preventDefault(); const over = e.target.closest(".item"); if (!over || !dragged || over.dataset.id === dragged) return;
+  sheet.move(sheet.ids.indexOf(dragged), sheet.ids.indexOf(over.dataset.id)); });
+let count = sheet.ids.length;
+sheet.subscribe(ids => { flip($("items"), () => drawTray(ids.length > count)); count = ids.length; drawList(); $("items").querySelector(`[data-id="${CSS.escape(dragged || "-")}"]`)?.classList.add("dragging"); });
+drawPlate(); drawList(); drawTray();
+</script>
+</body>
+</html>

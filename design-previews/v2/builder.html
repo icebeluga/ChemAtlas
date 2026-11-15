@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Practice builder · ChemAtlas prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+<style>
+body{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr);overflow:hidden}
+.bar .btn{margin-left:auto}
+.build{display:grid;grid-template-columns:minmax(18rem,25rem) minmax(0,1fr);min-height:0}
+
+/* —— outline: the worksheet as a list you can rearrange —— */
+.outline{display:flex;flex-direction:column;min-height:0;background:var(--surface);border-right:1px solid var(--line)}
+.setup{padding:var(--s4);border-bottom:1px solid var(--line);display:grid;gap:var(--s3)}
+.setup label.field{display:grid;gap:.2rem;font-size:var(--t-sm);color:var(--ink-2)}
+.setup input[type=text]{height:2.4rem;border:1px solid var(--line);border-radius:var(--r);padding:0 var(--s3);font:600 var(--t-md) var(--display);color:var(--ink);transition:border-color var(--fast)}
+.setup input[type=text]:focus{border-color:var(--ink);outline:0}
+.opts{display:flex;flex-wrap:wrap;gap:var(--s2) var(--s4);align-items:center}
+.check{display:inline-flex;align-items:center;gap:.4rem;font-size:var(--t-sm);cursor:pointer}
+.check input{width:1rem;height:1rem;accent-color:var(--ink)}
+.summary{font-size:var(--t-sm);color:var(--ink-2)}
+.summary b{color:var(--ink)}.summary .draft{color:var(--note)}
+.items{list-style:none;margin:0;padding:0;overflow:auto;flex:1}
+.group{font:600 var(--t-xs) var(--body);color:var(--ink-2);padding:var(--s3) var(--s4) var(--s1);background:var(--canvas);border-bottom:1px solid var(--line-2)}
+.item{display:grid;grid-template-columns:1.1rem 1.6rem minmax(0,1fr) auto;gap:var(--s2);align-items:center;padding:.4rem var(--s2) .4rem var(--s3);border-bottom:1px solid var(--line-2);border-left:4px solid transparent;background:var(--surface);cursor:pointer;transition:background var(--fast),border-color var(--fast)}
+.item:hover{background:var(--canvas)}
+.item[data-current]{background:var(--tint);border-left-color:var(--mid)}
+.item .grip{color:var(--line);cursor:grab;display:grid}.item:hover .grip{color:var(--ink-2)}
+.item.dragging{opacity:.35}
+.item .num{font:600 var(--t-md) var(--display);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.item b{font:600 var(--t-md)/1.3 var(--display);display:flex;gap:var(--s2);align-items:center}
+.item small{display:block;font-size:var(--t-sm);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .flag{color:var(--note);display:inline-flex}
+.item .tools{display:flex}.item .tools .icon-btn{width:2rem;height:2rem}
+.item .tools [data-remove]:hover{background:var(--danger-soft);color:var(--danger)}
+.outline-foot{display:flex;gap:var(--s2);padding:var(--s3) var(--s4);border-top:1px solid var(--line);background:var(--canvas)}
+.outline-foot .btn{flex:1}
+
+/* —— desk and paper —— */
+.desk{overflow:auto;background:#D6DCE4;padding:var(--s5) clamp(var(--s3),3vw,var(--s6)) 5rem;scroll-behavior:smooth}
+.desk-note{max-width:51rem;margin:0 auto var(--s3);font-size:var(--t-sm);color:var(--ink-2);display:flex;gap:var(--s2);align-items:center}
+.paper{background:#fff;color:#000;width:min(100%,51rem);margin:auto;min-height:60rem;padding:clamp(1.25rem,6%,4rem);box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35);font-family:var(--doc)}
+.paper header{border-bottom:1.5px solid #000;padding-bottom:.9rem;margin-bottom:1.25rem}
+.paper h1{font:600 1.7rem/1.15 var(--doc);text-wrap:balance}
+.fields{display:flex;gap:2rem;font-size:.95rem;margin-top:.9rem}.fields span{flex:1;border-bottom:1px solid #000;padding-bottom:.1rem}.fields span:last-child{flex:.5}
+.paper h2{font:600 1.1rem var(--doc);margin:1.5rem 0 .25rem;padding-bottom:.2rem;border-bottom:1px solid #000}
+.blocks{list-style:none;margin:0;padding:0}
+.block{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.25rem;padding:.75rem 0;margin-top:.5rem;position:relative;background:#fff;border-radius:var(--r-sm);outline:2px solid transparent;outline-offset:4px;cursor:pointer;transition:outline-color var(--med)}
+.block[data-current]{outline-color:var(--mid)}
+.block .num{font:600 1.05rem/1.4 var(--doc);font-variant-numeric:tabular-nums}
+.block .body{display:grid;gap:.5rem;min-width:0}
+.block .q-fig canvas{max-width:none;width:min(100%,calc(var(--pt,500)/500*100%))}
+.cite{font:400 .8rem var(--body);color:var(--ink-2)}
+.pencil{font:400 var(--t-sm) var(--body);color:var(--pencil);background:var(--pencil-soft);border-radius:var(--r);padding:.3rem .6rem;display:flex;gap:var(--s2);align-items:center;justify-self:start}
+.blank{font:italic 400 1.1rem/1.5 var(--doc);color:var(--ink-2);padding:2rem 0;max-width:30rem}
+.blank .btn{font:500 var(--t-md) var(--body);font-style:normal;margin-top:var(--s4)}
+
+dialog{border:0;border-radius:6px;padding:0;width:min(34rem,calc(100vw - 2rem));color:var(--ink);box-shadow:var(--lift);opacity:0;transform:translateY(12px);transition:opacity var(--med),transform var(--med) var(--out),overlay var(--med) allow-discrete,display var(--med) allow-discrete}
+dialog[open]{opacity:1;transform:none}
+@starting-style{dialog[open]{opacity:0;transform:translateY(12px)}}
+dialog::backdrop{background:rgb(20 35 58/.35)}
+.dlg{padding:var(--s5);display:grid;gap:var(--s4)}
+.dlg h2{font:600 var(--t-xl) var(--display);letter-spacing:-.02em}
+.dlg ul{margin:0;padding-left:1.2rem;font-size:var(--t-sm);color:var(--ink-2);max-height:9rem;overflow:auto}
+.dlg .way{border:1px solid var(--line);border-radius:var(--r);padding:var(--s3);display:grid;gap:var(--s2)}
+.dlg .way p{font-size:var(--t-sm);color:var(--ink-2)}
+.dlg .way b{font:600 var(--t-md) var(--display)}
+.dlg .way .btn{justify-self:start}
+.dlg .demo{border-style:dashed}
+.switch{display:none}
+
+@media (max-width:700px){
+  body{height:auto;display:block;overflow:auto;padding-bottom:3.75rem}
+  .build{display:block}
+  body:not([data-view=preview]) .desk,body[data-view=preview] .outline{display:none}
+  .outline{border:0}.items,.desk{overflow:visible}
+  .item{padding-block:.55rem}.item .tools .icon-btn{width:2.5rem;height:2.5rem}
+  .item .grip{display:none}.item{grid-template-columns:1.6rem minmax(0,1fr) auto}
+  .desk{padding:var(--s3) var(--s2) var(--s5);min-height:80dvh}
+  .paper{min-height:0;padding:1.1rem .9rem 2rem}.paper h1{font-size:1.35rem}
+  .block{grid-template-columns:1.5rem minmax(0,1fr)}
+  /* print scale is unreadable on a phone; enlarge for reading and say so in the note */
+  .block .q-fig canvas{width:100%}
+  .bar .btn span{display:none}.bar{flex-wrap:wrap;height:auto;padding-block:var(--s2)}.bar .nav{height:2.75rem}
+  .seg button{padding:.7rem}.item .tools .icon-btn{width:2.75rem;height:2.75rem}.check{padding:.6rem .2rem}.setup input[type=text]{height:2.75rem}.btn{min-height:2.75rem}
+  .switch{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0 0;z-index:9;background:var(--surface);border-top:1px solid var(--line)}
+  .switch button{padding:1rem;text-align:center;font-weight:500;color:var(--ink-2);border-top:2px solid transparent;margin-top:-1px}
+  .switch button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}
+  .toast{bottom:4.5rem;width:calc(100vw - 2rem);justify-content:space-between}
+}
+@media print{
+  body{display:block;height:auto;overflow:visible;background:#fff}
+  .bar,.outline,.switch,.toast,.desk-note,.pencil,dialog{display:none!important}
+  .build{display:block}.desk{display:block!important;padding:0;overflow:visible;background:none}
+  .q-shared{border:0;padding:0}.q-shared>span{display:none}
+  .paper{box-shadow:none;width:auto;margin:0;padding:0;min-height:0}.block{break-inside:avoid;outline:0}
+}
+</style>
+</head>
+<body>
+<header class="bar" id="bar"></header>
+<main class="build">
+  <aside class="outline" aria-label="Worksheet outline">
+    <div class="setup">
+      <label class="field">Worksheet title<input type="text" id="title" maxlength="100"></label>
+      <div class="opts">
+        <div class="seg" role="group" aria-label="Order" id="grouping"></div>
+        <label class="check"><input type="checkbox" id="fields"> Name and date lines</label>
+        <label class="check"><input type="checkbox" id="citations"> Source lines</label>
+      </div>
+      <p class="summary" id="summary" aria-live="polite"></p>
+    </div>
+    <ol class="items" id="items" aria-label="Questions in order"></ol>
+    <div class="outline-foot"><a class="btn quiet" href="index.html" id="add-more"></a></div>
+  </aside>
+  <section class="desk" id="desk" aria-label="Worksheet preview">
+    <p class="desk-note" id="desk-note"></p>
+    <article class="paper"><header><h1 id="h1"></h1><div class="fields" id="fieldline"><span>Name</span><span>Date</span></div></header><div id="blocks"></div></article>
+  </section>
+</main>
+<nav class="switch" aria-label="View"><button data-view="outline">Outline</button><button data-view="preview">Preview</button></nav>
+<div class="toast" id="toast" role="status" hidden><span id="toast-text"></span><button id="undo">Undo</button></div>
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg" id="dlg-body"></div></dialog>
+
+<script type="module">
+import { loadCatalog, questionHtml, paint, createSheet, flip, topBar, reducedMotion, esc, icon } from "./app.js";
+const $ = id => document.getElementById(id);
+const sheet = createSheet();
+$("bar").innerHTML = topBar("builder", sheet.ids.length) + `<button class="btn primary" id="export">Export<span> worksheet</span></button>`;
+let catalog;
+try { catalog = await loadCatalog(); }
+catch (error) { $("items").innerHTML = `<li class="empty"><b>The catalog did not load</b>${esc(error.message)}.<br><button class="btn" onclick="location.reload()">Try again</button></li>`; throw error; }
+let current = "", dragged = "", removed = null, toastTimer;
+
+const known = () => sheet.ids.filter(id => catalog.byId.has(id));
+// display order: the saved order, or the same order split into multiple choice then free response
+function sections() {
+  const ids = known();
+  return sheet.state.grouping === "type" ? [["Multiple choice", ids.filter(id => catalog.byId.get(id).type === "MCQ")], ["Free response", ids.filter(id => catalog.byId.get(id).type === "FRQ")]].filter(s => s[1].length) : [["", ids]];
+}
+function drawSetup() {
+  const s = sheet.state;
+  if (document.activeElement !== $("title")) $("title").value = s.title;
+  $("grouping").innerHTML = [["none", "My order"], ["type", "By question type"]].map(([v, l]) => `<button data-grouping="${v}" aria-pressed="${s.grouping === v}">${l}</button>`).join("");
+  $("fields").checked = s.fields; $("citations").checked = s.citations;
+}
+function drawOutline() {
+  const ids = known(), n = ids.length, drafts = ids.filter(id => !catalog.byId.get(id).print).length, frq = ids.filter(id => catalog.byId.get(id).type === "FRQ").length;
+  $("nav-count").textContent = n; $("export").disabled = !n;
+  $("summary").innerHTML = n ? `<b>${n} question${n === 1 ? "" : "s"}</b>: ${n - frq} multiple choice, ${frq} free response.${drafts ? ` <span class="draft">${drafts} need${drafts === 1 ? "s" : ""} review and will export as full source pages.</span>` : " All print-ready."}` : "";
+  $("add-more").innerHTML = `${icon.plus}${n ? "Add more questions" : "Open the question bank"}`;
+  let number = 0;
+  $("items").innerHTML = sections().map(([label, list]) => (label ? `<li class="group">${label}</li>` : "") + list.map((id, i) => { const q = catalog.byId.get(id); number++;
+    return `<li class="item" draggable="true" tabindex="0" data-id="${id}" data-u="${q.unit}" ${id === current ? "data-current" : ""} aria-label="Question ${number}: ${esc(q.title)}">
+      <span class="grip" aria-hidden="true">${icon.grip}</span><span class="num">${number}</span>
+      <span><b><span class="tag" data-t="${q.type}">${q.type}</span>${q.year ?? "Undated"} · ${q.number}${q.print ? "" : `<span class="flag" title="Needs review: exports as the full source page">${icon.flag}</span>`}</b><small><span class="code">${q.primaryTopic}</span> ${esc(q.topicName)}</small></span>
+      <span class="tools"><button class="icon-btn" data-move="-1" ${i ? "" : "disabled"} aria-label="Move question ${number} up">${icon.up}</button><button class="icon-btn" data-move="1" ${i < list.length - 1 ? "" : "disabled"} aria-label="Move question ${number} down">${icon.down}</button><button class="icon-btn" data-remove aria-label="Remove question ${number}">${icon.x}</button></span></li>`; }).join("")).join("")
+    || `<li class="empty"><b>No questions yet</b>Pick questions in the question bank and they arrive here, in the order you added them.</li>`;
+}
+function drawPaper() {
+  const s = sheet.state, n = known().length;
+  $("h1").textContent = s.title || "Untitled worksheet"; $("fieldline").hidden = !s.fields;
+  $("desk-note").innerHTML = n ? `${icon.flag}<span>Layout preview. Question order, sections and crops are real; page breaks and final spacing are set when the PDF is generated.</span>` : "";
+  let number = 0;
+  $("blocks").innerHTML = sections().map(([label, list]) => (label ? `<h2>${label}</h2>` : "") + `<ol class="blocks">` + list.map(id => { const q = catalog.byId.get(id); number++;
+    return `<li class="block" data-id="${id}" data-u="${q.unit}" ${id === current ? "data-current" : ""}><span class="num">${number}.</span><div class="body">
+      ${q.print ? "" : `<span class="pencil">${icon.flag}Needs review. The PDF will use the full source page${q.sourcePages.length > 1 ? "s" : ""} (${q.sourcePages.join(", ")}) instead of this crop.</span>`}
+      ${questionHtml(q)}${s.citations ? `<span class="cite">${esc(q.exam)}, question ${q.number}</span>` : ""}</div></li>`; }).join("") + `</ol>`).join("")
+    || `<div class="blank">This page is your worksheet. Questions you pick in the question bank appear here as they will print.<br><a class="btn" href="index.html">Open the question bank</a></div>`;
+  paint(catalog, $("blocks"));
+}
+// re-rendering replaces canvases; keep the ones already drawn so the page does not flash while pdf.js redraws
+function repaint() {
+  const kept = new Map([...$("blocks").querySelectorAll("canvas[data-ready]")].map(c => [c.dataset.regions, c]));
+  flip($("blocks"), () => { drawPaper(); $("blocks").querySelectorAll("canvas:not([data-ready])").forEach(c => { const old = kept.get(c.dataset.regions); if (old) { kept.delete(c.dataset.regions); c.nextElementSibling?.remove(); c.replaceWith(old); } }); }, { duration: 420 });
+}
+function draw() { const focus = document.activeElement?.closest?.(".item")?.dataset.id; drawSetup(); flip($("items"), drawOutline); repaint(); if (focus) $("items").querySelector(`[data-id="${CSS.escape(focus)}"]`)?.focus(); }
+function focusOn(id, scroll) {
+  current = id;
+  document.querySelectorAll(".item,.block").forEach(el => el.toggleAttribute("data-current", el.dataset.id === id));
+  if (scroll) (scroll === "paper" ? $("blocks") : $("items")).querySelector(`[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: "nearest", behavior: reducedMotion ? "auto" : "smooth" });
+}
+// move within the displayed section by swapping with the neighbour's position in the saved order
+function moveBy(id, delta) {
+  const list = sections().find(s => s[1].includes(id))[1], target = list[list.indexOf(id) + delta];
+  if (target) sheet.move(sheet.ids.indexOf(id), sheet.ids.indexOf(target));
+}
+function remove(id) {
+  removed = { id, at: sheet.ids.indexOf(id) }; sheet.remove(id);
+  $("toast-text").textContent = `Removed ${catalog.byId.get(id).title}`; $("toast").hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => { $("toast").hidden = true; }, 7000);
+}
+$("undo").onclick = () => { if (removed) { sheet.add(removed.id, removed.at); focusOn(removed.id, "outline"); removed = null; } $("toast").hidden = true; };
+
+$("title").addEventListener("input", e => { sheet.set({ title: e.target.value }); });
+$("grouping").addEventListener("click", e => e.target.dataset.grouping && sheet.set({ grouping: e.target.dataset.grouping }));
+$("fields").onchange = e => sheet.set({ fields: e.target.checked });
+$("citations").onchange = e => sheet.set({ citations: e.target.checked });
+$("items").addEventListener("click", e => { const item = e.target.closest(".item"); if (!item) return; const b = e.target.closest("button"), id = item.dataset.id;
+  if (b?.dataset.move) { moveBy(id, Number(b.dataset.move)); focusOn(id, "paper"); } else if (b?.dataset.remove !== undefined) remove(id); else focusOn(id, "paper"); });
+$("items").addEventListener("keydown", e => { const item = e.target.closest(".item"); if (!item || e.target !== item) return; const id = item.dataset.id;
+  if (e.altKey && (e.key === "ArrowUp" || e.key === "ArrowDown")) { e.preventDefault(); moveBy(id, e.key === "ArrowUp" ? -1 : 1); }
+  else if (e.key === "ArrowUp" || e.key === "ArrowDown") { e.preventDefault(); const rows = [...$("items").querySelectorAll(".item")]; rows[rows.indexOf(item) + (e.key === "ArrowUp" ? -1 : 1)]?.focus(); }
+  else if (e.key === "Delete" || e.key === "Backspace") { e.preventDefault(); remove(id); }
+  else if (e.key === "Enter") focusOn(id, "paper"); });
+$("items").addEventListener("focusin", e => { const item = e.target.closest(".item"); if (item && e.target === item) focusOn(item.dataset.id); });
+$("items").addEventListener("dragstart", e => { const item = e.target.closest(".item"); dragged = item?.dataset.id ?? ""; item?.classList.add("dragging"); e.dataTransfer.effectAllowed = "move"; });
+$("items").addEventListener("dragend", () => { dragged = ""; $("items").querySelector(".dragging")?.classList.remove("dragging"); });
+$("items").addEventListener("dragover", e => { if (!dragged) return; e.preventDefault(); const over = e.target.closest(".item"); if (!over || over.dataset.id === dragged) return;
+  if (sections().find(s => s[1].includes(dragged))[1].includes(over.dataset.id)) sheet.move(sheet.ids.indexOf(dragged), sheet.ids.indexOf(over.dataset.id)); });
+$("blocks").addEventListener("click", e => { const block = e.target.closest(".block"); if (block) focusOn(block.dataset.id, "outline"); });
+
+function openExport() {
+  const ids = known(), drafts = ids.map(id => catalog.byId.get(id)).filter(q => !q.print);
+  $("dlg-body").innerHTML = `<h2 id="dlg-title">Export “${esc(sheet.state.title || "Untitled worksheet")}”</h2>
+    <p>${ids.length} question${ids.length === 1 ? "" : "s"}. ${ids.length - drafts.length} will print as cropped questions${drafts.length ? `; ${drafts.length} will print as full source pages because their crops are not reviewed yet:` : "."}</p>
+    ${drafts.length ? `<ul>${drafts.map(q => `<li>${esc(q.title)}, source page${q.sourcePages.length > 1 ? "s" : ""} ${q.sourcePages.join(", ")}${q.note ? `. ${esc(q.note)}` : ""}</li>`).join("")}</ul>` : ""}
+    <div class="way"><b>Print this preview</b><p>Works now. Sends the page on screen to your printer or to “Save as PDF”, using the crops shown, including unreviewed ones.</p><button class="btn primary" id="do-print">Print preview</button></div>
+    <div class="way demo"><b>Generate the worksheet PDF</b><p>Not connected in this prototype. In the app this step hands the question list, order and options to the existing PDF generator, which sets page breaks and substitutes full source pages where needed.</p><button class="btn" disabled>Generate PDF</button></div>
+    <button class="btn quiet" id="dlg-close" style="justify-self:end">Close</button>`;
+  $("dlg").showModal();
+}
+$("export").onclick = openExport;
+$("dlg").addEventListener("click", e => { if (e.target === $("dlg") || e.target.id === "dlg-close") $("dlg").close(); if (e.target.id === "do-print") { $("dlg").close(); print(); } });
+function view(name) { document.body.dataset.view = name; document.querySelectorAll(".switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === name)); if (name === "preview") paint(catalog, $("blocks")); }
+document.querySelector(".switch").addEventListener("click", e => { const b = e.target.closest("button"); if (b) { view(b.dataset.view); scrollTo(0, 0); } });
+sheet.subscribe(() => { draw(); $("items").querySelector(`[data-id="${CSS.escape(dragged || "-")}"]`)?.classList.add("dragging"); });
+view("outline"); drawSetup(); drawOutline(); drawPaper();
+</script>
+</body>
+</html>

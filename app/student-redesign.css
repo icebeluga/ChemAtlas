@@ -239,22 +239,22 @@
 .ca2 .ca-b-inline input[type=number]{width:68px}
 .ca-b-outline-foot{padding:8px 16px;border-top:1px solid var(--ca-line);background:var(--ca-canvas);display:grid}
 .ca-b-side{min-height:0;overflow:auto;background:#D6DCE4}
-.ca-b-preview{padding:14px clamp(12px,3vw,28px) 40px;display:grid;gap:10px}
+.ca-b-preview{height:100%;padding:14px clamp(12px,3vw,28px) 40px;display:flex;flex-direction:column;gap:10px}
 .ca-b-export{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
 .ca-b-state{margin-left:auto;font-size:14px;color:var(--ca-ink-2)}
 .ca-b-note{font-size:14px;color:var(--ca-ink-2);max-width:76ch}
 .ca-b-freshness{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 10px;background:var(--ca-note-soft);color:var(--ca-note);border-radius:var(--ca-r);font-size:14px}
 .ca-b-freshness[data-error]{background:var(--ca-danger-soft);color:var(--ca-danger)}
-.ca-b-pdf-display{min-width:0}
+.ca-b-pdf-display{flex:1;min-width:0;min-height:160px}
 .ca-b-pdf-display[data-stale] .worksheet-paper{opacity:.55}
 .ca-b-generating{display:grid;gap:10px;background:#fff;padding:36px;max-width:816px;margin:0 auto;width:100%;box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35)}
 .ca-b-preview .ca-empty{background:#fff;max-width:816px;margin:0 auto;width:100%;padding:48px;box-shadow:0 1px 2px rgb(20 35 58/.14)}
 /* the existing WorksheetPreview component, set on the desk */
-.ca2 .ca-b-preview .worksheet-preview{display:grid;gap:10px}
+.ca2 .ca-b-preview .worksheet-preview{height:100%;display:grid;grid-template-rows:auto minmax(0,1fr);gap:10px}
 .ca-b-preview-bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:4px 8px;background:var(--ca-surface);border:1px solid var(--ca-line);border-radius:var(--ca-r);font-size:14px;font-variant-numeric:tabular-nums}
 .ca-b-preview-bar span{min-width:3ch;text-align:center}
 .ca2 .ca-b-preview-bar .ca-icon{width:34px;height:34px}
-.ca2 .ca-b-preview .worksheet-paper{background:none;border:0;padding:0;overflow:auto;display:grid;justify-items:center}
+.ca2 .ca-b-preview .worksheet-paper{min-height:0;background:none;border:0;padding:0;overflow:auto;scrollbar-gutter:stable both-edges;display:grid;align-items:start;justify-items:center}
 .ca2 .ca-b-preview .worksheet-paper canvas{background:#fff;box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35);max-width:none}
 /* Layout and Add questions keep their existing controls inside the new frame */
 .ca-b-form{background:var(--ca-surface);margin:14px clamp(12px,3vw,28px);padding:16px;border:1px solid var(--ca-line);border-radius:var(--ca-r);display:grid;gap:14px;max-width:900px}
@@ -294,11 +294,16 @@
   .ca2 .ca-unit[aria-pressed=true]:not(.is-all){flex-grow:6}.ca-unit[aria-pressed=true]>span{display:-webkit-box}
   .ca2 .ca-unit.is-all{flex-basis:50px}
 }
+@media (min-width:701px) and (max-height:650px){
+  .ca-bank{height:auto;overflow:visible}
+  .ca-work{height:max(32rem,80dvh)}
+  .ca-pane{overflow:auto}
+}
 @media (max-width:700px){
   .ca-bar{flex-wrap:wrap;height:auto;padding:6px 12px;gap:6px 12px}
   .ca-nav{height:42px}.ca-nav>a,.ca-nav>button,.ca-more>button{padding:0 8px;font-size:14px}
   .ca-search{flex:1 0 100%;height:42px;order:5}.ca-search .ca-kbd{display:none}
-  .ca-bank{height:auto;display:block;overflow:visible;padding-bottom:64px}
+  .ca-bank{height:auto;display:block;overflow:visible;padding-bottom:calc(var(--ca-dock-height,56px) + 8px)}
   .ca-course{padding:8px 12px 8px;position:sticky;top:0;z-index:4}
   /* all nine units stay visible without sideways scrolling */
   .ca-units{gap:3px}
@@ -317,7 +322,7 @@
   .ca2 .ca-add{width:44px;height:44px}
   .ca-list-foot .ca-keys{display:none}
   .ca2 .ca-seg button{padding:10px 10px}.ca2 .ca-filters select{height:44px}.ca-check{padding:11px 4px}
-  .ca-pane{position:fixed;inset:0 0 56px 0;z-index:20;transform:translateX(103%);transition:transform var(--ca-med) var(--ca-out);visibility:hidden}
+  .ca-pane{position:fixed;inset:0 0 var(--ca-dock-height,56px) 0;z-index:20;transform:translateX(103%);transition:transform var(--ca-med) var(--ca-out);visibility:hidden}
   .ca-bank[data-pane] .ca-pane{transform:none;visibility:visible}
   .ca2 .ca-back{display:inline-grid}
   .ca-pane-head{padding:8px 12px}.ca-pane-head h2{font-size:19px}
@@ -354,7 +359,8 @@
   .ca-b-options{grid-column:2/-1}
   .ca2 .ca-b-tools .ca-icon{width:44px;height:44px}
   .ca-b-side{overflow:visible;min-height:60dvh}
-  .ca-b-preview{padding:10px 8px 32px}
+  .ca-b-preview{height:auto;padding:10px 8px 32px}
+  .ca-b-pdf-display{flex:none;height:clamp(240px,65dvh,640px)}
   .ca-b-form{margin:10px 8px;padding:12px}
   .ca-b-result{grid-template-columns:minmax(0,1fr)}
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
 import stimulusDocument from "../../../research/stimuli.json";
@@ -44,6 +44,8 @@ export function QuestionBank(props: Props) {
   const [shown, setShown] = useState(PAGE);
   const [mode, setMode] = useState<ImageMode>("full");
   const [focusedId, setFocusedId] = useState("");
+  const bank = useRef<HTMLDivElement>(null);
+  const dock = useRef<HTMLElement>(null);
   const rows = useRef<HTMLOListElement>(null);
   const sheet = useRef<HTMLDialogElement>(null);
   const listHeading = useRef<HTMLHeadingElement>(null);
@@ -88,6 +90,17 @@ export function QuestionBank(props: Props) {
   const loading = !catalog.units.length && !loadFailed;
 
   useEffect(() => { rows.current?.scrollTo(0, 0); }, [unit, topic, type, query, year, reviewedOnly]);
+
+  useLayoutEffect(() => {
+    const container = bank.current;
+    const strip = dock.current;
+    if (wide || !container || !strip) return;
+    const reserveStrip = () => container.style.setProperty("--ca-dock-height", `${Math.ceil(strip.getBoundingClientRect().height)}px`);
+    reserveStrip();
+    const observer = new ResizeObserver(reserveStrip);
+    observer.observe(strip, { box: "border-box" });
+    return () => observer.disconnect();
+  }, [wide]);
 
   useEffect(() => {
     if (paneOpen) {
@@ -156,7 +169,7 @@ export function QuestionBank(props: Props) {
   function clearFilters() { setYear("all"); setReviewedOnly(false); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
   function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
 
-  return <div className="ca-bank" data-pane={paneOpen ? "" : undefined}>
+  return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined}>
     <nav className="ca-course" aria-label="Units and topics" inert={paneOpen}>
       <h2 className="ca-sr">Browse by unit</h2>
       <div className="ca-units">
@@ -267,7 +280,7 @@ export function QuestionBank(props: Props) {
           </div> : <div className="ca-empty"><b>{loading ? "Loading the catalog…" : "Pick a question"}</b>The printed question appears here, with what it tests.</div>}
       </section>
 
-      <aside className="ca-dock" aria-label="Worksheet">
+      <aside className="ca-dock" ref={dock} aria-label="Worksheet">
         <b>Worksheet</b>
         {worksheetIds.length ? <ol>{worksheetIds.map((id, i) => { const q = byId.get(id);
           return <li key={id}><button type="button" data-u={q ? unitOf.get(q.displayTopic ?? "") : undefined} aria-current={id === current?.id ? "true" : undefined}

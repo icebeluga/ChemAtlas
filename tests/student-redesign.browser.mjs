@@ -253,6 +253,39 @@ test("phone builder settings collapse into a compact disclosure and keep draft d
   await title.waitFor();
 });
 
+test("tablet Fit page and Zoom out use a stable, bounded worksheet preview", async (t) => {
+  const page = await openPage(768, "/practice-builder", ["mcq-2008-1-29", "frq-2006-3-22"]);
+  t.after(() => page.close());
+  await page.setViewportSize({ width: 768, height: 700 });
+  const paper = page.getByRole("region", { name: "Worksheet PDF" });
+  const canvas = paper.locator("canvas");
+  const visibleHeight = () => paper.evaluate(el => Math.min(el.clientHeight,
+    el.closest(".ca-b-side").getBoundingClientRect().bottom - el.getBoundingClientRect().top));
+  await page.waitForFunction(() => {
+    const panel = document.querySelector(".worksheet-paper");
+    const canvas = panel?.querySelector("canvas");
+    return canvas?.style.width && canvas.clientHeight >
+      panel.closest(".ca-b-side").getBoundingClientRect().bottom - panel.getBoundingClientRect().top;
+  });
+  const widthFit = await canvas.boundingBox();
+  await page.getByRole("button", { name: "Fit page", exact: true }).click();
+  await page.waitForFunction(width => {
+    const canvas = document.querySelector(".worksheet-paper canvas");
+    return canvas?.clientWidth < width - 2;
+  }, widthFit.width, { timeout: 7000 });
+  const pageFit = await canvas.boundingBox();
+  assert.ok(pageFit.height <= await visibleHeight() + 2);
+
+  await page.getByRole("button", { name: "Zoom out", exact: true }).click();
+  await page.waitForFunction(height => document.querySelector(".worksheet-paper canvas")?.clientHeight < height - 2, pageFit.height);
+  const zoomed = await canvas.evaluate(async el => {
+    // Let the observer and PDF.js react to canvas sizing before checking the final size.
+    for (let frame = 0; frame < 12; frame++) await new Promise(resolve => requestAnimationFrame(resolve));
+    return el.getBoundingClientRect().height;
+  });
+  assert.ok(Math.abs(zoomed - pageFit.height * .75) <= 2, `expected 75% of ${pageFit.height}px, got ${zoomed}px`);
+});
+
 test("the last real worksheet preview remains visible during an update and a failed request", async (t) => {
   const page = await openPage(1440, "/practice-builder", ["mcq-2008-1-29", "mcq-2008-2-29", "mcq-2018-23-2039", "mcq-2008-42-39"]);
   t.after(() => page.close());
@@ -334,6 +367,45 @@ async function waitForQuestionCanvases(page, count) {
     return canvases.length === expected && canvases.every(canvas => canvas.style.visibility === "visible" && canvas.height > 0);
   }, count);
 }
+
+test("the Question Bank viewer is reachable and scrollable on short landscape screens", async (t) => {
+  const page = await openPage(844, "/?view=detail&question=frq-2005-2-7&unit=u1&topic=1.3");
+  t.after(() => page.close());
+  await page.setViewportSize({ width: 844, height: 390 });
+  await waitForQuestionCanvases(page, 1);
+  const viewport = page.locator(".ca-viewport");
+  await viewport.scrollIntoViewIfNeeded();
+  const geometry = await viewport.evaluate(el => {
+    const bank = el.closest(".ca-bank");
+    const rect = el.getBoundingClientRect();
+    const x = (rect.left + rect.right) / 2;
+    const y = (Math.max(rect.top, 0) + Math.min(rect.bottom, innerHeight)) / 2;
+    return { bankScroll: bank.scrollTop, hit: el.contains(document.elementFromPoint(x, y)),
+      scrollable: el.scrollHeight > el.clientHeight };
+  });
+  assert.equal(geometry.bankScroll, 0, "the viewer is reachable without scrolling a clipped bank container");
+  assert.ok(geometry.hit);
+  assert.ok(geometry.scrollable);
+  await viewport.hover();
+  await page.mouse.wheel(0, 160);
+  await page.waitForFunction(() => document.querySelector(".ca-viewport")?.scrollTop > 0);
+});
+
+test("the phone question pane reserves space for empty and populated worksheet strips", async (t) => {
+  const page = await openPage(390, "/?view=detail&question=frq-2005-2-7&unit=u1&topic=1.3");
+  t.after(() => page.close());
+  await page.setViewportSize({ width: 390, height: 600 });
+  await waitForQuestionCanvases(page, 1);
+  const assertClearPane = () => page.waitForFunction(() => {
+    const pane = document.querySelector(".ca-pane").getBoundingClientRect();
+    const strip = document.querySelector(".ca-dock").getBoundingClientRect();
+    return Math.abs(pane.bottom - strip.top) <= 1;
+  }, undefined, { timeout: 4500 });
+  await assertClearPane();
+  await page.getByRole("button", { name: "Add to worksheet", exact: true }).click();
+  await page.locator(".ca-dock li").first().waitFor();
+  await assertClearPane();
+});
 
 test("phone fit-width rendering settles and ignores height-only changes", async (t) => {
   const page = await openPage(390, "/?view=detail&question=frq-2005-2-7&unit=u1&topic=1.3");

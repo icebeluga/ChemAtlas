@@ -133,3 +133,58 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     await browser.close();
   }
 });
+
+test("fractional response lines never corrupt saved drafts, and a corrupt backup is repaired and preserved", async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHEMATLAS_CHROMIUM });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+  const errors = [];
+  page.on("pageerror", error => errors.push(error.message));
+  const key = "chematlas-worksheets-v1";
+  const recoveryKey = "chematlas-worksheets-v1-recovery";
+  try {
+    await page.route(`${origin.origin}/**`, route => route.continue({
+      headers: { ...route.request().headers(), "cf-access-jwt-assertion": token },
+    }));
+    await page.goto(new URL("/practice-builder", origin).href);
+    await page.getByText("0 selected", { exact: true }).waitFor();
+    await page.getByRole("textbox", { name: "Worksheet title" }).fill("Format source"); // first save writes the default format
+    const format = await page.evaluate(k => JSON.parse(localStorage.getItem(k)).drafts[0].format, key);
+    const seed = lines => ({ version: 1, active: "draft-b", drafts: [
+      { id: "draft-a", name: "Draft A", format, entries: [{ id: "mcq-2008-1-29", breakBefore: false }] },
+      { id: "draft-b", name: "Draft B", format, entries: [{ id: "frq-2005-1-6", breakBefore: false, ...(lines === undefined ? {} : { lines }) }] },
+    ] });
+    const stored = () => page.evaluate(k => JSON.parse(localStorage.getItem(k)), key);
+    const options = page.locator("select").filter({ has: page.locator('option[value="draft-a"]') });
+
+    // Typing a fractional value saves a whole number and keeps both drafts across a reload.
+    await page.evaluate(([k, v]) => { localStorage.clear(); localStorage.setItem(k, v); }, [key, JSON.stringify(seed())]);
+    await page.reload();
+    await page.getByText("1 selected", { exact: true }).waitFor();
+    await page.locator("details.ca-b-options summary").first().click();
+    await page.getByRole("spinbutton", { name: "Response lines" }).fill("1.5");
+    await page.waitForFunction(k => JSON.parse(localStorage.getItem(k)).drafts[1].entries[0].lines !== undefined, key);
+    assert.equal((await stored()).drafts[1].entries[0].lines, 2);
+    await page.reload();
+    await page.getByText("1 selected", { exact: true }).waitFor();
+    assert.equal(await options.locator("option").count(), 2);
+    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), null);
+
+    // A backup written by the defective build is repaired on load, kept raw, and survives the next edit.
+    const corrupt = JSON.stringify(seed(1.5));
+    await page.evaluate(([k, v]) => { localStorage.clear(); localStorage.setItem(k, v); }, [key, corrupt]);
+    await page.reload();
+    await page.getByText("1 selected", { exact: true }).waitFor();
+    assert.equal(await options.locator("option").count(), 2);
+    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), corrupt);
+    await page.getByRole("textbox", { name: "Worksheet title" }).fill("Draft B edited");
+    await page.waitForFunction(k => JSON.parse(localStorage.getItem(k)).drafts[1].name === "Draft B edited", key);
+    const after = await stored();
+    assert.deepEqual(after.drafts.map(d => d.id), ["draft-a", "draft-b"]);
+    assert.deepEqual(after.drafts[0].entries, [{ id: "mcq-2008-1-29", breakBefore: false }]);
+    assert.equal(after.drafts[1].entries[0].lines, 2);
+    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), corrupt);
+    assert.deepEqual(errors, []);
+  } finally {
+    await browser.close();
+  }
+});

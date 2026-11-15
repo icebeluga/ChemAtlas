@@ -6,12 +6,12 @@ import { fileURLToPath } from "node:url";
 const { build } = createRequire(import.meta.resolve("vite"))("esbuild");
 const output = await build({
   stdin: {
-    contents: 'export { planWorksheetRestore } from "./components/student/hooks/use-worksheets"; export { moveEntry, replaceEntry } from "./lib/worksheet-edits"; export { defaultFormat } from "./lib/worksheet";',
+    contents: 'export { planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } from "./components/student/hooks/use-worksheets"; export { moveEntry, replaceEntry } from "./lib/worksheet-edits"; export { defaultFormat } from "./lib/worksheet";',
     resolveDir: fileURLToPath(new URL("..", import.meta.url)),
   },
   bundle: true, format: "esm", platform: "node", write: false,
 });
-const { defaultFormat, moveEntry, replaceEntry, planWorksheetRestore } =
+const { defaultFormat, moveEntry, replaceEntry, planWorksheetRestore, restoreWorksheetBackup, useWorksheets, worksheetRecoveryKey } =
   await import(`data:text/javascript;base64,${Buffer.from(output.outputFiles[0].text).toString("base64")}`);
 
 const legacyKey = "chematlas-student-worksheet-v1";
@@ -96,4 +96,103 @@ test("partial migration writes what fits and keeps the legacy key for retry", ()
   assert.deepEqual(result.backup.drafts[0].entries, [...entries, entry("first")]);
   assert.deepEqual(result.writes, [[worksheetKey, JSON.stringify(result.backup)]]);
   assert.deepEqual(result.removals, []);
+});
+
+class MemoryStorage {
+  constructor(entries = {}) { this.map = new Map(Object.entries(entries)); this.failKeys = new Set(); }
+  getItem(key) { return this.map.has(key) ? this.map.get(key) : null; }
+  setItem(key, value) { if (this.failKeys.has(key)) throw new Error("QuotaExceededError"); this.map.set(key, String(value)); }
+  removeItem(key) { this.map.delete(key); }
+}
+const withStorage = (entries, run) => {
+  const storage = new MemoryStorage(entries);
+  globalThis.localStorage = storage;
+  try { return run(storage); } finally { delete globalThis.localStorage; }
+};
+const useTestWorksheets = (current) => {
+  const calls = { set: [], errors: [] };
+  return { calls, ...useWorksheets(current, next => calls.set.push(next), message => calls.errors.push(message)) };
+};
+
+test("saving a fractional response-line value is refused and leaves stored drafts untouched", () => {
+  const saved = backup(draft("A", [entry("a", false, 2)]), draft("B", [entry("b", false, 4)]));
+  const text = JSON.stringify(saved);
+  withStorage({ [worksheetKey]: text }, storage => {
+    const { save, calls } = useTestWorksheets(saved);
+    save({ ...saved, drafts: [saved.drafts[0], draft("B", [entry("b", false, 1.5)])] });
+    assert.equal(storage.getItem(worksheetKey), text);
+    assert.deepEqual(calls.set, []);
+    assert.equal(calls.errors.length, 1);
+  });
+});
+
+test("a backup with a fractional line override is repaired on reload, preserved raw, and survives the next edit", () => {
+  const a = draft("A", [entry("a1", true, 5), entry("a2")], { title: "Keep me" });
+  const corrupt = { version: 1, active: "B", drafts: [a, draft("B", [entry("b1", false, 1.5), entry("b2")])] };
+  const text = JSON.stringify(corrupt);
+  withStorage({ [worksheetKey]: text }, storage => {
+    const restored = restoreWorksheetBackup();
+    assert.equal(restored.active, "B");
+    assert.deepEqual(restored.drafts, [a, draft("B", [entry("b1", false, 2), entry("b2")])]);
+    assert.equal(storage.getItem(worksheetRecoveryKey), text);
+
+    const { save, calls } = useTestWorksheets(restored);
+    const edited = { ...restored, drafts: restored.drafts.map(d => d.id === "B" ? { ...d, name: "Edited" } : d) };
+    save(edited);
+    assert.deepEqual(calls.errors, []);
+    assert.deepEqual(JSON.parse(storage.getItem(worksheetKey)), edited);
+    assert.equal(storage.getItem(worksheetRecoveryKey), text);
+  });
+});
+
+test("an unrepairable draft keeps valid drafts restored and its original in recovery after an edit", () => {
+  const a = draft("A", [entry("a1")]);
+  const broken = { ...draft("B"), entries: [entry("dup"), entry("dup")] };
+  const text = JSON.stringify({ version: 1, active: "B", drafts: [a, broken] });
+  withStorage({ [worksheetKey]: text }, storage => {
+    const restored = restoreWorksheetBackup();
+    assert.deepEqual(restored, { version: 1, active: "A", drafts: [a] });
+    const { save } = useTestWorksheets(restored);
+    save({ ...restored, drafts: [{ ...a, name: "Edited" }] });
+    assert.equal(JSON.parse(storage.getItem(worksheetKey)).drafts[0].name, "Edited");
+    assert.equal(storage.getItem(worksheetRecoveryKey), text);
+  });
+});
+
+test("malformed stored JSON is preserved before a fresh draft is saved over it", () => {
+  withStorage({ [worksheetKey]: "{broken" }, storage => {
+    const restored = restoreWorksheetBackup();
+    assert.equal(restored.drafts.length, 1);
+    assert.equal(storage.getItem(worksheetRecoveryKey), "{broken");
+    useTestWorksheets(restored).save(restored);
+    assert.equal(storage.getItem(worksheetRecoveryKey), "{broken");
+    assert.deepEqual(JSON.parse(storage.getItem(worksheetKey)), restored);
+  });
+});
+
+test("an edit never overwrites an invalid backup when the recovery copy cannot be written", () => {
+  const text = JSON.stringify({ version: 1, active: "A", drafts: [{ ...draft("A"), entries: [entry("x"), entry("x")] }] });
+  withStorage({ [worksheetKey]: text }, storage => {
+    storage.failKeys.add(worksheetRecoveryKey);
+    const restored = restoreWorksheetBackup();
+    const { save, calls } = useTestWorksheets(restored);
+    save(restored);
+    assert.equal(storage.getItem(worksheetKey), text);
+    assert.equal(storage.getItem(worksheetRecoveryKey), null);
+    assert.equal(calls.errors.length, 1);
+  });
+});
+
+test("an earlier recovery copy is never overwritten and valid backups create none", () => {
+  const valid = JSON.stringify(backup(draft("A"), draft("B")));
+  withStorage({ [worksheetKey]: valid }, storage => {
+    const restored = restoreWorksheetBackup();
+    useTestWorksheets(restored).save(restored);
+    assert.equal(storage.getItem(worksheetRecoveryKey), null);
+    assert.equal(storage.getItem(worksheetKey), valid);
+  });
+  withStorage({ [worksheetKey]: "{second", [worksheetRecoveryKey]: "{first" }, storage => {
+    restoreWorksheetBackup();
+    assert.equal(storage.getItem(worksheetRecoveryKey), "{first");
+  });
 });

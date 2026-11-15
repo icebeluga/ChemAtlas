@@ -289,8 +289,8 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
                       <summary>Options{entry.breakBefore ? " · page break before" : ""}{entry.lines !== undefined ? ` · ${entry.lines} lines` : ""}</summary>
                       <div>
                         <label className="ca-check"><input type="checkbox" checked={entry.breakBefore} onChange={e => update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, breakBefore: e.target.checked } : item) }, true)} /> Page break before</label>
-                        {q?.type === "FRQ" && <label className="ca-b-inline">Response lines<input type="number" min={0} max={12} value={entry.lines ?? f.lines} onChange={e => {
-                          const lines = Math.min(12, Math.max(0, Number(e.target.value) || 0));
+                        {q?.type === "FRQ" && <label className="ca-b-inline">Response lines<input type="number" min={0} max={12} step={1} value={entry.lines ?? f.lines} onChange={e => {
+                          const lines = Math.min(12, Math.max(0, Math.round(Number(e.target.value)) || 0));
                           update({ ...draft, entries: draft.entries.map(item => item.id === entry.id ? { ...item, lines } : item) }, true);
                         }} /></label>}
                         <button type="button" className="ca-btn is-quiet" onClick={() => { setReplacement(entry.id); setStep(0); }}>Replace…</button>

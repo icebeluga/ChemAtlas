@@ -14,7 +14,7 @@ before(async () => {
 });
 after(async () => browser?.close());
 
-async function openPage(width, path = "/", seedIds = []) {
+async function openPage(width, path = "/", seedIds = [], prepare) {
   const page = await browser.newPage({ viewport: { width, height: 844 }, reducedMotion: "reduce" });
   const token = process.env.CHEMATLAS_TEST_ACCESS_TOKEN;
   if (token) {
@@ -29,6 +29,7 @@ async function openPage(width, path = "/", seedIds = []) {
       }
     }, seedIds);
   }
+  await prepare?.(page);
   const response = await page.goto(new URL(path, origin).href);
   assert.equal(response?.status(), 200);
   return page;
@@ -79,12 +80,32 @@ test("phone question pane restores row focus and scroll for all Back paths", asy
 test("phone deep link closes to its filtered results without a preceding list entry", async (t) => {
   const page = await openPage(390, "/?view=detail&unit=u3&topic=3.4&question=mcq-2008-1-29");
   t.after(() => page.close());
-  await page.getByRole("region", { name: "Printed question" }).getByRole("heading").waitFor();
+  await page.getByRole("region", { name: "Printed question" }).getByRole("heading", { name: /2008 · Question 1/ }).waitFor();
   await page.getByRole("button", { name: "Back to results" }).click();
   await page.waitForURL(url => !url.searchParams.has("question") && url.searchParams.get("topic") === "3.4");
   const results = page.getByRole("list", { name: "Results" });
   await results.waitFor();
   await page.waitForFunction(() => document.activeElement?.classList.contains("ca-row-open"));
+});
+
+test("phone deep link has a focusable return path while the catalog is loading", async (t) => {
+  let releaseCatalog;
+  const catalog = new Promise(resolve => { releaseCatalog = resolve; });
+  t.after(releaseCatalog);
+  const page = await openPage(390, "/?view=detail&unit=u3&topic=3.4&question=mcq-2008-1-29", [], async page => {
+    await page.route(`${origin.origin}/student-questions.json`, async route => {
+      await catalog;
+      await route.fallback();
+    });
+  });
+  t.after(() => page.close());
+  await page.getByRole("heading", { name: "Loading the catalog…" }).waitFor();
+  await page.getByRole("button", { name: "Back to results" }).click();
+  await page.waitForURL(url => !url.searchParams.has("question"));
+  await page.waitForFunction(() => document.activeElement?.matches(".ca-list-title h1"));
+  releaseCatalog();
+  await page.locator("button.ca-row-open").first().waitFor();
+  assert.ok(await focus(page.locator(".ca-list-title h1")), "loading results do not steal the returned focus");
 });
 
 for (const width of [1440, 390]) {

@@ -222,6 +222,8 @@ test("builder tabs retain the layout, picker and PDF toolbar controls", async (t
   assert.equal(await toolbar.getByRole("button", { name: "Fit page" }).getAttribute("aria-pressed"), "true");
   await toolbar.getByRole("button", { name: "Fit width" }).click();
   assert.ok(await toolbar.getByText("100%", { exact: true }).isVisible());
+  const buttonRows = await toolbar.getByRole("button").evaluateAll(buttons => new Set(buttons.map(button => Math.round(button.getBoundingClientRect().top))).size);
+  assert.equal(buttonRows, 1, "the tablet toolbar fits on one row");
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 768);
 });
 

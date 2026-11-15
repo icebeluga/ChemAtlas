@@ -212,7 +212,7 @@
 .ca2 .ca-b-tabs button{padding:9px 12px;color:var(--ca-ink-2);font-weight:500;border-bottom:2px solid transparent;margin-bottom:-1px;transition:color var(--ca-fast),border-color var(--ca-fast)}
 .ca2 .ca-b-tabs button[aria-pressed=true]{color:var(--ca-ink);border-bottom-color:var(--ca-ink)}
 .ca2 .ca-b-tab-outline{display:none}
-.ca-b-body{display:grid;grid-template-columns:minmax(300px,400px) minmax(0,1fr);min-height:0}
+.ca-b-body{display:grid;grid-template-columns:minmax(300px,min(400px,45%)) minmax(0,1fr);min-height:0}
 .ca-b-outline{display:flex;flex-direction:column;min-height:0;background:var(--ca-surface);border-right:1px solid var(--ca-line)}
 .ca-b-outline-head{display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-bottom:1px solid var(--ca-line)}
 .ca-b-outline-head p{flex:1;font-size:14px;color:var(--ca-ink-2)}.ca-b-outline-head b{color:var(--ca-ink)}

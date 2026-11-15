@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import { createRequire } from "node:module";
+import { fileURLToPath } from "node:url";
 const { build } = createRequire(import.meta.resolve("vite"))("esbuild");
 import { PDFDocument } from "pdf-lib";
 
@@ -10,7 +11,7 @@ import { PDFDocument } from "pdf-lib";
 const output = await build({
   stdin: {
     contents: 'export { composeWorksheet } from "./lib/worksheet-pdf"; export { addEntries, backupSchema, newDraft } from "./lib/worksheet";',
-    resolveDir: new URL("..", import.meta.url).pathname,
+    resolveDir: fileURLToPath(new URL("..", import.meta.url)),
   },
   bundle: true, format: "esm", platform: "node", write: false,
 });

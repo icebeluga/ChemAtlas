@@ -147,7 +147,7 @@ export function QuestionBank(props: Props) {
       }
       else if (key === "a" && current && canEdit) onToggle(current.id);
       else if (key === "f" && current) setMode(value => value === "full" ? "crop" : "full");
-      else if (key === "escape" && selectedId && !wide) onClosePane();
+      else if (key === "escape" && paneOpen) onClosePane();
     }
     document.addEventListener("keydown", shortcuts);
     return () => document.removeEventListener("keydown", shortcuts);

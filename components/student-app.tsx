@@ -1,6 +1,6 @@
 "use client";
 
-import { ChangeEvent, type SetStateAction, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { ChangeEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { Activity, ArrowUpRight, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, ListChecks, Menu } from "lucide-react";
 import stimulusDocument from "../research/stimuli.json";
@@ -9,6 +9,9 @@ import { buildChemAtlasUrl, parseChemAtlasLocation } from "../app/navigation.mjs
 import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
 
 import { PracticeBuilder } from "@/components/practice-builder";
+import { useCatalog } from "@/components/student/hooks/use-catalog";
+import type { Catalog, Question } from "@/components/student/hooks/use-catalog";
+import type { Region as SourceRegion } from "@/lib/question-source";
 import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
@@ -31,23 +34,6 @@ function subscribeToNavigation(callback: () => void) {
 const getNavigationSnapshot = () => window.location.href;
 const getServerNavigationSnapshot = () => "https://chematlas.invalid/";
 
-type SourceRegion = { page: number; rect: number[] };
-type Unit = { id: string; name: string; topics: [string, string][] };
-type Question = {
-  displayTopic?: string; displayName?: string; id: string; type: "MCQ" | "FRQ"; year: string | null; exam: string;
-  number: number; pages: number[]; sourcePagesOriginal?: number[]; primaryUnit?: string; unitName?: string;
-  primaryTopic?: string | null; topicName?: string | null; secondaryTopics: string[]; relatedTopics?: string[];
-  topicParts?: { label: string; topics: string[]; topicNames: string[]; textPreview: string; confidence?: number; rationale?: string }[];
-  secondaryTopicNames: string[]; multiConcept: boolean; classificationConfidence: number;
-  status: "classified" | "review" | "legacy"; classificationRationale?: string; classificationMethod?: string; legacyConcepts?: string[]; sourceRegions?: SourceRegion[]; sourceAssets?: string[]; evidencePages?: number[]; reviewReason?: string | null; textPreview: string;
-  source: string; sourceBank?: string; stimulusIds?: string[];
-};
-type Bank = { id: string; name: string; size: number; addedAt: string; pages?: number };
-type Attempt = { attempts: number; wrong: number; correct: number; last: string; history: { date: string; result: "correct" | "missed" | "unsure" }[] };
-type Saved = { progress: Record<string, Attempt>; overrides: Record<string, string>; banks: Bank[]; questions: Question[]; sessions: number; sourcePages?: number };
-type Catalog = { sourceFiles?: {url:string;from:number;to:number}[]; units: Unit[]; questions: Question[]; sourcePages: number; includedSourcePages?: number[]; topicDetails?: Record<string, { description: string; learningObjectives?: string[]; pdfPages?: number[] }>; audit?: { totalPages: number; pagesReferencedByQuestionRecords: number; unreferencedPages: number[]; unresolvedPages: number; classified: number; legacy: number; review: number; coverageNote: string }; stats: Record<string, number> };
-
-const STORAGE_KEY = "apchem-studio-v2";
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
 const DB_NAME = "apchem-practice-bank";
 const STORE = "pdfs";
@@ -159,53 +145,6 @@ function restoreWorksheetBackup(): Backup {
   return next;
 }
 
-type BrowserState = Omit<Saved, "sourcePages"> & { backup?: Backup };
-
-function restoreBrowserState(initial: BrowserState): BrowserState {
-  const state = { ...initial, backup: restoreWorksheetBackup() };
-  try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
-    const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
-    const migrated = Object.fromEntries(Object.entries(prior.progress || {}).map(([id,p]) => [id, {
-      attempts:p.attempts || 0, wrong:p.wrong || 0, correct:p.correct || 0, last:p.last || "",
-      history:(p.history || []).map(h=>({date:h.date,result:h.correct ? "correct" as const : "missed" as const}))
-    }]));
-    state.progress = { ...migrated, ...(saved.progress || {}) };
-    state.overrides = saved.overrides || {};
-    state.sessions = saved.sessions || 0;
-    if (saved.banks?.length) state.banks = [...initial.banks, ...saved.banks.filter(b => b.id !== "mega")];
-    if (saved.questions?.length) state.questions = saved.questions.filter(q => q.sourceBank);
-  } catch { /* Keep the bundled bank usable if browser storage is damaged. */ }
-  return state;
-}
-
-function createBrowserState() {
-  const initial: BrowserState = {
-    progress: {}, overrides: {}, sessions: 0, questions: [],
-    banks: [{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }],
-  };
-  let snapshot = initial;
-  const listeners = new Set<() => void>();
-  function publish(state: BrowserState) {
-    snapshot = state;
-    listeners.forEach(listener => listener());
-  }
-  return {
-    getServerSnapshot: () => initial,
-    getSnapshot: () => snapshot,
-    subscribe(listener: () => void) {
-      // Subscriptions begin after hydration, when browser storage is available.
-      listeners.add(listener);
-      if (snapshot === initial) publish(restoreBrowserState(initial));
-      return () => { listeners.delete(listener); };
-    },
-    set<Key extends keyof BrowserState>(key: Key, update: SetStateAction<BrowserState[Key]>) {
-      const value = typeof update === "function" ? update(snapshot[key]) : update;
-      if (!Object.is(value, snapshot[key])) publish({ ...snapshot, [key]: value });
-    },
-  };
-}
-
 export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
@@ -214,13 +153,9 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const selectedTopic = route.topic;
   const typeFilter = route.type;
   const query = route.query;
-  const [bundledCatalog, setBundledCatalog] = useState<Catalog>({ units: [], questions: [], sourcePages: 0, stats: {} });
+  const [notice, setNotice] = useState("");
   const [approvedImages] = useState<Record<string, string[]>>({});
-  const [browserState] = useState(createBrowserState);
-  const { backup, progress, overrides, banks, sessions, questions: userQuestions } = useSyncExternalStore(browserState.subscribe, browserState.getSnapshot, browserState.getServerSnapshot);
-  const catalog = useMemo(() => userQuestions.length
-    ? { ...bundledCatalog, questions: [...bundledCatalog.questions, ...userQuestions] }
-    : bundledCatalog, [bundledCatalog, userQuestions]);
+  const { catalog, topics, questions, browserState, backup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, setNotice);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   function saveWorksheets(next: Backup) {
@@ -250,7 +185,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const [pageIndex, setPageIndex] = useState(0); const [selfResult, setSelfResult] = useState<"correct" | "missed" | "unsure" | null>(null);
   const [imageMode, setImageMode] = useState<"full" | "crop" | "approved">("full");
   const [work, setWork] = useState(""); const [submitted, setSubmitted] = useState(false);
-  const [sessionSize, setSessionSize] = useState(10); const [notice, setNotice] = useState("");
+  const [sessionSize, setSessionSize] = useState(10);
   const [newQuestionPage, setNewQuestionPage] = useState(""); const [newQuestionType, setNewQuestionType] = useState<"MCQ" | "FRQ">("FRQ");
   const [newQuestionNumber, setNewQuestionNumber] = useState(""); const [newQuestionBank, setNewQuestionBank] = useState("mega");
   const [newQuestionTopic, setNewQuestionTopic] = useState(""); const [, setShowAddQuestion] = useState(false);
@@ -282,11 +217,6 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     setResultPage(0);
   }
 
-  useEffect(() => {
-    fetch("/student-questions.json").then(r => r.json()).then(data => setBundledCatalog(data as Catalog)).catch(() => setNotice("Question catalog could not be loaded."));
-  }, []);
-  useEffect(() => { if (catalog.questions.length) localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress, overrides, banks: banks.filter(b => b.id !== "mega"), questions: catalog.questions.filter(q => q.sourceBank), sessions } satisfies Saved)); }, [catalog.questions, progress, overrides, banks, sessions]);
-
   function exportBrowserProgress() {
     const data = serializeProgress({ progress, overrides, sessions });
     const url = URL.createObjectURL(new Blob([data], { type: "application/json" }));
@@ -317,12 +247,6 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     }
   }
 
-  const topics = useMemo(() => catalog.units.flatMap(u => u.topics.map(([id, name]) => ({ id, name, unit: u.id, unitName: u.name }))), [catalog.units]);
-  const questions = useMemo<Question[]>(() => catalog.questions.map(q => {
-    const topic = overrides[q.id] ?? q.primaryTopic ?? undefined;
-    const related: string[] = overrides[q.id] ? [overrides[q.id],...(q.relatedTopics || []).filter(id=>id!==q.primaryTopic && id!==overrides[q.id])] : (q.relatedTopics?.length ? q.relatedTopics : (topic?[topic]:[]));
-    return { ...q, status: overrides[q.id] ? "classified" as const : q.status, displayTopic: topic, relatedTopics:related, displayName: topics.find(t => t.id === topic)?.name ?? q.topicName ?? "Needs classification" };
-  }), [catalog.questions, overrides, topics]);
   const sessionQuestions = route.sessionIds.flatMap(id => { const question = questions.find(q => q.id === id); return question ? [question] : []; });
   const routeQuestion = questions.find(q => q.id === route.questionId);
   const activeQueue = view === "practice" && sessionQuestions.length ? sessionQuestions : queue.length ? queue : routeQuestion ? [routeQuestion] : [];

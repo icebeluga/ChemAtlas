@@ -231,11 +231,12 @@ test("phone builder settings collapse into a compact disclosure and keep draft d
 });
 
 test("the last real worksheet preview remains visible during an update and a failed request", async (t) => {
-  const page = await openPage(1440, "/practice-builder", ["mcq-2008-1-29", "mcq-2008-2-29", "mcq-2018-23-2039"]);
+  const page = await openPage(1440, "/practice-builder", ["mcq-2008-1-29", "mcq-2008-2-29", "mcq-2018-23-2039", "mcq-2008-42-39"]);
   t.after(() => page.close());
   const download = page.getByRole("link", { name: "Download PDF" });
   await download.waitFor();
   const originalUrl = await download.getAttribute("href");
+  await page.getByText(/questions have no reviewed print layout/).waitFor();
   const canvas = page.locator(".worksheet-preview canvas");
   await page.waitForFunction(() => document.querySelector(".worksheet-preview canvas")?.width > 300);
   const original = await canvas.evaluate(node => node.toDataURL());
@@ -315,6 +316,7 @@ test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", 
   const page = await openPage(390, "/?view=detail&question=mcq-2008-1-29");
   t.after(() => page.close());
   await waitForQuestionCanvases(page, 1);
+  await page.getByText(/Check the worksheet PDF for the final layout/).waitFor();
   await page.getByRole("button", { name: "Question crop", exact: true }).click();
   await page.getByText("Shared with neighbouring questions", { exact: true }).waitFor();
   await waitForQuestionCanvases(page, 2);

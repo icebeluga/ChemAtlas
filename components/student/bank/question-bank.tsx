@@ -346,7 +346,7 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
       {reviewed !== undefined && <div className="ca-status" data-s={reviewed ? "ready" : "draft"}>
         {reviewed ? <Check size={15} aria-hidden="true" /> : <TriangleAlert size={15} aria-hidden="true" />}
         <span>{reviewed
-          ? <><b>Reviewed print layout.</b> In a worksheet this prints as a cropped question, unless it shares a source page with a question that has no reviewed layout.</>
+          ? <><b>Reviewed print layout.</b> Check the worksheet PDF for the final layout.</>
           : <><b>No reviewed print layout yet.</b> {reviewNote ? `${reviewNote} ` : ""}In a worksheet this prints as its full source page.</>}</span>
       </div>}
       <div className="ca-meta">

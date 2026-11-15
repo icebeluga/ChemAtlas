@@ -126,7 +126,7 @@ export function PdfQuestionPage({
         const regions = (JSON.parse(regionsKey) as Region[]).filter(region => region.page === sourcePage);
         const area = sourceBounds(pdfPage, cropView ? regions : []);
         const viewport = wrapper.closest<HTMLElement>("[data-pdf-viewport]") ?? wrapper;
-        const chrome = [...viewport.querySelectorAll<HTMLElement>(".pdf-label,.pdf-crop-note,.viewer-segment-label")]
+        const chrome = [...viewport.querySelectorAll<HTMLElement>(".pdf-label,.pdf-crop-note,[data-viewer-chrome]")]
           .reduce((sum, element) => sum + element.offsetHeight, 24);
         const scale = zoom === undefined
           ? Math.min(2, Math.max(0.6, (wrapper.clientWidth - 24) / base.width))

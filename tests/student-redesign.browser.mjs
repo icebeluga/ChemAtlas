@@ -303,3 +303,59 @@ test("the unit palette and selected phone topic have legible colours in the brow
   assert.ok(colors.topic >= 4.5);
   t.diagnostic(`Lowest unit token pair ${lowest.toFixed(2)}:1. Selected topic code ${colors.topic.toFixed(2)}:1.`);
 });
+
+async function waitForQuestionCanvases(page, count) {
+  await page.waitForFunction(expected => {
+    const canvases = [...document.querySelectorAll(".ca-viewport canvas")];
+    return canvases.length === expected && canvases.every(canvas => canvas.style.visibility === "visible" && canvas.height > 0);
+  }, count);
+}
+
+test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", async (t) => {
+  const page = await openPage(390, "/?view=detail&question=mcq-2008-1-29");
+  t.after(() => page.close());
+  await waitForQuestionCanvases(page, 1);
+  await page.getByRole("button", { name: "Question crop", exact: true }).click();
+  await page.getByText("Shared with neighbouring questions", { exact: true }).waitFor();
+  await waitForQuestionCanvases(page, 2);
+  await page.getByRole("button", { name: "Fit page", exact: true }).click();
+  await page.waitForFunction(() => {
+    const frame = document.querySelector(".ca-viewport");
+    return frame?.clientHeight > 300 && frame.scrollHeight <= frame.clientHeight + 4;
+  });
+
+  await page.goto(new URL("/?view=detail&question=frq-2005-3-8&unit=u5&topic=5.2", origin).href);
+  await waitForQuestionCanvases(page, 1);
+  await page.getByRole("button", { name: "Page 9", exact: true }).click();
+  await waitForQuestionCanvases(page, 1);
+  assert.match(await page.locator(".ca-viewport canvas").getAttribute("aria-label"), /page 9$/);
+  await page.getByRole("button", { name: "Fit page", exact: true }).click();
+  await page.waitForFunction(() => document.querySelector(".ca-viewport")?.clientHeight > 300);
+  await waitForQuestionCanvases(page, 1);
+});
+
+test("a manually indexed PDF bank question still opens after reload", async (t) => {
+  const page = await openPage(768, "/?view=banks");
+  t.after(() => page.close());
+  const { PDFDocument } = require("pdf-lib");
+  const document = await PDFDocument.create();
+  document.addPage().drawText("Temporary student bank test");
+  const name = "temporary-bank.pdf";
+  await page.locator("input[type=file]").setInputFiles({
+    name, mimeType: "application/pdf", buffer: Buffer.from(await document.save()),
+  });
+  await page.getByText(/temporary-bank.pdf is saved/).waitFor();
+  await page.getByLabel("PDF page").fill("1");
+  await page.getByLabel("Question #").fill("47");
+  await page.getByLabel("Primary topic").selectOption("1.1");
+  await page.getByRole("button", { name: /Add source question/ }).click();
+  await page.getByText(/Question added. Progress/).waitFor();
+  const id = await page.evaluate(() => {
+    const progress = JSON.parse(localStorage.getItem("apchem-studio-v2"));
+    return progress.questions.find(question => question.number === 47 && question.source === "temporary-bank.pdf")?.id;
+  });
+  assert.ok(id);
+  await page.goto(new URL(`/?view=detail&question=${encodeURIComponent(id)}`, origin).href);
+  await waitForQuestionCanvases(page, 1);
+  assert.equal(await page.locator(".ca-viewport canvas").getAttribute("aria-label"), `${name}, page 1`);
+});

@@ -363,7 +363,7 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
           ])}</dl>
         </details>}
       </div>
-      <div className="ca-viewer" ref={viewer}>
+      <div className="ca-viewer" ref={viewer} data-fit-page={zoom === "page" ? "" : undefined}>
         <div className="ca-viewer-bar" role="toolbar" aria-label="Image zoom">
           <button type="button" className="ca-icon" aria-label="Zoom out" disabled={scale <= MIN_ZOOM} onClick={() => setZoom(stepZoom(scale, -1))}><Minus size={15} aria-hidden="true" /></button>
           <output aria-live="polite" aria-label="Zoom level">{Math.round(scale * 100)}%</output>
@@ -382,7 +382,7 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
           {view === "crop" ? segments.map(({ page: segmentPage, regions, stimulusId }, i) => {
             const location = sourcePageLocation(segmentPage, files, q.sourceBank);
             return <div key={`${stimulusId ?? "question"}:${segmentPage}:${i}`}>
-              {stimulusId && <div className="ca-segment-label">Shared with neighbouring questions</div>}
+              {stimulusId && <div className="ca-segment-label" data-viewer-chrome>Shared with neighbouring questions</div>}
               <PdfQuestionPage page={location.page} sourcePage={segmentPage} bankId={location.bankId} bankName={bankName(q.sourceBank)}
                 sourceAsset={location.url} sourceRegions={regions} questionNumber={q.number} cropView
                 highlightLabels={stimulusId ? [] : highlights} zoom={zoom} fitBox={cropFit} onScale={i === 0 ? onScale : undefined} />

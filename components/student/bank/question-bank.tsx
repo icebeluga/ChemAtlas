@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { RefObject } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
 import stimulusDocument from "../../../research/stimuli.json";
 import { planWorksheet } from "../../../lib/worksheet.mjs";
@@ -43,6 +43,7 @@ export function QuestionBank(props: Props) {
   const [reviewedOnly, setReviewedOnly] = useState(false);
   const [shown, setShown] = useState(PAGE);
   const [mode, setMode] = useState<ImageMode>("full");
+  const [focusedId, setFocusedId] = useState("");
   const rows = useRef<HTMLOListElement>(null);
   const sheet = useRef<HTMLDialogElement>(null);
   const listHeading = useRef<HTMLHeadingElement>(null);
@@ -77,6 +78,9 @@ export function QuestionBank(props: Props) {
   const current = (selectedId ? byId.get(selectedId) : undefined) ?? (wide ? results[0] : undefined);
   const paneQuestionId = current?.id;
   const currentIndex = current ? results.findIndex(q => q.id === current.id) : -1;
+  const visibleResults = useMemo(() => results.slice(0, shown), [results, shown]);
+  const focusedIndex = visibleResults.findIndex(q => q.id === focusedId);
+  const tabIndexInResults = focusedIndex >= 0 ? focusedIndex : currentIndex >= 0 && currentIndex < shown ? currentIndex : 0;
   const activeUnit = catalog.units.find(u => u.id === unit);
   const activeUnitNumber = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
   const activeTopic = topic !== "all" ? topic : "";
@@ -92,7 +96,7 @@ export function QuestionBank(props: Props) {
     } else if (!selectedId && restoreOnClose.current) {
       restoreOnClose.current = false;
       const target = paneOpener.current?.isConnected ? paneOpener.current
-        : rows.current?.querySelector<HTMLButtonElement>(".ca-row-open") ?? listHeading.current;
+        : rows.current?.querySelector<HTMLButtonElement>("button.ca-row-open") ?? listHeading.current;
       paneOpener.current = null;
       target?.focus({ preventScroll: true });
     }
@@ -107,24 +111,47 @@ export function QuestionBank(props: Props) {
     const next = results[Math.max(0, Math.min(results.length - 1, currentIndex + delta))];
     if (next && next.id !== current?.id) {
       onSelect(next.id, true);
+      if (wide) setFocusedId(next.id);
       rows.current?.querySelector(`[data-id="${CSS.escape(next.id)}"]`)?.scrollIntoView({ block: "nearest" });
     }
-  }, [results, currentIndex, current, onSelect]);
+  }, [results, currentIndex, current, onSelect, wide]);
+
+  const moveRowFocus = useCallback((from: number, delta: number) => {
+    const next = visibleResults[from + delta];
+    if (!next) return;
+    const button = rows.current?.querySelector<HTMLButtonElement>(`[data-id="${CSS.escape(next.id)}"] .ca-row-open`);
+    button?.focus();
+    if (wide) onSelect(next.id, true);
+  }, [visibleResults, wide, onSelect]);
+
+  function onResultsKeyDown(event: ReactKeyboardEvent<HTMLOListElement>) {
+    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    const key = event.key.toLowerCase();
+    if (!["arrowdown", "arrowup", "j", "k"].includes(key)) return;
+    const item = (event.target as HTMLElement).closest<HTMLLIElement>(".ca-row[data-id]");
+    if (!item) return;
+    event.preventDefault();
+    moveRowFocus(visibleResults.findIndex(q => q.id === item.dataset.id), key === "arrowdown" || key === "j" ? 1 : -1);
+  }
 
   useEffect(() => {
     function shortcuts(event: KeyboardEvent) {
       const target = event.target as HTMLElement | null;
-      if (event.metaKey || event.ctrlKey || event.altKey || target?.closest("input,select,textarea,dialog,[role=menu]")) return;
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || target?.closest("input,select,textarea,dialog,[role=menu],[contenteditable]")) return;
       const key = event.key.toLowerCase();
-      if (key === "arrowdown" || key === "j") { event.preventDefault(); step(1); }
-      else if (key === "arrowup" || key === "k") { event.preventDefault(); step(-1); }
+      if (key === "j" || key === "k") {
+        event.preventDefault();
+        const delta = key === "j" ? 1 : -1;
+        if (wide || paneOpen) step(delta);
+        else moveRowFocus(tabIndexInResults, delta);
+      }
       else if (key === "a" && current && canEdit) onToggle(current.id);
       else if (key === "f" && current) setMode(value => value === "full" ? "crop" : "full");
       else if (key === "escape" && selectedId && !wide) onClosePane();
     }
     document.addEventListener("keydown", shortcuts);
     return () => document.removeEventListener("keydown", shortcuts);
-  }, [step, current, canEdit, onToggle, selectedId, wide, onClosePane]);
+  }, [step, moveRowFocus, tabIndexInResults, current, canEdit, onToggle, paneOpen, wide, onClosePane]);
 
   function clearFilters() { setYear("all"); setReviewedOnly(false); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
   function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
@@ -188,14 +215,16 @@ export function QuestionBank(props: Props) {
             {filtered && <button type="button" className="ca-clear" onClick={clearFilters}>Clear filters</button>}
           </div>
         </div>
-        <ol className="ca-rows" ref={rows} aria-label="Results">
+        <ol className="ca-rows" ref={rows} aria-label="Results" onKeyDown={onResultsKeyDown}>
           {loading && Array.from({ length: 8 }, (_, i) => <li key={i} className="ca-row catalog-row" aria-hidden="true"><span className="ca-row-open"><span /><span style={{ display: "grid", gap: 8, padding: "4px 0" }}><span className="ca-skel" style={{ width: "45%" }} /><span className="ca-skel" style={{ width: "85%" }} /></span></span></li>)}
-          {results.slice(0, shown).map(q => {
+          {visibleResults.map((q, rowIndex) => {
             const code = activeTopic || q.displayTopic || "";
             const on = worksheetIds.includes(q.id);
             const label = `${q.year ?? "Undated"} ${q.type} ${q.number}`;
-            return <li key={q.id} className="ca-row catalog-row" data-id={q.id} data-u={unitOf.get(code)} data-current={q.id === current?.id ? "" : undefined}>
-              <button type="button" className="ca-row-open" aria-current={q.id === current?.id ? "true" : undefined} onClick={event => openPane(q.id, event.currentTarget)}>
+            return <li key={q.id} className="ca-row catalog-row" data-id={q.id} data-u={unitOf.get(code)} data-current={q.id === current?.id ? "" : undefined}
+              onFocus={() => setFocusedId(q.id)}>
+              <button type="button" className="ca-row-open" tabIndex={rowIndex === tabIndexInResults ? 0 : -1}
+                aria-current={q.id === current?.id ? "true" : undefined} onClick={event => openPane(q.id, event.currentTarget)}>
                 <span className="ca-code">{code}</span>
                 <span>
                   <span className="ca-row-line"><span className="ca-tag" data-t={q.type}>{q.type}</span><b>{q.year ?? "Undated"} · {q.number}</b>
@@ -205,7 +234,8 @@ export function QuestionBank(props: Props) {
                   <span className="ca-row-text">{(q.textPreview ?? "").replace(/^\d+\.\s*/, "")}</span>
                 </span>
               </button>
-              <button type="button" className="ca-icon ca-add" aria-pressed={on} disabled={!canEdit || (!on && worksheetIds.length >= 500)}
+              <button type="button" className="ca-icon ca-add" tabIndex={rowIndex === tabIndexInResults ? 0 : -1}
+                aria-pressed={on} disabled={!canEdit || (!on && worksheetIds.length >= 500)}
                 aria-label={`${on ? "Remove from" : "Add to"} worksheet: ${label}`} onClick={() => onToggle(q.id)}>
                 {on ? <Check size={15} aria-hidden="true" /> : <Plus size={15} aria-hidden="true" />}
               </button>

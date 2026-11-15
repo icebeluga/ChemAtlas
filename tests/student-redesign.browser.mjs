@@ -34,7 +34,7 @@ function focus(locator) {
 test("phone question pane restores row focus and scroll for all Back paths", async (t) => {
   const page = await openPage(390, "/?view=library&unit=u3&topic=3.4");
   t.after(() => page.close());
-  const rows = page.locator(".ca-row-open");
+  const rows = page.locator("button.ca-row-open");
   const opener = rows.nth(12);
   await opener.scrollIntoViewIfNeeded();
   const searchBefore = new URL(page.url()).search;
@@ -50,7 +50,7 @@ test("phone question pane restores row focus and scroll for all Back paths", asy
     await heading.waitFor();
     await page.waitForFunction(() => document.activeElement?.matches(".ca-pane-head h2"));
     assert.ok(await focus(heading), "the pane heading receives focus");
-    for (const selector of [".ca-bar input", ".ca-row-open"]) {
+    for (const selector of [".ca-bar input", "button.ca-row-open"]) {
       const blocked = page.locator(selector).first();
       assert.equal(await blocked.evaluate(node => node.closest("[inert]") !== null), true);
       await blocked.evaluate(node => node.focus());
@@ -79,3 +79,38 @@ test("phone deep link closes to its filtered results without a preceding list en
   await results.waitFor();
   await page.waitForFunction(() => document.activeElement?.classList.contains("ca-row-open"));
 });
+
+for (const width of [1440, 390]) {
+  test(`results use one roving row with a keyboard-accessible add action at ${width}px`, async (t) => {
+    const page = await openPage(width);
+    t.after(() => page.close());
+    const results = page.getByRole("list", { name: "Results" });
+    const openButtons = results.locator("button.ca-row-open");
+    await openButtons.nth(2).waitFor();
+    const filter = page.getByRole("checkbox", { name: "Reviewed print layout only" });
+    await filter.focus();
+    assert.ok(await focus(filter));
+    assert.equal(await results.locator(".ca-row-open[tabindex='0']").count(), 1);
+    const search = new URL(page.url()).search;
+    await page.keyboard.press("ArrowDown");
+    assert.equal(new URL(page.url()).search, search, "arrows outside the list leave selection alone");
+
+    await page.keyboard.press("Tab");
+    assert.ok(await focus(openButtons.first()));
+    await page.keyboard.press("ArrowDown");
+    assert.ok(await focus(openButtons.nth(1)));
+    assert.equal(await results.locator(".ca-row-open[tabindex='0']").count(), 1);
+    assert.equal(await results.locator(".ca-add[tabindex='0']").count(), 1);
+    if (width < 701) assert.equal(new URL(page.url()).search, search, "moving focus does not open the phone pane");
+    else assert.equal(await openButtons.nth(1).getAttribute("aria-current"), "true");
+    await page.keyboard.press("Tab");
+    const add = results.locator(".ca-add").nth(1);
+    assert.ok(await focus(add));
+    await page.keyboard.press("Space");
+    assert.equal(await add.getAttribute("aria-pressed"), "true");
+    await page.keyboard.press("ArrowUp");
+    assert.ok(await focus(openButtons.first()));
+    await page.keyboard.press("ArrowUp");
+    assert.ok(await focus(openButtons.first()), "focus stays at the top boundary");
+  });
+}

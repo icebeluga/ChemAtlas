@@ -6,8 +6,8 @@ import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, steps, worksheetSource } from "@/lib/worksheet";
 import { filterQuestions } from "@/lib/question-filter";
 import { moveEntry, replaceEntry } from "@/lib/worksheet-edits";
-import type { Backup, Draft, ExportMode, Format, Region, Registry, SourceFile } from "@/lib/worksheet";
-import type { WorksheetContent } from "@/lib/worksheet-content";
+import type { Backup, Draft, ExportMode, Format, Region, SourceFile } from "@/lib/worksheet";
+import { useExportData } from "@/components/student/hooks/use-export-data";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
 import { ArrowDown, ArrowUp, Check, ChevronDown, GripVertical } from "lucide-react";
 import { AtlasButton } from "./ui/atlas-controls";
@@ -26,7 +26,6 @@ type Props = {
 };
 const filterDefaults = { unit: "all", topic: "all", type: "all", year: "all", source: "all", history: "all", print: "all", search: "" };
 const resultSize = 20;
-const emptyRegistry: Registry = { questions: {}, references: [], answerKeyPage: 0 };
 
 export function PracticeBuilder({ questions, topics, files, progress, backup, save, openPdf, renderSource }: Props) {
   const draft = backup.drafts.find(d => d.id === backup.active)!;
@@ -34,9 +33,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   const [filters, setFilters] = useState(filterDefaults);
   const [page, setPage] = useState(0);
   const [amount, setAmount] = useState(5);
-  const [registry, setRegistry] = useState<Registry>();
-  const [content, setContent] = useState<WorksheetContent>();
-  const [contentError, setContentError] = useState("");
+  const { registry, content, contentError } = useExportData();
   const [notice, setNotice] = useState("");
   const [undo, setUndo] = useState<Draft>();
   const [replacement, setReplacement] = useState("");
@@ -63,22 +60,6 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
       ? { ...previous, count }
       : previous);
   }, [request]);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    async function getJson<T>(path: string): Promise<T> {
-      const response = await fetch(path, { signal: controller.signal });
-      if (!response.ok) throw new Error(`Could not load ${path}.`);
-      return response.json();
-    }
-    getJson<Registry>("/worksheet-sources.json").then(setRegistry).catch(() => {
-      if (!controller.signal.aborted) setRegistry(emptyRegistry);
-    });
-    getJson<WorksheetContent>("/worksheet-content.json").then(setContent).catch(() => {
-      if (!controller.signal.aborted) setContentError("The reviewed worksheet content could not be loaded. Refresh and try again.");
-    });
-    return () => controller.abort();
-  }, []);
 
   useEffect(() => {
     if (!request) return;

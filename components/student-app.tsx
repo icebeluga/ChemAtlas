@@ -15,8 +15,8 @@ import type { Region as SourceRegion } from "@/lib/question-source";
 import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
-import { addEntries, backupSchema, newDraft, worksheetStorageKey } from "@/lib/worksheet";
-import type { Backup } from "@/lib/worksheet";
+import { addEntries } from "@/lib/worksheet";
+import { restoreWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
 
 const emptySourceFiles: NonNullable<Catalog["sourceFiles"]> = [];
 
@@ -34,7 +34,6 @@ function subscribeToNavigation(callback: () => void) {
 const getNavigationSnapshot = () => window.location.href;
 const getServerNavigationSnapshot = () => "https://chematlas.invalid/";
 
-const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
 const DB_NAME = "apchem-practice-bank";
 const STORE = "pdfs";
 
@@ -121,30 +120,6 @@ function PdfQuestionPage({ page, sourcePage, bankId, bankName, questionNumber=0,
   </div>;
 }
 
-function restoreWorksheetBackup(): Backup {
-  const draft = newDraft();
-  let next: Backup = { version: 1, active: draft.id, drafts: [draft] };
-  try {
-    const saved = backupSchema.safeParse(JSON.parse(localStorage.getItem(worksheetStorageKey) || "null"));
-    if (saved.success) next = saved.data;
-    const legacy: unknown = JSON.parse(localStorage.getItem(BANK_WORKSHEET_KEY) || "null");
-    if (Array.isArray(legacy)) {
-      const ids = legacy.filter((id): id is string => typeof id === "string" && id.length > 0 && id.length <= 200);
-      if (ids.length) {
-        const target = next.drafts.length < 100 && saved.success ? newDraft("Imported Question Bank selection") : next.drafts.find(item => item.id === next.active)!;
-        const migrated = addEntries(target, ids);
-        const drafts = next.drafts.some(item => item.id === target.id)
-          ? next.drafts.map(item => item.id === target.id ? migrated : item)
-          : [...next.drafts, migrated];
-        next = { ...next, active: migrated.id, drafts };
-        localStorage.setItem(worksheetStorageKey, JSON.stringify(next));
-        if (ids.every(id => migrated.entries.some(entry => entry.id === id))) localStorage.removeItem(BANK_WORKSHEET_KEY);
-      }
-    }
-  } catch { /* Retain the in-memory draft when browser storage is unavailable. */ }
-  return next;
-}
-
 export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
@@ -155,16 +130,10 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const query = route.query;
   const [notice, setNotice] = useState("");
   const [approvedImages] = useState<Record<string, string[]>>({});
-  const { catalog, topics, questions, browserState, backup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, setNotice);
+  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, setNotice);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
-  function saveWorksheets(next: Backup) {
-    browserState.set("backup", next);
-    try { localStorage.setItem(worksheetStorageKey, JSON.stringify(next)); }
-    catch { setNotice("Draft changes could not be saved in this browser. Download a worksheet backup before leaving."); }
-  }
-  const activeDraft = backup?.drafts.find(draft => draft.id === backup.active);
-  const worksheetIds = activeDraft?.entries.map(entry => entry.id) ?? [];
+  const { backup, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets(restoredBackup, next => browserState.set("backup", next), setNotice);
   const openWorksheetPdf = useCallback(async (url?: string, bankId?: string) => {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
     pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";

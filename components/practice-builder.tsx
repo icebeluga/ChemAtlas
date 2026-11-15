@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, steps, worksheetSource } from "@/lib/worksheet";
 import { filterQuestions } from "@/lib/question-filter";
+import { moveEntry, replaceEntry } from "@/lib/worksheet-edits";
 import type { Backup, Draft, ExportMode, Format, Region, Registry, SourceFile } from "@/lib/worksheet";
 import type { WorksheetContent } from "@/lib/worksheet-content";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
@@ -137,7 +138,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   function add(ids: string[]) {
     const eligible = ids.filter(id => !selected.has(id));
     if (replacement && eligible[0]) {
-      update({ ...draft, entries: draft.entries.map(e => e.id === replacement ? { ...e, id: eligible[0], lines: undefined } : e) }, true);
+      update(replaceEntry(draft, replacement, eligible[0]), true);
       setReplacement(""); setStep(1); setNotice("Question replaced."); return;
     }
     const next = addEntries(draft, eligible);
@@ -146,11 +147,8 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
     setNotice(added ? `Added ${added} ${added === 1 ? "question" : "questions"}.` : "No eligible questions to add.");
   }
   function move(from: number, to: number) {
-    if (from === to || from < 0 || to < 0 || to >= draft.entries.length) return;
-    const entries = [...draft.entries];
-    const [entry] = entries.splice(from, 1);
-    entries.splice(to, 0, entry);
-    update({ ...draft, entries }, true);
+    const next = moveEntry(draft, from, to);
+    if (next !== draft) update(next, true);
   }
   function changeFormat<K extends keyof Format>(key: K, value: Format[K]) {
     update({ ...draft, format: { ...draft.format, [key]: value } });

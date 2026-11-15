@@ -45,13 +45,16 @@ export function QuestionBank(props: Props) {
   const [mode, setMode] = useState<ImageMode>("full");
   const [focusedId, setFocusedId] = useState("");
   const bank = useRef<HTMLDivElement>(null);
+  const course = useRef<HTMLElement>(null);
   const dock = useRef<HTMLElement>(null);
+  const pane = useRef<HTMLElement>(null);
   const rows = useRef<HTMLOListElement>(null);
   const sheet = useRef<HTMLDialogElement>(null);
   const listHeading = useRef<HTMLHeadingElement>(null);
   const paneHeading = useRef<HTMLHeadingElement>(null);
   const paneOpener = useRef<HTMLElement>(null);
   const restoreOnClose = useRef(false);
+  const stepFocus = useRef<{ id: string; delta: number } | null>(null);
 
   const unitOf = useMemo(() => new Map(topics.map(t => [t.id, t.unit])), [topics]);
   const topicName = useMemo(() => new Map(topics.map(t => [t.id, t.name])), [topics]);
@@ -115,6 +118,15 @@ export function QuestionBank(props: Props) {
     }
   }, [paneOpen, paneQuestionId, selectedId]);
 
+  useEffect(() => {
+    const intent = stepFocus.current;
+    if (!wide || !intent || intent.id !== paneQuestionId) return;
+    stepFocus.current = null;
+    const label = intent.delta > 0 ? "Next question" : "Previous question";
+    const control = pane.current?.querySelector<HTMLButtonElement>(`button[aria-label="${label}"]:not(:disabled)`);
+    (control ?? paneHeading.current)?.focus();
+  }, [wide, paneQuestionId]);
+
   function openPane(id: string, opener: HTMLElement) {
     if (!wide && !paneOpen) paneOpener.current = opener;
     onSelect(id, wide || paneOpen);
@@ -123,6 +135,7 @@ export function QuestionBank(props: Props) {
   const step = useCallback((delta: number) => {
     const next = results[Math.max(0, Math.min(results.length - 1, currentIndex + delta))];
     if (next && next.id !== current?.id) {
+      if (wide) stepFocus.current = { id: next.id, delta };
       onSelect(next.id, true);
       if (wide) setFocusedId(next.id);
       rows.current?.querySelector(`[data-id="${CSS.escape(next.id)}"]`)?.scrollIntoView({ block: "nearest" });
@@ -133,44 +146,62 @@ export function QuestionBank(props: Props) {
     const next = visibleResults[from + delta];
     if (!next) return;
     const button = rows.current?.querySelector<HTMLButtonElement>(`[data-id="${CSS.escape(next.id)}"] .ca-row-open`);
-    button?.focus();
+    if (!button) return;
+    button.focus({ preventScroll: !wide });
     if (wide) onSelect(next.id, true);
+    else {
+      const rect = button.getBoundingClientRect();
+      const top = Math.max(0, course.current?.getBoundingClientRect().bottom ?? 0) + 4;
+      const bottom = Math.min(window.innerHeight, dock.current?.getBoundingClientRect().top ?? window.innerHeight) - 4;
+      if (rect.bottom > bottom) window.scrollBy(0, rect.bottom - bottom);
+      else if (rect.top < top) window.scrollBy(0, rect.top - top);
+    }
   }, [visibleResults, wide, onSelect]);
 
   function onResultsKeyDown(event: ReactKeyboardEvent<HTMLOListElement>) {
-    if (event.metaKey || event.ctrlKey || event.altKey) return;
+    if (!isBankShortcut(event)) return;
     const key = event.key.toLowerCase();
-    if (!["arrowdown", "arrowup", "j", "k"].includes(key)) return;
-    const item = (event.target as HTMLElement).closest<HTMLLIElement>(".ca-row[data-id]");
-    if (!item) return;
-    event.preventDefault();
-    moveRowFocus(visibleResults.findIndex(q => q.id === item.dataset.id), key === "arrowdown" || key === "j" ? 1 : -1);
+    const item = (event.target as Element).closest<HTMLLIElement>(".ca-row[data-id]");
+    if (!item?.dataset.id) return;
+    if (["arrowdown", "arrowup", "j", "k"].includes(key)) {
+      event.preventDefault();
+      moveRowFocus(visibleResults.findIndex(q => q.id === item.dataset.id), key === "arrowdown" || key === "j" ? 1 : -1);
+    } else if (key === "a" && canEdit && !event.repeat) {
+      onToggle(item.dataset.id);
+    } else if (key === "f" && wide && current && !event.repeat) {
+      setMode(value => value === "full" ? "crop" : "full");
+    }
+  }
+
+  function onPaneKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
+    if (!current || !isBankShortcut(event)) return;
+    const key = event.key.toLowerCase();
+    if ((key === "j" || key === "k") && currentIndex >= 0) {
+      event.preventDefault();
+      step(key === "j" ? 1 : -1);
+    } else if (key === "a" && canEdit && !event.repeat) {
+      onToggle(current.id);
+    } else if (key === "f" && !event.repeat) {
+      setMode(value => value === "full" ? "crop" : "full");
+    }
   }
 
   useEffect(() => {
-    function shortcuts(event: KeyboardEvent) {
-      const target = event.target as HTMLElement | null;
-      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || target?.closest("input,select,textarea,dialog,[role=menu],[contenteditable]")) return;
-      const key = event.key.toLowerCase();
-      if (key === "j" || key === "k") {
-        event.preventDefault();
-        const delta = key === "j" ? 1 : -1;
-        if (wide || paneOpen) step(delta);
-        else moveRowFocus(tabIndexInResults, delta);
-      }
-      else if (key === "a" && current && canEdit) onToggle(current.id);
-      else if (key === "f" && current) setMode(value => value === "full" ? "crop" : "full");
-      else if (key === "escape" && paneOpen) onClosePane();
+    if (!paneOpen) return;
+    function closeOnEscape(event: KeyboardEvent) {
+      const target = event.target;
+      if (event.key === "Escape" && !event.defaultPrevented && !event.repeat && !document.fullscreenElement &&
+        !(target instanceof Element && target.closest("dialog[open]"))) onClosePane();
     }
-    document.addEventListener("keydown", shortcuts);
-    return () => document.removeEventListener("keydown", shortcuts);
-  }, [step, moveRowFocus, tabIndexInResults, current, canEdit, onToggle, paneOpen, wide, onClosePane]);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [paneOpen, onClosePane]);
 
   function clearFilters() { setYear("all"); setReviewedOnly(false); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
   function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
 
   return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined}>
-    <nav className="ca-course" aria-label="Units and topics" inert={paneOpen}>
+    <nav className="ca-course" ref={course} aria-label="Units and topics" inert={paneOpen}>
       <h2 className="ca-sr">Browse by unit</h2>
       <div className="ca-units">
         <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => onFilters({ unit: "all", topic: "all" })}>
@@ -267,7 +298,7 @@ export function QuestionBank(props: Props) {
         </div>
       </section>
 
-      <section className="ca-pane" aria-label="Printed question">
+      <section className="ca-pane" ref={pane} aria-label="Printed question" onKeyDown={onPaneKeyDown}>
         {current ? <QuestionPane key={current.id} question={current} index={currentIndex} total={results.length} activeTopic={activeTopic}
           heading={paneHeading}
           mode={mode} onMode={setMode} files={catalog.sourceFiles ?? emptyFiles} unitOf={unitOf} topicName={topicName} bankName={bankName}
@@ -293,6 +324,11 @@ export function QuestionBank(props: Props) {
       </aside>
     </div>
   </div>;
+}
+
+function isBankShortcut(event: ReactKeyboardEvent) {
+  return !event.defaultPrevented && !event.metaKey && !event.ctrlKey && !event.altKey && !event.nativeEvent.isComposing &&
+    event.target instanceof Element && !event.target.closest("input,select,textarea,dialog,[contenteditable]");
 }
 
 type PaneProps = {

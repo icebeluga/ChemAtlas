@@ -34,8 +34,9 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
   useEffect(() => {
     if (!search || inert) return;
     function focusSearch(event: KeyboardEvent) {
-      const target = event.target as HTMLElement | null;
-      if (event.key !== "/" || event.metaKey || event.ctrlKey || event.altKey || target?.closest("input,select,textarea,[contenteditable]")) return;
+      const target = event.target;
+      if (event.key !== "/" || event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || event.isComposing ||
+        !(target instanceof Element) || !target.closest(".ca-list") || target.closest("input,select,textarea,[contenteditable]")) return;
       event.preventDefault();
       input.current?.focus();
     }

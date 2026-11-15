@@ -143,6 +143,66 @@ for (const width of [1440, 390]) {
   });
 }
 
+test("arrow-focused phone results stay above the worksheet strip and below the course band", async (t) => {
+  const page = await openPage(390);
+  t.after(() => page.close());
+  await page.locator("button.ca-row-open").first().focus();
+  const assertVisibleFocus = async () => {
+    assert.ok(await page.evaluate(() => {
+      const target = document.activeElement;
+      const row = target.getBoundingClientRect();
+      return target.matches(".ca-row-open") &&
+        row.top >= document.querySelector(".ca-course").getBoundingClientRect().bottom - 1 &&
+        row.bottom <= document.querySelector(".ca-dock").getBoundingClientRect().top + 1;
+    }));
+  };
+  for (let index = 0; index < 18; index++) {
+    await page.keyboard.press("ArrowDown");
+    await assertVisibleFocus();
+  }
+  for (let index = 0; index < 18; index++) {
+    await page.keyboard.press("ArrowUp");
+    await assertVisibleFocus();
+  }
+});
+
+test("desktop Next and Previous keep focus in the question controls", async (t) => {
+  const page = await openPage(1440, "/?view=detail&question=mcq-2008-1-29&unit=u1");
+  t.after(() => page.close());
+  const start = new URL(page.url()).searchParams.get("question");
+  const next = page.getByRole("button", { name: "Next question", exact: true });
+  await next.press("Enter");
+  await page.waitForURL(url => url.searchParams.get("question") !== start);
+  await page.waitForFunction(() => document.activeElement?.getAttribute("aria-label") === "Next question");
+  const previous = page.getByRole("button", { name: "Previous question", exact: true });
+  await previous.press("Enter");
+  await page.waitForURL(url => url.searchParams.get("question") === start);
+  await page.waitForFunction(() => document.activeElement?.matches(".ca-pane-head h2, button[aria-label='Previous question']"));
+});
+
+test("Question Bank shortcuts affect the focused feature and leave other controls alone", async (t) => {
+  const page = await openPage(1440, "/?view=detail&question=mcq-2008-1-29&unit=u1");
+  t.after(() => page.close());
+  const more = page.getByRole("button", { name: "More", exact: true });
+  const dock = page.getByRole("complementary", { name: "Worksheet" });
+  const added = dock.getByRole("button", { name: /^Worksheet question/ });
+  const crop = page.getByRole("button", { name: "Question crop", exact: true });
+  await crop.waitFor();
+  await more.focus();
+  await page.keyboard.press("a");
+  await page.keyboard.press("f");
+  assert.equal(await added.count(), 0);
+  assert.equal(await crop.getAttribute("aria-pressed"), "false");
+
+  await page.locator('li[data-id="mcq-2008-1-29"] button.ca-row-open').focus();
+  await page.keyboard.press("a");
+  await added.waitFor();
+  await page.keyboard.press("f");
+  assert.equal(await crop.getAttribute("aria-pressed"), "true");
+  await page.keyboard.press("/");
+  assert.ok(await focus(page.getByRole("searchbox", { name: "Search questions" })));
+});
+
 test("grouped outline movements stay within their section and preserve unrelated saved positions", async (t) => {
   const [frq1, mcq1, frq2, mcq2, mcq3] = ["frq-2006-3-22", "mcq-2008-2-29", "frq-2005-1-6", "mcq-2018-23-2039", "mcq-2008-1-29"];
   const page = await openPage(1440, "/practice-builder", [frq1, mcq1, frq2, mcq2, mcq3]);

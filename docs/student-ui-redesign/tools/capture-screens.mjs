@@ -32,6 +32,7 @@ const steps = [
   { name: "unit then topic", js: `$('.ca-unit[data-u=u3]').click();await wait(400);const h1=$('.ca-list-title h1').innerText;const topics=$$('.ca-topic').length;$$('.ca-topic').find(t=>t.textContent.startsWith('3.4')).click();await wait(400);return{unitHeading:h1,topics,heading:$('.ca-list-title').innerText,rows:$$('.ca-row[data-id]').length,chipCount:$$('.ca-topic').find(t=>t.textContent.startsWith('3.4')).querySelector('i').textContent,url:location.search}` },
   { name: "add two, select third", js: `$$('.ca-row[data-id]')[0].querySelector('.ca-add').click();await wait(150);$$('.ca-row[data-id]')[3].querySelector('.ca-add').click();await wait(150);$$('.ca-row[data-id]')[2].querySelector('.ca-row-open').click();const ok=await drawn();await settle();return{drawn:ok,dock:$$('.ca-dock li').length,nav:$('.ca-count').textContent,title:$('.ca-pane-head h2').innerText,url:location.search,stored:JSON.parse(localStorage.getItem('chematlas-worksheets-v1')).drafts[0].entries.length}` },
   { shot: "bank-topic-desktop" },
+  { js: `$('.ca-row[data-current] .ca-row-open').focus()` },
   { key: "ArrowDown" }, { key: "a" },
   { name: "keyboard: down then A", js: `await wait(300);return{selected:$$('.ca-row[data-id]').findIndex(r=>r.hasAttribute('data-current')),dock:$$('.ca-dock li').length}` },
   { key: "f" },

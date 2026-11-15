@@ -124,7 +124,7 @@ Verified: 366 of 735 classified questions have more than one related topic; 210 
 
 ### 4.4 Keyboard
 
-`↑`/`↓` or `J`/`K` move the selection, `A` toggles the selected question on the active worksheet, `F` toggles Full page, `/` focuses search, `Esc` leaves a field or the phone question view. Shortcuts are ignored while a field has focus or a modifier key is held. They are an enhancement: every action also has a visible control reachable with Tab.
+`↑`/`↓` or `J`/`K` move focus within the results. In the question pane, `J`/`K` step through the results. With a row or the pane focused, `A` toggles that question on the active worksheet and `F` switches Full page and Question crop when a viewer is present. From the results area, `/` focuses search. `Esc` leaves the search field or the phone question view. Letter and punctuation shortcuts leave text fields and unrelated controls alone. Every action also has a visible control reachable with Tab.
 
 ### 4.5 The viewer and `fix/local-workers-runtime`
 

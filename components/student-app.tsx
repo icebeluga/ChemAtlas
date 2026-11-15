@@ -1,7 +1,7 @@
 "use client";
 
 import { ChangeEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { Activity, ArrowUpRight, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, ListChecks, Menu } from "lucide-react";
+import { Activity, ArrowUpRight, Beaker, BookOpen, ChevronDown, FileText, FlaskConical, LayoutGrid, LibraryBig, ListChecks, Maximize2, Menu, Minimize2, Minus, MoveHorizontal, Plus, RotateCcw, Scan } from "lucide-react";
 import stimulusDocument from "../research/stimuli.json";
 import { planWorksheet } from "../lib/worksheet.mjs";
 import { buildChemAtlasUrl, parseChemAtlasLocation } from "../app/navigation.mjs";
@@ -15,6 +15,7 @@ import { readPdf, savePdf } from "@/components/student/pdf-bank-store";
 import { DirectoryCard, UnitDirectoryCard } from "@/components/ui/atlas-controls";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
+import { MAX_ZOOM, MIN_ZOOM, stepZoom, type ViewerZoom } from "@/lib/viewer-scale";
 import { addEntries } from "@/lib/worksheet";
 import { restoreWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
 
@@ -43,8 +44,13 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const typeFilter = route.type;
   const query = route.query;
   const [notice, setNotice] = useState("");
+  const [catalogLoadFailed, setCatalogLoadFailed] = useState(false);
+  const onCatalogError = useCallback((message: string) => {
+    setCatalogLoadFailed(true);
+    setNotice(message);
+  }, []);
   const [approvedImages] = useState<Record<string, string[]>>({});
-  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, setNotice);
+  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, onCatalogError);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const { backup, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets(restoredBackup, next => browserState.set("backup", next), setNotice);
@@ -67,6 +73,30 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const [queue, setQueue] = useState<Question[]>([]); const [index, setIndex] = useState(0);
   const [pageIndex, setPageIndex] = useState(0); const [selfResult, setSelfResult] = useState<"correct" | "missed" | "unsure" | null>(null);
   const [imageMode, setImageMode] = useState<"full" | "crop" | "approved">("full");
+  const [viewerZoom, setViewerZoom] = useState<{ id: string; zoom: ViewerZoom }>();
+  const [viewerScale, setViewerScale] = useState(1);
+  const onViewerScale = useCallback((scale: number) => setViewerScale(scale), []);
+  const imagePanel = useRef<HTMLElement>(null);
+  const [fullscreen, setFullscreen] = useState(false);
+  useEffect(() => {
+    function syncFullscreen() {
+      setFullscreen(!!imagePanel.current && document.fullscreenElement === imagePanel.current);
+    }
+    document.addEventListener("fullscreenchange", syncFullscreen);
+    return () => document.removeEventListener("fullscreenchange", syncFullscreen);
+  }, []);
+
+  async function toggleViewerFullscreen() {
+    const panel = imagePanel.current;
+    if (!panel) return;
+    try {
+      if (document.fullscreenElement === panel) await document.exitFullscreen();
+      else await panel.requestFullscreen();
+    } catch {
+      setNotice("Fullscreen is not available in this browser.");
+    }
+  }
+
   const [work, setWork] = useState(""); const [submitted, setSubmitted] = useState(false);
   const [sessionSize, setSessionSize] = useState(10);
   const [newQuestionPage, setNewQuestionPage] = useState(""); const [newQuestionType, setNewQuestionType] = useState<"MCQ" | "FRQ">("FRQ");
@@ -229,13 +259,32 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   }
   function updateClassification(q: Question, value: string) { browserState.set("overrides", old=>({...old,[q.id]:value})); setNotice("Topic assignment saved."); }
   function addReviewItem(q: Question) { browserState.set("overrides", old=>({...old,[q.id]:old[q.id] || ""})); }
-  function openQuestion(q: Question) { setQueue([q]); setIndex(0); setPageIndex(0); setImageMode(approvedImages[q.id]?.length?"approved":"full"); setSubmitted(false); setSelfResult(null); setWork(""); navigate("detail", { questionId: q.id }); }
+  function openQuestion(q: Question) { setViewerZoom(undefined); setQueue([q]); setIndex(0); setPageIndex(0); setImageMode(approvedImages[q.id]?.length?"approved":"full"); setSubmitted(false); setSelfResult(null); setWork(""); navigate("detail", { questionId: q.id }); }
   function partsForTopic(q: Question, topicId?: string) { return (q.topicParts||[]).filter(part=>!topicId || part.topics.includes(topicId)); }
 
   const bankName = (id?: string) => banks.find(b=>b.id===(id || "mega"))?.name || "AP Chemistry MEGA Compiled Test Bank.pdf";
   const originalPagesFor = (q?: Question) => q?.sourcePagesOriginal?.length ? q.sourcePagesOriginal : (q?.pages?.length?q.pages:[1]);
   const pagesFor = (q?: Question) => q?.sourceBank && q.sourceBank!=="mega" ? q.pages : originalPagesFor(q).map(p=>{const file=catalog.sourceFiles?.find(f=>p>=f.from&&p<=f.to);return file?p-file.from+1:p;});
   const sourceAssetFor = (q:Question,i:number) => q.sourceBank && q.sourceBank!=="mega" ? undefined : catalog.sourceFiles?.find(f=>originalPagesFor(q)[i]>=f.from&&originalPagesFor(q)[i]<=f.to)?.url;
+  const zoom = viewerZoom && viewerZoom.id === current?.id ? viewerZoom.zoom : "width";
+  function selectViewerZoom(next: ViewerZoom) {
+    if (current) setViewerZoom({ id: current.id, zoom: next });
+  }
+  const detailPages = current && view === "detail" ? originalPagesFor(current) : [];
+  const detailPage = detailPages[pageIndex] ?? detailPages[0] ?? 1;
+  const detailSource = sourcePageLocation(detailPage, catalog.sourceFiles ?? emptySourceFiles, current?.sourceBank);
+  const detailHighlights = current && view === "detail"
+    ? partsForTopic(current, selectedTopic !== "all" && current.relatedTopics?.includes(selectedTopic) ? selectedTopic : undefined).map(part => part.label)
+    : [];
+  const cropSegments = current && view === "detail" && imageMode === "crop"
+    ? planWorksheet([current], stimulusDocument.stimuli, originalPagesFor)[0].segments
+    : [];
+  const cropFit = cropSegments.length > 1 && cropSegments.every(segment => segment.regions.length)
+    ? {
+      width: Math.max(...cropSegments.map(({ regions }) => Math.max(...regions.map(r => r.rect[2])) - Math.min(...regions.map(r => r.rect[0])))),
+      height: cropSegments.reduce((sum, { regions }) => sum + Math.max(...regions.map(r => r.rect[3])) - Math.min(...regions.map(r => r.rect[1])), 0),
+    } : undefined;
+
   function printWorksheet() {
     if (worksheetRef.current?.querySelector(".pdf-error")) {
       setNotice("A source page failed to render. Check the worksheet preview before printing.");
@@ -368,9 +417,68 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
         <section className="panel detail-match-panel"><div className="panel-head"><div><div className="eyebrow">WHY THIS QUESTION APPEARS HERE</div><h2>{selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?`${selectedTopic} · ${topics.find(t=>t.id===selectedTopic)?.name}`:"Topic mapping"}</h2></div><span className="multi-tag">{current.multiConcept?"MULTI-CONCEPT FRQ":"SOURCE QUESTION"}</span></div>{partsForTopic(current,selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?selectedTopic:undefined).length?<div className="detail-parts">{partsForTopic(current,selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?selectedTopic:undefined).map((part,i)=><div className="detail-part" key={`${part.label}-${i}`}><mark>{part.label}</mark><p>{part.rationale || part.textPreview}</p><small>{part.topicNames.map((n,j)=><span key={`${n}-${j}`}>{n}</span>)}</small></div>)}</div>:<p className="muted detail-whole-match">This item is indexed as a whole-question match. The source image below lets you inspect the original prompt before changing its topic assignment.</p>}</section>
         {current.classificationRationale && <section className="classification-evidence"><b>Classification evidence</b><p>{current.classificationRationale}</p><small>{current.classificationMethod || "Question-content review"}{current.evidencePages?.length?` · supporting bank pages ${current.evidencePages.join(", ")}`:""}</small>{!!current.legacyConcepts?.length && <p><b>Legacy concepts:</b> {current.legacyConcepts.join(", ")}</p>}</section>}
         <div className="detail-meta-grid"><div><small>QUESTION TYPE</small><b>{current.type==="FRQ"?"Free response":"Multiple choice"}</b></div><div><small>YEAR</small><b>{current.year||"Not identified"}</b></div><div><small>QUESTION NUMBER</small><b>{current.number}</b></div><div><small>EXAM / VERSION</small><b>{current.exam}</b></div><div><small>SOURCE PAGES</small><b>{originalPagesFor(current).join(", ")}</b></div><div><small>CLASSIFICATION STATUS</small><b>{current.status==="classified"?"Topic assigned":current.status==="legacy"?"Outside current framework":"Needs review"}</b></div></div>
-        <section className="panel detail-image-panel"><div className="panel-head"><div><div className="eyebrow">SOURCE IMAGE</div><h2>Question as printed</h2></div><div className="image-mode-tabs">{approvedImages[current.id]?.length?<button className={imageMode==="approved"?"selected":""} onClick={()=>setImageMode("approved")}>Approved image</button>:null}<button className={imageMode==="full"?"selected":""} onClick={()=>setImageMode("full")}>Full page</button><button className={imageMode==="crop"?"selected":""} onClick={()=>setImageMode("crop")}>Question crop</button></div></div><p className="muted">{imageMode==="approved"?"Current accepted image revision. The original PDF remains available below in Full page or Question crop mode.":"Yellow marks indicate the FRQ parts linked to the topic shown above. Use Full page to see shared instructions, diagrams, and surrounding context."}</p>{imageMode==="approved"&&approvedImages[current.id]?.length?<div className="approved-image-stack">{approvedImages[current.id].map((src,i)=><figure key={src}><img src={src} loading="lazy" alt={`${current.type} ${current.number} approved image segment ${i+1}`}/>{approvedImages[current.id].length>1?<figcaption>Segment {i+1} of {approvedImages[current.id].length}</figcaption>:null}</figure>)}</div>:<><div className="pdf-tabs">{pagesFor(current).map((pg,i)=><button key={originalPagesFor(current)[i]} className={pageIndex===i?"selected":""} onClick={()=>setPageIndex(i)}>Original page {originalPagesFor(current)[i]}</button>)}</div><PdfQuestionPage page={pagesFor(current)[pageIndex]} sourcePage={originalPagesFor(current)[pageIndex]} bankId={current.sourceBank||"mega"} bankName={bankName(current.sourceBank)} sourceAsset={sourceAssetFor(current,pageIndex)} sourceRegions={current.sourceRegions} questionNumber={current.number} cropView={imageMode==="crop"} highlightLabels={partsForTopic(current,selectedTopic!=="all"&&current.relatedTopics?.includes(selectedTopic)?selectedTopic:undefined).map(p=>p.label)} /></>}</section>
+        <section className="panel detail-image-panel" ref={imagePanel}>
+          <div className="panel-head">
+            <div><div className="eyebrow">SOURCE IMAGE</div><h2>Question as printed</h2></div>
+            <div className="image-mode-tabs" role="group" aria-label="Image mode">
+              {approvedImages[current.id]?.length ? <button type="button" className={imageMode === "approved" ? "selected" : ""} aria-pressed={imageMode === "approved"} onClick={() => setImageMode("approved")}>Approved image</button> : null}
+              <button type="button" className={imageMode === "full" ? "selected" : ""} aria-pressed={imageMode === "full"} onClick={() => setImageMode("full")}>Full page</button>
+              <button type="button" className={imageMode === "crop" ? "selected" : ""} aria-pressed={imageMode === "crop"} onClick={() => setImageMode("crop")}>Question crop</button>
+            </div>
+          </div>
+          <p className="muted">{imageMode === "approved" ? "Current accepted image revision. The original PDF remains available below in Full page or Question crop mode." : "Yellow marks indicate the FRQ parts linked to the topic shown above. Use Full page to see shared instructions, diagrams, and surrounding context."}</p>
+          {imageMode === "approved" && approvedImages[current.id]?.length ? <div className="approved-image-stack">
+            {approvedImages[current.id].map((src, i) => <figure key={src}>
+              <img src={src} loading="lazy" alt={current.type + " " + current.number + " approved image segment " + (i + 1)} />
+              {approvedImages[current.id].length > 1 ? <figcaption>Segment {i + 1} of {approvedImages[current.id].length}</figcaption> : null}
+            </figure>)}
+          </div> : <div className="viewer-shell">
+            <div className="viewer-toolbar" role="toolbar" aria-label="Image zoom">
+              <div className="viewer-group" role="group" aria-label="Zoom level controls">
+                <button type="button" aria-label="Zoom out" disabled={viewerScale <= MIN_ZOOM} onClick={() => selectViewerZoom(stepZoom(viewerScale, -1))}><Minus size={16} aria-hidden="true" /></button>
+                <output aria-live="polite" aria-label="Zoom level">{Math.round(viewerScale * 100)}%</output>
+                <button type="button" aria-label="Zoom in" disabled={viewerScale >= MAX_ZOOM} onClick={() => selectViewerZoom(stepZoom(viewerScale, 1))}><Plus size={16} aria-hidden="true" /></button>
+              </div>
+              <div className="viewer-group" role="group" aria-label="Image fit">
+                <button type="button" aria-pressed={zoom === "width"} onClick={() => selectViewerZoom("width")}><MoveHorizontal size={16} aria-hidden="true" />Fit width</button>
+                <button type="button" aria-pressed={zoom === "page"} onClick={() => selectViewerZoom("page")}><Scan size={16} aria-hidden="true" />Fit page</button>
+                <button type="button" aria-label="Actual size (1:1)" aria-pressed={zoom === 1} onClick={() => selectViewerZoom(1)}>1:1</button>
+              </div>
+              <div className="viewer-group viewer-actions" role="group" aria-label="Viewer actions">
+                <button type="button" onClick={() => {
+                  setViewerZoom(undefined);
+                  setPageIndex(0);
+                  setImageMode(approvedImages[current.id]?.length ? "approved" : "full");
+                  imagePanel.current?.querySelector("[data-pdf-viewport]")?.scrollTo(0, 0);
+                }}><RotateCcw size={16} aria-hidden="true" />Reset</button>
+                <button type="button" aria-pressed={fullscreen} onClick={toggleViewerFullscreen}>
+                  {fullscreen ? <Minimize2 size={16} aria-hidden="true" /> : <Maximize2 size={16} aria-hidden="true" />}
+                  {fullscreen ? "Exit full screen" : "Full screen"}
+                </button>
+              </div>
+            </div>
+            {imageMode === "full" && <div className="pdf-tabs">
+              {detailPages.map((page, i) => <button type="button" key={page} className={detailPage === page ? "selected" : ""} aria-pressed={detailPage === page} onClick={() => setPageIndex(i)}>Original page {page}</button>)}
+            </div>}
+            <div className="viewer-viewport" data-pdf-viewport key={current.id + ":" + imageMode + ":" + detailPage}>
+              {imageMode === "crop" ? cropSegments.map(({ page, regions, stimulusId }, i) => {
+                const source = sourcePageLocation(page, catalog.sourceFiles ?? emptySourceFiles, current.sourceBank);
+                return <div className="viewer-segment" key={(stimulusId ?? "question") + ":" + page + ":" + i}>
+                  {stimulusId && <div className="viewer-segment-label">Shared stimulus</div>}
+                  <PdfQuestionPage page={source.page} sourcePage={page} bankId={source.bankId} bankName={bankName(current.sourceBank)}
+                    sourceAsset={source.url} sourceRegions={regions} questionNumber={current.number} cropView
+                    highlightLabels={stimulusId ? [] : detailHighlights} zoom={zoom} fitBox={cropFit} onScale={i === 0 ? onViewerScale : undefined} />
+                </div>;
+              }) : <PdfQuestionPage page={detailSource.page} sourcePage={detailPage} bankId={detailSource.bankId} bankName={bankName(current.sourceBank)}
+                sourceAsset={detailSource.url} sourceRegions={current.sourceRegions} questionNumber={current.number}
+                highlightLabels={detailHighlights} zoom={zoom} onScale={onViewerScale} />}
+            </div>
+          </div>}
+        </section>
       </div>}
-      {view === "detail" && !current && <div className="page narrow"><div className="empty-state"><b>Question not found</b><p>This question ID is not present in the currently loaded catalog.</p><button className="outline" onClick={()=>navigate("library")}>Back to Question Bank</button></div></div>}
+      {view === "detail" && !current && !catalog.sourcePages && !catalogLoadFailed &&
+        <div className="page narrow"><p className="empty-state" role="status">Loading question…</p></div>}
+      {view === "detail" && !current && (catalog.sourcePages > 0 || catalogLoadFailed) && <div className="page narrow"><div className="empty-state"><b>Question not found</b><p>This question ID is not present in the currently loaded catalog.</p><button className="outline" onClick={()=>navigate("library")}>Back to Question Bank</button></div></div>}
 
       {view === "practice" && current && !showWorksheet && <div className="page practice-page"><div className="session-top"><button className="back" onClick={()=>navigate("desk")}>← Exit session</button><button className="outline compact" onClick={() => setShowWorksheet(true)}>Worksheet</button><div className="session-step-controls"><button className="outline compact" disabled={activeIndex <= 0} onClick={()=>goToPracticeIndex(activeIndex-1)}>← Previous</button><span className="session-count">QUESTION {activeIndex+1} <i>/</i> {activeQueue.length}</span></div></div><div className="progress-line"><i style={{width:`${((activeIndex+(submitted?1:0))/activeQueue.length)*100}%`}}/></div><div className="question-meta"><span className={`type-chip ${current.type.toLowerCase()}`}>{current.type==="MCQ"?"MULTIPLE CHOICE":"FREE RESPONSE"}</span><span>{current.displayTopic ? `${current.displayTopic} · ${current.displayName}` : "Needs topic review"}</span><span>·</span><span>{current.year || current.exam}</span></div>
         <div className="question-card source-question"><div className="source-question-head"><div><div className="eyebrow">ORIGINAL QUESTION PAGE</div><h2>{current.year || "Source bank"} · {current.type} {current.number}</h2><p>Exact page image from <b>{bankName(current.sourceBank)}</b></p></div><span className="source-page-count">{pageIndex+1} / {pagesFor(current).length} source page{pagesFor(current).length===1?"":"s"}</span></div>

@@ -561,3 +561,41 @@
 }
 
 .student-skip-link:focus { transform: none; }
+
+/* The question detail viewer uses the student workspace palette. */
+.viewer-shell {
+  --viewer-panel: var(--ca-surface-cool);
+  --viewer-line: var(--ca-border);
+  --viewer-accent: var(--ca-blue);
+  --viewer-focus: var(--color-focus);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.viewer-toolbar, .viewer-group { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.viewer-toolbar { padding: 8px; border: 1px solid var(--viewer-line); border-radius: 8px; background: var(--viewer-panel); }
+.viewer-actions { margin-inline-start: auto; }
+.viewer-toolbar button {
+  display: inline-flex; align-items: center; gap: 5px; justify-content: center;
+  min-height: 36px; min-width: 36px; padding: 4px 8px;
+  border: 1px solid var(--viewer-line); border-radius: 6px;
+  background: var(--ca-surface); color: var(--ca-text);
+}
+.viewer-toolbar button:hover:not(:disabled) { border-color: var(--viewer-accent); }
+.viewer-toolbar button:disabled { opacity: .5; cursor: default; }
+.viewer-toolbar button[aria-pressed="true"] { border-color: var(--viewer-accent); background: var(--ca-blue-soft); color: var(--viewer-accent); }
+.viewer-toolbar button:focus-visible { outline: 2px solid var(--viewer-focus); outline-offset: 2px; }
+.viewer-toolbar output { min-width: 3.2em; text-align: center; color: var(--ca-text-muted); font-variant-numeric: tabular-nums; }
+.viewer-shell > .pdf-tabs { margin-block: 8px; }
+.viewer-viewport { height: clamp(280px, 66vh, 1100px); overflow: auto; scrollbar-gutter: stable; background: var(--viewer-panel); }
+.viewer-viewport .pdf-frame { max-height: none; overflow: visible; }
+.viewer-viewport .pdf-frame canvas { max-width: none; }
+.viewer-segment + .viewer-segment { margin-block-start: 12px; }
+.viewer-segment-label { padding: 6px 12px; color: var(--viewer-accent); font-weight: 600; }
+.detail-image-panel:fullscreen { display: flex; flex-direction: column; overflow: hidden; background: var(--ca-surface); }
+.detail-image-panel:fullscreen .viewer-shell { flex: 1; min-height: 0; }
+.detail-image-panel:fullscreen .viewer-viewport { flex: 1; height: auto; }
+@media (max-width: 560px) {
+  .viewer-toolbar button { min-height: 44px; min-width: 44px; }
+  .viewer-actions { margin-inline-start: 0; }
+}

@@ -268,3 +268,38 @@ test("the last real worksheet preview remains visible during an update and a fai
     releaseRequest();
   }
 });
+
+test("the unit palette and selected phone topic have legible colours in the browser", async (t) => {
+  const page = await openPage(390, "/?view=library&unit=u3&topic=3.4");
+  t.after(() => page.close());
+  await page.getByRole("button", { name: "3.4", exact: true }).click();
+  const active = page.getByRole("dialog", { name: "Topics" }).getByRole("button", { name: /3.4 Ideal Gas Law/ });
+  const colors = await active.evaluate(button => {
+    const ctx = document.createElement("canvas").getContext("2d");
+    const luminance = color => {
+      ctx.clearRect(0, 0, 1, 1);
+      ctx.fillStyle = color;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      const linear = value => {
+        const channel = value / 255;
+        return channel <= .04045 ? channel / 12.92 : ((channel + .055) / 1.055) ** 2.4;
+      };
+      return .2126 * linear(r) + .7152 * linear(g) + .0722 * linear(b);
+    };
+    const ratio = (a, b) => (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+    const units = Array.from(document.querySelectorAll(".ca-unit[data-u]"), node => {
+      const style = getComputedStyle(node);
+      const deep = luminance(style.getPropertyValue("--deep"));
+      const tint = luminance(style.getPropertyValue("--tint"));
+      return [ratio(deep, tint), ratio(1, deep), ratio(deep, 1)];
+    });
+    const topic = ratio(luminance(getComputedStyle(button.querySelector(".ca-code")).color), luminance(getComputedStyle(button).backgroundColor));
+    return { units, topic };
+  });
+  assert.equal(colors.units.length, 9);
+  const lowest = Math.min(...colors.units.flat());
+  assert.ok(lowest >= 4.5);
+  assert.ok(colors.topic >= 4.5);
+  t.diagnostic(`Lowest unit token pair ${lowest.toFixed(2)}:1. Selected topic code ${colors.topic.toFixed(2)}:1.`);
+});

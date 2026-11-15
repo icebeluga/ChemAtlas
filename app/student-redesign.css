@@ -254,7 +254,6 @@
 .ca-b-preview-bar{display:flex;flex-wrap:wrap;align-items:center;gap:4px;padding:4px 8px;background:var(--ca-surface);border:1px solid var(--ca-line);border-radius:var(--ca-r);font-size:14px;font-variant-numeric:tabular-nums}
 .ca-b-preview-bar span{min-width:3ch;text-align:center}
 .ca2 .ca-b-preview-bar .ca-icon{width:34px;height:34px}
-.ca2 .ca-b-preview-bar .ca-icon[aria-pressed=true]{background:var(--ca-sunk);border-color:var(--ca-ink)}
 .ca2 .ca-b-preview .worksheet-paper{background:none;border:0;padding:0;overflow:auto;display:grid;justify-items:center}
 .ca2 .ca-b-preview .worksheet-paper canvas{background:#fff;box-shadow:0 1px 2px rgb(20 35 58/.14),0 14px 34px -14px rgb(20 35 58/.35);max-width:none}
 /* Layout and Add questions keep their existing controls inside the new frame */
@@ -286,6 +285,7 @@
 .ca-sheet ul{list-style:none;padding:6px;margin:0;overflow:auto;max-height:calc(80dvh - 60px)}
 .ca2 .ca-sheet li button{display:flex;gap:10px;align-items:baseline;width:100%;padding:12px 10px;border-radius:var(--ca-r);min-height:44px}
 .ca2 .ca-sheet li button[aria-pressed=true]{background:var(--deep,var(--ca-ink));color:#fff}
+.ca-sheet li button[aria-pressed=true] .ca-code{color:inherit}
 .ca-sheet li button span{flex:1}
 
 @media (max-width:1100px){

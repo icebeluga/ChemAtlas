@@ -3,13 +3,14 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import type { ReactNode } from "react";
 import type { PDFDocumentProxy } from "pdfjs-dist";
-import { defaultFormat, backupSchema, addEntries, newDraft, newWorksheetId, presets, worksheetSource } from "@/lib/worksheet";
+import { defaultFormat, addEntries, newDraft, newWorksheetId, presets, worksheetSource } from "@/lib/worksheet";
 import { filterQuestions } from "@/lib/question-filter";
 import { applyUndo, moveEntry, replaceEntry } from "@/lib/worksheet-edits";
 import type { UndoStep } from "@/lib/worksheet-edits";
 import type { Backup, Draft, ExportMode, Format, Region, SourceFile } from "@/lib/worksheet";
 import { useExportData } from "@/components/student/hooks/use-export-data";
 import { downloadWorksheetBackup } from "@/components/student/hooks/use-worksheets";
+import type { WorksheetImportResult } from "@/components/student/hooks/use-worksheets";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
 import { ArrowDown, ArrowUp, Check, ChevronDown, GripVertical, Plus, TriangleAlert, Undo2, X } from "lucide-react";
 import { WorksheetPreview } from "./worksheet-preview";
@@ -22,6 +23,8 @@ type Props = {
   progress: Record<string, { attempts: number; wrong: number }>;
   backup: Backup;
   save: (next: Backup) => void;
+  importDrafts: (file: File) => Promise<WorksheetImportResult>;
+  importDisabled: boolean;
   openPdf: (url?: string, bankId?: string) => Promise<PDFDocumentProxy>;
   renderSource: (question: Candidate, region: Region) => ReactNode;
   /** Leave the builder for the Question Bank. */
@@ -49,7 +52,7 @@ function outlineSections(draft: Draft, questions: Map<string, Candidate>) {
   return [...sections.values()].sort((a, b) => a.key.localeCompare(b.key, "en", { numeric: true }));
 }
 
-export function PracticeBuilder({ questions, topics, files, progress, backup, save, openPdf, renderSource, onOpenBank }: Props) {
+export function PracticeBuilder({ questions, topics, files, progress, backup, save, importDrafts, importDisabled, openPdf, renderSource, onOpenBank }: Props) {
   const draft = backup.drafts.find(d => d.id === backup.active)!;
   // step doubles as the visible tab: 1 outline (phones only), 3 preview, 2 layout, 0 add questions
   const [step, setStep] = useState(() => draft.entries.length ? 3 : 0);
@@ -217,16 +220,13 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
           <details className="ca-b-more"><summary className="ca-btn is-quiet">Drafts <ChevronDown size={15} aria-hidden="true" /></summary><div className="ca-b-menu">
             <button type="button" onClick={e => { open({ ...draft, id: newWorksheetId(), name: `${draft.name.slice(0, 93)} (copy)` }); e.currentTarget.closest("details")?.removeAttribute("open"); }}>Duplicate this worksheet</button>
             <button type="button" onClick={() => downloadWorksheetBackup(backup)}>Download drafts</button>
-            <label>Import drafts<input type="file" accept=".json,application/json" onChange={async e => {
+            <label>Import drafts<input type="file" accept=".json,application/json" disabled={importDisabled} onChange={async e => {
               const file = e.target.files?.[0]; e.target.value = ""; if (!file) return;
-              try {
-                if (file.size > 2_000_000) throw new Error();
-                const parsed = backupSchema.parse(JSON.parse(await file.text()));
-                if (backup.drafts.length + parsed.drafts.length > 100) { setNotice("Import would exceed the 100-worksheet limit."); return; }
-                const restored = parsed.drafts.map(d => ({ ...d, id: newWorksheetId() }));
-                save({ ...backup, drafts: [...backup.drafts, ...restored], active: restored[parsed.drafts.findIndex(d => d.id === parsed.active)].id });
+              setNotice("");
+              const result = await importDrafts(file);
+              if (result === "saved") {
                 setStep(3); setUndo(undefined); setReplacement(""); setNotice("Worksheet drafts imported.");
-              } catch { setNotice("Could not import that worksheet backup."); }
+              } else if (result === "invalid") setNotice("Could not import that worksheet backup.");
             }} /></label>
           </div></details>
         </div>

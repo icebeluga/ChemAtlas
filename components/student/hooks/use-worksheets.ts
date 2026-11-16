@@ -1,10 +1,10 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import { addEntries, backupSchema, draftSchema, newDraft, worksheetStorageKey } from "@/lib/worksheet";
+import { addEntries, backupSchema, draftSchema, newDraft, newWorksheetId, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup, Draft } from "@/lib/worksheet";
-import { acknowledgeLegacyWorksheets, adoptWorksheetBackup, initializeWorksheetDatabase, mergeWorksheetBackup, openWorksheetDatabase,
-  readWorksheetMigrationBaseline, saveWorksheetRecord, WorksheetConflict, worksheetTransaction } from "./worksheet-db";
+import { acknowledgeLegacyWorksheets, adoptWorksheetBackup, importWorksheetRecord, initializeWorksheetDatabase, mergeWorksheetBackup,
+  openWorksheetDatabase, readWorksheetMigrationBaseline, saveWorksheetRecord, WorksheetConflict, WorksheetImportLimit, worksheetTransaction } from "./worksheet-db";
 import type { WorksheetMigration, WorksheetRecord } from "./worksheet-db";
 
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
@@ -115,7 +115,16 @@ function legacyRecovery(sources: WorksheetMigration, baseline: WorksheetMigratio
   return { sources, downloads };
 }
 
-type WorksheetSnapshot = { backup: Backup; warning?: string; unsaved?: Backup; legacy?: LegacyRecovery; legacyError?: string };
+type WorksheetSnapshot = {
+  backup: Backup;
+  warning?: string;
+  rejectedEdits?: Backup[];
+  importing?: boolean;
+  pendingImport?: { backup: Backup; reason: string };
+  legacy?: LegacyRecovery;
+  legacyError?: string;
+};
+export type WorksheetImportResult = "saved" | "retained" | "invalid" | "busy";
 
 function createWorksheetStore() {
   let snapshot: WorksheetSnapshot | undefined;
@@ -128,6 +137,7 @@ function createWorksheetStore() {
   let legacy: LegacyRecovery | undefined;
   let legacyError: string | undefined;
   let legacyScan = 0;
+  let importedSelection: { previous: string; next: string } | undefined;
   let queue: Promise<void> = Promise.resolve();
   const listeners = new Set<() => void>();
 
@@ -138,15 +148,21 @@ function createWorksheetStore() {
 
   function fail(error: unknown, unsaved?: Backup) {
     blocked = true;
-    if (snapshot) publish({ ...snapshot, unsaved: unsaved ?? snapshot.unsaved,
-      warning: error instanceof WorksheetConflict ? conflictWarning : saveWarning });
+    if (snapshot) publish({ ...snapshot, rejectedEdits: unsaved ? [...(snapshot.rejectedEdits ?? []), unsaved] : snapshot.rejectedEdits,
+      warning: unsaved ? "An edit conflicted with newer worksheet changes. Download the current drafts and the separate rejected edit before reloading."
+        : error instanceof WorksheetConflict ? conflictWarning : saveWarning });
   }
 
-  function adopt(record: WorksheetRecord) {
+  function adopt(record: WorksheetRecord, active?: string) {
     committed = record;
-    const backup = snapshot ? adoptWorksheetBackup(snapshot.backup, record.backup) : record.backup;
+    const backup = snapshot ? adoptWorksheetBackup(active ? { ...snapshot.backup, active } : snapshot.backup, record.backup) : record.backup;
     const warning = record.recoveryNeeded ? recoveryWarning : undefined;
-    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ backup, warning, legacy, legacyError });
+    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ ...snapshot, backup, warning, legacy, legacyError });
+  }
+
+  function notify(message: string | number) {
+    try { channel?.postMessage(message); }
+    catch { /* An already committed write stays successful. Other tabs can refresh on focus. */ }
   }
 
   async function refresh() {
@@ -185,7 +201,7 @@ function createWorksheetStore() {
     if (!connection) return;
     try {
       await acknowledgeLegacyWorksheets(await connection, sources);
-      channel?.postMessage("legacy-acknowledged");
+      notify("legacy-acknowledged");
       await refreshLegacy();
     } catch {
       legacyError = "The legacy recovery acknowledgment could not be saved. Your original data is still available.";
@@ -219,7 +235,11 @@ function createWorksheetStore() {
     if (connection) { onResume(); return; }
     connection = openWorksheetDatabase();
     void connection.then(db => initializeWorksheetDatabase(db, () => planMigration(readMigrationSources())))
-      .then(async record => { await refreshLegacy(); adopt(record); }).catch(() => {
+      .then(async record => {
+        await refreshLegacy();
+        adopt(record);
+        void refresh();
+      }).catch(() => {
         blocked = true;
         let backup: Backup;
         try { backup = planMigration(readMigrationSources()).backup; }
@@ -229,9 +249,25 @@ function createWorksheetStore() {
   }
 
   function beforeUnload(event: BeforeUnloadEvent) {
-    if (!pending && !dirty) return;
+    if (!pending && !dirty && !snapshot?.importing && !snapshot?.pendingImport) return;
     event.preventDefault();
     event.returnValue = true;
+  }
+
+  function enqueue<T>(operation: () => Promise<T>): Promise<T> {
+    pending++;
+    const result = queue.then(operation).finally(() => {
+      pending--;
+      if (pending) return;
+      const imported = importedSelection;
+      importedSelection = undefined;
+      if (blocked || !committed) return;
+      dirty = false;
+      adopt(committed, imported && snapshot?.backup.active === imported.previous ? imported.next : undefined);
+      void refresh();
+    });
+    queue = result.then(() => {}, () => {});
+    return result;
   }
 
   function save(base: Backup, next: Backup) {
@@ -251,19 +287,54 @@ function createWorksheetStore() {
     if (blocked || !connection || !committed) return;
     const database = connection;
     const revision = committed.revision;
-    pending++;
-    // Keep this tab's optimistic edits ordered. IndexedDB serializes transactions across tabs.
-    queue = queue.then(async () => {
+    // Keep this tab's optimistic edits ordered. IndexedDB serializes the transactions across tabs.
+    void enqueue(async () => {
       if (blocked) return;
-      committed = await saveWorksheetRecord(await database, revision, base, next);
-      channel?.postMessage(committed.revision);
-    }).catch(error => fail(error)).finally(() => {
-      pending--;
-      if (pending || blocked || !committed) return;
-      dirty = false;
-      adopt(committed);
-      void refresh();
+      try {
+        committed = await saveWorksheetRecord(await database, revision, base, next);
+        notify(committed.revision);
+      } catch (error) { fail(error); }
     });
+  }
+
+  async function importDrafts(file: File): Promise<WorksheetImportResult> {
+    if (!snapshot || snapshot.importing || snapshot.pendingImport) return "busy";
+    publish({ ...snapshot, importing: true });
+    let source: Backup;
+    try {
+      if (file.size > 2_000_000) throw new Error("Worksheet backup is too large.");
+      source = backupSchema.parse(JSON.parse(await file.text()));
+    } catch {
+      if (snapshot) publish({ ...snapshot, importing: false });
+      return "invalid";
+    }
+
+    const drafts = source.drafts.map(draft => ({ ...draft, id: newWorksheetId() }));
+    const incoming = { ...source, drafts, active: drafts[source.drafts.findIndex(draft => draft.id === source.active)].id };
+    // Check capacity against the latest durable collection in the same transaction
+    // as the write, including any saves made while the file was being read.
+    return enqueue(async () => {
+      if (!snapshot) return "busy";
+      const previous = snapshot.backup.active;
+      try {
+        if (blocked || !committed || !connection) throw new Error("Worksheet storage is unavailable.");
+        committed = await importWorksheetRecord(await connection, committed.revision, incoming);
+        importedSelection = { previous, next: incoming.active };
+        notify(committed.revision);
+        publish({ ...snapshot, importing: false });
+        return "saved";
+      } catch (error) {
+        const reason = error instanceof WorksheetImportLimit
+          ? "Import would exceed the 100-worksheet limit. The import is still available to download."
+          : "The import could not be saved. The import is still available to download.";
+        publish({ ...snapshot, importing: false, pendingImport: { backup: source, reason } });
+        return "retained";
+      }
+    });
+  }
+
+  function discardPendingImport() {
+    if (snapshot?.pendingImport) publish({ ...snapshot, pendingImport: undefined });
   }
 
   return {
@@ -292,6 +363,8 @@ function createWorksheetStore() {
     getSnapshot: () => snapshot,
     save,
     acknowledge,
+    importDrafts,
+    discardPendingImport,
   };
 }
 
@@ -301,8 +374,8 @@ export function downloadWorksheetData(text: string, filename: string) {
   setTimeout(() => URL.revokeObjectURL(link), 1000);
 }
 
-export function downloadWorksheetBackup(backup: Backup) {
-  downloadWorksheetData(JSON.stringify(backup, null, 2), "chematlas-worksheets.json");
+export function downloadWorksheetBackup(backup: Backup, filename = "chematlas-worksheets.json") {
+  downloadWorksheetData(JSON.stringify(backup, null, 2), filename);
 }
 
 export function useWorksheets() {
@@ -311,7 +384,9 @@ export function useWorksheets() {
   const backup = snapshot?.backup;
   const activeDraft = backup?.drafts.find(draft => draft.id === backup.active);
   const worksheetIds = activeDraft?.entries.map(entry => entry.id) ?? [];
-  return { backup, warning: snapshot?.warning, unsaved: snapshot?.unsaved, legacy: snapshot?.legacy,
+  return { backup, warning: snapshot?.warning, rejectedEdits: snapshot?.rejectedEdits, legacy: snapshot?.legacy,
     legacyError: snapshot?.legacyError, acknowledgeLegacy: store.acknowledge,
+    importing: snapshot?.importing, pendingImport: snapshot?.pendingImport, importDrafts: store.importDrafts,
+    discardPendingImport: store.discardPendingImport,
     save: (next: Backup) => { if (backup) store.save(backup, next); }, activeDraft, worksheetIds };
 }

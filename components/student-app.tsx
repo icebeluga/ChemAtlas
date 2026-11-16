@@ -64,10 +64,22 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const wasBankView = useRef(bankView);
-  const { backup, warning, unsaved, legacy, legacyError, acknowledgeLegacy, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets();
+  const { backup, warning, rejectedEdits, legacy, legacyError, acknowledgeLegacy, save: saveWorksheets, activeDraft, worksheetIds,
+    importing, pendingImport, importDrafts, discardPendingImport } = useWorksheets();
   const worksheetWarning = <>
     {warning && backup && <div className="ca-notice" role="status">
-      {warning}<button type="button" className="ca-btn" onClick={() => downloadWorksheetBackup(unsaved ?? backup)}>Download drafts</button>
+      <div>{warning} <button type="button" className="ca-btn" onClick={() => downloadWorksheetBackup(backup)}>Download drafts</button>
+        {rejectedEdits?.map((edit, index) => <button key={index} type="button" className="ca-btn"
+          onClick={() => downloadWorksheetBackup(edit, `chematlas-rejected-edit-${index + 1}.json`)}>Download rejected edit {index + 1}</button>)}
+      </div>
+    </div>}
+    {importing && <div className="ca-notice" role="status">Importing worksheet drafts…</div>}
+    {pendingImport && <div className="ca-notice">
+      <div>
+        <p role="status">{pendingImport.reason}</p>
+        <button type="button" className="ca-btn" onClick={() => downloadWorksheetBackup(pendingImport.backup, "chematlas-pending-import.json")}>Download pending import</button>
+        <button type="button" className="ca-btn" onClick={discardPendingImport}>Discard pending import</button>
+      </div>
     </div>}
     {(legacy || legacyError) && <div className="ca-notice">
       <div>
@@ -304,6 +316,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     </main> : worksheet ? <main id="main-content" tabIndex={-1} ref={mainRef}>
       {backup ? <PracticeBuilder questions={questions} topics={topics} progress={progress} onOpenBank={() => navigate("library")}
         files={catalog.sourceFiles ?? emptySourceFiles} backup={backup} save={saveWorksheets} openPdf={openWorksheetPdf}
+        importDrafts={importDrafts} importDisabled={!!(importing || pendingImport)}
         renderSource={(question, region) => {
           const location = sourcePageLocation(region.page, catalog.sourceFiles ?? emptySourceFiles, question.sourceBank);
           return <PdfQuestionPage page={location.page} sourcePage={region.page} bankId={location.bankId}

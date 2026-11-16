@@ -13,6 +13,7 @@ export type WorksheetMigration = {
 };
 
 export class WorksheetConflict extends Error {}
+export class WorksheetImportLimit extends Error {}
 
 export function openWorksheetDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -125,14 +126,25 @@ export function mergeWorksheetBackup(base: Backup, edit: Backup, current: Backup
   return merged;
 }
 
-export function saveWorksheetRecord(db: IDBDatabase, expectedRevision: number, base: Backup, edit: Backup) {
+function updateWorksheetRecord(db: IDBDatabase, expectedRevision: number, update: (current: Backup) => Backup) {
   return worksheetTransaction(db, "readwrite", (current, store) => {
     if (!current || current.revision < expectedRevision) throw new WorksheetConflict();
-    const backup = mergeWorksheetBackup(base, edit, current.backup);
+    const backup = update(current.backup);
     if (same(backup, current.backup)) return current;
     const record = { ...current, revision: current.revision + 1, backup };
     store.put(record, currentKey);
     return record;
+  });
+}
+
+export function saveWorksheetRecord(db: IDBDatabase, expectedRevision: number, base: Backup, edit: Backup) {
+  return updateWorksheetRecord(db, expectedRevision, current => mergeWorksheetBackup(base, edit, current));
+}
+
+export function importWorksheetRecord(db: IDBDatabase, expectedRevision: number, incoming: Backup) {
+  return updateWorksheetRecord(db, expectedRevision, current => {
+    if (current.drafts.length + incoming.drafts.length > 100) throw new WorksheetImportLimit();
+    return backupSchema.parse({ ...current, drafts: [...current.drafts, ...incoming.drafts], active: incoming.active });
   });
 }
 

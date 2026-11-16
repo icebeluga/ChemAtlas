@@ -232,6 +232,13 @@ test("legacy writes from the previous storage implementation remain discoverable
   const exact = await downloadText(page, page.getByRole("button", { name: "Download exact legacy saved worksheets data", exact: true }));
   assert.equal(exact, updated);
   assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery: null, legacySelection: null });
+  await page.locator("details.ca-b-more summary").click();
+  await page.getByLabel("Import drafts").setInputFiles({
+    name: "legacy-recovery.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(changed)),
+  });
+  await page.getByText("Worksheet drafts imported.", { exact: true }).waitFor();
+  const recovered = await currentRecord(page);
+  assert.deepEqual(recovered.backup.drafts.map(draft => draft.name), ["Draft A", "Late legacy draft"]);
 
   const idle = await openBuilder(context);
   const idleWarning = idle.getByRole("status").filter({ hasText: "Older worksheet storage changed" });
@@ -246,8 +253,97 @@ test("legacy writes from the previous storage implementation remain discoverable
   await warning.waitFor();
   const next = JSON.parse(await downloadText(page, changedButton));
   assert.deepEqual(next.drafts.map(draft => draft.name), ["Post-acknowledgment draft"]);
-  assert.deepEqual(await currentRecord(page), initial);
+  assert.deepEqual(await currentRecord(page), recovered);
   assert.deepEqual(await originalKeys(page), [latest, null, null]);
+});
+
+test("a delayed import at capacity stays separately downloadable and subsequent edits survive reload", async t => {
+  const drafts = Array.from({ length: 99 }, (_, i) => draft(`draft-${i}`, `Draft ${i}`));
+  const context = await worksheetContext(t, { raw: collection(drafts) });
+  const page = await openBuilder(context);
+  await page.evaluate(() => {
+    const read = File.prototype.text;
+    File.prototype.text = async function () {
+      const bytes = await read.call(this);
+      if (this.name === "delayed-import.json") await new Promise(resolve => { window.resumeWorksheetImport = resolve; });
+      return bytes;
+    };
+  });
+  const input = page.getByLabel("Import drafts");
+  const menu = page.locator("details.ca-b-more");
+  await menu.locator("summary").click();
+  await input.setInputFiles({
+    name: "delayed-import.json", mimeType: "application/json",
+    buffer: Buffer.from(collection([draft("rejected-id", "Uncommitted legacy copy", [entry(mcq)])])),
+  });
+  await page.waitForFunction(() => typeof window.resumeWorksheetImport === "function");
+  await page.getByText("Importing worksheet drafts…", { exact: true }).waitFor();
+  assert.equal(await page.evaluate(() => !window.dispatchEvent(new Event("beforeunload", { cancelable: true }))), true);
+  await page.getByRole("button", { name: "New worksheet", exact: true }).click();
+  await titleOf(page).fill("Worksheet 100");
+  await waitForWorksheet(page, ({ backup }) => backup.drafts.length === 100 && backup.drafts.at(-1).name === "Worksheet 100");
+  await page.evaluate(() => window.resumeWorksheetImport());
+  await page.getByRole("status").filter({ hasText: "Import would exceed the 100-worksheet limit" }).waitFor();
+  assert.equal(await page.getByText("Worksheet drafts imported.", { exact: true }).count(), 0);
+  assert.ok(await input.isDisabled());
+
+  await titleOf(page).fill("Later committed rename");
+  const renamed = await waitForWorksheet(page, ({ backup }) => backup.drafts.at(-1).name === "Later committed rename");
+  const pending = JSON.parse(await downloadText(page, page.getByRole("button", { name: "Download pending import", exact: true })));
+  assert.deepEqual(pending.drafts.map(draft => [draft.id, draft.name, draft.entries]), [["rejected-id", "Uncommitted legacy copy", [entry(mcq)]]]);
+  if (!await menu.evaluate(element => element.open)) await menu.locator("summary").click();
+  const ordinary = JSON.parse(await downloadText(page, menu.getByRole("button", { name: "Download drafts", exact: true })));
+  assert.deepEqual(ordinary, renamed.backup);
+  assert.equal(ordinary.drafts.some(draft => draft.id === "rejected-id"), false);
+
+  let prompted = false;
+  page.once("dialog", async dialog => {
+    prompted = dialog.type() === "beforeunload";
+    await dialog.accept();
+  });
+  await page.reload();
+  assert.ok(prompted, "reloading with a retained import requires confirmation");
+  await titleOf(page).waitFor();
+  assert.equal(await titleOf(page).inputValue(), "Later committed rename");
+  assert.deepEqual(await currentRecord(page), renamed);
+});
+
+test("import success waits for IndexedDB commit and a failed import leaves the saved collection intact", async t => {
+  const context = await worksheetContext(t, { raw: collection([draft("draft-a", "Draft A")]) });
+  const page = await openBuilder(context);
+  const menu = page.locator("details.ca-b-more");
+  const input = page.getByLabel("Import drafts");
+  const upload = (name, title) => input.setInputFiles({
+    name, mimeType: "application/json", buffer: Buffer.from(collection([draft("import-id", title, [entry(mcq)])])),
+  });
+  await menu.locator("summary").click();
+  const resume = await pauseWorksheetWrites(page);
+  try {
+    await upload("worksheets.json", "Committed import");
+    await page.getByText("Importing worksheet drafts…", { exact: true }).waitFor();
+    assert.equal(await page.getByText("Worksheet drafts imported.", { exact: true }).count(), 0);
+    assert.equal(await savedWorksheets(page).locator("option").count(), 1);
+  } finally { await resume(); }
+  await page.getByText("Worksheet drafts imported.", { exact: true }).waitFor();
+  const committed = await currentRecord(page);
+  assert.equal(committed.backup.drafts.at(-1).name, "Committed import");
+  assert.notEqual(committed.backup.drafts.at(-1).id, "import-id");
+
+  await page.evaluate(() => {
+    const put = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (value, key) {
+      if (this.name === "worksheets" && key === "current") throw new DOMException("Injected quota error", "QuotaExceededError");
+      return put.call(this, value, key);
+    };
+  });
+  await upload("quota-import.json", "Quota import");
+  await page.getByRole("status").filter({ hasText: "The import could not be saved." }).waitFor();
+  assert.equal(await page.getByText("Worksheet drafts imported.", { exact: true }).count(), 0);
+  assert.deepEqual(await currentRecord(page), committed);
+  const pending = JSON.parse(await downloadText(page, page.getByRole("button", { name: "Download pending import", exact: true })));
+  assert.equal(pending.drafts[0].name, "Quota import");
+  await page.getByRole("button", { name: "Discard pending import", exact: true }).click();
+  assert.ok(await input.isEnabled());
 });
 
 test("a historical two-draft collection accepts fractional input safely and survives reload", async t => {

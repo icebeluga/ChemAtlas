@@ -29,7 +29,10 @@ rm public/student-version.json
 trap - EXIT
 pnpm run check:private --built
 log dry-run pnpm exec wrangler deploy --dry-run --config dist/server/wrangler.json
-log smoke node "$control/smoke.cjs"
+smoke_args=(--browser-regressions)
+# The pinned historical Stage 4 application predates both regression suites.
+if [[ "$sha" == "3c78883006beb48c2dab68443e6e93b87bb9a769" ]]; then smoke_args=(); fi
+log smoke node "$control/smoke.cjs" "${smoke_args[@]}"
 "${manifest[@]}" seal "$sha" --workflow-sha "$workflow_sha" "${expected[@]}" \
   --manifest "$out/release-manifest.json" --evidence "$out/evidence"
 "${manifest[@]}" inputs "$sha" > "$out/release-inputs.json"

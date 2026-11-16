@@ -290,6 +290,11 @@ test("grouped outline movements stay within their section and preserve unrelated
   assert.deepEqual(await order(outline), await saved());
   await outline.getByRole("button", { name: "Move question 1 down" }).click();
   assert.deepEqual(await saved(), [mcq3, frq1, frq2, mcq1, mcq2]);
+  const title = page.getByRole("textbox", { name: "Worksheet title" });
+  await title.fill("Renamed after reordering");
+  await outline.getByRole("button", { name: "Undo", exact: true }).click();
+  assert.deepEqual(await saved(), [frq1, mcq3, frq2, mcq1, mcq2]);
+  assert.equal(await title.inputValue(), "Renamed after reordering");
 });
 
 test("builder tabs retain the layout, picker and PDF toolbar controls", async (t) => {
@@ -324,6 +329,11 @@ test("builder tabs retain the layout, picker and PDF toolbar controls", async (t
   assert.ok(await toolbar.getByText("125%", { exact: true }).isVisible());
   await toolbar.getByRole("button", { name: "Fit page" }).click();
   assert.equal(await toolbar.getByRole("button", { name: "Fit page" }).getAttribute("aria-pressed"), "true");
+  await page.waitForFunction(() => {
+    const paper = document.querySelector('.worksheet-paper[data-fit-page="true"]');
+    const canvas = paper?.querySelector("canvas[data-painted]");
+    return canvas && canvas.clientHeight <= paper.clientHeight + 1 && canvas.clientWidth <= paper.clientWidth + 1;
+  });
   await toolbar.getByRole("button", { name: "Fit width" }).click();
   assert.ok(await toolbar.getByText("100%", { exact: true }).isVisible());
   const buttonRows = await toolbar.getByRole("button").evaluateAll(buttons => new Set(buttons.map(button => Math.round(button.getBoundingClientRect().top))).size);
@@ -380,27 +390,25 @@ test("tablet Fit page and Zoom out use a stable, bounded worksheet preview", asy
     el.closest(".ca-b-side").getBoundingClientRect().bottom - el.getBoundingClientRect().top));
   await page.waitForFunction(() => {
     const panel = document.querySelector(".worksheet-paper");
-    const canvas = panel?.querySelector("canvas");
+    const canvas = panel?.querySelector("canvas[data-painted]");
     return canvas?.style.width && canvas.clientHeight >
       panel.closest(".ca-b-side").getBoundingClientRect().bottom - panel.getBoundingClientRect().top;
   });
   const widthFit = await canvas.boundingBox();
   await page.getByRole("button", { name: "Fit page", exact: true }).click();
   await page.waitForFunction(width => {
-    const canvas = document.querySelector(".worksheet-paper canvas");
+    const canvas = document.querySelector(".worksheet-paper canvas[data-painted]");
     return canvas?.clientWidth < width - 2;
   }, widthFit.width, { timeout: 7000 });
   const pageFit = await canvas.boundingBox();
-  assert.ok(pageFit.height <= await visibleHeight() + 2);
+  const availableHeight = await visibleHeight();
+  assert.ok(pageFit.height <= availableHeight + 2);
 
   await page.getByRole("button", { name: "Zoom out", exact: true }).click();
-  await page.waitForFunction(height => document.querySelector(".worksheet-paper canvas")?.clientHeight < height - 2, pageFit.height);
-  const zoomed = await canvas.evaluate(async el => {
-    // Let the observer and PDF.js react to canvas sizing before checking the final size.
-    for (let frame = 0; frame < 12; frame++) await new Promise(resolve => requestAnimationFrame(resolve));
-    return el.getBoundingClientRect().height;
-  });
-  assert.ok(Math.abs(zoomed - pageFit.height * .75) <= 2, `expected 75% of ${pageFit.height}px, got ${zoomed}px`);
+  await page.waitForFunction(height => document.querySelector(".worksheet-paper canvas[data-painted]")?.clientHeight < height - 2, pageFit.height);
+  const zoomed = await canvas.boundingBox();
+  assert.ok(Math.abs(zoomed.height - pageFit.height * .75) <= 2, `expected 75% of ${pageFit.height}px, got ${zoomed.height}px`);
+  assert.ok(Math.abs(await visibleHeight() - availableHeight) <= 1, "the measurement area stays the same when the canvas zooms");
 });
 
 test("the last real worksheet preview remains visible during an update and a failed request", async (t) => {
@@ -410,8 +418,8 @@ test("the last real worksheet preview remains visible during an update and a fai
   await download.waitFor();
   const originalUrl = await download.getAttribute("href");
   await page.getByText(/questions have no reviewed print layout/).waitFor();
-  const canvas = page.locator(".worksheet-preview canvas");
-  await page.waitForFunction(() => document.querySelector(".worksheet-preview canvas")?.width > 300);
+  const canvas = page.locator(".worksheet-preview canvas[data-painted]");
+  await canvas.waitFor();
   const original = await canvas.evaluate(node => node.toDataURL());
   let releaseRequest;
   const blockedRequest = new Promise(resolve => { releaseRequest = resolve; });

@@ -30,6 +30,10 @@ bash ../controls/scripts/release/validate.sh \
 
 The optional fourth argument is the independently reviewed input manifest. Use it for Stage 4. For subsequent release candidates, review the workflow-generated input manifest before production approval. Generated build digests describe the exact archived build. Generated IDs and checkout paths can differ in a fresh build.
 
+The PR-head validation job runs the full validator on the exact PR head for PRs targeting `main`. The validator requires both student browser regression suites after the protected Worker and browser smoke checks, and records their output in `evidence/smoke.log`. Only the pinned historical Stage 4 commit uses the original smoke checks alone because that commit predates the suites. Require **Validate PR head application (no deploy)** in the branch rules for `main`.
+
+To repeat the browser portion against an already stamped build, run `node scripts/release/smoke.cjs --browser-regressions` from the application checkout. Use the same Playwright and Chromium setup as CI, with `CHEMATLAS_PLAYWRIGHT` pointing to the Playwright module and optional `CHEMATLAS_CHROMIUM` pointing to a local executable. The runner starts the local Worker and supplies the signed test fixture to both suites.
+
 An authorized student session can request `/student-version.json` to see the application SHA, validation workflow SHA, release ID and catalog hash/count. The validation package injects this generated asset before building so the Worker registers the route, hashes it with the rest of the package, and tests it through the Worker. Its path and digest travel with the archive. The version asset contains no credentials, account identifiers or private review metadata.
 
 ## Stage 6 promotion procedure

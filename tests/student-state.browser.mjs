@@ -117,7 +117,7 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     await mode.selectOption("questions");
     await download.waitFor();
     assert.equal(await download.getAttribute("download"), "Final worksheet title.pdf");
-    await page.waitForFunction(() => document.querySelector(".worksheet-preview canvas")?.width > 300);
+    await page.locator(".worksheet-preview canvas[data-painted]").waitFor();
 
     await mode.selectOption("answers");
     await page.getByRole("button", { name: "Remove question 1", exact: true }).click();

@@ -35,7 +35,7 @@ jobs:
           python -m pip install PyMuPDF==1.26.6
           npm install --prefix "$RUNNER_TEMP/chematlas-browser" --no-save playwright@1.62.1
           "$RUNNER_TEMP/chematlas-browser/node_modules/.bin/playwright" install --with-deps chromium
-      - name: Typecheck, tests, build, privacy checks, dry run and smoke on PR head
+      - name: Validate PR head including protected smoke and browser regressions
         env:
           CHEMATLAS_PLAYWRIGHT: ${{ runner.temp }}/chematlas-browser/node_modules/playwright
         run: bash scripts/release/validate.sh "$APPLICATION_SHA" "$WORKFLOW_SHA" "$RUNNER_TEMP/pr-head"

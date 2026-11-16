@@ -1,8 +1,14 @@
 const assert = require("node:assert/strict");
+const { spawn } = require("node:child_process");
 const { generateKeyPairSync, sign } = require("node:crypto");
+const { once } = require("node:events");
 const { readFileSync, readdirSync, realpathSync } = require("node:fs");
 const { createRequire } = require("node:module");
 const { resolve } = require("node:path");
+
+const args = process.argv.slice(2);
+assert.ok(!args.length || (args.length === 1 && args[0] === "--browser-regressions"),
+  "Usage: node scripts/release/smoke.cjs [--browser-regressions]");
 
 const vitePluginRequire = createRequire(realpathSync("node_modules/@cloudflare/vite-plugin/package.json"));
 const miniflarePath = vitePluginRequire.resolve("miniflare");
@@ -105,6 +111,19 @@ async function smoke() {
     }
   } finally {
     await browser.close();
+  }
+
+  if (args.length) {
+    const child = spawn(process.execPath, [
+      "--test", "--test-concurrency=1", "--test-timeout=120000",
+      "tests/student-redesign.browser.mjs", "tests/student-state.browser.mjs",
+    ], {
+      stdio: "inherit",
+      env: { ...process.env, CHEMATLAS_TEST_ORIGIN: origin.origin, CHEMATLAS_TEST_ACCESS_TOKEN: allowed },
+    });
+    const [code, signal] = await once(child, "exit");
+    assert.equal(code, 0, `Student browser regressions failed (${signal ?? code})`);
+    console.log("PASS both student browser regression suites");
   }
 }
 

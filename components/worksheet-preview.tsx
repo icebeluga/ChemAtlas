@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 import { ChevronLeft, ChevronRight, Minus, MoveHorizontal, Plus, Scan } from "lucide-react";
 
@@ -15,6 +15,8 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
   const [error, setError] = useState("");
   const { width } = box;
   const fitHeight = fitPage ? box.height : Infinity;
+  const renderRequest = useMemo(() => ({ doc, page, zoom, width, fitHeight }), [doc, page, zoom, width, fitHeight]);
+  const [painted, setPainted] = useState<typeof renderRequest>();
   useEffect(() => {
     let stale = false;
     let dispose: (() => void) | undefined;
@@ -39,6 +41,7 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
     return () => observer.disconnect();
   }, []);
   useEffect(() => {
+    const { doc, page, zoom, width, fitHeight } = renderRequest;
     const target = canvas.current;
     if (!doc || !target || !width || !fitHeight) return;
     let stale = false;
@@ -53,10 +56,10 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
       target.height = Math.ceil(viewport.height);
       target.style.width = `${viewport.width / dpi}px`;
       task = source.render({ canvas: target, viewport });
-      return task.promise;
+      return task.promise.then(() => { if (!stale) setPainted(renderRequest); });
     }).catch(() => { if (!stale) setError("This preview page could not be rendered."); });
     return () => { stale = true; task?.cancel(); };
-  }, [doc, page, zoom, width, fitHeight]);
+  }, [renderRequest]);
 
   return <div className="worksheet-preview">
     <div className="ca-b-preview-bar" role="group" aria-label="PDF preview controls">
@@ -71,7 +74,7 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
     </div>
     <div className="worksheet-paper" data-fit-page={fitPage} ref={host} role="region" aria-label="Worksheet PDF" tabIndex={0}>
       {error && <p role="alert">{error}</p>}
-      <canvas ref={canvas} role="img" aria-label={`PDF preview page ${page}`} />
+      <canvas ref={canvas} data-painted={painted === renderRequest ? "" : undefined} role="img" aria-label={`PDF preview page ${page}`} />
     </div>
   </div>;
 }

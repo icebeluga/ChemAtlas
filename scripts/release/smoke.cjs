@@ -7,8 +7,8 @@ const { createRequire } = require("node:module");
 const { resolve } = require("node:path");
 
 const args = process.argv.slice(2);
-assert.ok(!args.length || (args.length === 1 && args[0] === "--browser-regressions"),
-  "Usage: node scripts/release/smoke.cjs [--browser-regressions]");
+assert.ok(!args.length || (args.length <= 2 && args[0] === "--browser-regressions"),
+  "Usage: node scripts/release/smoke.cjs [--browser-regressions historical-dist]");
 
 const vitePluginRequire = createRequire(realpathSync("node_modules/@cloudflare/vite-plugin/package.json"));
 const miniflarePath = vitePluginRequire.resolve("miniflare");
@@ -119,7 +119,7 @@ async function smoke() {
   }
 
   if (args.length) {
-    const historicalDist = process.env.CHEMATLAS_TEST_HISTORICAL_DIST;
+    const historicalDist = args[1] || process.env.CHEMATLAS_TEST_HISTORICAL_DIST;
     const historicalSha = process.env.CHEMATLAS_TEST_HISTORICAL_SHA;
     assert.ok(historicalDist && historicalSha, "Build the historical fixture through the release validator before running browser regressions");
     const historicalWorker = startWorker(historicalDist, JSON.parse(readFileSync(resolve(historicalDist, "server/wrangler.json"))));

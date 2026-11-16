@@ -17,7 +17,7 @@ import { readPdf, savePdf } from "@/components/student/pdf-bank-store";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
 import { addEntries } from "@/lib/worksheet";
-import { restoreWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
+import { downloadWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
 
 const emptySourceFiles: NonNullable<Catalog["sourceFiles"]> = [];
 
@@ -60,11 +60,14 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     setCatalogLoadFailed(true);
     setNotice(message);
   }, []);
-  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(() => restoreWorksheetBackup(setNotice), onCatalogError);
+  const { catalog, topics, questions, browserState, progress, overrides, banks, sessions } = useCatalog(onCatalogError);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const wasBankView = useRef(bankView);
-  const { backup, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets(restoredBackup, next => browserState.set("backup", next), setNotice);
+  const { backup, warning, unsaved, save: saveWorksheets, activeDraft, worksheetIds } = useWorksheets();
+  const worksheetWarning = warning && backup ? <div className="ca-notice" role="status">
+    {warning}<button type="button" className="ca-btn" onClick={() => downloadWorksheetBackup(unsaved ?? backup)}>Download drafts</button>
+  </div> : undefined;
   const openWorksheetPdf = useCallback(async (url?: string, bankId?: string) => {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
     pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
@@ -280,11 +283,13 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       onOpen={destination => { if (destination === "review" || destination === "legacy") { setReviewKind(destination); navigate("review"); } else navigate(destination); }}
       search={bankView ? { value: query, onChange: value => bankFilters({ query: value }) } : undefined} />
     {notice && <div className="ca-notice" role="status" inert={phonePane}>{notice}<button type="button" aria-label="Dismiss message" onClick={()=>setNotice("")}>×</button></div>}
+    {!phonePane && worksheetWarning}
     {bankView ? <main id="main-content" tabIndex={-1} ref={mainRef}>
       <QuestionBank catalog={catalog} topics={topics} questions={questions} loadFailed={catalogLoadFailed} wide={wideBank}
         unit={selectedUnit} topic={selectedTopic} type={typeFilter} query={query} selectedId={view === "detail" ? route.questionId : ""}
         onFilters={bankFilters} onSelect={(id, replace) => navigate("detail", { questionId: id }, replace, !replace)} onClosePane={closeBankPane}
-        worksheetIds={worksheetIds} canEdit={!!backup && !!activeDraft} onToggle={toggleWorksheetQuestion} bankName={bankName} />
+        worksheetIds={worksheetIds} canEdit={!!backup && !!activeDraft} onToggle={toggleWorksheetQuestion} bankName={bankName}
+        worksheetWarning={phonePane ? worksheetWarning : undefined} />
     </main> : worksheet ? <main id="main-content" tabIndex={-1} ref={mainRef}>
       {backup ? <PracticeBuilder questions={questions} topics={topics} progress={progress} onOpenBank={() => navigate("library")}
         files={catalog.sourceFiles ?? emptySourceFiles} backup={backup} save={saveWorksheets} openPdf={openWorksheetPdf}

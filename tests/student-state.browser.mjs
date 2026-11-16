@@ -4,6 +4,7 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { test } from "node:test";
+import { pauseWorksheetWrites, readWorksheetValue, waitForWorksheet } from "./fixtures/worksheet-browser.mjs";
 
 const loadBrowser = createRequire(import.meta.url);
 const { chromium } = loadBrowser(process.env.CHEMATLAS_PLAYWRIGHT || "playwright");
@@ -65,15 +66,15 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
     assert.equal(saved.progress["mcq-2018-23-2039"].attempts, 3);
     assert.deepEqual(saved.progress["mcq-2008-1-29"].history, [{ date: "2026-11-02", result: "correct" }]);
     assert.equal(saved.sessions, 2);
-    assert.equal(await page.evaluate(() => localStorage.getItem("chematlas-student-worksheet-v1")), null);
+    assert.equal(await page.evaluate(() => localStorage.getItem("chematlas-student-worksheet-v1")), '["mcq-2018-23-2039"]');
 
     const worksheetTitle = page.getByRole("textbox", { name: "Worksheet title" });
     await worksheetTitle.fill("Saved practice draft");
-    const draftsBeforeReload = await page.evaluate(() => localStorage.getItem("chematlas-worksheets-v1"));
+    const draftsBeforeReload = await waitForWorksheet(page, record => record.backup.drafts[0].name === "Saved practice draft");
     await page.reload();
     await page.getByText("1 selected", { exact: true }).waitFor();
     assert.equal(await worksheetTitle.inputValue(), "Saved practice draft");
-    assert.equal(await page.evaluate(() => localStorage.getItem("chematlas-worksheets-v1")), draftsBeforeReload);
+    assert.deepEqual(await page.evaluate(readWorksheetValue, "current"), draftsBeforeReload);
 
     const steps = page.getByRole("group", { name: "Builder view" });
     const exportStep = steps.getByRole("button", { name: "Preview", exact: true });
@@ -134,100 +135,253 @@ test("restores drafts and legacy progress and cancels superseded PDF previews", 
   }
 });
 
-test("fractional response lines never corrupt saved drafts, and a corrupt backup is repaired and preserved", async () => {
+const key = "chematlas-worksheets-v1";
+const recoveryKey = `${key}-recovery`;
+const legacyKey = "chematlas-student-worksheet-v1";
+const builderPath = "/practice-builder";
+const mcq = "mcq-2008-1-29";
+const frq = "frq-2005-1-6";
+const historicalFormat = {
+  title: "AP Chemistry Practice", subtitle: "", paper: "Letter", landscape: false, margin: 36,
+  font: 11, gap: 16, lines: 3, name: true, date: true, classField: false, numbering: true,
+  citations: false, pageNumbers: true, references: false, grouping: "type", mcqTitle: "Multiple choice",
+  frqTitle: "Free response", instructions: "",
+};
+const entry = id => ({ id, breakBefore: false });
+const draft = (id, name, entries = [], format = historicalFormat) => ({ id, name, format, entries });
+const collection = (drafts, active = drafts[0].id) => JSON.stringify({ version: 1, active, drafts });
+const titleOf = page => page.getByRole("textbox", { name: "Worksheet title", exact: true });
+const savedWorksheets = page => page.getByRole("combobox", { name: "Saved worksheets", exact: true });
+const currentRecord = page => page.evaluate(readWorksheetValue, "current");
+const originalKeys = page => page.evaluate(keys => keys.map(k => localStorage.getItem(k)), [key, recoveryKey, legacyKey]);
+const openBuilder = async context => {
+  const page = await context.newPage();
+  assert.equal((await page.goto(new URL(builderPath, origin).href))?.status(), 200);
+  await titleOf(page).waitFor();
+  return page;
+};
+
+async function worksheetContext(t, { raw = null, recovery = null, legacy = null } = {}) {
   const browser = await chromium.launch({ executablePath: process.env.CHEMATLAS_CHROMIUM });
-  const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-  const errors = [];
-  page.on("pageerror", error => errors.push(error.message));
-  const key = "chematlas-worksheets-v1";
-  const recoveryKey = "chematlas-worksheets-v1-recovery";
-  try {
-    await page.route(`${origin.origin}/**`, route => route.continue({
-      headers: { ...route.request().headers(), "cf-access-jwt-assertion": token },
-    }));
-    await page.goto(new URL("/practice-builder", origin).href);
-    await page.getByText("0 selected", { exact: true }).waitFor();
-    await page.getByRole("textbox", { name: "Worksheet title" }).fill("Format source"); // first save writes the default format
-    const format = await page.evaluate(k => JSON.parse(localStorage.getItem(k)).drafts[0].format, key);
-    const seed = lines => ({ version: 1, active: "draft-b", drafts: [
-      { id: "draft-a", name: "Draft A", format, entries: [{ id: "mcq-2008-1-29", breakBefore: false }] },
-      { id: "draft-b", name: "Draft B", format, entries: [{ id: "frq-2005-1-6", breakBefore: false, ...(lines === undefined ? {} : { lines }) }] },
-    ] });
-    const stored = () => page.evaluate(k => JSON.parse(localStorage.getItem(k)), key);
-    const options = page.locator("select").filter({ has: page.locator('option[value="draft-a"]') });
+  t.after(() => browser.close());
+  const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+  await context.route(`${origin.origin}/**`, route => route.continue({
+    headers: { ...route.request().headers(), "cf-access-jwt-assertion": token },
+  }));
+  await context.addInitScript(entries => {
+    for (const [name, value] of entries) if (value !== null && localStorage.getItem(name) === null) localStorage.setItem(name, value);
+  }, [[key, raw], [recoveryKey, recovery], [legacyKey, legacy]]);
+  return context;
+}
 
-    // Typing a fractional value saves a whole number and keeps both drafts across a reload.
-    await page.evaluate(([k, v]) => { localStorage.clear(); localStorage.setItem(k, v); }, [key, JSON.stringify(seed())]);
-    await page.reload();
-    await page.getByText("1 selected", { exact: true }).waitFor();
-    await page.locator("details.ca-b-options summary").first().click();
-    await page.getByRole("spinbutton", { name: "Response lines" }).fill("1.5");
-    await page.waitForFunction(k => JSON.parse(localStorage.getItem(k)).drafts[1].entries[0].lines !== undefined, key);
-    assert.equal((await stored()).drafts[1].entries[0].lines, 2);
-    await page.reload();
-    await page.getByText("1 selected", { exact: true }).waitFor();
-    assert.equal(await options.locator("option").count(), 2);
-    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), null);
-
-    // A backup written by the defective build is repaired on load, kept raw, and survives the next edit.
-    const corrupt = JSON.stringify(seed(1.5));
-    await page.evaluate(([k, v]) => { localStorage.clear(); localStorage.setItem(k, v); }, [key, corrupt]);
-    await page.reload();
-    await page.getByText("1 selected", { exact: true }).waitFor();
-    assert.equal(await options.locator("option").count(), 2);
-    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), corrupt);
-    await page.getByRole("textbox", { name: "Worksheet title" }).fill("Draft B edited");
-    await page.waitForFunction(k => JSON.parse(localStorage.getItem(k)).drafts[1].name === "Draft B edited", key);
-    const after = await stored();
-    assert.deepEqual(after.drafts.map(d => d.id), ["draft-a", "draft-b"]);
-    assert.deepEqual(after.drafts[0].entries, [{ id: "mcq-2008-1-29", breakBefore: false }]);
-    assert.equal(after.drafts[1].entries[0].lines, 2);
-    assert.equal(await page.evaluate(k => localStorage.getItem(k), recoveryKey), corrupt);
-    assert.deepEqual(errors, []);
-  } finally {
-    await browser.close();
-  }
+test("a historical two-draft collection accepts fractional input safely and survives reload", async t => {
+  const a = draft("draft-a", "Draft A", [entry(mcq)], { ...historicalFormat, paper: "A4", landscape: true });
+  const b = draft("draft-b", "Draft B", [entry(frq)]);
+  const raw = collection([a, b], b.id);
+  const context = await worksheetContext(t, { raw });
+  const page = await openBuilder(context);
+  assert.equal(await titleOf(page).inputValue(), b.name);
+  await page.locator("details.ca-b-options summary").first().click();
+  await page.getByRole("spinbutton", { name: "Response lines" }).fill("1.5");
+  const after = await waitForWorksheet(page, ({ backup }) => backup.drafts[1].entries[0].lines === 2);
+  assert.deepEqual(after.backup.drafts[0], { ...a, format: { ...a.format, mcqInstructions: "", frqInstructions: "" } });
+  await page.reload();
+  await savedWorksheets(page).waitFor();
+  assert.equal(await savedWorksheets(page).locator("option").count(), 2);
+  assert.deepEqual(await currentRecord(page), after);
+  assert.deepEqual(await originalKeys(page), [raw, null, null]);
 });
 
-test("an older recovery backup cannot authorize replacing a different damaged collection", async () => {
-  const browser = await chromium.launch({ executablePath: process.env.CHEMATLAS_CHROMIUM });
-  try {
-    const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-    await page.route(`${origin.origin}/**`, route => route.continue({
-      headers: { ...route.request().headers(), "cf-access-jwt-assertion": token },
-    }));
-    const key = "chematlas-worksheets-v1";
-    const recoveryKey = `${key}-recovery`;
-    const legacyKey = "chematlas-student-worksheet-v1";
-    const older = "{older backup";
-    await page.goto(new URL("/practice-builder", origin).href);
-    const title = page.getByRole("textbox", { name: "Worksheet title", exact: true });
-    await title.fill("Format source");
-    const format = await page.waitForFunction(k => JSON.parse(localStorage.getItem(k))?.drafts[0].format, key)
-      .then(handle => handle.jsonValue());
-    const duplicate = { id: "frq-2005-1-6", breakBefore: false };
-    const newer = JSON.stringify({ version: 1, active: "draft-a", drafts: [
-      { id: "draft-a", name: "Draft A", format, entries: [] },
-      { id: "draft-b", name: "Newer-only B", format, entries: [duplicate, duplicate, { id: "mcq-2008-1-29", breakBefore: false }] },
-    ] });
-    await page.evaluate(([key, recoveryKey, newer, older]) => {
-      localStorage.setItem(key, newer);
-      localStorage.setItem(recoveryKey, older);
-    }, [key, recoveryKey, newer, older]);
-    await page.reload();
-    await title.fill("Edited A");
-    const warning = page.getByRole("status").filter({ hasText: "Draft changes could not be saved" });
-    await warning.waitFor();
-    assert.equal(await title.inputValue(), "Edited A");
-    const readKeys = () => page.evaluate(keys => keys.map(k => localStorage.getItem(k)), [key, recoveryKey, legacyKey]);
-    assert.deepEqual(await readKeys(), [newer, older, null]);
+test("a fractional historical override is repaired and archived without rewriting its original", async t => {
+  const raw = collection([draft("draft-a", "Draft A", [entry(mcq)]),
+    draft("draft-b", "Draft B", [{ ...entry(frq), lines: 1.5 }])], "draft-b");
+  const context = await worksheetContext(t, { raw });
+  const page = await openBuilder(context);
+  assert.equal(await savedWorksheets(page).locator("option").count(), 2);
+  await titleOf(page).fill("Edited B");
+  const { backup } = await waitForWorksheet(page, record => record.backup.drafts[1].name === "Edited B");
+  assert.deepEqual(backup.drafts.map(item => item.id), ["draft-a", "draft-b"]);
+  assert.deepEqual(backup.drafts[0].entries, [entry(mcq)]);
+  assert.equal(backup.drafts[1].entries[0].lines, 2);
+  assert.deepEqual(await originalKeys(page), [raw, null, null]);
+  assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery: null, legacySelection: null });
+});
 
-    const legacy = JSON.stringify(["mcq-2008-1-29"]);
-    await page.evaluate(([k, v]) => localStorage.setItem(k, v), [legacyKey, legacy]);
-    await page.reload();
-    await warning.waitFor();
-    assert.deepEqual(await readKeys(), [newer, older, legacy]);
-  } finally {
-    await browser.close();
-  }
+test("a distinct occupied recovery copy and damaged main collection both survive edits and one-time legacy migration", async t => {
+  const older = "{older backup";
+  const newer = collection([draft("draft-a", "Draft A"),
+    draft("draft-b", "Newer-only B", [entry(frq), entry(frq), entry(mcq)])]);
+  const legacy = JSON.stringify([mcq]);
+  const context = await worksheetContext(t, { raw: newer, recovery: older, legacy });
+  const page = await openBuilder(context);
+  await page.getByRole("status").filter({ hasText: "The original browser data is preserved" }).waitFor();
+  await savedWorksheets(page).selectOption("draft-a");
+  await titleOf(page).fill("Edited A");
+  const edited = await waitForWorksheet(page, record => record.backup.drafts[0].name === "Edited A");
+  assert.equal(edited.backup.drafts.length, 2);
+  assert.equal(edited.backup.drafts[1].name, "Imported Question Bank selection");
+  assert.deepEqual(edited.backup.drafts[1].entries, [entry(mcq)]);
+  assert.deepEqual(await originalKeys(page), [newer, older, legacy]);
+  assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: newer, recovery: older, legacySelection: legacy });
+  await page.reload();
+  await titleOf(page).waitFor();
+  assert.deepEqual(await currentRecord(page), edited);
+  assert.deepEqual(await originalKeys(page), [newer, older, legacy]);
+});
+
+test("malformed primary bytes survive fallback to a valid recovery collection", async t => {
+  const raw = "{malformed";
+  const recovery = collection([draft("recovery-a", "Recovered A")]);
+  const context = await worksheetContext(t, { raw, recovery });
+  const page = await openBuilder(context);
+  assert.equal(await titleOf(page).inputValue(), "Recovered A");
+  await titleOf(page).fill("Edited recovered draft");
+  await waitForWorksheet(page, record => record.backup.drafts[0].name === "Edited recovered draft");
+  assert.deepEqual(await originalKeys(page), [raw, recovery, null]);
+  assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery, legacySelection: null });
+});
+
+test("two tabs opening on first migration share exactly one imported legacy draft", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const legacy = JSON.stringify([mcq]);
+  const context = await worksheetContext(t, { raw, legacy });
+  const pages = await Promise.all([openBuilder(context), openBuilder(context)]);
+  const states = await Promise.all(pages.map(currentRecord));
+  assert.deepEqual(states[0], states[1]);
+  assert.equal(states[0].revision, 0);
+  assert.equal(states[0].backup.drafts.length, 2);
+  assert.deepEqual(states[0].backup.drafts[1].entries, [entry(mcq)]);
+  assert.deepEqual(await originalKeys(pages[1]), [raw, null, legacy]);
+});
+
+test("migration quota failure rolls back both IndexedDB records and leaves all legacy bytes for retry", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const recovery = "{older backup";
+  const legacy = JSON.stringify([mcq]);
+  const context = await worksheetContext(t, { raw, recovery, legacy });
+  await context.addInitScript(() => {
+    if (sessionStorage.getItem("allow-worksheet-migration")) return;
+    const add = IDBObjectStore.prototype.add;
+    IDBObjectStore.prototype.add = function (value, key) {
+      if (this.name === "worksheets" && key === "current") throw new DOMException("Injected quota error", "QuotaExceededError");
+      return add.call(this, value, key);
+    };
+  });
+  const page = await openBuilder(context);
+  const warning = page.getByRole("status").filter({ hasText: "Draft changes could not be saved" });
+  await warning.waitFor();
+  assert.equal(await currentRecord(page), undefined);
+  assert.equal(await page.evaluate(readWorksheetValue, "migration"), undefined);
+  await titleOf(page).fill("Memory-only edit");
+  assert.equal(await titleOf(page).inputValue(), "Memory-only edit");
+  assert.deepEqual(await originalKeys(page), [raw, recovery, legacy]);
+  await page.evaluate(() => sessionStorage.setItem("allow-worksheet-migration", "yes"));
+  page.once("dialog", dialog => dialog.accept());
+  await page.reload();
+  await titleOf(page).waitFor();
+  const saved = await currentRecord(page);
+  assert.equal(saved.backup.drafts[0].name, "Draft A");
+  assert.deepEqual(saved.backup.drafts[1].entries, [entry(mcq)]);
+  assert.deepEqual(await originalKeys(page), [raw, recovery, legacy]);
+});
+
+test("a failed write leaves the committed IndexedDB revision intact and offers the unsaved work", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  const page = await openBuilder(context);
+  const original = await currentRecord(page);
+  await page.evaluate(() => {
+    const put = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (value, key) {
+      if (this.name === "worksheets") throw new DOMException("Injected quota error", "QuotaExceededError");
+      return put.call(this, value, key);
+    };
+  });
+  await titleOf(page).fill("Unsaved title");
+  const warning = page.getByRole("status").filter({ hasText: "Draft changes could not be saved" });
+  await warning.getByRole("button", { name: "Download drafts" }).waitFor();
+  assert.equal(await titleOf(page).inputValue(), "Unsaved title");
+  assert.deepEqual(await currentRecord(page), original);
+  assert.deepEqual(await originalKeys(page), [raw, null, null]);
+});
+
+test("IndexedDB unavailability keeps legacy drafts readable and prevents fallback writes", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  await context.addInitScript(() => {
+    const open = IDBFactory.prototype.open;
+    IDBFactory.prototype.open = function (name, version) {
+      if (name === "chematlas-worksheets") throw new DOMException("Injected storage denial", "SecurityError");
+      return open.call(this, name, version);
+    };
+  });
+  const page = await openBuilder(context);
+  assert.equal(await titleOf(page).inputValue(), "Draft A");
+  await titleOf(page).fill("Memory-only edit");
+  await page.getByRole("status").filter({ hasText: "Draft changes could not be saved" }).waitFor();
+  assert.equal(await titleOf(page).inputValue(), "Memory-only edit");
+  assert.deepEqual(await originalKeys(page), [raw, null, null]);
+});
+
+test("a new draft and a stale tab rename both commit and idle tabs synchronize", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  const tabA = await openBuilder(context);
+  const tabB = await openBuilder(context);
+  const resume = await pauseWorksheetWrites(tabA);
+  try {
+    await tabA.getByRole("button", { name: "New worksheet", exact: true }).click();
+    await titleOf(tabA).fill("Worksheet B");
+    await titleOf(tabB).fill("Renamed A");
+  } finally { await resume(); }
+  const saved = await waitForWorksheet(tabA, ({ backup }) =>
+    backup.drafts[0].name === "Renamed A" && backup.drafts[1]?.name === "Worksheet B");
+  assert.notEqual(saved.backup.drafts[1].id, "draft-a");
+  await savedWorksheets(tabB).getByRole("option", { name: "Worksheet B" }).waitFor({ state: "attached" });
+  await savedWorksheets(tabA).getByRole("option", { name: "Renamed A" }).waitFor({ state: "attached" });
+  assert.equal(await titleOf(tabA).inputValue(), "Worksheet B");
+  assert.equal(await titleOf(tabB).inputValue(), "Renamed A");
+  assert.deepEqual(await originalKeys(tabB), [raw, null, null]);
+});
+
+test("simultaneous title conflicts keep the winner durable and the losing edit downloadable", async t => {
+  const context = await worksheetContext(t, { raw: collection([draft("draft-a", "Draft A")]) });
+  const tabs = [await openBuilder(context), await openBuilder(context)];
+  const titles = ["Title from A", "Title from B"];
+  const resume = await pauseWorksheetWrites(tabs[0]);
+  try {
+    await Promise.all(tabs.map((page, index) => titleOf(page).fill(titles[index])));
+  } finally { await resume(); }
+  const notices = tabs.map(page => page.getByRole("status").filter({ hasText: "Another tab changed this worksheet" }));
+  const loser = await Promise.race(notices.map((notice, index) => notice.waitFor().then(() => index)));
+  const record = await currentRecord(tabs[0]);
+  assert.equal(record.revision, 1);
+  assert.equal(record.backup.drafts[0].name, titles[1 - loser]);
+  assert.equal(await titleOf(tabs[loser]).inputValue(), titles[loser]);
+  const [download] = await Promise.all([
+    tabs[loser].waitForEvent("download"),
+    notices[loser].getByRole("button", { name: "Download drafts" }).click(),
+  ]);
+  const chunks = [];
+  for await (const chunk of await download.createReadStream()) chunks.push(chunk);
+  assert.equal(JSON.parse(Buffer.concat(chunks)).drafts[0].name, titles[loser]);
+  await titleOf(tabs[1 - loser]).fill("Subsequent committed edit");
+  await waitForWorksheet(tabs[1 - loser], ({ backup }) => backup.drafts[0].name === "Subsequent committed edit");
+  assert.equal(await titleOf(tabs[loser]).inputValue(), titles[loser]);
+});
+
+test("Question Bank selection and a Builder edit to the same draft merge across tabs", async t => {
+  const context = await worksheetContext(t, { raw: collection([draft("draft-a", "Draft A")]) });
+  const builder = await openBuilder(context);
+  const bank = await context.newPage();
+  await bank.goto(new URL(`/?view=detail&question=${mcq}`, origin).href);
+  const add = bank.getByRole("region", { name: "Printed question" }).getByRole("button", { name: "Add to worksheet", exact: true });
+  await add.waitFor();
+  const resume = await pauseWorksheetWrites(builder);
+  try {
+    await Promise.all([titleOf(builder).fill("From Builder"), add.click()]);
+  } finally { await resume(); }
+  const record = await waitForWorksheet(builder, ({ backup }) => backup.drafts[0].name === "From Builder" && backup.drafts[0].entries.length === 1);
+  assert.deepEqual(record.backup.drafts[0].entries, [entry(mcq)]);
+  await builder.getByText("1 selected", { exact: true }).waitFor();
 });

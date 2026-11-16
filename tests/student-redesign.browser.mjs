@@ -2,6 +2,7 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { after, before, test } from "node:test";
+import { readWorksheetValue, waitForWorksheet } from "./fixtures/worksheet-browser.mjs";
 
 const require = createRequire(import.meta.url);
 const { chromium } = require(process.env.CHEMATLAS_PLAYWRIGHT || "playwright");
@@ -306,10 +307,9 @@ test("grouped outline movements stay within their section and preserve unrelated
   t.after(() => page.close());
   const outline = page.getByRole("region", { name: "Worksheet outline" });
   const order = region => region.locator("[data-entry-id]").evaluateAll(rows => rows.map(row => row.dataset.entryId));
-  const saved = () => page.evaluate(() => {
-    const backup = JSON.parse(localStorage.getItem("chematlas-worksheets-v1"));
-    return backup.drafts.find(draft => draft.id === backup.active).entries.map(entry => entry.id);
-  });
+  const savedOrder = ({ backup }) => backup.drafts.find(draft => draft.id === backup.active).entries.map(entry => entry.id);
+  const saved = async () => savedOrder(await page.evaluate(readWorksheetValue, "current"));
+  const waitForOrder = expected => waitForWorksheet(page, record => JSON.stringify(savedOrder(record)) === JSON.stringify(expected));
   const mcq = outline.getByRole("region", { name: "Multiple choice" });
   const frq = outline.getByRole("region", { name: "Free response" });
   await mcq.getByRole("button", { name: "Move question 1 down" }).waitFor();
@@ -319,16 +319,17 @@ test("grouped outline movements stay within their section and preserve unrelated
   assert.ok(await mcq.getByRole("button", { name: "Move question 3 down" }).isDisabled());
 
   await mcq.getByRole("button", { name: "Move question 1 down" }).click();
-  assert.deepEqual(await saved(), [frq1, mcq2, frq2, mcq1, mcq3]);
+  await waitForOrder([frq1, mcq2, frq2, mcq1, mcq3]);
   const moved = mcq.locator(`[data-entry-id="${mcq1}"]`);
   assert.ok(await focus(moved));
   await moved.press("Alt+ArrowUp");
-  assert.deepEqual(await saved(), [frq1, mcq1, frq2, mcq2, mcq3]);
+  await waitForOrder([frq1, mcq1, frq2, mcq2, mcq3]);
   assert.ok(await focus(moved));
   await moved.locator(".ca-b-grip").dragTo(frq.locator("[data-entry-id]").first());
   assert.deepEqual(await saved(), [frq1, mcq1, frq2, mcq2, mcq3]);
+  assert.deepEqual(await order(mcq), [mcq1, mcq2, mcq3]);
   await moved.locator(".ca-b-grip").dragTo(mcq.locator(`[data-entry-id="${mcq3}"]`));
-  assert.deepEqual(await saved(), [frq1, mcq3, frq2, mcq2, mcq1]);
+  await waitForOrder([frq1, mcq3, frq2, mcq2, mcq1]);
 
   await page.getByRole("button", { name: "Layout", exact: true }).click();
   await page.getByLabel("Group by").selectOption("topic");
@@ -336,17 +337,18 @@ test("grouped outline movements stay within their section and preserve unrelated
   await other.waitFor();
   assert.deepEqual(await order(other), [mcq2, mcq1]);
   await other.getByRole("button", { name: /Move question \d+ down/ }).first().click();
-  assert.deepEqual(await saved(), [frq1, mcq3, frq2, mcq1, mcq2]);
+  await waitForOrder([frq1, mcq3, frq2, mcq1, mcq2]);
 
   await page.getByLabel("Group by").selectOption("none");
   await other.waitFor({ state: "detached" });
   assert.deepEqual(await order(outline), await saved());
   await outline.getByRole("button", { name: "Move question 1 down" }).click();
-  assert.deepEqual(await saved(), [mcq3, frq1, frq2, mcq1, mcq2]);
+  await waitForOrder([mcq3, frq1, frq2, mcq1, mcq2]);
   const title = page.getByRole("textbox", { name: "Worksheet title" });
   await title.fill("Renamed after reordering");
   await outline.getByRole("button", { name: "Undo", exact: true }).click();
-  assert.deepEqual(await saved(), [frq1, mcq3, frq2, mcq1, mcq2]);
+  const undone = await waitForOrder([frq1, mcq3, frq2, mcq1, mcq2]);
+  assert.equal(undone.backup.drafts.find(draft => draft.id === undone.backup.active).name, "Renamed after reordering");
   assert.equal(await title.inputValue(), "Renamed after reordering");
 });
 

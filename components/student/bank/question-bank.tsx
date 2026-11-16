@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
-import type { KeyboardEvent as ReactKeyboardEvent, RefObject } from "react";
+import type { KeyboardEvent as ReactKeyboardEvent, ReactNode, RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
 import stimulusDocument from "../../../research/stimuli.json";
 import { planWorksheet } from "../../../lib/worksheet.mjs";
@@ -25,6 +25,7 @@ type Props = {
   onSelect: (id: string, replace: boolean) => void;
   onClosePane: () => void;
   worksheetIds: string[]; canEdit: boolean; onToggle: (id: string) => void;
+  worksheetWarning?: ReactNode;
   bankName: (id?: string) => string;
 };
 
@@ -302,6 +303,7 @@ export function QuestionBank(props: Props) {
       </section>
 
       <section className="ca-pane" ref={pane} aria-label="Printed question" onKeyDown={onPaneKeyDown}>
+        {props.worksheetWarning}
         {current ? <QuestionPane key={current.id} question={current} index={currentIndex} total={results.length} activeTopic={activeTopic}
           heading={paneHeading}
           mode={mode} onMode={setMode} files={catalog.sourceFiles ?? emptyFiles} unitOf={unitOf} topicName={topicName} bankName={bankName}

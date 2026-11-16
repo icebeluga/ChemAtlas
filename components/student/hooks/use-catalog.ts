@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore, type SetStateAction } from "react";
-import type { Backup } from "@/lib/worksheet";
 import type { Region as SourceRegion } from "@/lib/question-source";
 type Unit = { id: string; name: string; topics: [string, string][] };
 export type Question = {
@@ -20,10 +19,10 @@ export type Catalog = { sourceFiles?: {url:string;from:number;to:number}[]; unit
 
 const STORAGE_KEY = "apchem-studio-v2";
 
-type BrowserState = Omit<Saved, "sourcePages"> & { backup?: Backup };
+type BrowserState = Omit<Saved, "sourcePages">;
 
-function restoreBrowserState(initial: BrowserState, loadBackup: () => Backup): BrowserState {
-  const state = { ...initial, backup: loadBackup() };
+function restoreBrowserState(initial: BrowserState): BrowserState {
+  const state = { ...initial };
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}") as Partial<Saved>;
     const prior = JSON.parse(localStorage.getItem("apchem-studio-v1") || "{}") as { progress?: Record<string, { attempts?: number; wrong?: number; correct?: number; last?: string; history?: { date: string; correct: boolean }[] }> };
@@ -40,7 +39,7 @@ function restoreBrowserState(initial: BrowserState, loadBackup: () => Backup): B
   return state;
 }
 
-function createBrowserState(loadBackup: () => Backup) {
+function createBrowserState() {
   const initial: BrowserState = {
     progress: {}, overrides: {}, sessions: 0, questions: [],
     banks: [{ id: "mega", name: "AP Chemistry MEGA Compiled Test Bank.pdf", size: 0, addedAt: "Bundled source" }],
@@ -57,7 +56,7 @@ function createBrowserState(loadBackup: () => Backup) {
     subscribe(listener: () => void) {
       // Subscriptions begin after hydration, when browser storage is available.
       listeners.add(listener);
-      if (snapshot === initial) publish(restoreBrowserState(initial, loadBackup));
+      if (snapshot === initial) publish(restoreBrowserState(initial));
       return () => { listeners.delete(listener); };
     },
     set<Key extends keyof BrowserState>(key: Key, update: SetStateAction<BrowserState[Key]>) {
@@ -77,10 +76,10 @@ export function deriveCatalogQuestions(questions: Question[], overrides: Saved["
   });
 }
 
-export function useCatalog(loadBackup: () => Backup, onCatalogError: (message: string) => void) {
+export function useCatalog(onCatalogError: (message: string) => void) {
   const [bundledCatalog, setBundledCatalog] = useState<Catalog>({ units: [], questions: [], sourcePages: 0, stats: {} });
-  const [browserState] = useState(() => createBrowserState(loadBackup));
-  const { backup, progress, overrides, banks, sessions, questions: userQuestions } = useSyncExternalStore(browserState.subscribe, browserState.getSnapshot, browserState.getServerSnapshot);
+  const [browserState] = useState(createBrowserState);
+  const { progress, overrides, banks, sessions, questions: userQuestions } = useSyncExternalStore(browserState.subscribe, browserState.getSnapshot, browserState.getServerSnapshot);
   const catalog = useMemo(() => userQuestions.length
     ? { ...bundledCatalog, questions: [...bundledCatalog.questions, ...userQuestions] }
     : bundledCatalog, [bundledCatalog, userQuestions]);
@@ -91,5 +90,5 @@ export function useCatalog(loadBackup: () => Backup, onCatalogError: (message: s
 
   const topics = useMemo(() => catalog.units.flatMap(u => u.topics.map(([id, name]) => ({ id, name, unit: u.id, unitName: u.name }))), [catalog.units]);
   const questions = useMemo(() => deriveCatalogQuestions(catalog.questions, overrides, topics), [catalog.questions, overrides, topics]);
-  return { catalog, topics, questions, browserState, backup, progress, overrides, banks, sessions };
+  return { catalog, topics, questions, browserState, progress, overrides, banks, sessions };
 }

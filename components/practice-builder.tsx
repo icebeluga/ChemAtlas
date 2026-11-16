@@ -9,6 +9,7 @@ import { applyUndo, moveEntry, replaceEntry } from "@/lib/worksheet-edits";
 import type { UndoStep } from "@/lib/worksheet-edits";
 import type { Backup, Draft, ExportMode, Format, Region, SourceFile } from "@/lib/worksheet";
 import { useExportData } from "@/components/student/hooks/use-export-data";
+import { downloadWorksheetBackup } from "@/components/student/hooks/use-worksheets";
 import type { WorksheetQuestion } from "@/lib/worksheet-pdf";
 import { ArrowDown, ArrowUp, Check, ChevronDown, GripVertical, Plus, TriangleAlert, Undo2, X } from "lucide-react";
 import { WorksheetPreview } from "./worksheet-preview";
@@ -187,11 +188,6 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
   function changeFormat<K extends keyof Format>(key: K, value: Format[K]) {
     update({ ...draft, format: { ...draft.format, [key]: value } });
   }
-  function backupDownload() {
-    const link = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" }));
-    const a = document.createElement("a"); a.href = link; a.download = "chematlas-worksheets.json"; a.click();
-    setTimeout(() => URL.revokeObjectURL(link), 1000);
-  }
   const f = draft.format;
   const undone = applyUndo(draft, undo);
   const tabs = [[1, "Outline"], [3, "Preview"], [2, "Layout"], [0, "Add questions"]] as const;
@@ -220,7 +216,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
           <button type="button" className="ca-btn is-quiet" onClick={() => open(newDraft())}>New worksheet</button>
           <details className="ca-b-more"><summary className="ca-btn is-quiet">Drafts <ChevronDown size={15} aria-hidden="true" /></summary><div className="ca-b-menu">
             <button type="button" onClick={e => { open({ ...draft, id: newWorksheetId(), name: `${draft.name.slice(0, 93)} (copy)` }); e.currentTarget.closest("details")?.removeAttribute("open"); }}>Duplicate this worksheet</button>
-            <button type="button" onClick={backupDownload}>Download drafts</button>
+            <button type="button" onClick={() => downloadWorksheetBackup(backup)}>Download drafts</button>
             <label>Import drafts<input type="file" accept=".json,application/json" onChange={async e => {
               const file = e.target.files?.[0]; e.target.value = ""; if (!file) return;
               try {

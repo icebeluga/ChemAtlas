@@ -301,6 +301,53 @@ test("More uses normal Tab order and returns focus when closed with Escape or a 
   }));
 });
 
+test("More destinations stay reachable across Question Bank and Practice Builder widths", async (t) => {
+  for (const [path, heading] of [["/", "Browse by unit"], ["/practice-builder", "Practice Builder"]]) {
+    const page = await openPage(320, path);
+    t.after(() => page.close());
+    await page.getByRole("heading", { name: heading, exact: true }).waitFor();
+    const more = page.getByRole("button", { name: "More", exact: true });
+    const menu = page.locator(".ca-menu");
+    const destinations = menu.getByRole("button");
+
+    for (const width of [320, 360, 375, 390, 700, 768, 1440]) {
+      await page.setViewportSize({ width, height: width === 1440 ? 900 : width === 768 ? 700 : 600 });
+      await more.press("Enter");
+      await menu.waitFor();
+      assert.equal(await destinations.count(), 6);
+      const bounds = await menu.evaluate(element => {
+        const { left, right, top, bottom } = element.getBoundingClientRect();
+        const unreachable = [...element.querySelectorAll("button")].filter(button => {
+          const box = button.getBoundingClientRect();
+          const target = document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2);
+          return button.disabled || !box.width || !box.height || !button.contains(target) ||
+            box.left < left || box.right > right || box.top < top || box.bottom > bottom;
+        }).map(button => button.textContent.trim());
+        return { left, right, top, bottom, width: innerWidth, height: innerHeight, unreachable,
+          fitsContent: element.scrollWidth <= element.clientWidth && element.scrollHeight <= element.clientHeight };
+      });
+      const at = `${path} at ${width}px`;
+      assert.ok(bounds.left >= 0 && bounds.right <= bounds.width && bounds.top >= 0 && bounds.bottom <= bounds.height,
+        `${at} menu bounds ${JSON.stringify(bounds)}`);
+      assert.ok(bounds.fitsContent, `${at} menu content fits without clipping`);
+      assert.deepEqual(bounds.unreachable, [], `${at} all destinations are reachable`);
+
+      await page.keyboard.press("Tab");
+      assert.ok(await focus(destinations.first()), `${at} Tab enters the menu`);
+      await page.keyboard.press("Escape");
+      await menu.waitFor({ state: "hidden" });
+      assert.ok(await focus(more), `${at} Escape restores focus`);
+    }
+
+    await page.setViewportSize({ width: 320, height: 600 });
+    await more.click();
+    await menu.waitFor();
+    await page.locator(".ca-mark").click();
+    await menu.waitFor({ state: "hidden" });
+    assert.equal(await more.getAttribute("aria-expanded"), "false");
+  }
+});
+
 test("grouped outline movements stay within their section and preserve unrelated saved positions", async (t) => {
   const [frq1, mcq1, frq2, mcq2, mcq3] = ["frq-2006-3-22", "mcq-2008-2-29", "frq-2005-1-6", "mcq-2018-23-2039", "mcq-2008-1-29"];
   const page = await openPage(1440, "/practice-builder", [frq1, mcq1, frq2, mcq2, mcq3]);

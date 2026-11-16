@@ -5,6 +5,7 @@ import type { Backup, Draft } from "@/lib/worksheet";
 
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
 export const worksheetRecoveryKey = `${worksheetStorageKey}-recovery`;
+const saveWarning = "Draft changes could not be saved in this browser. Download a worksheet backup before leaving.";
 
 function parseJson(text: string | null): unknown {
   try { return JSON.parse(text || "null"); } catch { return undefined; }
@@ -63,11 +64,14 @@ export function planWorksheetRestore(savedText: string | null, legacyText: strin
 // Throws when the copy cannot be made, so callers abort their write instead of destroying it.
 function preserveInvalidBackup() {
   const current = localStorage.getItem(worksheetStorageKey);
-  if (current === null || localStorage.getItem(worksheetRecoveryKey) !== null) return;
-  if (!backupSchema.safeParse(parseJson(current)).success) localStorage.setItem(worksheetRecoveryKey, current);
+  if (current === null || backupSchema.safeParse(parseJson(current)).success) return;
+  const recovered = localStorage.getItem(worksheetRecoveryKey);
+  if (recovered === current) return;
+  if (recovered !== null) throw new Error("The worksheet recovery key contains a different backup.");
+  localStorage.setItem(worksheetRecoveryKey, current);
 }
 
-export function restoreWorksheetBackup(): Backup {
+export function restoreWorksheetBackup(onSaveError?: (message: string) => void): Backup {
   let savedText: string | null = null;
   let legacyText: string | null = null;
   try {
@@ -79,7 +83,7 @@ export function restoreWorksheetBackup(): Backup {
     preserveInvalidBackup();
     for (const [key, value] of writes) localStorage.setItem(key, value);
     for (const key of removals) localStorage.removeItem(key);
-  } catch { /* Keep the migrated draft in memory and leave the legacy key for retry. */ }
+  } catch { onSaveError?.(saveWarning); }
   return backup;
 }
 
@@ -93,7 +97,7 @@ export function useWorksheets(backup: Backup | undefined, setBackup: (value: Bac
     try {
       preserveInvalidBackup();
       localStorage.setItem(worksheetStorageKey, JSON.stringify(next));
-    } catch { onSaveError("Draft changes could not be saved in this browser. Download a worksheet backup before leaving."); }
+    } catch { onSaveError(saveWarning); }
   }
   const activeDraft = backup?.drafts.find(draft => draft.id === backup.active);
   const worksheetIds = activeDraft?.entries.map(entry => entry.id) ?? [];

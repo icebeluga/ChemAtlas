@@ -197,6 +197,22 @@ test("an earlier recovery copy is never overwritten and valid backups create non
   });
 });
 
+test("an occupied recovery key protects both different invalid collections during restore and save", () => {
+  const saved = backup(draft("A"), draft("Newer-only B", [entry("duplicate"), entry("duplicate")]));
+  const text = JSON.stringify(saved);
+  const older = "{older";
+  withStorage({ [worksheetKey]: text, [worksheetRecoveryKey]: older, [legacyKey]: '["legacy"]' }, storage => {
+    const restored = restoreWorksheetBackup();
+    assert.equal(storage.getItem(worksheetKey), text);
+    assert.equal(storage.getItem(legacyKey), '["legacy"]');
+    const { save, calls } = useTestWorksheets(restored);
+    save({ ...restored, drafts: restored.drafts.map(d => d.id === "A" ? { ...d, name: "Edited" } : d) });
+    assert.equal(storage.getItem(worksheetKey), text);
+    assert.equal(storage.getItem(worksheetRecoveryKey), older);
+    assert.equal(calls.errors.length, 1);
+  });
+});
+
 test("undo reverses a reorder without discarding a later rename", () => {
   const original = draft("D", [entry("a"), entry("b"), entry("c")]);
   const moved = moveEntry(original, 0, 2);

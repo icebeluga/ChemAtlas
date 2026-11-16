@@ -188,3 +188,46 @@ test("fractional response lines never corrupt saved drafts, and a corrupt backup
     await browser.close();
   }
 });
+
+test("an older recovery backup cannot authorize replacing a different damaged collection", async () => {
+  const browser = await chromium.launch({ executablePath: process.env.CHEMATLAS_CHROMIUM });
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+    await page.route(`${origin.origin}/**`, route => route.continue({
+      headers: { ...route.request().headers(), "cf-access-jwt-assertion": token },
+    }));
+    const key = "chematlas-worksheets-v1";
+    const recoveryKey = `${key}-recovery`;
+    const legacyKey = "chematlas-student-worksheet-v1";
+    const older = "{older backup";
+    await page.goto(new URL("/practice-builder", origin).href);
+    const title = page.getByRole("textbox", { name: "Worksheet title", exact: true });
+    await title.fill("Format source");
+    const format = await page.waitForFunction(k => JSON.parse(localStorage.getItem(k))?.drafts[0].format, key)
+      .then(handle => handle.jsonValue());
+    const duplicate = { id: "frq-2005-1-6", breakBefore: false };
+    const newer = JSON.stringify({ version: 1, active: "draft-a", drafts: [
+      { id: "draft-a", name: "Draft A", format, entries: [] },
+      { id: "draft-b", name: "Newer-only B", format, entries: [duplicate, duplicate, { id: "mcq-2008-1-29", breakBefore: false }] },
+    ] });
+    await page.evaluate(([key, recoveryKey, newer, older]) => {
+      localStorage.setItem(key, newer);
+      localStorage.setItem(recoveryKey, older);
+    }, [key, recoveryKey, newer, older]);
+    await page.reload();
+    await title.fill("Edited A");
+    const warning = page.getByRole("status").filter({ hasText: "Draft changes could not be saved" });
+    await warning.waitFor();
+    assert.equal(await title.inputValue(), "Edited A");
+    const readKeys = () => page.evaluate(keys => keys.map(k => localStorage.getItem(k)), [key, recoveryKey, legacyKey]);
+    assert.deepEqual(await readKeys(), [newer, older, null]);
+
+    const legacy = JSON.stringify(["mcq-2008-1-29"]);
+    await page.evaluate(([k, v]) => localStorage.setItem(k, v), [legacyKey, legacy]);
+    await page.reload();
+    await warning.waitFor();
+    assert.deepEqual(await readKeys(), [newer, older, legacy]);
+  } finally {
+    await browser.close();
+  }
+});

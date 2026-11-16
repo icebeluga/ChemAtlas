@@ -60,7 +60,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     setCatalogLoadFailed(true);
     setNotice(message);
   }, []);
-  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(restoreWorksheetBackup, onCatalogError);
+  const { catalog, topics, questions, browserState, backup: restoredBackup, progress, overrides, banks, sessions } = useCatalog(() => restoreWorksheetBackup(setNotice), onCatalogError);
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const wasBankView = useRef(bankView);

@@ -1,6 +1,6 @@
 import { backupSchema, newWorksheetId } from "@/lib/worksheet";
 import type { Backup, Draft } from "@/lib/worksheet";
-import { outstandingRecoveryEntry } from "./worksheet-recovery";
+import { hasOutstandingLegacyEntries, outstandingRecoveryEntry } from "./worksheet-recovery";
 import type { LegacyCapture, LegacyLedger } from "./worksheet-recovery";
 
 const databaseName = "chematlas-worksheets";
@@ -19,6 +19,7 @@ export type WorksheetMigration = {
 
 export class WorksheetConflict extends Error {}
 export class WorksheetImportLimit extends Error {}
+export class LegacyEntryArchived extends Error {}
 
 export function openWorksheetDatabase(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -126,8 +127,8 @@ export function acknowledgeLegacySnapshot(db: IDBDatabase, id: string) {
     if (!snapshot) throw new Error("The legacy snapshot is missing.");
     if (snapshot.acknowledged) return ledger;
     const recovered = new Set(ledger.recovered);
-    if (snapshot.entries.some(entry => outstandingRecoveryEntry(entry, recovered))) {
-      throw new Error("Recover the remaining worksheets before acknowledging this snapshot.");
+    if (hasOutstandingLegacyEntries(snapshot, recovered)) {
+      throw new Error("Resolve the remaining worksheets before acknowledging this snapshot.");
     }
     const next = { ...ledger, snapshots: ledger.snapshots.map(item => item.id === id ? { ...item, acknowledged: true } : item) };
     store.put(next, legacyLedgerKey);
@@ -135,14 +136,31 @@ export function acknowledgeLegacySnapshot(db: IDBDatabase, id: string) {
   });
 }
 
-export function recoverLegacyWorksheet(db: IDBDatabase, id: string, entryIndex: number) {
+export function keepLegacyEntryArchived(db: IDBDatabase, id: string, entryIndex: number) {
+  return recoveryTransaction(db, "readwrite", (_, store, ledger) => {
+    const snapshot = ledger.snapshots.find(item => item.id === id);
+    const entry = snapshot?.entries[entryIndex];
+    if (!snapshot || !entry) throw new Error("The requested recovery entry is missing.");
+    if (!outstandingRecoveryEntry(entry, new Set(ledger.recovered))) return { ledger, kept: false };
+    if (snapshot.archivedEntries?.includes(entryIndex)) return { ledger, kept: true };
+    if (snapshot.acknowledged) throw new Error("The snapshot has been acknowledged.");
+    const updated = { ...snapshot, archivedEntries: [...(snapshot.archivedEntries ?? []), entryIndex] };
+    const next = { ...ledger, snapshots: ledger.snapshots.map(item => item.id === id ? updated : item) };
+    store.put(next, legacyLedgerKey);
+    return { ledger: next, kept: true };
+  });
+}
+
+export function recoverLegacyWorksheet(db: IDBDatabase, id: string, entryIndex: number, fromArchive: boolean) {
   return recoveryTransaction(db, "readwrite", (current, store, ledger) => {
     const snapshot = ledger.snapshots.find(item => item.id === id);
     const entry = snapshot?.entries[entryIndex];
     if (!entry) throw new Error("The requested recovery entry is missing.");
     const remaining = outstandingRecoveryEntry(entry, new Set(ledger.recovered));
     if (!remaining) return { record: current, ledger, recovered: false };
-    if (snapshot.acknowledged) throw new Error("The snapshot has been acknowledged.");
+    const archived = snapshot.archivedEntries?.includes(entryIndex) ?? false;
+    if (archived && !fromArchive) throw new LegacyEntryArchived();
+    if (archived !== fromArchive || (snapshot.acknowledged && !archived)) throw new Error("The recovery decision changed.");
     if (current.backup.drafts.length >= 100) throw new WorksheetImportLimit();
     const draft = { ...remaining.draft, id: newWorksheetId() };
     const backup = backupSchema.parse({ ...current.backup, drafts: [...current.backup.drafts, draft], active: draft.id });

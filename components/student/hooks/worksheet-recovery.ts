@@ -11,6 +11,7 @@ export type LegacySnapshot = {
   source: LegacyObservation["source"];
   entries: LegacyRecoveryEntry[];
   acknowledged: boolean;
+  archivedEntries?: number[];
 };
 export type LegacyCapture = { snapshot: LegacySnapshot; raw: string };
 export type LegacyLedger = { snapshots: LegacySnapshot[]; recovered: string[] };
@@ -82,4 +83,17 @@ export function outstandingRecoveryEntry(entry: LegacyRecoveryEntry, recovered: 
   if (!receipts.length) return undefined;
   if (receipts.length === entry.receipts.length) return entry;
   return { receipts, draft: { ...entry.draft, entries: entry.draft.entries.filter((_, index) => !recovered.has(entry.receipts[index])) } };
+}
+
+export function hasOutstandingLegacyEntries(snapshot: LegacySnapshot, recovered: ReadonlySet<string>) {
+  return snapshot.entries.some((entry, index) => !snapshot.archivedEntries?.includes(index) && outstandingRecoveryEntry(entry, recovered));
+}
+
+export function legacySourceFile(source: string, filename: string) {
+  // Unicode mode matches an isolated surrogate, while a valid pair is a single code point.
+  if (!/[\uD800-\uDFFF]/u.test(source)) return { text: source, filename: `${filename}.json` };
+  return {
+    text: JSON.stringify({ format: "chematlas-legacy-source-utf16-code-units-v1", source }),
+    filename: `${filename}.utf16-source.json`,
+  };
 }

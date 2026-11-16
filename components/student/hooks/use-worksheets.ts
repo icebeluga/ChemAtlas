@@ -4,10 +4,11 @@ import { useState, useSyncExternalStore } from "react";
 import { addEntries, backupSchema, newDraft, newWorksheetId, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup, Draft } from "@/lib/worksheet";
 import { acknowledgeLegacySnapshot, adoptWorksheetBackup, archiveLegacyWorksheets, importWorksheetRecord, initializeWorksheetDatabase,
-  mergeWorksheetBackup, openWorksheetDatabase, readLegacySnapshot, readWorksheetMigrationSources, recoverLegacyWorksheet,
+  keepLegacyEntryArchived, LegacyEntryArchived, mergeWorksheetBackup, openWorksheetDatabase, readLegacySnapshot,
+  readWorksheetMigrationSources, recoverLegacyWorksheet,
   saveWorksheetRecord, WorksheetConflict, WorksheetImportLimit, worksheetTransaction } from "./worksheet-db";
 import type { WorksheetMigration, WorksheetRecord } from "./worksheet-db";
-import { legacySources, parseJson, prepareLegacyCapture, salvageBackup } from "./worksheet-recovery";
+import { legacySourceFile, legacySources, parseJson, prepareLegacyCapture, salvageBackup } from "./worksheet-recovery";
 import type { LegacyLedger, LegacyObservation } from "./worksheet-recovery";
 
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
@@ -202,11 +203,22 @@ function createWorksheetStore() {
     });
   }
 
-  function recover(id: string, entryIndex: number) {
+  function keepArchived(id: string, entryIndex: number) {
+    return queueLegacyAction(async db => {
+      const result = await keepLegacyEntryArchived(db, id, entryIndex);
+      legacy = result.ledger;
+      legacyMessage = result.kept ? "This revision was kept in the archive without importing." : "This revision was already recovered as a worksheet.";
+      notify("legacy-recovery");
+    }, () => {
+      legacyMessage = "The archive-only choice could not be saved. The snapshot is still available.";
+    });
+  }
+
+  function recover(id: string, entryIndex: number, fromArchive = false) {
     return enqueue(() => queueLegacyAction(async db => {
       if (blocked || !snapshot) throw new Error("Worksheet storage is unavailable.");
       const previous = snapshot.backup.active;
-      const result = await recoverLegacyWorksheet(db, id, entryIndex);
+      const result = await recoverLegacyWorksheet(db, id, entryIndex, fromArchive);
       committed = result.record;
       legacy = result.ledger;
       if (result.recovered) {
@@ -216,6 +228,11 @@ function createWorksheetStore() {
       }
       legacyMessage = result.recovered ? "Legacy worksheet recovered." : "This legacy worksheet was already recovered.";
     }, error => {
+      if (error instanceof LegacyEntryArchived) {
+        legacyMessage = "This revision was kept in the archive. Use Recover archived worksheet to import it.";
+        void refreshLegacy();
+        return;
+      }
       legacyMessage = error instanceof WorksheetImportLimit
         ? "This worksheet could not be recovered because the collection has reached 100 worksheets. The archived snapshot is still available."
         : "This worksheet could not be recovered. The archived snapshot is still available to retry.";
@@ -226,7 +243,7 @@ function createWorksheetStore() {
     if (!connection) return;
     try {
       const raw = await readLegacySnapshot(await connection, id);
-      downloadWorksheetData(raw, `chematlas-legacy-${id}.json`);
+      downloadLegacySource(raw, `chematlas-legacy-${id}`);
     } catch {
       legacyMessage = "This archived legacy snapshot could not be downloaded. Try again.";
       publishLegacy();
@@ -401,6 +418,7 @@ function createWorksheetStore() {
     getSnapshot: () => snapshot,
     save,
     acknowledge,
+    keepArchived,
     recover,
     downloadLegacy,
     refreshLegacy,
@@ -409,10 +427,15 @@ function createWorksheetStore() {
   };
 }
 
-export function downloadWorksheetData(text: string, filename: string) {
+function downloadWorksheetData(text: string, filename: string) {
   const link = URL.createObjectURL(new Blob([text], { type: "application/json" }));
   const a = document.createElement("a"); a.href = link; a.download = filename; a.click();
   setTimeout(() => URL.revokeObjectURL(link), 1000);
+}
+
+export function downloadLegacySource(source: string, filename: string) {
+  const file = legacySourceFile(source, filename);
+  downloadWorksheetData(file.text, file.filename);
 }
 
 export function downloadWorksheetBackup(backup: Backup, filename = "chematlas-worksheets.json") {
@@ -428,7 +451,7 @@ export function useWorksheets() {
   return { backup, warning: snapshot?.warning, rejectedEdits: snapshot?.rejectedEdits, legacy: snapshot?.legacy,
     legacyError: snapshot?.legacyError, legacyMessage: snapshot?.legacyMessage, legacyUnavailable: snapshot?.legacyUnavailable,
     unarchived: snapshot?.unarchived,
-    acknowledgeLegacy: store.acknowledge, recoverLegacy: store.recover, downloadLegacy: store.downloadLegacy,
+    acknowledgeLegacy: store.acknowledge, keepLegacyArchived: store.keepArchived, recoverLegacy: store.recover, downloadLegacy: store.downloadLegacy,
     retryLegacyArchive: store.refreshLegacy,
     importing: snapshot?.importing, pendingImport: snapshot?.pendingImport, importDrafts: store.importDrafts,
     discardPendingImport: store.discardPendingImport,

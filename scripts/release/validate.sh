@@ -29,10 +29,27 @@ rm public/student-version.json
 trap - EXIT
 pnpm run check:private --built
 log dry-run pnpm exec wrangler deploy --dry-run --config dist/server/wrangler.json
-smoke_args=(--browser-regressions)
-# The pinned historical Stage 4 application predates both regression suites.
-if [[ "$sha" == "3c78883006beb48c2dab68443e6e93b87bb9a769" ]]; then smoke_args=(); fi
-log smoke node "$control/smoke.cjs" "${smoke_args[@]}"
+smoke() {
+  # The pinned historical Stage 4 application predates both regression suites.
+  if [[ "$sha" == "3c78883006beb48c2dab68443e6e93b87bb9a769" ]]; then
+    node "$control/smoke.cjs"
+    return
+  fi
+  local historical_sha=4d871165cbaee18f3199c539545a90e70ae8fcb2
+  local fixture=.next/legacy-browser-fixture
+  echo "Building signed browser fixture from historical application $historical_sha"
+  mkdir -p "$fixture"
+  git archive "$historical_sha" | tar -x -C "$fixture"
+  (
+    cd "$fixture"
+    pnpm install --frozen-lockfile
+    printf '{"application_sha":"%s"}\n' "$historical_sha" > public/student-version.json
+    pnpm run build
+  )
+  CHEMATLAS_TEST_HISTORICAL_DIST="$fixture/dist" CHEMATLAS_TEST_HISTORICAL_SHA="$historical_sha" \
+    node "$control/smoke.cjs" --browser-regressions
+}
+log smoke smoke
 "${manifest[@]}" seal "$sha" --workflow-sha "$workflow_sha" "${expected[@]}" \
   --manifest "$out/release-manifest.json" --evidence "$out/evidence"
 "${manifest[@]}" inputs "$sha" > "$out/release-inputs.json"

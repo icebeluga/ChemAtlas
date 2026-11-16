@@ -36,6 +36,7 @@ jobs:
         with:
           ref: ${{ env.APPLICATION_SHA }}
           path: application
+          fetch-depth: 0
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:

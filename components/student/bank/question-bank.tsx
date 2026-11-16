@@ -161,7 +161,10 @@ export function QuestionBank(props: Props) {
   function onResultsKeyDown(event: ReactKeyboardEvent<HTMLOListElement>) {
     if (!isBankShortcut(event)) return;
     const key = event.key.toLowerCase();
-    const item = (event.target as Element).closest<HTMLLIElement>(".ca-row[data-id]");
+    const target = event.target as Element;
+    const arrow = key === "arrowdown" || key === "arrowup";
+    if (!target.matches(arrow ? ".ca-row-open, .ca-add" : ".ca-row-open")) return;
+    const item = target.closest<HTMLLIElement>(".ca-row[data-id]");
     if (!item?.dataset.id) return;
     if (["arrowdown", "arrowup", "j", "k"].includes(key)) {
       event.preventDefault();
@@ -174,7 +177,7 @@ export function QuestionBank(props: Props) {
   }
 
   function onPaneKeyDown(event: ReactKeyboardEvent<HTMLElement>) {
-    if (!current || !isBankShortcut(event)) return;
+    if (!current || event.target !== paneHeading.current || !isBankShortcut(event)) return;
     const key = event.key.toLowerCase();
     if ((key === "j" || key === "k") && currentIndex >= 0) {
       event.preventDefault();

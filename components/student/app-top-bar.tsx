@@ -37,7 +37,8 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
     function focusSearch(event: KeyboardEvent) {
       const target = event.target;
       if (event.key !== "/" || event.defaultPrevented || event.metaKey || event.ctrlKey || event.altKey || event.isComposing ||
-        !(target instanceof Element) || !target.closest(".ca-list") || target.closest("input,select,textarea,[contenteditable]")) return;
+        !(target instanceof Element) || !target.matches(".ca-rows .ca-row-open, .ca-list-title h1") ||
+        target.closest("dialog,[contenteditable]")) return;
       event.preventDefault();
       input.current?.focus();
     }

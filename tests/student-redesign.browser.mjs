@@ -203,6 +203,59 @@ test("Question Bank shortcuts affect the focused feature and leave other control
   assert.ok(await focus(page.getByRole("searchbox", { name: "Search questions" })));
 });
 
+test("printable shortcuts leave question disclosures, toolbar buttons, and list controls alone", async (t) => {
+  const page = await openPage(1440, "/?view=detail&question=frq-2005-1-6");
+  t.after(() => page.close());
+  const heading = page.getByRole("heading", { name: /2005 · Question 1/ });
+  const crop = page.getByRole("button", { name: "Question crop", exact: true });
+  const added = page.getByRole("complementary", { name: "Worksheet" })
+    .getByRole("button", { name: /^Worksheet question/ });
+  const questionUrl = page.url();
+  const controls = [
+    page.locator(".ca-parts-box summary"),
+    page.getByRole("button", { name: "Fit width", exact: true }),
+    page.getByRole("button", { name: "Next question", exact: true }),
+    page.getByRole("checkbox", { name: "Reviewed print layout only" }),
+    page.locator(".ca-rows button.ca-add").first(),
+  ];
+  for (const control of controls) {
+    await control.focus();
+    for (const key of ["a", "f", "j", "k", "/"]) await page.keyboard.press(key);
+    assert.ok(await focus(control));
+    assert.equal(await added.count(), 0);
+    assert.equal(await crop.getAttribute("aria-pressed"), "false");
+    assert.equal(page.url(), questionUrl);
+  }
+
+  await heading.focus();
+  await page.keyboard.press("a");
+  await added.waitFor();
+  await page.keyboard.press("f");
+  assert.equal(await crop.getAttribute("aria-pressed"), "true");
+  await page.keyboard.press("j");
+  await page.waitForURL(url => url.href !== questionUrl);
+});
+
+test("printable shortcuts leave the phone topic dialog and search input alone", async (t) => {
+  const page = await openPage(390, "/?view=library&unit=u1");
+  t.after(() => page.close());
+  await page.getByRole("button", { name: "All topics", exact: true }).click();
+  const dialog = page.getByRole("dialog", { name: "Topics" });
+  await dialog.waitFor();
+  const topic = dialog.getByRole("button", { name: /All topics/ });
+  const before = page.url();
+  await topic.focus();
+  for (const key of ["a", "f", "j", "k", "/"]) await page.keyboard.press(key);
+  assert.ok(await focus(topic));
+  assert.equal(page.url(), before);
+  await page.keyboard.press("Escape");
+  await dialog.waitFor({ state: "hidden" });
+  const search = page.getByRole("searchbox", { name: "Search questions" });
+  await search.pressSequentially("afjk/");
+  assert.equal(await search.inputValue(), "afjk/");
+  assert.equal(await page.getByRole("complementary", { name: "Worksheet" }).getByRole("button").count(), 0);
+});
+
 test("More uses normal Tab order and returns focus when closed with Escape or a destination", async (t) => {
   const page = await openPage(1440);
   t.after(() => page.close());

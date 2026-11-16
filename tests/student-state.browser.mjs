@@ -4,6 +4,7 @@
 import assert from "node:assert/strict";
 import { createRequire } from "node:module";
 import { test } from "node:test";
+import { fileURLToPath } from "node:url";
 import { pauseWorksheetWrites, readWorksheetValue, waitForWorksheet } from "./fixtures/worksheet-browser.mjs";
 
 const loadBrowser = createRequire(import.meta.url);
@@ -161,6 +162,13 @@ const openBuilder = async context => {
   return page;
 };
 
+async function downloadText(page, button) {
+  const [file] = await Promise.all([page.waitForEvent("download"), button.click()]);
+  const chunks = [];
+  for await (const chunk of await file.createReadStream()) chunks.push(chunk);
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 async function worksheetContext(t, { raw = null, recovery = null, legacy = null } = {}) {
   const browser = await chromium.launch({ executablePath: process.env.CHEMATLAS_CHROMIUM });
   t.after(() => browser.close());
@@ -173,6 +181,74 @@ async function worksheetContext(t, { raw = null, recovery = null, legacy = null 
   }, [[key, raw], [recoveryKey, recovery], [legacyKey, legacy]]);
   return context;
 }
+
+test("legacy writes from the previous storage implementation remain discoverable across reloads", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  const page = await openBuilder(context);
+  const initial = await currentRecord(page);
+  const { build } = createRequire(import.meta.resolve("vite"))("esbuild");
+  const bundle = await build({
+    stdin: {
+      contents: `
+        import { restoreWorksheetBackup, useWorksheets } from "./tests/fixtures/legacy-worksheets";
+        import { newDraft } from "./lib/worksheet";
+        document.querySelector("button").onclick = () => {
+          const before = restoreWorksheetBackup();
+          const draft = newDraft(document.querySelector("input").value);
+          const { save } = useWorksheets(before, () => {}, message => { throw new Error(message); });
+          save({ ...before, active: draft.id, drafts: [...before.drafts, draft] });
+        };
+      `,
+      resolveDir: fileURLToPath(new URL("..", import.meta.url)),
+    },
+    bundle: true, write: false, platform: "browser",
+  });
+  await context.route(`${origin.origin}/legacy-worksheets-fixture`, route => route.fulfill({
+    contentType: "text/html",
+    body: `<label>Older draft title<input></label><button>Save older draft</button><script>${bundle.outputFiles[0].text}</script>`,
+  }));
+  async function writeFromOlderBuild(name) {
+    const old = await context.newPage();
+    await old.goto(`${origin.origin}/legacy-worksheets-fixture`);
+    await old.getByLabel("Older draft title").fill(name);
+    await old.getByRole("button", { name: "Save older draft" }).click();
+    const [saved] = await originalKeys(old);
+    assert.ok(JSON.parse(saved).drafts.some(draft => draft.name === name));
+    await old.close();
+    return saved;
+  }
+
+  const updated = await writeFromOlderBuild("Late legacy draft");
+  const warning = page.getByRole("status").filter({ hasText: "Older worksheet storage changed" });
+  await warning.waitFor();
+  await page.reload();
+  await titleOf(page).waitFor();
+  await warning.waitFor();
+  assert.deepEqual(await currentRecord(page), initial);
+  const changedButton = page.getByRole("button", { name: "Download changed legacy saved worksheets", exact: true });
+  const changed = JSON.parse(await downloadText(page, changedButton));
+  assert.deepEqual(changed.drafts.map(draft => draft.name), ["Late legacy draft"]);
+  const exact = await downloadText(page, page.getByRole("button", { name: "Download exact legacy saved worksheets data", exact: true }));
+  assert.equal(exact, updated);
+  assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery: null, legacySelection: null });
+
+  const idle = await openBuilder(context);
+  const idleWarning = idle.getByRole("status").filter({ hasText: "Older worksheet storage changed" });
+  await idleWarning.waitFor();
+  await page.getByRole("button", { name: "Acknowledge legacy changes" }).click();
+  await warning.waitFor({ state: "hidden" });
+  await idleWarning.waitFor({ state: "hidden" });
+  await page.reload();
+  await titleOf(page).waitFor();
+  assert.equal(await warning.count(), 0);
+  const latest = await writeFromOlderBuild("Post-acknowledgment draft");
+  await warning.waitFor();
+  const next = JSON.parse(await downloadText(page, changedButton));
+  assert.deepEqual(next.drafts.map(draft => draft.name), ["Post-acknowledgment draft"]);
+  assert.deepEqual(await currentRecord(page), initial);
+  assert.deepEqual(await originalKeys(page), [latest, null, null]);
+});
 
 test("a historical two-draft collection accepts fractional input safely and survives reload", async t => {
   const a = draft("draft-a", "Draft A", [entry(mcq)], { ...historicalFormat, paper: "A4", landscape: true });

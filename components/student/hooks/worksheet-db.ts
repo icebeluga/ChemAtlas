@@ -68,6 +68,21 @@ export function initializeWorksheetDatabase(db: IDBDatabase, migrate: () => { ba
   });
 }
 
+export async function readWorksheetMigrationBaseline(db: IDBDatabase): Promise<WorksheetMigration> {
+  const [original, acknowledged] = await worksheetTransaction(db, "readonly", (_, store) =>
+    [store.get("migration"), store.get("acknowledged-legacy")]);
+  const baseline = acknowledged.result ?? original.result;
+  if (!baseline) throw new Error("The worksheet migration archive is missing.");
+  return baseline;
+}
+
+export function acknowledgeLegacyWorksheets(db: IDBDatabase, sources: WorksheetMigration) {
+  return worksheetTransaction(db, "readwrite", (current, store) => {
+    if (!current) throw new Error("The worksheet collection has not been migrated.");
+    store.put(sources, "acknowledged-legacy");
+  });
+}
+
 function same<T>(a: T, b: T) {
   return a === b || JSON.stringify(a) === JSON.stringify(b);
 }

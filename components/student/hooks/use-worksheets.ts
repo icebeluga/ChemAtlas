@@ -3,8 +3,8 @@
 import { useState, useSyncExternalStore } from "react";
 import { addEntries, backupSchema, draftSchema, newDraft, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup, Draft } from "@/lib/worksheet";
-import { adoptWorksheetBackup, initializeWorksheetDatabase, mergeWorksheetBackup, openWorksheetDatabase,
-  saveWorksheetRecord, WorksheetConflict, worksheetTransaction } from "./worksheet-db";
+import { acknowledgeLegacyWorksheets, adoptWorksheetBackup, initializeWorksheetDatabase, mergeWorksheetBackup, openWorksheetDatabase,
+  readWorksheetMigrationBaseline, saveWorksheetRecord, WorksheetConflict, worksheetTransaction } from "./worksheet-db";
 import type { WorksheetMigration, WorksheetRecord } from "./worksheet-db";
 
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
@@ -12,7 +12,7 @@ export const worksheetRecoveryKey = `${worksheetStorageKey}-recovery`;
 const saveWarning = "Draft changes could not be saved in this browser. Download drafts before leaving.";
 const conflictWarning = "Another tab changed this worksheet. Your edits are only in this tab. Download drafts before reloading.";
 const recoveryWarning = "Some older worksheet data needed recovery. The original browser data is preserved.";
-const legacyEditWarning = "An older ChemAtlas tab changed the original worksheet data. Download drafts from that tab and import them here before closing it.";
+const legacySourceLabels = { collection: "saved worksheets", recovery: "recovery copy", legacySelection: "Question Bank selection" } as const;
 
 function parseJson(text: string | null): unknown {
   try { return JSON.parse(text || "null"); } catch { return undefined; }
@@ -76,7 +76,46 @@ function planMigration(sources: WorksheetMigration) {
   return { ...restore, sources, recoveryNeeded: restore.recoveryNeeded || useRecovery };
 }
 
-type WorksheetSnapshot = { backup: Backup; warning?: string; unsaved?: Backup };
+type LegacyRecovery = {
+  sources: WorksheetMigration;
+  downloads: { label: string; filename: string; text: string }[];
+};
+
+function legacyRecovery(sources: WorksheetMigration, baseline: WorksheetMigration): LegacyRecovery | undefined {
+  const keys = Object.keys(legacySourceLabels) as (keyof WorksheetMigration)[];
+  const changed = keys.filter(key => sources[key] !== baseline[key]);
+  if (!changed.length) return undefined;
+  const downloads: LegacyRecovery["downloads"] = [];
+  for (const key of changed) {
+    const raw = sources[key];
+    if (raw === null) continue;
+    const label = legacySourceLabels[key];
+    const prior = salvageBackup(parseJson(baseline[key]));
+    const next = salvageBackup(parseJson(raw));
+    const drafts = next?.drafts.filter(draft => {
+      const original = prior?.drafts.find(item => item.id === draft.id);
+      return JSON.stringify(original) !== JSON.stringify(draft);
+    }) ?? [];
+    if (drafts.length) {
+      const backup: Backup = { version: 1, active: drafts[0].id, drafts };
+      downloads.push({ label: `Download changed legacy ${label}`, filename: `chematlas-legacy-${key}.json`, text: JSON.stringify(backup, null, 2) });
+    }
+    if (key === "legacySelection") {
+      const selection = planWorksheetRestore(null, raw, newDraft).backup.drafts[0];
+      const previous = parseJson(baseline[key]);
+      const known = new Set(Array.isArray(previous) ? previous : []);
+      const entries = selection.entries.filter(entry => !known.has(entry.id));
+      if (entries.length) {
+        const backup: Backup = { version: 1, active: selection.id, drafts: [{ ...selection, entries }] };
+        downloads.push({ label: "Download new legacy selections", filename: "chematlas-legacy-selection.json", text: JSON.stringify(backup, null, 2) });
+      }
+    }
+    downloads.push({ label: `Download exact legacy ${label} data`, filename: `chematlas-legacy-${key}-raw.json`, text: raw });
+  }
+  return { sources, downloads };
+}
+
+type WorksheetSnapshot = { backup: Backup; warning?: string; unsaved?: Backup; legacy?: LegacyRecovery; legacyError?: string };
 
 function createWorksheetStore() {
   let snapshot: WorksheetSnapshot | undefined;
@@ -86,7 +125,9 @@ function createWorksheetStore() {
   let pending = 0;
   let blocked = false;
   let dirty = false;
-  let legacyChanged = false;
+  let legacy: LegacyRecovery | undefined;
+  let legacyError: string | undefined;
+  let legacyScan = 0;
   let queue: Promise<void> = Promise.resolve();
   const listeners = new Set<() => void>();
 
@@ -104,8 +145,8 @@ function createWorksheetStore() {
   function adopt(record: WorksheetRecord) {
     committed = record;
     const backup = snapshot ? adoptWorksheetBackup(snapshot.backup, record.backup) : record.backup;
-    const warning = legacyChanged ? legacyEditWarning : record.recoveryNeeded ? recoveryWarning : undefined;
-    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ backup, warning });
+    const warning = record.recoveryNeeded ? recoveryWarning : undefined;
+    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ backup, warning, legacy, legacyError });
   }
 
   async function refresh() {
@@ -122,23 +163,63 @@ function createWorksheetStore() {
     }
   }
 
+  async function refreshLegacy() {
+    if (!connection) return;
+    const scan = ++legacyScan;
+    try {
+      const baseline = await readWorksheetMigrationBaseline(await connection);
+      if (scan !== legacyScan) return;
+      const sources = readMigrationSources();
+      legacy = legacyRecovery(sources, baseline);
+      legacyError = undefined;
+    } catch {
+      if (scan !== legacyScan) return;
+      legacyError = "Older worksheet storage could not be checked. Reload to try again.";
+    }
+    if (snapshot && (snapshot.legacy !== legacy || snapshot.legacyError !== legacyError)) {
+      publish({ ...snapshot, legacy, legacyError });
+    }
+  }
+
+  async function acknowledge(sources: WorksheetMigration) {
+    if (!connection) return;
+    try {
+      await acknowledgeLegacyWorksheets(await connection, sources);
+      channel?.postMessage("legacy-acknowledged");
+      await refreshLegacy();
+    } catch {
+      legacyError = "The legacy recovery acknowledgment could not be saved. Your original data is still available.";
+      if (snapshot) publish({ ...snapshot, legacyError });
+    }
+  }
+
   function onLegacyChange(event: StorageEvent) {
-    if (!snapshot || blocked || ![worksheetStorageKey, worksheetRecoveryKey, BANK_WORKSHEET_KEY].includes(event.key ?? "")) return;
-    legacyChanged = true;
-    publish({ ...snapshot, warning: legacyEditWarning });
+    if (event.key === null || [worksheetStorageKey, worksheetRecoveryKey, BANK_WORKSHEET_KEY].includes(event.key)) void refreshLegacy();
+  }
+
+  function onResume() {
+    void refresh();
+    void refreshLegacy();
+  }
+
+  function onVisibilityChange() {
+    if (document.visibilityState === "visible") onResume();
   }
 
   function start() {
     if (typeof BroadcastChannel === "function") {
       try {
         channel = new BroadcastChannel(worksheetStorageKey);
-        channel.onmessage = () => { void refresh(); };
+        channel.onmessage = event => {
+          if (event.data === "legacy-acknowledged") void refreshLegacy();
+          else void refresh();
+        };
       } catch { /* Refresh on focus if this browser disallows the channel. */ }
     }
-    if (connection) { void refresh(); return; }
+    if (connection) { onResume(); return; }
     connection = openWorksheetDatabase();
     void connection.then(db => initializeWorksheetDatabase(db, () => planMigration(readMigrationSources())))
-      .then(adopt).catch(() => {
+      .then(async record => { await refreshLegacy(); adopt(record); }).catch(() => {
         blocked = true;
         let backup: Backup;
         try { backup = planMigration(readMigrationSources()).backup; }
@@ -190,31 +271,38 @@ function createWorksheetStore() {
       listeners.add(listener);
       if (listeners.size === 1) {
         start();
-        window.addEventListener("focus", refresh);
-        window.addEventListener("pageshow", refresh);
+        window.addEventListener("focus", onResume);
+        window.addEventListener("pageshow", onResume);
         window.addEventListener("storage", onLegacyChange);
         window.addEventListener("beforeunload", beforeUnload);
+        document.addEventListener("visibilitychange", onVisibilityChange);
       }
       return () => {
         listeners.delete(listener);
         if (listeners.size) return;
         channel?.close();
         channel = undefined;
-        window.removeEventListener("focus", refresh);
-        window.removeEventListener("pageshow", refresh);
+        window.removeEventListener("focus", onResume);
+        window.removeEventListener("pageshow", onResume);
         window.removeEventListener("storage", onLegacyChange);
         window.removeEventListener("beforeunload", beforeUnload);
+        document.removeEventListener("visibilitychange", onVisibilityChange);
       };
     },
     getSnapshot: () => snapshot,
     save,
+    acknowledge,
   };
 }
 
-export function downloadWorksheetBackup(backup: Backup) {
-  const link = URL.createObjectURL(new Blob([JSON.stringify(backup, null, 2)], { type: "application/json" }));
-  const a = document.createElement("a"); a.href = link; a.download = "chematlas-worksheets.json"; a.click();
+export function downloadWorksheetData(text: string, filename: string) {
+  const link = URL.createObjectURL(new Blob([text], { type: "application/json" }));
+  const a = document.createElement("a"); a.href = link; a.download = filename; a.click();
   setTimeout(() => URL.revokeObjectURL(link), 1000);
+}
+
+export function downloadWorksheetBackup(backup: Backup) {
+  downloadWorksheetData(JSON.stringify(backup, null, 2), "chematlas-worksheets.json");
 }
 
 export function useWorksheets() {
@@ -223,6 +311,7 @@ export function useWorksheets() {
   const backup = snapshot?.backup;
   const activeDraft = backup?.drafts.find(draft => draft.id === backup.active);
   const worksheetIds = activeDraft?.entries.map(entry => entry.id) ?? [];
-  return { backup, warning: snapshot?.warning, unsaved: snapshot?.unsaved,
+  return { backup, warning: snapshot?.warning, unsaved: snapshot?.unsaved, legacy: snapshot?.legacy,
+    legacyError: snapshot?.legacyError, acknowledgeLegacy: store.acknowledge,
     save: (next: Backup) => { if (backup) store.save(backup, next); }, activeDraft, worksheetIds };
 }

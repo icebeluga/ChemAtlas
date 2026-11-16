@@ -1,44 +1,24 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import { addEntries, backupSchema, draftSchema, newDraft, newWorksheetId, worksheetStorageKey } from "@/lib/worksheet";
+import { addEntries, backupSchema, newDraft, newWorksheetId, worksheetStorageKey } from "@/lib/worksheet";
 import type { Backup, Draft } from "@/lib/worksheet";
-import { acknowledgeLegacyWorksheets, adoptWorksheetBackup, importWorksheetRecord, initializeWorksheetDatabase, mergeWorksheetBackup,
-  openWorksheetDatabase, readWorksheetMigrationBaseline, saveWorksheetRecord, WorksheetConflict, WorksheetImportLimit, worksheetTransaction } from "./worksheet-db";
+import { acknowledgeLegacySnapshot, adoptWorksheetBackup, archiveLegacyWorksheets, importWorksheetRecord, initializeWorksheetDatabase,
+  mergeWorksheetBackup, openWorksheetDatabase, readLegacySnapshot, readWorksheetMigrationSources, recoverLegacyWorksheet,
+  saveWorksheetRecord, WorksheetConflict, WorksheetImportLimit, worksheetTransaction } from "./worksheet-db";
 import type { WorksheetMigration, WorksheetRecord } from "./worksheet-db";
+import { legacySources, parseJson, prepareLegacyCapture, salvageBackup } from "./worksheet-recovery";
+import type { LegacyLedger, LegacyObservation } from "./worksheet-recovery";
 
 const BANK_WORKSHEET_KEY = "chematlas-student-worksheet-v1";
 export const worksheetRecoveryKey = `${worksheetStorageKey}-recovery`;
 const saveWarning = "Draft changes could not be saved in this browser. Download drafts before leaving.";
 const conflictWarning = "Another tab changed this worksheet. Your edits are only in this tab. Download drafts before reloading.";
 const recoveryWarning = "Some older worksheet data needed recovery. The original browser data is preserved.";
-const legacySourceLabels = { collection: "saved worksheets", recovery: "recovery copy", legacySelection: "Question Bank selection" } as const;
-
-function parseJson(text: string | null): unknown {
-  try { return JSON.parse(text || "null"); } catch { return undefined; }
-}
-
-// Builds a backup from the drafts of an invalid one that pass draftSchema, after repairing
-// fractional response-line overrides saved by builds that did not round that input.
-function salvageBackup(value: unknown): Backup | undefined {
-  const stored = value && typeof value === "object" ? value as { active?: unknown; drafts?: unknown } : {};
-  if (!Array.isArray(stored.drafts)) return undefined;
-  const drafts: Draft[] = [];
-  for (const item of stored.drafts) {
-    const repaired = item && typeof item === "object" && Array.isArray(item.entries)
-      ? { ...item, entries: item.entries.map((entry: unknown) => {
-        const lines = (entry as { lines?: unknown })?.lines;
-        return typeof lines === "number" && Number.isFinite(lines) ? { ...(entry as object), lines: Math.min(12, Math.max(0, Math.round(lines))) } : entry;
-      }) }
-      : item;
-    const parsed = draftSchema.safeParse(repaired);
-    if (parsed.success && drafts.length < 100 && !drafts.some(draft => draft.id === parsed.data.id)) drafts.push(parsed.data);
-  }
-  if (!drafts.length) return undefined;
-  const active = drafts.find(draft => draft.id === stored.active)?.id ?? drafts[0].id;
-  return { version: 1, active, drafts };
-}
-
+const legacyUnavailable = "Worksheet storage is unavailable. Download any legacy data you need before leaving, then reopen the app when storage is available.";
+const legacyKeys: Record<string, keyof WorksheetMigration> = {
+  [worksheetStorageKey]: "collection", [worksheetRecoveryKey]: "recovery", [BANK_WORKSHEET_KEY]: "legacySelection",
+};
 export function planWorksheetRestore(savedText: string | null, legacyText: string | null, createDraft: (name?: string) => Draft) {
   const stored = parseJson(savedText);
   const saved = backupSchema.safeParse(stored);
@@ -76,53 +56,17 @@ function planMigration(sources: WorksheetMigration) {
   return { ...restore, sources, recoveryNeeded: restore.recoveryNeeded || useRecovery };
 }
 
-type LegacyRecovery = {
-  sources: WorksheetMigration;
-  downloads: { label: string; filename: string; text: string }[];
-};
-
-function legacyRecovery(sources: WorksheetMigration, baseline: WorksheetMigration): LegacyRecovery | undefined {
-  const keys = Object.keys(legacySourceLabels) as (keyof WorksheetMigration)[];
-  const changed = keys.filter(key => sources[key] !== baseline[key]);
-  if (!changed.length) return undefined;
-  const downloads: LegacyRecovery["downloads"] = [];
-  for (const key of changed) {
-    const raw = sources[key];
-    if (raw === null) continue;
-    const label = legacySourceLabels[key];
-    const prior = salvageBackup(parseJson(baseline[key]));
-    const next = salvageBackup(parseJson(raw));
-    const drafts = next?.drafts.filter(draft => {
-      const original = prior?.drafts.find(item => item.id === draft.id);
-      return JSON.stringify(original) !== JSON.stringify(draft);
-    }) ?? [];
-    if (drafts.length) {
-      const backup: Backup = { version: 1, active: drafts[0].id, drafts };
-      downloads.push({ label: `Download changed legacy ${label}`, filename: `chematlas-legacy-${key}.json`, text: JSON.stringify(backup, null, 2) });
-    }
-    if (key === "legacySelection") {
-      const selection = planWorksheetRestore(null, raw, newDraft).backup.drafts[0];
-      const previous = parseJson(baseline[key]);
-      const known = new Set(Array.isArray(previous) ? previous : []);
-      const entries = selection.entries.filter(entry => !known.has(entry.id));
-      if (entries.length) {
-        const backup: Backup = { version: 1, active: selection.id, drafts: [{ ...selection, entries }] };
-        downloads.push({ label: "Download new legacy selections", filename: "chematlas-legacy-selection.json", text: JSON.stringify(backup, null, 2) });
-      }
-    }
-    downloads.push({ label: `Download exact legacy ${label} data`, filename: `chematlas-legacy-${key}-raw.json`, text: raw });
-  }
-  return { sources, downloads };
-}
-
 type WorksheetSnapshot = {
   backup: Backup;
   warning?: string;
   rejectedEdits?: Backup[];
   importing?: boolean;
   pendingImport?: { backup: Backup; reason: string };
-  legacy?: LegacyRecovery;
+  legacy?: LegacyLedger;
   legacyError?: string;
+  legacyMessage?: string;
+  legacyUnavailable?: boolean;
+  unarchived?: LegacyObservation[];
 };
 export type WorksheetImportResult = "saved" | "retained" | "invalid" | "busy";
 
@@ -134,9 +78,14 @@ function createWorksheetStore() {
   let pending = 0;
   let blocked = false;
   let dirty = false;
-  let legacy: LegacyRecovery | undefined;
+  let legacy: LegacyLedger | undefined;
   let legacyError: string | undefined;
-  let legacyScan = 0;
+  let legacyMessage: string | undefined;
+  let legacyReady = false;
+  let originalLegacy: WorksheetMigration | undefined;
+  const observations = new Map<string, LegacyObservation>();
+  const lastCaptured = new Map<keyof WorksheetMigration, string>();
+  let legacyQueue: Promise<void> = Promise.resolve();
   let importedSelection: { previous: string; next: string } | undefined;
   let queue: Promise<void> = Promise.resolve();
   const listeners = new Set<() => void>();
@@ -157,7 +106,8 @@ function createWorksheetStore() {
     committed = record;
     const backup = snapshot ? adoptWorksheetBackup(active ? { ...snapshot.backup, active } : snapshot.backup, record.backup) : record.backup;
     const warning = record.recoveryNeeded ? recoveryWarning : undefined;
-    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ ...snapshot, backup, warning, legacy, legacyError });
+    if (backup !== snapshot?.backup || warning !== snapshot?.warning) publish({ ...snapshot, backup, warning,
+      legacy, legacyError, legacyMessage, unarchived: [...observations.values()] });
   }
 
   function notify(message: string | number) {
@@ -179,38 +129,119 @@ function createWorksheetStore() {
     }
   }
 
-  async function refreshLegacy() {
-    if (!connection) return;
-    const scan = ++legacyScan;
-    try {
-      const baseline = await readWorksheetMigrationBaseline(await connection);
-      if (scan !== legacyScan) return;
-      const sources = readMigrationSources();
-      legacy = legacyRecovery(sources, baseline);
-      legacyError = undefined;
-    } catch {
-      if (scan !== legacyScan) return;
-      legacyError = "Older worksheet storage could not be checked. Reload to try again.";
-    }
-    if (snapshot && (snapshot.legacy !== legacy || snapshot.legacyError !== legacyError)) {
-      publish({ ...snapshot, legacy, legacyError });
-    }
+  function publishLegacy() {
+    if (snapshot) publish({ ...snapshot, legacy, legacyError, legacyMessage, legacyUnavailable: !legacyReady,
+      unarchived: [...observations.values()] });
   }
 
-  async function acknowledge(sources: WorksheetMigration) {
+  function rememberLegacy(source: keyof WorksheetMigration, raw: string | null) {
+    if (raw === null || raw === lastCaptured.get(source)) return;
+    observations.set(JSON.stringify([source, raw]), { source, raw });
+  }
+
+  function rememberSources(sources: WorksheetMigration) {
+    for (const source of legacySources) rememberLegacy(source, sources[source]);
+  }
+
+  function queueLegacyAction(operation: (db: IDBDatabase) => Promise<void>, onError: (error: unknown) => void) {
+    if (!connection || !legacyReady) return Promise.resolve();
+    const database = connection;
+    legacyQueue = legacyQueue.then(async () => operation(await database)).catch(onError).finally(publishLegacy);
+    return legacyQueue;
+  }
+
+  function refreshLegacy() {
+    // Capture the strings before yielding. A previous-build tab can replace them
+    // while this tab waits for another IndexedDB transaction to finish.
+    const readError = "Older worksheet storage could not be read. Previously archived snapshots are still available.";
+    let readFailed = false;
+    try { rememberSources(readMigrationSources()); }
+    catch {
+      readFailed = true;
+      legacyError = readError;
+      publishLegacy();
+    }
+    if (!legacyReady) {
+      if (snapshot && observations.size) {
+        legacyError = legacyUnavailable;
+        publishLegacy();
+      }
+      return Promise.resolve();
+    }
+    return queueLegacyAction(async db => {
+      if (!originalLegacy) {
+        const { original, historical } = await readWorksheetMigrationSources(db);
+        originalLegacy = original;
+        // Earlier builds acknowledged all live keys at once. Keep the historical
+        // record and recover its bytes without treating it as a recovery receipt.
+        if (historical) rememberSources(historical);
+      }
+      const original = originalLegacy;
+      const batch = [...observations];
+      const changed = batch.filter(([, item]) => original[item.source] !== item.raw);
+      const captures = await Promise.all(changed.map(([, item]) => prepareLegacyCapture(item, original)));
+      legacy = await archiveLegacyWorksheets(db, captures);
+      for (const [key, item] of batch) {
+        observations.delete(key);
+        lastCaptured.set(item.source, item.raw);
+      }
+      if (captures.length) notify("legacy-recovery");
+      legacyError = readFailed ? readError : undefined;
+    }, () => {
+      legacyError = "Legacy recovery could not be archived. Download any changes available only in this tab before leaving.";
+    });
+  }
+
+  function acknowledge(id: string) {
+    return queueLegacyAction(async db => {
+      legacy = await acknowledgeLegacySnapshot(db, id);
+      legacyMessage = "This legacy snapshot was acknowledged.";
+      notify("legacy-recovery");
+    }, () => {
+      legacyMessage = "This snapshot could not be acknowledged. Check its outstanding worksheets and try again.";
+    });
+  }
+
+  function recover(id: string, entryIndex: number) {
+    return enqueue(() => queueLegacyAction(async db => {
+      if (blocked || !snapshot) throw new Error("Worksheet storage is unavailable.");
+      const previous = snapshot.backup.active;
+      const result = await recoverLegacyWorksheet(db, id, entryIndex);
+      committed = result.record;
+      legacy = result.ledger;
+      if (result.recovered) {
+        importedSelection = { previous, next: result.record.backup.active };
+        notify(result.record.revision);
+        notify("legacy-recovery");
+      }
+      legacyMessage = result.recovered ? "Legacy worksheet recovered." : "This legacy worksheet was already recovered.";
+    }, error => {
+      legacyMessage = error instanceof WorksheetImportLimit
+        ? "This worksheet could not be recovered because the collection has reached 100 worksheets. The archived snapshot is still available."
+        : "This worksheet could not be recovered. The archived snapshot is still available to retry.";
+    }));
+  }
+
+  async function downloadLegacy(id: string) {
     if (!connection) return;
     try {
-      await acknowledgeLegacyWorksheets(await connection, sources);
-      notify("legacy-acknowledged");
-      await refreshLegacy();
+      const raw = await readLegacySnapshot(await connection, id);
+      downloadWorksheetData(raw, `chematlas-legacy-${id}.json`);
     } catch {
-      legacyError = "The legacy recovery acknowledgment could not be saved. Your original data is still available.";
-      if (snapshot) publish({ ...snapshot, legacyError });
+      legacyMessage = "This archived legacy snapshot could not be downloaded. Try again.";
+      publishLegacy();
     }
   }
 
   function onLegacyChange(event: StorageEvent) {
-    if (event.key === null || [worksheetStorageKey, worksheetRecoveryKey, BANK_WORKSHEET_KEY].includes(event.key)) void refreshLegacy();
+    if (event.key !== null) {
+      const source = legacyKeys[event.key];
+      if (!source) return;
+      // The event carries the exact value even if another old tab has already
+      // advanced the live key by the time this handler runs.
+      rememberLegacy(source, event.newValue);
+    }
+    void refreshLegacy();
   }
 
   function onResume() {
@@ -227,7 +258,7 @@ function createWorksheetStore() {
       try {
         channel = new BroadcastChannel(worksheetStorageKey);
         channel.onmessage = event => {
-          if (event.data === "legacy-acknowledged") void refreshLegacy();
+          if (event.data === "legacy-recovery") void refreshLegacy();
           else void refresh();
         };
       } catch { /* Refresh on focus if this browser disallows the channel. */ }
@@ -236,20 +267,27 @@ function createWorksheetStore() {
     connection = openWorksheetDatabase();
     void connection.then(db => initializeWorksheetDatabase(db, () => planMigration(readMigrationSources())))
       .then(async record => {
+        legacyReady = true;
         await refreshLegacy();
         adopt(record);
         void refresh();
       }).catch(() => {
         blocked = true;
         let backup: Backup;
-        try { backup = planMigration(readMigrationSources()).backup; }
+        try {
+          const sources = readMigrationSources();
+          rememberSources(sources);
+          backup = planMigration(sources).backup;
+        }
         catch { backup = planWorksheetRestore(null, null, newDraft).backup; }
         publish({ backup, warning: saveWarning });
+        if (observations.size) legacyError = legacyUnavailable;
+        publishLegacy();
       });
   }
 
   function beforeUnload(event: BeforeUnloadEvent) {
-    if (!pending && !dirty && !snapshot?.importing && !snapshot?.pendingImport) return;
+    if (!pending && !dirty && !snapshot?.importing && !snapshot?.pendingImport && !observations.size) return;
     event.preventDefault();
     event.returnValue = true;
   }
@@ -363,6 +401,9 @@ function createWorksheetStore() {
     getSnapshot: () => snapshot,
     save,
     acknowledge,
+    recover,
+    downloadLegacy,
+    refreshLegacy,
     importDrafts,
     discardPendingImport,
   };
@@ -385,7 +426,10 @@ export function useWorksheets() {
   const activeDraft = backup?.drafts.find(draft => draft.id === backup.active);
   const worksheetIds = activeDraft?.entries.map(entry => entry.id) ?? [];
   return { backup, warning: snapshot?.warning, rejectedEdits: snapshot?.rejectedEdits, legacy: snapshot?.legacy,
-    legacyError: snapshot?.legacyError, acknowledgeLegacy: store.acknowledge,
+    legacyError: snapshot?.legacyError, legacyMessage: snapshot?.legacyMessage, legacyUnavailable: snapshot?.legacyUnavailable,
+    unarchived: snapshot?.unarchived,
+    acknowledgeLegacy: store.acknowledge, recoverLegacy: store.recover, downloadLegacy: store.downloadLegacy,
+    retryLegacyArchive: store.refreshLegacy,
     importing: snapshot?.importing, pendingImport: snapshot?.pendingImport, importDrafts: store.importDrafts,
     discardPendingImport: store.discardPendingImport,
     save: (next: Backup) => { if (backup) store.save(backup, next); }, activeDraft, worksheetIds };

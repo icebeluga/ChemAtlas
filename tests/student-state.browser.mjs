@@ -2,6 +2,7 @@
 // CHEMATLAS_TEST_ORIGIN and CHEMATLAS_TEST_ACCESS_TOKEN must be set.
 // Browser tooling uses the same CHEMATLAS_PLAYWRIGHT and CHEMATLAS_CHROMIUM as release smoke.
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
@@ -182,23 +183,25 @@ async function worksheetContext(t, { raw = null, recovery = null, legacy = null 
   return context;
 }
 
-test("legacy writes from the previous storage implementation remain discoverable across reloads", async t => {
-  const raw = collection([draft("draft-a", "Draft A")]);
-  const context = await worksheetContext(t, { raw });
-  const page = await openBuilder(context);
-  const initial = await currentRecord(page);
+async function historicalWriters(context) {
   const { build } = createRequire(import.meta.resolve("vite"))("esbuild");
   const bundle = await build({
     stdin: {
       contents: `
         import { restoreWorksheetBackup, useWorksheets } from "./tests/fixtures/legacy-worksheets";
         import { newDraft } from "./lib/worksheet";
-        document.querySelector("button").onclick = () => {
-          const before = restoreWorksheetBackup();
-          const draft = newDraft(document.querySelector("input").value);
-          const { save } = useWorksheets(before, () => {}, message => { throw new Error(message); });
+        import { addEntries } from "./lib/worksheet";
+        let before = restoreWorksheetBackup();
+        const title = document.querySelector("input");
+        const writer = () => useWorksheets(before, backup => { before = backup; }, message => { throw new Error(message); });
+        document.querySelector("#create").onclick = () => {
+          const draft = addEntries(newDraft(title.value), ["mcq-2008-1-29"]);
+          const { save } = writer();
           save({ ...before, active: draft.id, drafts: [...before.drafts, draft] });
         };
+        document.querySelector("#rename").onclick = () => writer().save({ ...before,
+          drafts: before.drafts.map(draft => draft.id === before.active ? { ...draft, name: title.value } : draft),
+        });
       `,
       resolveDir: fileURLToPath(new URL("..", import.meta.url)),
     },
@@ -206,55 +209,202 @@ test("legacy writes from the previous storage implementation remain discoverable
   });
   await context.route(`${origin.origin}/legacy-worksheets-fixture`, route => route.fulfill({
     contentType: "text/html",
-    body: `<label>Older draft title<input></label><button>Save older draft</button><script>${bundle.outputFiles[0].text}</script>`,
+    body: `<label>Older draft title<input></label><button id="create">Save older draft</button>
+      <button id="rename">Rename older worksheet</button><script>${bundle.outputFiles[0].text}</script>`,
   }));
-  async function writeFromOlderBuild(name) {
+  return async () => {
     const old = await context.newPage();
-    await old.goto(`${origin.origin}/legacy-worksheets-fixture`);
-    await old.getByLabel("Older draft title").fill(name);
-    await old.getByRole("button", { name: "Save older draft" }).click();
-    const [saved] = await originalKeys(old);
-    assert.ok(JSON.parse(saved).drafts.some(draft => draft.name === name));
-    await old.close();
-    return saved;
-  }
+    assert.equal((await old.goto(`${origin.origin}/legacy-worksheets-fixture`))?.status(), 200);
+    return old;
+  };
+}
 
-  const updated = await writeFromOlderBuild("Late legacy draft");
-  const warning = page.getByRole("status").filter({ hasText: "Older worksheet storage changed" });
-  await warning.waitFor();
+async function writeLegacy(old, name, action = "Save older draft") {
+  await old.getByLabel("Older draft title").fill(name);
+  await old.getByRole("button", { name: action, exact: true }).click();
+  const [saved] = await originalKeys(old);
+  assert.ok(JSON.parse(saved).drafts.some(draft => draft.name === name));
+  return saved;
+}
+
+const legacyId = raw => createHash("sha256").update(JSON.stringify(["collection", raw])).digest("hex");
+const legacyLedger = page => page.evaluate(readWorksheetValue, "legacy-recovery");
+const legacyNotice = page => page.getByRole("status").filter({ hasText: "Older worksheet snapshots are archived" });
+const recoverButton = (snapshot, name) => snapshot.getByRole("button", { name: `Recover ${name}`, exact: true });
+const acknowledgeButton = snapshot => snapshot.getByRole("button", { name: /^Acknowledge snapshot / });
+const worksheetNames = record => record.backup.drafts.map(draft => draft.name);
+
+async function openLegacySnapshot(page, raw) {
+  const id = legacyId(raw);
+  const snapshot = page.locator(`details[data-legacy-snapshot="${id}"]`);
+  await snapshot.waitFor();
+  assert.equal(await page.evaluate(readWorksheetValue, `legacy-raw:${id}`), raw);
+  if (!await snapshot.evaluate(element => element.open)) await snapshot.locator("summary").click();
+  return snapshot;
+}
+
+test("legacy acknowledgment covers only the recovered snapshot even after a later write and reload", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  const page = await openBuilder(context);
+  const initial = await currentRecord(page);
+  const openOld = await historicalWriters(context);
+  const old = await openOld();
+  const withB = await writeLegacy(old, "Draft B");
+  await legacyNotice(page).waitFor();
   await page.reload();
-  await titleOf(page).waitFor();
-  await warning.waitFor();
+  let b = await openLegacySnapshot(page, withB);
   assert.deepEqual(await currentRecord(page), initial);
-  const changedButton = page.getByRole("button", { name: "Download changed legacy saved worksheets", exact: true });
-  const changed = JSON.parse(await downloadText(page, changedButton));
-  assert.deepEqual(changed.drafts.map(draft => draft.name), ["Late legacy draft"]);
-  const exact = await downloadText(page, page.getByRole("button", { name: "Download exact legacy saved worksheets data", exact: true }));
-  assert.equal(exact, updated);
+  assert.equal(await downloadText(page, b.getByRole("button", { name: "Download exact archived source" })), withB);
   assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery: null, legacySelection: null });
-  await page.locator("details.ca-b-more summary").click();
-  await page.getByLabel("Import drafts").setInputFiles({
-    name: "legacy-recovery.json", mimeType: "application/json", buffer: Buffer.from(JSON.stringify(changed)),
-  });
-  await page.getByText("Worksheet drafts imported.", { exact: true }).waitFor();
+  await recoverButton(b, "Draft B").click();
+  await b.getByText("Draft B recovered", { exact: true }).waitFor();
   const recovered = await currentRecord(page);
-  assert.deepEqual(recovered.backup.drafts.map(draft => draft.name), ["Draft A", "Late legacy draft"]);
-
+  assert.deepEqual(worksheetNames(recovered), ["Draft A", "Draft B"]);
   const idle = await openBuilder(context);
-  const idleWarning = idle.getByRole("status").filter({ hasText: "Older worksheet storage changed" });
-  await idleWarning.waitFor();
-  await page.getByRole("button", { name: "Acknowledge legacy changes" }).click();
-  await warning.waitFor({ state: "hidden" });
-  await idleWarning.waitFor({ state: "hidden" });
+  const staleAction = await acknowledgeButton(await openLegacySnapshot(idle, withB)).elementHandle();
+  const withC = await writeLegacy(old, "Draft C");
+  await openLegacySnapshot(page, withC);
+  await old.close();
   await page.reload();
-  await titleOf(page).waitFor();
-  assert.equal(await warning.count(), 0);
-  const latest = await writeFromOlderBuild("Post-acknowledgment draft");
-  await warning.waitFor();
-  const next = JSON.parse(await downloadText(page, changedButton));
-  assert.deepEqual(next.drafts.map(draft => draft.name), ["Post-acknowledgment draft"]);
+  b = await openLegacySnapshot(page, withB);
+  const c = await openLegacySnapshot(page, withC);
+  assert.equal(await acknowledgeButton(c).count(), 0);
+  await c.getByText("Draft B recovered", { exact: true }).waitFor();
+  await staleAction.click();
+  await b.waitFor({ state: "detached" });
+  assert.deepEqual((await legacyLedger(page)).snapshots.map(({ id, acknowledged }) => [id, acknowledged]), [
+    [legacyId(withB), true], [legacyId(withC), false],
+  ]);
+  await page.reload();
+  const remaining = await openLegacySnapshot(page, withC);
   assert.deepEqual(await currentRecord(page), recovered);
-  assert.deepEqual(await originalKeys(page), [latest, null, null]);
+  assert.deepEqual(await originalKeys(page), [withC, null, null]);
+  assert.equal(await downloadText(page, remaining.getByRole("button", { name: "Download exact archived source" })), withC);
+  await recoverButton(remaining, "Draft C").click();
+  await remaining.getByText("Draft C recovered", { exact: true }).waitFor();
+  await acknowledgeButton(remaining).click();
+  await legacyNotice(page).waitFor({ state: "hidden" });
+  assert.deepEqual(worksheetNames(await currentRecord(page)), ["Draft A", "Draft B", "Draft C"]);
+  await page.reload();
+  await page.getByText("Acknowledged legacy snapshots", { exact: true }).waitFor();
+  assert.equal(await legacyNotice(page).count(), 0);
+});
+
+test("legacy recovery rolls back draft and receipt together and is idempotent across tabs and reload", async t => {
+  const context = await worksheetContext(t, { raw: collection([draft("draft-a", "Draft A")]) });
+  const page = await openBuilder(context);
+  const initial = await currentRecord(page);
+  const old = await (await historicalWriters(context))();
+  const withB = await writeLegacy(old, "Draft B");
+  await old.close();
+  const b = await openLegacySnapshot(page, withB);
+  await page.evaluate(() => {
+    const put = IDBObjectStore.prototype.put;
+    IDBObjectStore.prototype.put = function (value, key) {
+      const request = put.call(this, value, key);
+      if (key === "legacy-recovery" && value.recovered.length) {
+        IDBObjectStore.prototype.put = put;
+        request.addEventListener("success", () => this.transaction.abort(), { once: true });
+      }
+      return request;
+    };
+  });
+  await recoverButton(b, "Draft B").click();
+  await page.getByRole("status").filter({ hasText: "This worksheet could not be recovered" }).waitFor();
+  assert.deepEqual(await currentRecord(page), initial);
+  assert.deepEqual((await legacyLedger(page)).recovered, []);
+  await page.reload();
+  const other = await openBuilder(context);
+  const first = recoverButton(await openLegacySnapshot(page, withB), "Draft B");
+  const second = recoverButton(await openLegacySnapshot(other, withB), "Draft B");
+  const resume = await pauseWorksheetWrites(page);
+  try { await Promise.all([first.click(), second.click()]); }
+  finally { await resume(); }
+  await page.getByText("Draft B recovered", { exact: true }).waitFor();
+  await other.getByText("Draft B recovered", { exact: true }).waitFor();
+  const recovered = await currentRecord(page);
+  assert.deepEqual(worksheetNames(recovered), ["Draft A", "Draft B"]);
+  assert.equal(recovered.revision, initial.revision + 1);
+  assert.equal((await legacyLedger(page)).recovered.length, 1);
+  await page.reload();
+  const after = await openLegacySnapshot(page, withB);
+  await after.getByText("Draft B recovered", { exact: true }).waitFor();
+  assert.equal(await recoverButton(after, "Draft B").count(), 0);
+  assert.deepEqual(await currentRecord(page), recovered);
+
+  const menu = page.locator("details.ca-b-more");
+  const file = { name: "ordinary-v1.json", mimeType: "application/json",
+    buffer: Buffer.from(collection([draft("ordinary-id", "Ordinary draft", [entry(mcq)])])) };
+  for (const count of [3, 4]) {
+    if (!await menu.evaluate(element => element.open)) await menu.locator("summary").click();
+    await page.getByLabel("Import drafts").setInputFiles(file);
+    await waitForWorksheet(page, ({ backup }) => backup.drafts.length === count);
+    await page.getByText("Worksheet drafts imported.", { exact: true }).waitFor();
+  }
+  const ordinary = await currentRecord(page);
+  assert.deepEqual(worksheetNames(ordinary), ["Draft A", "Draft B", "Ordinary draft", "Ordinary draft"]);
+  assert.notEqual(ordinary.backup.drafts[2].id, ordinary.backup.drafts[3].id);
+});
+
+test("a captured legacy snapshot survives a competing historical tab overwriting its source", async t => {
+  const raw = collection([draft("draft-a", "Draft A")]);
+  const context = await worksheetContext(t, { raw });
+  const openOld = await historicalWriters(context);
+  const writer = await openOld();
+  const stale = await openOld();
+  const page = await openBuilder(context);
+  const withB = await writeLegacy(writer, "Draft B");
+  await openLegacySnapshot(page, withB);
+  await writer.close();
+  const overwritten = await writeLegacy(stale, "Stale rename of A", "Rename older worksheet");
+  assert.deepEqual(JSON.parse(overwritten).drafts.map(draft => draft.name), ["Stale rename of A"]);
+  await openLegacySnapshot(page, overwritten);
+  await stale.close();
+  await page.reload();
+  const b = await openLegacySnapshot(page, withB);
+  await openLegacySnapshot(page, overwritten);
+  assert.deepEqual(await originalKeys(page), [overwritten, null, null]);
+  assert.deepEqual(await page.evaluate(readWorksheetValue, "migration"), { collection: raw, recovery: null, legacySelection: null });
+  assert.equal((await legacyLedger(page)).snapshots.length, 2);
+  const bytes = await downloadText(page, b.getByRole("button", { name: "Download exact archived source" }));
+  assert.equal(bytes, withB);
+  await recoverButton(b, "Draft B").click();
+  await b.getByText("Draft B recovered", { exact: true }).waitFor();
+  const { backup } = await currentRecord(page);
+  const [, source] = JSON.parse(withB).drafts;
+  assert.deepEqual(backup.drafts[1], { ...source, id: backup.drafts[1].id });
+  assert.deepEqual(backup.drafts.map(draft => draft.name), ["Draft A", "Draft B"]);
+});
+
+test("a legacy archive quota error leaves committed drafts intact and offers the exact unarchived bytes", async t => {
+  const context = await worksheetContext(t, { raw: collection([draft("draft-a", "Draft A")]) });
+  const page = await openBuilder(context);
+  const initial = await currentRecord(page);
+  const old = await (await historicalWriters(context))();
+  await page.evaluate(() => {
+    const add = IDBObjectStore.prototype.add;
+    window.restoreLegacyArchiveWrites = () => { IDBObjectStore.prototype.add = add; };
+    IDBObjectStore.prototype.add = function (value, key) {
+      if (String(key).startsWith("legacy-raw:")) throw new DOMException("Test quota", "QuotaExceededError");
+      return add.call(this, value, key);
+    };
+  });
+  const raw = await writeLegacy(old, "Draft B");
+  const warning = page.getByRole("status").filter({ hasText: "Legacy recovery could not be archived" });
+  await warning.waitFor();
+  assert.equal(await legacyNotice(page).count(), 0);
+  assert.equal(await page.evaluate(readWorksheetValue, `legacy-raw:${legacyId(raw)}`), undefined);
+  assert.equal(await legacyLedger(page), undefined);
+  assert.deepEqual(await currentRecord(page), initial);
+  assert.equal(await page.evaluate(() => !window.dispatchEvent(new Event("beforeunload", { cancelable: true }))), true);
+  assert.equal(await downloadText(page, page.getByRole("button", { name: "Download unarchived saved worksheets 1" })), raw);
+  await page.evaluate(() => window.restoreLegacyArchiveWrites());
+  await page.getByRole("button", { name: "Retry legacy archive" }).click();
+  await warning.waitFor({ state: "hidden" });
+  await openLegacySnapshot(page, raw);
+  assert.equal((await legacyLedger(page)).snapshots.length, 1);
+  assert.deepEqual(await currentRecord(page), initial);
 });
 
 test("a delayed import at capacity stays separately downloadable and subsequent edits survive reload", async t => {
@@ -480,6 +630,7 @@ test("a failed write leaves the committed IndexedDB revision intact and offers t
 test("IndexedDB unavailability keeps legacy drafts readable and prevents fallback writes", async t => {
   const raw = collection([draft("draft-a", "Draft A")]);
   const context = await worksheetContext(t, { raw });
+  const old = await (await historicalWriters(context))();
   await context.addInitScript(() => {
     const open = IDBFactory.prototype.open;
     IDBFactory.prototype.open = function (name, version) {
@@ -493,6 +644,12 @@ test("IndexedDB unavailability keeps legacy drafts readable and prevents fallbac
   await page.getByRole("status").filter({ hasText: "Draft changes could not be saved" }).waitFor();
   assert.equal(await titleOf(page).inputValue(), "Memory-only edit");
   assert.deepEqual(await originalKeys(page), [raw, null, null]);
+  const changed = await writeLegacy(old, "Draft B");
+  await page.getByRole("status").filter({ hasText: "Worksheet storage is unavailable" }).waitFor();
+  assert.equal(await legacyNotice(page).count(), 0);
+  assert.equal(await downloadText(page, page.getByRole("button", { name: "Download unarchived saved worksheets 2" })), changed);
+  assert.equal(await titleOf(page).inputValue(), "Memory-only edit");
+  assert.deepEqual(await originalKeys(page), [changed, null, null]);
 });
 
 test("a new draft and a stale tab rename both commit and idle tabs synchronize", async t => {

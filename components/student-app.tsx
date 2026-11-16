@@ -17,7 +17,8 @@ import { readPdf, savePdf } from "@/components/student/pdf-bank-store";
 import { sourcePageLocation } from "@/lib/question-source";
 import { filterQuestions } from "@/lib/question-filter";
 import { addEntries } from "@/lib/worksheet";
-import { downloadWorksheetBackup, downloadWorksheetData, useWorksheets } from "@/components/student/hooks/use-worksheets";
+import { downloadWorksheetBackup, useWorksheets } from "@/components/student/hooks/use-worksheets";
+import { WorksheetLegacyRecovery } from "@/components/student/worksheet-legacy-recovery";
 
 const emptySourceFiles: NonNullable<Catalog["sourceFiles"]> = [];
 
@@ -64,8 +65,9 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const [showWorksheet, setShowWorksheet] = useState(false);
   const mainRef = useRef<HTMLElement>(null);
   const wasBankView = useRef(bankView);
-  const { backup, warning, rejectedEdits, legacy, legacyError, acknowledgeLegacy, save: saveWorksheets, activeDraft, worksheetIds,
-    importing, pendingImport, importDrafts, discardPendingImport } = useWorksheets();
+  const worksheets = useWorksheets();
+  const { backup, warning, rejectedEdits, save: saveWorksheets, activeDraft, worksheetIds,
+    importing, pendingImport, importDrafts, discardPendingImport } = worksheets;
   const worksheetWarning = <>
     {warning && backup && <div className="ca-notice" role="status">
       <div>{warning} <button type="button" className="ca-btn" onClick={() => downloadWorksheetBackup(backup)}>Download drafts</button>
@@ -81,15 +83,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
         <button type="button" className="ca-btn" onClick={discardPendingImport}>Discard pending import</button>
       </div>
     </div>}
-    {(legacy || legacyError) && <div className="ca-notice">
-      <div>
-        {legacy && <p role="status">Older worksheet storage changed. Download the changes and use Import drafts in Practice Builder to restore copies. After recovery, acknowledge these changes.</p>}
-        {legacyError && <p role="status">{legacyError}</p>}
-        {legacy?.downloads.map(file => <button key={file.filename} type="button" className="ca-btn"
-          onClick={() => downloadWorksheetData(file.text, file.filename)}>{file.label}</button>)}
-        {legacy && <button type="button" className="ca-btn" onClick={() => { void acknowledgeLegacy(legacy.sources); }}>Acknowledge legacy changes</button>}
-      </div>
-    </div>}
+    <WorksheetLegacyRecovery {...worksheets} />
   </>;
   const openWorksheetPdf = useCallback(async (url?: string, bankId?: string) => {
     const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");

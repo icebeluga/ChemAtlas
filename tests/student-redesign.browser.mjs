@@ -203,6 +203,50 @@ test("Question Bank shortcuts affect the focused feature and leave other control
   assert.ok(await focus(page.getByRole("searchbox", { name: "Search questions" })));
 });
 
+test("More uses normal Tab order and returns focus when closed with Escape or a destination", async (t) => {
+  const page = await openPage(1440);
+  t.after(() => page.close());
+  await page.locator("button.ca-row-open").first().waitFor();
+  const more = page.getByRole("button", { name: "More", exact: true });
+  const sessions = page.getByRole("button", { name: "Practice sessions", exact: true });
+  const progress = page.getByRole("button", { name: "Progress", exact: true });
+
+  await more.press("Enter");
+  await sessions.waitFor();
+  assert.equal(await more.getAttribute("aria-expanded"), "true");
+  assert.ok(await focus(more));
+  await page.keyboard.press("Tab");
+  assert.ok(await focus(sessions));
+  await page.keyboard.press("Tab");
+  assert.ok(await focus(progress));
+  await page.keyboard.press("Escape");
+  await sessions.waitFor({ state: "hidden" });
+  assert.ok(await focus(more));
+
+  await more.press("Space");
+  await sessions.waitFor();
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Tab");
+  await page.keyboard.press("Enter");
+  await page.waitForURL(url => url.searchParams.get("view") === "progress");
+  await progress.waitFor({ state: "hidden" });
+  assert.ok(await focus(more));
+
+  await more.press("Enter");
+  await sessions.waitFor();
+  await page.getByRole("link", { name: /Practice builder/ }).focus();
+  await sessions.waitFor({ state: "hidden" });
+  assert.equal(await more.getAttribute("aria-expanded"), "false");
+
+  await page.setViewportSize({ width: 320, height: 600 });
+  await more.press("Enter");
+  await sessions.waitFor();
+  assert.ok(await page.locator(".ca-menu").evaluate(el => {
+    const box = el.getBoundingClientRect();
+    return box.left >= 0 && box.right <= innerWidth;
+  }));
+});
+
 test("grouped outline movements stay within their section and preserve unrelated saved positions", async (t) => {
   const [frq1, mcq1, frq2, mcq2, mcq3] = ["frq-2006-3-22", "mcq-2008-2-29", "frq-2005-1-6", "mcq-2018-23-2039", "mcq-2008-1-29"];
   const page = await openPage(1440, "/practice-builder", [frq1, mcq1, frq2, mcq2, mcq3]);
@@ -311,6 +355,19 @@ test("phone builder settings collapse into a compact disclosure and keep draft d
   await page.setViewportSize({ width: 768, height: 900 });
   await disclosure.waitFor({ state: "hidden" });
   await title.waitFor();
+});
+
+test("an unbroken worksheet section heading wraps within a 320px phone", async (t) => {
+  const page = await openPage(320, "/practice-builder", ["mcq-2008-1-29"]);
+  t.after(() => page.close());
+  const sectionName = "W".repeat(80);
+  await page.getByRole("button", { name: "Layout", exact: true }).click();
+  await page.getByLabel("MCQ section heading").fill(sectionName);
+  await page.getByRole("button", { name: "Outline", exact: true }).click();
+  const heading = page.getByRole("heading", { name: sectionName, exact: true });
+  await heading.waitFor();
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth), 320);
+  assert.ok(await heading.evaluate(el => el.scrollWidth <= el.clientWidth));
 });
 
 test("tablet Fit page and Zoom out use a stable, bounded worksheet preview", async (t) => {

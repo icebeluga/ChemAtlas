@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
 
 export type TopBarDestination = "builder" | "progress" | "review" | "audit" | "legacy" | "banks";
@@ -19,16 +19,17 @@ type Props = {
 export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank, onOpen, search }: Props) {
   const [open, setOpen] = useState(false);
   const more = useRef<HTMLDivElement>(null);
+  const moreButton = useRef<HTMLButtonElement>(null);
+  const destinationsId = useId();
   const input = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     if (!open) return;
-    function close(event: MouseEvent | KeyboardEvent) {
-      if (event instanceof KeyboardEvent ? event.key === "Escape" : !more.current?.contains(event.target as Node)) setOpen(false);
+    function closeOutside(event: PointerEvent) {
+      if (event.target instanceof Node && !more.current?.contains(event.target)) setOpen(false);
     }
-    document.addEventListener("mousedown", close);
-    document.addEventListener("keydown", close);
-    return () => { document.removeEventListener("mousedown", close); document.removeEventListener("keydown", close); };
+    document.addEventListener("pointerdown", closeOutside);
+    return () => document.removeEventListener("pointerdown", closeOutside);
   }, [open]);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
   }, [search, inert]);
 
   const item = (destination: TopBarDestination, label: string, extra?: string) =>
-    <button type="button" role="menuitem" onClick={() => { setOpen(false); onOpen(destination); }}>{label}{extra && <span>{extra}</span>}</button>;
+    <button type="button" onClick={() => { setOpen(false); moreButton.current?.focus(); onOpen(destination); }}>{label}{extra && <span>{extra}</span>}</button>;
 
   return <header className="ca-bar" inert={inert}>
     <span className="ca-mark">ChemAtlas</span>
@@ -54,11 +55,18 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
       <a href="/practice-builder" aria-current={current === "worksheet" ? "page" : undefined}>
         Practice builder <span className="ca-count" aria-label={`${worksheetCount} selected`}>{worksheetCount}</span>
       </a>
-      <div className="ca-more" ref={more}>
-        <button type="button" aria-haspopup="menu" aria-expanded={open} aria-current={current === "other" ? "page" : undefined} onClick={() => setOpen(value => !value)}>
+      <div className="ca-more" ref={more} onBlur={event => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
+      }} onKeyDown={event => {
+        if (!open || event.key !== "Escape") return;
+        event.preventDefault();
+        setOpen(false);
+        moreButton.current?.focus();
+      }}>
+        <button ref={moreButton} type="button" aria-controls={destinationsId} aria-expanded={open} aria-current={current === "other" ? "page" : undefined} onClick={() => setOpen(value => !value)}>
           More <ChevronDown size={15} aria-hidden="true" />
         </button>
-        {open && <div className="ca-menu" role="menu">
+        <div className="ca-menu" id={destinationsId} hidden={!open}>
           <b>Study</b>
           {item("builder", "Practice sessions")}
           {item("progress", "Progress")}
@@ -67,7 +75,7 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
           {item("audit", "Source page audit")}
           {item("legacy", "Legacy content")}
           {item("banks", "Manage test banks")}
-        </div>}
+        </div>
       </div>
     </nav>
     {search && <label className="ca-search">

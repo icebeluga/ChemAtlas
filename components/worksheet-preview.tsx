@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { PDFDocumentProxy, RenderTask } from "pdfjs-dist";
 import { ChevronLeft, ChevronRight, Minus, MoveHorizontal, Plus, Scan } from "lucide-react";
+import { pdfWorkerUrl } from "#student-content";
 
 export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array; count: number; onCount: (n: number) => void }) {
   const host = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export function WorksheetPreview({ bytes, count, onCount }: { bytes: Uint8Array;
     let dispose: (() => void) | undefined;
     import("pdfjs-dist/legacy/build/pdf.mjs").then(pdfjs => {
       if (stale) return;
-      pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+      pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl();
       const task = pdfjs.getDocument({ data: bytes.slice() });
       dispose = () => { void task.destroy(); };
       return task.promise.then(document => {

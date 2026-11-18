@@ -1,6 +1,6 @@
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import type { PDFEmbeddedPage, PDFPage } from "pdf-lib";
-import stimuli from "../research/stimuli.json";
+import { getStimuli } from "#student-content";
 import { planWorksheet } from "./worksheet.mjs";
 import { originalSourcePages } from "./question-source";
 import type { QuestionSource } from "./question-source";
@@ -21,6 +21,7 @@ export function orderedEntries(draft: Draft, questions: Map<string, WorksheetQue
 
 export async function composeWorksheet(draft: Draft, catalog: WorksheetQuestion[], registry: Registry,
   mode: ExportMode, content: WorksheetContent, loadFragments: () => Promise<Uint8Array>, render: (region: Region, question?: WorksheetQuestion) => Promise<Crop>) {
+  const stimuli = getStimuli();
   const questions = new Map(catalog.map(q => [q.id, q]));
   const entries = orderedEntries(draft, questions).map(e => {
     const q = questions.get(e.id);

@@ -1,5 +1,10 @@
 # ChemAtlas — independent private student Worker
 
+The stacked GitHub Pages + Supabase migration adds a separate static build. See
+[its setup, security model, verification and approval gates](docs/pages-supabase/README.md).
+The historical Worker build and release history below remain available. Pages is
+inactive until the owner completes and approves the documented production handoff.
+
 The student ChemAtlas application uses Vinext (Next.js-compatible UI), Vite, the
 Cloudflare Vite plugin, and a Cloudflare Worker. The eight canonical source PDFs,
 question catalog, question IDs, classifications, and worksheet generator are

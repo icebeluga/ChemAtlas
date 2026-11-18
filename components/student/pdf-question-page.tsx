@@ -5,6 +5,8 @@ import type { PDFDocumentLoadingTask, PDFDocumentProxy, RenderTask } from "pdfjs
 import { sourceBounds, type Region } from "@/lib/question-source";
 import { capRenderScale, resolveViewerScale, type ViewerZoom } from "@/lib/viewer-scale";
 import { readPdf } from "./pdf-bank-store";
+import { pdfSource, pdfWorkerUrl } from "#student-content";
+import { onContentClear } from "@/lib/content-lifecycle";
 
 type PdfEntry = {
   users: number;
@@ -17,18 +19,23 @@ const MAX_IDLE_PDFS = 3;
 
 async function openPdf(key: string, bankId?: string) {
   const pdfjs = await import("pdfjs-dist/legacy/build/pdf.mjs");
-  pdfjs.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+  pdfjs.GlobalWorkerOptions.workerSrc = pdfWorkerUrl();
   if (bankId && bankId !== "mega") {
     const data = await readPdf(bankId);
     if (!data) throw new Error("This added bank PDF is no longer available in this browser.");
     return pdfjs.getDocument({ data });
   }
-  return pdfjs.getDocument({ url: key, rangeChunkSize: 65536 });
+  return pdfjs.getDocument({ ...await pdfSource(key), rangeChunkSize: 65536 });
 }
 
 function destroyPdf(entry: PdfEntry) {
   void entry.opening.then(task => task.destroy()).catch(() => {});
 }
+
+onContentClear(() => {
+  for (const entry of pdfs.values()) destroyPdf(entry);
+  pdfs.clear();
+});
 
 function retainPdf(key: string, bankId?: string) {
   let entry = pdfs.get(key);

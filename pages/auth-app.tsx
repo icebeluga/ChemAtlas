@@ -93,7 +93,7 @@ export function AuthApp() {
     verifiedUser.current = undefined;
     resetAuthorization();
     setPasswordSetup(false);
-    setAccess({ phase: "signed-out" });
+    setAccess({ phase: "checking" });
     setMessage("");
     const { error } = await supabase.auth.signOut({ scope: "local" });
     if (error) {
@@ -102,6 +102,7 @@ export function AuthApp() {
       await supabase.auth.stopAutoRefresh();
       setMessage("Signed out on this device. Server sign-out could not be confirmed.");
     }
+    setAccess({ phase: "signed-out" });
   }
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();

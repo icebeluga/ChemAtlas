@@ -20,7 +20,14 @@
 | Historical Worker build | Passed |
 | Worker source/built privacy check | Passed; 1,564 questions, nine units, 13 client assets |
 | Wrangler dry run | Passed; no deployment |
-| Python regression suite | Local run needs Tesseract; missing OCR produces 3 failures, 6 errors, 1 skip among 52 tests. The new workflow installs Tesseract before running the complete suite. Hosted result must be checked before review completion. |
+| Python regression suite | 52/52 passed with Tesseract in [CI run 44412416473](https://github.com/icebeluga/ChemAtlas/actions/runs/44412416473). Local Windows OCR is unavailable. |
+
+The first CI run passed all database, artifact, Node, Python, build and private
+configuration checks, then exposed a logout completion race on Linux: the login
+form became visible before SDK session removal finished. The follow-up keeps the
+protected app cleared immediately and waits for sign-out completion before showing
+the login form. The final CI result must also pass this browser regression. PR
+validation explicitly checks out the PR head rather than a synthetic merge SHA.
 
 The browser suite exercises anonymous and unapproved denials, absence of public
 question/PDF/admin paths, invite and recovery password setup, token removal from

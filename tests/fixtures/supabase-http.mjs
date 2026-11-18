@@ -30,6 +30,7 @@ export async function startFixture() {
   await db.query("insert into public.approved_users(user_id) values ($1)", [approved]);
   for (const name of [...contentFiles, "stimuli.json"]) await db.query("insert into storage.objects(bucket_id,name) values ('chematlas-content',$1)", [`shared/releases/fixture/${name}`]);
   const logs = [];
+  let logoutPause;
   let serial = Promise.resolve();
   function query(claims, sql, params = []) {
     const next = serial.then(async () => {
@@ -63,7 +64,12 @@ export async function startFixture() {
         return json(200, { access_token: token(user), token_type: "bearer", expires_in: 3600, refresh_token: "fixture-refresh", user });
       }
       if (path === "/auth/v1/user") return claims ? json(200, { id: claims.sub, email: claims.email, aud: "authenticated", role: "authenticated", app_metadata: {}, user_metadata: {} }) : json(401, { message: "Unauthorized" });
-      if (path === "/auth/v1/logout") { res.writeHead(204); res.end(); return; }
+      if (path === "/auth/v1/logout") {
+        const pause = logoutPause;
+        pause?.signal();
+        await pause?.pending;
+        res.writeHead(204); res.end(); return;
+      }
       if (path === "/auth/v1/recover") return json(200, {});
       if (path === "/rest/v1/approved_users") {
         if (req.method === "GET") return json(200, (await query(claims, "select user_id from public.approved_users where revoked_at is null")).rows);
@@ -109,6 +115,13 @@ export async function startFixture() {
   await new Promise(resolve => api.listen(54321, "127.0.0.1", resolve));
   await new Promise(resolve => site.listen(4173, "127.0.0.1", resolve));
   return { logs, api: "http://127.0.0.1:54321", origin: "http://127.0.0.1:4173/ChemAtlas/",
+    pauseLogout() {
+      let release, signal;
+      const pending = new Promise(resolve => { release = resolve; });
+      const entered = new Promise(resolve => { signal = resolve; });
+      logoutPause = { pending, signal };
+      return { entered, release() { logoutPause = undefined; release(); } };
+    },
     async revoke(value) { await serial; await db.query("update public.approved_users set revoked_at=$1 where user_id=$2", [value ? new Date().toISOString() : null, approved]); },
     async close() { api.closeAllConnections(); site.closeAllConnections(); await Promise.all([new Promise(resolve => api.close(resolve)), new Promise(resolve => site.close(resolve))]); await db.close(); } };
 }

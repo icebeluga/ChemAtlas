@@ -21,6 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
@@ -49,7 +50,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: pages-verification-${{ github.sha }}
+          name: pages-verification-${{ github.event.pull_request.head.sha || github.sha }}
           # Screenshots contain source questions; retain them locally only.
           path: test-results/pages/results.json
           if-no-files-found: ignore

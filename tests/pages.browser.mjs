@@ -113,8 +113,15 @@ test("approved student restores progress, views a real PDF, generates a workshee
     assert.equal(await page.getByRole("navigation", { name: "Main navigation" }).getByLabel("3 selected", { exact: true }).count(), 1);
     const progress = await page.evaluate(() => JSON.parse(localStorage.getItem("apchem-studio-v2")).progress);
     assert.equal(progress["mcq-2008-1-29"].attempts, 2);
-    await page.getByRole("button", { name: "Log out", exact: true }).click();
+    const logout = fixture.pauseLogout();
+    try {
+      await page.getByRole("button", { name: "Log out", exact: true }).click();
+      await logout.entered;
+      assert.equal(await page.locator(".pdf-frame canvas,.worksheet-preview canvas").count(), 0);
+      assert.equal(await page.getByRole("button", { name: "Log in", exact: true }).count(), 0);
+    } finally { logout.release(); }
     await page.getByRole("button", { name: "Log in", exact: true }).waitFor();
+    await page.waitForFunction(() => localStorage.getItem("chematlas-supabase-auth-v1") === null);
     assert.equal(await page.locator(".pdf-frame canvas,.worksheet-preview canvas").count(), 0);
     assert.equal(await page.evaluate(() => localStorage.getItem("chematlas-supabase-auth-v1")), null);
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem("apchem-studio-v2")).progress["mcq-2008-1-29"].attempts), 2);

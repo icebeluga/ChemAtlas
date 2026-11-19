@@ -47,9 +47,11 @@ function subscribeToBankViewport(callback: () => void) {
 const getWideBankViewport = () => matchMedia(bankViewportQuery).matches;
 const getServerBankViewport = () => true;
 
-export function ChemAtlas({ worksheet = false, onSignOut }: { worksheet?: boolean; onSignOut?: () => void }) {
+export function ChemAtlas({ worksheet: initialWorksheet = false, onSignOut }: { worksheet?: boolean; onSignOut?: () => void }) {
   const stimulusDocument = getStimuli();
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
+  const worksheet = locationHref === getServerNavigationSnapshot() ? initialWorksheet
+    : new URL(locationHref).pathname.replace(/\/$/, "") === sitePath("practice-builder").replace(/\/$/, "");
   const wideBank = useSyncExternalStore(subscribeToBankViewport, getWideBankViewport, getServerBankViewport);
   const route = parseChemAtlasLocation(new URL(locationHref).search);
   const view = route.view as AppView;
@@ -123,8 +125,7 @@ export function ChemAtlas({ worksheet = false, onSignOut }: { worksheet?: boolea
   const [uploading, setUploading] = useState(false);
 
   function navigate(next: AppView, updates: RouteUpdates = {}, replace = false, openPhonePane = false) {
-    if (worksheet) { window.location.assign(buildChemAtlasUrl(new URL(sitePath(), locationHref).href, next, updates)); return; }
-    const nextUrl = buildChemAtlasUrl(window.location.href, next, updates);
+    const nextUrl = buildChemAtlasUrl(worksheet ? new URL(sitePath(), locationHref).href : window.location.href, next, updates);
     const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
     if (nextUrl !== currentUrl) {
       const state = {
@@ -312,7 +313,27 @@ export function ChemAtlas({ worksheet = false, onSignOut }: { worksheet?: boolea
       : addEntries(activeDraft, [id]);
     saveWorksheets({ ...backup, drafts: backup.drafts.map(draft => draft.id === activeDraft.id ? next : draft) });
   }
-  return <div className="ca2">
+  // Preserve normal anchors (open in new tab, copy link), but ordinary in-app
+  // navigation keeps the approved session, catalog and worksheet store mounted.
+  function followStudentLink(event: React.MouseEvent<HTMLDivElement>) {
+    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey ||
+      !(event.target instanceof Element)) return;
+    const link = event.target.closest<HTMLAnchorElement>("a[href]");
+    if (!link || link.target || link.hasAttribute("download")) return;
+    const target = new URL(link.href);
+    if (target.origin !== location.origin || target.hash) return;
+    const paths = [sitePath(), sitePath("practice-builder")].map(path => path.replace(/\/$/, ""));
+    if (!paths.includes(target.pathname.replace(/\/$/, ""))) return;
+    event.preventDefault();
+    if (target.href === location.href) return;
+    window.history.pushState({ chemAtlas: true }, "", target.href);
+    setShowWorksheet(false);
+    setResultPage(0);
+    window.dispatchEvent(new Event("chematlas:navigate"));
+    requestAnimationFrame(() => mainRef.current?.focus({ preventScroll: true }));
+  }
+
+  return <div className="ca2" onClick={followStudentLink}>
     <dialog className="ca-progress-dialog" ref={progressImportDialog} role="alertdialog"
       aria-labelledby="progress-import-title" aria-describedby="progress-import-description"
       onClose={() => { setPendingProgressImport(null); progressImportButton.current?.focus(); }}>
@@ -324,10 +345,9 @@ export function ChemAtlas({ worksheet = false, onSignOut }: { worksheet?: boolea
       </div>
     </dialog>
     <a className="ca-skip" href="#main-content" inert={phonePane}>Skip to content</a>
-    <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length} reviewCount={reviewQuestions.length}
+    <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length}
       inert={phonePane} onSignOut={onSignOut}
       onBank={() => navigate("library")}
-      onOpen={destination => { if (destination === "review" || destination === "legacy") { setReviewKind(destination); navigate("review"); } else navigate(destination); }}
       search={bankView ? { value: query, onChange: value => bankFilters({ query: value }) } : undefined} />
     {notice && <div className="ca-notice" role="status" inert={phonePane}>{notice}<button type="button" aria-label="Dismiss message" onClick={()=>setNotice("")}>×</button></div>}
     {!phonePane && worksheetWarning}

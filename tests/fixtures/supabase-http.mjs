@@ -46,7 +46,7 @@ export async function startFixture({ artifactDirectory = "dist-pages" } = {}) {
   }
   const api = createServer(async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:4173");
-    res.setHeader("Access-Control-Allow-Headers", "authorization,apikey,content-type,x-client-info,accept,range,cache-control,prefer,x-supabase-api-version");
+    res.setHeader("Access-Control-Allow-Headers", "authorization,apikey,content-type,x-client-info,accept,range,cache-control,prefer,x-supabase-api-version,accept-profile,content-profile,x-retry-count");
     res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS");
     res.setHeader("Access-Control-Expose-Headers", "Content-Length,Content-Range,Accept-Ranges");
     res.setHeader("Cache-Control", "private, no-store");

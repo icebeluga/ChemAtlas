@@ -125,6 +125,7 @@ test("approved student restores progress, views a real PDF, generates a workshee
     assert.equal(await page.locator(".ca-b-item").count(), 3);
     await page.waitForFunction(() => [...document.querySelectorAll(".worksheet-preview canvas")].some(canvas => canvas.width > 0));
     const [file] = await Promise.all([page.waitForEvent("download"), download.click()]);
+    await file.saveAs("test-results/pages/worksheet.pdf");
     const bytes = await readFile(await file.path());
     assert((await PDFDocument.load(bytes)).getPageCount() >= 1);
     await page.screenshot({ path: "test-results/pages/builder-desktop.png", fullPage: true });
@@ -160,8 +161,7 @@ test("progress export and confirmed import round trip without native browser dia
     await login(page); await bankReady(page);
     await page.locator(".ca-add").nth(0).click();
     await page.locator(".ca-add").nth(1).click();
-    await page.getByRole("button", { name: "More", exact: true }).click();
-    await page.getByRole("button", { name: "Progress", exact: true }).click();
+    await page.getByRole("link", { name: "Progress", exact: true }).click();
     await page.getByRole("heading", { name: "Progress & patterns", exact: true }).waitFor();
     const snapshot = () => page.evaluate(() => {
       const saved = JSON.parse(localStorage.getItem("apchem-studio-v2"));
@@ -248,4 +248,134 @@ test("revocation removes the visible app on access recheck", async () => {
     assert.equal(await page.locator(".ca-row-open").count(), 0);
     evidence.push({ scenario: "revocation-ui", result: "protected UI removed without clearing saved progress" });
   } finally { await fixture.revoke(false); await context.close(); }
+});
+
+test("the supplied login identity, password visibility and ChemAtlas tab identity work on desktop and phone", async () => {
+  const {context,page,errors}=await open();
+  try {
+    assert.equal(await page.title(),"ChemAtlas");
+    const icon=await page.locator('link[rel="icon"]').getAttribute("href");
+    assert.equal(icon,"/ChemAtlas/favicon.png");
+    assert.deepEqual(await (await page.request.get(new URL(icon,fixture.origin).href)).body(),await readFile("public/favicon.png"));
+    await page.getByRole("heading",{name:"Welcome back",exact:true}).waitFor();
+    const password=page.getByLabel("Password",{exact:true});
+    await password.fill("fixture-password");
+    await page.getByRole("button",{name:"Show password",exact:true}).click();
+    assert.equal(await password.getAttribute("type"),"text");
+    await page.getByRole("button",{name:"Hide password",exact:true}).click();
+    assert.equal(await password.getAttribute("type"),"password");
+    await page.setViewportSize({width:320,height:600});
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    await password.fill("");
+    await page.screenshot({path:"test-results/pages/login-phone.png"});
+    await login(page);
+    await bankReady(page);
+    assert.equal(await page.locator(".ca-auth-session,.ca-more,.ca-menu").count(),0);
+    const signOut=page.getByRole("button",{name:"Log out",exact:true});
+    await signOut.focus();
+    await signOut.press("Enter");
+    await page.getByRole("heading",{name:"Welcome back",exact:true}).waitFor();
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"login-reference",result:"supplied favicon bytes; ChemAtlas title; password visibility; 320px keyboard sign-out"});
+  }finally{await context.close()}
+});
+
+test("compact units and two intrinsic-width topic rows keep the document fitted and the PDF scrollable", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.setViewportSize({width:1440,height:900});
+    for(let unit=1;unit<=9;unit++){
+      await page.getByRole("button",{name:new RegExp("^Unit "+unit+",")}).click();
+      assert.equal(await page.locator(".ca-unit[data-u]>span").count(),1);
+      const geometry=await page.locator(".ca-topic").evaluateAll(buttons=>({
+        tops:[...new Set(buttons.map(b=>Math.round(b.getBoundingClientRect().top)))],
+        right:Math.max(...buttons.map(b=>b.getBoundingClientRect().right))
+      }));
+      assert.ok(geometry.tops.length<=2);
+      assert.ok(geometry.right<=1440, "unit "+unit+" fits two rows: "+JSON.stringify(geometry));
+    }
+    for(const [width,height] of [[1440,900],[768,700],[844,390],[390,844],[320,600]]){
+      await page.setViewportSize({width,height});
+      await page.waitForFunction(()=>document.documentElement.scrollHeight<=innerHeight+1 && document.documentElement.scrollWidth<=innerWidth+1);
+      const list=page.locator(".ca-rows");
+      await list.evaluate(el=>el.scrollTop=el.scrollHeight);
+      assert.ok(await list.evaluate(el=>el.scrollHeight<=el.clientHeight || el.scrollTop>0));
+      assert.equal(await page.evaluate(()=>scrollY),0);
+    }
+    await page.setViewportSize({width:390,height:844});
+    await page.locator(".ca-row-open").first().click();
+    await page.waitForFunction(()=>[...document.querySelectorAll(".pdf-frame canvas")].some(c=>c.style.visibility==="visible"&&c.width>0));
+    await page.getByRole("button",{name:"Fit page",exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.ca-viewer[data-fit-page] canvas')?.style.visibility==="visible");
+    const viewport=page.locator(".ca-viewport");
+    assert.ok(await viewport.evaluate(el=>el.getBoundingClientRect().height>150));
+    await page.getByRole("button",{name:"Fit width",exact:true}).click();
+    await page.screenshot({path:"test-results/pages/compact-question-phone.png"});
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"compact-viewport",result:"all nine units; two topic rows at 1440; internal list/PDF scrolling; desktop/tablet/320px/landscape without document overflow"});
+  }finally{await context.close()}
+});
+
+test("Print unreviewed opens complete accessible Details and never hides the warning from worksheets", async () => {
+  const catalog=JSON.parse(await readFile("public/student-questions.json","utf8"));
+  const content=JSON.parse(await readFile("public/worksheet-content.json","utf8"));
+  const question=catalog.questions.find(q=>q.status==="classified" && !content.questions[q.id]);
+  assert.ok(question);
+  const {context,page,errors}=await open(390);
+  try {
+    await login(page);await bankReady(page);
+    await page.goto(fixture.origin+"?view=detail&question="+encodeURIComponent(question.id));
+    const status=page.getByRole("button",{name:"Print unreviewed",exact:true});
+    await status.waitFor();
+    assert.equal(await page.locator(".ca-details").getAttribute("open"),null);
+    await status.click();
+    const panel=page.locator(".ca-details-panel");
+    await panel.waitFor();
+    assert.match(await panel.innerText(),/subparts, figures, and continuation pages/);
+    assert.match(await panel.innerText(),/full source page/);
+    assert.match(await panel.innerText(),/Primary topic/);
+    await page.locator(".ca-details>summary").focus();
+    await page.keyboard.press("Escape");
+    await panel.waitFor({state:"hidden"});
+    assert.equal(await page.getByRole("button",{name:"Back to results",exact:true}).isVisible(),true);
+    await status.click();
+    await page.screenshot({path:"test-results/pages/print-details-phone.png"});
+    await page.getByRole("button",{name:"Add to worksheet",exact:true}).click();
+    await panel.waitFor({state:"hidden"});
+    await page.getByRole("button",{name:"Back to results",exact:true}).click();
+    await page.getByRole("navigation",{name:"Main navigation"}).getByRole("link",{name:/Practice builder/}).click();
+    await page.getByRole("heading",{name:/Practice builder/i}).waitFor();
+    await page.waitForFunction(() => document.querySelector(".ca-b-note")?.textContent.includes("Full source pages"));
+    assert.match(await page.locator("body").innerText(),/subparts, figures, and continuation pages/i);
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"print-details",result:"default closed; full warning and primary topic; Escape preserves phone pane; worksheet warning retained"});
+  }finally{await context.close()}
+});
+
+test("Pages navigation preserves the document, authorized catalog and drafts, including Back and Forward", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.locator(".ca-add").first().click();
+    await page.evaluate(()=>window.__studentNavigationMarker="preserved");
+    const start=fixture.logs.length;
+    const began=Date.now();
+    await page.getByRole("navigation",{name:"Main navigation"}).getByRole("link",{name:/Practice builder/}).click();
+    await page.getByRole("heading",{name:/Practice builder/i}).waitFor();
+    const elapsed=Date.now()-began;
+    assert.equal(await page.title(),"ChemAtlas");
+    assert.equal(await page.locator(".ca-b-item").count(),1);
+    await page.getByRole("button",{name:"Question bank",exact:true}).click();
+    await bankReady(page);
+    await page.goBack();
+    await page.getByRole("heading",{name:/Practice builder/i}).waitFor();
+    await page.goForward();
+    await bankReady(page);
+    assert.equal(await page.evaluate(()=>window.__studentNavigationMarker),"preserved");
+    assert.equal(fixture.logs.slice(start).filter(log=>log.path==="/rest/v1/approved_users" || /\/(?:student-questions|stimuli)\.json$/.test(log.path)).length,0);
+    assert.equal(await page.getByRole("navigation",{name:"Main navigation"}).getByLabel("1 selected",{exact:true}).count(),1);
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"navigation-latency",result:"same document; no redundant approval/catalog/stimuli request; draft preserved through Back/Forward",localBuilderTransitionMs:elapsed});
+  }finally{await context.close()}
 });

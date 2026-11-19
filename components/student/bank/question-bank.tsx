@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent, ReactNode, RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
-import stimulusDocument from "../../../research/stimuli.json";
+import { getStimuli, sitePath } from "#student-content";
 import { planWorksheet } from "../../../lib/worksheet.mjs";
 import { useExportData } from "@/components/student/hooks/use-export-data";
 import type { Catalog, Question } from "@/components/student/hooks/use-catalog";
@@ -323,7 +323,7 @@ export function QuestionBank(props: Props) {
             aria-label={`Worksheet question ${i + 1}${q ? `: ${q.year ?? "Undated"} ${q.type} ${q.number}` : ""}`} title={q ? `${q.year ?? "Undated"} ${q.type} ${q.number} · ${q.displayTopic ?? ""} ${q.displayName ?? ""}` : id}
             disabled={!q} onClick={event => q && openPane(q.id, event.currentTarget)}>{i + 1}</button></li>; })}</ol>
           : <span className="ca-hint">Empty. Add questions and they line up here in order.</span>}
-        <a className={`ca-btn ${worksheetIds.length ? "is-primary" : "is-quiet"}`} href="/practice-builder">
+        <a className={`ca-btn ${worksheetIds.length ? "is-primary" : "is-quiet"}`} href={sitePath("practice-builder")}>
           {worksheetIds.length ? <>Arrange {worksheetIds.length}<span className="ca-long">&nbsp;in Practice builder</span></> : "Practice builder"}<ChevronRight size={15} aria-hidden="true" />
         </a>
       </aside>
@@ -372,7 +372,7 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
   const partTopic = activeTopic && related.includes(activeTopic) ? activeTopic : undefined;
   const parts = (q.topicParts ?? []).filter(part => part.topics.length && (!partTopic || part.topics.includes(partTopic)));
   const highlights = partTopic ? parts.map(part => part.label) : [];
-  const segments = view === "crop" ? planWorksheet([q], stimulusDocument.stimuli, originalPagesFor)[0].segments : [];
+  const segments = view === "crop" ? planWorksheet([q], getStimuli().stimuli, originalPagesFor)[0].segments : [];
   const cropFit = segments.length > 1 && segments.every(segment => segment.regions.length) ? {
     width: Math.max(...segments.map(({ regions }) => Math.max(...regions.map(r => r.rect[2])) - Math.min(...regions.map(r => r.rect[0])))),
     height: segments.reduce((sum, { regions }) => sum + Math.max(...regions.map(r => r.rect[3])) - Math.min(...regions.map(r => r.rect[1])), 0),

@@ -3,7 +3,8 @@
 name: ChemAtlas PR head validation
 on:
   pull_request:
-    branches: [main]
+    # Run the same required check before and after the Pages PR is retargeted.
+    branches: [main, codex/student-archive-recovery]
 permissions:
   contents: read
 jobs:

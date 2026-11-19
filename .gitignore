@@ -11,6 +11,10 @@
 
 # Generated builds and framework state
 /dist/
+/dist-pages/
+/test-results/
+/playwright-report/
+__pycache__/
 /.next/
 /.vinext/
 /out/

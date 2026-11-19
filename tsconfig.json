@@ -23,6 +23,7 @@
       }
     ],
     "paths": {
+      "#student-content": ["./lib/content-worker.ts"],
       "@/*": [
         "./*"
       ]
@@ -44,6 +45,8 @@
     "node_modules",
     "examples",
     "dist",
+    "dist-pages",
+    "test-results",
     ".vinext",
     ".wrangler",
     ".sites-runtime",

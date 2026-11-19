@@ -2,11 +2,12 @@ import type { WorksheetContent } from "./worksheet-content";
 import type { PDFDocumentProxy } from "pdfjs-dist";
 import type { Region, SourceFile } from "./worksheet";
 import { renderSourceCanvas, sourceBounds, sourcePageLocation } from "./question-source";
+import { contentResponse } from "#student-content";
 
 export async function renderWorksheet(draft: import("./worksheet").Draft, questions: import("./worksheet-pdf").WorksheetQuestion[],
   registry: import("./worksheet").Registry, mode: import("./worksheet").ExportMode, files: SourceFile[],
   open: (url?: string, bankId?: string) => Promise<PDFDocumentProxy>, signal: AbortSignal, content: WorksheetContent, loadFragments = async () => {
-    const response = await fetch("/worksheet-fragments.pdf", { signal });
+    const response = await contentResponse("/worksheet-fragments.pdf", signal);
     if (!response.ok) throw new Error("The reviewed question regions could not be loaded.");
     return new Uint8Array(await response.arrayBuffer());
   }) {

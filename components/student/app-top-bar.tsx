@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { ChevronDown, Search } from "lucide-react";
+import { sitePath } from "#student-content";
 
 export type TopBarDestination = "builder" | "progress" | "review" | "audit" | "legacy" | "banks";
 
@@ -53,7 +54,7 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
     <span className="ca-mark">ChemAtlas</span>
     <nav className="ca-nav" aria-label="Main navigation">
       <button type="button" aria-current={current === "bank" ? "page" : undefined} onClick={onBank}>Question bank</button>
-      <a href="/practice-builder" aria-current={current === "worksheet" ? "page" : undefined}>
+      <a href={sitePath("practice-builder")} aria-current={current === "worksheet" ? "page" : undefined}>
         Practice builder <span className="ca-count" aria-label={`${worksheetCount} selected`}>{worksheetCount}</span>
       </a>
       <div className="ca-more" ref={more} onBlur={event => {

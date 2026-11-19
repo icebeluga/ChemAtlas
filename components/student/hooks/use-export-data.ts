@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { contentResponse } from "#student-content";
 import type { Registry } from "@/lib/worksheet";
 import type { WorksheetContent } from "@/lib/worksheet-content";
 
@@ -14,7 +15,7 @@ export function useExportData() {
   useEffect(() => {
     const controller = new AbortController();
     async function getJson<T>(path: string): Promise<T> {
-      const response = await fetch(path, { signal: controller.signal });
+      const response = await contentResponse(path, controller.signal);
       if (!response.ok) throw new Error(`Could not load ${path}.`);
       return response.json();
     }

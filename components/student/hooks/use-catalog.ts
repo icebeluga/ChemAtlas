@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState, useSyncExternalStore, type SetStateAction } from "react";
+import { contentResponse } from "#student-content";
 import type { Region as SourceRegion } from "@/lib/question-source";
 type Unit = { id: string; name: string; topics: [string, string][] };
 export type Question = {
@@ -84,7 +85,14 @@ export function useCatalog(onCatalogError: (message: string) => void) {
     ? { ...bundledCatalog, questions: [...bundledCatalog.questions, ...userQuestions] }
     : bundledCatalog, [bundledCatalog, userQuestions]);
   useEffect(() => {
-    fetch("/student-questions.json").then(r => r.json()).then(data => setBundledCatalog(data as Catalog)).catch(() => onCatalogError("Question catalog could not be loaded."));
+    const controller = new AbortController();
+    contentResponse("/student-questions.json", controller.signal).then(r => {
+      if (!r.ok) throw new Error("Catalog unavailable");
+      return r.json();
+    }).then(data => { if (!controller.signal.aborted) setBundledCatalog(data as Catalog); }).catch(() => {
+      if (!controller.signal.aborted) onCatalogError("Question catalog could not be loaded.");
+    });
+    return () => controller.abort();
   }, [onCatalogError]);
   useEffect(() => { if (catalog.questions.length) localStorage.setItem(STORAGE_KEY, JSON.stringify({ progress, overrides, banks: banks.filter(b => b.id !== "mega"), questions: catalog.questions.filter(q => q.sourceBank), sessions } satisfies Saved)); }, [catalog.questions, progress, overrides, banks, sessions]);
 

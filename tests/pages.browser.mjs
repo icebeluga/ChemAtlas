@@ -179,11 +179,12 @@ test("progress export and confirmed import round trip without native browser dia
     await input.setInputFiles(upload);
     await confirmation.waitFor();
     assert.deepEqual(await snapshot(), before);
-    assert.equal(await page.evaluate(() => document.activeElement?.textContent), "Cancel");
+    await page.waitForFunction(() => document.activeElement?.textContent === "Cancel");
     await confirmation.getByRole("button", { name: "Cancel", exact: true }).click();
     await confirmation.waitFor({ state: "hidden" });
     assert.deepEqual(await snapshot(), before);
-    assert.equal(await page.evaluate(() => document.activeElement?.textContent), "Import progress (.json)");
+    // Native dialog close events can follow the hidden state on Linux Chromium.
+    await page.waitForFunction(() => document.activeElement?.textContent === "Import progress (.json)");
     await input.setInputFiles(upload); await confirmation.waitFor();
     await page.keyboard.press("Escape"); await confirmation.waitFor({ state: "hidden" });
     assert.deepEqual(await snapshot(), before);

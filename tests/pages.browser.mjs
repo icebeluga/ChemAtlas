@@ -379,3 +379,29 @@ test("Pages navigation preserves the document, authorized catalog and drafts, in
     evidence.push({scenario:"navigation-latency",result:"same document; no redundant approval/catalog/stimuli request; draft preserved through Back/Forward",localBuilderTransitionMs:elapsed});
   }finally{await context.close()}
 });
+
+test("a selected topic leaves a reachable, scrollable PDF on a short landscape screen", async () => {
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    await page.setViewportSize({width:844,height:390});
+    await page.goto(fixture.origin+"?view=detail&question=frq-2005-2-7&unit=u1&topic=1.3");
+    await page.waitForFunction(()=>[...document.querySelectorAll(".pdf-frame canvas")].some(c=>c.style.visibility==="visible"&&c.width>0));
+    const viewport=page.locator(".ca-viewport");
+    const geometry=await viewport.evaluate(el=>{
+      const r=el.getBoundingClientRect();
+      return {height:el.clientHeight,scrollable:el.scrollHeight>el.clientHeight,
+        reachable:el.contains(document.elementFromPoint(r.left+r.width/2,r.top+r.height/2))};
+    });
+    assert.ok(geometry.height>=60,JSON.stringify(geometry));
+    assert.ok(geometry.reachable);
+    assert.ok(geometry.scrollable);
+    await viewport.hover();
+    await page.mouse.wheel(0,160);
+    await page.waitForFunction(()=>document.querySelector(".ca-viewport").scrollTop>0);
+    assert.equal(await page.evaluate(()=>scrollY),0);
+    await page.screenshot({path:"test-results/pages/short-landscape.png"});
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"short-landscape",result:"844x390 with selected unit/topic; reachable PDF and real wheel scrolling; bounded filter/course controls"});
+  }finally{await context.close()}
+});

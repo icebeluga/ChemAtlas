@@ -47,8 +47,10 @@ Local results:
 - ESLint passed with the same four pre-existing warnings outside the changed product code.
 - 109 Node tests passed.
 - 52 Python tests passed with Python 3.12, UTF-8, PyMuPDF 1.26.6 and Tesseract.
-- All 13 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
+- All 14 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
 - Pages build and artifact privacy allowlist passed. Protected data/server modules and administrative credentials remain excluded.
+- A focused 844x390 selected-topic regression verifies a reachable PDF viewport and actual mouse-wheel scrolling; short-screen course/filter controls are internally bounded.
+- The downloaded worksheet was one US Letter page (377,523 bytes), rendered and visually checked with both browser PDF.js and Poppler. Poppler reported missing Symbol/ArialUnicode display-font warnings without a visible defect.
 - Worker compatibility build, privacy check and Wrangler dry run passed; the final exact-head compatibility and both shared browser suites are required in PR CI.
 - Desktop and phone screenshots were visually inspected. Coverage includes 1440×900, 768×700, 844×390, 390×844 and 320×600; all nine unit bands, keyboard navigation, PDF painting/fit controls, worksheet generation/download/parsing, progress import/export, logout, invite/recovery protocol, approval denials and revocation.
 

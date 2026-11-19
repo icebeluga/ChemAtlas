@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent, ReactNode, RefObject } from "react";
 import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
 import { getStimuli, sitePath } from "#student-content";
@@ -88,6 +88,24 @@ export function QuestionBank(props: Props) {
   const focusedIndex = visibleResults.findIndex(q => q.id === focusedId);
   const tabIndexInResults = focusedIndex >= 0 ? focusedIndex : currentIndex >= 0 && currentIndex < shown ? currentIndex : 0;
   const activeUnit = catalog.units.find(u => u.id === unit);
+  const topicBand = useRef<HTMLDivElement>(null);
+  const [topicBreak, setTopicBreak] = useState(0);
+  useLayoutEffect(() => {
+    const band = topicBand.current;
+    if (!band) return;
+    const observer = new ResizeObserver(() => {
+      const widths = [...band.querySelectorAll<HTMLElement>(".ca-topic")].map(button => button.getBoundingClientRect().width + 3);
+      let best = 1, smallest = Infinity;
+      for (let index = 1; index < widths.length; index++) {
+        const widest = Math.max(widths.slice(0, index).reduce((sum, width) => sum + width, 0),
+          widths.slice(index).reduce((sum, width) => sum + width, 0));
+        if (widest < smallest) { best = index; smallest = widest; }
+      }
+      setTopicBreak(best);
+    });
+    observer.observe(band);
+    return () => observer.disconnect();
+  }, [activeUnit]);
   const activeUnitNumber = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
   const activeTopic = topic !== "all" ? topic : "";
   const filtered = type !== "Mixed" || year !== "all" || reviewedOnly || !!query;
@@ -148,15 +166,9 @@ export function QuestionBank(props: Props) {
     if (!next) return;
     const button = rows.current?.querySelector<HTMLButtonElement>(`[data-id="${CSS.escape(next.id)}"] .ca-row-open`);
     if (!button) return;
-    button.focus({ preventScroll: !wide });
+    button.focus({ preventScroll: true });
+    button.scrollIntoView({ block: "nearest" });
     if (wide) onSelect(next.id, true);
-    else {
-      const rect = button.getBoundingClientRect();
-      const top = Math.max(0, course.current?.getBoundingClientRect().bottom ?? 0) + 4;
-      const bottom = Math.min(window.innerHeight, dock.current?.getBoundingClientRect().top ?? window.innerHeight) - 4;
-      if (rect.bottom > bottom) window.scrollBy(0, rect.bottom - bottom);
-      else if (rect.top < top) window.scrollBy(0, rect.top - top);
-    }
   }, [visibleResults, wide, onSelect]);
 
   function onResultsKeyDown(event: ReactKeyboardEvent<HTMLOListElement>) {
@@ -214,7 +226,7 @@ export function QuestionBank(props: Props) {
         {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
           aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
           onClick={() => onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" })}>
-          <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
+          <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
           <i className="ca-heat" aria-hidden="true">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
         </button>)}
       </div>
@@ -227,10 +239,12 @@ export function QuestionBank(props: Props) {
         {activeUnit && <button type="button" className="ca-btn is-quiet ca-topic-open" onClick={() => onFilters({ unit: "all", topic: "all" })}>All units</button>}
       </div>
       <div className="ca-topics-wrap" data-open={activeUnit ? "" : undefined}>
-        <div className="ca-topics" data-u={activeUnit?.id}>
-          {activeUnit?.topics.map(([id, name]) => { const count = counts.byTopic.get(id) ?? 0;
+        <div className="ca-topics" ref={topicBand} data-u={activeUnit?.id}>
+          {[activeUnit?.topics.slice(0, topicBreak || Math.ceil(activeUnit.topics.length / 2)), activeUnit?.topics.slice(topicBreak || Math.ceil(activeUnit.topics.length / 2))].map((row, rowIndex) => <div className="ca-topic-row" key={rowIndex}>
+          {row?.map(([id, name]) => { const count = counts.byTopic.get(id) ?? 0;
             return <button type="button" key={id} className="ca-topic" style={{ "--d": density(count, counts.max) } as React.CSSProperties} data-empty={count ? undefined : ""}
               aria-pressed={topic === id} onClick={() => onFilters({ topic: topic === id ? "all" : id })}><b>{id}</b>{name}<i>{count}</i></button>; })}
+          </div>)}
         </div>
       </div>
       <dialog className="ca-sheet" ref={sheet} aria-label="Topics" data-u={activeUnit?.id} onClick={event => { if (event.target === sheet.current) sheet.current?.close(); }}>
@@ -298,6 +312,7 @@ export function QuestionBank(props: Props) {
           <span className="ca-keys"><span className="ca-kbd">A</span> add or remove</span>
           <span className="ca-keys"><span className="ca-kbd">F</span> page or crop</span>
           <span className="ca-keys"><span className="ca-kbd">/</span> search</span>
+          <a href={sitePath("?view=builder")}>Practice sessions</a><a href={sitePath("?view=progress")}>Progress</a>
           {results.length > shown && <button type="button" onClick={() => setShown(value => value + PAGE)}>Show {Math.min(PAGE, results.length - shown)} more</button>}
         </div>
       </section>
@@ -350,6 +365,18 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
   const [zoom, setZoom] = useState<ViewerZoom>("width");
   const [scale, setScale] = useState(1);
   const [fullscreen, setFullscreen] = useState(false);
+  const [detailsOpen, setDetailsOpen] = useState(false);
+  const detailsId = useId();
+  const detailsBox = useRef<HTMLDivElement>(null);
+  const detailsSummary = useRef<HTMLElement>(null);
+  useEffect(() => {
+    if (!detailsOpen) return;
+    const outside = (event: PointerEvent) => {
+      if (event.target instanceof Node && !detailsBox.current?.contains(event.target)) setDetailsOpen(false);
+    };
+    document.addEventListener("pointerdown", outside);
+    return () => document.removeEventListener("pointerdown", outside);
+  }, [detailsOpen]);
   const viewer = useRef<HTMLDivElement>(null);
   const onScale = useCallback((value: number) => setScale(value), []);
 
@@ -395,28 +422,41 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
       <button type="button" className={`ca-btn ${onWorksheet ? "" : "is-primary"}`} aria-pressed={onWorksheet} disabled={!canEdit} onClick={onToggle}>
         {onWorksheet ? <><Check size={15} aria-hidden="true" />On worksheet</> : <><Plus size={15} aria-hidden="true" />Add to worksheet</>}
       </button>
+      <div className="ca-question-details" ref={detailsBox} onKeyDown={event => {
+        if (event.key === "Escape" && detailsOpen) {
+          event.preventDefault(); setDetailsOpen(false); detailsSummary.current?.focus();
+        }
+      }}>
+        {reviewed === false && <button type="button" className="ca-print-status" aria-expanded={detailsOpen} aria-controls={detailsId}
+          onClick={() => setDetailsOpen(value => !value)}><TriangleAlert size={14} aria-hidden="true" />Print unreviewed</button>}
+        <details className="ca-details" open={detailsOpen} onToggle={event => setDetailsOpen(event.currentTarget.open)}>
+          <summary ref={detailsSummary}>Details <ChevronDown size={14} aria-hidden="true" /></summary>
+          <div className="ca-details-panel" id={detailsId}>
+            {reviewed !== undefined && <div className="ca-status" data-s={reviewed ? "ready" : "draft"}>
+              {reviewed ? <Check size={15} aria-hidden="true" /> : <TriangleAlert size={15} aria-hidden="true" />}
+              <span>{reviewed
+                ? <><b>Reviewed print layout.</b> Check the worksheet PDF for the final layout.</>
+                : <><b>No reviewed print layout yet.</b> {reviewNote ? `${reviewNote} ` : ""}Verify all subparts, figures, and continuation pages. In a worksheet this prints as its full source page.</>}</span>
+            </div>}
+            <div className="ca-meta">
+              <div className="ca-chips" aria-label="Topics">
+                {q.displayTopic && <span className="ca-chip" data-u={unitOf.get(q.displayTopic)}><b>{q.displayTopic}</b> {q.displayName}<small>Primary topic</small></span>}
+                {others.map(id => <span className="ca-chip" key={id} data-u={unitOf.get(id)}><b>{id}</b> {topicName.get(id)}{id === activeTopic && <small>Listed here</small>}</span>)}
+              </div>
+              {!!parts.length && <details className="ca-parts-box">
+                <summary>{partTopic ? `${parts.length} part${parts.length === 1 ? "" : "s"} test${parts.length === 1 ? "s" : ""} ${partTopic}, highlighted on the page` : `What each of the ${parts.length} parts tests`}</summary>
+                <dl className="ca-parts">{parts.map((part, i) => [
+                  <dt key={`t${i}`}>{part.label}</dt>,
+                  <dd key={`d${i}`}>{part.rationale || part.textPreview || part.topicNames.join(", ")}</dd>,
+                  <dd key={`c${i}`} className="ca-code" data-u={unitOf.get(part.topics[0])}>{part.topics.join(" · ")}</dd>,
+                ])}</dl>
+              </details>}
+            </div>
+          </div>
+        </details>
+      </div>
     </div>
     <div className="ca-pane-body">
-      {reviewed !== undefined && <div className="ca-status" data-s={reviewed ? "ready" : "draft"}>
-        {reviewed ? <Check size={15} aria-hidden="true" /> : <TriangleAlert size={15} aria-hidden="true" />}
-        <span>{reviewed
-          ? <><b>Reviewed print layout.</b> Check the worksheet PDF for the final layout.</>
-          : <><b>No reviewed print layout yet.</b> {reviewNote ? `${reviewNote} ` : ""}In a worksheet this prints as its full source page.</>}</span>
-      </div>}
-      <div className="ca-meta">
-        <div className="ca-chips" aria-label="Topics">
-          {q.displayTopic && <span className="ca-chip" data-u={unitOf.get(q.displayTopic)}><b>{q.displayTopic}</b> {q.displayName}<small>Primary topic</small></span>}
-          {others.map(id => <span className="ca-chip" key={id} data-u={unitOf.get(id)}><b>{id}</b> {topicName.get(id)}{id === activeTopic && <small>Listed here</small>}</span>)}
-        </div>
-        {!!parts.length && <details className="ca-parts-box">
-          <summary>{partTopic ? `${parts.length} part${parts.length === 1 ? "" : "s"} test${parts.length === 1 ? "s" : ""} ${partTopic}, highlighted on the page` : `What each of the ${parts.length} parts tests`}</summary>
-          <dl className="ca-parts">{parts.map((part, i) => [
-            <dt key={`t${i}`}>{part.label}</dt>,
-            <dd key={`d${i}`}>{part.rationale || part.textPreview || part.topicNames.join(", ")}</dd>,
-            <dd key={`c${i}`} className="ca-code" data-u={unitOf.get(part.topics[0])}>{part.topics.join(" · ")}</dd>,
-          ])}</dl>
-        </details>}
-      </div>
       <div className="ca-viewer" ref={viewer} data-fit-page={zoom === "page" ? "" : undefined}>
         <div className="ca-viewer-bar" role="toolbar" aria-label="Image zoom">
           <button type="button" className="ca-icon" aria-label="Zoom out" disabled={scale <= MIN_ZOOM} onClick={() => setZoom(stepZoom(scale, -1))}><Minus size={15} aria-hidden="true" /></button>

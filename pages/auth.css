@@ -6,7 +6,7 @@
 .ca-auth-eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;color:#596a82;margin:0 0 14px}
 .ca-auth-card h1{font:750 clamp(30px,4vw,44px)/1.12 "Segoe UI",system-ui,sans-serif;letter-spacing:-.03em;color:#102442;margin:0 0 14px}.ca-auth-card p{line-height:1.55}.ca-auth-intro{font-size:20px;color:#52647c;margin:0}
 .ca-auth-card form{display:grid;gap:8px;margin:30px 0 16px}.ca-auth-card label{display:grid;gap:8px;font-weight:700;font-size:16px}.ca-auth-card label+label{margin-top:12px}
-.ca-auth-card input{width:100%;height:50px;padding:10px 14px;border:1px solid #bbc9da;border-radius:8px;background:#fff;color:#14233a;font:inherit;font-size:16px}.ca-auth-card input::placeholder{color:#73829a}
+.ca-auth-card input{width:100%;height:50px;padding:10px 14px;border:1px solid #bbc9da;border-radius:8px;background:#fff;color:#14233a;font:inherit;font-size:16px;font-weight:400}.ca-auth-card input::placeholder{color:#73829a}
 .ca-auth-password{position:relative}.ca-auth-password input{padding-right:54px}.ca-auth-password button{position:absolute;inset:3px 3px 3px auto;width:44px;display:grid;place-items:center;border:0;background:transparent;color:#4b5b70;border-radius:6px}
 .ca-auth-card button{font:inherit;cursor:pointer}.ca-auth-card button:disabled{opacity:.55;cursor:wait}.ca-auth-card .primary{display:flex;justify-content:center;min-height:50px;margin-top:16px;padding:12px;border:1px solid #102442;border-radius:8px;background:#102442;color:#fff;font-size:18px;font-weight:650}
 .ca-auth-card :focus-visible,.ca-auth-header :focus-visible{outline:2px solid #2552c8;outline-offset:3px}

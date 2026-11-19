@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChemAtlas · Direction C · Proof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#D5DAE1; --panel:#F6F7F9; --paper:#fff; --ink:#1B1E23; --ink-2:#5A626E; --line:#CDD3DB; --line-2:#E4E8ED;
+  --pencil:#2A5BD7; --pencil-soft:#E8EEFC; --strike:#B4281E;
+  --ui:"Instrument Sans",system-ui,sans-serif; --doc:"STIX Two Text",Georgia,serif;
+  --fast:130ms; --med:300ms; --slow:480ms; --out:cubic-bezier(.2,.8,.2,1); --settle:cubic-bezier(.25,1.25,.5,1);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--desk);color:var(--ink);font:400 15px/1.45 var(--ui);overflow:hidden}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer;background:none;border:0;padding:0;text-align:inherit}
+:focus-visible{outline:2px solid var(--pencil);outline-offset:2px}
+.app{display:grid;grid-template:auto minmax(0,1fr)/minmax(20rem,30rem) minmax(0,1fr);height:100dvh}
+.top{grid-column:1/-1;display:flex;align-items:center;gap:1rem;padding:.6rem 1.25rem;background:var(--paper);border-bottom:1px solid var(--line)}
+.mark{font:600 1.3rem/1 var(--doc);letter-spacing:-.01em}
+.title{flex:1;min-width:0;border:0;border-bottom:1px dashed transparent;background:none;font:400 1.05rem var(--doc);font-style:italic;color:var(--ink-2);padding:.2rem 0;outline:0;text-overflow:ellipsis;transition:border-color var(--fast),color var(--fast)}
+.title:hover,.title:focus{border-color:var(--pencil);color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .9rem;border-radius:3px;border:1px solid var(--ink);font-weight:500;background:var(--paper);white-space:nowrap;transition:background var(--fast),color var(--fast),transform var(--fast) var(--out)}
+.btn:hover{background:var(--ink);color:#fff}.btn:active{transform:translateY(1px)}
+.btn.pencil{border-color:var(--pencil);background:var(--pencil);color:#fff}.btn.pencil:hover{background:#2049B4}
+.btn.quiet{border-color:var(--line)}.btn.quiet:hover{background:var(--line-2);color:var(--ink)}
+.btn:disabled{opacity:.4;pointer-events:none}
+
+.bank{display:flex;flex-direction:column;min-height:0;background:var(--panel);border-right:1px solid var(--line)}
+.filters{padding:.9rem 1rem .75rem;display:grid;grid-template-columns:1fr 1fr;gap:.5rem;border-bottom:1px solid var(--line)}
+.filters input,.filters select{width:100%;height:2.25rem;border:1px solid var(--line);border-radius:3px;background:var(--paper);padding:0 .6rem;min-width:0;transition:border-color var(--fast)}
+.filters input{grid-column:1/-1}
+.filters input:focus,.filters select:focus{border-color:var(--pencil);outline:0}
+.seg{grid-column:1/-1;display:flex;gap:1.1rem;font-size:.9rem;align-items:center;color:var(--ink-2)}
+.seg button{padding:.15rem 0;border-bottom:2px solid transparent;transition:color var(--fast),border-color var(--fast)}
+.seg button[aria-pressed=true]{color:var(--ink);border-color:var(--ink);font-weight:600}
+.seg span{margin-left:auto;font-variant-numeric:tabular-nums}
+.rows{list-style:none;margin:0;padding:0;overflow:auto;flex:1}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.25rem .75rem;padding:.7rem 1rem;border-bottom:1px solid var(--line-2);cursor:pointer;transition:background var(--fast)}
+.row:hover{background:var(--paper)}
+.row[data-trying]{background:var(--pencil-soft);box-shadow:inset 3px 0 var(--pencil)}
+.row h3{margin:0;font:600 1rem/1.3 var(--doc)}
+.row h3 small{font:400 .85rem var(--ui);color:var(--ink-2);margin-left:.5rem}
+.row p{margin:0;grid-column:1;color:var(--ink-2);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.row .put{grid-row:1/3;grid-column:2;align-self:center;width:2.1rem;height:2.1rem;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:var(--paper);color:var(--ink-2);transition:all var(--fast) var(--out)}
+.row .put:hover{border-color:var(--pencil);color:var(--pencil);transform:scale(1.08)}
+.row .put[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:#fff}
+.more{margin:1rem;align-self:start}
+.none{padding:2.5rem 1.25rem;color:var(--ink-2)}.none b{display:block;font:600 1.15rem var(--doc);color:var(--ink)}
+
+.desk{overflow:auto;padding:clamp(1rem,3vw,2.5rem);scroll-behavior:smooth}
+.paper{background:var(--paper);width:min(100%,51rem);margin:0 auto 4rem;min-height:66rem;padding:clamp(1.5rem,6%,4rem);box-shadow:0 1px 2px rgb(27 30 35/.12),0 12px 32px -12px rgb(27 30 35/.28);font-family:var(--doc)}
+.paper header{border-bottom:1.5px solid var(--ink);padding-bottom:.9rem;margin-bottom:1.5rem}
+.paper h1{font:600 1.7rem/1.15 var(--doc);margin:0 0 .9rem;text-wrap:balance}
+.fields{display:flex;gap:2rem;font-size:.95rem}.fields span{flex:1;border-bottom:1px solid var(--ink);padding-bottom:.1rem}.fields span:last-child{flex:.5}
+.blocks{list-style:none;margin:0;padding:0}
+.block{display:grid;grid-template-columns:2rem minmax(0,1fr);gap:.25rem;padding:.75rem 0;position:relative;background:var(--paper);outline:1.5px dashed transparent;outline-offset:8px;border-radius:2px;transition:outline-color var(--med)}
+.block .num{font:600 1.05rem/1.4 var(--doc);font-variant-numeric:tabular-nums}
+.block canvas{display:block;width:min(100%,calc(var(--pt,500)/500*100%));height:auto;opacity:0;transition:opacity var(--med)}
+.block canvas[data-ready]{opacity:1}
+.wait{height:6rem;background:linear-gradient(100deg,var(--line-2) 30%,#fff 50%,var(--line-2) 70%) 0/300% 100%;animation:shimmer 1.4s linear infinite}
+canvas[data-ready]+.wait{display:none}
+@keyframes shimmer{to{background-position:-150% 0}}
+.block .tools{position:absolute;top:.4rem;right:0;display:flex;background:var(--paper);border:1px solid var(--line);border-radius:3px;font-family:var(--ui);opacity:0;transform:translateY(-4px);transition:opacity var(--fast),transform var(--fast) var(--out);box-shadow:0 4px 12px -4px rgb(27 30 35/.25)}
+.block:hover .tools,.block:focus-within .tools{opacity:1;transform:none}
+.tools button{width:2.1rem;height:2.1rem;display:grid;place-items:center;color:var(--ink-2)}
+.tools button:hover:not(:disabled){background:var(--line-2);color:var(--ink)}.tools button[data-remove]:hover{color:var(--strike);background:#FBEBE9}
+.tools button:disabled{opacity:.3;cursor:default}
+.tools .grip{cursor:grab}
+.block.dragging{opacity:.35}
+.block[data-trying]{outline-color:var(--pencil)}
+.trybar{grid-column:1/-1;display:flex;align-items:center;gap:.6rem;font:400 .9rem var(--ui);color:var(--pencil);margin-bottom:.4rem;flex-wrap:wrap}
+.trybar em{font:italic 400 1rem var(--doc);margin-right:auto}
+.blank{font:italic 400 1.1rem/1.5 var(--doc);color:var(--ink-2);padding:2.5rem 0;max-width:30rem}
+.cite{grid-column:2;font:400 .8rem var(--ui);color:var(--ink-2);margin-top:.2rem}
+.switch{display:none}
+
+@media (max-width:900px){
+  body{overflow:auto}
+  .app{display:block;height:auto;padding-bottom:3.75rem}
+  .top{position:sticky;top:0;z-index:5;padding:.5rem .9rem;gap:.6rem}
+  .top .btn span{display:none}
+  .bank,.desk{min-height:calc(100dvh - 7rem)}
+  .app[data-view=sheet] .bank,.app:not([data-view=sheet]) .desk{display:none}
+  .rows,.desk{overflow:visible}
+  .desk{padding:.75rem}
+  .paper{min-height:0;padding:1.25rem 1rem 2rem;margin-bottom:1rem}
+  .paper h1{font-size:1.35rem}
+  .block{grid-template-columns:1.5rem minmax(0,1fr)}
+  .block canvas{width:100%}
+  .block .tools{opacity:1;transform:none;position:static;grid-column:2;justify-self:end;box-shadow:none;margin-top:.3rem}
+  .switch{display:grid;grid-template-columns:1fr 1fr;position:fixed;inset:auto 0 0 0;background:var(--paper);border-top:1px solid var(--line);z-index:6}
+  .switch button{padding:1rem;text-align:center;font-weight:500;color:var(--ink-2);border-top:2px solid transparent;margin-top:-1px}
+  .switch button[aria-pressed=true]{color:var(--ink);border-color:var(--ink)}
+  .switch b{font-variant-numeric:tabular-nums;display:inline-block}
+  .switch b.bump{animation:bump .4s var(--settle)}
+  @keyframes bump{40%{transform:scale(1.5);color:var(--pencil)}}
+}
+@media print{
+  body{overflow:visible;background:#fff}.top,.bank,.switch,.tools,.trybar{display:none!important}
+  .app{display:block;height:auto}.desk{padding:0;overflow:visible;display:block!important}
+  .paper{box-shadow:none;width:auto;margin:0;padding:0;min-height:0}.block{break-inside:avoid}.block[data-trying]{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <div class="top">
+    <span class="mark">ChemAtlas</span>
+    <input class="title" id="title" value="Unit review worksheet" maxlength="100" aria-label="Worksheet title">
+    <button class="btn" id="print"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6V2h8v4M4 12H2V6h12v6h-2M4 10h8v4H4z"/></svg><span>Print or save PDF</span></button>
+  </div>
+  <section class="bank" aria-label="Question bank">
+    <div class="filters">
+      <input id="q" type="search" placeholder="Search questions" aria-label="Search questions">
+      <select id="unit" aria-label="Unit"></select><select id="topic" aria-label="Topic"></select>
+      <div class="seg" id="seg" role="group" aria-label="Question type"></div>
+    </div>
+    <ol class="rows" id="rows"></ol>
+  </section>
+  <section class="desk" id="desk" aria-label="Worksheet page">
+    <article class="paper">
+      <header><h1 id="h1"></h1><div class="fields"><span>Name</span><span>Date</span></div></header>
+      <ol class="blocks" id="blocks"></ol>
+    </article>
+  </section>
+  <nav class="switch" aria-label="View"><button data-view="bank">Question bank</button><button data-view="sheet">Worksheet <b id="n">0</b></button></nav>
+</div>
+
+<script type="module">
+import { loadCatalog, filterQuestions, renderCrop, createSheet, flip, reducedMotion, esc } from "./shared.js";
+const $ = id => document.getElementById(id);
+const svg = d => `<svg width="14" height="14" viewBox="0 0 14 14" stroke="currentColor" stroke-width="1.6" fill="none">${d}</svg>`;
+const icon = { plus: svg('<path d="M7 2v10M2 7h10"/>'), check: svg('<path d="M2 7.5 5.5 11 12 3.5"/>'), up: svg('<path d="M7 11V3M3.5 6.5 7 3l3.5 3.5"/>'), down: svg('<path d="M7 3v8M3.5 7.5 7 11l3.5-3.5"/>'),
+  x: svg('<path d="m3 3 8 8M11 3l-8 8"/>'), grip: svg('<path d="M5 3v0M9 3v0M5 7v0M9 7v0M5 11v0M9 11v0" stroke-linecap="round" stroke-width="2.2"/>') };
+const catalog = await loadCatalog(), sheet = createSheet("chematlas-preview-proof");
+const state = { unit: "all", topic: "all", type: "all", query: "", trying: "", shown: 40 };
+
+function drawFilters() {
+  $("unit").innerHTML = `<option value="all">All units</option>` + catalog.units.map(u => `<option value="${u.id}" ${state.unit === u.id ? "selected" : ""}>${u.n}. ${esc(u.name)}</option>`).join("");
+  const unit = catalog.units.find(u => u.id === state.unit);
+  $("topic").innerHTML = `<option value="all">${unit ? "All topics" : "Pick a unit first"}</option>` + (unit?.topics ?? []).map(t => `<option value="${t.id}" ${state.topic === t.id ? "selected" : ""}>${t.id} ${esc(t.name)} (${t.count})</option>`).join("");
+  $("topic").disabled = !unit;
+}
+function drawRows() {
+  const all = filterQuestions(catalog.questions, state);
+  $("seg").innerHTML = [["all", "All"], ["MCQ", "Multiple choice"], ["FRQ", "Free response"]].map(([v, l]) => `<button data-type="${v}" aria-pressed="${state.type === v}">${l}</button>`).join("") + `<span>${all.length.toLocaleString()}</span>`;
+  $("rows").innerHTML = all.slice(0, state.shown).map(q => { const on = sheet.has(q.id);
+    return `<li class="row" data-id="${q.id}" ${state.trying === q.id ? "data-trying" : ""}><h3>${esc(q.title)}<small>${q.primaryTopic} ${esc(q.topicName)}</small></h3><p>${esc(q.text)}</p>
+      <button class="put" aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} worksheet: ${esc(q.title)}">${on ? icon.check : icon.plus}</button></li>`; }).join("")
+    + (all.length > state.shown ? `<li><button class="btn quiet more" data-more>Show 40 more</button></li>` : "")
+    || `<li class="none"><b>No questions match</b>Try another topic or a shorter search.</li>`;
+}
+function drawPaper() {
+  $("h1").textContent = $("title").value || "Untitled worksheet";
+  const n = sheet.ids.length, trying = state.trying && !sheet.has(state.trying) ? catalog.byId.get(state.trying) : null;
+  $("n").textContent = n;
+  const block = (q, i) => `<li class="block" data-id="${q.id}" ${i < 0 ? "data-trying" : 'draggable="true"'}>
+      ${i < 0 ? `<div class="trybar"><em>Trying ${esc(q.title)} as question ${n + 1}</em><button class="btn quiet" data-dismiss>Put it back</button><button class="btn pencil" data-keep>${icon.plus}Keep on worksheet</button></div>` : ""}
+      <span class="num">${i < 0 ? n + 1 : i + 1}.</span><div><canvas aria-label="${esc(q.title)} as printed"></canvas><div class="wait"></div></div>
+      <span class="cite">${esc(q.exam)} · ${q.primaryTopic} ${esc(q.topicName)}</span>
+      ${i < 0 ? "" : `<div class="tools"><button class="grip" tabindex="-1" aria-hidden="true">${icon.grip}</button><button data-move="-1" ${i ? "" : "disabled"} aria-label="Move question ${i + 1} up">${icon.up}</button><button data-move="1" ${i < n - 1 ? "" : "disabled"} aria-label="Move question ${i + 1} down">${icon.down}</button><button data-remove aria-label="Remove question ${i + 1}">${icon.x}</button></div>`}</li>`;
+  $("blocks").innerHTML = sheet.ids.map((id, i) => catalog.byId.get(id) ? block(catalog.byId.get(id), i) : "").join("") + (trying ? block(trying, -1) : "")
+    || `<li class="blank">This page is your worksheet. Choose a question on the left to try it here, exactly as it will print.</li>`;
+  $("blocks").querySelectorAll(".block").forEach(el => { const canvas = el.querySelector("canvas"); renderCrop(catalog, catalog.byId.get(el.dataset.id), canvas, canvas.parentElement.clientWidth); });
+  $("print").disabled = !n;
+}
+// re-rendering replaces canvases, so keep already-drawn pixels to avoid a flash while pdf.js redraws
+function repaint(change) {
+  const old = new Map([...$("blocks").querySelectorAll("canvas[data-ready]")].map(c => [c.closest(".block").dataset.id, c]));
+  flip($("blocks"), () => { change(); $("blocks").querySelectorAll(".block").forEach(el => { const kept = old.get(el.dataset.id); if (kept) { kept.dataset.token = ""; el.querySelector("canvas").replaceWith(kept); } }); }, { duration: 420 });
+}
+function reveal(id) { requestAnimationFrame(() => $("blocks").querySelector(`[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: "nearest", behavior: reducedMotion ? "auto" : "smooth" })); }
+function keep(id) { state.trying = ""; sheet.add(id); reveal(id); }
+const set = patch => { Object.assign(state, patch, { shown: 40 }); drawFilters(); flip($("rows"), drawRows); };
+
+$("unit").onchange = e => set({ unit: e.target.value, topic: "all" });
+$("topic").onchange = e => set({ topic: e.target.value });
+$("seg").addEventListener("click", e => e.target.dataset.type && set({ type: e.target.dataset.type }));
+$("q").addEventListener("input", e => { Object.assign(state, { query: e.target.value, shown: 40 }); drawRows(); });
+$("title").addEventListener("input", () => { $("h1").textContent = $("title").value || "Untitled worksheet"; });
+$("print").onclick = () => print();
+$("rows").addEventListener("click", e => {
+  if (e.target.closest("[data-more]")) { state.shown += 40; drawRows(); return; }
+  const row = e.target.closest(".row"); if (!row) return; const id = row.dataset.id;
+  if (e.target.closest(".put")) { if (sheet.has(id)) sheet.remove(id); else keep(id); return; }
+  if (sheet.has(id)) { reveal(id); if (innerWidth <= 900) view("sheet"); return; }
+  state.trying = state.trying === id ? "" : id; drawRows(); repaint(drawPaper); if (state.trying) { reveal(id); if (innerWidth <= 900) view("sheet"); }
+});
+let dragged = "";
+$("blocks").addEventListener("click", e => { const b = e.target.closest("button"), el = e.target.closest(".block"); if (!b || !el) return; const id = el.dataset.id, i = sheet.ids.indexOf(id);
+  if (b.dataset.keep !== undefined) keep(id);
+  else if (b.dataset.dismiss !== undefined) { state.trying = ""; drawRows(); repaint(drawPaper); }
+  else if (b.dataset.move) sheet.move(i, i + Number(b.dataset.move));
+  else if (b.dataset.remove !== undefined) sheet.remove(id); });
+$("blocks").addEventListener("dragstart", e => { const el = e.target.closest(".block"); dragged = el?.dataset.id ?? ""; el?.classList.add("dragging"); });
+$("blocks").addEventListener("dragend", () => { dragged = ""; $("blocks").querySelector(".dragging")?.classList.remove("dragging"); });
+$("blocks").addEventListener("dragover", e => { if (!dragged) return; e.preventDefault(); const over = e.target.closest(".block[draggable]"); if (!over || over.dataset.id === dragged) return;
+  const box = over.getBoundingClientRect(), from = sheet.ids.indexOf(dragged), to = sheet.ids.indexOf(over.dataset.id);
+  // only swap once the pointer is past the neighbour's midpoint, so tall blocks do not flicker back and forth
+  if (from < to ? e.clientY > box.top + box.height / 2 : e.clientY < box.top + box.height / 2) sheet.move(from, to); });
+function view(name) { $("app").dataset.view = name; document.querySelectorAll(".switch button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === name)); scrollTo(0, 0); if (name === "sheet") drawPaper(); }
+document.querySelector(".switch").addEventListener("click", e => { const b = e.target.closest("button"); if (b) view(b.dataset.view); });
+let count = sheet.ids.length;
+sheet.subscribe(ids => { drawRows(); repaint(drawPaper); $("blocks").querySelector(`[data-id="${CSS.escape(dragged || "-")}"]`)?.classList.add("dragging");
+  if (ids.length > count) { $("n").classList.remove("bump"); void $("n").offsetWidth; $("n").classList.add("bump"); } count = ids.length; });
+drawFilters(); drawRows(); drawPaper(); view("bank");
+</script>
+</body>
+</html>

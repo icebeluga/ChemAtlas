@@ -1,8 +1,14 @@
 const assert = require("node:assert/strict");
+const { spawn } = require("node:child_process");
 const { generateKeyPairSync, sign } = require("node:crypto");
+const { once } = require("node:events");
 const { readFileSync, readdirSync, realpathSync } = require("node:fs");
 const { createRequire } = require("node:module");
 const { resolve } = require("node:path");
+
+const args = process.argv.slice(2);
+assert.ok(!args.length || (args.length <= 2 && args[0] === "--browser-regressions"),
+  "Usage: node scripts/release/smoke.cjs [--browser-regressions historical-dist]");
 
 const vitePluginRequire = createRequire(realpathSync("node_modules/@cloudflare/vite-plugin/package.json"));
 const miniflarePath = vitePluginRequire.resolve("miniflare");
@@ -30,18 +36,23 @@ mock.get(issuer).intercept({ path: "/cdn-cgi/access/certs" }).reply(200, {
   keys: [{ ...publicKey.export({ format: "jwk" }), kid: "local" }],
 }).persist();
 
-const worker = new Miniflare({
-  host: "127.0.0.1", port: 0, compatibilityDate: config.compatibility_date < localDate ? config.compatibility_date : localDate,
-  compatibilityFlags: config.compatibility_flags, modulesRoot: resolve("dist/server"),
-  modules: [config.main, ...readdirSync("dist/server", { recursive: true })
-    .filter(path => path !== config.main && /\.m?js$/.test(path))]
-    .map(path => ({ type: "ESModule", path: resolve("dist/server", path),
-      contents: readFileSync(resolve("dist/server", path), "utf8") })),
-  bindings: { CF_ACCESS_TEAM_DOMAIN: new URL(issuer).hostname, CHEMATLAS_STUDENT_ACCESS_AUD: "qa" },
-  fetchMock: mock,
-  assets: { directory: resolve("dist/server", config.assets.directory), binding: config.assets.binding,
-    routerConfig: { invoke_user_worker_ahead_of_assets: true, has_user_worker: true } },
-});
+function startWorker(dist, settings) {
+  const server = resolve(dist, "server");
+  return new Miniflare({
+    host: "127.0.0.1", port: 0, compatibilityDate: settings.compatibility_date < localDate ? settings.compatibility_date : localDate,
+    compatibilityFlags: settings.compatibility_flags, modulesRoot: server,
+    modules: [settings.main, ...readdirSync(server, { recursive: true })
+      .filter(path => path !== settings.main && /\.m?js$/.test(path))]
+      .map(path => ({ type: "ESModule", path: resolve(server, path),
+        contents: readFileSync(resolve(server, path), "utf8") })),
+    bindings: { CF_ACCESS_TEAM_DOMAIN: new URL(issuer).hostname, CHEMATLAS_STUDENT_ACCESS_AUD: "qa" },
+    fetchMock: mock,
+    assets: { directory: resolve(server, settings.assets.directory), binding: settings.assets.binding,
+      routerConfig: { invoke_user_worker_ahead_of_assets: true, has_user_worker: true } },
+  });
+}
+
+const worker = startWorker("dist", config);
 
 async function smoke() {
   const origin = await worker.ready;
@@ -105,6 +116,37 @@ async function smoke() {
     }
   } finally {
     await browser.close();
+  }
+
+  if (args.length) {
+    const historicalDist = args[1] || process.env.CHEMATLAS_TEST_HISTORICAL_DIST;
+    const historicalSha = process.env.CHEMATLAS_TEST_HISTORICAL_SHA;
+    assert.ok(historicalDist && historicalSha, "Build the historical fixture through the release validator before running browser regressions");
+    const historicalWorker = startWorker(historicalDist, JSON.parse(readFileSync(resolve(historicalDist, "server/wrangler.json"))));
+    try {
+      const historicalOrigin = await historicalWorker.ready;
+      const historicalVersionUrl = new URL("/student-version.json", historicalOrigin);
+      for (const jwt of [null, denied]) {
+        const response = await fetch(historicalVersionUrl, { headers: jwt ? { "cf-access-jwt-assertion": jwt } : {} });
+        assert.equal(response.status, 403);
+        await response.body?.cancel();
+      }
+      const response = await fetch(historicalVersionUrl, { headers: { "cf-access-jwt-assertion": allowed } });
+      assert.equal(response.status, 200);
+      assert.equal((await response.json()).application_sha, historicalSha);
+      console.log("PASS signed historical Worker", historicalSha);
+      const child = spawn(process.execPath, [
+        "--test", "--test-concurrency=1", "--test-timeout=120000",
+        "tests/student-redesign.browser.mjs", "tests/student-state.browser.mjs",
+      ], {
+        stdio: "inherit",
+        env: { ...process.env, CHEMATLAS_TEST_ORIGIN: origin.origin, CHEMATLAS_TEST_ACCESS_TOKEN: allowed,
+          CHEMATLAS_TEST_HISTORICAL_ORIGIN: historicalOrigin.origin },
+      });
+      const [code, signal] = await once(child, "exit");
+      assert.equal(code, 0, `Student browser regressions failed (${signal ?? code})`);
+      console.log("PASS both student browser regression suites");
+    } finally { await historicalWorker.dispose(); }
   }
 }
 

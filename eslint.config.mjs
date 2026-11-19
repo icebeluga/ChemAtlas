@@ -12,7 +12,15 @@ const eslintConfig = defineConfig([
     ".sites-runtime/**",
     "outputs/**",
     "work/**",
+    "public/pdf.worker.min.mjs", // Vendored PDF.js distribution asset.
   ]),
+  {
+    files: ["scripts/release/smoke.cjs"],
+    rules: {
+      // Keep the CommonJS smoke runner and its package-relative loading intact.
+      "@typescript-eslint/no-require-imports": "off",
+    },
+  },
   {
     files: ["components/ui/**/*.{ts,tsx}", "hooks/use-mobile.ts"],
     rules: {

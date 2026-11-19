@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Question bank · ChemAtlas prototype</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;700&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+<style>
+body{height:100dvh;display:grid;grid-template-rows:auto auto minmax(0,1fr);overflow:hidden}
+
+/* —— course band: the nine units as tabs, each carrying a heat strip of its topics —— */
+.course{background:var(--surface);border-bottom:1px solid var(--line);padding:var(--s3) var(--s4) 0}
+.units{display:flex;gap:4px}
+.unit{flex:1 1 0;min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:.15rem;padding:.4rem .55rem .45rem;min-height:4.4rem;border-radius:var(--r) var(--r) 0 0;background:var(--tint);border-bottom:3px solid transparent;transition:flex-grow var(--slow) var(--out),background var(--fast),color var(--fast),filter var(--fast)}
+.unit:hover{filter:brightness(.96)}
+.unit b{font:700 1.15rem/1 var(--display);color:var(--deep);display:flex;justify-content:space-between;align-items:baseline}
+.unit b small{font:400 var(--t-xs) var(--body);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.unit span{font-size:var(--t-xs);line-height:1.2;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.heat{display:flex;gap:2px;height:5px;align-self:end}
+.heat i{flex:1;border-radius:1px;background:color-mix(in oklch,var(--mid) calc(var(--d)*100%),#fff)}
+.unit[aria-pressed=true]{background:var(--deep);color:#fff;border-bottom-color:var(--deep)}
+.unit[aria-pressed=true] b,.unit[aria-pressed=true] b small{color:#fff}
+.unit[aria-pressed=true] .heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
+.unit.all{flex:0 0 4.25rem;background:var(--sunk)}
+.unit.all b{color:var(--ink);font-size:var(--t-md)}
+.unit.all[aria-pressed=true]{background:var(--ink);border-bottom-color:var(--ink)}
+.topics-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--med) var(--out)}
+.topics-wrap[data-open]{grid-template-rows:1fr}
+.topics{overflow:hidden;min-height:0;display:flex;flex-wrap:wrap;gap:4px;background:var(--tint);margin:0 calc(var(--s4)*-1);padding:0 var(--s4)}
+.topics-wrap[data-open] .topics{padding-block:var(--s2)}
+.topic{display:inline-flex;align-items:baseline;gap:.4rem;padding:.3rem .55rem;border-radius:var(--r);font-size:var(--t-sm);white-space:nowrap;background:color-mix(in oklch,var(--mid) calc(var(--d)*70%),#fff);transition:background var(--fast),color var(--fast),transform var(--fast) var(--out)}
+.topic:hover{filter:brightness(.95)}.topic:active{transform:scale(.97)}
+.topic b{font:600 var(--t-sm) var(--display);font-variant-numeric:tabular-nums}
+.topic i{font-style:normal;font-size:var(--t-xs);color:var(--ink-2);font-variant-numeric:tabular-nums}
+.topic[aria-pressed=true]{background:var(--deep);color:#fff}.topic[aria-pressed=true] i{color:#fff}
+.topic[data-empty]{background:none;box-shadow:inset 0 0 0 1px var(--line);color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){
+  .unit{animation:rise var(--slow) var(--out) both;animation-delay:calc(var(--i)*35ms)}
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}}
+}
+
+/* —— workspace: list beside the printed question —— */
+.work{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"list pane" "list dock";min-height:0}
+.list{grid-area:list;display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--line);background:var(--surface)}
+.list-head{padding:var(--s3) var(--s4) var(--s2);border-bottom:1px solid var(--line)}
+.list-head h1{font:600 var(--t-lg)/1.2 var(--display);letter-spacing:-.015em;display:flex;gap:var(--s2);align-items:baseline;flex-wrap:wrap}
+.list-head h1 small{font:400 var(--t-sm) var(--body);letter-spacing:0;color:var(--ink-2)}
+.list-head p{font-size:var(--t-sm);color:var(--ink-2);max-width:60ch;margin-top:.15rem}
+.filters{display:flex;flex-wrap:wrap;gap:var(--s2);align-items:center;margin-top:var(--s2)}
+.filters select{height:2rem;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:0 .4rem}
+.check{display:inline-flex;align-items:center;gap:.4rem;font-size:var(--t-sm);cursor:pointer;padding:.25rem .2rem}
+.check input{width:1rem;height:1rem;accent-color:var(--ink)}
+.filters .clear{margin-left:auto;font-size:var(--t-sm);color:var(--pencil);text-decoration:underline;text-underline-offset:3px}
+.rows{list-style:none;margin:0;padding:0;overflow:auto;flex:1;scroll-padding:3rem 0}
+.row{display:grid;grid-template-columns:2.6rem minmax(0,1fr) auto;gap:0 var(--s2);align-items:center;padding:.45rem var(--s2) .45rem .65rem;border-bottom:1px solid var(--line-2);border-left:4px solid transparent;cursor:pointer;background:var(--surface);transition:background var(--fast),border-color var(--fast)}
+.row:hover{background:var(--canvas)}
+.row[aria-selected=true]{background:var(--tint);border-left-color:var(--mid)}
+.row .code{align-self:start;padding-top:.2rem}
+.row .line{display:flex;align-items:center;gap:var(--s2);min-width:0}
+.row .line b{font:600 var(--t-md)/1.3 var(--display);white-space:nowrap}
+.row .line em{font-style:normal;font-size:var(--t-sm);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row p{font-size:var(--t-sm);color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* print-ready is the minority (83 of 735), so it is the one that gets a mark */
+.row .ready{color:var(--ink-2);display:inline-flex;margin-left:auto}
+.list-head h1 .code{font-size:inherit}
+.row .add{border:1px solid var(--line);background:var(--surface)}
+.row .add[aria-pressed=true]{background:var(--deep);border-color:var(--deep);color:#fff}
+.list-foot{display:flex;gap:var(--s4);align-items:center;padding:.4rem var(--s4);border-top:1px solid var(--line);font-size:var(--t-xs);color:var(--ink-2)}
+.list-foot button{margin-left:auto;color:var(--pencil);text-decoration:underline;text-underline-offset:3px}
+
+.pane{grid-area:pane;display:flex;flex-direction:column;min-height:0;background:var(--surface)}
+.pane-head{display:flex;align-items:center;gap:var(--s2);padding:var(--s3) var(--s4);border-bottom:1px solid var(--line);flex-wrap:wrap}
+.pane-head .grow{flex:1 1 12rem;min-width:0}
+.pane-head h2{font:600 var(--t-xl)/1.15 var(--display);letter-spacing:-.02em;display:flex;align-items:center;gap:var(--s2)}
+.pane-head p{font-size:var(--t-sm);color:var(--ink-2)}
+.pane-head .back{display:none}
+.pane-body{overflow:auto;flex:1;padding:var(--s4)}
+.pane-status{display:flex;gap:var(--s2);align-items:start;font-size:var(--t-sm);margin-bottom:var(--s3);color:var(--ink-2)}
+.pane-status[data-s=draft]{color:var(--note);background:var(--note-soft);padding:var(--s2) var(--s3);border-radius:var(--r)}
+.pane-status svg{flex:none;margin-top:.2rem}
+.sheet-of-paper{background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:var(--s4);display:grid;gap:var(--s3)}
+.meta{margin-top:var(--s5)}
+.meta h3{font:600 var(--t-sm) var(--body);color:var(--ink-2);margin-bottom:var(--s1)}
+.chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:var(--s4)}
+.chip{font-size:var(--t-sm);padding:.2rem .5rem;border-radius:var(--r);background:var(--tint)}
+.chip b{font:600 var(--t-sm) var(--display);color:var(--deep)}
+.parts{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:0 var(--s4);font-size:var(--t-sm);margin:0;max-width:44rem}
+.parts>*{padding:.3rem 0;border-top:1px solid var(--line-2);margin:0}.parts dt{font-weight:700}
+
+.dock{grid-area:dock;display:flex;align-items:center;gap:var(--s3);padding:var(--s2) var(--s4);border-top:1px solid var(--line);background:var(--canvas);min-height:3.5rem}
+.dock>b{font:600 var(--t-md) var(--display);white-space:nowrap}
+.dock ol{list-style:none;display:flex;gap:3px;margin:0;padding:2px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.dock li button{width:1.9rem;height:1.9rem;display:grid;place-items:center;border-radius:var(--r-sm);background:var(--mid);color:var(--ink);font:600 var(--t-xs) var(--display);font-variant-numeric:tabular-nums;transition:transform var(--fast) var(--out)}
+.dock li button:hover{transform:translateY(-2px)}
+.dock li button[aria-current=true]{outline:2px solid var(--ink);outline-offset:1px}
+.dock .hint{flex:1;font-size:var(--t-sm);color:var(--ink-2)}
+
+@media (max-width:1100px){
+  .unit:not(.all) span{display:none}
+  .unit{min-height:3.4rem}
+  .unit[aria-pressed=true]:not(.all){flex-grow:6}.unit[aria-pressed=true] span{display:-webkit-box}
+  .unit.all{flex-basis:3.25rem}
+}
+@media (max-width:700px){
+  body{height:auto;display:block;overflow:auto;padding-bottom:4rem}
+  .bar{flex-wrap:wrap;height:auto;padding-block:var(--s2);row-gap:var(--s2)}.bar .nav{height:2.75rem}.bar .search{flex:1 0 100%;height:2.75rem}
+  .course{padding:var(--s2) var(--s3) 0;position:sticky;top:0;z-index:4}
+  .units{overflow-x:auto;scrollbar-width:none;gap:3px}
+  .unit{flex:0 0 2.9rem;min-height:3.1rem}.unit b small{display:none}
+  .unit[aria-pressed=true]:not(.all){flex:0 0 11rem}
+  .topics{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 calc(var(--s3)*-1);padding:0 var(--s3)}
+  .topic{padding:.7rem}
+  .seg button{padding:.7rem}.filters select{height:2.75rem}.check{padding:.7rem .3rem}.pane-head .icon-btn{width:2.75rem;height:2.75rem}.dock li button{width:2.75rem;height:2.75rem}.btn{min-height:2.75rem}
+  .work{display:block}
+  .list{border:0}.rows{overflow:visible}
+  .row{padding-block:.6rem}.row .add{width:2.75rem;height:2.75rem}
+  .list-foot .keys{display:none}
+  .pane{position:fixed;inset:0 0 3.5rem 0;z-index:8;transform:translateX(103%);transition:transform var(--med) var(--out);visibility:hidden}
+  body[data-pane] .pane{transform:none;visibility:visible}
+  .pane-head .back{display:inline-grid}
+  .pane-head h2{font-size:var(--t-lg)}
+  .pane-body{padding:var(--s3)}
+  .sheet-of-paper{padding:var(--s2)}
+  .dock{position:fixed;inset:auto 0 0 0;z-index:9;border-top:1px solid var(--line);box-shadow:0 -6px 20px -12px rgb(20 35 58/.4)}
+  .dock .btn span{display:none}
+}
+</style>
+</head>
+<body>
+<header class="bar" id="bar"></header>
+<nav class="course" aria-label="Units and topics">
+  <div class="units" id="units"></div>
+  <div class="topics-wrap" id="topics-wrap"><div class="topics" id="topics"></div></div>
+</nav>
+<main class="work">
+  <section class="list" aria-label="Questions">
+    <div class="list-head"><h1 id="heading">Loading the catalog…</h1><p id="blurb"></p>
+      <div class="filters" id="filters"></div></div>
+    <ol class="rows" id="rows" role="listbox" aria-label="Results" tabindex="0"></ol>
+    <div class="list-foot"><span class="keys"><kbd>↑</kbd> <kbd>↓</kbd> move</span><span class="keys"><kbd>A</kbd> add or remove</span><span class="keys"><kbd>F</kbd> full page</span><span class="keys"><kbd>/</kbd> search</span><button id="more" hidden>Show 150 more</button></div>
+  </section>
+  <section class="pane" id="pane" aria-label="Printed question"></section>
+  <aside class="dock" id="dock" aria-label="Worksheet"></aside>
+</main>
+
+<script type="module">
+import { loadCatalog, filterQuestions, questionHtml, statusOf, paint, createSheet, flip, topBar, bump, reducedMotion, esc, icon } from "./app.js";
+const $ = id => document.getElementById(id);
+const sheet = createSheet();
+$("bar").innerHTML = topBar("bank", sheet.ids.length) + `<label class="search">${icon.search}<input id="q" type="search" placeholder="Search year, number, topic or wording" aria-label="Search questions"><kbd>/</kbd></label>`;
+
+let catalog;
+try { catalog = await loadCatalog(); }
+catch (error) {
+  $("heading").textContent = "The catalog did not load";
+  $("rows").innerHTML = `<li class="empty"><b>Nothing to show yet</b>${esc(error.message)}. Check that the preview server is running from the project folder.<br><button class="btn" onclick="location.reload()">Try again</button></li>`;
+  throw error;
+}
+const saved = (() => { try { return JSON.parse(sessionStorage.getItem("chematlas-v2-bank") ?? "{}"); } catch { return {}; } })();
+const state = { unit: "all", topic: "all", type: "all", year: "all", ready: false, query: "", selected: "", mode: "question", shown: 150, ...saved };
+const remember = () => { try { sessionStorage.setItem("chematlas-v2-bank", JSON.stringify({ ...state, shown: 150 })); } catch { /* fine */ } };
+const wide = () => innerWidth > 700;
+let results = [];
+
+function drawCourse() {
+  if (!$("units").children.length) $("units").innerHTML = `<button class="unit all" data-unit="all" style="--i:0"><b>All</b><span class="sr">units</span><span aria-hidden="true">${catalog.questions.length}</span></button>` + catalog.units.map(u =>
+    `<button class="unit" data-u="${u.id}" data-unit="${u.id}" style="--i:${u.n}" aria-label="Unit ${u.n}, ${esc(u.name)}, ${u.count} questions"><b>${u.n}<small>${u.count}</small></b><span>${esc(u.name)}</span>
+      <i class="heat" aria-hidden="true">${u.topics.map(t => `<i style="--d:${catalog.density(t.count)}"></i>`).join("")}</i></button>`).join("");
+  $("units").querySelectorAll(".unit").forEach(b => b.setAttribute("aria-pressed", b.dataset.unit === state.unit));
+  const unit = catalog.units.find(u => u.id === state.unit), wrap = $("topics-wrap");
+  wrap.toggleAttribute("data-open", !!unit);
+  if (unit) { $("topics").dataset.u = unit.id; $("topics").innerHTML = unit.topics.map(t =>
+    `<button class="topic" data-topic="${t.id}" style="--d:${catalog.density(t.count)}" ${t.count ? "" : "data-empty"} aria-pressed="${state.topic === t.id}"><b>${t.id}</b>${esc(t.name)}<i>${t.count}</i></button>`).join(""); }
+}
+function drawList() {
+  results = filterQuestions(catalog.questions, state);
+  if (!results.some(q => q.id === state.selected)) state.selected = wide() ? results[0]?.id ?? "" : "";
+  const unit = catalog.units.find(u => u.id === state.unit), topic = unit?.topics.find(t => t.id === state.topic);
+  $("heading").innerHTML = `${topic ? `<span class="code" data-u="${unit.id}">${topic.id}</span> ${esc(topic.name)}` : unit ? `Unit ${unit.n}: ${esc(unit.name)}` : "Every unit"} <small>${results.length.toLocaleString()} question${results.length === 1 ? "" : "s"}</small>`;
+  $("blurb").textContent = topic ? catalog.topicDetails[topic.id]?.description ?? "" : "";
+  const filtered = state.type !== "all" || state.year !== "all" || state.ready || state.query;
+  $("filters").innerHTML = `<div class="seg" role="group" aria-label="Question type">${[["all", "All"], ["MCQ", "Multiple choice"], ["FRQ", "Free response"]].map(([v, l]) => `<button data-type="${v}" aria-pressed="${state.type === v}">${l}</button>`).join("")}</div>
+    <select id="year" aria-label="Exam year"><option value="all">Any year</option>${catalog.years.map(y => `<option ${state.year === y ? "selected" : ""}>${y}</option>`).join("")}</select>
+    <label class="check"><input type="checkbox" id="ready" ${state.ready ? "checked" : ""}> Print-ready only</label>
+    ${filtered ? `<button class="clear" data-clear>Clear filters</button>` : ""}`;
+  $("rows").innerHTML = results.slice(0, state.shown).map(q => { const code = state.topic !== "all" ? state.topic : q.primaryTopic, on = sheet.has(q.id);
+    return `<li class="row" role="option" data-id="${q.id}" data-u="${catalog.topicUnit.get(code)}" aria-selected="${q.id === state.selected}"><span class="code">${code}</span>
+      <div><div class="line"><span class="tag" data-t="${q.type}">${q.type}</span><b>${q.year ?? "Undated"} · ${q.number}</b>${state.topic === "all" ? `<em>${esc(catalog.topicName.get(code))}</em>` : ""}${q.print ? `<span class="ready" title="Print-ready: reviewed layout">${icon.check}<span class="sr">Print-ready</span></span>` : ""}</div><p>${esc(q.text)}</p></div>
+      <button class="icon-btn add" data-add aria-pressed="${on}" aria-label="${on ? "Remove from" : "Add to"} worksheet: ${esc(q.title)}">${on ? icon.check : icon.plus}</button></li>`; }).join("")
+    || `<li class="empty"><b>No questions match</b>Nothing in this view fits those filters. Try another topic, another year, or clear the search.<br><button class="btn" data-clear>Clear filters</button></li>`;
+  $("more").hidden = results.length <= state.shown;
+  remember();
+}
+function drawPane(animate = true) {
+  const q = catalog.byId.get(state.selected), pane = $("pane");
+  if (!q) { pane.innerHTML = `<div class="empty"><b>Pick a question</b>The printed question appears here, with what it tests.</div>`; return; }
+  const i = results.findIndex(r => r.id === q.id), on = sheet.has(q.id), status = statusOf(q), parts = (q.topicParts ?? []).filter(p => p.topics.length);
+  pane.innerHTML = `<div class="pane-head" data-u="${q.unit}">
+      <button class="icon-btn back" data-back aria-label="Back to results">${icon.prev}</button>
+      <div class="grow"><h2><span class="tag" data-t="${q.type}">${q.type}</span>${q.year ?? "Undated"} · Question ${q.number}</h2><p>${esc(q.exam)} · source page${q.sourcePages.length > 1 ? "s" : ""} ${q.sourcePages.join(", ")}${i >= 0 ? ` · ${i + 1} of ${results.length}` : ""}</p></div>
+      <button class="icon-btn" data-step="-1" ${i > 0 ? "" : "disabled"} aria-label="Previous question">${icon.prev}</button><button class="icon-btn" data-step="1" ${i >= 0 && i < results.length - 1 ? "" : "disabled"} aria-label="Next question">${icon.next}</button>
+      <div class="seg" role="group" aria-label="View"><button data-mode="question" aria-pressed="${state.mode === "question"}">Question</button><button data-mode="page" aria-pressed="${state.mode === "page"}">Full page</button></div>
+      <button class="btn ${on ? "" : "primary"}" data-toggle aria-pressed="${on}">${on ? icon.check + "On worksheet" : icon.plus + "Add to worksheet"}</button></div>
+    <div class="pane-body" id="pane-body">
+      <div class="pane-status" data-s="${status.key}">${status.key === "draft" ? icon.flag : icon.check}<span><b>${status.label}.</b> ${esc(status.detail)}</span></div>
+      <div class="sheet-of-paper">${questionHtml(q, state.mode)}</div>
+      <div class="meta"><h3>Topics</h3><div class="chips"><span class="chip" data-u="${q.unit}"><b>${q.primaryTopic}</b> ${esc(q.topicName)}</span>${q.related.filter(t => t !== q.primaryTopic).map(t => `<span class="chip" data-u="${catalog.topicUnit.get(t)}"><b>${t}</b> ${esc(catalog.topicName.get(t))}</span>`).join("")}</div>
+      ${parts.length ? `<h3>What each part tests</h3><dl class="parts">${parts.map(p => `<dt>${esc(p.label)}</dt><dd>${esc(p.rationale || p.topicNames.join(", "))}</dd><dd class="code" data-u="${catalog.topicUnit.get(p.topics[0])}">${p.topics.join(" · ")}</dd>`).join("")}</dl>` : ""}</div></div>`;
+  paint(catalog, pane);
+  if (animate && !reducedMotion) $("pane-body").animate([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }], { duration: 180, easing: "cubic-bezier(.2,.8,.2,1)" });
+}
+function drawDock() {
+  const n = sheet.ids.length; $("nav-count").textContent = n;
+  $("dock").innerHTML = `<b>Worksheet</b>` + (n ? `<ol>${sheet.ids.map((id, i) => { const q = catalog.byId.get(id); return q ? `<li data-id="${id}"><button data-u="${q.unit}" data-pick="${id}" aria-current="${id === state.selected}" aria-label="Question ${i + 1}: ${esc(q.title)}, topic ${q.primaryTopic}" title="${esc(q.title)} · ${q.primaryTopic} ${esc(q.topicName)}">${i + 1}</button></li>` : ""; }).join("")}</ol>`
+      : `<span class="hint">Empty. Add questions and they line up here in order.</span>`)
+    + `<a class="btn ${n ? "primary" : "quiet"}" href="builder.html">${n ? `Arrange ${n}<span>&nbsp;in Practice builder</span>` : "Practice builder"}${icon.next}</a>`;
+}
+function select(id, reveal) {
+  state.selected = id; state.mode = "question";
+  $("rows").querySelectorAll(".row").forEach(r => r.setAttribute("aria-selected", r.dataset.id === id));
+  if (reveal) $("rows").querySelector(`[data-id="${CSS.escape(id)}"]`)?.scrollIntoView({ block: "nearest" });
+  drawPane(); drawDock(); remember();
+}
+const set = patch => { Object.assign(state, patch, { shown: 150 }); drawCourse(); flip($("rows"), drawList); drawPane(); drawDock(); };
+const clear = () => { $("q").value = ""; set({ type: "all", year: "all", ready: false, query: "" }); };
+
+$("units").addEventListener("click", e => { const b = e.target.closest(".unit"); if (!b) return; set({ unit: b.dataset.unit === state.unit ? "all" : b.dataset.unit, topic: "all" }); b.scrollIntoView({ inline: "nearest", block: "nearest" }); });
+$("topics").addEventListener("click", e => { const b = e.target.closest(".topic"); if (b) set({ topic: state.topic === b.dataset.topic ? "all" : b.dataset.topic }); });
+$("filters").addEventListener("click", e => { if (e.target.dataset.type) set({ type: e.target.dataset.type }); if (e.target.dataset.clear !== undefined) clear(); });
+$("filters").addEventListener("change", e => { if (e.target.id === "year") set({ year: e.target.value }); if (e.target.id === "ready") set({ ready: e.target.checked }); });
+$("q").value = state.query;
+$("q").addEventListener("input", e => { Object.assign(state, { query: e.target.value, shown: 150 }); drawList(); drawPane(false); drawDock(); });
+$("more").onclick = () => { state.shown += 150; drawList(); };
+$("rows").addEventListener("click", e => {
+  if (e.target.closest("[data-clear]")) { clear(); return; }
+  const row = e.target.closest(".row"); if (!row) return;
+  if (e.target.closest("[data-add]")) { sheet.toggle(row.dataset.id); return; }
+  select(row.dataset.id); document.body.toggleAttribute("data-pane", true);
+});
+const step = d => { const i = results.findIndex(q => q.id === state.selected), next = results[Math.max(0, Math.min(results.length - 1, i + d))]; if (next && next.id !== state.selected) select(next.id, true); };
+document.addEventListener("keydown", e => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.target.matches?.("input,select,textarea")) { if (e.key === "Escape") e.target.blur(); return; }
+  const key = e.key.toLowerCase();
+  if (key === "/") { e.preventDefault(); $("q").focus(); }
+  else if (key === "arrowdown" || key === "j") { e.preventDefault(); step(1); }
+  else if (key === "arrowup" || key === "k") { e.preventDefault(); step(-1); }
+  else if (key === "a" && state.selected) sheet.toggle(state.selected);
+  else if (key === "f" && state.selected) { state.mode = state.mode === "page" ? "question" : "page"; drawPane(); }
+  else if (key === "escape") document.body.removeAttribute("data-pane");
+});
+$("pane").addEventListener("click", e => { const b = e.target.closest("button"); if (!b) return;
+  if (b.dataset.step) step(Number(b.dataset.step)); else if (b.dataset.toggle !== undefined) sheet.toggle(state.selected);
+  else if (b.dataset.mode) { state.mode = b.dataset.mode; drawPane(); } else if (b.dataset.back !== undefined) document.body.removeAttribute("data-pane"); });
+$("dock").addEventListener("click", e => { const b = e.target.closest("[data-pick]"); if (b) { select(b.dataset.pick, true); document.body.toggleAttribute("data-pane", true); } });
+let count = sheet.ids.length;
+sheet.subscribe(s => {
+  $("rows").querySelectorAll(".row").forEach(r => { const on = s.ids.includes(r.dataset.id), b = r.querySelector("[data-add]"); if (b.getAttribute("aria-pressed") !== String(on)) { b.setAttribute("aria-pressed", on); b.innerHTML = on ? icon.check : icon.plus; b.setAttribute("aria-label", `${on ? "Remove from" : "Add to"} worksheet`); } });
+  const toggle = $("pane").querySelector("[data-toggle]"), on = s.ids.includes(state.selected);
+  if (toggle) { toggle.setAttribute("aria-pressed", on); toggle.classList.toggle("primary", !on); toggle.innerHTML = on ? icon.check + "On worksheet" : icon.plus + "Add to worksheet"; }
+  flip($("dock"), drawDock); if (s.ids.length > count) { bump($("nav-count")); $("dock").querySelector("ol")?.scrollTo({ left: 1e5 }); } count = s.ids.length;
+});
+drawCourse(); drawList(); drawPane(false); drawDock();
+</script>
+</body>
+</html>

@@ -12,7 +12,7 @@ test("artifact gate rejects disguised question text and unexpected protected fil
   try {
     await mkdir(resolve(root, "practice-builder"), { recursive: true });
     await mkdir(resolve(root, "assets"));
-    for (const name of ["index.html", "practice-builder/index.html", "404.html", ".nojekyll", "pdf.worker.min.mjs", "favicon.svg"]) await writeFile(resolve(root, name), "fixture");
+    for (const name of ["index.html", "practice-builder/index.html", "404.html", ".nojekyll", "pdf.worker.min.mjs", "favicon.svg", "favicon.png"]) await writeFile(resolve(root, name), "fixture");
     const catalog = JSON.parse(await readFile("public/student-questions.json", "utf8"));
     const text = catalog.questions.find(q => q.textPreview?.length > 70).textPreview;
     await writeFile(resolve(root, "assets/data.js"), `export default ${JSON.stringify(text)}`);

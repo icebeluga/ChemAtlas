@@ -11,13 +11,14 @@ type Props = {
   worksheetCount: number;
   reviewCount: number;
   inert: boolean;
+  onSignOut?: () => void;
   onBank: () => void;
   onOpen: (destination: TopBarDestination) => void;
   search?: { value: string; onChange: (value: string) => void };
 };
 
 // Shared top bar for every student screen: two primary destinations plus the older tools under "More".
-export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank, onOpen, search }: Props) {
+export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank, onOpen, search, onSignOut }: Props) {
   const [open, setOpen] = useState(false);
   const more = useRef<HTMLDivElement>(null);
   const moreButton = useRef<HTMLButtonElement>(null);
@@ -86,5 +87,6 @@ export function AppTopBar({ current, worksheetCount, reviewCount, inert, onBank,
         onChange={event => search.onChange(event.target.value)} onKeyDown={event => { if (event.key === "Escape") event.currentTarget.blur(); }} />
       <span className="ca-kbd" aria-hidden="true">/</span>
     </label>}
+    {onSignOut && <button type="button" className="ca-sign-out" onClick={onSignOut}>Log out</button>}
   </header>;
 }

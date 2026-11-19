@@ -7,6 +7,7 @@ import { validateSupabaseConfig } from "./lib/supabase-config.mjs";
 const root = fileURLToPath(new URL(".", import.meta.url));
 const publicAssets = [
   { name: "favicon.svg", type: "image/svg+xml" },
+  { name: "favicon.png", type: "image/png" },
   { name: "pdf.worker.min.mjs", type: "text/javascript" },
 ];
 export default defineConfig(({ mode }) => {

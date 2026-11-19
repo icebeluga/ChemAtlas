@@ -1,11 +1,12 @@
 import { Component, lazy, Suspense, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { Eye, EyeOff, LockKeyhole, ShieldCheck } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
 import { authorizeSession, contentResponse, getStimuli, isApproved, passwordSetupRequested, resetAuthorization, setStimuli, sitePath, supabase } from "../lib/content-supabase";
 import type { StimulusDocument } from "../lib/content-types";
 
 const ChemAtlas = lazy(() => import("../components/student-app").then(module => ({ default: module.ChemAtlas })));
 
-class StudentAppBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+class StudentAppBoundary extends Component<{ children: ReactNode; onSignOut: () => void }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
   render() {
@@ -15,6 +16,7 @@ class StudentAppBoundary extends Component<{ children: ReactNode }, { failed: bo
       <h1 id="load-error-title">ChemAtlas could not open</h1>
       <p role="alert">The application could not finish loading. Reload to try again. Your session and saved progress will stay in this browser.</p>
       <button className="primary" onClick={() => location.reload()}>Reload ChemAtlas</button>
+      <button className="ca-auth-text" onClick={this.props.onSignOut}>Log out</button>
     </section></main>;
   }
 }
@@ -25,6 +27,7 @@ export function AuthApp() {
   const [passwordSetup, setPasswordSetup] = useState(passwordSetupRequested);
   const [message, setMessage] = useState("");
   const [busy, setBusy] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const current = useRef<Session | null>(null);
   const verifiedUser = useRef<string | undefined>(undefined);
   const sequence = useRef(0);
@@ -138,24 +141,28 @@ export function AuthApp() {
     finally { setBusy(false); }
   }
 
-  if (access.phase === "ready" && !passwordSetup) return <>
-    <div className="ca-auth-session"><span>Private student access · Progress saved in this browser</span><button type="button" onClick={() => void logout()}>Log out</button></div>
-    <StudentAppBoundary key={access.user}>
-      <Suspense fallback={<p className="ca-auth-loading" role="status">Opening ChemAtlas…</p>}>
-        <ChemAtlas worksheet={location.pathname.replace(/\/$/, "").endsWith("/practice-builder")} />
+  if (access.phase === "ready" && !passwordSetup) return <div className="ca-pages-student">
+    <StudentAppBoundary key={access.user} onSignOut={() => void logout()}>
+      <Suspense fallback={<div className="ca-auth-loading"><p role="status">Opening ChemAtlas…</p><button className="ca-auth-text" onClick={() => void logout()}>Log out</button></div>}>
+        <ChemAtlas onSignOut={() => void logout()} />
       </Suspense>
     </StudentAppBoundary>
-  </>;
+  </div>;
   const signedIn = !!access.user;
-  return <main className="ca-auth-shell"><section className="ca-auth-card" aria-labelledby="auth-title">
-    <div className="ca-auth-mark">ChemAtlas</div><p className="eyebrow">AP CHEMISTRY STUDIO</p>
-    <h1 id="auth-title">{passwordSetup && signedIn ? "Set your password" : access.phase === "pending" ? "Approval required" : "Student sign in"}</h1>
+  return <main className="ca-auth-shell">
+    <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span><span className="ca-auth-subtitle">AP Chemistry studio</span><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></header>
+    <section className="ca-auth-card" aria-labelledby="auth-title">
+    <p className="ca-auth-eyebrow">CHEMATLAS / STUDENT PORTAL</p>
+    <h1 id="auth-title">{passwordSetup && signedIn ? "Set your password" : access.phase === "pending" ? "Approval required" : "Welcome back"}</h1>
     {access.phase === "checking" ? <p role="status">Checking your access…</p> : <>
       {access.phase === "pending" ? <p>Your account is signed in. The owner must approve it before questions and PDFs are available.</p>
-        : access.phase === "error" ? <p role="alert">{access.error}</p> : <p>Use the account invited by your teacher. Questions and source PDFs are available to approved students.</p>}
+        : access.phase === "error" ? <p role="alert">{access.error}</p> : <p className="ca-auth-intro">Sign in to continue your AP Chemistry practice.</p>}
       {(!signedIn || passwordSetup) && <form onSubmit={event => void submit(event)}>
-        {!passwordSetup && <label>Email<input name="email" type="email" autoComplete="username" required /></label>}
-        <label>Password<input name="password" type="password" autoComplete={passwordSetup ? "new-password" : "current-password"} minLength={passwordSetup ? 12 : undefined} required /></label>
+        {!passwordSetup && <label>Email address<input aria-label="Email" name="email" type="email" placeholder="you@example.com" autoComplete="username" required /></label>}
+        <label htmlFor="student-password">Password</label>
+        <div className="ca-auth-password"><input id="student-password" name="password" type={showPassword ? "text" : "password"} autoComplete={passwordSetup ? "new-password" : "current-password"} minLength={passwordSetup ? 12 : undefined} required />
+          <button type="button" aria-label={showPassword ? "Hide password" : "Show password"} aria-pressed={showPassword} onClick={() => setShowPassword(value => !value)}>{showPassword ? <EyeOff size={22} aria-hidden="true" /> : <Eye size={22} aria-hidden="true" />}</button>
+        </div>
         <button className="primary" disabled={busy}>{busy ? "Please wait…" : passwordSetup ? "Save password" : "Log in"}</button>
       </form>}
       {!signedIn && <button className="ca-auth-text" disabled={busy} onClick={async () => {
@@ -169,6 +176,6 @@ export function AuthApp() {
       {signedIn && <div className="ca-auth-actions"><button className="outline" onClick={() => retry.current()}>Check access again</button><button className="outline" onClick={() => void logout()}>Log out</button></div>}
     </>}
     {message && <p role="status">{message}</p>}
-    <p className="ca-auth-footnote">Your saved progress and worksheets stay in this browser when you log out. Use a personal browser profile on shared devices.</p>
-  </section></main>;
+    <div className="ca-auth-footnote"><ShieldCheck size={26} aria-hidden="true" /><div><b>Access is limited to approved students.</b><p>Worksheets and progress are saved in this browser.</p><small>Use a personal browser profile on shared devices.</small></div></div>
+  </section><footer className="ca-auth-footer">ChemAtlas · AP Chemistry practice studio</footer></main>;
 }

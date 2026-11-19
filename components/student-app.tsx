@@ -47,7 +47,7 @@ function subscribeToBankViewport(callback: () => void) {
 const getWideBankViewport = () => matchMedia(bankViewportQuery).matches;
 const getServerBankViewport = () => true;
 
-export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
+export function ChemAtlas({ worksheet = false, onSignOut }: { worksheet?: boolean; onSignOut?: () => void }) {
   const stimulusDocument = getStimuli();
   const locationHref = useSyncExternalStore(subscribeToNavigation, getNavigationSnapshot, getServerNavigationSnapshot);
   const wideBank = useSyncExternalStore(subscribeToBankViewport, getWideBankViewport, getServerBankViewport);
@@ -325,7 +325,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     </dialog>
     <a className="ca-skip" href="#main-content" inert={phonePane}>Skip to content</a>
     <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length} reviewCount={reviewQuestions.length}
-      inert={phonePane}
+      inert={phonePane} onSignOut={onSignOut}
       onBank={() => navigate("library")}
       onOpen={destination => { if (destination === "review" || destination === "legacy") { setReviewKind(destination); navigate("review"); } else navigate(destination); }}
       search={bankView ? { value: query, onChange: value => bankFilters({ query: value }) } : undefined} />

@@ -2,26 +2,29 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { test } from "node:test";
-import { createServer } from "vite";
+import { fork } from "node:child_process";
+import { once } from "node:events";
 
-test("Pages development serves the PDF worker and favicon without exposing protected public assets", async () => {
+test("Pages development serves the PDF worker and favicon without exposing protected public assets", { timeout: 30_000 }, async () => {
   const config = {
     VITE_SUPABASE_URL: "http://127.0.0.1:54321",
     VITE_SUPABASE_PUBLISHABLE_KEY: "sb_publishable_localfixture",
     VITE_CHEMATLAS_CONTENT_PREFIX: "shared/releases/fixture",
   };
-  const previous = Object.fromEntries(Object.keys(config).map(key => [key, process.env[key]]));
-  Object.assign(process.env, config);
-  let server;
+  // Vite's configuration loader can retain worker handles on Linux. Keep its
+  // lifetime in an owned child so it cannot prevent the Node test worker exiting.
+  const server = fork(new URL("./fixtures/pages-dev-server.mjs", import.meta.url), {
+    env: { ...process.env, ...config }, stdio: ["ignore", "ignore", "inherit", "ipc"],
+  });
   try {
-    server = await createServer({
-      configFile: resolve("vite.pages.config.ts"),
-      server: { host: "127.0.0.1", port: 0, hmr: false },
-      optimizeDeps: { noDiscovery: true, include: [] },
-      logLevel: "error",
+    const origin = await new Promise((accept, reject) => {
+      server.once("error", reject);
+      server.once("exit", () => reject(new Error("Pages test server exited before becoming ready")));
+      server.once("message", message => {
+        if (message.type === "ready") accept(message.origin);
+        else reject(new Error("Pages test server could not start"));
+      });
     });
-    await server.listen();
-    const origin = `http://127.0.0.1:${server.httpServer.address().port}/ChemAtlas/`;
     for (const [name, type] of [["pdf.worker.min.mjs", "text/javascript"], ["favicon.svg", "image/svg+xml"]]) {
       const response = await fetch(`${origin}${name}?v=regression`);
       assert.equal(response.status, 200);
@@ -38,10 +41,16 @@ test("Pages development serves the PDF worker and favicon without exposing prote
       assert.match(await response.text(), /<html/i);
     }
   } finally {
-    await server?.close();
-    for (const [key, value] of Object.entries(previous)) {
-      if (value === undefined) delete process.env[key];
-      else process.env[key] = value;
+    if (server.exitCode === null && server.signalCode === null) {
+      const exited = once(server, "exit");
+      if (server.connected) server.send({ type: "close" });
+      else server.kill();
+      const timeout = setTimeout(() => server.kill(), 5000);
+      try {
+        const [code, signal] = await exited;
+        assert.equal(signal, null, "Pages test server did not shut down cleanly");
+        assert.equal(code, 0, "Pages test server failed during shutdown");
+      } finally { clearTimeout(timeout); }
     }
   }
 });

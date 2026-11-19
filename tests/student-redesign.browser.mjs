@@ -624,7 +624,9 @@ test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", 
   const page = await openPage(390, "/?view=detail&question=mcq-2008-1-29");
   t.after(() => page.close());
   await waitForQuestionCanvases(page, 1);
+  await page.locator(".ca-details>summary").click();
   await page.getByText(/Check the worksheet PDF for the final layout/).waitFor();
+  await page.locator(".ca-details>summary").click();
   await page.getByRole("button", { name: "Question crop", exact: true }).click();
   await page.getByText("Shared with neighbouring questions", { exact: true }).waitFor();
   await waitForQuestionCanvases(page, 2);

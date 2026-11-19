@@ -91,6 +91,9 @@ policies to alter this behavior during the rehearsal.
 3. Verify repository variables for the actual Supabase URL, publishable key,
    and content prefix. Never supply an administrative key to Vite or Pages.
 4. Verify main-branch protections and the protected `github-pages` environment.
+   Follow [the staged required-CI setup](REQUIRED-CI.md): require the common
+   PR-head check now, then add the uniquely named Pages check at the stack
+   transition so PR #6 is not blocked by a workflow it does not contain.
    The existing workflow limits packaging/deployment to an enabled push to
    `main`; development branches and manual validation runs cannot deploy.
 5. Only after the owner approves the exact merged SHA and validated artifact,

@@ -12,6 +12,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   validate:
+    name: Validate GitHub Pages application (no deploy)
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     env:

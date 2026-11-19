@@ -1,5 +1,9 @@
 # Local live Supabase rehearsal, 2026-11-18
 
+This records the initial rehearsal. See [RELEASE-HANDOFF.md](RELEASE-HANDOFF.md)
+and the final sanitized PR #8 report for the subsequent hosted checks, fixes,
+and remaining release gates.
+
 Branch: `codex/github-pages-supabase-migration`. Starting commit:
 `31bf1189f6b45cb2020bba335ba5f586f45bb9f1` (PR #8). The starting checkout
 was clean. PR #8 remains stacked on PR #6; neither PR was merged.

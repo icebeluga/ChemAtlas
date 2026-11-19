@@ -3,6 +3,7 @@ import { before, after, test } from "node:test";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { chromium } from "playwright";
 import { PDFDocument } from "pdf-lib";
+import { parseProgress, serializeProgress } from "../lib/progress-transfer.mjs";
 import { startFixture } from "./fixtures/supabase-http.mjs";
 import { assertPagesArtifact } from "../scripts/pages/assert-artifact.mjs";
 
@@ -148,6 +149,61 @@ test("approved student restores progress, views a real PDF, generates a workshee
     evidence.push({ scenario: "approved-desktop", result: "real PDF painted; worksheet PDF downloaded and parsed; drafts/progress survived reload and logout" });
   } finally { await context.close(); }
 });
+test("progress export and confirmed import round trip without native browser dialogs or changes to worksheets", async () => {
+  const { context, page, errors } = await open();
+  try {
+    const id = "mcq-2008-1-29";
+    await page.evaluate(id => localStorage.setItem("apchem-studio-v2", JSON.stringify({
+      progress: { [id]: { attempts: 2, wrong: 1, correct: 1, last: "2026-11-18", history: [] } },
+      overrides: {}, sessions: 2, banks: [], questions: [],
+    })), id);
+    await login(page); await bankReady(page);
+    await page.locator(".ca-add").nth(0).click();
+    await page.locator(".ca-add").nth(1).click();
+    await page.getByRole("button", { name: "More", exact: true }).click();
+    await page.getByRole("button", { name: "Progress", exact: true }).click();
+    await page.getByRole("heading", { name: "Progress & patterns", exact: true }).waitFor();
+    const snapshot = () => page.evaluate(() => {
+      const saved = JSON.parse(localStorage.getItem("apchem-studio-v2"));
+      return { progress: saved.progress, overrides: saved.overrides, sessions: saved.sessions };
+    });
+    const before = await snapshot();
+    const [file] = await Promise.all([page.waitForEvent("download"), page.getByRole("button", { name: "Export progress (.json)", exact: true }).click()]);
+    const exported = await readFile(await file.path(), "utf8");
+    assert.deepEqual(JSON.parse(JSON.stringify(parseProgress(exported))), before);
+    assert(!/access_token|refresh_token|textPreview|sourceRegions/.test(exported));
+    const imported = { ...before, progress: { [id]: { ...before.progress[id], attempts: 9, wrong: 8 } }, overrides: { [id]: "3.4" }, sessions: 12 };
+    const input = page.locator('input[type="file"][accept=".json,application/json"]');
+    const upload = { name: "progress-rehearsal.json", mimeType: "application/json", buffer: Buffer.from(serializeProgress(imported)) };
+    const confirmation = page.getByRole("alertdialog", { name: "Replace saved progress?", exact: true });
+    await input.setInputFiles(upload);
+    await confirmation.waitFor();
+    assert.deepEqual(await snapshot(), before);
+    assert.equal(await page.evaluate(() => document.activeElement?.textContent), "Cancel");
+    await confirmation.getByRole("button", { name: "Cancel", exact: true }).click();
+    await confirmation.waitFor({ state: "hidden" });
+    assert.deepEqual(await snapshot(), before);
+    assert.equal(await page.evaluate(() => document.activeElement?.textContent), "Import progress (.json)");
+    await input.setInputFiles(upload); await confirmation.waitFor();
+    await page.keyboard.press("Escape"); await confirmation.waitFor({ state: "hidden" });
+    assert.deepEqual(await snapshot(), before);
+    await input.setInputFiles(upload); await confirmation.waitFor();
+    await confirmation.getByRole("button", { name: "Replace progress", exact: true }).click();
+    await page.getByRole("status").filter({ hasText: "Progress imported." }).waitFor();
+    assert.deepEqual(await snapshot(), imported);
+    await page.reload();
+    await page.getByRole("heading", { name: "Progress & patterns", exact: true }).waitFor();
+    assert.deepEqual(await snapshot(), imported);
+    assert.equal(await page.getByRole("navigation", { name: "Main navigation" }).getByLabel("2 selected", { exact: true }).count(), 1);
+    await input.setInputFiles({ name: "invalid.json", mimeType: "application/json", buffer: Buffer.from('{"format":"unsupported"}') });
+    await page.getByRole("status").filter({ hasText: "Unsupported ChemAtlas progress export format or version." }).waitFor();
+    assert.deepEqual(await snapshot(), imported);
+    assert.equal(await confirmation.isVisible(), false);
+    assert.deepEqual(errors, []);
+    evidence.push({ scenario: "progress-transfer", result: "real export validated; cancel/Escape preserve state; explicit confirmation imports attempts/overrides/sessions, survives reload and retains worksheets; invalid import denied" });
+  } finally { await context.close(); }
+});
+
 test("approved phone student can navigate the Question Bank and PDF viewer under the Pages base path", async () => {
   const { context, page, errors } = await open(390);
   try {

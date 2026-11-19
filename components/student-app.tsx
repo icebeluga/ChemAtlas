@@ -8,6 +8,7 @@ import { ProtectedDocumentLink } from "@/components/student/protected-document-l
 import { planWorksheet } from "../lib/worksheet.mjs";
 import { buildChemAtlasUrl, parseChemAtlasLocation } from "../app/navigation.mjs";
 import { serializeProgress, parseProgress } from "../lib/progress-transfer.mjs";
+import type { ProgressSnapshot } from "../lib/progress-transfer.mjs";
 
 import { PracticeBuilder } from "@/components/practice-builder";
 import { AppTopBar } from "@/components/student/app-top-bar";
@@ -59,6 +60,16 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
   const typeFilter = route.type;
   const query = route.query;
   const [notice, setNotice] = useState("");
+  const [pendingProgressImport, setPendingProgressImport] = useState<ProgressSnapshot | null>(null);
+  const progressImportDialog = useRef<HTMLDialogElement>(null);
+  const progressImportInput = useRef<HTMLInputElement>(null);
+  const progressImportButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    const dialog = progressImportDialog.current;
+    if (!dialog) return;
+    if (pendingProgressImport && !dialog.open) dialog.showModal();
+    else if (!pendingProgressImport && dialog.open) dialog.close();
+  }, [pendingProgressImport]);
   const [catalogLoadFailed, setCatalogLoadFailed] = useState(false);
   const onCatalogError = useCallback((message: string) => {
     setCatalogLoadFailed(true);
@@ -159,15 +170,19 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       return;
     }
     try {
-      const imported = parseProgress(await file.text());
-      if (!window.confirm("Replace this browser's progress, classifications, and session count with the imported copy? This cannot be undone.")) return;
-      browserState.set("progress", imported.progress);
-      browserState.set("overrides", imported.overrides);
-      browserState.set("sessions", imported.sessions);
-      setNotice("Progress imported. Your bundled catalog and source PDFs were not changed.");
+      setPendingProgressImport(parseProgress(await file.text()));
     } catch (error) {
       setNotice(error instanceof Error ? error.message : "Unable to read the progress file.");
     }
+  }
+
+  function confirmProgressImport() {
+    if (!pendingProgressImport) return;
+    browserState.set("progress", pendingProgressImport.progress);
+    browserState.set("overrides", pendingProgressImport.overrides);
+    browserState.set("sessions", pendingProgressImport.sessions);
+    setPendingProgressImport(null);
+    setNotice("Progress imported. Your bundled catalog and source PDFs were not changed.");
   }
 
   const sessionQuestions = route.sessionIds.flatMap(id => { const question = questions.find(q => q.id === id); return question ? [question] : []; });
@@ -298,6 +313,16 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
     saveWorksheets({ ...backup, drafts: backup.drafts.map(draft => draft.id === activeDraft.id ? next : draft) });
   }
   return <div className="ca2">
+    <dialog className="ca-progress-dialog" ref={progressImportDialog} role="alertdialog"
+      aria-labelledby="progress-import-title" aria-describedby="progress-import-description"
+      onClose={() => { setPendingProgressImport(null); progressImportButton.current?.focus(); }}>
+      <h2 id="progress-import-title">Replace saved progress?</h2>
+      <p id="progress-import-description">Replace this browser’s attempts, topic assignments, and session count with the imported copy. Worksheets and source PDFs stay in place. Export your current progress first if you want to keep it.</p>
+      <div className="ca-progress-dialog-actions">
+        <button type="button" className="outline" onClick={() => setPendingProgressImport(null)}>Cancel</button>
+        <button type="button" className="primary" onClick={confirmProgressImport}>Replace progress</button>
+      </div>
+    </dialog>
     <a className="ca-skip" href="#main-content" inert={phonePane}>Skip to content</a>
     <AppTopBar current={worksheet ? "worksheet" : bankView ? "bank" : "other"} worksheetCount={worksheetIds.length} reviewCount={reviewQuestions.length}
       inert={phonePane}
@@ -360,7 +385,7 @@ export function ChemAtlas({ worksheet = false }: { worksheet?: boolean }) {
       </section>}
       {view === "practice" && !current && <div className="page narrow"><div className="empty-state"><span>✦</span><b>No questions in this session</b><p>Choose a unit or topic with indexed questions.</p><button className="primary" onClick={()=>navigate("library")}>Browse questions</button></div></div>}
 
-      {view === "progress" && <div className="page"><div className="eyebrow">YOUR LEARNING, OVER TIME</div><h1 className="page-title">Progress & patterns</h1><p className="muted">Attempts, missed questions, and repeated review needs are saved in this browser.</p><div className="panel" style={{marginBlock:"1rem"}}><div className="eyebrow">DOMAIN MIGRATION</div><h2>Export or import browser progress</h2><p className="muted">Transfer attempts, topic overrides, and session count between your old and new ChemAtlas addresses. Import replaces the current browser’s progress. Uploaded personal PDF files are stored separately in IndexedDB and are not included in this progress export.</p><div style={{display:"flex",gap:"0.75rem",alignItems:"center",flexWrap:"wrap"}}><button className="outline" onClick={exportBrowserProgress}>Export progress (.json)</button><label className="outline" style={{cursor:"pointer",padding:"0.65rem 1rem"}}>Import progress (.json)<input type="file" accept=".json,application/json" style={{display:"none"}} onChange={e=>{void importBrowserProgress(e.currentTarget.files?.[0]);e.currentTarget.value="";}}/></label></div></div><div className="stats progress-stats"><div className="stat"><span className="stat-icon peach">↗</span><div><small>TOTAL ATTEMPTS</small><b>{attempts}</b></div></div><div className="stat"><span className="stat-icon rose">⌁</span><div><small>MISSED ANSWERS</small><b>{misses}</b></div></div><div className="stat"><span className="stat-icon lavender">✦</span><div><small>CONCEPTS MASTERED</small><b>{mastered}</b></div></div></div><div className="panel"><div className="panel-head"><div><div className="eyebrow">FOCUS NEXT</div><h2>Concepts to revisit</h2></div><button className="outline" onClick={()=>reviewSession()}>Build review session →</button></div>{weakConcepts.length?weakConcepts.map(c=><div className="weak-row" key={c.id}><div className="weak-icon">⌁</div><div><b>{c.id} · {c.name}</b><small>{c.ids.size} question{c.ids.size===1?"":"s"} attempted</small></div><span className="missed-count">{c.wrong} missed · {c.attempts} attempts</span><button className="row-arrow" onClick={()=>reviewSession(c.id)}>Practice →</button></div>):<div className="empty-state"><span>✧</span><b>Your review map will grow as you practice</b><p>Mark a response as missed to focus future sessions on that question and topic.</p></div>}</div><div className="panel history-panel"><div className="eyebrow">MISSED QUESTIONS</div><h2>Question history</h2>{weakRows.length?weakRows.slice(0,60).map(q=><div className="history-row" key={q.id}><span className="history-x">↻</span><div><b>{q.type} {q.number} · {q.displayName}</b><small>{q.year || q.exam} · {q.source}</small></div><span>{progress[q.id]?.wrong} missed</span><button className="row-arrow" onClick={()=>{setQueue([q]);setIndex(0);setPageIndex(0);setSubmitted(false);setSelfResult(null);setWork("");navigate("practice",{questionId:q.id,sessionIds:[q.id],step:0});}}>Review →</button></div>):<div className="small-empty">No missed questions yet.</div>}</div></div>}
+      {view === "progress" && <div className="page"><div className="eyebrow">YOUR LEARNING, OVER TIME</div><h1 className="page-title">Progress & patterns</h1><p className="muted">Attempts, missed questions, and repeated review needs are saved in this browser.</p><div className="panel" style={{marginBlock:"1rem"}}><div className="eyebrow">DOMAIN MIGRATION</div><h2>Export or import browser progress</h2><p className="muted">Transfer attempts, topic overrides, and session count between your old and new ChemAtlas addresses. Import replaces the current browser’s progress. Uploaded personal PDF files are stored separately in IndexedDB and are not included in this progress export.</p><div style={{display:"flex",gap:"0.75rem",alignItems:"center",flexWrap:"wrap"}}><button className="outline" onClick={exportBrowserProgress}>Export progress (.json)</button><button type="button" className="outline" ref={progressImportButton} onClick={() => progressImportInput.current?.click()}>Import progress (.json)</button><input ref={progressImportInput} type="file" accept=".json,application/json" style={{display:"none"}} onChange={e=>{void importBrowserProgress(e.currentTarget.files?.[0]);e.currentTarget.value="";}}/></div></div><div className="stats progress-stats"><div className="stat"><span className="stat-icon peach">↗</span><div><small>TOTAL ATTEMPTS</small><b>{attempts}</b></div></div><div className="stat"><span className="stat-icon rose">⌁</span><div><small>MISSED ANSWERS</small><b>{misses}</b></div></div><div className="stat"><span className="stat-icon lavender">✦</span><div><small>CONCEPTS MASTERED</small><b>{mastered}</b></div></div></div><div className="panel"><div className="panel-head"><div><div className="eyebrow">FOCUS NEXT</div><h2>Concepts to revisit</h2></div><button className="outline" onClick={()=>reviewSession()}>Build review session →</button></div>{weakConcepts.length?weakConcepts.map(c=><div className="weak-row" key={c.id}><div className="weak-icon">⌁</div><div><b>{c.id} · {c.name}</b><small>{c.ids.size} question{c.ids.size===1?"":"s"} attempted</small></div><span className="missed-count">{c.wrong} missed · {c.attempts} attempts</span><button className="row-arrow" onClick={()=>reviewSession(c.id)}>Practice →</button></div>):<div className="empty-state"><span>✧</span><b>Your review map will grow as you practice</b><p>Mark a response as missed to focus future sessions on that question and topic.</p></div>}</div><div className="panel history-panel"><div className="eyebrow">MISSED QUESTIONS</div><h2>Question history</h2>{weakRows.length?weakRows.slice(0,60).map(q=><div className="history-row" key={q.id}><span className="history-x">↻</span><div><b>{q.type} {q.number} · {q.displayName}</b><small>{q.year || q.exam} · {q.source}</small></div><span>{progress[q.id]?.wrong} missed</span><button className="row-arrow" onClick={()=>{setQueue([q]);setIndex(0);setPageIndex(0);setSubmitted(false);setSelfResult(null);setWork("");navigate("practice",{questionId:q.id,sessionIds:[q.id],step:0});}}>Review →</button></div>):<div className="small-empty">No missed questions yet.</div>}</div></div>}
 
       {view === "audit" && <div className="page"><div className="eyebrow">CHECK EVERY SOURCE PAGE</div><h1 className="page-title">Source page audit</h1><p className="muted">These counts show which PDF pages currently have question records. Unlinked pages can be covers, directions, tables, answer material, or missed questions; the image must be checked before deciding.</p><div className="stats catalog-stats"><div className="stat"><div><small>ORIGINAL PDF PAGES</small><b>{catalog.audit?.totalPages || catalog.sourcePages}</b></div></div><div className="stat"><div><small>PAGES LINKED TO RECORDS</small><b>{catalog.audit?.pagesReferencedByQuestionRecords || 0}</b></div></div><div className="stat"><div><small>UNLINKED PAGES TO INSPECT</small><b>{catalog.audit?.unresolvedPages || 0}</b></div></div><div className="stat"><div><small>QUESTIONS NEEDING TOPIC REVIEW</small><b>{reviewQuestions.length}</b></div></div></div><div className="panel audit-panel"><div className="panel-head"><div><div className="eyebrow">ORIGINAL SOURCE IMAGE</div><h2>Unlinked page {auditPage} of {catalog.audit?.totalPages || catalog.sourcePages}</h2></div><label>GO TO PAGE<input type="number" min="1" max={catalog.audit?.totalPages || catalog.sourcePages} value={auditPage} onChange={e=>setAuditPage(Math.max(1,Math.min(catalog.audit?.totalPages || catalog.sourcePages,Number(e.target.value)||1)))}/></label></div><p className="muted">If this page contains a question that needs indexing, use “Add a question reference” under Manage test banks. Page images remain the compiled PDF exactly as provided.</p>{(()=>{const file=catalog.sourceFiles?.find(f=>auditPage>=f.from&&auditPage<=f.to);return file?<PdfQuestionPage page={auditPage-file.from+1} sourcePage={auditPage} bankName="AP Chemistry MEGA Compiled Test Bank.pdf" sourceAsset={file.url}/>:<div className="pdf-error">The source page file is unavailable.</div>;})()}<div className="catalog-pagination"><button className="outline" disabled={auditPage<=1} onClick={()=>setAuditPage(p=>p-1)}>← Previous page</button><span>Page {auditPage} · {catalog.audit?.unreferencedPages?.includes(auditPage)?"no question record linked":"question record linked"}</span><button className="outline" disabled={auditPage>=(catalog.audit?.totalPages || catalog.sourcePages)} onClick={()=>setAuditPage(p=>p+1)}>Next page →</button></div><div className="audit-note"><b>Classification status</b><p>{catalog.audit?.coverageNote}</p><ProtectedDocumentLink path="/student-page-audit.json">Open complete page list</ProtectedDocumentLink> · <ProtectedDocumentLink path="/classification-method.md">Read method and topic boundaries</ProtectedDocumentLink></div></div></div>}
 

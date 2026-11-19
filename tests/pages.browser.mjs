@@ -405,3 +405,28 @@ test("a selected topic leaves a reachable, scrollable PDF on a short landscape s
     evidence.push({scenario:"short-landscape",result:"844x390 with selected unit/topic; reachable PDF and real wheel scrolling; bounded filter/course controls"});
   }finally{await context.close()}
 });
+
+test("expanded question Details remains fully reachable on short landscape screens", async () => {
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    await page.setViewportSize({width:844,height:390});
+    await page.goto(fixture.origin+"?view=detail&question=frq-2005-1-6");
+    const summary=page.locator(".ca-details>summary");
+    await summary.click();
+    await page.locator(".ca-parts-box summary").click();
+    const bounds=await page.locator(".ca-details-panel").evaluate(el=>{
+      const r=el.getBoundingClientRect();
+      return {top:r.top,bottom:r.bottom,left:r.left,right:r.right,
+        bottomReachable:el.contains(document.elementFromPoint(r.left+10,r.bottom-10))};
+    });
+    assert.ok(bounds.top>=0&&bounds.bottom<=390&&bounds.left>=0&&bounds.right<=844,JSON.stringify(bounds));
+    assert.ok(bounds.bottomReachable);
+    await page.screenshot({path:"test-results/pages/short-landscape-details.png"});
+    await page.keyboard.press("Escape");
+    await page.locator(".ca-details-panel").waitFor({state:"hidden"});
+    assert.ok(await summary.evaluate(el=>document.activeElement===el));
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"short-landscape-details",result:"expanded part details stay in viewport and remain hittable; Escape restores focus"});
+  }finally{await context.close()}
+});

@@ -461,5 +461,6 @@ html:has(.ca2),body:has(.ca2){height:100%;overflow:hidden}
   .ca-dock>b{font-size:13px}
   .ca-dock .ca-hint{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px}
   .ca2 .ca-dock .ca-btn{min-height:34px;padding-inline:8px;font-size:12px}
+  .ca-details-panel{position:fixed;top:54px;right:12px;max-height:calc(100dvh - 66px)}
   .ca-list-head{max-height:50%;overflow:auto;flex:none}
 }

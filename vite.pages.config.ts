@@ -5,6 +5,10 @@ import { readFileSync } from "node:fs";
 import { validateSupabaseConfig } from "./lib/supabase-config.mjs";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
+const publicAssets = [
+  { name: "favicon.svg", type: "image/svg+xml" },
+  { name: "pdf.worker.min.mjs", type: "text/javascript" },
+];
 export default defineConfig(({ mode }) => {
   const env = { ...loadEnv(mode, root, "VITE_"), ...process.env };
   validateSupabaseConfig(env.VITE_SUPABASE_URL!, env.VITE_SUPABASE_PUBLISHABLE_KEY!, env.VITE_CHEMATLAS_CONTENT_PREFIX!);
@@ -14,8 +18,24 @@ export default defineConfig(({ mode }) => {
       alias: { "#student-content": `${root}lib/content-supabase.ts`, "@": root } },
     plugins: [react(), {
       name: "pages-public-asset-allowlist",
+      configureServer(server) {
+        server.middlewares.use((request, response, next) => {
+          const pathname = (request.url ?? "").split("?")[0];
+          const asset = publicAssets.find(({ name }) => pathname === `/ChemAtlas/${name}` || pathname === `/${name}`);
+          if (!asset) return next();
+          if (request.method !== "GET" && request.method !== "HEAD") {
+            response.statusCode = 405;
+            response.setHeader("Allow", "GET, HEAD");
+            response.end();
+            return;
+          }
+          response.setHeader("Content-Type", asset.type);
+          response.setHeader("Cache-Control", "no-cache");
+          response.end(request.method === "HEAD" ? undefined : readFileSync(`${root}public/${asset.name}`));
+        });
+      },
       generateBundle() {
-        for (const name of ["favicon.svg", "pdf.worker.min.mjs"]) {
+        for (const { name } of publicAssets) {
           this.emitFile({ type: "asset", fileName: name, source: readFileSync(`${root}public/${name}`) });
         }
         this.emitFile({ type: "asset", fileName: ".nojekyll", source: "" });

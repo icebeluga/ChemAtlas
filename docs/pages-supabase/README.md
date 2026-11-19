@@ -128,6 +128,41 @@ pnpm run build:pages
 pnpm run dev:pages
 ```
 
+For owner testing with a real account, prefer the built static app so local
+testing uses the same module URLs and asset layout as GitHub Pages:
+
+```powershell
+pnpm run build:pages
+pnpm run preview:pages --port 5173 --strictPort
+```
+
+Open `http://127.0.0.1:5173/ChemAtlas/`. Keep the hostname and port unchanged
+when restarting the preview to preserve its browser session and progress.
+The owner enters credentials directly in the browser; do not collect passwords,
+record authentication request bodies, or export authenticated browser storage.
+Password sign-in stays on this origin. To rehearse invitation/recovery email
+callbacks locally, the owner must also allow this exact local callback URL in
+Supabase Auth's redirect configuration; the GitHub Pages URL alone does not
+cover localhost. No policy changes are needed.
+
+The development server serves only the favicon and PDF worker from `public/`.
+If development module loading fails in an embedded browser, use the static
+preview above. A student-app loading error now provides a reload screen and
+preserves the existing session instead of leaving a blank page.
+
+Keep fixture browser builds separate from a live-account preview. Set
+`CHEMATLAS_PAGES_TEST_DIR` to the fixture output directory before running
+`test:pages:browser`, and supply that directory as an **absolute** Vite
+`--outDir` path (relative Vite output paths resolve against `pages/`). The
+default remains `dist-pages` for CI. Never replace the active live preview with
+a fixture-configured artifact.
+
+Live denial testing requires a separate confirmed Supabase Auth account that
+has no active `approved_users` row. The owner creates/invites that test account
+without enabling public signup or approving it, then signs in manually in a
+separate browser profile. Keep the approved owner's session intact. Simulated
+browser denials do not substitute for this hosted check.
+
 For local browser tests, build with these synthetic fixture values instead of a
 real project. The HTTP fixture binds only to loopback; it never uses production:
 

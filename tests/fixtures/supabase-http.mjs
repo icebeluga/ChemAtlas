@@ -23,7 +23,7 @@ function identity(header = "") {
   if (claims.exp < Date.now() / 1000) return null;
   return claims;
 }
-export async function startFixture() {
+export async function startFixture({ artifactDirectory = "dist-pages" } = {}) {
   const db = new PGlite();
   await db.exec(setup);
   await db.exec(await readFile("supabase/migrations/202611180001_approved_student_content.sql", "utf8"));
@@ -107,7 +107,7 @@ export async function startFixture() {
     if (!path.startsWith("/ChemAtlas/") || path.includes("..")) { res.writeHead(404); res.end(); return; }
     const name = path.slice("/ChemAtlas/".length) + (path.endsWith("/") ? "index.html" : "");
     try {
-      const bytes = await readFile(resolve("dist-pages", name));
+      const bytes = await readFile(resolve(artifactDirectory, name));
       const mime = { ".html": "text/html", ".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml" }[extname(name)] ?? "application/octet-stream";
       res.writeHead(200, { "Content-Type": mime }); res.end(bytes);
     } catch { res.writeHead(404); res.end("Not found"); }

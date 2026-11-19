@@ -9,8 +9,9 @@ import { assertPagesArtifact } from "../scripts/pages/assert-artifact.mjs";
 let fixture, browser;
 const evidence = [];
 before(async () => {
-  await assertPagesArtifact();
-  fixture = await startFixture();
+  const artifactDirectory = process.env.CHEMATLAS_PAGES_TEST_DIR ?? "dist-pages";
+  await assertPagesArtifact(artifactDirectory);
+  fixture = await startFixture({ artifactDirectory });
   browser = await chromium.launch();
   await mkdir("test-results/pages", { recursive: true });
 });
@@ -64,6 +65,24 @@ test("authenticated unapproved visitor is denied without protected content reque
     assert(!fixture.logs.slice(start).some(log => log.path.startsWith("/storage/")));
     assert.deepEqual(errors, []);
     evidence.push({ scenario: "unapproved", result: "denied; no question or PDF request" });
+  } finally { await context.close(); }
+});
+
+test("a failed student application download shows recovery and reload preserves the signed-in session", async () => {
+  const { context, page } = await open();
+  const chunk = "**/assets/student-app-*.js";
+  try {
+    await context.route(chunk, route => route.abort());
+    await login(page);
+    await page.getByRole("heading", { name: "ChemAtlas could not open", exact: true }).waitFor();
+    assert.equal(await page.getByRole("button", { name: "Log out", exact: true }).count(), 1);
+    assert.equal(await page.evaluate(() => !!localStorage.getItem("chematlas-supabase-auth-v1")), true);
+    const signIns = fixture.logs.filter(log => log.path === "/auth/v1/token").length;
+    await context.unroute(chunk);
+    await page.getByRole("button", { name: "Reload ChemAtlas", exact: true }).click();
+    await bankReady(page);
+    assert.equal(fixture.logs.filter(log => log.path === "/auth/v1/token").length, signIns);
+    evidence.push({ scenario: "application-load-recovery", result: "failed application download shows recovery; reload restores the bank without another sign-in" });
   } finally { await context.close(); }
 });
 test("invite and recovery callbacks offer password setup and remove tokens from the address bar", async () => {

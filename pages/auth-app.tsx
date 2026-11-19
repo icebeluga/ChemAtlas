@@ -1,9 +1,23 @@
-import { lazy, Suspense, useEffect, useRef, useState, type FormEvent } from "react";
+import { Component, lazy, Suspense, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { authorizeSession, contentResponse, getStimuli, isApproved, passwordSetupRequested, resetAuthorization, setStimuli, sitePath, supabase } from "../lib/content-supabase";
 import type { StimulusDocument } from "../lib/content-types";
 
 const ChemAtlas = lazy(() => import("../components/student-app").then(module => ({ default: module.ChemAtlas })));
+
+class StudentAppBoundary extends Component<{ children: ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return <main className="ca-auth-shell"><section className="ca-auth-card" aria-labelledby="load-error-title">
+      <div className="ca-auth-mark">ChemAtlas</div>
+      <h1 id="load-error-title">ChemAtlas could not open</h1>
+      <p role="alert">The application could not finish loading. Reload to try again. Your session and saved progress will stay in this browser.</p>
+      <button className="primary" onClick={() => location.reload()}>Reload ChemAtlas</button>
+    </section></main>;
+  }
+}
 type Access = { phase: "checking" | "signed-out" | "pending" | "ready" | "error"; user?: string; error?: string };
 
 export function AuthApp() {
@@ -126,9 +140,11 @@ export function AuthApp() {
 
   if (access.phase === "ready" && !passwordSetup) return <>
     <div className="ca-auth-session"><span>Private student access · Progress saved in this browser</span><button type="button" onClick={() => void logout()}>Log out</button></div>
-    <Suspense fallback={<p className="ca-auth-loading" role="status">Opening ChemAtlas…</p>}>
-      <ChemAtlas key={access.user} worksheet={location.pathname.replace(/\/$/, "").endsWith("/practice-builder")} />
-    </Suspense>
+    <StudentAppBoundary key={access.user}>
+      <Suspense fallback={<p className="ca-auth-loading" role="status">Opening ChemAtlas…</p>}>
+        <ChemAtlas worksheet={location.pathname.replace(/\/$/, "").endsWith("/practice-builder")} />
+      </Suspense>
+    </StudentAppBoundary>
   </>;
   const signedIn = !!access.user;
   return <main className="ca-auth-shell"><section className="ca-auth-card" aria-labelledby="auth-title">

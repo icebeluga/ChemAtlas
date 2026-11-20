@@ -150,7 +150,7 @@ export function AuthApp() {
   </div>;
   const signedIn = !!access.user;
   return <main className="ca-auth-shell">
-    <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span><span className="ca-auth-subtitle">AP Chemistry studio</span><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></header>
+    <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></header>
     <section className="ca-auth-card" aria-labelledby="auth-title">
     <p className="ca-auth-eyebrow">CHEMATLAS / STUDENT PORTAL</p>
     <h1 id="auth-title">{passwordSetup && signedIn ? "Set your password" : access.phase === "pending" ? "Approval required" : "Welcome back"}</h1>

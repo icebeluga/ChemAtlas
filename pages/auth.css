@@ -1,7 +1,7 @@
 /* Login follows the supplied Notion student-portal mockup and the student palette. */
 .ca-auth-shell{min-height:100dvh;display:flex;flex-direction:column;align-items:center;padding:100px 24px 32px;background:#f3f6f9;color:#14233a;font:400 16px/1.5 "Segoe UI",system-ui,sans-serif}
 .ca-auth-header{position:absolute;inset:0 0 auto;min-height:64px;display:flex;align-items:center;gap:24px;padding:16px 32px;border-bottom:1px solid #d3dbe4;background:#fff}
-.ca-auth-brand{font-size:24px;font-weight:750;letter-spacing:-.035em}.ca-auth-subtitle{padding-left:24px;border-left:1px solid #d3dbe4}.ca-auth-access{margin-left:auto;display:flex;align-items:center;gap:10px}
+.ca-auth-brand{font-size:24px;font-weight:750;letter-spacing:-.035em}.ca-auth-access{margin-left:auto;display:flex;align-items:center;gap:10px}
 .ca-auth-card{width:min(100%,640px);margin-block:auto;padding:40px 44px;background:#fff;border:1px solid #c8d3e0;border-radius:16px;box-shadow:0 12px 36px -20px #14233a30}
 .ca-auth-eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;color:#596a82;margin:0 0 14px}
 .ca-auth-card h1{font:750 clamp(30px,4vw,44px)/1.12 "Segoe UI",system-ui,sans-serif;letter-spacing:-.03em;color:#102442;margin:0 0 14px}.ca-auth-card p{line-height:1.55}.ca-auth-intro{font-size:20px;color:#52647c;margin:0}
@@ -13,4 +13,4 @@
 .ca-auth-text{border:0;background:transparent;color:#14233a;min-height:44px;padding:8px 0;text-decoration:underline;text-underline-offset:3px}
 .ca-auth-card .ca-auth-footnote{display:flex;align-items:flex-start;gap:16px;font-size:15px;color:#14233a;margin:26px 0 0;padding-top:24px;border-top:1px solid #d3dbe4}.ca-auth-footnote svg{flex:none}.ca-auth-footnote p{color:#52647c;margin:6px 0}.ca-auth-footnote small{color:#52647c;font-size:12px}
 .ca-auth-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.ca-auth-footer{padding-top:32px;color:#52647c;font-size:14px}.ca-auth-loading{padding:40px;text-align:center}
-@media(max-width:600px){.ca-auth-shell{padding:90px 16px 24px}.ca-auth-header{padding:16px;gap:12px}.ca-auth-brand{font-size:21px}.ca-auth-subtitle{display:none}.ca-auth-access{font-size:14px}.ca-auth-card{padding:28px 22px}.ca-auth-intro{font-size:17px}.ca-auth-footer{font-size:12px}}
+@media(max-width:600px){.ca-auth-shell{padding:90px 16px 24px}.ca-auth-header{padding:16px;gap:12px}.ca-auth-brand{font-size:21px}.ca-auth-access{font-size:14px}.ca-auth-card{padding:28px 22px}.ca-auth-intro{font-size:17px}.ca-auth-footer{font-size:12px}}

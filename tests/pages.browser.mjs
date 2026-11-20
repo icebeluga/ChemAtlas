@@ -559,17 +559,21 @@ test("unit hover reveals the full color-matched name without moving cards or fil
           const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");canvas.width=canvas.height=1;
           ctx.fillStyle=style.backgroundColor;ctx.fillRect(0,0,1,1);
           const rgb=[...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});
-          return {left:r.left,right:r.right,bottom:r.bottom,courseBottom:el.closest(".ca-course").getBoundingClientRect().bottom,name:name.textContent,nameFits:name.scrollHeight<=name.clientHeight+1&&name.scrollWidth<=name.clientWidth+1,
+          const slot=el.parentElement.getBoundingClientRect();
+          return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,slot:{left:slot.left,right:slot.right,top:slot.top,bottom:slot.bottom,width:slot.width},name:name.textContent,nameFits:name.scrollHeight<=name.clientHeight+1&&name.scrollWidth<=name.clientWidth+1,
             color:style.color,contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),
-            segments:el.querySelectorAll(".ca-heat i").length,duration:style.transitionDuration,
+            segments:el.querySelectorAll(".ca-heat i").length,
             shadow:style.boxShadow,pointerEvents:style.pointerEvents};
         });
         assert.equal(highlight.name,(await card.getAttribute("aria-label")).split(", ").slice(1,-1).join(", "));
         assert.ok(highlight.left>=0&&highlight.right<=width&&highlight.nameFits,JSON.stringify({width,unit,highlight}));
-        if(height===390)assert.ok(highlight.bottom<=highlight.courseBottom+1,"short-screen hover stays inside the scrollable course area: "+JSON.stringify(highlight));
+        assert.ok(highlight.top<highlight.slot.top&&highlight.bottom<highlight.slot.bottom,"tab pulls upward: "+JSON.stringify(highlight));
+        if(highlight.slot.left+highlight.slot.width/2>=140&&highlight.slot.right-highlight.slot.width/2<=width-140){
+          assert.ok(Math.abs((highlight.left+highlight.right-highlight.slot.left-highlight.slot.right)/2)<=1,"expansion stays centered");
+          assert.ok(highlight.left<highlight.slot.left&&highlight.right>highlight.slot.right,"tab widens both ways");
+        }
         assert.ok(highlight.contrast>=4.5&&highlight.segments>0,JSON.stringify(highlight));
         assert.equal(highlight.color,"rgb(255, 255, 255)");
-        assert.match(highlight.duration,/0.22s/);
         assert.notEqual(highlight.shadow,"none");
         assert.equal(highlight.pointerEvents,"none");
         assert.deepEqual(await snapshot(),before,"hover leaves navigation, filters, results and card geometry unchanged");
@@ -577,7 +581,7 @@ test("unit hover reveals the full color-matched name without moving cards or fil
         if(unit===4&&height===390)await page.screenshot({path:"test-results/pages/unit-hover-u4-844x390.png"});
       }
       await page.mouse.move(0,400);
-      await page.waitForFunction(()=>[...document.querySelectorAll(".ca-unit-highlight")].every(el=>getComputedStyle(el).visibility==="hidden"));
+      await page.waitForFunction(()=>!document.querySelector(".ca-unit-highlight:popover-open"));
       assert.deepEqual(await snapshot(),before);
     }
     const unit4=page.getByRole("button",{name:/^Unit 4,/});
@@ -587,6 +591,9 @@ test("unit hover reveals the full color-matched name without moving cards or fil
     await unit4.press("Enter");
     assert.equal(await unit4.getAttribute("aria-pressed"),"true");
     assert.equal(new URL(page.url()).searchParams.get("unit"),"u4");
+    await unit4.hover();
+    await page.waitForFunction(()=>getComputedStyle(document.querySelector('[data-u="u4"]>.ca-unit-highlight')).opacity==="1");
+    assert.equal(await unit4.evaluate(el=>el.querySelector(".ca-unit-highlight").getBoundingClientRect().height>el.getBoundingClientRect().height),true,"selected tab also gains a little height");
     const all=page.locator(".ca-unit.is-all");
     await all.hover();
     await page.waitForFunction(()=>getComputedStyle(document.querySelector(".is-all>.ca-unit-highlight")).opacity==="1");
@@ -596,10 +603,51 @@ test("unit hover reveals the full color-matched name without moving cards or fil
     assert.equal(await all.getAttribute("aria-pressed"),"true");
     await page.emulateMedia({reducedMotion:"reduce"});
     await unit4.hover();
-    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).transitionDuration),"1e-05s");
+    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>el.getAnimations().length),0);
     await page.setViewportSize({width:390,height:844});
     assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).display),"none");
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:"unit-hover",result:"all nine full names, contrast, segments, fixed geometry and unchanged selection/results at 1440/1280/768 and 844x390; 220ms hover, reduced motion, keyboard click and phone layout retained"});
+    evidence.push({scenario:"unit-hover",result:"all nine centered upward folder tabs, full names, contrast, segments, fixed geometry and unchanged selection/results at 1440/1280/768 and 844x390; reduced motion, keyboard click and phone layout retained"});
+  }finally{await context.close()}
+});
+
+test("folder tabs overlap their handoff and reverse from their current animated pose", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.waitForFunction(()=>[...document.querySelectorAll(".ca-viewport canvas")].some(c=>c.width>0&&c.style.visibility==="visible"));
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    const four=page.getByRole("button",{name:/^Unit 4,/}),five=page.getByRole("button",{name:/^Unit 5,/});
+    // Dispatch and pause within one browser task so renderer load cannot let a
+    // 240 ms animation finish between two automation calls.
+    const rising=await four.evaluate(button=>{
+      button.dispatchEvent(new PointerEvent("pointerover",{bubbles:true,pointerType:"mouse"}));
+      const el=button.querySelector(".ca-unit-highlight");
+      const animation=el.getAnimations()[0];animation.pause();animation.currentTime=100;
+      const style=getComputedStyle(el);return{transform:style.transform,opacity:style.opacity,duration:animation.effect.getTiming().duration};
+    });
+    assert.equal(rising.duration,240);
+    const retracting=await five.evaluate(button=>{
+      const previous=document.querySelector('.ca-unit[data-u="u4"]');
+      previous.dispatchEvent(new PointerEvent("pointerout",{bubbles:true,pointerType:"mouse",relatedTarget:button}));
+      const el=previous.querySelector(".ca-unit-highlight");
+      const animation=el.getAnimations()[0],first=animation.effect.getKeyframes()[0];
+      animation.pause();animation.currentTime=80;
+      const style=getComputedStyle(el);return{from:first,transform:style.transform,opacity:style.opacity,open:el.matches(":popover-open")};
+    });
+    assert.equal(retracting.from.transform,rising.transform);
+    assert.equal(Number(retracting.from.opacity),Number(rising.opacity));
+    assert.equal(retracting.open,true,"outgoing tab stays painted while retracting");
+    assert.equal(await five.locator(".ca-unit-highlight").evaluate(el=>el.matches(":popover-open")),true,"incoming tab rises concurrently");
+    const reversing=await four.evaluate(button=>{
+      document.querySelector('.ca-unit[data-u="u5"]').dispatchEvent(new PointerEvent("pointerout",{bubbles:true,pointerType:"mouse",relatedTarget:button}));
+      return button.querySelector(".ca-unit-highlight").getAnimations()[0].effect.getKeyframes()[0];
+    });
+    assert.equal(reversing.transform,retracting.transform);
+    assert.equal(Number(reversing.opacity),Number(retracting.opacity));
+    await four.dispatchEvent("pointerout",{pointerType:"mouse",relatedTarget:null});
+    await page.waitForFunction(()=>!document.querySelector(".ca-unit-highlight:popover-open"));
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"folder-tab-handoff",result:"240ms transform/opacity; outgoing/incoming faces coexist; interruption and reversal resume from sampled pose without endpoint snaps"});
   }finally{await context.close()}
 });

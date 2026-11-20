@@ -997,6 +997,7 @@ test('expanded unit names share centered hover and selected alignment in both th
     // above separately cover which changing rectangle a physical click reaches.
     await four.evaluate(el=>el.click());await page.waitForFunction(()=>new URL(location.href).searchParams.get('unit')==='u4');
     await page.mouse.move(0,700);await settleAccordion(page);
+    await page.waitForFunction(()=>{const title=document.querySelector('.ca-unit[data-u="u4"][aria-pressed="true"] .ca-unit-highlight>span');return title&&Number(getComputedStyle(title).opacity)>.99});
     assertAlignment(await alignment(four),'fast click selected');
     assert.deepEqual(errors,[]);evidence.push({scenario:'unit-name-alignment',result:'all nine units x two views x both themes x 1440/1280/768: same centered face for hover/selected/both; full titles clear number/count/segments; hover leaves filters unchanged; fast click resets corner offsets'});
   }finally{await context.close()}

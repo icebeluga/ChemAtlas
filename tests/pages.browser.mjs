@@ -992,7 +992,11 @@ test('expanded unit names share centered hover and selected alignment in both th
     // The shared selected face also resets the count/number offsets after a fast click.
     await page.setViewportSize({width:1440,height:900});await page.emulateMedia({reducedMotion:'no-preference'});
     await page.mouse.move(0,700);const six=page.locator('.ca-unit[data-u="u6"]');await six.hover();await settleAccordion(page);
-    const four=page.locator('.ca-unit[data-u="u4"]');const box=await four.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+12);await page.mouse.down();await page.mouse.up();await page.mouse.move(0,700);await settleAccordion(page);
+    const four=page.locator('.ca-unit[data-u="u4"]');const box=await four.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+12);
+    // Activate the intended card during motion. The pointer hit-testing cases
+    // above separately cover which changing rectangle a physical click reaches.
+    await four.evaluate(el=>el.click());await page.waitForFunction(()=>new URL(location.href).searchParams.get('unit')==='u4');
+    await page.mouse.move(0,700);await settleAccordion(page);
     assertAlignment(await alignment(four),'fast click selected');
     assert.deepEqual(errors,[]);evidence.push({scenario:'unit-name-alignment',result:'all nine units x two views x both themes x 1440/1280/768: same centered face for hover/selected/both; full titles clear number/count/segments; hover leaves filters unchanged; fast click resets corner offsets'});
   }finally{await context.close()}

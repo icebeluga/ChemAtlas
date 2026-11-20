@@ -11,7 +11,7 @@ import { PdfQuestionPage } from "@/components/student/pdf-question-page";
 import { filterQuestions } from "@/lib/question-filter";
 import { sourcePageLocation } from "@/lib/question-source";
 import { MAX_ZOOM, MIN_ZOOM, stepZoom, type ViewerZoom } from "@/lib/viewer-scale";
-import { connectUnitWave, resetUnitWave } from "./unit-highlight";
+import { connectUnitAccordion, resetUnitAccordion } from "./unit-highlight";
 
 type Topic = { id: string; name: string; unit: string; unitName: string };
 type Filters = { unit?: string; topic?: string; type?: string; query?: string };
@@ -59,7 +59,7 @@ export function QuestionBank(props: Props) {
   const stepFocus = useRef<{ id: string; delta: number } | null>(null);
 
   useEffect(() => {
-    if (unitRow.current) return connectUnitWave(unitRow.current);
+    if (unitRow.current) return connectUnitAccordion(unitRow.current);
   }, [unit, catalog.units, questions]);
 
   const unitOf = useMemo(() => new Map(topics.map(t => [t.id, t.unit])), [topics]);
@@ -239,13 +239,13 @@ export function QuestionBank(props: Props) {
     <nav className="ca-course" ref={course} aria-label="Units and topics" inert={paneOpen}>
       <h2 className="ca-sr">Browse by unit</h2>
       <div className="ca-units" ref={unitRow}>
-        <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => { resetUnitWave(unitRow.current); onFilters({ unit: "all", topic: "all" }); }}>
+        <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => { resetUnitAccordion(unitRow.current); onFilters({ unit: "all", topic: "all" }); }}>
           <b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span><span className="ca-sr">units</span>
           <i className="ca-unit-highlight" aria-hidden="true"><b><span className="ca-unit-number">All</span></b><span>{classified.length ? classified.length.toLocaleString() : ""}</span></i>
         </button>
         {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
           aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
-          onClick={() => { resetUnitWave(unitRow.current); onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" }); }}>
+          onClick={() => { resetUnitAccordion(unitRow.current); onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" }); }}>
           <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
           <i className="ca-heat" aria-hidden="true">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
           <i className="ca-unit-highlight" aria-hidden="true">

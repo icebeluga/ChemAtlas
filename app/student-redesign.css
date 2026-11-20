@@ -389,24 +389,28 @@
 .ca-unit>span{grid-row:2;font-size:12px}
 .ca-unit .ca-heat{grid-row:3}
 .ca2 .ca-unit[aria-pressed=true]:not(.is-all){flex-grow:2.6}
-/* A shared top-layer stage lets the entire row move while its click slots stay fixed. */
+/* Real cards redistribute the fixed horizontal budget; no overlay or vertical motion. */
 @media (hover:hover) and (pointer:fine) and (min-width:701px){
-  .ca-units[data-wave-ready]>.ca-unit,.ca-units[data-wave-ready]>.ca-unit>:is(b,span,.ca-heat),.ca-unit-wave-stage,.ca-unit-wave-stage *{transition-property:none}
-  .ca2 .ca-units>.ca-unit[data-wave]{background:transparent;border-bottom-color:transparent}
-  .ca-unit[data-wave]>b,.ca-unit[data-wave]>span,.ca-unit[data-wave]>.ca-heat{opacity:0}
-  .ca-unit-wave-stage:popover-open{position:fixed;inset:0;box-sizing:border-box;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;background:none;overflow:visible;pointer-events:none;font-style:normal;transition-property:none}
-  .ca-unit-wave-stage::backdrop{pointer-events:none;background:none}
-  .ca-unit-wave-stage .ca-unit-highlight{display:block;position:absolute;box-sizing:border-box;color:#fff;font-style:normal;pointer-events:none;overflow:visible;transform-origin:center bottom}
-  .ca-unit-sheet{position:absolute;inset:0;box-sizing:border-box;border-radius:var(--ca-r);transform-origin:center bottom;z-index:0}
-  .ca-unit-sheet.is-deep{background:var(--deep,var(--ca-ink));box-shadow:var(--ca-lift);z-index:1}
-  .ca-unit-highlight>b{position:absolute;left:8px;right:8px;display:flex;justify-content:space-between;align-items:baseline;color:#fff;font:700 17px/1 var(--ca-display);z-index:3}
-  .ca-unit-highlight>b>span,.ca-unit-highlight>b>small{display:block}
-  .ca-unit-highlight>b small{color:#fff;font:400 12.5px var(--ca-body);font-variant-numeric:tabular-nums}
-  .ca-unit-highlight>span{position:absolute;left:8px;top:0;font-size:12px;line-height:1.2;transform-origin:top left;z-index:3}
-  .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;height:5px;transform-origin:center bottom;z-index:3}
-  .ca-unit-highlight>.is-rest-content{z-index:2}
-  .ca-unit-highlight .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
+  .ca-units[data-accordion]>.ca-unit{position:relative;box-sizing:border-box;container-type:inline-size;min-height:0;overflow:hidden;transition:background var(--ca-fast) var(--ca-out),color var(--ca-fast) var(--ca-out)}
+  .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat){opacity:0}
+  .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat),.ca-units[data-accordion]>.ca-unit>.ca-heat *{transition-property:none}
+  .ca2 .ca-units[data-accordion]>.ca-unit[data-accordion-dark]{background:var(--deep,var(--ca-ink));color:#fff}
+  .ca2 .ca-units[data-accordion]>.is-all[data-accordion-dark]{background:var(--ca-ink)}
+  .ca-units[data-accordion] .ca-unit-highlight{display:block;position:absolute;inset:0;pointer-events:none;font-style:normal;overflow:hidden;color:var(--deep,var(--ca-ink))}
+  .ca-unit[data-accordion-dark] .ca-unit-highlight{color:#fff}
+  .ca-unit-highlight>b{position:absolute;top:5px;left:8px;right:8px;display:flex;justify-content:space-between;font:700 17px/1 var(--ca-display)}
+  .ca-unit-highlight>b small{font:400 12px/1.3 var(--ca-body);font-variant-numeric:tabular-nums}
+  .ca-unit-highlight .ca-unit-number{position:absolute;left:0;top:0}
+  .ca-unit-highlight>b small{position:absolute;right:0;top:0}
+  .ca-unit-highlight>span{position:absolute;inset:3px 32px 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
+  .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;bottom:4px;height:4px}
+  .ca-unit[data-accordion-dark] .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
+  .is-all .ca-unit-highlight>b{font-size:15px}
+  .is-all .ca-unit-highlight>b{justify-content:center}
+  .is-all .ca-unit-highlight .ca-unit-number{position:static;transform:none!important}
+  .is-all .ca-unit-highlight>span{inset:21px 3px 4px;font-size:11px;justify-content:center;opacity:1!important}
 }
+@media (prefers-reduced-motion:reduce){.ca-units[data-accordion]>.ca-unit,.ca-units[data-accordion]>.ca-unit *{transition-property:none}}
 .ca-topics{gap:3px;overflow-x:auto}
 .ca-topics-wrap[data-open] .ca-topics{padding-block:4px}
 .ca2 .ca-topic{justify-self:start;padding:3px 7px;font-size:12.5px;gap:4px}

@@ -1,5 +1,17 @@
 # ChemAtlas — Codex continuation handoff
 
+## Latest update — complete appearance themes (November 20, 2026)
+
+This round starts clean at `a18a37b434676c8b0d08462dc2a65a3befec7ce5` on the existing `codex/student-ui-improvements` branch and draft PR #9. Approved main remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`; unrelated PRs/worktrees are preserved. The adaptive navigation and horizontal accordion below remain current.
+
+- `app/theme.css` centrally maps semantic dark roles onto the existing student tokens. Approved light CSS files are unchanged. Only the requested icon-only theme control is added to headers: after search/before Log out; before Log out on builder; beside Student access on auth pages.
+- `lib/theme.ts` owns the root `data-theme`, `chematlas-theme` localStorage preference and tab synchronization. Only `ThemeToggle` subscribes, so switching does not rerender/remount the workspace, PDF or worksheet. Default is light, independent of OS. Storage exceptions are caught. Both Pages entry points use a blocking bootstrap before app paint; the retained student Worker uses the shared bootstrap string.
+- Dark surfaces are flat/matte, indigo primary actions and neutral secondary controls. All nine existing hues, horizontal hover animation, counts, topic indicators, selection/filtering and adaptive navigation are preserved. Dark unit ramps use separate readable text and darker selected/background roles; the All card stays neutral.
+- Dark paint is screen-only. Source/worksheet canvases stay white/unfiltered, generated PDF bytes and print colors remain unchanged. No renderer/generator, authentication/access-control, data/catalog/classification, backend/configuration or deployment workflow changes are included.
+- Four targeted Pages scenarios cover initialization, keyboard switching, unavailable storage, persistence/tab sync, exact mounted workspace/PDF-pixel/scroll/filter/draft preservation, generated-document byte/print preservation, unit/semantic AA contrast and responsive layouts. The existing 23 scenarios remain. Read the final local logs and exact-head CI for results.
+- `docs/student-ui-improvements/DARK-MODE.md` records the final light/dark roles, unit formulas, modified files and verification decisions. Local-only screenshots and comparison receipts are in `outputs/themes/`; logs use `outputs/theme-*.log`. Before/after light captures compare login-card, Question Bank and unit/topic pixels at desktop and phone sizes. Keep all question/PDF evidence ignored; do not attach protected content to public GitHub artifacts.
+- No mockup attachments arrived; written requirements/supplied tokens/current components guided implementation. Native tooltips use browser/OS appearance. No physical iOS/Safari or new production email-flow validation is claimed. Do not merge or deploy. Obtain the final candidate SHA and running preview receipt live rather than trusting historical snapshots below.
+
 ## Latest update — adaptive unit/topic navigation (November 20, 2026)
 
 This round starts from the clean `2054ef4cdccccdeab96a08726717a83a9e9fe59a` candidate on the same `codex/student-ui-improvements` branch and draft PR #9. The approved main baseline remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`. The owner's latest requirements add a compact Focus Mode and a temporary navigation browser; they supersede older instructions about the navigation always occupying permanent layout. The horizontal unit accordion itself is preserved.

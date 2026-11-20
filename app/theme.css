@@ -23,7 +23,7 @@
     color-scheme:dark;
     --theme-background:#10141D;--theme-navigation:#111620;--theme-sidebar:#131822;
     --theme-surface:#191F2B;--theme-input:#161C27;--theme-hover:#222A38;
-    --theme-border:#303949;--theme-divider:#252D3B;--theme-control-border:#59667C;
+    --theme-border:#303949;--theme-divider:#252D3B;--theme-control-border:#5C697F;
     --theme-text:#F1F3F8;--theme-secondary:#B0BACB;--theme-muted:#8B98AC;
     --theme-primary:#4F59BE;--theme-primary-hover:#5D67CC;--theme-primary-pressed:#434DAA;
     --theme-accent:#A2ABFF;--theme-active:#929CF0;--theme-accent-soft:#252D49;
@@ -52,7 +52,7 @@
     --color-primary-border:var(--theme-border);--color-background:var(--theme-background);--color-surface:var(--theme-surface);
     --color-surface-muted:var(--theme-input);--color-surface-hover:var(--theme-hover);--color-surface-pressed:var(--theme-neutral-selected);
     --color-text-primary:var(--theme-text);--color-text-secondary:var(--theme-secondary);--color-text-muted:var(--theme-muted);--color-text-inverse:var(--theme-on-primary);
-    --color-border:var(--theme-border);--color-border-strong:var(--theme-muted);--color-control-border:var(--theme-border);--color-focus:var(--theme-accent);
+    --color-border:var(--theme-border);--color-border-strong:var(--theme-muted);--color-control-border:var(--theme-control-border);--color-focus:var(--theme-accent);
     --color-warning-text:var(--theme-warning);--color-warning-soft:var(--theme-warning-soft);
     --color-error-text:var(--theme-danger);--color-error-soft:var(--theme-danger-soft);
     --color-success-text:var(--theme-success);--color-success-soft:var(--theme-success-soft);
@@ -117,7 +117,7 @@
   [data-theme=dark] .ca2 .student-workspace :is(.panel,.builder-panel,.builder-side,.question-card,.empty-state,.review-row,.bank-row,.session-top,.stat){background:var(--theme-surface);border-color:var(--theme-border);color:var(--theme-text);box-shadow:none}
   [data-theme=dark] .ca2 .student-workspace :is(h1,h2,h3,b,label){color:inherit}
   [data-theme=dark] .ca2 .student-workspace :is(.muted,.eyebrow,.footer,.question-meta,.bank-row small,.builder-side p,.builder-controls label){color:var(--theme-secondary)}
-  [data-theme=dark] .ca2 .student-workspace :is(input,select,textarea){background:var(--theme-input);color:var(--theme-text);border-color:var(--theme-border)}
+  [data-theme=dark] .ca2 .student-workspace :is(input,select,textarea){background:var(--theme-input);color:var(--theme-text);border-color:var(--theme-control-border)}
   [data-theme=dark] .ca2 .student-workspace :is(.builder-summary,.import-note,.upload-zone,.type-chip,.builder-symbol,.builder-side-icon,.builder-summary-icon,.file-mark){background:var(--theme-hover);color:var(--theme-secondary);border-color:var(--theme-border)}
   [data-theme=dark] .ca2 .student-workspace :is(.builder-summary small,.empty-state p,.small-empty,.stat small,.stat b em,.response-panel label span,.submit-row>span,.self-check-row>span,.source-question-head p,.source-page-count,.source-note,.question-foot,.session-count){color:var(--theme-secondary)}
   [data-theme=dark] .ca2 .student-workspace :is(.text-button,.back,.card-link){color:var(--theme-accent)}

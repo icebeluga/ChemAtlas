@@ -87,15 +87,17 @@ test("a failed student application download shows recovery and reload preserves 
   } finally { await context.close(); }
 });
 test("invite and recovery callbacks offer password setup and remove tokens from the address bar", async () => {
-  for (const type of ["invite", "recovery"]) {
+  for (const type of ["invite", "recovery"]) for (const theme of ["light", "dark"]) {
     const response = await fetch(`${fixture.api}/auth/v1/token?grant_type=password`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: "approved@example.test", password: "fixture-password" }) });
     const session = await response.json();
     const { context, page, errors } = await open();
     try {
+      if(theme==='dark')await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();
       const hash = new URLSearchParams({ access_token: session.access_token, refresh_token: session.refresh_token, expires_in: "3600", token_type: "bearer", type });
       await page.goto("about:blank");
       await page.goto(`${fixture.origin}#${hash}`);
       await page.getByRole("heading", { name: "Set your password" }).waitFor();
+      assert.equal(await page.locator('html').getAttribute('data-theme'),theme);
       assert(!page.url().includes("access_token"));
       await page.getByLabel("Password", { exact: true }).fill("replacement-fixture-password");
       await page.getByRole("button", { name: "Save password", exact: true }).click();
@@ -795,5 +797,141 @@ test('normal-motion focus collapse and rapid browser toggles keep one navigation
     await page.getByRole('dialog',{name:'Browse units and topics',exact:true}).waitFor({state:'hidden'});
     assert.deepEqual(errors,[]);
     evidence.push({scenario:'adaptive-motion',result:'normal-motion collapse reclaims height monotonically; rapid five open/close cycles; one unit/topic tree; no workspace displacement or navigation changes'});
+  }finally{await context.close()}
+});
+
+test('theme initializes before app paint, defaults to light and survives restricted storage',async()=>{
+  const init=(await readFile('lib/theme.ts','utf8')).match(/export const THEME_INIT = '([^']+)'/)[1];
+  for(const entry of ['pages/index.html','pages/practice-builder/index.html'])assert.ok((await readFile(entry,'utf8')).includes(`<script>${init}</script>`),'both blocking Pages bootstraps match the shared Worker bootstrap');
+  const context=await browser.newContext({colorScheme:'dark',reducedMotion:'reduce'});
+  let release;
+  const pending=new Promise(resolve=>{release=resolve});
+  try{
+    await context.addInitScript(()=>localStorage.setItem('chematlas-theme','dark'));
+    await context.route('**/assets/*.js',async route=>{await pending;await route.continue()});
+    const page=await context.newPage();
+    await page.goto(fixture.origin,{waitUntil:'commit'});
+    await page.waitForFunction(()=>document.documentElement.dataset.theme==='dark');
+    await page.locator('link[rel=stylesheet]').first().waitFor({state:'attached'});
+    await page.waitForFunction(()=>getComputedStyle(document.documentElement).backgroundColor==='rgb(16, 20, 29)');
+    assert.equal(await page.locator('.ca-auth-shell').count(),0,'the saved theme is painted while the application bundle is still held');
+    release();
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor();
+    await page.reload();await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor();
+  }finally{release?.();await context.close()}
+  const fresh=await browser.newContext({colorScheme:'dark',reducedMotion:'reduce'});
+  try{
+    const page=await fresh.newPage();await page.goto(fixture.origin);
+    const toggle=page.getByRole('button',{name:'Switch to dark mode.',exact:true});await toggle.waitFor();
+    assert.equal(await page.locator('html').getAttribute('data-theme'),'light','system dark mode never overrides the light default');
+    await page.evaluate(()=>{Object.defineProperty(Storage.prototype,'setItem',{value(){throw new DOMException('Blocked','SecurityError')}});Object.defineProperty(Storage.prototype,'getItem',{value(){throw new DOMException('Blocked','SecurityError')}})});
+    await toggle.focus();await page.keyboard.press('Enter');
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor();
+    await page.addInitScript(()=>{Object.defineProperty(Storage.prototype,'setItem',{value(){throw new DOMException('Blocked','SecurityError')}});Object.defineProperty(Storage.prototype,'getItem',{value(){throw new DOMException('Blocked','SecurityError')}})});
+    await page.reload();await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).waitFor();
+  }finally{await fresh.close()}
+  evidence.push({scenario:'theme-initialization',result:'blocking bootstrap applies saved dark before the held app bundle; light default ignores OS preference; unavailable storage still permits switching'});
+});
+
+test('theme switching preserves the mounted Question Bank, PDF pixels, filters and worksheet',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    await page.goto(fixture.origin+'?view=detail&unit=u8&topic=8.3&question=frq-2005-1-6');await painted(page);
+    await page.getByRole('button',{name:'Add to worksheet',exact:true}).click();
+    await page.getByRole('button',{name:'Question crop',exact:true}).click();await painted(page);
+    await page.getByRole('button',{name:'Zoom in',exact:true}).click();await painted(page);
+    await page.getByRole('searchbox',{name:'Search questions',exact:true}).fill('2005');
+    await page.locator('.ca-viewport').evaluate(el=>{el.scrollTop=83;el.scrollLeft=11});
+    await page.locator('.ca-rows').evaluate(el=>{el.scrollTop=120});
+    await page.evaluate(()=>{window.__themeCanvas=document.querySelector('.ca-viewport canvas');window.__themeViewport=document.querySelector('.ca-viewport');window.__themeDocument=document});
+    const snapshot=()=>page.evaluate(async()=>{const frame=document.querySelector('.ca-viewport'),canvas=frame.querySelector('canvas');const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',canvas.getContext('2d').getImageData(0,0,canvas.width,canvas.height).data))).join(',');return{url:location.href,sameDocument:window.__themeDocument===document,sameCanvas:window.__themeCanvas===canvas,sameViewport:window.__themeViewport===frame,pixels:hash,question:document.querySelector('.ca-pane-head h2').textContent,zoom:document.querySelector('.ca-viewer-bar').textContent,mode:document.querySelector('[aria-label="Image mode"] [aria-pressed=true]').textContent,scroll:[frame.scrollTop,frame.scrollLeft,document.querySelector('.ca-rows').scrollTop],filters:[document.querySelector('.ca-search input').value,document.querySelector('.ca-filters select').value,document.querySelector('.ca-filters [aria-pressed=true]').textContent],worksheet:document.querySelector('.ca-dock').textContent,bounds:document.querySelector('.ca-work').getBoundingClientRect().toJSON()}});
+    const before=await snapshot(),start=fixture.logs.length;
+    for(const theme of ['dark','light','dark']){
+      await page.getByRole('button',{name:`Switch to ${theme} mode.`,exact:true}).click();
+      assert.equal(await page.locator('html').getAttribute('data-theme'),theme);
+      assert.deepEqual(await snapshot(),before);
+    }
+    assert.equal(fixture.logs.slice(start).filter(log=>log.path.startsWith('/storage/')).length,0);
+    assert.equal(await page.locator('.ca-viewport canvas').evaluate(el=>getComputedStyle(el).filter),'none');
+    for(const name of ['Fit width','Fit page','Actual size (1:1)','Zoom in','Zoom out','Full page']){
+      await page.getByRole('button',{name,exact:true}).click();await painted(page);
+    }
+    await page.getByRole('button',{name:'Full screen',exact:true}).click();
+    await page.waitForFunction(()=>!!document.fullscreenElement);await painted(page);
+    assert.equal(await page.locator('.ca-viewport canvas').evaluate(el=>getComputedStyle(el).filter),'none');
+    await page.getByRole('button',{name:'Exit full screen',exact:true}).click();await page.waitForFunction(()=>!document.fullscreenElement);
+    await page.getByRole('button',{name:'Log out',exact:true}).click();
+    await page.getByRole('heading',{name:'Welcome back',exact:true}).waitFor();
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor();
+    await login(page);await bankReady(page);
+    assert.equal(await page.evaluate(()=>localStorage.getItem('chematlas-theme')),'dark');
+    await page.reload();await bankReady(page);assert.equal(await page.locator('html').getAttribute('data-theme'),'dark');
+    const saved=await context.storageState();
+    const reopened=await browser.newContext({storageState:saved});
+    try{const next=await reopened.newPage();await next.goto(fixture.origin);await bankReady(next);await next.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor()}finally{await reopened.close()}
+    const other=await context.newPage();await other.goto(fixture.origin);await bankReady(other);
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).click();
+    await other.getByRole('button',{name:'Switch to dark mode.',exact:true}).waitFor();
+    await other.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor();await other.close();
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'theme-bank-preservation',result:'same document/canvas/pixels/zoom/crop/scroll/filters/worksheet/URL/bounds and zero protected reloads; dark persists through logout, login, refresh and restored browser profile'});
+  }finally{await context.close()}
+});
+
+test('builder theme changes preserve generated document bytes and print appearance',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);await painted(page);
+    await page.getByRole('button',{name:'Add to worksheet',exact:true}).click();
+    await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:/Practice builder/}).click();
+    const download=page.getByRole('link',{name:'Download PDF',exact:true});await download.waitFor();
+    await page.locator('.worksheet-paper canvas[data-painted]').waitFor();
+    await page.evaluate(()=>{window.__themeWorksheetCanvas=document.querySelector('.worksheet-paper canvas')});
+    const snapshot=()=>page.evaluate(async()=>{const canvas=document.querySelector('.worksheet-paper canvas'),href=document.querySelector('a[download$=".pdf"]').href;return{url:location.href,href,bytes:Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',await(await fetch(href)).arrayBuffer()))).join(','),canvas:window.__themeWorksheetCanvas===canvas,entries:document.querySelector('.ca-b-outline').textContent,scroll:document.querySelector('.worksheet-paper').scrollTop}});
+    const before=await snapshot();
+    await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();assert.deepEqual(await snapshot(),before);
+    for(const tab of ['Layout','Add questions','Preview']){await page.getByRole('group',{name:'Builder view'}).getByRole('button',{name:tab,exact:true}).click();await page.getByRole('button',{name:'Switch to light mode.',exact:true}).waitFor()}
+    await download.waitFor();
+    await page.locator('.worksheet-paper canvas[data-painted]').waitFor();
+    const paper=await page.locator('.worksheet-paper canvas').first().evaluate(el=>({background:getComputedStyle(el).backgroundColor,filter:getComputedStyle(el).filter}));
+    assert.deepEqual(paper,{background:'rgb(255, 255, 255)',filter:'none'});
+    const printColors=async()=>{await page.emulateMedia({media:'print'});return page.locator('.ca-build').evaluate(el=>({color:getComputedStyle(el).color,background:getComputedStyle(el).backgroundColor}))};
+    const darkPrint=await printColors();await page.emulateMedia({media:'screen'});
+    await page.getByRole('button',{name:'Switch to light mode.',exact:true}).click();
+    assert.deepEqual(await printColors(),darkPrint,'dark styling is screen-only, so print appearance remains identical');await page.emulateMedia({media:'screen'});
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'theme-builder-preservation',result:'same generated PDF SHA-256 bytes/href/canvas/worksheet/scroll; all three tabs; white unfiltered document; identical print-mode colors'});
+  }finally{await context.close()}
+});
+
+test('dark navigation retains nine distinct unit colors with readable text and stable responsive bounds',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();await login(page);await bankReady(page);
+    const backgrounds=[];
+    for(let unit=1;unit<=9;unit++){
+      const card=page.locator(`.ca-unit[data-u="u${unit}"]`);await card.click();
+      const colors=await card.evaluate(el=>{const style=getComputedStyle(el),canvas=document.createElement('canvas');canvas.width=canvas.height=1;const ctx=canvas.getContext('2d');const rgb=color=>{ctx.clearRect(0,0,1,1);ctx.fillStyle=color;ctx.fillRect(0,0,1,1);return [...ctx.getImageData(0,0,1,1).data].slice(0,3)};const lum=color=>rgb(color).map(c=>c/255).map(c=>c<=.04045?c/12.92:((c+.055)/1.055)**2.4).reduce((s,c,i)=>s+c*[.2126,.7152,.0722][i],0);const ratio=(a,b)=>{a=lum(a);b=lum(b);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05)};return{background:rgb(style.backgroundColor).join(','),selected:ratio(getComputedStyle(el.querySelector('.ca-unit-highlight')).color,style.backgroundColor),resting:ratio(style.getPropertyValue('--unit-ink'),style.getPropertyValue('--tint')),secondary:ratio(style.getPropertyValue('--ca-ink-2'),style.getPropertyValue('--tint'))}});
+      assert.ok(colors.selected>=4.5&&colors.resting>=4.5&&colors.secondary>=4.5,JSON.stringify({unit,...colors}));backgrounds.push(colors.background);
+    }
+    assert.equal(new Set(backgrounds).size,9,'unit identities retain separate colors');
+    const themePairs=await page.evaluate(()=>{const s=getComputedStyle(document.documentElement),c=document.createElement('canvas');c.width=c.height=1;const ctx=c.getContext('2d');function lum(name){ctx.fillStyle=s.getPropertyValue(name);ctx.fillRect(0,0,1,1);return [...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0)}return [['--theme-text','--theme-surface'],['--theme-secondary','--theme-surface'],['--theme-muted','--theme-input'],['--theme-on-primary','--theme-primary'],['--theme-on-primary','--theme-primary-hover'],['--theme-accent','--theme-accent-soft'],['--theme-control-border','--theme-input',3]].map(([a,b,minimum=4.5])=>{const x=lum(a),y=lum(b);return{a,b,minimum,ratio:(Math.max(x,y)+.05)/(Math.min(x,y)+.05)}})});
+    for(const pair of themePairs)assert.ok(pair.ratio>=pair.minimum,JSON.stringify(pair));
+    await page.locator('.ca-topic').first().click();await focusSettled(page);
+    for(const [width,height] of [[1440,900],[1280,800],[768,800],[650,360],[390,844],[320,600]]){
+      await page.setViewportSize({width,height});
+      const toggle=page.getByRole('button',{name:'Switch to light mode.',exact:true});assert.ok(await toggle.isVisible());
+      const before=await page.locator('.ca-work').boundingBox();
+      await page.getByRole('button',{name:'Browse',exact:true}).click();
+      const popup=page.getByRole('dialog',{name:'Browse units and topics'});await popup.waitFor();
+      assert.deepEqual(await page.locator('.ca-work').boundingBox(),before);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      const box=await popup.boundingBox();assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=width+1&&box.y+box.height<=height+1);
+      await page.keyboard.press('Escape');await popup.waitFor({state:'hidden'});
+      await toggle.focus();assert.equal(await toggle.evaluate(el=>getComputedStyle(el).outlineStyle),'solid');
+    }
+    assert.deepEqual(errors,[]);evidence.push({scenario:'dark-responsive-contrast',result:'all nine unit normal/selected/secondary pairs and semantic text/button pairs meet AA; responsive controls/browser at six sizes, keyboard focus, no overflow'});
   }finally{await context.close()}
 });

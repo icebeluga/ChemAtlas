@@ -116,7 +116,8 @@ for (const width of [1440, 390]) {
     const results = page.getByRole("list", { name: "Results" });
     const openButtons = results.locator("button.ca-row-open");
     await openButtons.nth(2).waitFor();
-    const filter = page.getByRole("checkbox", { name: "Reviewed print layout only" });
+    await page.getByRole("group", { name: "Question type" }).getByRole("button", { name: "MCQ", exact: true }).click();
+    const filter = page.getByRole("button", { name: "Clear filters", exact: true });
     await filter.focus();
     assert.ok(await focus(filter));
     assert.equal(await results.locator(".ca-row-open[tabindex='0']").count(), 1);
@@ -217,7 +218,7 @@ test("printable shortcuts leave question disclosures, toolbar buttons, and list 
     page.locator(".ca-parts-box summary"),
     page.getByRole("button", { name: "Fit width", exact: true }),
     page.getByRole("button", { name: "Next question", exact: true }),
-    page.getByRole("checkbox", { name: "Reviewed print layout only" }),
+    page.getByRole("combobox", { name: "Exam year" }),
     page.locator(".ca-rows button.ca-add").first(),
   ];
   for (const control of controls) {

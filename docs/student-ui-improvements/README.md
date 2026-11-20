@@ -2,6 +2,7 @@
 
 - Feature branch: `codex/student-ui-improvements`.
 - Approved base: `origin/main`, `b05c06eaf113a91edcf95f3eea50dc4dec738492`.
+- Owner-requested refinements continue the existing PR #9 branch from `ace5b7d941cf35d59ae06f1a07925ba006ece6db`; no other PR is incorporated.
 - Separate worktree: `C:\Users\Johnson\.codex\worktrees\student-ui-improvements\ChemAtlas-redesign`.
 - Original detached checkout preserved at `0f4d826fa9a78b7f6fbe7f536fe405a60b8596f5`.
 - Design authority: [Website UI Design](https://app.notion.com/p/41de71cef6dc80f0a49cfad183658089), including all six embedded images, inspected November 19, 2026.
@@ -20,6 +21,13 @@
 | Enlarge PDF area | Tighter course/header spacing; topic/status content moves out of the reading area. Full-page/crop, zoom, fit width/page, actual size, fullscreen, source-page navigation and add-to-worksheet controls retained. |
 | Print warning and Details | Default-closed Details includes primary/supporting topics, part descriptions and complete warning. Print unreviewed opens it directly; Escape closes it without dismissing the phone question pane. Worksheet warning retains source-page/adjacent-answer cautions and explicitly calls for checking subparts, figures and continuation pages. |
 | Navigation latency investigation | Ordinary internal navigation uses browser history without remounting Auth/catalog/draft state. Anchors retain valid URLs and modifier-click behavior. Back/Forward and deep links remain supported. |
+
+## Manual-review refinements
+
+- The login header contains only ChemAtlas on the left and Student access on the right. The subtitle and its divider are removed; the form and authentication behavior are unchanged.
+- Question type controls read All, MCQ and FRQ. Clear filters occupies the former review-checkbox position beside the year control; it is disabled when there is nothing to clear. It still resets year, type, search and pagination while retaining the selected unit and topic. The reviewed-only filter is removed; review statuses and print warnings remain elsewhere.
+- Each desktop topic row fills its container. The two-row split uses independently measured natural label/count widths; flex distributes spare space across the variable-width buttons. All nine units are checked at 1440 and 1280 pixels, including long labels and Units 1, 2 and 8. The mobile topic sheet is retained.
+- The desktop split is 24% list / 76% viewer at 1440 pixels, with a 320-pixel list minimum producing 25% / 75% at 1280. Tablet widths reserve more list space. The title and complete metadata occupy the first header row; Details shares the full-page/crop and worksheet-action row. Details remains closed by default and retains all classifications and warnings.
 
 ## Navigation evidence
 
@@ -47,12 +55,12 @@ Local results:
 - ESLint passed with the same four pre-existing warnings outside the changed product code.
 - 109 Node tests passed.
 - 52 Python tests passed with Python 3.12, UTF-8, PyMuPDF 1.26.6 and Tesseract.
-- All 15 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
+- All 17 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
 - Pages build and artifact privacy allowlist passed. Protected data/server modules and administrative credentials remain excluded.
 - A focused 844x390 selected-topic regression verifies a reachable PDF viewport and actual mouse-wheel scrolling; short-screen course/filter controls are internally bounded. Expanded Details is anchored within the short viewport so its warning and part details remain reachable.
 - The downloaded worksheet was one US Letter page (377,523 bytes), rendered and visually checked with both browser PDF.js and Poppler. Poppler reported missing Symbol/ArialUnicode display-font warnings without a visible defect.
 - Worker compatibility build, privacy check and Wrangler dry run passed; the final exact-head compatibility and both shared browser suites are required in PR CI.
-- Desktop and phone screenshots were visually inspected. Coverage includes 1440×900, 768×700, 844×390, 390×844 and 320×600; all nine unit bands, keyboard navigation, PDF painting/fit controls, worksheet generation/download/parsing, progress import/export, logout, invite/recovery protocol, approval denials and revocation.
+- Desktop and phone screenshots were visually inspected. Coverage includes 1440×900, 1280×900, 768×700, 844×390, 390×844 and 320×600; all nine unit bands, keyboard navigation, PDF painting/fit controls, worksheet generation/download/parsing, progress import/export, logout, invite/recovery protocol, approval denials and revocation. Desktop checks assert full row widths, a maximum of two topic rows, unclipped labels/counts, single-line metadata, the list/viewer proportions and reachable expanded Details. Filter checks cover reset behavior and pagination.
 
 The final PR must pass both required checks on its own head:
 `Validate PR head application (no deploy)` and
@@ -81,6 +89,11 @@ following the release handoff's evidence privacy boundary:
 - `test-results/pages/builder-desktop.png`
 - `test-results/pages/print-details-phone.png`
 - `test-results/pages/worksheet.pdf`
+- `test-results/pages/filter-row-{1440,1280}.png`
+- `test-results/pages/topics-u{1,2,8}-{1440,1280}.png`
+- `test-results/pages/header-pdf-{1440,1280}.png`
+- `test-results/pages/short-landscape-details.png`
+- `test-results/pages/compact-question-phone.png`
 
 ## Release boundary and limits
 

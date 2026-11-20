@@ -195,7 +195,7 @@ test("progress export and confirmed import round trip without native browser dia
     await page.reload();
     await page.getByRole("heading", { name: "Progress & patterns", exact: true }).waitFor();
     assert.deepEqual(await snapshot(), imported);
-    assert.equal(await page.getByRole("navigation", { name: "Main navigation" }).getByLabel("2 selected", { exact: true }).count(), 1);
+    await page.getByRole("navigation", { name: "Main navigation" }).getByLabel("2 selected", { exact: true }).waitFor();
     await input.setInputFiles({ name: "invalid.json", mimeType: "application/json", buffer: Buffer.from('{"format":"unsupported"}') });
     await page.getByRole("status").filter({ hasText: "Unsupported ChemAtlas progress export format or version." }).waitFor();
     assert.deepEqual(await snapshot(), imported);
@@ -258,6 +258,8 @@ test("the supplied login identity, password visibility and ChemAtlas tab identit
     assert.equal(icon,"/ChemAtlas/favicon.png");
     assert.deepEqual(await (await page.request.get(new URL(icon,fixture.origin).href)).body(),await readFile("public/favicon.png"));
     await page.getByRole("heading",{name:"Welcome back",exact:true}).waitFor();
+    assert.equal(await page.locator(".ca-auth-header").innerText(), "ChemAtlas\nStudent access");
+    assert.equal(await page.locator(".ca-auth-subtitle").count(), 0);
     const password=page.getByLabel("Password",{exact:true});
     await password.fill("fixture-password");
     await page.getByRole("button",{name:"Show password",exact:true}).click();
@@ -284,16 +286,33 @@ test("compact units and two intrinsic-width topic rows keep the document fitted 
   const {context,page,errors}=await open();
   try {
     await login(page);await bankReady(page);
-    await page.setViewportSize({width:1440,height:900});
+    for (const width of [1440,1280]) {
+    await page.setViewportSize({width,height:900});
     for(let unit=1;unit<=9;unit++){
       await page.getByRole("button",{name:new RegExp("^Unit "+unit+",")}).click();
       assert.equal(await page.locator(".ca-unit[data-u]>span").count(),1);
-      const geometry=await page.locator(".ca-topic").evaluateAll(buttons=>({
-        tops:[...new Set(buttons.map(b=>Math.round(b.getBoundingClientRect().top)))],
-        right:Math.max(...buttons.map(b=>b.getBoundingClientRect().right))
+      await page.waitForFunction(() => [...document.querySelectorAll(".ca-topic-row")].filter(row=>row.children.length).every(row=>
+        Math.abs(row.lastElementChild.getBoundingClientRect().right-row.getBoundingClientRect().right)<=1));
+      const geometry=await page.locator(".ca-topic-row").evaluateAll(rows=>rows.filter(row=>row.children.length).map(row=>{
+        const r=row.getBoundingClientRect(),buttons=[...row.querySelectorAll(".ca-topic")];
+        return {left:r.left,right:r.right,top:r.top,first:buttons[0].getBoundingClientRect().left,last:buttons.at(-1).getBoundingClientRect().right,
+          widths:buttons.map(b=>b.getBoundingClientRect().width),
+          overflow:buttons.some(b=>b.scrollWidth>b.clientWidth+1),
+          lines:buttons.map(b=>{const name=b.querySelector(".ca-topic-name");return name.clientHeight/parseFloat(getComputedStyle(name).lineHeight)})};
       }));
-      assert.ok(geometry.tops.length<=2);
-      assert.ok(geometry.right<=1440, "unit "+unit+" fits two rows: "+JSON.stringify(geometry));
+      assert.ok(geometry.length<=2);
+      for(const row of geometry){
+        assert.ok(Math.abs(row.first-row.left)<=1&&Math.abs(row.last-row.right)<=1);
+        assert.ok(row.right<=width&&row.left>=0);
+        assert.equal(row.overflow,false);
+        assert.ok(Math.max(...row.lines)<=2.1,"topic labels stay within two lines: "+JSON.stringify({unit,width,row}));
+      }
+      if([1,2,8].includes(unit)){
+        const widths=geometry.flatMap(row=>row.widths);
+        assert.ok(Math.max(...widths)-Math.min(...widths)>20,"topic widths stay variable");
+        await page.locator(".ca-course").screenshot({path:"test-results/pages/topics-u"+unit+"-"+width+".png"});
+      }
+    }
     }
     for(const [width,height] of [[1440,900],[768,700],[844,390],[390,844],[320,600]]){
       await page.setViewportSize({width,height});
@@ -428,5 +447,88 @@ test("expanded question Details remains fully reachable on short landscape scree
     assert.ok(await summary.evaluate(el=>document.activeElement===el));
     assert.deepEqual(errors,[]);
     evidence.push({scenario:"short-landscape-details",result:"expanded part details stay in viewport and remain hittable; Escape restores focus"});
+  }finally{await context.close()}
+});
+
+test("compact filters clear year, type, search and pagination while retaining the selected unit and topic", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.goto(fixture.origin+"?view=library&unit=u8&topic=8.3");
+    const types=page.getByRole("group",{name:"Question type"});
+    await types.waitFor();
+    assert.deepEqual(await types.getByRole("button").allTextContents(),["All","MCQ","FRQ"]);
+    assert.equal(await page.getByRole("checkbox",{name:"Reviewed print layout only"}).count(),0);
+    const clear=page.getByRole("button",{name:"Clear filters",exact:true});
+    assert.equal(await clear.isDisabled(),true);
+    await types.getByRole("button",{name:"FRQ",exact:true}).click();
+    await page.getByRole("combobox",{name:"Exam year"}).selectOption("2005");
+    await page.getByRole("searchbox",{name:"Search questions"}).fill("2005");
+    await clear.click();
+    await page.waitForFunction(()=>document.querySelector('.ca-filters button[aria-pressed="true"]')?.textContent==="All"&&document.querySelector(".ca-filters select")?.value==="all"&&document.querySelector(".ca-search input")?.value==="");
+    assert.equal(new URL(page.url()).searchParams.get("unit"),"u8");
+    assert.equal(new URL(page.url()).searchParams.get("topic"),"8.3");
+    assert.equal(await clear.isDisabled(),true);
+    await page.goto(fixture.origin);
+    await bankReady(page);
+    await types.getByRole("button",{name:"MCQ",exact:true}).click();
+    await page.getByRole("button",{name:/^Show \d+ more$/}).click();
+    assert.ok(await page.locator(".ca-row-open").count()>100);
+    await clear.click();
+    await page.waitForFunction(()=>document.querySelectorAll(".ca-row-open").length===100);
+    for(const width of [1440,1280]){
+      await page.setViewportSize({width,height:900});
+      await types.getByRole("button",{name:"MCQ",exact:true}).click();
+      const geometry=await page.locator(".ca-filters").evaluate(el=>[...el.children].map(child=>{const r=child.getBoundingClientRect();return{cy:r.y+r.height/2,left:r.left,right:r.right}}));
+      assert.ok(Math.max(...geometry.map(r=>r.cy))-Math.min(...geometry.map(r=>r.cy))<=2,"filters share one row at "+width);
+      assert.ok(geometry[2].left>=geometry[1].right);
+      await page.locator(".ca-filters").screenshot({path:"test-results/pages/filter-row-"+width+".png"});
+      await clear.click();
+    }
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"compact-filters",result:"All/MCQ/FRQ; review-only filter removed; Clear resets year/type/search/100-row pagination and preserves unit/topic; one row at 1440/1280"});
+  }finally{await context.close()}
+});
+
+test("desktop header keeps complete metadata and Details in compact rows beside a wider PDF pane", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.goto(fixture.origin+"?view=detail&unit=u9&question=frq-2005-8-14");
+    await page.waitForFunction(()=>[...document.querySelectorAll(".ca-viewport canvas")].some(c=>c.width>0&&c.style.visibility==="visible"));
+    for(const width of [1440,1280]){
+      await page.setViewportSize({width,height:900});
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+      await page.waitForFunction(()=>!document.querySelector(".ca-viewport .pdf-wait")&&document.querySelector(".ca-viewport canvas")?.style.visibility==="visible");
+      const layout=await page.evaluate(()=>{
+        const pane=document.querySelector(".ca-pane").getBoundingClientRect(),work=document.querySelector(".ca-work").getBoundingClientRect();
+        const meta=document.querySelector(".ca-pane-head .ca-grow p"),style=getComputedStyle(meta);
+        const details=document.querySelector(".ca-details>summary").getBoundingClientRect(),mode=document.querySelector('[aria-label="Image mode"]').getBoundingClientRect();
+        return {ratio:pane.width/work.width,metadata:meta.textContent,lines:meta.clientHeight/parseFloat(style.lineHeight),metadataFits:meta.scrollWidth<=meta.clientWidth+1,
+          detailsY:details.y+details.height/2,modeY:mode.y+mode.height/2,toolsHeight:document.querySelector(".ca-question-tools").getBoundingClientRect().height};
+      });
+      assert.ok(layout.ratio>=.74&&layout.ratio<=.77,JSON.stringify(layout));
+      assert.match(layout.metadata,/2005 AP Chemistry FRQ · source page 14 · 1 of 83/);
+      assert.ok(layout.lines<=1.1&&layout.metadataFits,JSON.stringify(layout));
+      assert.ok(Math.abs(layout.detailsY-layout.modeY)<=2,JSON.stringify(layout));
+      assert.ok(layout.toolsHeight<=40,JSON.stringify(layout));
+      assert.equal(await page.locator(".ca-details").getAttribute("open"),null);
+      await page.screenshot({path:"test-results/pages/header-pdf-"+width+".png"});
+      await page.locator(".ca-details>summary").click();
+      const parts=page.locator(".ca-parts-box summary");
+      if(await parts.count())await parts.click();
+      const details=await page.locator(".ca-details-panel").evaluate(el=>{const r=el.getBoundingClientRect();return{left:r.left,right:r.right,bottom:r.bottom,hit:el.contains(document.elementFromPoint(r.left+10,r.bottom-10))}});
+      assert.ok(details.left>=0&&details.right<=width&&details.bottom<=900&&details.hit,JSON.stringify(details));
+      await page.keyboard.press("Escape");
+    }
+    await page.getByRole("button",{name:"Fit page",exact:true}).click();
+    await page.waitForFunction(()=>document.querySelector('.ca-viewer[data-fit-page] canvas')?.style.visibility==="visible");
+    await page.getByRole("button",{name:"Fit width",exact:true}).click();
+    await page.getByRole("button",{name:"Full screen",exact:true}).click();
+    await page.waitForFunction(()=>document.fullscreenElement?.classList.contains("ca-viewer"));
+    await page.getByRole("button",{name:"Exit full screen",exact:true}).click();
+    await page.waitForFunction(()=>!document.fullscreenElement);
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"header-proportions",result:"complete one-line source metadata; Details shares action row; 24/76 at 1440 and usable 25/75 at 1280; unclipped Details; PDF fit/fullscreen retained"});
   }finally{await context.close()}
 });

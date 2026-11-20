@@ -533,125 +533,106 @@ test("desktop header keeps complete metadata and Details in compact rows beside 
   }finally{await context.close()}
 });
 
-test("unit hover reveals the full color-matched name without moving cards or filtering questions", async () => {
+async function settleWave(page) {
+  await page.evaluate(()=>new Promise((resolve,reject)=>{
+    let previous="",stable=0,frames=0;
+    const sample=()=>{
+      const current=[...document.querySelectorAll('.ca-unit-wave-stage .ca-unit-sheet.is-deep')].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height].map(n=>n.toFixed(3)).join()}).join(";");
+      stable=current===previous?stable+1:0;previous=current;
+      if(stable>=3)resolve();else if(++frames>120)reject(new Error('Unit wave did not settle'));else requestAnimationFrame(sample);
+    };requestAnimationFrame(sample);
+  }));
+}
+
+test("unit wave preserves full names, colors, fixed slots, selection and responsive navigation", async () => {
   const {context,page,errors}=await open();
   try {
     await login(page);await bankReady(page);
-    await page.waitForFunction(()=>[...document.querySelectorAll(".ca-viewport canvas")].some(c=>c.width>0&&c.style.visibility==="visible"));
+    await page.waitForFunction(()=>[...document.querySelectorAll('.ca-viewport canvas')].some(c=>c.width>0&&c.style.visibility==='visible'));
     await page.emulateMedia({reducedMotion:"no-preference"});
-    const snapshot=()=>page.evaluate(()=>({
-      url:location.href,
-      selected:[...document.querySelectorAll('.ca-unit[aria-pressed="true"]')].map(el=>el.getAttribute("data-u")),
-      results:document.querySelector(".ca-rows").textContent,
-      topics:document.querySelector(".ca-topics-wrap").hasAttribute("data-open"),
-      cards:[...document.querySelectorAll(".ca-unit")].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height]})
-    }));
+    const snapshot=()=>page.evaluate(()=>({url:location.href,selected:[...document.querySelectorAll('.ca-unit[aria-pressed="true"]')].map(el=>el.dataset.u),results:[...document.querySelectorAll('.ca-rows>[data-id]')].map(el=>el.dataset.id),cards:[...document.querySelectorAll('.ca-units>.ca-unit')].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height]})}));
     for(const [width,height] of [[1440,900],[1280,900],[768,900],[844,390]]){
-      await page.setViewportSize({width,height});
-      await page.mouse.move(0,400);
+      await page.setViewportSize({width,height});await page.mouse.move(0,400);
       const before=await snapshot();
       for(let unit=1;unit<=9;unit++){
-        const card=page.getByRole("button",{name:new RegExp("^Unit "+unit+",")});
-        await card.hover();
-        await page.waitForFunction(id=>getComputedStyle(document.querySelector(`[data-u="u${id}"]>.ca-unit-highlight`)).opacity==="1",unit);
-        const highlight=await card.locator(".ca-unit-highlight").evaluate(el=>{
-          const r=el.getBoundingClientRect(),style=getComputedStyle(el),name=el.querySelector("span");
-          const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");canvas.width=canvas.height=1;
-          ctx.fillStyle=style.backgroundColor;ctx.fillRect(0,0,1,1);
+        const card=page.getByRole('button',{name:new RegExp('^Unit '+unit+',')});
+        await card.hover();await settleWave(page);
+        const result=await page.locator(`.ca-unit-wave-stage .ca-unit-highlight[data-u="u${unit}"]`).evaluate(el=>{
+          const box=el.querySelector('.is-deep').getBoundingClientRect(),name=el.querySelector(':scope>span'),nameBox=name.getBoundingClientRect();
+          const source=document.querySelector(`.ca-unit[data-u="${el.dataset.u}"]`),slot=source.getBoundingClientRect();
+          const canvas=document.createElement('canvas');canvas.width=canvas.height=1;const ctx=canvas.getContext('2d');
+          ctx.fillStyle=getComputedStyle(el.querySelector('.is-deep')).backgroundColor;ctx.fillRect(0,0,1,1);
           const rgb=[...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});
-          const slot=el.parentElement.getBoundingClientRect();
-          return {left:r.left,right:r.right,top:r.top,bottom:r.bottom,slot:{left:slot.left,right:slot.right,top:slot.top,bottom:slot.bottom,width:slot.width},name:name.textContent,nameFits:name.scrollHeight<=name.clientHeight+1&&name.scrollWidth<=name.clientWidth+1,
-            color:style.color,contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),
-            segments:el.querySelectorAll(".ca-heat i").length,
-            shadow:style.boxShadow,pointerEvents:style.pointerEvents};
+          return {left:box.left,right:box.right,top:box.top,bottom:box.bottom,width:box.width,height:box.height,
+            slot:{left:slot.left,right:slot.right,top:slot.top,bottom:slot.bottom,width:slot.width,height:slot.height},
+            name:name.textContent,nameOpacity:Number(name.style.opacity),nameFits:nameBox.left>=box.left&&nameBox.right<=box.right&&nameBox.bottom<=box.bottom,
+            segments:el.querySelectorAll('.ca-heat:not(:last-child) i').length||el.querySelectorAll('.ca-heat i').length,
+            contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),pointer:getComputedStyle(el).pointerEvents};
         });
-        assert.equal(highlight.name,(await card.getAttribute("aria-label")).split(", ").slice(1,-1).join(", "));
-        assert.ok(highlight.left>=0&&highlight.right<=width&&highlight.nameFits,JSON.stringify({width,unit,highlight}));
-        assert.ok(highlight.top<highlight.slot.top&&highlight.bottom<highlight.slot.bottom,"tab pulls upward: "+JSON.stringify(highlight));
-        if(highlight.slot.left+highlight.slot.width/2>=140&&highlight.slot.right-highlight.slot.width/2<=width-140){
-          assert.ok(Math.abs((highlight.left+highlight.right-highlight.slot.left-highlight.slot.right)/2)<=1,"expansion stays centered");
-          assert.ok(highlight.left<highlight.slot.left&&highlight.right>highlight.slot.right,"tab widens both ways");
-        }
-        assert.ok(highlight.contrast>=4.5&&highlight.segments>0,JSON.stringify(highlight));
-        assert.equal(highlight.color,"rgb(255, 255, 255)");
-        assert.notEqual(highlight.shadow,"none");
-        assert.equal(highlight.pointerEvents,"none");
-        assert.deepEqual(await snapshot(),before,"hover leaves navigation, filters, results and card geometry unchanged");
-        if(unit===4&&[1440,1280].includes(width))await page.screenshot({path:`test-results/pages/unit-hover-u4-${width}.png`});
-        if(unit===4&&height===390)await page.screenshot({path:"test-results/pages/unit-hover-u4-844x390.png"});
+        assert.equal(result.name,(await card.getAttribute('aria-label')).split(', ').slice(1,-1).join(', '));
+        assert.ok(result.left>=7&&result.right<=width-7&&result.nameFits,JSON.stringify({unit,width,result}));
+        assert.ok(result.top<result.slot.top&&result.bottom<result.slot.bottom,JSON.stringify(result));
+        assert.ok(result.width<=Math.max(result.slot.width+12,224)+1&&result.height<=Math.max(result.slot.height+6,66)+1,'peak is smaller than the former 264px tab');
+        assert.ok(result.nameOpacity>.99&&result.contrast>=4.5&&result.segments>0);
+        assert.equal(result.pointer,'none');
+        assert.deepEqual(await snapshot(),before,'wave never moves click slots or filters questions');
+        if(unit===4)await page.screenshot({path:`test-results/pages/unit-wave-u4-${width}x${height}.png`});
       }
       await page.mouse.move(0,400);
-      await page.waitForFunction(()=>!document.querySelector(".ca-unit-highlight:popover-open"));
+      await page.waitForFunction(()=>!document.querySelector('.ca-unit-wave-stage'));
       assert.deepEqual(await snapshot(),before);
     }
-    const unit4=page.getByRole("button",{name:/^Unit 4,/});
-    await page.getByRole("button",{name:/^Unit 3,/}).focus();
-    await page.keyboard.press("Tab");
-    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).opacity),"1");
-    await unit4.press("Enter");
-    assert.equal(await unit4.getAttribute("aria-pressed"),"true");
-    assert.equal(new URL(page.url()).searchParams.get("unit"),"u4");
-    await unit4.hover();
-    await page.waitForFunction(()=>getComputedStyle(document.querySelector('[data-u="u4"]>.ca-unit-highlight')).opacity==="1");
-    assert.equal(await unit4.evaluate(el=>el.querySelector(".ca-unit-highlight").getBoundingClientRect().height>el.getBoundingClientRect().height),true,"selected tab also gains a little height");
-    assert.equal(await unit4.evaluate(el=>el.querySelector(".ca-unit-highlight").getBoundingClientRect().width>el.getBoundingClientRect().width),true,"selected tab also widens around its center");
-    const all=page.locator(".ca-unit.is-all");
-    await all.hover();
-    await page.waitForFunction(()=>getComputedStyle(document.querySelector(".is-all>.ca-unit-highlight")).opacity==="1");
-    assert.equal(await all.getAttribute("aria-pressed"),"false");
-    assert.equal(new URL(page.url()).searchParams.get("unit"),"u4");
-    await all.click();
-    assert.equal(await all.getAttribute("aria-pressed"),"true");
-    await page.emulateMedia({reducedMotion:"reduce"});
-    const reduced=await unit4.evaluate(button=>{
-      button.dispatchEvent(new PointerEvent("pointerover",{bubbles:true,pointerType:"mouse"}));
-      return button.querySelector(".ca-unit-highlight").getAnimations().map(animation=>animation.effect.getTiming().duration);
+    await page.getByRole('button',{name:/^Unit 3,/}).focus();await page.keyboard.press('Tab');
+    assert.equal(await page.locator('.ca-unit-wave-stage [data-u="u4"]>span').first().evaluate(el=>el.style.opacity),'1');
+    const four=page.getByRole('button',{name:/^Unit 4,/});await four.press('Enter');
+    assert.equal(await four.getAttribute('aria-pressed'),'true');
+    await four.hover();await settleWave(page);
+    assert.equal(await four.evaluate(el=>document.querySelector('.ca-unit-wave-stage [data-u="u4"] .is-deep').getBoundingClientRect().width>el.getBoundingClientRect().width),true);
+    const all=page.locator('.ca-unit.is-all');await all.click();assert.equal(await all.getAttribute('aria-pressed'),'true');
+    await page.emulateMedia({reducedMotion:'reduce'});
+    const reduced=await four.evaluate(button=>{
+      const r=button.getBoundingClientRect();button.parentElement.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerType:'mouse',clientX:r.x+r.width/2,clientY:r.y+r.height/2}));
+      const stage=document.querySelector('.ca-unit-wave-stage');return{animations:stage.getAnimations({subtree:true}).length,title:stage.querySelector('[data-u="u4"]>span').style.opacity};
     });
-    assert.deepEqual(reduced,[],"reduced motion has no WAAPI or implicit CSS transitions, even in the opening task");
-    await page.setViewportSize({width:390,height:844});
-    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).display),"none");
+    assert.deepEqual(reduced,{animations:0,title:'1'});
+    await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('.ca-unit-wave-stage').count(),0);
+    await four.click();assert.equal(await four.getAttribute('aria-pressed'),'true');
+    assert.equal(await page.locator('.ca-unit-wave-stage').count(),0);
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:"unit-hover",result:"all nine centered upward folder tabs, full names, contrast, segments, fixed geometry and unchanged selection/results at 1440/1280/768 and 844x390; reduced motion, keyboard click and phone layout retained"});
+    evidence.push({scenario:'unit-wave-layout',result:'all nine reduced peaks and full titles at 1440/1280/768/844x390; fixed geometry and filters; keyboard, selected card, All, reduced motion and phone preserved'});
   }finally{await context.close()}
 });
 
-test("folder tabs overlap their handoff and reverse from their current animated pose", async () => {
+test("one cursor-proximity field coordinates neighbors, within-card motion, fast sweeps and reversals", async () => {
   const {context,page,errors}=await open();
   try {
-    await login(page);await bankReady(page);
-    await page.waitForFunction(()=>[...document.querySelectorAll(".ca-viewport canvas")].some(c=>c.width>0&&c.style.visibility==="visible"));
-    await page.emulateMedia({reducedMotion:"no-preference"});
-    const four=page.getByRole("button",{name:/^Unit 4,/}),five=page.getByRole("button",{name:/^Unit 5,/});
-    // Dispatch and pause within one browser task so renderer load cannot let a
-    // 240 ms animation finish between two automation calls.
-    const rising=await four.evaluate(button=>{
-      button.dispatchEvent(new PointerEvent("pointerover",{bubbles:true,pointerType:"mouse"}));
-      const el=button.querySelector(".ca-unit-highlight");
-      const animation=el.getAnimations()[0];animation.pause();animation.currentTime=100;
-      const style=getComputedStyle(el);return{transform:style.transform,opacity:style.opacity,duration:animation.effect.getTiming().duration};
-    });
-    assert.equal(rising.duration,240);
-    const retracting=await five.evaluate(button=>{
-      const previous=document.querySelector('.ca-unit[data-u="u4"]');
-      previous.dispatchEvent(new PointerEvent("pointerout",{bubbles:true,pointerType:"mouse",relatedTarget:button}));
-      const el=previous.querySelector(".ca-unit-highlight");
-      const animation=el.getAnimations()[0],first=animation.effect.getKeyframes()[0];
-      animation.pause();animation.currentTime=80;
-      const style=getComputedStyle(el);return{from:first,transform:style.transform,opacity:style.opacity,open:el.matches(":popover-open")};
-    });
-    assert.equal(retracting.from.transform,rising.transform);
-    assert.equal(Number(retracting.from.opacity),Number(rising.opacity));
-    assert.equal(retracting.open,true,"outgoing tab stays painted while retracting");
-    assert.equal(await five.locator(".ca-unit-highlight").evaluate(el=>el.matches(":popover-open")),true,"incoming tab rises concurrently");
-    const reversing=await four.evaluate(button=>{
-      document.querySelector('.ca-unit[data-u="u5"]').dispatchEvent(new PointerEvent("pointerout",{bubbles:true,pointerType:"mouse",relatedTarget:button}));
-      return button.querySelector(".ca-unit-highlight").getAnimations()[0].effect.getKeyframes()[0];
-    });
-    assert.equal(reversing.transform,retracting.transform);
-    assert.equal(Number(reversing.opacity),Number(retracting.opacity));
-    await four.dispatchEvent("pointerout",{pointerType:"mouse",relatedTarget:null});
-    await page.waitForFunction(()=>!document.querySelector(".ca-unit-highlight:popover-open"));
+    await login(page);await bankReady(page);await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.waitForFunction(()=>[...document.querySelectorAll('.ca-viewport canvas')].some(c=>c.width>0&&c.style.visibility==='visible'));
+    const rect=await page.locator('.ca-unit[data-u="u4"]').boundingBox();
+    const values=()=>page.evaluate(()=>[...document.querySelectorAll('.ca-unit-wave-stage .ca-unit-highlight[data-u]')].map(el=>({unit:el.dataset.u,width:el.querySelector('.is-deep').getBoundingClientRect().width,top:el.querySelector('.is-deep').getBoundingClientRect().top})));
+    await page.mouse.move(rect.x+rect.width*.12,rect.y+rect.height/2);await settleWave(page);const shoulder=await values();
+    await page.mouse.move(rect.x+rect.width/2,rect.y+rect.height/2);await settleWave(page);const peak=await values();
+    assert.ok(peak.find(v=>v.unit==='u4').width>shoulder.find(v=>v.unit==='u4').width+5,'proximity changes inside the same button');
+    assert.ok(peak.find(v=>v.unit==='u3').top<rect.y-1&&peak.find(v=>v.unit==='u5').top<rect.y-1,'both immediate neighbors rise');
+    assert.ok(Math.abs(peak.find(v=>v.unit==='u9').top-rect.y)<.5,'far units taper to rest');
+    const transition=await page.evaluate(()=>new Promise(resolve=>{
+      const row=document.querySelector('.ca-units'),stage=document.querySelector('.ca-unit-wave-stage'),next=document.querySelector('.ca-unit[data-u="u5"]').getBoundingClientRect();
+      const sample=()=>['u4','u5'].map(id=>document.querySelector(`.ca-unit-wave-stage [data-u="${id}"] .is-deep`).getBoundingClientRect().width);
+      const before=sample();row.dispatchEvent(new PointerEvent('pointermove',{pointerType:'mouse',clientX:next.x+next.width/2}));
+      const immediate=sample();requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({before,immediate,after:sample(),sameStage:stage===document.querySelector('.ca-unit-wave-stage')})));
+    }));
+    assert.deepEqual(transition.immediate,transition.before,'target changes never snap the current pose');
+    assert.ok(transition.after[0]<transition.before[0]&&transition.after[1]>transition.before[1],'outgoing and incoming respond within two frames');
+    assert.equal(transition.sameStage,true);
+    for(const unit of [3,7,9,2,8,1,4]){
+      const box=await page.locator(`.ca-unit[data-u="u${unit}"]`).boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+    }
+    await settleWave(page);
+    const end=await values();assert.equal(end.reduce((best,item)=>item.top<best.top?item:best).unit,'u4');
+    await page.screenshot({path:'test-results/pages/unit-wave-neighbors.png'});
+    await page.mouse.move(600,400);await page.waitForFunction(()=>!document.querySelector('.ca-unit-wave-stage'));
+    assert.equal(await page.locator('.ca-unit[data-wave]').count(),0);
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:"folder-tab-handoff",result:"240ms transform/opacity; outgoing/incoming faces coexist; interruption and reversal resume from sampled pose without endpoint snaps"});
+    evidence.push({scenario:'unit-wave-motion',result:'continuous within-card proximity; both neighbors respond; distant taper; simultaneous response within two frames; rapid full-row sweeps and reversals preserve one stage and settle cleanly'});
   }finally{await context.close()}
 });

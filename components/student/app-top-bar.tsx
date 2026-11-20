@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Search } from "lucide-react";
 import { sitePath } from "#student-content";
+import { ThemeToggle } from "./theme-toggle";
 
 type Props = {
   current: "bank" | "worksheet" | "other";
@@ -45,6 +46,7 @@ export function AppTopBar({ current, worksheetCount, inert, onBank, search, onSi
         onChange={event => search.onChange(event.target.value)} onKeyDown={event => { if (event.key === "Escape") event.currentTarget.blur(); }} />
       <span className="ca-kbd" aria-hidden="true">/</span>
     </label>}
+    <ThemeToggle />
     {onSignOut && <button type="button" className="ca-sign-out" onClick={onSignOut}>Log out</button>}
   </header>;
 }

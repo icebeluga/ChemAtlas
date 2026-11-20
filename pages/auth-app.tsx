@@ -3,6 +3,13 @@ import { Eye, EyeOff, LockKeyhole, ShieldCheck } from "lucide-react";
 import type { Session } from "@supabase/supabase-js";
 import { authorizeSession, contentResponse, getStimuli, isApproved, passwordSetupRequested, resetAuthorization, setStimuli, sitePath, supabase } from "../lib/content-supabase";
 import type { StimulusDocument } from "../lib/content-types";
+import { ThemeToggle } from "../components/student/theme-toggle";
+
+function AuthHeader() {
+  return <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span>
+    <div className="ca-auth-header-actions"><ThemeToggle /><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></div>
+  </header>;
+}
 
 const ChemAtlas = lazy(() => import("../components/student-app").then(module => ({ default: module.ChemAtlas })));
 
@@ -11,7 +18,7 @@ class StudentAppBoundary extends Component<{ children: ReactNode; onSignOut: () 
   static getDerivedStateFromError() { return { failed: true }; }
   render() {
     if (!this.state.failed) return this.props.children;
-    return <main className="ca-auth-shell"><section className="ca-auth-card" aria-labelledby="load-error-title">
+    return <main className="ca-auth-shell"><AuthHeader /><section className="ca-auth-card" aria-labelledby="load-error-title">
       <div className="ca-auth-mark">ChemAtlas</div>
       <h1 id="load-error-title">ChemAtlas could not open</h1>
       <p role="alert">The application could not finish loading. Reload to try again. Your session and saved progress will stay in this browser.</p>
@@ -150,7 +157,7 @@ export function AuthApp() {
   </div>;
   const signedIn = !!access.user;
   return <main className="ca-auth-shell">
-    <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></header>
+    <AuthHeader />
     <section className="ca-auth-card" aria-labelledby="auth-title">
     <p className="ca-auth-eyebrow">CHEMATLAS / STUDENT PORTAL</p>
     <h1 id="auth-title">{passwordSetup && signedIn ? "Set your password" : access.phase === "pending" ? "Approval required" : "Welcome back"}</h1>

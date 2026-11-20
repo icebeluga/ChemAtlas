@@ -70,7 +70,7 @@
 .ca-course{background:var(--ca-surface);border-bottom:1px solid var(--ca-line);padding:11px 16px 0}
 .ca-units{display:flex;gap:4px}
 .ca2 .ca-unit{flex:1 1 0;min-width:0;display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:2px;padding:6px 8px 7px;min-height:66px;border-radius:var(--ca-r) var(--ca-r) 0 0;background:var(--tint);border-bottom:3px solid transparent;transition:background var(--ca-fast),color var(--ca-fast),filter var(--ca-fast)}
-/* WAAPI owns face motion; reduced-motion duration rules must not start CSS transitions. */
+/* The row controller owns face motion; reduced-motion rules must not start CSS transitions. */
 .ca-unit-highlight{display:none;transition-property:none}
 .ca-unit>b{font:700 17px/1 var(--ca-display);color:var(--deep);display:flex;justify-content:space-between;align-items:baseline}
 .ca-unit>b small{font:400 12.5px var(--ca-body);color:var(--ca-ink-2);font-variant-numeric:tabular-nums}
@@ -389,17 +389,23 @@
 .ca-unit>span{grid-row:2;font-size:12px}
 .ca-unit .ca-heat{grid-row:3}
 .ca2 .ca-unit[aria-pressed=true]:not(.is-all){flex-grow:2.6}
-/* Folder tabs keep fixed slots. Top-layer faces grow around their bottom-center
-   anchor and can rise above the clipped workspace without changing its layout. */
+/* A shared top-layer stage lets the entire row move while its click slots stay fixed. */
 @media (hover:hover) and (pointer:fine) and (min-width:701px){
-  .ca-unit-highlight:popover-open{--ca-unit-motion:240ms;position:fixed;inset:auto;box-sizing:border-box;margin:0;border:0;min-height:max(66px,calc(var(--unit-slot-height) + 12px));display:grid;grid-template-rows:auto auto 5px;align-content:space-between;gap:3px;padding:6px 8px 9px;border-radius:var(--ca-r);background:var(--deep,var(--ca-ink));color:#fff;font-style:normal;box-shadow:var(--ca-lift);pointer-events:none;opacity:0;overflow:visible;transform-origin:center bottom}
-  .ca-unit-highlight::backdrop{pointer-events:none;background:none}
-  .ca-unit-highlight>b{display:flex;justify-content:space-between;align-items:baseline;color:#fff;font:700 17px/1 var(--ca-display)}
+  .ca-units[data-wave-ready]>.ca-unit,.ca-units[data-wave-ready]>.ca-unit>:is(b,span,.ca-heat),.ca-unit-wave-stage,.ca-unit-wave-stage *{transition-property:none}
+  .ca2 .ca-units>.ca-unit[data-wave]{background:transparent;border-bottom-color:transparent}
+  .ca-unit[data-wave]>b,.ca-unit[data-wave]>span,.ca-unit[data-wave]>.ca-heat{opacity:0}
+  .ca-unit-wave-stage:popover-open{position:fixed;inset:0;box-sizing:border-box;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;background:none;overflow:visible;pointer-events:none;font-style:normal;transition-property:none}
+  .ca-unit-wave-stage::backdrop{pointer-events:none;background:none}
+  .ca-unit-wave-stage .ca-unit-highlight{display:block;position:absolute;box-sizing:border-box;color:#fff;font-style:normal;pointer-events:none;overflow:visible;transform-origin:center bottom}
+  .ca-unit-sheet{position:absolute;inset:0;box-sizing:border-box;border-radius:var(--ca-r);transform-origin:center bottom;z-index:0}
+  .ca-unit-sheet.is-deep{background:var(--deep,var(--ca-ink));box-shadow:var(--ca-lift);z-index:1}
+  .ca-unit-highlight>b{position:absolute;left:8px;right:8px;display:flex;justify-content:space-between;align-items:baseline;color:#fff;font:700 17px/1 var(--ca-display);z-index:3}
+  .ca-unit-highlight>b>span,.ca-unit-highlight>b>small{display:block}
   .ca-unit-highlight>b small{color:#fff;font:400 12.5px var(--ca-body);font-variant-numeric:tabular-nums}
-  .ca-unit-highlight>span{font-size:12px;line-height:1.2}
+  .ca-unit-highlight>span{position:absolute;left:8px;top:0;font-size:12px;line-height:1.2;transform-origin:top left;z-index:3}
+  .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;height:5px;transform-origin:center bottom;z-index:3}
+  .ca-unit-highlight>.is-rest{z-index:2}
   .ca-unit-highlight .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
-  .ca-unit.is-all .ca-unit-highlight{min-height:calc(var(--unit-slot-height) + 12px);grid-template-rows:auto auto;padding-bottom:6px}
-  .ca-unit.is-all .ca-unit-highlight>b{font-size:15px}
 }
 .ca-topics{gap:3px;overflow-x:auto}
 .ca-topics-wrap[data-open] .ca-topics{padding-block:4px}

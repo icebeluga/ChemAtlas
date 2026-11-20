@@ -11,7 +11,7 @@ import { PdfQuestionPage } from "@/components/student/pdf-question-page";
 import { filterQuestions } from "@/lib/question-filter";
 import { sourcePageLocation } from "@/lib/question-source";
 import { MAX_ZOOM, MIN_ZOOM, stepZoom, type ViewerZoom } from "@/lib/viewer-scale";
-import { unitHighlight, unitHighlightEvents } from "./unit-highlight";
+import { connectUnitWave, resetUnitWave } from "./unit-highlight";
 
 type Topic = { id: string; name: string; unit: string; unitName: string };
 type Filters = { unit?: string; topic?: string; type?: string; query?: string };
@@ -47,6 +47,7 @@ export function QuestionBank(props: Props) {
   const [focusedId, setFocusedId] = useState("");
   const bank = useRef<HTMLDivElement>(null);
   const course = useRef<HTMLElement>(null);
+  const unitRow = useRef<HTMLDivElement>(null);
   const dock = useRef<HTMLElement>(null);
   const pane = useRef<HTMLElement>(null);
   const rows = useRef<HTMLOListElement>(null);
@@ -58,11 +59,8 @@ export function QuestionBank(props: Props) {
   const stepFocus = useRef<{ id: string; delta: number } | null>(null);
 
   useEffect(() => {
-    const close = () => bank.current?.querySelectorAll<HTMLElement>(".ca-unit").forEach(button => unitHighlight(button, false, true));
-    window.addEventListener("resize", close);
-    window.addEventListener("scroll", close, true);
-    return () => { close(); window.removeEventListener("resize", close); window.removeEventListener("scroll", close, true); };
-  }, []);
+    if (unitRow.current) return connectUnitWave(unitRow.current);
+  }, [unit, catalog.units, questions]);
 
   const unitOf = useMemo(() => new Map(topics.map(t => [t.id, t.unit])), [topics]);
   const topicName = useMemo(() => new Map(topics.map(t => [t.id, t.name])), [topics]);
@@ -240,18 +238,18 @@ export function QuestionBank(props: Props) {
   return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined}>
     <nav className="ca-course" ref={course} aria-label="Units and topics" inert={paneOpen}>
       <h2 className="ca-sr">Browse by unit</h2>
-      <div className="ca-units">
-        <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} {...unitHighlightEvents} onClick={event => { unitHighlight(event.currentTarget, false, true); onFilters({ unit: "all", topic: "all" }); }}>
+      <div className="ca-units" ref={unitRow}>
+        <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => { resetUnitWave(unitRow.current); onFilters({ unit: "all", topic: "all" }); }}>
           <b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span><span className="ca-sr">units</span>
-          <i className="ca-unit-highlight" popover="manual" aria-hidden="true"><b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span></i>
+          <i className="ca-unit-highlight" aria-hidden="true"><b><span className="ca-unit-number">All</span></b><span>{classified.length ? classified.length.toLocaleString() : ""}</span></i>
         </button>
         {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
           aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
-          {...unitHighlightEvents} onClick={event => { unitHighlight(event.currentTarget, false, true); onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" }); }}>
+          onClick={() => { resetUnitWave(unitRow.current); onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" }); }}>
           <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
           <i className="ca-heat" aria-hidden="true">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
-          <i className="ca-unit-highlight" popover="manual" aria-hidden="true">
-            <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
+          <i className="ca-unit-highlight" aria-hidden="true">
+            <b><span className="ca-unit-number">{i + 1}</span><small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
             <i className="ca-heat">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
           </i>
         </button>)}

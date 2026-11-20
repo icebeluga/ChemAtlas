@@ -393,7 +393,7 @@
 @media (hover:hover) and (pointer:fine) and (min-width:701px){
   .ca-units[data-accordion]>.ca-unit{position:relative;box-sizing:border-box;container-type:inline-size;min-height:0;overflow:hidden;transition:background var(--ca-fast) var(--ca-out),color var(--ca-fast) var(--ca-out)}
   /* Keep the grid as the sizing layer; selected and hovered cards share one face. */
-  .ca-units>.ca-unit[aria-pressed=true]:not(.is-all){position:relative}
+  .ca-units>.ca-unit[aria-pressed=true]:not(.is-all){position:relative;container-type:inline-size}
   .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat),.ca-units>.ca-unit[aria-pressed=true]:not(.is-all)>:is(b,span,.ca-heat){opacity:0}
   .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat),.ca-units[data-accordion]>.ca-unit>.ca-heat *{transition-property:none}
   .ca2 .ca-units[data-accordion]>.ca-unit[data-accordion-dark]{background:var(--deep,var(--ca-ink));color:#fff}
@@ -406,7 +406,8 @@
   .ca-unit-highlight>b small{font:400 12px/1.3 var(--ca-body);font-variant-numeric:tabular-nums}
   .ca-unit-highlight .ca-unit-number{position:absolute;left:0;top:0}
   .ca-unit-highlight>b small{position:absolute;right:0;top:0}
-  .ca-unit-highlight>span{position:absolute;inset:3px clamp(26px,calc(50% - 64px),32px) 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;overflow-wrap:anywhere;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
+  .ca-unit-highlight>span{position:absolute;inset:3px clamp(28px,calc(50% - 64px),32px) 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;overflow-wrap:anywhere;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
+  @container(max-width:190px){.ca-unit-highlight>span{word-break:break-all}}
   .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;bottom:4px;height:4px}
   .ca-unit[data-accordion-dark] .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
   .is-all .ca-unit-highlight>b{font-size:15px}

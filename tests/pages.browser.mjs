@@ -558,7 +558,8 @@ test("unit wave preserves full names, colors, fixed slots, selection and respons
         const card=page.getByRole('button',{name:new RegExp('^Unit '+unit+',')});
         await card.hover();await settleWave(page);
         const result=await page.locator(`.ca-unit-wave-stage .ca-unit-highlight[data-u="u${unit}"]`).evaluate(el=>{
-          const box=el.querySelector('.is-deep').getBoundingClientRect(),name=el.querySelector(':scope>span'),nameBox=name.getBoundingClientRect();
+          const deep=el.querySelector('.is-deep'),box=deep.getBoundingClientRect(),name=el.querySelector(':scope>span'),nameBox=name.getBoundingClientRect();
+          const darkPaintedAboveRest=Number(getComputedStyle(deep).zIndex)>Number(getComputedStyle(el.querySelector('.ca-unit-sheet.is-rest')).zIndex)&&Number(deep.style.opacity)>.99;
           const source=document.querySelector(`.ca-unit[data-u="${el.dataset.u}"]`),slot=source.getBoundingClientRect();
           const canvas=document.createElement('canvas');canvas.width=canvas.height=1;const ctx=canvas.getContext('2d');
           ctx.fillStyle=getComputedStyle(el.querySelector('.is-deep')).backgroundColor;ctx.fillRect(0,0,1,1);
@@ -566,14 +567,14 @@ test("unit wave preserves full names, colors, fixed slots, selection and respons
           return {left:box.left,right:box.right,top:box.top,bottom:box.bottom,width:box.width,height:box.height,
             slot:{left:slot.left,right:slot.right,top:slot.top,bottom:slot.bottom,width:slot.width,height:slot.height},
             name:name.textContent,nameOpacity:Number(name.style.opacity),nameFits:nameBox.left>=box.left&&nameBox.right<=box.right&&nameBox.bottom<=box.bottom,
-            segments:el.querySelectorAll('.ca-heat:not(:last-child) i').length||el.querySelectorAll('.ca-heat i').length,
+            darkPaintedAboveRest,segments:el.querySelectorAll('.ca-heat:not(:last-child) i').length||el.querySelectorAll('.ca-heat i').length,
             contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),pointer:getComputedStyle(el).pointerEvents};
         });
         assert.equal(result.name,(await card.getAttribute('aria-label')).split(', ').slice(1,-1).join(', '));
         assert.ok(result.left>=7&&result.right<=width-7&&result.nameFits,JSON.stringify({unit,width,result}));
         assert.ok(result.top<result.slot.top&&result.bottom<result.slot.bottom,JSON.stringify(result));
         assert.ok(result.width<=Math.max(result.slot.width+12,224)+1&&result.height<=Math.max(result.slot.height+6,66)+1,'peak is smaller than the former 264px tab');
-        assert.ok(result.nameOpacity>.99&&result.contrast>=4.5&&result.segments>0);
+        assert.ok(result.nameOpacity>.99&&result.darkPaintedAboveRest&&result.contrast>=4.5&&result.segments>0,'saturated surface stays above the pastel copy with contrasting text');
         assert.equal(result.pointer,'none');
         assert.deepEqual(await snapshot(),before,'wave never moves click slots or filters questions');
         if(unit===4)await page.screenshot({path:`test-results/pages/unit-wave-u4-${width}x${height}.png`});

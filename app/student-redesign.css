@@ -404,7 +404,7 @@
   .ca-unit-highlight>b small{color:#fff;font:400 12.5px var(--ca-body);font-variant-numeric:tabular-nums}
   .ca-unit-highlight>span{position:absolute;left:8px;top:0;font-size:12px;line-height:1.2;transform-origin:top left;z-index:3}
   .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;height:5px;transform-origin:center bottom;z-index:3}
-  .ca-unit-highlight>.is-rest{z-index:2}
+  .ca-unit-highlight>.is-rest-content{z-index:2}
   .ca-unit-highlight .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
 }
 .ca-topics{gap:3px;overflow-x:auto}

@@ -55,7 +55,7 @@ export function connectUnitWave(row: HTMLElement) {
       const baseHeader = button.querySelector<HTMLElement>(":scope>b")!;
       const headerBox = baseHeader.getBoundingClientRect();
       const restHeader = header.cloneNode(true) as HTMLElement;
-      restHeader.classList.add("is-rest");
+      restHeader.classList.add("is-rest-content");
       restHeader.style.color = getComputedStyle(baseHeader).color;
       const baseCount = baseHeader.querySelector("small"), restCount = restHeader.querySelector<HTMLElement>("small");
       if (baseCount && restCount) restCount.style.color = getComputedStyle(baseCount).color;
@@ -68,7 +68,7 @@ export function connectUnitWave(row: HTMLElement) {
       const restTitle = baseTitle ? title.cloneNode(true) as HTMLElement : undefined;
       title.style.width = `${peakWidth - 16}px`;
       if (restTitle && baseTitle) {
-        restTitle.classList.add("is-rest");
+        restTitle.classList.add("is-rest-content");
         Object.assign(restTitle.style, { width: `${slot.width - 16}px`, color: getComputedStyle(baseTitle).color });
         face.appendChild(restTitle);
       }
@@ -79,7 +79,7 @@ export function connectUnitWave(row: HTMLElement) {
       if (bar && baseBar) {
         barBottom = slot.bottom - baseBar.getBoundingClientRect().bottom;
         const restBar = bar.cloneNode(true) as HTMLElement;
-        restBar.classList.add("is-rest");
+        restBar.classList.add("is-rest-content");
         [...restBar.children].forEach((segment, index) => { (segment as HTMLElement).style.background = getComputedStyle(baseBar.children[index]).backgroundColor; });
         bars.push(restBar, bar); face.appendChild(restBar);
         bars.forEach(el => { el.style.bottom = `${barBottom}px`; });

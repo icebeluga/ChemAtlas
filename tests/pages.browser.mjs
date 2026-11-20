@@ -61,8 +61,13 @@ test("authenticated unapproved visitor is denied without protected content reque
   const { context, page, errors } = await open();
   try {
     const start = fixture.logs.length;
+    await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();
     await login(page, "unapproved@example.test");
     await page.getByRole("heading", { name: "Approval required" }).waitFor();
+    const retry=page.getByRole('button',{name:'Check access again',exact:true});
+    assert.equal(await retry.evaluate(el=>getComputedStyle(el).outlineWidth),'0px','secondary dark actions have no permanent bright utility outline');
+    await retry.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
+    assert.equal(await retry.evaluate(el=>getComputedStyle(el).outlineWidth),'2px','keyboard focus remains visible');
     assert(!fixture.logs.slice(start).some(log => log.path.startsWith("/storage/")));
     assert.deepEqual(errors, []);
     evidence.push({ scenario: "unapproved", result: "denied; no question or PDF request" });

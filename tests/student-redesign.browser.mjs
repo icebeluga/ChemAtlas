@@ -643,7 +643,16 @@ test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", 
   await waitForQuestionCanvases(page, 1);
   assert.match(await page.locator(".ca-viewport canvas").getAttribute("aria-label"), /page 9$/);
   await page.getByRole("button", { name: "Fit page", exact: true }).click();
-  await page.waitForFunction(() => document.querySelector(".ca-viewport")?.clientHeight > 300);
+  // Focus Mode keeps its 48px navigation available above the phone pane.
+  // Assert usable space and the actual Fit page result, rather than the old
+  // pre-breadcrumb height (which also varies with platform font metrics).
+  await page.waitForFunction(() => {
+    const frame = document.querySelector(".ca-viewport");
+    const canvas = frame?.querySelector("canvas");
+    return frame?.clientHeight >= 240 && canvas?.style.visibility === "visible"
+      && canvas.getBoundingClientRect().height <= frame.clientHeight + 2
+      && frame.scrollHeight <= frame.clientHeight + 4;
+  });
   await waitForQuestionCanvases(page, 1);
 });
 

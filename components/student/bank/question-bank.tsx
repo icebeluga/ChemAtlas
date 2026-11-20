@@ -41,7 +41,6 @@ export function QuestionBank(props: Props) {
   const paneOpen = !!selectedId && !wide;
   const { content } = useExportData();
   const [year, setYear] = useState("all");
-  const [reviewedOnly, setReviewedOnly] = useState(false);
   const [shown, setShown] = useState(PAGE);
   const [mode, setMode] = useState<ImageMode>("full");
   const [focusedId, setFocusedId] = useState("");
@@ -76,9 +75,9 @@ export function QuestionBank(props: Props) {
   const results = useMemo(() => filterQuestions(questions, {
     unit, topic, type: type === "Mixed" ? "all" : type,
     unitForTopic: id => id ? unitOf.get(id) : undefined,
-    include: q => q.status === "classified" && (year === "all" || q.year === year) && (!reviewedOnly || hasLayout(q.id)),
+    include: q => q.status === "classified" && (year === "all" || q.year === year),
     search: { query, text: q => `${q.year} ${q.exam} ${q.number} ${q.textPreview} ${q.displayName} ${(q.relatedTopics ?? []).join(" ")}` },
-  }), [questions, unit, topic, type, query, year, reviewedOnly, unitOf, hasLayout]);
+  }), [questions, unit, topic, type, query, year, unitOf]);
 
   const byId = useMemo(() => new Map(questions.map(q => [q.id, q])), [questions]);
   const current = (selectedId ? byId.get(selectedId) : undefined) ?? (wide ? results[0] : undefined);
@@ -94,7 +93,21 @@ export function QuestionBank(props: Props) {
     const band = topicBand.current;
     if (!band) return;
     const observer = new ResizeObserver(() => {
-      const widths = [...band.querySelectorAll<HTMLElement>(".ca-topic")].map(button => button.getBoundingClientRect().width + 3);
+      if (!band.clientWidth) return;
+      // Measure natural text/count widths independently of the space distributed
+      // by flex-grow. Measuring stretched buttons would feed row sizing back
+      // into the split calculation and make it change on every resize.
+      const measure = band.cloneNode(true) as HTMLDivElement;
+      measure.setAttribute("aria-hidden", "true");
+      measure.inert = true;
+      Object.assign(measure.style, { position: "fixed", top: "0", left: "0", width: "max-content", visibility: "hidden", pointerEvents: "none" });
+      measure.querySelectorAll<HTMLElement>(".ca-topic-row").forEach(row => { row.style.width = "max-content"; });
+      measure.querySelectorAll<HTMLElement>(".ca-topic").forEach(button => {
+        Object.assign(button.style, { flex: "none", width: "max-content", maxWidth: "none", whiteSpace: "nowrap" });
+      });
+      band.parentElement?.appendChild(measure);
+      const widths = [...measure.querySelectorAll<HTMLElement>(".ca-topic")].map(button => button.getBoundingClientRect().width + 3);
+      measure.remove();
       let best = 1, smallest = Infinity;
       for (let index = 1; index < widths.length; index++) {
         const widest = Math.max(widths.slice(0, index).reduce((sum, width) => sum + width, 0),
@@ -108,10 +121,10 @@ export function QuestionBank(props: Props) {
   }, [activeUnit]);
   const activeUnitNumber = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
   const activeTopic = topic !== "all" ? topic : "";
-  const filtered = type !== "Mixed" || year !== "all" || reviewedOnly || !!query;
+  const filtered = type !== "Mixed" || year !== "all" || !!query;
   const loading = !catalog.units.length && !loadFailed;
 
-  useEffect(() => { rows.current?.scrollTo(0, 0); }, [unit, topic, type, query, year, reviewedOnly]);
+  useEffect(() => { rows.current?.scrollTo(0, 0); }, [unit, topic, type, query, year]);
 
   useLayoutEffect(() => {
     const container = bank.current;
@@ -213,7 +226,7 @@ export function QuestionBank(props: Props) {
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [paneOpen, onClosePane]);
 
-  function clearFilters() { setYear("all"); setReviewedOnly(false); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
+  function clearFilters() { setYear("all"); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
   function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
 
   return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined}>
@@ -243,7 +256,7 @@ export function QuestionBank(props: Props) {
           {[activeUnit?.topics.slice(0, topicBreak || Math.ceil(activeUnit.topics.length / 2)), activeUnit?.topics.slice(topicBreak || Math.ceil(activeUnit.topics.length / 2))].map((row, rowIndex) => <div className="ca-topic-row" key={rowIndex}>
           {row?.map(([id, name]) => { const count = counts.byTopic.get(id) ?? 0;
             return <button type="button" key={id} className="ca-topic" style={{ "--d": density(count, counts.max) } as React.CSSProperties} data-empty={count ? undefined : ""}
-              aria-pressed={topic === id} onClick={() => onFilters({ topic: topic === id ? "all" : id })}><b>{id}</b>{name}<i>{count}</i></button>; })}
+              aria-pressed={topic === id} onClick={() => onFilters({ topic: topic === id ? "all" : id })}><b>{id}</b><span className="ca-topic-name">{name}</span><i>{count}</i></button>; })}
           </div>)}
         </div>
       </div>
@@ -267,14 +280,13 @@ export function QuestionBank(props: Props) {
           {activeTopic && catalog.topicDetails?.[activeTopic] && <p>{catalog.topicDetails[activeTopic].description}</p>}
           <div className="ca-filters">
             <div className="ca-seg" role="group" aria-label="Question type">
-              {([["Mixed", "All"], ["MCQ", "Multiple choice"], ["FRQ", "Free response"]] as const).map(([value, label]) =>
+              {([["Mixed", "All"], ["MCQ", "MCQ"], ["FRQ", "FRQ"]] as const).map(([value, label]) =>
                 <button type="button" key={value} aria-pressed={type === value} onClick={() => onFilters({ type: value })}>{label}</button>)}
             </div>
             <select aria-label="Exam year" value={year} onChange={event => { setYear(event.target.value); setShown(PAGE); }}>
               <option value="all">Any year</option>{years.map(y => <option key={y}>{y}</option>)}
             </select>
-            <label className="ca-check"><input type="checkbox" checked={reviewedOnly} onChange={event => { setReviewedOnly(event.target.checked); setShown(PAGE); }} /> Reviewed print layout only</label>
-            {filtered && <button type="button" className="ca-clear" onClick={clearFilters}>Clear filters</button>}
+            <button type="button" className="ca-clear" disabled={!filtered} onClick={clearFilters}>Clear filters</button>
           </div>
         </div>
         <ol className="ca-rows" ref={rows} aria-label="Results" onKeyDown={onResultsKeyDown}>
@@ -413,8 +425,11 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
         <h2 ref={heading} tabIndex={-1}><span className="ca-tag" data-t={q.type}>{q.type}</span>{q.year ?? "Undated"} · Question {q.number}</h2>
         <p>{q.exam} · source page{pages.length > 1 ? "s" : ""} {pages.join(", ")}{index >= 0 ? ` · ${index + 1} of ${total}` : ""}</p>
       </div>
-      <button type="button" className="ca-icon" aria-label="Previous question" disabled={index <= 0} onClick={() => onStep(-1)}><ChevronLeft size={17} aria-hidden="true" /></button>
-      <button type="button" className="ca-icon" aria-label="Next question" disabled={index < 0 || index >= total - 1} onClick={() => onStep(1)}><ChevronRight size={17} aria-hidden="true" /></button>
+      <div className="ca-question-navigation" role="group" aria-label="Question navigation">
+        <button type="button" className="ca-icon" aria-label="Previous question" disabled={index <= 0} onClick={() => onStep(-1)}><ChevronLeft size={17} aria-hidden="true" /></button>
+        <button type="button" className="ca-icon" aria-label="Next question" disabled={index < 0 || index >= total - 1} onClick={() => onStep(1)}><ChevronRight size={17} aria-hidden="true" /></button>
+      </div>
+      <div className="ca-question-tools">
       <div className="ca-seg" role="group" aria-label="Image mode">
         <button type="button" aria-pressed={view === "full"} onClick={() => onMode("full")}>Full page</button>
         <button type="button" aria-pressed={view === "crop"} disabled={!hasCrop} onClick={() => onMode("crop")}>Question crop</button>
@@ -454,6 +469,7 @@ function QuestionPane({ question: q, index, total, activeTopic, mode, onMode, he
             </div>
           </div>
         </details>
+      </div>
       </div>
     </div>
     <div className="ca-pane-body">

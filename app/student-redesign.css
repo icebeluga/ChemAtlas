@@ -95,7 +95,7 @@
 .ca2 .ca-topic[data-empty]{background:none;box-shadow:inset 0 0 0 1px var(--ca-line);color:var(--ca-ink-2)}
 .ca-unit-line,.ca2 .ca-topic-open{display:none}
 
-.ca-work{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"list pane" "list dock";min-height:0}
+.ca-work{display:grid;grid-template-columns:minmax(320px,24fr) minmax(0,76fr);grid-template-rows:minmax(0,1fr) auto;grid-template-areas:"list pane" "list dock";min-height:0}
 .ca-list{grid-area:list;display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--ca-line);background:var(--ca-surface)}
 .ca-list-head{padding:11px 16px 8px;border-bottom:1px solid var(--ca-line)}
 .ca-list-title{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
@@ -105,7 +105,10 @@
 .ca-list-head>p{font-size:14px;color:var(--ca-ink-2);max-width:60ch;margin-top:2px}
 .ca-filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
 .ca2 .ca-filters select{height:31px;border:1px solid var(--ca-line);border-radius:var(--ca-r);background:var(--ca-surface);padding:0 6px}
-.ca2 .ca-clear{margin-left:auto;font-size:14px;color:var(--ca-pencil);text-decoration:underline;text-underline-offset:3px}
+.ca2 .ca-clear{font-size:12px;white-space:nowrap;color:var(--ca-pencil);text-decoration:underline;text-underline-offset:3px}
+.ca2 .ca-clear:disabled{color:var(--ca-ink-2);opacity:.55;cursor:default;text-decoration:none}
+.ca2 .ca-filters .ca-seg button{padding-inline:7px;font-size:12.5px}
+.ca2 .ca-filters select{font-size:12.5px}
 .ca-rows{list-style:none;padding:0;overflow:auto;flex:1;scroll-padding:48px 0}
 .ca2 .ca-row.catalog-row{display:grid;grid-template-columns:40px minmax(0,1fr) auto;gap:0 8px;align-items:center;padding:0 8px 0 0;margin:0;border:0;border-bottom:1px solid var(--ca-line-2);border-left:4px solid transparent;border-radius:0;background:var(--ca-surface);box-shadow:none;transition:background var(--ca-fast),border-color var(--ca-fast)}
 .ca2 .ca-row:hover{background:var(--ca-canvas)}
@@ -385,11 +388,14 @@
 .ca-unit>span{grid-row:2;font-size:12px}
 .ca-unit .ca-heat{grid-row:3}
 .ca2 .ca-unit[aria-pressed=true]:not(.is-all){flex-grow:2.6}
-.ca-topics{display:grid;grid-template-rows:repeat(2,max-content);grid-auto-flow:column;grid-auto-columns:max-content;justify-content:start;gap:3px;overflow-x:auto}
+.ca-topics{gap:3px;overflow-x:auto}
 .ca-topics-wrap[data-open] .ca-topics{padding-block:4px}
 .ca2 .ca-topic{justify-self:start;padding:3px 7px;font-size:12.5px;gap:4px}
 .ca-topic b{font-size:12.5px}.ca-topic i{font-size:12px}
-.ca-pane-head{padding:7px 12px;gap:4px 6px;flex:none}
+.ca-pane-head{display:grid;grid-template-columns:minmax(0,1fr) auto;padding:7px 12px;gap:4px 6px;flex:none}
+.ca-pane-head .ca-grow{grid-column:1;grid-row:1}
+.ca-question-navigation{grid-column:2;grid-row:1;display:flex;align-items:center}
+.ca-question-tools{grid-column:1/-1;display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;min-width:0}
 .ca-pane-head h2{font-size:21px}.ca-pane-head p{font-size:12.5px}
 .ca-pane-head .ca-grow{flex-basis:240px}
 .ca-pane-body{padding:8px 12px;overflow:hidden}
@@ -442,9 +448,19 @@
 html:has(.ca2),body:has(.ca2){height:100%;overflow:hidden}
 .ca-bank,.ca-course,.ca-topics-wrap,.ca-work,.ca-pane,.ca-list,.ca-viewer{min-width:0}
 .ca-topics{display:flex;flex-direction:column;align-items:flex-start;overflow-x:auto}
-.ca-topic-row{display:flex;gap:3px;width:max-content}
+.ca-topic-row{display:flex;gap:3px;width:100%}
 .ca-sr{top:0;left:0}
-.ca2 .ca-topic{white-space:normal;max-width:220px;min-width:0;align-items:center}.ca-topic b,.ca-topic i{flex:none}
+.ca2 .ca-topic{flex:1 1 auto;white-space:normal;max-width:none;min-width:0;align-items:center}.ca-topic b,.ca-topic i{flex:none}
+.ca-topic-name{min-width:0}
+.ca-list-head{padding-inline:12px}
+.ca-filters{gap:4px 6px}
+@media(min-width:1100px){.ca-pane-head .ca-grow p{white-space:nowrap}}
+@media(min-width:701px) and (max-width:1099px){.ca-work{grid-template-columns:minmax(280px,34fr) minmax(0,66fr)}}
+@media(max-width:700px){
+  .ca-pane-head{display:flex}
+  .ca-question-tools{flex:1 1 100%}
+  .ca2 .ca-filters .ca-seg button{padding:10px 9px}
+}
 
 /* Short landscape screens reserve a real reading area. Course/filter chrome
    scrolls inside its own bounds rather than pushing the PDF out of reach. */

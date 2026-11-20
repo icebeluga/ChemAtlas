@@ -603,8 +603,11 @@ test("unit hover reveals the full color-matched name without moving cards or fil
     await all.click();
     assert.equal(await all.getAttribute("aria-pressed"),"true");
     await page.emulateMedia({reducedMotion:"reduce"});
-    await unit4.hover();
-    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>el.getAnimations().length),0);
+    const reduced=await unit4.evaluate(button=>{
+      button.dispatchEvent(new PointerEvent("pointerover",{bubbles:true,pointerType:"mouse"}));
+      return button.querySelector(".ca-unit-highlight").getAnimations().map(animation=>animation.effect.getTiming().duration);
+    });
+    assert.deepEqual(reduced,[],"reduced motion has no WAAPI or implicit CSS transitions, even in the opening task");
     await page.setViewportSize({width:390,height:844});
     assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).display),"none");
     assert.deepEqual(errors,[]);

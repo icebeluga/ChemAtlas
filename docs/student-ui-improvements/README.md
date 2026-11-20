@@ -24,6 +24,9 @@
 
 ## Manual-review refinements
 
+- Adaptive navigation now has four complementary states. Initial browsing keeps the unit row; selecting a unit reveals its existing topic rows. Choosing a topic retracts both bars into a 48 px unit-accented breadcrumb row. A manual “Focus on this unit” control offers whole-unit study without a topic. Browse, unit/topic breadcrumbs and the centered double-chevron handle open one anchored non-modal browser. The browser reuses the same unit/topic components, keeps unit switches open, closes after topic selection, and offers all questions in the chosen unit. Outside click, Escape, Browse/handle and the close control dismiss it.
+- Navigation visibility is separate from filtering. Opening/dismissing changes neither the question nor PDF zoom/crop/scroll, list scroll, search/year/type, worksheet or URL. The PDF/list subtree stays mounted. Base UI's existing installed Popover/Collapsible primitives manage focus/dismissal and the 280 ms reveal/retraction; there is no dim backdrop, duplicate unit tree, new dependency, pinning or custom pull gesture. The overlay is viewport-bounded and scrollable. Phone Focus Mode keeps navigation accessible above the PDF pane. The original inline mobile topic sheet and horizontal accordion remain usable.
+
 - The login header contains only ChemAtlas on the left and Student access on the right. The subtitle and its divider are removed; the form and authentication behavior are unchanged.
 - Question type controls read All, MCQ and FRQ. Clear filters occupies the former review-checkbox position beside the year control; it is disabled when there is nothing to clear. It still resets year, type, search and pagination while retaining the selected unit and topic. The reviewed-only filter is removed; review statuses and print warnings remain elsewhere.
 - Each desktop topic row fills its container. The two-row split uses independently measured natural label/count widths; flex distributes spare space across the variable-width buttons. All nine units are checked at 1440 and 1280 pixels, including long labels and Units 1, 2 and 8. The mobile topic sheet is retained.
@@ -56,7 +59,7 @@ Local results:
 - ESLint passed with the same four pre-existing warnings outside the changed product code.
 - 109 Node tests passed.
 - 52 Python tests passed with Python 3.12, UTF-8, PyMuPDF 1.26.6 and Tesseract.
-- The 19 Pages browser scenarios use the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL. Accordion coverage checks all nine units at 1440/1280/tablet/short-landscape sizes, complete titles and indicators, exact constant card/row height, fixed total width/gaps, no overlap/overflow, compression weighted toward adjacent cards, unchanged hover filters/results, stationary hold, simultaneous contraction/expansion within two frames, rapid sweeps/reversals, clicks during/after motion, exit restoration, keyboard/reduced motion/mobile. Exact-head results are recorded in PR #9.
+- The 23 Pages browser scenarios use the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL. Accordion coverage checks all nine units at 1440/1280/tablet/short-landscape sizes, complete titles and indicators, exact constant card/row height, fixed total width/gaps, no overlap/overflow, compression weighted toward adjacent cards, unchanged hover filters/results, stationary hold, simultaneous contraction/expansion within two frames, rapid sweeps/reversals, clicks during/after motion, exit restoration, keyboard/reduced motion/mobile. Adaptive cases cover all four states, >40 px reclaimed desktop height, one rendered navigation tree, exact canvas/state preservation and zero protected reloads, all triggers/dismissal paths, whole-unit study, six viewport sizes and normal-motion repeated toggling. Existing bank/builder Back/Forward tests remain; filter updates still replace the current history entry. Exact-head results are recorded in PR #9.
 - Earlier wave profiling receipts (`outputs/unit-wave-performance-{1x,4x}.json`) are historical and do not describe this accordion. Widths now intentionally perform bounded horizontal layout so visible cards and real click targets never diverge. Use current accordion profiling rather than repeating the old zero-layout claim. Test snapshots compare question IDs rather than protected question text.
 - Pages build and artifact privacy allowlist passed. Protected data/server modules and administrative credentials remain excluded.
 - A focused 844x390 selected-topic regression verifies a reachable PDF viewport and actual mouse-wheel scrolling; short-screen course/filter controls are internally bounded. Expanded Details is anchored within the short viewport so its warning and part details remain reachable.
@@ -104,6 +107,10 @@ following the release handoff's evidence privacy boundary:
 - `outputs/unit-accordion-navigation.png`
 - `outputs/unit-accordion.webm`
 - `outputs/unit-accordion-performance.json`
+- `test-results/pages/adaptive-{1-initial,2-unit,3-focus,4-overlay}.png`
+- `test-results/pages/adaptive-overlay-{phone,landscape}.png`
+- `outputs/adaptive-state-{1-initial,2-unit,3-focus,4-overlay}.png`
+- `outputs/adaptive-navigation.webm`
 
 ## Release boundary and limits
 

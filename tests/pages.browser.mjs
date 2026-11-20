@@ -651,3 +651,148 @@ test('accordion stays stable under stationary pointers, reversals, fast sweeps a
     evidence.push({scenario:'unit-accordion-motion',result:'stationary hold stable for 45 frames; simultaneous response within two frames; reversals and rapid full-row sweeps; constant geometry bounds throughout; clicks during/after motion select actual button; no overlay'});
   }finally{await context.close()}
 });
+
+async function painted(page) { await page.waitForFunction(()=>!document.querySelector('.ca-viewport .pdf-wait')&&[...document.querySelectorAll('.ca-viewport canvas')].some(c=>c.width>0&&c.style.visibility==='visible')); }
+async function focusSettled(page) { await page.waitForFunction(()=>document.querySelector('.ca-course[data-focused]')?.getBoundingClientRect().height<=50); }
+
+test('adaptive navigation moves from initial browsing to unit, focus and overlay states',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);await page.setViewportSize({width:1440,height:900});
+    assert.equal(await page.locator('.ca-units>.ca-unit').count(),10);
+    assert.equal(await page.locator('.ca-topics-wrap[data-open]').count(),0);
+    await page.screenshot({path:'test-results/pages/adaptive-1-initial.png'});
+    await page.getByRole('button',{name:/^Unit 7,/}).click();
+    await page.locator('.ca-topics .ca-topic').first().waitFor();
+    const browsing=await page.locator('.ca-work').boundingBox();
+    await page.screenshot({path:'test-results/pages/adaptive-2-unit.png'});
+    const chosen=page.locator('.ca-topics .ca-topic').filter({hasText:'7.11'});
+    await chosen.click();await focusSettled(page);await painted(page);
+    assert.equal(new URL(page.url()).searchParams.get('topic'),'7.11');
+    assert.equal(await page.locator('.ca-units').count(),0);
+    const focused=await page.locator('.ca-work').boundingBox();
+    assert.ok(focused.y<browsing.y-40&&focused.height>browsing.height+40,'focus reclaims navigation height');
+    const browse=page.getByRole('button',{name:'Browse',exact:true});await browse.waitFor();
+    assert.match(await page.locator('.ca-breadcrumb').innerText(),/Unit 7.*Equilibrium.*7\.11/s);
+    await page.screenshot({path:'test-results/pages/adaptive-3-focus.png'});
+    await browse.click();
+    const overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true});await overlay.waitFor();
+    assert.equal(await overlay.locator('.ca-unit[data-u="u7"]').getAttribute('aria-pressed'),'true');
+    assert.equal(await overlay.locator('.ca-topic[aria-pressed="true"]').count(),1);
+    assert.deepEqual(await page.locator('.ca-work').boundingBox(),focused,'overlay floats without moving workspace');
+    await page.screenshot({path:'test-results/pages/adaptive-4-overlay.png'});
+    await overlay.getByRole('button',{name:/^Unit 2,/}).click();
+    assert.equal(await overlay.isVisible(),true);assert.equal(new URL(page.url()).searchParams.get('unit'),'u2');
+    await overlay.locator('.ca-topic').first().click();await overlay.waitFor({state:'hidden'});
+    assert.equal(new URL(page.url()).searchParams.get('topic'),'2.1');await focusSettled(page);
+    await page.getByRole('button',{name:/^Browse topic 2.1/}).click();await overlay.waitFor();
+    assert.ok(await overlay.locator('.ca-topic[aria-pressed="true"]').evaluate(el=>el===document.activeElement),'topic breadcrumb focuses selected topic');
+    await overlay.getByRole('button',{name:'All Unit 2 questions',exact:true}).click();await overlay.waitFor({state:'hidden'});
+    assert.equal(new URL(page.url()).searchParams.get('topic'),null);
+    assert.match(await page.locator('.ca-list-title').innerText(),/Compound Structure and Properties/);
+    await page.getByRole('button',{name:'Reveal navigation browser',exact:true}).click();await overlay.waitFor();
+    await page.getByRole('button',{name:'Hide navigation browser',exact:true}).click();await overlay.waitFor({state:'hidden'});
+    await page.getByRole('button',{name:/^Browse Unit 2:/}).click();await overlay.waitFor();
+    await page.keyboard.press('Escape');await overlay.waitFor({state:'hidden'});
+    assert.ok(await page.getByRole('button',{name:/^Browse Unit 2:/}).evaluate(el=>el===document.activeElement));
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'adaptive-four-states',result:'initial cards; unit/topics; topic auto-focus with >40px reclaimed; anchored overlay; all four triggers; unit stays open/topic closes; all-unit questions; Escape/focus return'});
+  }finally{await context.close()}
+});
+
+test('opening and dismissing the navigation browser preserves the complete mounted workspace',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    await page.goto(fixture.origin+'?view=detail&topic=8.3&question=frq-2005-1-6');
+    await focusSettled(page);await painted(page);
+    assert.match(await page.locator('.ca-breadcrumb').innerText(),/Unit 8.*8\.3/s,'topic-only deep links infer the correct breadcrumb unit without rewriting the filter URL');
+    await page.getByRole('button',{name:'Add to worksheet',exact:true}).click();
+    const crop=page.getByRole('button',{name:'Question crop',exact:true});
+    if(await crop.isEnabled()){await crop.click();await painted(page)}
+    await page.getByRole('button',{name:'Zoom in',exact:true}).click();await painted(page);
+    await page.locator('.ca-viewport').evaluate(el=>{el.scrollTop=83;el.scrollLeft=11});
+    await page.locator('.ca-rows').evaluate(el=>{el.scrollTop=120});
+    await page.evaluate(()=>{window.__adaptiveViewport=document.querySelector('.ca-viewport');window.__adaptiveCanvas=document.querySelector('.ca-viewport canvas')});
+    const snapshot=()=>page.evaluate(()=>({url:location.href,question:document.querySelector('.ca-pane-head h2').textContent,
+      mode:document.querySelector('[aria-label="Image mode"] [aria-pressed="true"]').textContent,
+      zoom:document.querySelector('.ca-viewer-bar').textContent,scroll:[document.querySelector('.ca-viewport').scrollTop,document.querySelector('.ca-viewport').scrollLeft,document.querySelector('.ca-rows').scrollTop],
+      worksheet:document.querySelector('.ca-dock').textContent,filters:[document.querySelector('.ca-filters select').value,document.querySelector('.ca-filters [aria-pressed="true"]').textContent,document.querySelector('.ca-search input').value],
+      work:(()=>{const r=document.querySelector('.ca-work').getBoundingClientRect();return[r.x,r.y,r.width,r.height]})(),
+      sameViewport:window.__adaptiveViewport===document.querySelector('.ca-viewport'),sameCanvas:window.__adaptiveCanvas===document.querySelector('.ca-viewport canvas')}));
+    const before=await snapshot();assert.ok(before.sameCanvas&&before.sameViewport);
+    const start=fixture.logs.length,overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true}),browse=page.getByRole('button',{name:'Browse',exact:true});
+    for(const dismiss of ['escape','close','outside','browse']){
+      await browse.click();await overlay.waitFor();assert.deepEqual(await snapshot(),before);
+      if(dismiss==='escape')await page.keyboard.press('Escape');
+      else if(dismiss==='close')await overlay.getByRole('button',{name:'Close navigation browser'}).click();
+      else if(dismiss==='outside')await page.locator('.ca-dock').click({position:{x:12,y:12}});
+      else await browse.click();
+      await overlay.waitFor({state:'hidden'});assert.deepEqual(await snapshot(),before,'toggle/dismiss preserves canvas/zoom/scroll/drafts/filters');
+    }
+    assert.equal(fixture.logs.slice(start).filter(log=>log.path.startsWith('/storage/')).length,0,'overlay never reloads protected catalog/PDF');
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'adaptive-workspace-preservation',result:'same viewport/canvas nodes, question, zoom, crop, PDF/list scroll, year/type/search, worksheet and URL through Escape/close/outside/Browse dismissal; zero protected reloads'});
+  }finally{await context.close()}
+});
+
+test('manual unit focus and responsive navigation browser stay reachable without workspace jumps',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    await page.getByRole('button',{name:/^Unit 1,/}).click();
+    const before=page.url();await page.getByRole('button',{name:'Focus on this unit',exact:true}).click();await focusSettled(page);
+    assert.equal(page.url(),before);assert.equal(new URL(page.url()).searchParams.get('topic'),null);
+    for(const [width,height] of [[1440,900],[1280,900],[768,700],[844,390],[390,844],[320,600]]){
+      await page.setViewportSize({width,height});
+      const browse=page.getByRole('button',{name:'Browse',exact:true}),overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true});
+      const work=await page.locator('.ca-work').boundingBox();
+      await browse.click();await overlay.waitFor();
+      const box=await overlay.boundingBox();assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=width+1&&box.y+box.height<=height+1,JSON.stringify({width,height,box}));
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+      assert.deepEqual(await page.locator('.ca-work').boundingBox(),work);
+      if(width>=701){await overlay.getByRole('button',{name:/^Unit 4,/}).hover();await settleAccordion(page);assert.ok(await overlay.locator('.ca-unit[data-u="u4"]').evaluate(el=>el.getBoundingClientRect().width>200),'existing accordion works in overlay')}
+      if(width===390)await page.screenshot({path:'test-results/pages/adaptive-overlay-phone.png'});
+      if(height===390)await page.screenshot({path:'test-results/pages/adaptive-overlay-landscape.png'});
+      await overlay.getByRole('button',{name:'Close navigation browser'}).click();await overlay.waitFor({state:'hidden'});
+    }
+    // A phone PDF stays below the compact navigation and Escape only dismisses the browser.
+    await page.setViewportSize({width:390,height:844});
+    await page.locator('.ca-row-open').first().click();await painted(page);
+    await page.getByRole('button',{name:'Browse',exact:true}).click();
+    const overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true});await overlay.waitFor();
+    const url=page.url();await page.keyboard.press('Escape');await overlay.waitFor({state:'hidden'});assert.equal(page.url(),url);
+    const geometry=await page.evaluate(()=>({nav:document.querySelector('.ca-course').getBoundingClientRect().bottom,pane:document.querySelector('.ca-pane').getBoundingClientRect().top}));
+    assert.ok(geometry.pane>=geometry.nav-1);
+    await page.getByRole('button',{name:'Browse',exact:true}).click();await overlay.waitFor();
+    await overlay.locator('.ca-topic').first().click();await overlay.waitFor({state:'hidden'});assert.ok(new URL(page.url()).searchParams.get('topic'));
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'adaptive-responsive',result:'manual focus retains entire-unit filter; bounded overlay at 1440/1280/768/844x390/390/320; accordion retained; mobile PDF beneath compact nav; Escape preserves pane; touch-accessible topic selection'});
+  }finally{await context.close()}
+});
+
+test('normal-motion focus collapse and rapid browser toggles keep one navigation tree and a stable workspace',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.setViewportSize({width:1440,height:900});await page.getByRole('button',{name:/^Unit 7,/}).click();
+    const start=await page.locator('.ca-work').evaluate(el=>el.getBoundingClientRect().top);
+    await page.evaluate(()=>{window.__courseMotion=[];let frames=0;const record=()=>{window.__courseMotion.push(document.querySelector('.ca-work').getBoundingClientRect().top);if(++frames<30)requestAnimationFrame(record)};requestAnimationFrame(record)});
+    await page.locator('.ca-topic').filter({hasText:'7.11'}).click();await focusSettled(page);
+    await page.waitForFunction(()=>window.__courseMotion.length>=30);
+    const samples=await page.evaluate(()=>window.__courseMotion);
+    assert.ok(Math.min(...samples)<start-40);
+    assert.ok(samples.every((value,index)=>index===0||value<=samples[index-1]+1),'navigation retracts upward without pushing the workspace down');
+    await painted(page);
+    const box=await page.locator('.ca-work').boundingBox(),url=page.url(),browse=page.getByRole('button',{name:'Browse',exact:true});
+    for(let index=0;index<5;index++){
+      await browse.click();await page.locator('.ca-course-browser').waitFor();
+      assert.ok(await page.locator('.ca-units').count()<=1,'the unit cards have only one rendered tree');
+      await browse.click();
+      assert.deepEqual(await page.locator('.ca-work').boundingBox(),box);assert.equal(page.url(),url);
+    }
+    await page.getByRole('dialog',{name:'Browse units and topics',exact:true}).waitFor({state:'hidden'});
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:'adaptive-motion',result:'normal-motion collapse reclaims height monotonically; rapid five open/close cycles; one unit/topic tree; no workspace displacement or navigation changes'});
+  }finally{await context.close()}
+});

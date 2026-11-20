@@ -503,8 +503,8 @@ test("the last real worksheet preview remains visible during an update and a fai
 test("the unit palette and selected phone topic have legible colours in the browser", async (t) => {
   const page = await openPage(390, "/?view=library&unit=u3&topic=3.4");
   t.after(() => page.close());
-  await page.getByRole("button", { name: "3.4", exact: true }).click();
-  const active = page.getByRole("dialog", { name: "Topics" }).getByRole("button", { name: /3.4 Ideal Gas Law/ });
+  await page.getByRole("button", { name: /^Browse topic 3.4/ }).click();
+  const active = page.getByRole("dialog", { name: "Browse units and topics" }).locator(".ca-topic").filter({ hasText: "3.4" });
   const colors = await active.evaluate(button => {
     const ctx = document.createElement("canvas").getContext("2d");
     const luminance = color => {
@@ -525,7 +525,7 @@ test("the unit palette and selected phone topic have legible colours in the brow
       const tint = luminance(style.getPropertyValue("--tint"));
       return [ratio(deep, tint), ratio(1, deep), ratio(deep, 1)];
     });
-    const topic = ratio(luminance(getComputedStyle(button.querySelector(".ca-code")).color), luminance(getComputedStyle(button).backgroundColor));
+    const topic = ratio(luminance(getComputedStyle(button.querySelector("b")).color), luminance(getComputedStyle(button).backgroundColor));
     return { units, topic };
   });
   assert.equal(colors.units.length, 9);

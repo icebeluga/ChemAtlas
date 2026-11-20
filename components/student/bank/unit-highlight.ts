@@ -14,9 +14,10 @@ export function connectUnitAccordion(row: HTMLElement) {
 
   function stop() {
     cancelAnimationFrame(frame); frame = 0; last = 0; active = -1;
-    cards.forEach(({ button, title }) => {
+    cards.forEach(({ button, title, number, count }) => {
       button.style.removeProperty("flex"); button.style.removeProperty("height");
       title.style.removeProperty("opacity");
+      number.style.removeProperty("transform"); count?.style.removeProperty("transform");
       button.removeAttribute("data-accordion-dark");
     });
     cards = []; row.removeAttribute("data-accordion"); row.style.removeProperty("height");

@@ -392,17 +392,21 @@
 /* Real cards redistribute the fixed horizontal budget; no overlay or vertical motion. */
 @media (hover:hover) and (pointer:fine) and (min-width:701px){
   .ca-units[data-accordion]>.ca-unit{position:relative;box-sizing:border-box;container-type:inline-size;min-height:0;overflow:hidden;transition:background var(--ca-fast) var(--ca-out),color var(--ca-fast) var(--ca-out)}
-  .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat){opacity:0}
+  /* Keep the grid as the sizing layer; selected and hovered cards share one face. */
+  .ca-units>.ca-unit[aria-pressed=true]:not(.is-all){position:relative}
+  .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat),.ca-units>.ca-unit[aria-pressed=true]:not(.is-all)>:is(b,span,.ca-heat){opacity:0}
   .ca-units[data-accordion]>.ca-unit>:is(b,span,.ca-heat),.ca-units[data-accordion]>.ca-unit>.ca-heat *{transition-property:none}
   .ca2 .ca-units[data-accordion]>.ca-unit[data-accordion-dark]{background:var(--deep,var(--ca-ink));color:#fff}
   .ca2 .ca-units[data-accordion]>.is-all[data-accordion-dark]{background:var(--ca-ink)}
-  .ca-units[data-accordion] .ca-unit-highlight{display:block;position:absolute;inset:0;pointer-events:none;font-style:normal;overflow:hidden;color:var(--deep,var(--ca-ink))}
+  .ca-units[data-accordion] .ca-unit-highlight,.ca-units>.ca-unit[aria-pressed=true]:not(.is-all)>.ca-unit-highlight{display:block;position:absolute;inset:0;pointer-events:none;font-style:normal;overflow:hidden}
+  .ca-units[data-accordion] .ca-unit-highlight{color:var(--deep,var(--ca-ink))}
   .ca-unit[data-accordion-dark] .ca-unit-highlight{color:#fff}
+  .ca-unit[aria-pressed=true]:not(.is-all)>.ca-unit-highlight{color:var(--theme-text,#fff)}
   .ca-unit-highlight>b{position:absolute;top:5px;left:8px;right:8px;display:flex;justify-content:space-between;font:700 17px/1 var(--ca-display)}
   .ca-unit-highlight>b small{font:400 12px/1.3 var(--ca-body);font-variant-numeric:tabular-nums}
   .ca-unit-highlight .ca-unit-number{position:absolute;left:0;top:0}
   .ca-unit-highlight>b small{position:absolute;right:0;top:0}
-  .ca-unit-highlight>span{position:absolute;inset:3px 32px 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
+  .ca-unit-highlight>span{position:absolute;inset:3px 32px 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;overflow-wrap:anywhere;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
   .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;bottom:4px;height:4px}
   .ca-unit[data-accordion-dark] .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
   .is-all .ca-unit-highlight>b{font-size:15px}

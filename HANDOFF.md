@@ -1,5 +1,14 @@
 # ChemAtlas — Codex continuation handoff
 
+## Latest update — unit title alignment (November 20, 2026)
+
+This targeted round starts from clean `478e789a668b4b91d6871b9ff5b35d78bf8a2933` on the same branch/PR #9, with approved main still `b05c06eaf113a91edcf95f3eea50dc4dec738492`.
+
+- Desktop selected cards now reuse the existing `.ca-unit-highlight` face and its centered title/corner counters/bottom segments, instead of showing the older left-aligned grid title. The original grid stays in flow as an invisible sizing layer, preserving dimensions and spacing. Hover/selected/both share one layout in inline navigation and the browser.
+- Long words may wrap inside the same symmetric title bounds on narrow desktop/tablet cards. Typography, colors, width allocation, easing, selection/filtering and phone/touch layout remain unchanged. The controller clears number/count transforms on stop so a rapid selection cannot retain compressed-card offsets.
+- The targeted regression checks all nine units in both themes and both views at 1440/1280/768: centered/consistent title bounds, full-label fit, corner positions, clearance from segments, text contrast and hover/click behavior. Existing regressions remain intact. Read the final local/CI logs for exact-head results.
+- Before/after screenshots and baseline geometry/color comparisons remain local/ignored under `outputs/unit-alignment/`; check `outputs/unit-alignment-*.log`. Preserve the complete appearance-theme and adaptive-navigation work below. No merge, deployment, production data/auth/configuration or unrelated changes are authorized.
+
 ## Latest update — complete appearance themes (November 20, 2026)
 
 This round starts clean at `a18a37b434676c8b0d08462dc2a65a3befec7ce5` on the existing `codex/student-ui-improvements` branch and draft PR #9. Approved main remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`; unrelated PRs/worktrees are preserved. The adaptive navigation and horizontal accordion below remain current.

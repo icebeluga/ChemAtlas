@@ -406,7 +406,7 @@
   .ca-unit-highlight>b small{font:400 12px/1.3 var(--ca-body);font-variant-numeric:tabular-nums}
   .ca-unit-highlight .ca-unit-number{position:absolute;left:0;top:0}
   .ca-unit-highlight>b small{position:absolute;right:0;top:0}
-  .ca-unit-highlight>span{position:absolute;inset:3px 32px 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;overflow-wrap:anywhere;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
+  .ca-unit-highlight>span{position:absolute;inset:3px clamp(26px,calc(50% - 64px),32px) 8px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1.2;overflow:hidden;overflow-wrap:anywhere;text-align:center;transition:opacity var(--ca-fast) var(--ca-out)}
   .ca-unit-highlight>.ca-heat{position:absolute;left:8px;right:8px;bottom:4px;height:4px}
   .ca-unit[data-accordion-dark] .ca-heat i{background:color-mix(in oklch,#fff calc(var(--d)*85%),var(--deep))}
   .is-all .ca-unit-highlight>b{font-size:15px}

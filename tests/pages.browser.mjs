@@ -927,6 +927,9 @@ test('dark navigation retains nine distinct unit colors with readable text and s
     await page.locator('.ca-topic').first().click();await focusSettled(page);
     for(const [width,height] of [[1440,900],[1280,800],[768,800],[650,360],[390,844],[320,600]]){
       await page.setViewportSize({width,height});
+      // Let the dock's ResizeObserver reserve its wrapped phone height before
+      // comparing the workspace across opening the browser.
+      await page.evaluate(()=>new Promise(resolve=>{let previous='',stable=0;const sample=()=>{const current=JSON.stringify(['.ca-work','.ca-dock'].map(selector=>document.querySelector(selector).getBoundingClientRect().toJSON()));stable=current===previous?stable+1:0;previous=current;if(stable>=3)resolve();else requestAnimationFrame(sample)};requestAnimationFrame(sample)}));
       const toggle=page.getByRole('button',{name:'Switch to light mode.',exact:true});assert.ok(await toggle.isVisible());
       const before=await page.locator('.ca-work').boundingBox();
       await page.getByRole('button',{name:'Browse',exact:true}).click();
@@ -950,17 +953,18 @@ test('expanded unit names share centered hover and selected alignment in both th
     const probe=document.createElement('canvas');probe.width=probe.height=1;const ctx=probe.getContext('2d');
     const lum=color=>{ctx.fillStyle=color;ctx.fillRect(0,0,1,1);return [...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((sum,v,i)=>sum+v*[.2126,.7152,.0722][i],0)};
     const ink=lum(getComputedStyle(title).color),background=lum(getComputedStyle(el).backgroundColor);
-    return{card:rect(el),face:rect(face),title:rect(title),text:rect(range),number:rect(number),count:rect(count),heat:rect(heat),visible:getComputedStyle(face).display!=='none'&&Number(getComputedStyle(title).opacity)>.99,contrast:(Math.max(ink,background)+.05)/(Math.min(ink,background)+.05),segments:heat.children.length};
+    const overlaps=[...range.getClientRects()].some(a=>[number,count].some(node=>{const b=node.getBoundingClientRect();return Math.min(a.right,b.right)-Math.max(a.left,b.left)>1&&Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1}));
+    return{card:rect(el),face:rect(face),title:rect(title),text:rect(range),number:rect(number),count:rect(count),heat:rect(heat),font:getComputedStyle(title).font,overlaps,visible:getComputedStyle(face).display!=='none'&&Number(getComputedStyle(title).opacity)>.99,contrast:(Math.max(ink,background)+.05)/(Math.min(ink,background)+.05),segments:heat.children.length};
   })}
   function assertAlignment(value,where){
     assert.ok(value.visible,where+' shared face visible');
     assert.ok(value.contrast>=4.5,where+' existing title contrast preserved');
     assert.ok(Math.abs(value.title.x+value.title.width/2-value.card.x-value.card.width/2)<1,where+' name centered across the whole card');
     assert.ok(Math.abs(value.title.y-value.face.y-3)<1&&Math.abs(value.face.bottom-value.title.bottom-8)<1,where+' existing hover vertical insets retained');
-    assert.ok(value.text.x>=value.title.x-1&&value.text.right<=value.title.right+1&&value.text.y>=value.title.y-1&&value.text.bottom<=value.title.bottom+1,where+' entire long name fits');
+    assert.ok(value.text.x>=value.title.x-1&&value.text.right<=value.title.right+1&&value.text.y>=value.title.y-1&&value.text.bottom<=value.title.bottom+1,where+' entire long name fits '+JSON.stringify(value));
     assert.ok(Math.abs(value.number.x-value.face.x-8)<1&&Math.abs(value.number.y-value.face.y-5)<1,where+' number in upper left');
     assert.ok(Math.abs(value.face.right-value.count.right-8)<1&&Math.abs(value.count.y-value.face.y-5)<1,where+' count in upper right');
-    assert.ok(value.text.x>=value.number.right-1&&value.text.right<=value.count.x+1,where+' name clears corner information');
+    assert.equal(value.overlaps,false,where+' rendered title lines clear corner information');
     assert.ok(value.text.bottom<=value.heat.y+1&&value.segments>0,where+' name clears topic segments');
   }
   try{

@@ -902,7 +902,7 @@ test('builder theme changes preserve generated document bytes and print appearan
     await page.locator('.worksheet-paper canvas[data-painted]').waitFor();
     const paper=await page.locator('.worksheet-paper canvas').first().evaluate(el=>({background:getComputedStyle(el).backgroundColor,filter:getComputedStyle(el).filter}));
     assert.deepEqual(paper,{background:'rgb(255, 255, 255)',filter:'none'});
-    const printColors=async()=>{await page.emulateMedia({media:'print'});return page.locator('.ca-build').evaluate(el=>({color:getComputedStyle(el).color,background:getComputedStyle(el).backgroundColor}))};
+    const printColors=async()=>{await page.emulateMedia({media:'print'});await page.waitForFunction(()=>matchMedia('print').matches&&!matchMedia('screen').matches);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));return page.locator('.ca-build').evaluate(el=>({color:getComputedStyle(el).color,background:getComputedStyle(el).backgroundColor}))};
     const darkPrint=await printColors();await page.emulateMedia({media:'screen'});
     await page.getByRole('button',{name:'Switch to light mode.',exact:true}).click();
     assert.deepEqual(await printColors(),darkPrint,'dark styling is screen-only, so print appearance remains identical');await page.emulateMedia({media:'screen'});

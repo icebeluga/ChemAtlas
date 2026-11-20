@@ -743,12 +743,13 @@ test('manual unit focus and responsive navigation browser stay reachable without
     await page.getByRole('button',{name:/^Unit 1,/}).click();
     const before=page.url();await page.getByRole('button',{name:'Focus on this unit',exact:true}).click();await focusSettled(page);
     assert.equal(page.url(),before);assert.equal(new URL(page.url()).searchParams.get('topic'),null);
-    for(const [width,height] of [[1440,900],[1280,900],[768,700],[844,390],[390,844],[320,600]]){
+    for(const [width,height] of [[1440,900],[1280,900],[768,700],[844,390],[650,360],[390,844],[320,600]]){
       await page.setViewportSize({width,height});
       const browse=page.getByRole('button',{name:'Browse',exact:true}),overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true});
       const work=await page.locator('.ca-work').boundingBox();
       await browse.click();await overlay.waitFor();
       const box=await overlay.boundingBox();assert.ok(box.x>=0&&box.y>=0&&box.x+box.width<=width+1&&box.y+box.height<=height+1,JSON.stringify({width,height,box}));
+      assert.ok(box.y>=await page.locator('.ca-focus-navigation').evaluate(el=>el.getBoundingClientRect().bottom),'browser stays below its anchor even on narrow landscape screens');
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
       assert.deepEqual(await page.locator('.ca-work').boundingBox(),work);
       if(width>=701){await overlay.getByRole('button',{name:/^Unit 4,/}).hover();await settleAccordion(page);assert.ok(await overlay.locator('.ca-unit[data-u="u4"]').evaluate(el=>el.getBoundingClientRect().width>200),'existing accordion works in overlay')}

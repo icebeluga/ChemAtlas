@@ -1,5 +1,22 @@
 # ChemAtlas — Codex continuation handoff
 
+## Current interaction update — horizontal accordion (November 20, 2026)
+
+The owner resumed this branch from `281efd16bc5dd31b66d298c4a0fd8e42cba573ef` after changing accounts. The new explicit requirements **supersede all vertical-wave and floating-stage instructions below**. Other PR #9 requirements and release/security boundaries still apply. See the latest PR #9 head and CI for the current application SHA; the older `e1bdc75…` validation is historical.
+
+- The unit row is now a horizontal animated accordion. Real buttons redistribute a fixed horizontal space budget; there are no popover faces, overlapping blocks, elevation, vertical scaling or vertical translation.
+- Entry records the existing row/card height and freezes it throughout hover. Width changes do not move the navigation header, topic rows, question panel or PDF. All cards retain exactly the same top/bottom alignment and 4 px gaps.
+- The active unit expands toward a restrained ~240 px target; space is borrowed from both sides for centered interior growth, with the nearest donors weighted most strongly. Donors retain at least 48–56 px for identifiable numbers/counts and decorative bars. Edge cards grow inward within the existing row boundaries. Widths always share the original total budget.
+- The existing one-frame-loop damping is reused (quarter of the fast token). Widths of real buttons/click targets are updated together; content moves with those buttons. This necessarily performs local horizontal layout, replacing the old transform-only overlay's zero-layout performance claim. Profile the current implementation rather than reusing wave timings.
+- Pointer retargeting happens only on actual coordinate changes, using the currently displayed button geometry with a 2 px boundary tolerance. Resizing does not itself retarget. Holding a stationary cursor cannot cause cards to expand/contract into a hover feedback loop.
+- Full names appear within the fixed height, alongside numbers/counts and the original topic bars. Compressed counts slide under numbers continuously. Original palette, dark active background, rounded corners and typography are retained.
+- Hover changes no selection, unit/topic filters or question results. Clicks select the actual on-screen button, including during animation. Exit returns to resting dimensions. Keyboard focus and reduced motion use immediate layouts; smaller-screen behavior remains intact.
+- The controller is still `components/student/bank/unit-highlight.ts`, now exporting `connectUnitAccordion` / `resetUnitAccordion`. The old `connectUnitWave` and top-layer `.ca-unit-wave-stage` have been removed. Relevant CSS lives under `.ca-units[data-accordion]`. The final two `tests/pages.browser.mjs` cases cover the horizontal contract, stationary hold, no overlap, constant heights, rapid sweeps/reversals and click behavior.
+- Current local evidence uses `outputs/accordion-*.log`, `test-results/pages/unit-accordion-u{1,4,9}-{1440,1280}.png`, and the current local preview. Older wave/folder-tab recordings describe superseded behavior. Keep source-question screenshots local/ignored.
+- Continue existing draft PR #9. No merge, deployment, production authentication or data changes are authorized. The running helper/artifact must be deliberately refreshed and stamped with the newly validated application commit before final handoff.
+
+The remainder of this file is the earlier comprehensive architecture/history/reproduction handoff. Its earlier application SHA, preview PID and motion measurements are snapshots, not the current moving branch identity. Always read the current receipt and live Git/PR state.
+
 State captured **November 20, 2026 (America/New_York)**. Read this before changing the project. This document is intended to work without the previous chat, its account connections, tool state, or browser sessions.
 
 ## 1. Immediate orientation

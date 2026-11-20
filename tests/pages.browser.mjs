@@ -533,107 +533,121 @@ test("desktop header keeps complete metadata and Details in compact rows beside 
   }finally{await context.close()}
 });
 
-async function settleWave(page) {
+async function settleAccordion(page) {
   await page.evaluate(()=>new Promise((resolve,reject)=>{
-    let previous="",stable=0,frames=0;
+    let previous='',stable=0,frames=0;
     const sample=()=>{
-      const current=[...document.querySelectorAll('.ca-unit-wave-stage .ca-unit-sheet.is-deep')].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height].map(n=>n.toFixed(3)).join()}).join(";");
+      const current=[...document.querySelectorAll('.ca-units>.ca-unit')].map(el=>el.style.flex).join(';');
       stable=current===previous?stable+1:0;previous=current;
-      if(stable>=3)resolve();else if(++frames>120)reject(new Error('Unit wave did not settle'));else requestAnimationFrame(sample);
+      if(stable>=4)resolve();else if(++frames>120)reject(new Error('Accordion did not settle'));else requestAnimationFrame(sample);
     };requestAnimationFrame(sample);
   }));
 }
 
-test("unit wave preserves full names, colors, fixed slots, selection and responsive navigation", async () => {
+async function accordionGeometry(page) {
+  return page.locator('.ca-units').evaluate(row=>{
+    const rect=el=>{const b=el.getBoundingClientRect();return{x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom}};
+    return {row:rect(row),gap:parseFloat(getComputedStyle(row).gap),overflow:row.scrollWidth>row.clientWidth+1,cards:[...row.querySelectorAll(':scope>.ca-unit')].map(el=>({id:el.dataset.u??'all',...rect(el),title:el.querySelector('.ca-unit-highlight>span').textContent}))};
+  });
+}
+
+function assertAccordionBounds(geometry,rest) {
+  assert.ok(Math.abs(geometry.row.width-rest.row.width)<1&&Math.abs(geometry.row.height-rest.row.height)<1,'row width/height stay fixed');
+  assert.equal(geometry.overflow,false);
+  for(let i=0;i<geometry.cards.length;i++){
+    const card=geometry.cards[i];
+    assert.ok(Math.abs(card.y-rest.cards[i].y)<.1&&Math.abs(card.height-rest.cards[i].height)<.1,'every card keeps exactly its top and height');
+    assert.ok(card.x>=geometry.row.x-1&&card.right<=geometry.row.right+1,'first/last remain inside the row');
+    if(i)assert.ok(Math.abs(card.x-geometry.cards[i-1].right-geometry.gap)<1,'constant gap, no overlapping cards');
+  }
+}
+
+test('horizontal unit accordion shares space without changing height, filters or responsive behavior',async()=>{
   const {context,page,errors}=await open();
-  try {
-    await login(page);await bankReady(page);
-    await page.waitForFunction(()=>[...document.querySelectorAll('.ca-viewport canvas')].some(c=>c.width>0&&c.style.visibility==='visible'));
-    await page.emulateMedia({reducedMotion:"no-preference"});
-    const snapshot=()=>page.evaluate(()=>({url:location.href,selected:[...document.querySelectorAll('.ca-unit[aria-pressed="true"]')].map(el=>el.dataset.u),results:[...document.querySelectorAll('.ca-rows>[data-id]')].map(el=>el.dataset.id),cards:[...document.querySelectorAll('.ca-units>.ca-unit')].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height]})}));
+  try{
+    await login(page);await bankReady(page);await page.emulateMedia({reducedMotion:'no-preference'});
+    const state=()=>page.evaluate(()=>({url:location.href,results:[...document.querySelectorAll('.ca-rows>[data-id]')].map(el=>el.dataset.id)}));
     for(const [width,height] of [[1440,900],[1280,900],[768,900],[844,390]]){
       await page.setViewportSize({width,height});await page.mouse.move(0,400);
-      const before=await snapshot();
+      const rest=await accordionGeometry(page),before=await state();
       for(let unit=1;unit<=9;unit++){
+        await page.mouse.move(0,400);await page.waitForFunction(()=>!document.querySelector('.ca-units[data-accordion]'));
         const card=page.getByRole('button',{name:new RegExp('^Unit '+unit+',')});
-        await card.hover();await settleWave(page);
-        const result=await page.locator(`.ca-unit-wave-stage .ca-unit-highlight[data-u="u${unit}"]`).evaluate(el=>{
-          const deep=el.querySelector('.is-deep'),box=deep.getBoundingClientRect(),name=el.querySelector(':scope>span'),nameBox=name.getBoundingClientRect();
-          const darkPaintedAboveRest=Number(getComputedStyle(deep).zIndex)>Number(getComputedStyle(el.querySelector('.ca-unit-sheet.is-rest')).zIndex)&&Number(deep.style.opacity)>.99;
-          const source=document.querySelector(`.ca-unit[data-u="${el.dataset.u}"]`),slot=source.getBoundingClientRect();
-          const canvas=document.createElement('canvas');canvas.width=canvas.height=1;const ctx=canvas.getContext('2d');
-          ctx.fillStyle=getComputedStyle(el.querySelector('.is-deep')).backgroundColor;ctx.fillRect(0,0,1,1);
-          const rgb=[...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});
-          return {left:box.left,right:box.right,top:box.top,bottom:box.bottom,width:box.width,height:box.height,
-            slot:{left:slot.left,right:slot.right,top:slot.top,bottom:slot.bottom,width:slot.width,height:slot.height},
-            name:name.textContent,nameOpacity:Number(name.style.opacity),nameFits:nameBox.left>=box.left&&nameBox.right<=box.right&&nameBox.bottom<=box.bottom,
-            darkPaintedAboveRest,segments:el.querySelectorAll('.ca-heat:not(:last-child) i').length||el.querySelectorAll('.ca-heat i').length,
-            contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),pointer:getComputedStyle(el).pointerEvents};
+        await card.hover();await settleAccordion(page);
+        const geometry=await accordionGeometry(page);assertAccordionBounds(geometry,rest);
+        const index=unit,expanded=geometry.cards[index];
+        assert.ok(expanded.width>rest.cards[index].width+10,'hovered real button expands');
+        assert.ok(expanded.width<=Math.max(241,rest.cards[index].width+17),'restrained maximum width');
+        if(unit>1&&unit<9){
+          assert.ok(expanded.x<rest.cards[index].x&&expanded.right>rest.cards[index].right,'interior card expands in both directions');
+          assert.ok(geometry.cards[index-1].width<rest.cards[index-1].width&&geometry.cards[index+1].width<rest.cards[index+1].width,'immediate neighbors compress');
+        }
+        const content=await card.evaluate(el=>{
+          const face=el.querySelector('.ca-unit-highlight'),name=face.querySelector(':scope>span'),r=name.getBoundingClientRect();
+          const range=document.createRange();range.selectNodeContents(name);const text=range.getBoundingClientRect();
+          return{dark:el.hasAttribute('data-accordion-dark'),nameFits:text.left>=r.left-1&&text.right<=r.right+1&&text.bottom<=r.bottom+1&&text.top>=r.top-1,
+            visible:Number(name.style.opacity)>.99,segments:face.querySelectorAll('.ca-heat i').length};
         });
-        assert.equal(result.name,(await card.getAttribute('aria-label')).split(', ').slice(1,-1).join(', '));
-        assert.ok(result.left>=7&&result.right<=width-7&&result.nameFits,JSON.stringify({unit,width,result}));
-        assert.ok(result.top<result.slot.top&&result.bottom<result.slot.bottom,JSON.stringify(result));
-        assert.ok(result.width<=Math.max(result.slot.width+12,224)+1&&result.height<=Math.max(result.slot.height+6,66)+1,'peak is smaller than the former 264px tab');
-        assert.ok(result.nameOpacity>.99&&result.darkPaintedAboveRest&&result.contrast>=4.5&&result.segments>0,'saturated surface stays above the pastel copy with contrasting text');
-        assert.equal(result.pointer,'none');
-        assert.deepEqual(await snapshot(),before,'wave never moves click slots or filters questions');
-        if(unit===4)await page.screenshot({path:`test-results/pages/unit-wave-u4-${width}x${height}.png`});
+        assert.ok(content.dark&&content.nameFits&&content.visible&&content.segments>0,JSON.stringify({unit,width,content}));
+        assert.deepEqual(await state(),before,'hover does not select/filter questions');
+        if([1,4,9].includes(unit)&&[1440,1280].includes(width))await page.screenshot({path:`test-results/pages/unit-accordion-u${unit}-${width}.png`});
       }
-      await page.mouse.move(0,400);
-      await page.waitForFunction(()=>!document.querySelector('.ca-unit-wave-stage'));
-      assert.deepEqual(await snapshot(),before);
+      await page.mouse.move(0,400);await page.waitForFunction(()=>!document.querySelector('.ca-units[data-accordion]'));
+      const returned=await accordionGeometry(page);assert.deepEqual(returned,rest,'leaving restores default sizes');
     }
+    await page.setViewportSize({width:1440,height:900});
     await page.getByRole('button',{name:/^Unit 3,/}).focus();await page.keyboard.press('Tab');
-    assert.equal(await page.locator('.ca-unit-wave-stage [data-u="u4"]>span').first().evaluate(el=>el.style.opacity),'1');
-    const four=page.getByRole('button',{name:/^Unit 4,/});await four.press('Enter');
-    assert.equal(await four.getAttribute('aria-pressed'),'true');
-    await four.hover();await settleWave(page);
-    assert.equal(await four.evaluate(el=>document.querySelector('.ca-unit-wave-stage [data-u="u4"] .is-deep').getBoundingClientRect().width>el.getBoundingClientRect().width),true);
-    const all=page.locator('.ca-unit.is-all');await all.click();assert.equal(await all.getAttribute('aria-pressed'),'true');
+    assert.equal(await page.getByRole('button',{name:/^Unit 4,/}).evaluate(el=>el.getBoundingClientRect().width>200),true);
+    await page.keyboard.press('Enter');assert.equal(new URL(page.url()).searchParams.get('unit'),'u4');
     await page.emulateMedia({reducedMotion:'reduce'});
-    const reduced=await four.evaluate(button=>{
-      const r=button.getBoundingClientRect();button.parentElement.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerType:'mouse',clientX:r.x+r.width/2,clientY:r.y+r.height/2}));
-      const stage=document.querySelector('.ca-unit-wave-stage');return{animations:stage.getAnimations({subtree:true}).length,title:stage.querySelector('[data-u="u4"]>span').style.opacity};
-    });
-    assert.deepEqual(reduced,{animations:0,title:'1'});
-    await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('.ca-unit-wave-stage').count(),0);
-    await four.click();assert.equal(await four.getAttribute('aria-pressed'),'true');
-    assert.equal(await page.locator('.ca-unit-wave-stage').count(),0);
+    const four=page.getByRole('button',{name:/^Unit 4,/});
+    const immediate=await four.evaluate(el=>{const r=el.getBoundingClientRect();el.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerType:'mouse',clientX:r.x+r.width/2,clientY:r.y+r.height/2}));return{width:el.getBoundingClientRect().width,animations:el.getAnimations({subtree:true}).length}});
+    assert.ok(immediate.width>200);assert.equal(immediate.animations,0);
+    await page.setViewportSize({width:390,height:844});assert.equal(await page.locator('.ca-units[data-accordion]').count(),0);
+    await page.getByRole('button',{name:/^Unit 2,/}).click();assert.equal(new URL(page.url()).searchParams.get('unit'),'u2');
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:'unit-wave-layout',result:'all nine reduced peaks and full titles at 1440/1280/768/844x390; fixed geometry and filters; keyboard, selected card, All, reduced motion and phone preserved'});
+    evidence.push({scenario:'unit-accordion-layout',result:'all nine units at 1440/1280/768/844x390; exact constant height/top; fixed width/gaps; no overlap or overflow; full titles and indicators; neighbors donate space; unchanged hover filters; keyboard/reduced-motion/mobile'});
   }finally{await context.close()}
 });
 
-test("one cursor-proximity field coordinates neighbors, within-card motion, fast sweeps and reversals", async () => {
+test('accordion stays stable under stationary pointers, reversals, fast sweeps and clicks during motion',async()=>{
   const {context,page,errors}=await open();
-  try {
+  try{
     await login(page);await bankReady(page);await page.emulateMedia({reducedMotion:'no-preference'});
-    await page.waitForFunction(()=>[...document.querySelectorAll('.ca-viewport canvas')].some(c=>c.width>0&&c.style.visibility==='visible'));
-    const rect=await page.locator('.ca-unit[data-u="u4"]').boundingBox();
-    const values=()=>page.evaluate(()=>[...document.querySelectorAll('.ca-unit-wave-stage .ca-unit-highlight[data-u]')].map(el=>({unit:el.dataset.u,width:el.querySelector('.is-deep').getBoundingClientRect().width,top:el.querySelector('.is-deep').getBoundingClientRect().top})));
-    await page.mouse.move(rect.x+rect.width*.12,rect.y+rect.height/2);await settleWave(page);const shoulder=await values();
-    await page.mouse.move(rect.x+rect.width/2,rect.y+rect.height/2);await settleWave(page);const peak=await values();
-    assert.ok(peak.find(v=>v.unit==='u4').width>shoulder.find(v=>v.unit==='u4').width+5,'proximity changes inside the same button');
-    assert.ok(peak.find(v=>v.unit==='u3').top<rect.y-1&&peak.find(v=>v.unit==='u5').top<rect.y-1,'both immediate neighbors rise');
-    assert.ok(Math.abs(peak.find(v=>v.unit==='u9').top-rect.y)<.5,'far units taper to rest');
-    const transition=await page.evaluate(()=>new Promise(resolve=>{
-      const row=document.querySelector('.ca-units'),stage=document.querySelector('.ca-unit-wave-stage'),next=document.querySelector('.ca-unit[data-u="u5"]').getBoundingClientRect();
-      const sample=()=>['u4','u5'].map(id=>document.querySelector(`.ca-unit-wave-stage [data-u="${id}"] .is-deep`).getBoundingClientRect().width);
-      const before=sample();row.dispatchEvent(new PointerEvent('pointermove',{pointerType:'mouse',clientX:next.x+next.width/2}));
-      const immediate=sample();requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({before,immediate,after:sample(),sameStage:stage===document.querySelector('.ca-unit-wave-stage')})));
+    const rest=await accordionGeometry(page);
+    await page.mouse.move(rest.cards[4].x+rest.cards[4].width*.9,rest.cards[4].y+12);await settleAccordion(page);
+    const held=await accordionGeometry(page);
+    const stable=await page.evaluate(()=>new Promise(resolve=>{
+      const row=document.querySelector('.ca-units'),before=[...row.children].map(el=>el.style.flex);let frames=0;
+      function sample(){if(++frames<45)requestAnimationFrame(sample);else resolve(before.every((v,i)=>row.children[i].style.flex===v))}requestAnimationFrame(sample);
+    }));assert.equal(stable,true,'stationary cursor cannot retarget itself through layout/boundary events');
+    const transfer=await page.evaluate(()=>new Promise(resolve=>{
+      const row=document.querySelector('.ca-units'),five=row.querySelector('[data-u="u5"]'),r=five.getBoundingClientRect();
+      const sample=()=>['u4','u5'].map(id=>row.querySelector(`[data-u="${id}"]`).getBoundingClientRect().width);
+      const before=sample();five.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerType:'mouse',clientX:r.x+r.width*.7,clientY:r.y+12}));
+      const immediate=sample();requestAnimationFrame(()=>requestAnimationFrame(()=>resolve({before,immediate,after:sample()})));
     }));
-    assert.deepEqual(transition.immediate,transition.before,'target changes never snap the current pose');
-    assert.ok(transition.after[0]<transition.before[0]&&transition.after[1]>transition.before[1],'outgoing and incoming respond within two frames');
-    assert.equal(transition.sameStage,true);
-    for(const unit of [3,7,9,2,8,1,4]){
-      const box=await page.locator(`.ca-unit[data-u="u${unit}"]`).boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);
+    assert.deepEqual(transfer.immediate,transfer.before,'no snapping when target changes');
+    assert.ok(transfer.after[0]<transfer.before[0]&&transfer.after[1]>transfer.before[1],'outgoing/incoming widths change together within two frames');
+    await settleAccordion(page);
+    const reversal=await page.locator('.ca-unit[data-u="u4"]').boundingBox();await page.mouse.move(reversal.x+reversal.width/2,reversal.y+12);await settleAccordion(page);
+    assertAccordionBounds(await accordionGeometry(page),rest);
+    for(const index of [1,9,2,8,3,7,4,6,5,4]){
+      const box=await page.locator(`.ca-unit[data-u="u${index}"]`).boundingBox();await page.mouse.move(box.x+box.width/2,box.y+12);
+      assertAccordionBounds(await accordionGeometry(page),rest);
     }
-    await settleWave(page);
-    const end=await values();assert.equal(end.reduce((best,item)=>item.top<best.top?item:best).unit,'u4');
-    await page.screenshot({path:'test-results/pages/unit-wave-neighbors.png'});
-    await page.mouse.move(600,400);await page.waitForFunction(()=>!document.querySelector('.ca-unit-wave-stage'));
-    assert.equal(await page.locator('.ca-unit[data-wave]').count(),0);
+    await settleAccordion(page);assertAccordionBounds(await accordionGeometry(page),rest);
+    // Click at the actual on-screen position immediately after changing targets.
+    const target=await page.locator('.ca-unit[data-u="u6"]').boundingBox();await page.mouse.move(target.x+target.width/2,target.y+12);
+    await page.mouse.down();await page.mouse.up();
+    await page.waitForFunction(()=>new URL(location.href).searchParams.get('unit')==='u6');
+    const afterClick=await accordionGeometry(page);
+    await page.getByRole('button',{name:/^Unit 4,/}).hover();await settleAccordion(page);
+    await page.getByRole('button',{name:/^Unit 4,/}).click();assert.equal(new URL(page.url()).searchParams.get('unit'),'u4');
+    await page.mouse.move(0,400);await page.waitForFunction(()=>!document.querySelector('.ca-units[data-accordion]'));
+    assert.equal(await page.locator('.ca-unit-wave-stage').count(),0,'no floating overlay remains');
+    assert.ok(afterClick.cards.length===10&&held.cards.length===10);
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:'unit-wave-motion',result:'continuous within-card proximity; both neighbors respond; distant taper; simultaneous response within two frames; rapid full-row sweeps and reversals preserve one stage and settle cleanly'});
+    evidence.push({scenario:'unit-accordion-motion',result:'stationary hold stable for 45 frames; simultaneous response within two frames; reversals and rapid full-row sweeps; constant geometry bounds throughout; clicks during/after motion select actual button; no overlay'});
   }finally{await context.close()}
 });

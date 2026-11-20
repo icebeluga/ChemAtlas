@@ -532,3 +532,74 @@ test("desktop header keeps complete metadata and Details in compact rows beside 
     evidence.push({scenario:"header-proportions",result:"complete one-line source metadata; Details shares action row; 24/76 at 1440 and usable 25/75 at 1280; unclipped Details; PDF fit/fullscreen retained"});
   }finally{await context.close()}
 });
+
+test("unit hover reveals the full color-matched name without moving cards or filtering questions", async () => {
+  const {context,page,errors}=await open();
+  try {
+    await login(page);await bankReady(page);
+    await page.waitForFunction(()=>[...document.querySelectorAll(".ca-viewport canvas")].some(c=>c.width>0&&c.style.visibility==="visible"));
+    await page.emulateMedia({reducedMotion:"no-preference"});
+    const snapshot=()=>page.evaluate(()=>({
+      url:location.href,
+      selected:[...document.querySelectorAll('.ca-unit[aria-pressed="true"]')].map(el=>el.getAttribute("data-u")),
+      results:document.querySelector(".ca-rows").textContent,
+      topics:document.querySelector(".ca-topics-wrap").hasAttribute("data-open"),
+      cards:[...document.querySelectorAll(".ca-unit")].map(el=>{const r=el.getBoundingClientRect();return[r.x,r.y,r.width,r.height]})
+    }));
+    for(const [width,height] of [[1440,900],[1280,900],[768,900],[844,390]]){
+      await page.setViewportSize({width,height});
+      await page.mouse.move(0,400);
+      const before=await snapshot();
+      for(let unit=1;unit<=9;unit++){
+        const card=page.getByRole("button",{name:new RegExp("^Unit "+unit+",")});
+        await card.hover();
+        await page.waitForFunction(id=>getComputedStyle(document.querySelector(`[data-u="u${id}"]>.ca-unit-highlight`)).opacity==="1",unit);
+        const highlight=await card.locator(".ca-unit-highlight").evaluate(el=>{
+          const r=el.getBoundingClientRect(),style=getComputedStyle(el),name=el.querySelector("span");
+          const canvas=document.createElement("canvas"),ctx=canvas.getContext("2d");canvas.width=canvas.height=1;
+          ctx.fillStyle=style.backgroundColor;ctx.fillRect(0,0,1,1);
+          const rgb=[...ctx.getImageData(0,0,1,1).data].slice(0,3).map(v=>{v/=255;return v<=.04045?v/12.92:((v+.055)/1.055)**2.4});
+          return {left:r.left,right:r.right,bottom:r.bottom,courseBottom:el.closest(".ca-course").getBoundingClientRect().bottom,name:name.textContent,nameFits:name.scrollHeight<=name.clientHeight+1&&name.scrollWidth<=name.clientWidth+1,
+            color:style.color,contrast:1.05/(.2126*rgb[0]+.7152*rgb[1]+.0722*rgb[2]+.05),
+            segments:el.querySelectorAll(".ca-heat i").length,duration:style.transitionDuration,
+            shadow:style.boxShadow,pointerEvents:style.pointerEvents};
+        });
+        assert.equal(highlight.name,(await card.getAttribute("aria-label")).split(", ").slice(1,-1).join(", "));
+        assert.ok(highlight.left>=0&&highlight.right<=width&&highlight.nameFits,JSON.stringify({width,unit,highlight}));
+        if(height===390)assert.ok(highlight.bottom<=highlight.courseBottom+1,"short-screen hover stays inside the scrollable course area: "+JSON.stringify(highlight));
+        assert.ok(highlight.contrast>=4.5&&highlight.segments>0,JSON.stringify(highlight));
+        assert.equal(highlight.color,"rgb(255, 255, 255)");
+        assert.match(highlight.duration,/0.22s/);
+        assert.notEqual(highlight.shadow,"none");
+        assert.equal(highlight.pointerEvents,"none");
+        assert.deepEqual(await snapshot(),before,"hover leaves navigation, filters, results and card geometry unchanged");
+        if(unit===4&&[1440,1280].includes(width))await page.screenshot({path:`test-results/pages/unit-hover-u4-${width}.png`});
+        if(unit===4&&height===390)await page.screenshot({path:"test-results/pages/unit-hover-u4-844x390.png"});
+      }
+      await page.mouse.move(0,400);
+      await page.waitForFunction(()=>[...document.querySelectorAll(".ca-unit-highlight")].every(el=>getComputedStyle(el).visibility==="hidden"));
+      assert.deepEqual(await snapshot(),before);
+    }
+    const unit4=page.getByRole("button",{name:/^Unit 4,/});
+    await page.getByRole("button",{name:/^Unit 3,/}).focus();
+    await page.keyboard.press("Tab");
+    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).opacity),"1");
+    await unit4.press("Enter");
+    assert.equal(await unit4.getAttribute("aria-pressed"),"true");
+    assert.equal(new URL(page.url()).searchParams.get("unit"),"u4");
+    const all=page.locator(".ca-unit.is-all");
+    await all.hover();
+    await page.waitForFunction(()=>getComputedStyle(document.querySelector(".is-all>.ca-unit-highlight")).opacity==="1");
+    assert.equal(await all.getAttribute("aria-pressed"),"false");
+    assert.equal(new URL(page.url()).searchParams.get("unit"),"u4");
+    await all.click();
+    assert.equal(await all.getAttribute("aria-pressed"),"true");
+    await page.emulateMedia({reducedMotion:"reduce"});
+    await unit4.hover();
+    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).transitionDuration),"1e-05s");
+    await page.setViewportSize({width:390,height:844});
+    assert.equal(await unit4.locator(".ca-unit-highlight").evaluate(el=>getComputedStyle(el).display),"none");
+    assert.deepEqual(errors,[]);
+    evidence.push({scenario:"unit-hover",result:"all nine full names, contrast, segments, fixed geometry and unchanged selection/results at 1440/1280/768 and 844x390; 220ms hover, reduced motion, keyboard click and phone layout retained"});
+  }finally{await context.close()}
+});

@@ -235,12 +235,17 @@ export function QuestionBank(props: Props) {
       <div className="ca-units">
         <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => onFilters({ unit: "all", topic: "all" })}>
           <b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span><span className="ca-sr">units</span>
+          <i className="ca-unit-highlight" aria-hidden="true"><b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span></i>
         </button>
         {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
           aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
           onClick={() => onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" })}>
           <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
           <i className="ca-heat" aria-hidden="true">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
+          <i className="ca-unit-highlight" aria-hidden="true">
+            <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
+            <i className="ca-heat">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
+          </i>
         </button>)}
       </div>
       {/* phones: one line naming the open unit, and topics in a sheet instead of a sideways chip row */}

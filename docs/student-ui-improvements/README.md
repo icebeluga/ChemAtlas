@@ -28,6 +28,7 @@
 - Question type controls read All, MCQ and FRQ. Clear filters occupies the former review-checkbox position beside the year control; it is disabled when there is nothing to clear. It still resets year, type, search and pagination while retaining the selected unit and topic. The reviewed-only filter is removed; review statuses and print warnings remain elsewhere.
 - Each desktop topic row fills its container. The two-row split uses independently measured natural label/count widths; flex distributes spare space across the variable-width buttons. All nine units are checked at 1440 and 1280 pixels, including long labels and Units 1, 2 and 8. The mobile topic sheet is retained.
 - The desktop split is 24% list / 76% viewer at 1440 pixels, with a 320-pixel list minimum producing 25% / 75% at 1280. Tablet widths reserve more list space. The title and complete metadata occupy the first header row; Details shares the full-page/crop and worksheet-action row. Details remains closed by default and retains all classifications and warnings.
+- Unit hover uses each unit's existing saturated selected color in a floating card face, with the full name, question count and density segments. A 220 ms opacity/transform transition adds a subtle lift and shadow without resizing the navigation slots or filtering questions. The visual face ignores pointer events so scanning across adjacent cards keeps their original targets. Its duplicate content is hidden from assistive technology; existing accessible unit names and keyboard selection remain intact. Keyboard focus reveals the face immediately; reduced motion removes transition delays, and touch/phone navigation is unchanged. Short landscape uses a condensed face within the bounded course area.
 
 ## Navigation evidence
 
@@ -55,7 +56,7 @@ Local results:
 - ESLint passed with the same four pre-existing warnings outside the changed product code.
 - 109 Node tests passed.
 - 52 Python tests passed with Python 3.12, UTF-8, PyMuPDF 1.26.6 and Tesseract.
-- All 17 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
+- All 18 Pages browser scenarios passed against the production build, real Supabase client, simulated Auth protocol and the actual approval/Storage migration in embedded PostgreSQL.
 - Pages build and artifact privacy allowlist passed. Protected data/server modules and administrative credentials remain excluded.
 - A focused 844x390 selected-topic regression verifies a reachable PDF viewport and actual mouse-wheel scrolling; short-screen course/filter controls are internally bounded. Expanded Details is anchored within the short viewport so its warning and part details remain reachable.
 - The downloaded worksheet was one US Letter page (377,523 bytes), rendered and visually checked with both browser PDF.js and Poppler. Poppler reported missing Symbol/ArialUnicode display-font warnings without a visible defect.
@@ -94,6 +95,8 @@ following the release handoff's evidence privacy boundary:
 - `test-results/pages/header-pdf-{1440,1280}.png`
 - `test-results/pages/short-landscape-details.png`
 - `test-results/pages/compact-question-phone.png`
+- `test-results/pages/unit-hover-u4-{1440,1280}.png`
+- `test-results/pages/unit-hover-u4-844x390.png`
 
 ## Release boundary and limits
 

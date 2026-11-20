@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useLayoutEffect, useMemo, useRef, useState } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent, ReactNode, RefObject } from "react";
-import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert, X } from "lucide-react";
+import { Check, ChevronDown, ChevronLeft, ChevronRight, Maximize2, Minimize2, Minus, MoveHorizontal, Plus, Scan, TriangleAlert } from "lucide-react";
 import { getStimuli, sitePath } from "#student-content";
 import { planWorksheet } from "../../../lib/worksheet.mjs";
 import { useExportData } from "@/components/student/hooks/use-export-data";
@@ -11,7 +11,7 @@ import { PdfQuestionPage } from "@/components/student/pdf-question-page";
 import { filterQuestions } from "@/lib/question-filter";
 import { sourcePageLocation } from "@/lib/question-source";
 import { MAX_ZOOM, MIN_ZOOM, stepZoom, type ViewerZoom } from "@/lib/viewer-scale";
-import { connectUnitAccordion, resetUnitAccordion } from "./unit-highlight";
+import { CourseNavigation } from "./course-navigation";
 
 type Topic = { id: string; name: string; unit: string; unitName: string };
 type Filters = { unit?: string; topic?: string; type?: string; query?: string };
@@ -33,8 +33,6 @@ type Props = {
 const PAGE = 100;
 const emptyFiles: NonNullable<Catalog["sourceFiles"]> = [];
 const originalPagesFor = (q: Question) => q.sourcePagesOriginal?.length ? q.sourcePagesOriginal : (q.pages?.length ? q.pages : [1]);
-// four heat steps, by square root so sparse topics stay visible
-const density = (count: number, max: number) => count ? [.15, .4, .7, 1][Math.min(3, Math.floor(Math.sqrt(count / max) * 4))] : 0;
 
 /** Unified Question Bank: course band, question list, printed-question pane and worksheet strip. */
 export function QuestionBank(props: Props) {
@@ -46,21 +44,14 @@ export function QuestionBank(props: Props) {
   const [mode, setMode] = useState<ImageMode>("full");
   const [focusedId, setFocusedId] = useState("");
   const bank = useRef<HTMLDivElement>(null);
-  const course = useRef<HTMLElement>(null);
-  const unitRow = useRef<HTMLDivElement>(null);
   const dock = useRef<HTMLElement>(null);
   const pane = useRef<HTMLElement>(null);
   const rows = useRef<HTMLOListElement>(null);
-  const sheet = useRef<HTMLDialogElement>(null);
   const listHeading = useRef<HTMLHeadingElement>(null);
   const paneHeading = useRef<HTMLHeadingElement>(null);
   const paneOpener = useRef<HTMLElement>(null);
   const restoreOnClose = useRef(false);
   const stepFocus = useRef<{ id: string; delta: number } | null>(null);
-
-  useEffect(() => {
-    if (unitRow.current) return connectUnitAccordion(unitRow.current);
-  }, [unit, catalog.units, questions]);
 
   const unitOf = useMemo(() => new Map(topics.map(t => [t.id, t.unit])), [topics]);
   const topicName = useMemo(() => new Map(topics.map(t => [t.id, t.name])), [topics]);
@@ -93,38 +84,20 @@ export function QuestionBank(props: Props) {
   const focusedIndex = visibleResults.findIndex(q => q.id === focusedId);
   const tabIndexInResults = focusedIndex >= 0 ? focusedIndex : currentIndex >= 0 && currentIndex < shown ? currentIndex : 0;
   const activeUnit = catalog.units.find(u => u.id === unit);
-  const topicBand = useRef<HTMLDivElement>(null);
-  const [topicBreak, setTopicBreak] = useState(0);
+  const [manuallyFocused, setManuallyFocused] = useState(false);
+  const focusNavigation = topic !== "all" || manuallyFocused;
   useLayoutEffect(() => {
-    const band = topicBand.current;
-    if (!band) return;
-    const observer = new ResizeObserver(() => {
-      if (!band.clientWidth) return;
-      // Measure natural text/count widths independently of the space distributed
-      // by flex-grow. Measuring stretched buttons would feed row sizing back
-      // into the split calculation and make it change on every resize.
-      const measure = band.cloneNode(true) as HTMLDivElement;
-      measure.setAttribute("aria-hidden", "true");
-      measure.inert = true;
-      Object.assign(measure.style, { position: "fixed", top: "0", left: "0", width: "max-content", visibility: "hidden", pointerEvents: "none" });
-      measure.querySelectorAll<HTMLElement>(".ca-topic-row").forEach(row => { row.style.width = "max-content"; });
-      measure.querySelectorAll<HTMLElement>(".ca-topic").forEach(button => {
-        Object.assign(button.style, { flex: "none", width: "max-content", maxWidth: "none", whiteSpace: "nowrap" });
-      });
-      band.parentElement?.appendChild(measure);
-      const widths = [...measure.querySelectorAll<HTMLElement>(".ca-topic")].map(button => button.getBoundingClientRect().width + 3);
-      measure.remove();
-      let best = 1, smallest = Infinity;
-      for (let index = 1; index < widths.length; index++) {
-        const widest = Math.max(widths.slice(0, index).reduce((sum, width) => sum + width, 0),
-          widths.slice(index).reduce((sum, width) => sum + width, 0));
-        if (widest < smallest) { best = index; smallest = widest; }
-      }
-      setTopicBreak(best);
-    });
-    observer.observe(band);
-    return () => observer.disconnect();
-  }, [activeUnit]);
+    const container = bank.current;
+    const navigation = container?.querySelector<HTMLElement>(".ca-course");
+    if (!container || !navigation) return;
+    const measure = () => container.style.setProperty("--ca-navigation-bottom", `${navigation.getBoundingClientRect().bottom}px`);
+    const observer = new ResizeObserver(measure);
+    observer.observe(navigation);
+    const bar = container.closest(".ca2")?.querySelector(".ca-bar");
+    if (bar) observer.observe(bar);
+    window.addEventListener("resize", measure); measure();
+    return () => { observer.disconnect(); window.removeEventListener("resize", measure); };
+  }, [focusNavigation]);
   const activeUnitNumber = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
   const activeTopic = topic !== "all" ? topic : "";
   const filtered = type !== "Mixed" || year !== "all" || !!query;
@@ -226,59 +199,17 @@ export function QuestionBank(props: Props) {
     function closeOnEscape(event: KeyboardEvent) {
       const target = event.target;
       if (event.key === "Escape" && !event.defaultPrevented && !event.repeat && !document.fullscreenElement &&
-        !(target instanceof Element && target.closest("dialog[open]"))) onClosePane();
+        !(target instanceof Element && target.closest("dialog[open], [data-course-browser]"))) onClosePane();
     }
     document.addEventListener("keydown", closeOnEscape);
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [paneOpen, onClosePane]);
 
   function clearFilters() { setYear("all"); setShown(PAGE); onFilters({ type: "Mixed", query: "" }); }
-  function chooseTopic(id: string) { onFilters({ topic: id }); sheet.current?.close(); }
 
-  return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined}>
-    <nav className="ca-course" ref={course} aria-label="Units and topics" inert={paneOpen}>
-      <h2 className="ca-sr">Browse by unit</h2>
-      <div className="ca-units" ref={unitRow}>
-        <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"} onClick={() => { resetUnitAccordion(unitRow.current); onFilters({ unit: "all", topic: "all" }); }}>
-          <b>All</b><span>{classified.length ? classified.length.toLocaleString() : ""}</span><span className="ca-sr">units</span>
-          <i className="ca-unit-highlight" aria-hidden="true"><b><span className="ca-unit-number">All</span></b><span>{classified.length ? classified.length.toLocaleString() : ""}</span></i>
-        </button>
-        {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
-          aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
-          onClick={() => { resetUnitAccordion(unitRow.current); onFilters({ unit: unit === u.id ? "all" : u.id, topic: "all" }); }}>
-          <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
-          <i className="ca-heat" aria-hidden="true">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
-          <i className="ca-unit-highlight" aria-hidden="true">
-            <b><span className="ca-unit-number">{i + 1}</span><small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
-            <i className="ca-heat">{u.topics.map(([id]) => <i key={id} style={{ "--d": density(counts.byTopic.get(id) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
-          </i>
-        </button>)}
-      </div>
-      {/* phones: one line naming the open unit, and topics in a sheet instead of a sideways chip row */}
-      <div className="ca-unit-line" data-u={activeUnit?.id}>
-        <b>{activeUnit ? `Unit ${activeUnitNumber}: ${activeUnit.name}` : "All nine units"}</b>
-        {activeUnit && <button type="button" className="ca-btn is-quiet ca-topic-open" aria-haspopup="dialog" onClick={() => sheet.current?.showModal()}>
-          {activeTopic ? activeTopic : "All topics"} <ChevronDown size={15} aria-hidden="true" />
-        </button>}
-        {activeUnit && <button type="button" className="ca-btn is-quiet ca-topic-open" onClick={() => onFilters({ unit: "all", topic: "all" })}>All units</button>}
-      </div>
-      <div className="ca-topics-wrap" data-open={activeUnit ? "" : undefined}>
-        <div className="ca-topics" ref={topicBand} data-u={activeUnit?.id}>
-          {[activeUnit?.topics.slice(0, topicBreak || Math.ceil(activeUnit.topics.length / 2)), activeUnit?.topics.slice(topicBreak || Math.ceil(activeUnit.topics.length / 2))].map((row, rowIndex) => <div className="ca-topic-row" key={rowIndex}>
-          {row?.map(([id, name]) => { const count = counts.byTopic.get(id) ?? 0;
-            return <button type="button" key={id} className="ca-topic" style={{ "--d": density(count, counts.max) } as React.CSSProperties} data-empty={count ? undefined : ""}
-              aria-pressed={topic === id} onClick={() => onFilters({ topic: topic === id ? "all" : id })}><b>{id}</b><span className="ca-topic-name">{name}</span><i>{count}</i></button>; })}
-          </div>)}
-        </div>
-      </div>
-      <dialog className="ca-sheet" ref={sheet} aria-label="Topics" data-u={activeUnit?.id} onClick={event => { if (event.target === sheet.current) sheet.current?.close(); }}>
-        <header><b>{activeUnit ? `Unit ${activeUnitNumber} topics` : "Topics"}</b><button type="button" className="ca-icon" aria-label="Close topics" onClick={() => sheet.current?.close()}><X size={16} aria-hidden="true" /></button></header>
-        <ul>
-          <li><button type="button" aria-pressed={topic === "all"} onClick={() => chooseTopic("all")}><span>All topics</span><i>{activeUnit ? counts.byUnit.get(activeUnit.id) ?? 0 : ""}</i></button></li>
-          {activeUnit?.topics.map(([id, name]) => <li key={id}><button type="button" aria-pressed={topic === id} onClick={() => chooseTopic(id)}><b className="ca-code">{id}</b><span>{name}</span><i>{counts.byTopic.get(id) ?? 0}</i></button></li>)}
-        </ul>
-      </dialog>
-    </nav>
+  return <div className="ca-bank" ref={bank} data-pane={paneOpen ? "" : undefined} data-navigation-focus={focusNavigation ? "" : undefined}>
+    <CourseNavigation catalog={catalog} counts={counts} total={classified.length} unit={unit} topic={topic}
+      focused={focusNavigation} disabled={paneOpen && !focusNavigation} onFocus={setManuallyFocused} onFilters={onFilters} />
 
     <div className="ca-work">
       <section className="ca-list" aria-label="Questions" inert={paneOpen}>

@@ -32,7 +32,7 @@ export function connectUnitAccordion(row: HTMLElement) {
     cards = buttons.map(button => {
       const rect = button.getBoundingClientRect(), face = button.querySelector<HTMLElement>(".ca-unit-highlight")!;
       return { button, face, title: face.querySelector<HTMLElement>(":scope>span")!, number: face.querySelector<HTMLElement>(".ca-unit-number")!, count: face.querySelector<HTMLElement>("small"), base: rect.width,
-        width: rect.width, target: rect.width, minimum: Math.min(rect.width, Math.max(48, Math.min(56, box.height))),
+        width: rect.width, target: rect.width, minimum: Math.min(rect.width, box.width < 1000 ? 48 : Math.max(48, Math.min(56, box.height))),
         peak: Math.max(rect.width + 16, Math.min(240, box.width * .33)), left: rect.left };
     });
     row.style.height = `${box.height}px`; row.dataset.accordion = "";

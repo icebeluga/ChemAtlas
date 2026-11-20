@@ -15,7 +15,7 @@ export function unitHighlight(button: HTMLElement, show: boolean, immediate = fa
     });
     if (!open) {
       const slot = button.getBoundingClientRect();
-      const width = button.classList.contains("is-all") ? slot.width : Math.max(slot.width, 264);
+      const width = button.classList.contains("is-all") ? slot.width + 12 : Math.max(slot.width + 24, 264);
       const left = Math.max(8, Math.min(innerWidth - width - 8, slot.x + (slot.width - width) / 2));
       face.style.width = `${width}px`;
       face.style.setProperty("--unit-slot-height", `${slot.height}px`);

@@ -594,6 +594,7 @@ test("unit hover reveals the full color-matched name without moving cards or fil
     await unit4.hover();
     await page.waitForFunction(()=>getComputedStyle(document.querySelector('[data-u="u4"]>.ca-unit-highlight')).opacity==="1");
     assert.equal(await unit4.evaluate(el=>el.querySelector(".ca-unit-highlight").getBoundingClientRect().height>el.getBoundingClientRect().height),true,"selected tab also gains a little height");
+    assert.equal(await unit4.evaluate(el=>el.querySelector(".ca-unit-highlight").getBoundingClientRect().width>el.getBoundingClientRect().width),true,"selected tab also widens around its center");
     const all=page.locator(".ca-unit.is-all");
     await all.hover();
     await page.waitForFunction(()=>getComputedStyle(document.querySelector(".is-all>.ca-unit-highlight")).opacity==="1");

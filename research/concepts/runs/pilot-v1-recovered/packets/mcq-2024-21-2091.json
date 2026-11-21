@@ -1,0 +1,144 @@
+{
+  "questionId": "mcq-2024-21-2091",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 21,
+  "text": "",
+  "regions": [
+    {
+      "page": 2089,
+      "rect": null,
+      "role": "question",
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 289,
+        "compiledPage": 2089
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "8.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Content supplement (replace): Catalog page 2091 prints Questions 23-25; its OCR read '23.' as '21.'. Printed Question 21 (CO + 2 H2 equilibrium, Le Chatelier) is on page 2089, which no catalog record cites. Catalog text belongs to another question and is withheld."
+  ],
+  "supplement": {
+    "mode": "replace",
+    "reason": "Catalog page 2091 prints Questions 23-25; its OCR read '23.' as '21.'. Printed Question 21 (CO + 2 H2 equilibrium, Le Chatelier) is on page 2089, which no catalog record cites.",
+    "checkedBy": "model (claude-opus-5-5), 2026-11-14: rendered bank-07 p289 and p291 viewed",
+    "catalogCorrection": "Point mcq-2024-21 at page 2089 and replace its fullText; the current text is printed Question 23."
+  },
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "content-supplemented-see-images",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "3de531afb33a93a2",
+  "images": [
+    {
+      "kind": "question",
+      "path": "research/concepts/runs/pilot-v1-recovered/images/mcq-2024-21-2091-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 289,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "titration-curves",
+      "name": "Acid-base titration curves",
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

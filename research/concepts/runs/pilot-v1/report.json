@@ -1,0 +1,457 @@
+{
+  "processed": 92,
+  "byType": {
+    "MCQ": 72,
+    "FRQ": 20
+  },
+  "byReviewStatus": {
+    "needs_attention": 57,
+    "machine_reviewed": 35
+  },
+  "blocked": [],
+  "invalid": [],
+  "cropIssues": {
+    "missing-content-recovered-from-page": 29,
+    "extra-content": 8,
+    "none": 47,
+    "wrong-question": 2,
+    "no-crop": 6
+  },
+  "diagram": {
+    "analyzed": 48,
+    "none": 44
+  },
+  "flags": [
+    [
+      "second-pass-disagreement",
+      49
+    ],
+    [
+      "crop-issue:missing-content-recovered-from-page",
+      29
+    ],
+    [
+      "classifier-requested-review",
+      21
+    ],
+    [
+      "topic-differs-from-catalog",
+      12
+    ],
+    [
+      "crop-issue:extra-content",
+      8
+    ],
+    [
+      "part-refined",
+      6
+    ],
+    [
+      "beyond-ap-content",
+      5
+    ],
+    [
+      "crop-issue:wrong-question",
+      2
+    ],
+    [
+      "source-not-clean-question-page",
+      2
+    ]
+  ],
+  "partsClassified": 193,
+  "primaryPerPart": {
+    "1": 176,
+    "2": 17
+  },
+  "supportingPerPart": {
+    "0": 121,
+    "1": 67,
+    "2": 5
+  },
+  "distinctConceptsUsed": 94,
+  "topPrimary": [
+    [
+      "Gibbs free energy and favorability",
+      7
+    ],
+    [
+      "Enthalpy of reaction",
+      7
+    ],
+    [
+      "Hydrogen bonding",
+      6
+    ],
+    [
+      "Lewis structures",
+      5
+    ],
+    [
+      "Intermolecular forces and physical properties",
+      5
+    ],
+    [
+      "Entropy",
+      5
+    ],
+    [
+      "Equilibrium constant expressions",
+      5
+    ],
+    [
+      "Ionization energy",
+      4
+    ],
+    [
+      "Integrated rate laws and half-life",
+      4
+    ],
+    [
+      "Rate laws and reaction order",
+      4
+    ],
+    [
+      "Acid-base titration curves",
+      4
+    ],
+    [
+      "Net ionic equations",
+      4
+    ],
+    [
+      "Endothermic and exothermic processes",
+      4
+    ],
+    [
+      "Free energy and equilibrium",
+      4
+    ],
+    [
+      "Le Châtelier's principle",
+      4
+    ]
+  ],
+  "topSupporting": [
+    [
+      "Electron-domain counting",
+      6
+    ],
+    [
+      "Coulomb's law and effective nuclear charge",
+      4
+    ],
+    [
+      "Precipitation reactions",
+      4
+    ],
+    [
+      "Strong versus weak acids and bases",
+      3
+    ],
+    [
+      "Endothermic and exothermic processes",
+      3
+    ],
+    [
+      "Molecular polarity",
+      2
+    ],
+    [
+      "Free energy and equilibrium",
+      2
+    ],
+    [
+      "Dipole-dipole attractions",
+      2
+    ],
+    [
+      "Reaction stoichiometry",
+      2
+    ],
+    [
+      "Particle representations of solutions",
+      2
+    ]
+  ],
+  "topCombinations": [
+    [
+      "hydrogen-bonding + imf-properties",
+      5
+    ],
+    [
+      "coulombic-attraction + ionization-energy",
+      4
+    ],
+    [
+      "electron-domains + molecular-geometry",
+      3
+    ],
+    [
+      "electron-domains + hybridization",
+      3
+    ],
+    [
+      "free-energy-equilibrium + gibbs-free-energy",
+      3
+    ],
+    [
+      "calorimetry + enthalpy-of-reaction",
+      3
+    ],
+    [
+      "molecular-geometry + molecular-polarity",
+      2
+    ],
+    [
+      "bond-angles + electron-domains",
+      2
+    ],
+    [
+      "integrated-rate-laws + rate-law",
+      2
+    ],
+    [
+      "dipole-dipole + london-dispersion",
+      2
+    ]
+  ],
+  "topicChangedFromCatalog": 12,
+  "agreement": {
+    "partial": 34,
+    "disagree": 12,
+    "agree": 46
+  },
+  "disagreements": [
+    {
+      "questionId": "frq-1999-7-564",
+      "agreement": "partial",
+      "summary": "d: primary lewis-structures+molecular-polarity vs lewis-structures+molecular-geometry; supporting molecular-geometry+electron-domains vs electron-domains+molecular-polarity"
+    },
+    {
+      "questionId": "frq-2003-3-536",
+      "agreement": "disagree",
+      "summary": "e: primary pka-speciation vs henderson-hasselbalch; supporting solution-representations vs solution-representations"
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "agreement": "disagree",
+      "summary": "a: primary equilibrium-expression vs weak-acid-equilibrium; supporting - vs - | c-i: primary molarity vs molarity; supporting - vs mole-conversions | c-ii: primary henderson-hasselbalch vs henderson-hasselbalch; supporting - vs weak-acid-equilibrium"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "agreement": "disagree",
+      "summary": "a: primary net-ionic-equations vs reaction-types; supporting reaction-types vs net-ionic-equations | e: primary reaction-types vs descriptive-chemistry; supporting ionic-formulas vs - | g: primary descriptive-chemistry vs descriptive-chemistry; supporting net-ionic-equations vs - | h: primary net-ionic-equations vs precipitation; supporting precipitation vs net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "agreement": "partial",
+      "summary": "a-ii: primary imf-properties vs imf-properties+hydrogen-bonding; supporting hydrogen-bonding vs london-dispersion | b-ii: primary lattice-energy vs lattice-energy; supporting - vs atomic-radius"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "agreement": "partial",
+      "summary": "b: primary imf-properties+hydrogen-bonding vs hydrogen-bonding; supporting - vs imf-properties | c: primary solid-types vs solid-types; supporting - vs imf-properties | d: primary london-dispersion+imf-properties vs london-dispersion; supporting dipole-dipole vs dipole-dipole"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "agreement": "disagree",
+      "summary": "a: primary equilibrium-expression vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | b: primary le-chatelier vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | c: primary free-energy-equilibrium vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | e: primary thermodynamic-kinetic-control vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-i: primary entropy vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-ii: primary hess-law vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-iii: primary gibbs-free-energy vs thermodynamic-kinetic-control+entropy; supporting ideal-gas-law vs hess-law+gibbs-free-energy+ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2011-3-933",
+      "agreement": "disagree",
+      "summary": "c-i: primary free-energy-equilibrium vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-ii: primary gibbs-free-energy vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-iii: primary le-chatelier vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | d: primary hess-law vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law"
+    },
+    {
+      "questionId": "frq-2017-3-1157",
+      "agreement": "partial",
+      "summary": "d-ii: primary integrated-rate-laws vs integrated-rate-laws; supporting rate-law vs -"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "agreement": "partial",
+      "summary": "a: primary reaction-mechanisms vs reaction-mechanisms; supporting catalysis vs - | b: primary mechanism-rate-law vs mechanism-rate-law; supporting - vs elementary-steps | h: primary titration-analysis vs titration-analysis; supporting - vs dilution"
+    },
+    {
+      "questionId": "frq-2023-3-448",
+      "agreement": "disagree",
+      "summary": "b: primary reaction-rate vs collision-model; supporting - vs reaction-rate | d: primary rate-law vs rate-law; supporting - vs reaction-rate | g-ii: primary enthalpy-of-reaction vs enthalpy-of-reaction; supporting calorimetry vs mole-conversions"
+    },
+    {
+      "questionId": "frq-2024-5-2125",
+      "agreement": "partial",
+      "summary": "b: primary solution-representations vs solution-representations; supporting - vs net-ionic-equations | d: primary electron-configuration vs electron-configuration; supporting - vs ionic-formulas"
+    },
+    {
+      "questionId": "frq-2024-6-2126",
+      "agreement": "partial",
+      "summary": "b: primary redox-half-reactions vs redox-half-reactions; supporting - vs electrochemical-cells"
+    },
+    {
+      "questionId": "mcq-1984-72-131",
+      "agreement": "partial",
+      "summary": "stem: primary partial-pressures+ideal-gas-law vs partial-pressures; supporting - vs ideal-gas-law"
+    },
+    {
+      "questionId": "mcq-1984-84-135",
+      "agreement": "partial",
+      "summary": "stem: primary colligative-properties vs colligative-properties; supporting - vs solution-representations"
+    },
+    {
+      "questionId": "mcq-1994-63-691",
+      "agreement": "partial",
+      "summary": "stem: primary integrated-rate-laws vs integrated-rate-laws; supporting - vs rate-law"
+    },
+    {
+      "questionId": "mcq-2002-67-765",
+      "agreement": "partial",
+      "summary": "stem: primary imf-properties+hydrogen-bonding vs imf-properties; supporting - vs hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "agreement": "partial",
+      "summary": "stem: primary activation-energy vs activation-energy; supporting collision-model vs -"
+    },
+    {
+      "questionId": "mcq-2008-13-32",
+      "agreement": "partial",
+      "summary": "stem: primary phase-change-energy+entropy vs entropy+endo-exothermic; supporting - vs -"
+    },
+    {
+      "questionId": "mcq-2008-4-31",
+      "agreement": "partial",
+      "summary": "stem: primary titration-curves vs titration-curves; supporting - vs titration-analysis"
+    },
+    {
+      "questionId": "mcq-2008-41-38",
+      "agreement": "partial",
+      "summary": "stem: primary limiting-reactant+reaction-representations vs limiting-reactant; supporting - vs reaction-representations"
+    },
+    {
+      "questionId": "mcq-2008-44-39",
+      "agreement": "partial",
+      "summary": "stem: primary cell-potential vs cell-potential; supporting - vs electrochemical-cells"
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "agreement": "partial",
+      "summary": "stem: primary equilibrium-constant-calculation vs equilibrium-constant-calculation; supporting - vs equilibrium-expression"
+    },
+    {
+      "questionId": "mcq-2008-6-31",
+      "agreement": "partial",
+      "summary": "stem: primary titration-curves vs titration-curves; supporting - vs buffers"
+    },
+    {
+      "questionId": "mcq-2014-21-1450",
+      "agreement": "partial",
+      "summary": "stem: primary le-chatelier vs le-chatelier; supporting - vs endo-exothermic"
+    },
+    {
+      "questionId": "mcq-2014-29-1453",
+      "agreement": "partial",
+      "summary": "stem: primary k-manipulation vs k-manipulation; supporting free-energy-equilibrium vs k-magnitude"
+    },
+    {
+      "questionId": "mcq-2014-33-185",
+      "agreement": "disagree",
+      "summary": "content status complete vs partial"
+    },
+    {
+      "questionId": "mcq-2014-34-186",
+      "agreement": "partial",
+      "summary": "stem: primary enthalpy-of-reaction vs enthalpy-of-reaction; supporting - vs endo-exothermic"
+    },
+    {
+      "questionId": "mcq-2014-47-190",
+      "agreement": "partial",
+      "summary": "stem: primary nernst-nonstandard vs nernst-nonstandard; supporting - vs electrochemical-cells+reaction-quotient"
+    },
+    {
+      "questionId": "mcq-2014-9-174",
+      "agreement": "partial",
+      "summary": "stem: primary heat-transfer vs heat-transfer; supporting - vs calorimetry"
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "agreement": "partial",
+      "summary": "stem: primary mechanism-rate-law vs mechanism-rate-law+elementary-steps; supporting elementary-steps vs -"
+    },
+    {
+      "questionId": "mcq-2016-24-1063",
+      "agreement": "disagree",
+      "summary": "stem: primary enthalpy-of-reaction vs limiting-reactant; supporting limiting-reactant vs enthalpy-of-reaction"
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "agreement": "partial",
+      "summary": "stem: primary limiting-reactant+enthalpy-of-reaction vs limiting-reactant; supporting reaction-stoichiometry vs enthalpy-of-reaction"
+    },
+    {
+      "questionId": "mcq-2017-42-1144",
+      "agreement": "disagree",
+      "summary": "stem: primary free-energy-equilibrium vs k-magnitude; supporting gibbs-free-energy+thermodynamic-kinetic-control vs free-energy-equilibrium"
+    },
+    {
+      "questionId": "mcq-2018-13-1198",
+      "agreement": "partial",
+      "summary": "stem: primary integrated-rate-laws vs integrated-rate-laws; supporting - vs rate-law"
+    },
+    {
+      "questionId": "mcq-2018-34-1205",
+      "agreement": "partial",
+      "summary": "stem: primary solubility-product vs solubility-product; supporting - vs dynamic-equilibrium"
+    },
+    {
+      "questionId": "mcq-2018-38-1920",
+      "agreement": "disagree",
+      "summary": "stem: primary hess-law vs coupled-reactions; supporting - vs -"
+    },
+    {
+      "questionId": "mcq-2022-13-1639",
+      "agreement": "partial",
+      "summary": "stem: primary catalysis vs catalysis; supporting - vs activation-energy"
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "agreement": "partial",
+      "summary": "stem: primary imf-properties+hydrogen-bonding vs imf-properties; supporting - vs hydrogen-bonding"
+    },
+    {
+      "questionId": "mcq-2022-38-1648",
+      "agreement": "partial",
+      "summary": "stem: primary bond-potential-energy vs bond-potential-energy; supporting atomic-radius vs bond-order"
+    },
+    {
+      "questionId": "mcq-2022-5-1663",
+      "agreement": "disagree",
+      "summary": "b: primary collision-model vs collision-model; supporting - vs reaction-rate | c: primary endo-exothermic vs endo-exothermic; supporting - vs heat-transfer | d: primary enthalpy-of-reaction vs calorimetry; supporting calorimetry vs limiting-reactant"
+    },
+    {
+      "questionId": "mcq-2022-52-1652",
+      "agreement": "partial",
+      "summary": "stem: primary weak-acid-equilibrium vs strong-weak-acids+weak-acid-equilibrium; supporting strong-weak-acids vs -"
+    },
+    {
+      "questionId": "mcq-2022-56-1653",
+      "agreement": "partial",
+      "summary": "stem: primary ion-dipole+solution-representations vs ion-dipole; supporting bond-polarity vs solution-representations"
+    },
+    {
+      "questionId": "mcq-2023-33-1727",
+      "agreement": "partial",
+      "summary": "stem: primary catalysis vs catalysis; supporting - vs activation-energy"
+    },
+    {
+      "questionId": "mcq-2024-33-2094",
+      "agreement": "disagree",
+      "summary": "content status unreadable vs partial"
+    },
+    {
+      "questionId": "mcq-2024-56-2109",
+      "agreement": "partial",
+      "summary": "stem: primary reaction-representations vs reaction-representations+precipitation; supporting precipitation vs net-ionic-equations"
+    }
+  ]
+}

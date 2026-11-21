@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-1994-65-692",
+  "type": "MCQ",
+  "exam": "1994 AP Chemistry MCQ",
+  "year": "1994",
+  "number": 65,
+  "text": "65. Which of the following compoundsis NOT appreciably\n    soluble in water but is soluble in dilute hydrochloric acid?\n\n    (A) Mg(OH),(s)\n     (B) (NH&CO,(s)\n     (C) CuSO,(s)\n    (D) (NHL@O&)\n     (E)  Sr(NO,),(s)",
+  "regions": [
+    {
+      "page": 692,
+      "rect": [
+        0,
+        229.44796752929688,
+        601,
+        363.3679504394531
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 92,
+        "compiledPage": 692
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "d1792616ddcc17b9",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1994-65-692-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 92,
+      "rect": [
+        0,
+        229.44796752929688,
+        601,
+        363.3679504394531
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1994-65-692-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 92,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

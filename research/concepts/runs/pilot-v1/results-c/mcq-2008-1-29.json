@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-1-29",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows stem; shared stimulus shows element categories A-E; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "1.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must translate most difficult to oxidize into hardest to remove an electron and compare ionization energies of the element groups within a period."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

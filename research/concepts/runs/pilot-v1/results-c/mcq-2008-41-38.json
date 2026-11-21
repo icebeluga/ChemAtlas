@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2008-41-38",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Full page shows initial particle diagram (H2 and N2), the equation, and diagram choices A-E."
+  },
+  "officialTopics": {
+    "primary": "4.5",
+    "additional": [
+      "4.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "limiting-reactant",
+          "evidence": "Must count H2 and N2 molecules, apply the 1:3 ratio to find which is limiting, and determine how much NH3 forms and which reactant remains."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "reaction-representations",
+          "evidence": "Must match the result to a particle diagram that conserves atoms and shows the excess reactant molecules."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "identify"
+      ],
+      "representations": [
+        "particulate-diagram",
+        "chemical-equation"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

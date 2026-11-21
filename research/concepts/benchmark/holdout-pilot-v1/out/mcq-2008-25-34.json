@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-2008-25-34",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "ideal-gas-law"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Choosing R in L atm units and kelvin temperature is part of applying PV=nRT, not separate concepts."
+}

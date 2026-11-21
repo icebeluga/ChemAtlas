@@ -1,0 +1,118 @@
+{
+  "questionId": "mcq-2018-13-1198",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 13,
+  "text": "Time     [NO2]                   1\n                                                         ln [NO2]            (L/mol)\n                                     (s)      (mol/L)             [NO 2 ]\n\n                           0        0.500       –0.693           2.00\n\n                          100       0.364        –1.01            2.75\n\n                          200       0.286        –1.25            3.50\n\n                          300       0.235        –1.45            4.25\n\n13. The data from a study of the decomposition of NO2(g) to form NO(g) and O2(g) are given in the table above.\n   Which of the following rate laws is consistent with the data?\n   (A) Rate = k [NO2]\n    (B) Rate = k [NO2]2\n                1\n    (C) Rate = k\n            [NO 2 ]\n                 1   (D) Rate = k\n            [NO 2 ]2",
+  "regions": [
+    {
+      "page": 1198,
+      "rect": [
+        40,
+        68,
+        565,
+        352
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 298,
+        "compiledPage": 1198
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "5.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.3",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "ca38c744f1ffe142",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-13-1198-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 298,
+      "rect": [
+        40,
+        68,
+        565,
+        352
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-13-1198-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 298,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:integrated-rate-laws"
+      ]
+    },
+    {
+      "conceptId": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "reaction-rate",
+      "name": "Reaction rates",
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "whyCandidate": [
+        "linked-from:integrated-rate-laws"
+      ]
+    }
+  ]
+}

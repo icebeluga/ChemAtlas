@@ -1,0 +1,40 @@
+{
+  "questionId": "mcq-2002-6-606",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crops show the shared phase diagram with choices A-E and the question 6 stem; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "3.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "particulate-states",
+          "evidence": "Must trace a constant-pressure cooling path across the phase diagram and name the phase change crossed."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Phase diagrams are not assessed in the current CED and no beyond-ap concept covers them; particulate-states is the closest fit for naming phase changes."
+}

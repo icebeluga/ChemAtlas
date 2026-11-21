@@ -1,0 +1,434 @@
+{
+  "questionId": "frq-2020-sample-2-116",
+  "type": "FRQ",
+  "exam": "2020 AP Chemistry Exam Sample Questions",
+  "year": "2020",
+  "number": 2,
+  "text": "",
+  "regions": [
+    {
+      "page": 116,
+      "rect": null,
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 116,
+        "compiledPage": 116
+      }
+    },
+    {
+      "page": 117,
+      "rect": null,
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 117,
+        "compiledPage": 117
+      }
+    },
+    {
+      "page": 118,
+      "rect": null,
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 118,
+        "compiledPage": 118
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "5.11"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "5.8",
+        "5.7"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "6.2",
+        "6.1"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "3.1"
+      ]
+    },
+    {
+      "partId": "e",
+      "label": "(e)",
+      "catalogTopics": [
+        "3.1",
+        "3.9"
+      ]
+    },
+    {
+      "partId": "f",
+      "label": "(f)",
+      "catalogTopics": [
+        "8.5",
+        "4.5"
+      ]
+    },
+    {
+      "partId": "g",
+      "label": "(g)",
+      "catalogTopics": [
+        "8.5",
+        "4.6"
+      ]
+    },
+    {
+      "partId": "h",
+      "label": "(h)",
+      "catalogTopics": [
+        "8.5",
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.8",
+    "secondary": [
+      "5.7",
+      "5.11",
+      "6.2",
+      "6.1",
+      "3.1",
+      "3.9",
+      "8.5",
+      "4.5",
+      "4.6"
+    ],
+    "status": "classified",
+    "method": "Manual review of original scanned source page against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Scanned page image is authoritative; no selectable text layer."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "scanned-no-text-layer",
+      "text-too-short",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "bda66c72ec7bdb60",
+  "images": [
+    {
+      "kind": "full-page",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2020-sample-2-116-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 116,
+      "rect": null
+    },
+    {
+      "kind": "full-page",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2020-sample-2-116-r2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 117,
+      "rect": null
+    },
+    {
+      "kind": "full-page",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2020-sample-2-116-r3.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 118,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant",
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "dipole-dipole",
+      "name": "Dipole-dipole attractions",
+      "definition": "Attractions between the permanent dipoles of polar molecules.",
+      "include": "Tag when dipole-dipole forces must be identified or compared.",
+      "exclude": "Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:london-dispersion",
+        "linked-from:hydrogen-bonding",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:london-dispersion",
+        "linked-from:hydrogen-bonding",
+        "linked-from:separation-techniques"
+      ]
+    },
+    {
+      "conceptId": "hydrogen-bonding",
+      "name": "Hydrogen bonding",
+      "definition": "The strong dipole attraction between an H atom bonded to N, O or F and a lone pair on a nearby N, O or F atom.",
+      "include": "Tag when hydrogen bonding must be identified, drawn, or used to explain a property, including identifying donors and acceptors.",
+      "exclude": "Do not tag molecules that contain H and O but no H bonded to N, O or F (a common error).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:dipole-dipole",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "london-dispersion",
+      "name": "London dispersion forces",
+      "definition": "Attractions arising from temporary dipoles, whose strength increases with the number of electrons (polarizability) and with contact surface area.",
+      "include": "Tag when dispersion forces must be identified or compared, especially using polarizability or molecular shape.",
+      "exclude": "Do not tag merely because dispersion forces exist in every substance; tag only when they matter to the answer.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:dipole-dipole",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "reaction-mechanisms",
+      "name": "Reaction mechanisms and intermediates",
+      "definition": "Combining elementary steps into an overall equation, and identifying intermediates (formed then consumed) and catalysts (consumed then regenerated).",
+      "include": "Tag when a mechanism's steps must be added or intermediates and catalysts identified.",
+      "exclude": "Do not tag rate-law derivation from the mechanism (tag mechanism-rate-law) unless steps are also combined.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:mechanism-rate-law",
+        "linked-from:catalysis"
+      ]
+    },
+    {
+      "conceptId": "catalysis",
+      "name": "Catalysis",
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-mechanisms"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "mechanism-rate-law",
+      "name": "Mechanisms and rate laws",
+      "definition": "Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.",
+      "include": "Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.",
+      "exclude": "Do not tag experimental order determination with no mechanism.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-mechanisms"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "titration-curves",
+      "name": "Acid-base titration curves",
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "elementary-steps",
+      "name": "Elementary reactions and molecularity",
+      "definition": "Recognizing that an elementary step's rate law follows directly from its molecularity (unimolecular, bimolecular), unlike an overall reaction.",
+      "include": "Tag when the rate law or molecularity of an elementary step must be written or identified.",
+      "exclude": "Do not tag experimental rate laws for overall reactions (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-mechanisms",
+        "linked-from:mechanism-rate-law"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "ion-dipole",
+      "name": "Ion-dipole attractions",
+      "definition": "Attractions between ions and polar molecules, such as the orientation of water molecules around dissolved ions.",
+      "include": "Tag when ion-dipole forces or hydration-shell orientation must be identified, drawn or used.",
+      "exclude": "Do not tag ionic bonding within a lattice (tag lattice-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "separation-techniques",
+      "name": "Chromatography and distillation",
+      "definition": "Separating mixture components by differences in intermolecular attractions: paper or column chromatography (stationary versus mobile phase) and distillation by volatility.",
+      "include": "Tag when a separation method is selected, explained or its results (such as a chromatogram) interpreted.",
+      "exclude": "Do not tag filtration of a precipitate as the only step of a gravimetric calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "molecular-polarity",
+      "name": "Molecular polarity",
+      "definition": "Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.",
+      "include": "Tag when the student must determine or justify whether a molecule is polar or nonpolar.",
+      "exclude": "Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:dipole-dipole",
+        "linked-from:ion-dipole"
+      ]
+    },
+    {
+      "conceptId": "solubility-polarity",
+      "name": "Solubility and 'like dissolves like'",
+      "definition": "Predicting and explaining solubility and miscibility from the relative strength of solute-solute, solvent-solvent and solute-solvent attractions.",
+      "include": "Tag when solubility or miscibility must be predicted or explained from molecular structure and forces.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product) or solubility rules for precipitates (tag precipitation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:hydrogen-bonding",
+        "linked-from:ion-dipole",
+        "linked-from:separation-techniques"
+      ]
+    },
+    {
+      "conceptId": "activation-energy",
+      "name": "Activation energy and energy profiles",
+      "definition": "Reading single- and multi-step reaction energy profiles: activation energy, transition states, intermediates, forward and reverse barriers, the rate-limiting barrier, and overall ΔH.",
+      "include": "Tag when an energy profile must be read, drawn or used, or activation energies compared.",
+      "exclude": "Do not tag simple enthalpy diagrams with no activation barrier (tag endo-exothermic).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:catalysis"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:mechanism-rate-law"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:endo-exothermic"
+      ]
+    }
+  ]
+}

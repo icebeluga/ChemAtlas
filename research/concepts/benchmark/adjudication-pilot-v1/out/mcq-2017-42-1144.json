@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2017-42-1144",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["free-energy-equilibrium"], "supporting": ["gibbs-free-energy", "thermodynamic-kinetic-control"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "Makes k-magnitude primary, but K's size is given; the question asks for its thermodynamic cause via the ΔG°-K link, and Y omits the ΔH/ΔS and kinetics-versus-thermodynamics reasoning." },
+  "notes": "Two distractors offer activation energies, so separating rate from favorability is a material step."
+}

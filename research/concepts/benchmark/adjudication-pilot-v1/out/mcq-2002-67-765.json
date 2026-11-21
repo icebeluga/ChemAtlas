@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2002-67-765",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["imf-properties"], "supporting": ["hydrogen-bonding"] } },
+  "verdictX": { "label": "wrong-primary", "reason": "Makes hydrogen-bonding co-primary; the item mainly tests that vaporization breaks intermolecular, not covalent or ionic, attractions." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Distractors all propose intramolecular bond breaking, so imf-properties (inter- vs intramolecular) is the designed target."
+}

@@ -1,0 +1,39 @@
+{
+ "questionId": "mcq-2017-30-1137",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "extra-content",
+  "notes": "Crop includes unrelated Q31 and its table; Q30 stem and structures A-D fully visible."
+ },
+ "officialTopics": {
+  "primary": "2.5",
+  "additional": []
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "lewis-structures",
+     "evidence": "Must pick the structural diagram of the NH3-BF3 adduct, requiring the N lone pair to form a bond to B so N and B each have four bonds and F/H stay terminal."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "identify",
+    "predict"
+   ],
+   "representations": [
+    "lewis-structure",
+    "molecular-structure"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": true,
+ "uncertainty": "Lewis acid-base adduct / coordinate covalent bond has no dedicated concept; tagged under lewis-structures only."
+}

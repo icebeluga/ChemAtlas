@@ -1,0 +1,151 @@
+{
+  "questionId": "mcq-2008-8-31",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 8,
+  "text": "Questions 7-9 refer to the following pure\nsubstances, which are gases at 25°C and 1\natmosphere.\n\n     (A)  NH3 (g)\n      (B)  BH3 (g)\n      (C)  H2 (g)\n     (D)  H2S (g)\n      (E)  HBr (g)\n\n8.  Is a strong electrolyte in aqueous solution",
+  "regions": [
+    {
+      "page": 31,
+      "rect": [
+        320,
+        230,
+        580,
+        255
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 31,
+        "compiledPage": 31
+      }
+    }
+  ],
+  "stimulus": [
+    {
+      "id": "stimulus-2008-mcq-7-9-page31",
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            320,
+            65,
+            580,
+            195
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-7-31",
+        "mcq-2008-8-31",
+        "mcq-2008-9-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 7–9; includes the shared list of pure gaseous substances A-E."
+    }
+  ],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "8.1"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.1",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Compared complete individual crop for Question 8 against original 2008 source page. Common context is linked via stimulus-2008-mcq-7-9-page31; individual stem and choices are separate and complete."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": []
+  },
+  "contentHash": "2fb5f5fadb22aa1e",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-8-31-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        230,
+        580,
+        255
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-8-31-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1/images/stimulus-2008-mcq-7-9-page31-1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        320,
+        65,
+        580,
+        195
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "acid-strength-structure",
+      "name": "Molecular structure and acid strength",
+      "definition": "Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.",
+      "include": "Tag when acid strengths must be ranked or explained from molecular structure.",
+      "exclude": "Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "linked-from:strong-weak-acids"
+      ]
+    }
+  ]
+}

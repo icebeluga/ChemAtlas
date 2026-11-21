@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2015-47-1554",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the potential-energy curve with x marked at the minimum, the stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must interpret the forces acting at the marked distance x, which lies at the minimum of the potential-energy curve."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

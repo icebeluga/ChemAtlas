@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2017-30-1137",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Crop is the whole page and also contains Q31 (half-reaction table); Q30 stem and structural diagrams A-D are complete."
+  },
+  "officialTopics": {
+    "primary": "2.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must recognize that the N lone pair of NH3 can bond to the electron-deficient B of BF3 (incomplete octet), judging which connectivity gives valid bonding rather than H- or F-bridged structures."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "molecular-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

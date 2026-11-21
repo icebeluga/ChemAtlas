@@ -1,0 +1,156 @@
+{
+  "questionId": "mcq-2022-13-1639",
+  "type": "MCQ",
+  "exam": "2022 AP Chemistry MCQ",
+  "year": "2022",
+  "number": 13,
+  "text": "13. The student observes that under the same condi-\n     tions, the reaction occurs at a much slower rate when\n   MnO2(s) is not used. Which of the following state-\n    ments best explains this observation?\n\n    (A) MnO2(s) changes the reaction from endother-\n        mic to exothermic.\n     (B) MnO2(s) shifts the equilibrium position of the\n          reaction from reactant favored to product fa-\n         vored.\n     (C) MnO2(s) releases heat in order to start the reac-\n           tion.\n    (D) MnO2(s) provides a reaction pathway with a\n         lower activation energy.",
+  "regions": [
+    {
+      "page": 1639,
+      "rect": [
+        0,
+        55,
+        306,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 139,
+        "compiledPage": 1639
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "5.11",
+        "5.6"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.11",
+    "secondary": [
+      "5.6"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "818def50f01c2e91",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-13-1639-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 139,
+      "rect": [
+        0,
+        55,
+        306,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-13-1639-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 139,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "activation-energy",
+      "name": "Activation energy and energy profiles",
+      "definition": "Reading single- and multi-step reaction energy profiles: activation energy, transition states, intermediates, forward and reverse barriers, the rate-limiting barrier, and overall ΔH.",
+      "include": "Tag when an energy profile must be read, drawn or used, or activation energies compared.",
+      "exclude": "Do not tag simple enthalpy diagrams with no activation barrier (tag endo-exothermic).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:catalysis"
+      ]
+    },
+    {
+      "conceptId": "catalysis",
+      "name": "Catalysis",
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:activation-energy"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:activation-energy"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-mechanisms",
+      "name": "Reaction mechanisms and intermediates",
+      "definition": "Combining elementary steps into an overall equation, and identifying intermediates (formed then consumed) and catalysts (consumed then regenerated).",
+      "include": "Tag when a mechanism's steps must be added or intermediates and catalysts identified.",
+      "exclude": "Do not tag rate-law derivation from the mechanism (tag mechanism-rate-law) unless steps are also combined.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:activation-energy",
+        "linked-from:catalysis"
+      ]
+    },
+    {
+      "conceptId": "collision-model",
+      "name": "Collision model and temperature effects",
+      "definition": "Explaining rate changes through collision frequency, the fraction of collisions with energy at least Ea (Maxwell-Boltzmann distribution), and correct orientation.",
+      "include": "Tag when a change in rate with temperature, concentration or orientation must be explained at the particle level.",
+      "exclude": "Numerical Arrhenius-equation calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:activation-energy"
+      ]
+    },
+    {
+      "conceptId": "thermodynamic-kinetic-control",
+      "name": "Thermodynamic versus kinetic control",
+      "definition": "Distinguishing whether a process is thermodynamically favored from how fast it occurs: favorable processes can be slow when activation energy is large.",
+      "include": "Tag when the student must explain why a favorable process is not observed, or separate favorability from rate.",
+      "exclude": "Do not tag pure ΔG calculations or pure rate questions.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

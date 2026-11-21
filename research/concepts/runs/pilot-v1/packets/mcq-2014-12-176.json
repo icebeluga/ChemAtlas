@@ -1,0 +1,138 @@
+{
+  "questionId": "mcq-2014-12-176",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 12,
+  "text": "the temperature increases?\n                 Reaction            DH° (kJ/molrxn)    DS° (J/(molrxn K))\n(A)  2 CO(g) + O2(g) Æ 2 CO2(g)         −566             −173\n(B)  2 H2O(g) Æ 2 H2(g) + O2(g)           484                  90.0\n(C)  2 N2O(g) Æ 2 N2(g) + O2(g)         −164               149\n(D)  PbCl2(s) Æ Pb2+(aq) + 2 Cl¯(aq)          23.4               −12.5",
+  "regions": [
+    {
+      "page": 176,
+      "rect": [
+        44,
+        34,
+        465,
+        168
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 176,
+        "compiledPage": 176
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "9.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.3",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "a530942f254b3265",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-12-176-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 176,
+      "rect": [
+        44,
+        34,
+        465,
+        168
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-12-176-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 176,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "coupled-reactions",
+      "name": "Coupled reactions",
+      "definition": "Driving a thermodynamically unfavorable process by coupling it with a favorable one so the overall ΔG is negative.",
+      "include": "Tag when free energies of reactions must be added or coupling explained.",
+      "exclude": "Do not tag Hess's-law ΔH addition (tag hess-law).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "thermodynamic-kinetic-control",
+      "name": "Thermodynamic versus kinetic control",
+      "definition": "Distinguishing whether a process is thermodynamically favored from how fast it occurs: favorable processes can be slow when activation energy is large.",
+      "include": "Tag when the student must explain why a favorable process is not observed, or separate favorability from rate.",
+      "exclude": "Do not tag pure ΔG calculations or pure rate questions.",
+      "whyCandidate": [
+        "linked-from:gibbs-free-energy"
+      ]
+    }
+  ]
+}

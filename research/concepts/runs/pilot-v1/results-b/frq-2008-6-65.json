@@ -1,0 +1,118 @@
+{
+ "questionId": "frq-2008-6-65",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "none",
+  "notes": "Crop shows all of (a)-(d) with structures."
+ },
+ "officialTopics": {
+  "primary": "3.1",
+  "additional": [
+   "3.2",
+   "3.10"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "a",
+   "primary": [
+    {
+     "conceptId": "solubility-polarity",
+     "evidence": "Must explain why polar pyridine dissolves in water but nonpolar benzene does not."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "hydrogen-bonding",
+     "evidence": "Pyridine N lone pair can accept hydrogen bonds from water; benzene cannot."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "compare"
+   ],
+   "representations": [
+    "molecular-structure"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "b",
+   "primary": [
+    {
+     "conceptId": "hydrogen-bonding",
+     "evidence": "Ethanol has O-H that hydrogen bonds; dimethyl ether has no H on O."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "imf-properties",
+     "evidence": "Must link stronger intermolecular forces to higher boiling point."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "compare"
+   ],
+   "representations": [
+    "molecular-structure"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c",
+   "primary": [
+    {
+     "conceptId": "solid-types",
+     "evidence": "SiO2 is a covalent network solid while SO2 is a molecular solid."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "imf-properties",
+     "evidence": "Must link melting SO2 to weak intermolecular forces versus breaking covalent bonds in SiO2."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "compare"
+   ],
+   "representations": [
+    "text-only"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "d",
+   "primary": [
+    {
+     "conceptId": "london-dispersion",
+     "evidence": "Cl2 is nonpolar with larger electron cloud; must argue stronger dispersion forces than in HCl."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "dipole-dipole",
+     "evidence": "Must note HCl has dipole-dipole in addition to dispersion yet still boils lower."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "compare"
+   ],
+   "representations": [
+    "text-only"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

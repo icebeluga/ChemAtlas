@@ -1,0 +1,46 @@
+{
+ "questionId": "mcq-1984-72-131",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "none",
+  "notes": "Crop shows full stem and choices A-E."
+ },
+ "officialTopics": {
+  "primary": "3.4",
+  "additional": []
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "partial-pressures",
+     "evidence": "Gas is collected over water, so the water vapor pressure must be subtracted from barometric pressure to get the gas partial pressure."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "ideal-gas-law",
+     "evidence": "Molar mass is found from PV=nRT, which needs P, V, T and mass of the gas."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "identify",
+    "evaluate-procedure"
+   ],
+   "representations": [
+    "text-only",
+    "apparatus-diagram"
+   ],
+   "skills": [
+    "experimental-design"
+   ]
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2016-26-1064",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "mechanism-rate-law"
+      ],
+      "supporting": [
+        "elementary-steps"
+      ]
+    }
+  },
+  "notes": "The slow step must be bimolecular in NO2 and F2, requiring the elementary-step rate law from molecularity."
+}

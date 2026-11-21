@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2002-38-614",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop is a near-full-page region: it cuts off the first line of the Q38 stem and includes Q35-37 and Q39. Page context shows the complete Q38 stem, statements I-III and choices A-E." },
+  "officialTopics": { "primary": "3.13", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "beer-lambert", "evidence": "Must judge which spectrophotometer practices give valid absorbance readings: the sample must fill the light path and the instrument must be blanked/calibrated, while saturation is irrelevant." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["evaluate-procedure"],
+      "representations": ["text-only"],
+      "skills": ["experimental-design"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

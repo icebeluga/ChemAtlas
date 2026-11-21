@@ -1,0 +1,153 @@
+{
+  "questionId": "frq-2011-3-933",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full question 3 (a)-(d) ending at STOP; matches page. Catalog part 'c-onward' refined into c-i, c-ii, c-iii and d as printed."
+  },
+  "officialTopics": {
+    "primary": "9.5",
+    "additional": [
+      "1.3",
+      "6.6",
+      "9.3",
+      "7.9",
+      "6.9"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "empirical-formula",
+          "evidence": "Must reduce C6H12O6 to its simplest whole-number ratio of atoms."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must scale 39.0 kJ released by 2.50 g of glucose to a per-mole ΔH° with a negative sign for the combustion as written."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "The heat was measured in a calorimeter, but the heat value is given directly."
+        }
+      ],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "Must compute ΔG° from Kp = 8.9 × 10^39 using ΔG° = -RT ln K at 298 K."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must rearrange ΔG° = ΔH° - TΔS° with ΔH° = -68.0 kJ/mol and the ΔG° from (c)(i) to solve for ΔS°."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "c-iii",
+      "primary": [
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "Must reason that because the fermentation is exothermic (ΔH° = -68.0 kJ/mol), raising temperature shifts it toward reactants and lowers K."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "hess-law",
+          "evidence": "Must combine the combustion of glucose from (b) with the reversed, halved fermentation equation to obtain ΔH° for ethanol combustion."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "b",
+        "change": "removed supporting mole-conversions",
+        "reason": "Converting 2.50 g glucose to moles is a routine molar-mass step on the way to the per-mole enthalpy calculation."
+      }
+    ]
+  }
+}

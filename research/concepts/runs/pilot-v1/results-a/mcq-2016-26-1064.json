@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2016-26-1064",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows equation, stem and choices A-D; matches page context."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.4"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must choose the slow first step whose rate law matches the observed rate = k[NO2][F2]."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "elementary-steps",
+          "evidence": "Must write the rate law of each candidate elementary step from its molecularity (e.g. NO2 + F2 bimolecular gives k[NO2][F2])."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "evaluate-procedure"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

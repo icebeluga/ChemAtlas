@@ -1,0 +1,38 @@
+{
+ "questionId": "mcq-2014-12-176",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "missing-content-recovered-from-page",
+  "notes": "Crop clips the last words of the stem; page context shows the full stem and table."
+ },
+ "officialTopics": {
+  "primary": "9.3",
+  "additional": []
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "gibbs-free-energy",
+     "evidence": "Must use signs of delta H and delta S to determine which reaction is unfavorable at low T but favorable at high T."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "identify",
+    "predict"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

@@ -1,0 +1,49 @@
+{
+  "questionId": "mcq-2014-17-1448",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the potential-energy versus internuclear-distance graph for X2, Y2, Z2 and question 17 with choices A-D; matches page."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must read each curve's well depth (bond energy) and minimum position (bond length) to match the curves to H2, N2 and O2."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "bond-order",
+          "evidence": "Must use single, double and triple bond orders in H2, O2 and N2 to predict their relative bond strengths and lengths."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "identify"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

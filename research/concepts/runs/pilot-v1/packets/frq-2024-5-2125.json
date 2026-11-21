@@ -1,0 +1,248 @@
+{
+  "questionId": "frq-2024-5-2125",
+  "type": "FRQ",
+  "exam": "2024 AP Chemistry FRQ",
+  "year": "2024",
+  "number": 5,
+  "text": "ORIGINAL PAGE 2125\nQuestion 5\n\nBegin your response to QUESTION 5 on this page.\n\n5. Answer the following questions about magnesium nitrate and sodium carbonate.\n\nWhen a student combines equal volumes of 0.1 M aqueous solutions of magnesium nitrate, Mg(NO3),, and\nsodium carbonate, Na,CO3, a white solid forms. |\n\n(a) Write the balanced net ionic equation for the reaction.\n\n(b) A student filters the mixture from part (a) to remove the solid from the solution. Describe an experimental\ntechnique that the student can use to demonstrate that ions remain in the filtered solution. |\n\n(c) The NayCO3(aq) used in the reaction has a 2: 1 ratio of cations to anions. Identify a metallic element, M,\nother than sodium that results in a compound that has a formula of M,CO3.\n\n(d) An incomplete orbital energy diagram for the magnesium cation in the ground state is shown. Using arrows to\nrepresent electrons, complete the diagram with the correct number of electrons in the cation. The arrows for\nthe 1s sublevel are already shown.\n\nEnergy\n\n|, =, ——\n\nale\ntm:\n\nUnauthorized copying or reuse of this page Is Illegal. Page 16 GO ON TO THE NEXT PAGE.\n\nUse a pencil or a pen with black or dark blue ink. Do NOT write your name. Do NOT write outside the\n© stu id locu messages.pdf_cover_qr_code_label\n\nmessages.downloaded_by\n\n",
+  "regions": [
+    {
+      "page": 2125,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 25,
+        "compiledPage": 2125
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "4.2"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "4.2"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "1.8"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "1.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "4.2",
+    "secondary": [
+      "1.5",
+      "1.8"
+    ],
+    "status": "classified",
+    "method": "Question-part review against current CED; original scan checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "df08b1cf969677d4",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2024-5-2125-r1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 25,
+      "rect": [
+        18,
+        40,
+        577,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2024-5-2125-page1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 25,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "electron-configuration",
+      "name": "Electron configurations and atomic structure",
+      "definition": "Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.",
+      "include": "Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.",
+      "exclude": "Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:ionic-formulas"
+      ]
+    },
+    {
+      "conceptId": "ionic-formulas",
+      "name": "Ion charges and ionic formulas",
+      "definition": "Predicting common ion charges from valence electrons and periodic position, and writing charge-neutral ionic formulas.",
+      "include": "Tag when the student predicts an ion's charge, the formula of an ionic compound, or explains ion formation from electron configuration.",
+      "exclude": "Do not tag routine use of a given ionic formula in a calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:electron-configuration"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:ionic-formulas"
+      ]
+    },
+    {
+      "conceptId": "photoelectron-spectroscopy",
+      "name": "Photoelectron spectroscopy (PES)",
+      "definition": "Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.",
+      "include": "Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.",
+      "exclude": "Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electron-configuration"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "atomic-radius",
+      "name": "Atomic and ionic radius",
+      "definition": "Predicting and explaining the sizes of atoms and ions across periods and down groups, including isoelectronic ions and ions versus their parent atoms.",
+      "include": "Tag when atomic or ionic size is compared, ranked or explained.",
+      "exclude": "Do not tag when ion size is only one input to a lattice-energy argument unless the size comparison itself is asked.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "mass-spectrometry",
+      "name": "Mass spectra and isotopes",
+      "definition": "Interpreting mass spectra of elements: identifying isotopes from mass-to-charge peaks and relating relative abundance to average atomic mass.",
+      "include": "Tag when a mass spectrum, isotope abundance data, or weighted-average atomic mass must be used or predicted.",
+      "exclude": "Do not tag simple proton/neutron counting for a named isotope (use electron-configuration/atomic structure); mass spectra of molecules or multiply charged ions are beyond AP scope.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "bonding-types",
+      "name": "Ionic, covalent and metallic bonding",
+      "definition": "Classifying bonds as ionic, polar covalent, nonpolar covalent or metallic from the elements involved and electronegativity difference, and predicting properties that follow.",
+      "include": "Tag when the bond type must be identified or used to predict a property.",
+      "exclude": "Do not tag questions about the type of solid (tag solid-types) unless the bond classification itself is asked.",
+      "whyCandidate": [
+        "linked-from:ionic-formulas"
+      ]
+    },
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations"
+      ]
+    }
+  ]
+}

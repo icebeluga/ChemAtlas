@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-1994-63-691",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "integrated-rate-laws"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Crop omits the graph but page context shows it; constant half-life of X under excess Y indicates first order, and pseudo-order reasoning is part of the same concept."
+}

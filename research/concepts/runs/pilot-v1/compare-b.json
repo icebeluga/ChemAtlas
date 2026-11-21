@@ -1,0 +1,4025 @@
+[
+  {
+    "questionId": "frq-1999-7-564",
+    "agreement": "partial",
+    "summary": "d: primary lewis-structures+molecular-polarity vs lewis-structures+molecular-geometry; supporting molecular-geometry+electron-domains vs electron-domains+molecular-polarity",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.33,
+        "a": {
+          "primary": [
+            "lewis-structures",
+            "molecular-polarity"
+          ],
+          "supporting": [
+            "molecular-geometry",
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "lewis-structures",
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains",
+            "molecular-polarity"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2003-3-536",
+    "agreement": "disagree",
+    "summary": "e: primary pka-speciation vs henderson-hasselbalch; supporting solution-representations vs solution-representations",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "ice-tables"
+          ]
+        },
+        "b": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "ice-tables"
+          ]
+        }
+      },
+      {
+        "partId": "c-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "buffers"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        },
+        "b": {
+          "primary": [
+            "buffers"
+          ],
+          "supporting": [
+            "net-ionic-equations",
+            "acid-base-mixtures"
+          ]
+        }
+      },
+      {
+        "partId": "c-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": [
+            "acid-base-mixtures"
+          ]
+        },
+        "b": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": [
+            "acid-base-mixtures"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "buffer-capacity"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "buffer-capacity"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        },
+        "b": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2005-1-6",
+    "agreement": "disagree",
+    "summary": "a: primary equilibrium-expression vs weak-acid-equilibrium; supporting - vs - | c-i: primary molarity vs molarity; supporting - vs mole-conversions | c-ii: primary henderson-hasselbalch vs henderson-hasselbalch; supporting - vs weak-acid-equilibrium",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ]
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ice-tables",
+            "ph-poh"
+          ]
+        }
+      },
+      {
+        "partId": "c-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "molarity"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "molarity"
+          ],
+          "supporting": [
+            "mole-conversions"
+          ]
+        }
+      },
+      {
+        "partId": "c-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "henderson-hasselbalch"
+          ],
+          "supporting": [
+            "weak-acid-equilibrium"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2005-4-10",
+    "agreement": "disagree",
+    "summary": "a: primary net-ionic-equations vs reaction-types; supporting reaction-types vs net-ionic-equations | e: primary reaction-types vs descriptive-chemistry; supporting ionic-formulas vs - | g: primary descriptive-chemistry vs descriptive-chemistry; supporting net-ionic-equations vs - | h: primary net-ionic-equations vs precipitation; supporting precipitation vs net-ionic-equations",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "reaction-types"
+          ]
+        },
+        "b": {
+          "primary": [
+            "reaction-types"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "reaction-types"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "reaction-types"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        },
+        "b": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "reaction-types"
+          ],
+          "supporting": [
+            "ionic-formulas"
+          ]
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "f",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "g",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "h",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        },
+        "b": {
+          "primary": [
+            "precipitation"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2005-7-13",
+    "agreement": "partial",
+    "summary": "a-ii: primary imf-properties vs imf-properties+hydrogen-bonding; supporting hydrogen-bonding vs london-dispersion | b-ii: primary lattice-energy vs lattice-energy; supporting - vs atomic-radius",
+    "parts": [
+      {
+        "partId": "a-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "hydrogen-bonding",
+            "dipole-dipole"
+          ],
+          "supporting": [
+            "molecular-polarity"
+          ]
+        },
+        "b": {
+          "primary": [
+            "hydrogen-bonding",
+            "dipole-dipole"
+          ],
+          "supporting": [
+            "london-dispersion",
+            "molecular-polarity"
+          ]
+        }
+      },
+      {
+        "partId": "a-ii",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        },
+        "b": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "london-dispersion"
+          ]
+        }
+      },
+      {
+        "partId": "b-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bonding-types"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "bonding-types"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "lattice-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "lattice-energy"
+          ],
+          "supporting": [
+            "atomic-radius"
+          ]
+        }
+      },
+      {
+        "partId": "c-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "c-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      },
+      {
+        "partId": "d-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2008-3-59",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [
+            "redox-half-reactions"
+          ]
+        },
+        "b": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [
+            "redox-half-reactions"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "f",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2008-5-63",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "e-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      },
+      {
+        "partId": "e-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      },
+      {
+        "partId": "f",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "molecular-polarity"
+          ],
+          "supporting": [
+            "molecular-geometry"
+          ]
+        },
+        "b": {
+          "primary": [
+            "molecular-polarity"
+          ],
+          "supporting": [
+            "molecular-geometry"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2008-6-65",
+    "agreement": "partial",
+    "summary": "b: primary imf-properties+hydrogen-bonding vs hydrogen-bonding; supporting - vs imf-properties | c: primary solid-types vs solid-types; supporting - vs imf-properties | d: primary london-dispersion+imf-properties vs london-dispersion; supporting dipole-dipole vs dipole-dipole",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        },
+        "b": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "imf-properties"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "solid-types"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "solid-types"
+          ],
+          "supporting": [
+            "imf-properties"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "london-dispersion",
+            "imf-properties"
+          ],
+          "supporting": [
+            "dipole-dipole"
+          ]
+        },
+        "b": {
+          "primary": [
+            "london-dispersion"
+          ],
+          "supporting": [
+            "dipole-dipole"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2009-5-325",
+    "agreement": "disagree",
+    "summary": "a: primary equilibrium-expression vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | b: primary le-chatelier vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | c: primary free-energy-equilibrium vs equilibrium-expression+le-chatelier; supporting - vs free-energy-equilibrium+endo-exothermic | e: primary thermodynamic-kinetic-control vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-i: primary entropy vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-ii: primary hess-law vs thermodynamic-kinetic-control+entropy; supporting - vs hess-law+gibbs-free-energy+ideal-gas-law | f-iii: primary gibbs-free-energy vs thermodynamic-kinetic-control+entropy; supporting ideal-gas-law vs hess-law+gibbs-free-energy+ideal-gas-law",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression",
+            "le-chatelier"
+          ],
+          "supporting": [
+            "free-energy-equilibrium",
+            "endo-exothermic"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "thermodynamic-kinetic-control"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
+        }
+      },
+      {
+        "partId": "f-i",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
+        }
+      },
+      {
+        "partId": "f-ii",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
+        }
+      },
+      {
+        "partId": "f-iii",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0.33,
+        "a": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "ideal-gas-law"
+          ]
+        },
+        "b": {
+          "primary": [
+            "thermodynamic-kinetic-control",
+            "entropy"
+          ],
+          "supporting": [
+            "hess-law",
+            "gibbs-free-energy",
+            "ideal-gas-law"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2011-3-933",
+    "agreement": "disagree",
+    "summary": "c-i: primary free-energy-equilibrium vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-ii: primary gibbs-free-energy vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | c-iii: primary le-chatelier vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law | d: primary hess-law vs free-energy-equilibrium+gibbs-free-energy; supporting - vs le-chatelier+hess-law",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "empirical-formula"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "empirical-formula"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "mole-conversions"
+          ]
+        },
+        "b": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "mole-conversions"
+          ]
+        }
+      },
+      {
+        "partId": "c-i",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
+        }
+      },
+      {
+        "partId": "c-ii",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
+        }
+      },
+      {
+        "partId": "c-iii",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "free-energy-equilibrium",
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "le-chatelier",
+            "hess-law"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2011-3-946",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "balanced-equations",
+            "oxidation-numbers"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "balanced-equations",
+            "oxidation-numbers"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-expression"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "c-onward",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "gibbs-free-energy",
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "reaction-quotient"
+          ]
+        },
+        "b": {
+          "primary": [
+            "gibbs-free-energy",
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "entropy",
+            "reaction-quotient"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2011-6-937",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "frq-2017-3-1157",
+    "agreement": "partial",
+    "summary": "d-ii: primary integrated-rate-laws vs integrated-rate-laws; supporting rate-law vs -",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "lewis-structures",
+            "resonance"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "lewis-structures",
+            "resonance"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "molecular-geometry"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [
+            "rate-law"
+          ]
+        },
+        "b": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d-iii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d-iv",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2020-sample-2-116",
+    "agreement": "partial",
+    "summary": "a: primary reaction-mechanisms vs reaction-mechanisms; supporting catalysis vs - | b: primary mechanism-rate-law vs mechanism-rate-law; supporting - vs elementary-steps | h: primary titration-analysis vs titration-analysis; supporting - vs dilution",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "reaction-mechanisms"
+          ],
+          "supporting": [
+            "catalysis"
+          ]
+        },
+        "b": {
+          "primary": [
+            "reaction-mechanisms"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "dipole-dipole",
+            "london-dispersion"
+          ]
+        },
+        "b": {
+          "primary": [
+            "hydrogen-bonding"
+          ],
+          "supporting": [
+            "london-dispersion",
+            "dipole-dipole"
+          ]
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding",
+            "london-dispersion"
+          ]
+        },
+        "b": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding",
+            "london-dispersion"
+          ]
+        }
+      },
+      {
+        "partId": "f",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "g",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "h",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "titration-analysis"
+          ],
+          "supporting": [
+            "dilution"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2023-3-448",
+    "agreement": "disagree",
+    "summary": "b: primary reaction-rate vs collision-model; supporting - vs reaction-rate | d: primary rate-law vs rate-law; supporting - vs reaction-rate | g-ii: primary enthalpy-of-reaction vs enthalpy-of-reaction; supporting calorimetry vs mole-conversions",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": [
+            "reaction-rate"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "rate-law"
+          ],
+          "supporting": [
+            "reaction-rate"
+          ]
+        }
+      },
+      {
+        "partId": "e",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": [
+            "molarity"
+          ]
+        },
+        "b": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": [
+            "molarity"
+          ]
+        }
+      },
+      {
+        "partId": "f",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "g-i",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "g-ii",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        },
+        "b": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "mole-conversions"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2024-3-2119",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "frq-2024-5-2125",
+    "agreement": "partial",
+    "summary": "b: primary solution-representations vs solution-representations; supporting - vs net-ionic-equations | d: primary electron-configuration vs electron-configuration; supporting - vs ionic-formulas",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        },
+        "b": {
+          "primary": [
+            "net-ionic-equations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "solution-representations"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "solution-representations"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electron-configuration"
+          ],
+          "supporting": [
+            "ionic-formulas"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "frq-2024-6-2126",
+    "agreement": "partial",
+    "summary": "b: primary redox-half-reactions vs redox-half-reactions; supporting - vs electrochemical-cells",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "electrochemical-cells"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electrochemical-cells"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "redox-half-reactions"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "redox-half-reactions"
+          ],
+          "supporting": [
+            "electrochemical-cells"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "electrolysis-faraday"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "electrolysis-faraday"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1984-38-126",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1984-6-120",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "descriptive-chemistry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1984-72-131",
+    "agreement": "partial",
+    "summary": "stem: primary partial-pressures+ideal-gas-law vs partial-pressures; supporting - vs ideal-gas-law",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "partial-pressures",
+            "ideal-gas-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "partial-pressures"
+          ],
+          "supporting": [
+            "ideal-gas-law"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1984-84-135",
+    "agreement": "partial",
+    "summary": "stem: primary colligative-properties vs colligative-properties; supporting - vs solution-representations",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "colligative-properties"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "colligative-properties"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1994-63-691",
+    "agreement": "partial",
+    "summary": "stem: primary integrated-rate-laws vs integrated-rate-laws; supporting - vs rate-law",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [
+            "rate-law"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-1994-65-692",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ph-solubility"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ph-solubility"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2002-38-614",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "beer-lambert"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "beer-lambert"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2002-41-759",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "endo-exothermic",
+            "entropy"
+          ]
+        },
+        "b": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "endo-exothermic",
+            "entropy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2002-48-760",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "molecular-polarity"
+          ]
+        },
+        "b": {
+          "primary": [
+            "solubility-polarity"
+          ],
+          "supporting": [
+            "molecular-polarity",
+            "ion-dipole"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2002-6-606",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "particulate-states"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "particulate-states"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2002-67-765",
+    "agreement": "partial",
+    "summary": "stem: primary imf-properties+hydrogen-bonding vs imf-properties; supporting - vs hydrogen-bonding",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-1-29",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ionization-energy"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-10-31",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "entropy"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-11-31",
+    "agreement": "partial",
+    "summary": "stem: primary activation-energy vs activation-energy; supporting collision-model vs -",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "activation-energy"
+          ],
+          "supporting": [
+            "collision-model"
+          ]
+        },
+        "b": {
+          "primary": [
+            "activation-energy"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-13-32",
+    "agreement": "partial",
+    "summary": "stem: primary phase-change-energy+entropy vs entropy+endo-exothermic; supporting - vs -",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "phase-change-energy",
+            "entropy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "entropy",
+            "endo-exothermic"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-25-34",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ideal-gas-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ideal-gas-law"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-3-29",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "ionic-formulas"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-4-31",
+    "agreement": "partial",
+    "summary": "stem: primary titration-curves vs titration-curves; supporting - vs titration-analysis",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "titration-analysis"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-41-38",
+    "agreement": "partial",
+    "summary": "stem: primary limiting-reactant+reaction-representations vs limiting-reactant; supporting - vs reaction-representations",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "limiting-reactant",
+            "reaction-representations"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "limiting-reactant"
+          ],
+          "supporting": [
+            "reaction-representations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-44-39",
+    "agreement": "partial",
+    "summary": "stem: primary cell-potential vs cell-potential; supporting - vs electrochemical-cells",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": [
+            "electrochemical-cells"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-57-41",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "hybridization"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-59-42",
+    "agreement": "partial",
+    "summary": "stem: primary equilibrium-constant-calculation vs equilibrium-constant-calculation; supporting - vs equilibrium-expression",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "equilibrium-constant-calculation"
+          ],
+          "supporting": [
+            "equilibrium-expression"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-6-31",
+    "agreement": "partial",
+    "summary": "stem: primary titration-curves vs titration-curves; supporting - vs buffers",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "buffers"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-8-31",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "strong-weak-acids"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "strong-weak-acids"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2008-9-31",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "kinetic-molecular-theory"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "kinetic-molecular-theory"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2012-21-1354",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "reaction-rate"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-12-176",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-15-178",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        },
+        "b": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "solution-representations",
+            "acid-base-mixtures"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-17-1448",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-order"
+          ]
+        },
+        "b": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-order"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-21-1450",
+    "agreement": "partial",
+    "summary": "stem: primary le-chatelier vs le-chatelier; supporting - vs endo-exothermic",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "le-chatelier"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-22-180",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ]
+        },
+        "b": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "ph-poh"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-24-1450",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ]
+        },
+        "b": {
+          "primary": [
+            "bond-enthalpy"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-29-1453",
+    "agreement": "partial",
+    "summary": "stem: primary k-manipulation vs k-manipulation; supporting free-energy-equilibrium vs k-magnitude",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "k-manipulation"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        },
+        "b": {
+          "primary": [
+            "k-manipulation"
+          ],
+          "supporting": [
+            "k-magnitude"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-30-184",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "dynamic-equilibrium"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "dynamic-equilibrium"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-33-185",
+    "agreement": "disagree",
+    "summary": "content status complete vs partial",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2014-34-186",
+    "agreement": "partial",
+    "summary": "stem: primary enthalpy-of-reaction vs enthalpy-of-reaction; supporting - vs endo-exothermic",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "endo-exothermic"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-47-190",
+    "agreement": "partial",
+    "summary": "stem: primary nernst-nonstandard vs nernst-nonstandard; supporting - vs electrochemical-cells+reaction-quotient",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "nernst-nonstandard"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "nernst-nonstandard"
+          ],
+          "supporting": [
+            "electrochemical-cells",
+            "reaction-quotient"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-9-174",
+    "agreement": "partial",
+    "summary": "stem: primary heat-transfer vs heat-transfer; supporting - vs calorimetry",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "heat-transfer"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "heat-transfer"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2014-practice-24-180",
+    "agreement": "partial",
+    "summary": "stem: primary mechanism-rate-law vs mechanism-rate-law+elementary-steps; supporting elementary-steps vs -",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        },
+        "b": {
+          "primary": [
+            "mechanism-rate-law",
+            "elementary-steps"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2015-47-1554",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-24-1063",
+    "agreement": "disagree",
+    "summary": "stem: primary enthalpy-of-reaction vs limiting-reactant; supporting limiting-reactant vs enthalpy-of-reaction",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "limiting-reactant"
+          ]
+        },
+        "b": {
+          "primary": [
+            "limiting-reactant"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-26-1064",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        },
+        "b": {
+          "primary": [
+            "mechanism-rate-law"
+          ],
+          "supporting": [
+            "elementary-steps"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-27-1064",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0.5,
+        "a": {
+          "primary": [
+            "bond-angles"
+          ],
+          "supporting": [
+            "electron-domains"
+          ]
+        },
+        "b": {
+          "primary": [
+            "bond-angles"
+          ],
+          "supporting": [
+            "molecular-geometry",
+            "electron-domains"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-37-1070",
+    "agreement": "partial",
+    "summary": "stem: primary limiting-reactant+enthalpy-of-reaction vs limiting-reactant; supporting reaction-stoichiometry vs enthalpy-of-reaction",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "limiting-reactant",
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "reaction-stoichiometry"
+          ]
+        },
+        "b": {
+          "primary": [
+            "limiting-reactant"
+          ],
+          "supporting": [
+            "enthalpy-of-reaction"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-5-1053",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "bond-order"
+          ],
+          "supporting": [
+            "lewis-structures"
+          ]
+        },
+        "b": {
+          "primary": [
+            "bond-order"
+          ],
+          "supporting": [
+            "lewis-structures"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2016-9-1056",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        },
+        "b": {
+          "primary": [
+            "titration-curves"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2017-30-1137",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "lewis-structures"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2017-42-1144",
+    "agreement": "disagree",
+    "summary": "stem: primary free-energy-equilibrium vs k-magnitude; supporting gibbs-free-energy+thermodynamic-kinetic-control vs free-energy-equilibrium",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "free-energy-equilibrium"
+          ],
+          "supporting": [
+            "gibbs-free-energy",
+            "thermodynamic-kinetic-control"
+          ]
+        },
+        "b": {
+          "primary": [
+            "k-magnitude"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-11-1196",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "cell-potential"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-12-1197",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "reaction-stoichiometry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-13-1198",
+    "agreement": "partial",
+    "summary": "stem: primary integrated-rate-laws vs integrated-rate-laws; supporting - vs rate-law",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "integrated-rate-laws"
+          ],
+          "supporting": [
+            "rate-law"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-14-1911",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "physical-chemical-change"
+          ],
+          "supporting": [
+            "imf-properties"
+          ]
+        },
+        "b": {
+          "primary": [
+            "physical-chemical-change"
+          ],
+          "supporting": [
+            "imf-properties"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-34-1205",
+    "agreement": "partial",
+    "summary": "stem: primary solubility-product vs solubility-product; supporting - vs dynamic-equilibrium",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "solubility-product"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "solubility-product"
+          ],
+          "supporting": [
+            "dynamic-equilibrium"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-36-1207",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2018-38-1920",
+    "agreement": "disagree",
+    "summary": "stem: primary hess-law vs coupled-reactions; supporting - vs -",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "hess-law"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "coupled-reactions"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-40-2043",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "nuclear-chemistry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2018-57-2046",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        },
+        "b": {
+          "primary": [
+            "gibbs-free-energy"
+          ],
+          "supporting": [
+            "free-energy-equilibrium"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-13-1639",
+    "agreement": "partial",
+    "summary": "stem: primary catalysis vs catalysis; supporting - vs activation-energy",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": [
+            "activation-energy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-21-1622",
+    "agreement": "partial",
+    "summary": "stem: primary imf-properties+hydrogen-bonding vs imf-properties; supporting - vs hydrogen-bonding",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "imf-properties",
+            "hydrogen-bonding"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "imf-properties"
+          ],
+          "supporting": [
+            "hydrogen-bonding"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-38-1648",
+    "agreement": "partial",
+    "summary": "stem: primary bond-potential-energy vs bond-potential-energy; supporting atomic-radius vs bond-order",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "atomic-radius"
+          ]
+        },
+        "b": {
+          "primary": [
+            "bond-potential-energy"
+          ],
+          "supporting": [
+            "bond-order"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-41-1649",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "mole-conversions"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "mole-conversions"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-5-1663",
+    "agreement": "disagree",
+    "summary": "b: primary collision-model vs collision-model; supporting - vs reaction-rate | c: primary endo-exothermic vs endo-exothermic; supporting - vs heat-transfer | d: primary enthalpy-of-reaction vs calorimetry; supporting calorimetry vs limiting-reactant",
+    "parts": [
+      {
+        "partId": "a",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": []
+        }
+      },
+      {
+        "partId": "b",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "collision-model"
+          ],
+          "supporting": [
+            "reaction-rate"
+          ]
+        }
+      },
+      {
+        "partId": "c",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "endo-exothermic"
+          ],
+          "supporting": [
+            "heat-transfer"
+          ]
+        }
+      },
+      {
+        "partId": "d",
+        "primaryEqual": false,
+        "primaryOverlap": false,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "enthalpy-of-reaction"
+          ],
+          "supporting": [
+            "calorimetry"
+          ]
+        },
+        "b": {
+          "primary": [
+            "calorimetry"
+          ],
+          "supporting": [
+            "limiting-reactant"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-52-1652",
+    "agreement": "partial",
+    "summary": "stem: primary weak-acid-equilibrium vs strong-weak-acids+weak-acid-equilibrium; supporting strong-weak-acids vs -",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "weak-acid-equilibrium"
+          ],
+          "supporting": [
+            "strong-weak-acids"
+          ]
+        },
+        "b": {
+          "primary": [
+            "strong-weak-acids",
+            "weak-acid-equilibrium"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-56-1653",
+    "agreement": "partial",
+    "summary": "stem: primary ion-dipole+solution-representations vs ion-dipole; supporting bond-polarity vs solution-representations",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "ion-dipole",
+            "solution-representations"
+          ],
+          "supporting": [
+            "bond-polarity"
+          ]
+        },
+        "b": {
+          "primary": [
+            "ion-dipole"
+          ],
+          "supporting": [
+            "solution-representations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2022-62-1709",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2023-33-1727",
+    "agreement": "partial",
+    "summary": "stem: primary catalysis vs catalysis; supporting - vs activation-energy",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "catalysis"
+          ],
+          "supporting": [
+            "activation-energy"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2023-43-1731",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "titration-curves"
+          ]
+        },
+        "b": {
+          "primary": [
+            "pka-speciation"
+          ],
+          "supporting": [
+            "titration-curves"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2023-67-1808",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2024-19-2088",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "atomic-radius"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "atomic-radius"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2024-21-2091",
+    "agreement": "agree",
+    "summary": "",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2024-33-2094",
+    "agreement": "disagree",
+    "summary": "content status unreadable vs partial",
+    "parts": []
+  },
+  {
+    "questionId": "mcq-2024-38-2099",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "photoelectron-spectroscopy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        },
+        "b": {
+          "primary": [
+            "photoelectron-spectroscopy"
+          ],
+          "supporting": [
+            "coulombic-attraction"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2024-56-2109",
+    "agreement": "partial",
+    "summary": "stem: primary reaction-representations vs reaction-representations+precipitation; supporting precipitation vs net-ionic-equations",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": false,
+        "primaryOverlap": true,
+        "supportingJaccard": 0,
+        "a": {
+          "primary": [
+            "reaction-representations"
+          ],
+          "supporting": [
+            "precipitation"
+          ]
+        },
+        "b": {
+          "primary": [
+            "reaction-representations",
+            "precipitation"
+          ],
+          "supporting": [
+            "net-ionic-equations"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "questionId": "mcq-2024-60-2110",
+    "agreement": "agree",
+    "summary": "",
+    "parts": [
+      {
+        "partId": "stem",
+        "primaryEqual": true,
+        "primaryOverlap": true,
+        "supportingJaccard": 1,
+        "a": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        },
+        "b": {
+          "primary": [
+            "mass-spectrometry"
+          ],
+          "supporting": []
+        }
+      }
+    ]
+  }
+]

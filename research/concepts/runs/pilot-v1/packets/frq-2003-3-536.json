@@ -1,0 +1,300 @@
+{
+  "questionId": "frq-2003-3-536",
+  "type": "FRQ",
+  "exam": "2003 AP Chemistry FRQ",
+  "year": "2003",
+  "number": 3,
+  "text": "→                                       N2(g) + O2(g) ← 2 NO(g)\n\n3. At high temperatures, N2(g) and O2(g) can react to produce nitrogen monoxide, NO(g), as represented by the\n   equation above.\n\n    (a) Write the expression for the equilibrium constant, Kp , for the forward reaction.\n\n   (b) A student injects N2(g) and O2(g) into a previously evacuated, rigid vessel and raises the temperature of\n       the vessel to 2000°C. At this temperature the initial partial pressures of N2(g) and O2(g) are 6.01 atm and\n       1.61 atm, respectively. The system is allowed to reach equilibrium. The partial pressure of NO(g) at\n       equilibrium is 0.122 atm. Calculate the value of Kp .\n\n   Nitrogen monoxide, NO(g), can undergo further reactions to produce acids such as HNO2, a weak acid with a\n   Ka of 4.0 × 10−4 and a pKa of 3.40.\n\n    (c) A student is asked to make a buffer solution with a pH of 3.40 by using 0.100 M HNO2(aq) and\n       0.100 M NaOH(aq).\n\n            (i) Explain why the addition of 0.100 M NaOH(aq) to 0.100 M HNO2(aq) can result in the formation of\n            a buffer solution. Include the net ionic equation for the reaction that occurs when the student adds\n             the NaOH(aq) to the HNO2(aq).\n\n           (ii) Determine the volume, in mL, of 0.100 M NaOH(aq) the student should add to 100. mL of\n           0.100 M HNO2(aq) to make a buffer solution with a pH of 3.40. Justify your answer.\n\n   (d) A second student makes a buffer by dissolving 0.100 mol of NaNO2(s) in 100. mL of 1.00 M HNO2(aq).\n      Which is more resistant to changes in pH when a strong acid or a strong base is added, the buffer made by\n       the second student or the buffer made by the first student in part (c) ? Justify your answer.\n\n    (e) A new buffer is made using HNO2(aq) as one of the ingredients. A particulate representation of a small\n       representative portion of the buffer solution is shown below. (Cations and water molecules are not shown.)\n        Is the pH of the buffer represented in the diagram greater than, less than, or equal to 3.40 ? Justify your\n       answer.\n\n\n\n\n\n                              © 2017 The College Board.\n                                          Visit the College Board on the Web: www.collegeboard.org.",
+  "regions": [
+    {
+      "page": 536,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 236,
+        "compiledPage": 536
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a-–-b",
+      "label": "(a)–(b)",
+      "catalogTopics": [
+        "7.4"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "8.4",
+        "4.8"
+      ]
+    },
+    {
+      "partId": "d-onward",
+      "label": "(d onward)",
+      "catalogTopics": [
+        "8.9"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "7.4",
+    "secondary": [
+      "8.4",
+      "8.9",
+      "4.8"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "b0d1b25754ca672d",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2003-3-536-r1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 236,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2003-3-536-page1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 236,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:acid-base-mixtures",
+        "linked-from:henderson-hasselbalch"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:buffers"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:buffers"
+      ]
+    },
+    {
+      "conceptId": "henderson-hasselbalch",
+      "name": "Henderson-Hasselbalch equation",
+      "definition": "Calculating buffer pH from pKa and the ratio of conjugate base to acid, or the ratio needed for a target pH, including after small additions.",
+      "include": "Tag when a buffer pH or component ratio must be calculated.",
+      "exclude": "Do not tag qualitative buffer explanations (tag buffers).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:buffers"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-constant-calculation",
+      "name": "Calculating K",
+      "definition": "Calculating an equilibrium constant by substituting equilibrium concentrations or partial pressures, including those obtained from initial amounts and stoichiometry.",
+      "include": "Tag when a numerical value of K must be calculated.",
+      "exclude": "Do not tag when K is given and equilibrium concentrations are found (tag ice-tables).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:equilibrium-constant-calculation"
+      ]
+    },
+    {
+      "conceptId": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:bronsted-lowry"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:equilibrium-constant-calculation"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:henderson-hasselbalch"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "linked-from:partial-pressures"
+      ]
+    },
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "buffer-capacity",
+      "name": "Buffer capacity",
+      "definition": "How much acid or base a buffer can absorb depends on the amounts of its components, and is distinct from the buffer's pH.",
+      "include": "Tag when buffers must be compared by capacity or the effect of component amounts or dilution on capacity explained.",
+      "exclude": "Do not tag buffer pH calculations alone.",
+      "whyCandidate": [
+        "linked-from:buffers"
+      ]
+    },
+    {
+      "conceptId": "titration-curves",
+      "name": "Acid-base titration curves",
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "whyCandidate": [
+        "linked-from:acid-base-mixtures"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "linked-from:bronsted-lowry"
+      ]
+    }
+  ]
+}

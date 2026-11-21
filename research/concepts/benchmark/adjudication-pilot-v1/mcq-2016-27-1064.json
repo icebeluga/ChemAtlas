@@ -1,0 +1,85 @@
+{
+ "questionId": "mcq-2016-27-1064",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2016-27-1064.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop and page show all four Lewis diagrams A-D."
+  },
+  "officialTopics": {
+   "primary": "2.7",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "bond-angles",
+      "evidence": "Must compare the bond angles of the four molecules and pick the smallest, accounting for lone-pair compression and domain geometry."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "molecular-geometry",
+      "evidence": "Must determine the shape of each species (tetrahedral, trigonal pyramidal, trigonal planar, bent) from its drawn Lewis structure."
+     },
+     {
+      "conceptId": "electron-domains",
+      "evidence": "Must count domains including lone pairs on N and S, and treat double bonds as one domain."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "compare",
+     "rank"
+    ],
+    "representations": [
+     "lewis-structure"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "extra-content",
+   "notes": "Crop shows stem and Lewis diagrams A-D (CF4, NF3, SO3, SO2) plus a partial footer; lone pairs legible."
+  },
+  "officialTopics": {
+   "primary": "2.7",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "bond-angles",
+      "evidence": "Must compare bond angles in CF4, NF3, SO3 and SO2 to find the smallest."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "electron-domains",
+      "evidence": "Must count domains on each central atom, including the lone pair on N (four domains) and on S in SO2 (three domains, double bond as one), to judge lone-pair compression."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "compare"
+    ],
+    "representations": [
+     "lewis-structure"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

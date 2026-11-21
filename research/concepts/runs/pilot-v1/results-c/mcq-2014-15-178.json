@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2014-15-178",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the first stem line and the shared titration curve (Questions 14-17); page context shows the pH vs volume NaOH curve with point U past equivalence and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "8.5",
+    "additional": [
+      "8.4",
+      "3.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must locate point U on the curve beyond the equivalence point and identify the species present there."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "acid-base-mixtures",
+          "evidence": "Must recognize that after equivalence all HA has reacted, so the species present include the conjugate base and any excess strong base."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "titration-curve",
+        "particulate-diagram"
+      ],
+      "skills": [
+        "graph-analysis",
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

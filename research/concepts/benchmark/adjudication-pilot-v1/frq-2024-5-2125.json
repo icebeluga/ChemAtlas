@@ -1,0 +1,212 @@
+{
+ "questionId": "frq-2024-5-2125",
+ "packet": "research/concepts/runs/pilot-v1/packets/frq-2024-5-2125.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows all of question 5 (a)-(d) including the incomplete orbital diagram."
+  },
+  "officialTopics": {
+   "primary": "4.2",
+   "additional": [
+    "4.7",
+    "1.8",
+    "1.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "net-ionic-equations",
+      "evidence": "Must write the balanced net ionic equation for Mg2+ and CO3 2- forming a solid, leaving out spectator ions."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "precipitation",
+      "evidence": "Must identify MgCO3 as the white solid because sodium and nitrate salts are soluble."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "write-equation"
+    ],
+    "representations": [
+     "chemical-equation"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must propose evidence (such as conductivity) that dissolved ions remain in the filtrate, distinguishing an electrolyte solution by its ions."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "net-ionic-equations",
+      "evidence": "The remaining ions are the spectator ions Na+ and NO3-."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "evaluate-procedure",
+     "explain"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": [
+     "experimental-design"
+    ]
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "ionic-formulas",
+      "evidence": "Must choose a metal whose +1 ion pairs with CO3 2- to give M2CO3 (a group 1 element)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "electron-configuration",
+      "evidence": "Must place the 10 electrons of Mg2+ in the orbital diagram (1s2 2s2 2p6) following Hund's and Pauli rules."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "ionic-formulas",
+      "evidence": "Must recognise Mg forms 2+ by losing two valence electrons to determine the electron count."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "represent"
+    ],
+    "representations": [
+     "energy-diagram"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Scanned page; crop shows stem, parts (a)-(d) and the orbital energy diagram for Mg2+ legibly."
+  },
+  "officialTopics": {
+   "primary": "4.2",
+   "additional": [
+    "1.5",
+    "1.8",
+    "4.7"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "net-ionic-equations",
+      "evidence": "Must write Mg2+ + CO3^2- -> MgCO3(s), omitting Na+ and NO3- spectators."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "precipitation",
+      "evidence": "Must identify MgCO3 as the white solid because sodium and nitrate salts are soluble."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "write-equation"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must recognize that the filtrate still contains dissolved Na+ and NO3- ions, so it behaves as an electrolyte (e.g. conducts electricity)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "evaluate-procedure",
+     "explain"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": [
+     "experimental-design"
+    ]
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "ionic-formulas",
+      "evidence": "Must recognize that a 2:1 cation:anion ratio with CO3^2- requires a +1 cation, i.e. another group 1 metal."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "electron-configuration",
+      "evidence": "Must fill the orbital diagram for Mg2+ (1s2 2s2 2p6) with paired arrows, removing the two 3s electrons."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "represent"
+    ],
+    "representations": [
+     "energy-diagram"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

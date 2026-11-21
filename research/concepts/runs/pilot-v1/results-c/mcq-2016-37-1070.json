@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2016-37-1070",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crops cut off the delta H/delta S values and the answer table; page context shows full question 37 with choices A-D (limiting reactant and q)."
+  },
+  "officialTopics": {
+    "primary": "4.5",
+    "additional": [
+      "6.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "limiting-reactant",
+          "evidence": "Must compare 0.10 mol Na2O2 with 0.10 or 0.20 mol S using the 2:1 ratio and the equal SO2 yield to identify the limiting reactant."
+        },
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must scale delta H = -610 kJ/mol rxn to the amount of limiting reactant consumed to get q."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

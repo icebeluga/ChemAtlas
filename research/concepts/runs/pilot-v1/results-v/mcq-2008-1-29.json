@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2008-1-29",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows only stem 1; shared stimulus shows choices A-E (element families). Complete with stimulus; matches page."
+  },
+  "officialTopics": {
+    "primary": "1.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must recognize that oxidation means removing an electron and that noble gases have the highest first ionization energy in each period."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2008-6-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows stem 6; shared stimulus shows the weak acid-KOH titration curve with points A-E. Complete with stimulus; matches page."
+  },
+  "officialTopics": {
+    "primary": "8.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must locate the half-equivalence point (B, about half of the ~110 mL equivalence volume in the buffer region) where [HA] equals [A-]."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "titration-curve"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

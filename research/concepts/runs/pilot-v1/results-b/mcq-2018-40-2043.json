@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2018-40-2043",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "1.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "nuclear-chemistry",
+          "evidence": "Must balance mass number and atomic number for Ca-39 to K-39 to identify the emitted particle."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

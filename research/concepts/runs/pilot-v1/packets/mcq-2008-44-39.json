@@ -1,0 +1,156 @@
+{
+  "questionId": "mcq-2008-44-39",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version A",
+  "year": "2008",
+  "number": 44,
+  "text": "For the stated Cl₂/I⁻ redox reaction, choose the explanation that accounts for spontaneous electrical energy generation.",
+  "regions": [
+    {
+      "page": 39,
+      "rect": null,
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 39,
+        "compiledPage": 39
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "9.8",
+        "4.9"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.8",
+    "secondary": [
+      "4.9"
+    ],
+    "status": "classified",
+    "method": "Original source wording and page manually reviewed against the current CED; 2008 diagnostic guide cross-check where available"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Full source page is shown; no crop boundary has been manually verified."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "crop-not-manually-verified",
+      "choices-not-in-text",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "b28863820e17fe56",
+  "images": [
+    {
+      "kind": "full-page",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-44-39-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 39,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "redox-half-reactions",
+      "name": "Redox half-reactions and balancing",
+      "definition": "Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.",
+      "include": "Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.",
+      "exclude": "Do not tag simple oxidation-number assignment (tag oxidation-numbers).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:electrochemical-cells"
+      ]
+    },
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:redox-half-reactions"
+      ]
+    },
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "oxidation-numbers",
+      "name": "Oxidation numbers",
+      "definition": "Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.",
+      "include": "Tag when oxidation numbers must be assigned or changes in them used.",
+      "exclude": "Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-types",
+        "linked-from:redox-half-reactions"
+      ]
+    },
+    {
+      "conceptId": "cell-potential",
+      "name": "Cell potential and free energy",
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:redox-half-reactions",
+        "linked-from:electrochemical-cells"
+      ]
+    },
+    {
+      "conceptId": "electrolysis-faraday",
+      "name": "Electrolysis and Faraday's law",
+      "definition": "Relating current, time, charge (Q = It), moles of electrons (Faraday constant) and the amount of substance deposited or produced in electrolysis.",
+      "include": "Tag when an amount of product, current or time in electrolysis must be calculated.",
+      "exclude": "Do not tag qualitative identification of electrodes only (tag electrochemical-cells).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electrochemical-cells"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "linked-from:reaction-types"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "linked-from:reaction-types"
+      ]
+    }
+  ]
+}

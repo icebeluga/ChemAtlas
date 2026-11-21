@@ -1,0 +1,74 @@
+{
+  "questionId": "mcq-2002-48-760",
+  "type": "MCQ",
+  "exam": "2002 AP Chemistry MCQ · Version indicated in source",
+  "year": "2002",
+  "number": 48,
+  "text": "48.  Sodium chloride is LEAST soluble in which of the\n         following liquids?\n\n       A)  H2O\n        B)  CCl4\n        C) HF\n       D) CH3OH\n        E)  CH3COOH\n\n\n\n\n\n9",
+  "regions": [
+    {
+      "page": 760,
+      "rect": [
+        306,
+        445.9179382324219,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 160,
+        "compiledPage": 760
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "ab8c20e4600f7eda",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-48-760-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 160,
+      "rect": [
+        306,
+        445.9179382324219,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-48-760-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 160,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

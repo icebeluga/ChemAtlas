@@ -1,0 +1,300 @@
+{
+  "questionId": "frq-2009-5-325",
+  "type": "FRQ",
+  "exam": "2009 AP Chemistry FRQ",
+  "year": "2009",
+  "number": 5,
+  "text": "Answer Question 5 and Question 6. The Section II score weighting for these questions is 15 percent each.\n\nYour responses to these questions will be graded on the basis of the accuracy and relevance of the information cited.\nExplanations should be clear and well organized. Examples and equations may be included in your responses where\nappropriate. Specific answers are preferable to broad, diffuse responses.\n\n\n\n                                                                                                           Reaction                Equation               D H                                                      D S298         D G298                                                                        298\n\n              Æ CO(g) + H2(g)    +131 kJ mol-1  +134 J mol-1 K-1   +91 kJ mol-1    X        C(s) + H2O(g) ¨\n\n              Æ CO(g) + H2O(g)   +41 kJ mol-1   +42 J mol-1 K-1   +29 kJ mol-1    Y      CO2(g) + H2(g) ¨\n\n             Æ C(s) + CO2(g)              ?                ?                 ?     Z          2 CO(g) ¨\n\n\n 5. Answer the following questions using the information related to reactions X, Y, and Z in the table above.\n\n    (a) For reaction X, write the expression for the equilibrium constant, Kp.\n\n    (b) For reaction X, will the equilibrium constant, Kp, increase, decrease, or remain the same if the temperature\n         rises above 298 K ? Justify your answer.\n\n    (c) For reaction Y at 298 K, is the value of Kp greater than 1, less than 1, or equal to 1? Justify your answer.\n\n    (d) For reaction Y at 298 K, which is larger: the total bond energy of the reactants or the total bond energy of\n        the products? Explain.\n\n    (e) Is the following statement true or false? Justify your answer.\n\n      “On the basis of the data in the table, it can be predicted that reaction Y will occur more rapidly than\n        reaction X will occur.”\n\n     (f) Consider reaction Z at 298 K.\n             (i)  Is ΔS° for the reaction positive, negative, or zero? Justify your answer.\n            (ii) Determine the value of ΔH° for the reaction.\n\n           (iii) A sealed glass reaction vessel contains only CO(g) and a small amount of C(s). If a reaction occurs\n           and the temperature is held constant at 298 K, will the pressure in the reaction vessel increase,\n             decrease, or remain the same over time? Explain.\n\n\n\n\n\n                            © 2009 The College Board. All rights reserved.",
+  "regions": [
+    {
+      "page": 325,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-02.pdf",
+        "localPage": 25,
+        "compiledPage": 325
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a–c",
+      "label": "(a–c)",
+      "catalogTopics": [
+        "7.3",
+        "7.5"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "6.7"
+      ]
+    },
+    {
+      "partId": "e–f",
+      "label": "(e–f)",
+      "catalogTopics": [
+        "9.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "7.3",
+    "secondary": [
+      "7.5",
+      "6.7",
+      "9.3"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "49676105caf3f0a6",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2009-5-325-r1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 25,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2009-5-325-page1.png",
+      "pdf": "public/source/bank-02.pdf",
+      "page": 25,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:reaction-quotient"
+      ]
+    },
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:equilibrium-expression"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "k-magnitude",
+      "name": "Magnitude of K",
+      "definition": "Interpreting the size of K: K much greater than 1 favors products, much less than 1 favors reactants, and K says nothing about reaction speed.",
+      "include": "Tag when the relative amounts of reactants and products at equilibrium must be inferred from K's magnitude.",
+      "exclude": "Do not tag ΔG°-K conversions (tag free-energy-equilibrium) unless magnitude is interpreted.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:k-magnitude"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-quotient",
+        "linked-from:k-magnitude",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:gibbs-free-energy"
+      ]
+    },
+    {
+      "conceptId": "bond-order",
+      "name": "Bond order, length and strength",
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "coupled-reactions",
+      "name": "Coupled reactions",
+      "definition": "Driving a thermodynamically unfavorable process by coupling it with a favorable one so the overall ΔG is negative.",
+      "include": "Tag when free energies of reactions must be added or coupling explained.",
+      "exclude": "Do not tag Hess's-law ΔH addition (tag hess-law).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "nernst-nonstandard",
+      "name": "Cell potential under nonstandard conditions",
+      "definition": "Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.",
+      "include": "Tag when the effect of concentration on cell potential must be predicted or explained.",
+      "exclude": "Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-constant-calculation",
+      "name": "Calculating K",
+      "definition": "Calculating an equilibrium constant by substituting equilibrium concentrations or partial pressures, including those obtained from initial amounts and stoichiometry.",
+      "include": "Tag when a numerical value of K must be calculated.",
+      "exclude": "Do not tag when K is given and equilibrium concentrations are found (tag ice-tables).",
+      "whyCandidate": [
+        "linked-from:equilibrium-expression"
+      ]
+    },
+    {
+      "conceptId": "le-chatelier",
+      "name": "Le Châtelier's principle",
+      "definition": "Predicting how an equilibrium shifts after changes in concentration, volume or pressure, or temperature, and recognizing that only temperature changes K.",
+      "include": "Tag when the direction of a shift or the effect of a stress on amounts or K must be predicted or explained.",
+      "exclude": "Do not tag Q-K calculations alone (tag reaction-quotient); catalysts do not shift equilibrium (tag catalysis if asked).",
+      "whyCandidate": [
+        "linked-from:reaction-quotient"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "thermodynamic-kinetic-control",
+      "name": "Thermodynamic versus kinetic control",
+      "definition": "Distinguishing whether a process is thermodynamically favored from how fast it occurs: favorable processes can be slow when activation energy is large.",
+      "include": "Tag when the student must explain why a favorable process is not observed, or separate favorability from rate.",
+      "exclude": "Do not tag pure ΔG calculations or pure rate questions.",
+      "whyCandidate": [
+        "linked-from:gibbs-free-energy"
+      ]
+    }
+  ]
+}

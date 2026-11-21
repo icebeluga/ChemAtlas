@@ -1,0 +1,42 @@
+{
+ "questionId": "mcq-2008-57-41",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "no-crop",
+  "notes": "Full page only; Q57 ethyne structure and choices legible."
+ },
+ "officialTopics": {
+  "primary": "2.7",
+  "additional": []
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "hybridization",
+     "evidence": "Must assign hybridization of each carbon in HC-CH."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "electron-domains",
+     "evidence": "Each carbon has two electron domains because a triple bond counts as one."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "identify"
+   ],
+   "representations": [
+    "lewis-structure"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

@@ -1,0 +1,163 @@
+{
+  "questionId": "mcq-2018-12-1197",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 12,
+  "text": "CO2(g) + 2 LiOH(s) → Li2CO3(aq) + H2O(l)\n\n12. In a one-person spacecraft, an astronaut exhales 880 g of\n   CO2(g) (molar mass 44 g/mol) per day. To prevent the\n    buildup of CO2(g) in the spacecraft, a device containing\n   LiOH(s) is used to remove the CO2(g), as represented by\n    the equation above. What mass of LiOH(s) (molar mass\n   24 g/mol) is needed to react with all of the CO2(g) produced\n   by an astronaut in one day?\n\n   (A)  40. g\n    (B) 240 g\n    (C) 480 g\n   (D) 960 g",
+  "regions": [
+    {
+      "page": 1197,
+      "rect": [
+        145,
+        50,
+        460,
+        242
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 297,
+        "compiledPage": 1197
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "4.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Rendered final individual crop from the original source PDF and compared it against the full source page. Complete stem, answer choices and question-specific graph/table/diagram/context are included; neighboring question content is excluded."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "5ebb69bb99e9bf75",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-12-1197-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 297,
+      "rect": [
+        145,
+        50,
+        460,
+        242
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-12-1197-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 297,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:mole-conversions",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "whyCandidate": [
+        "linked-from:mole-conversions"
+      ]
+    }
+  ]
+}

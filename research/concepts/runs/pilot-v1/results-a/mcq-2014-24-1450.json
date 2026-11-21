@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2014-24-1450",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop shows question 24 and choices A-D but omits the shared stimulus for questions 21-24 (CO(g) + 2 H2(g) <=> CH3OH(g), ΔH < 0); stimulus visible on the same page context." },
+  "officialTopics": { "primary": "6.7", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "bond-enthalpy", "evidence": "Must reason that bond breaking absorbs energy and bond formation releases it, and that ΔH equals energy absorbed minus energy released." }],
+      "supporting": [{ "conceptId": "endo-exothermic", "evidence": "Must use the stimulus sign ΔH < 0 (exothermic) to decide that energy released in forming product bonds exceeds energy absorbed breaking reactant bonds." }],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["chemical-equation"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,9 @@
+{
+  "questionId": "mcq-2024-21-2091",
+  "contentCheck": { "status": "partial", "sawImage": true, "diagramStatus": "unreadable", "cropIssue": "missing-content", "notes": "Crop and page context are the same scanned page (-17-) showing questions numbered 23 (or 21; scan ambiguous), 24 and 25 about 'Sample 1-4' of acid. The shared stimulus describing the four acid samples (table or diagram, on a preceding page) is not in the packet, so the samples cannot be distinguished. The question number on the page does not clearly match 21." },
+  "officialTopics": { "primary": "8.5", "additional": [] },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Missing shared stimulus for the acid samples, and the printed question number on the page appears to be 23, not 21. Need the preceding page and a check that the crop targets the right question."
+}

@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2002-67-765",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must recognize that vaporization overcomes intermolecular attractions and breaks no covalent bonds, eliminating the bond-breaking choices."
+        },
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must identify the attractions between H2O molecules as hydrogen bonds."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

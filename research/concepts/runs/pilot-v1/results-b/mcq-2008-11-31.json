@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-11-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows Q11 stem only; stimulus image gives choices A-E (activation energy, enthalpy of formation, entropy, Gibbs free energy, lattice energy)."
+  },
+  "officialTopics": {
+    "primary": "5.6",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "activation-energy",
+          "evidence": "Must identify activation energy as the quantity obtained from rates measured at different temperatures."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Arrhenius-type determination is not itself assessed in the CED; activation-energy is the closest fit and collision-model is a possible alternative."
+}

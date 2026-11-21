@@ -1,0 +1,42 @@
+{
+  "questionId": "mcq-2002-67-765",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must recognize vaporization overcomes intermolecular attractions, not covalent bonds within H2O."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Correct choice names hydrogen bonds between H2O molecules as the forces broken."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

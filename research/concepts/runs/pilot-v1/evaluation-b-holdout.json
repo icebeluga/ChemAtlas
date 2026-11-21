@@ -1,0 +1,543 @@
+{
+  "reference": "research/concepts/benchmark/holdout-reference-pilot-v1.json",
+  "conventionsExcluded": 0,
+  "summary": {
+    "referenceQuestions": 45,
+    "compared": 44,
+    "missing": 0,
+    "statusMismatch": 0,
+    "primary": {
+      "precision": 0.836,
+      "recall": 0.86,
+      "tp": 92,
+      "fp": 18,
+      "fn": 15
+    },
+    "supporting": {
+      "precision": 0.397,
+      "recall": 0.707,
+      "tp": 29,
+      "fp": 44,
+      "fn": 12
+    },
+    "anyRole": {
+      "precision": 0.727,
+      "recall": 0.899,
+      "tp": 133,
+      "fp": 50,
+      "fn": 15
+    },
+    "roleSwaps": 12,
+    "ignoredConceptMentions": 0,
+    "referenceKind": "model-adjudicated blind (claude-opus-5-5, prompt adjudicator.blind.v1, no proposals seen); NOT human-verified"
+  },
+  "errors": [
+    {
+      "questionId": "frq-2005-1-6",
+      "partId": "a",
+      "issue": "extra primary weak-acid-equilibrium"
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "partId": "a",
+      "issue": "missed primary equilibrium-expression"
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "partId": "b",
+      "issue": "extra supporting ice-tables"
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "partId": "c-i",
+      "issue": "extra supporting mole-conversions"
+    },
+    {
+      "questionId": "frq-2005-1-6",
+      "partId": "c-ii",
+      "issue": "extra supporting weak-acid-equilibrium"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "a",
+      "issue": "extra primary reaction-types"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "a",
+      "issue": "missed primary net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "a",
+      "issue": "extra supporting net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "a",
+      "issue": "missed supporting reaction-types"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "b",
+      "issue": "missed supporting net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "c",
+      "issue": "extra primary reaction-types"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "c",
+      "issue": "missed primary balanced-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "c",
+      "issue": "missed supporting reaction-types"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "e",
+      "issue": "extra primary descriptive-chemistry"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "e",
+      "issue": "missed primary balanced-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "e",
+      "issue": "missed supporting ionic-formulas"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "g",
+      "issue": "missed primary net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "h",
+      "issue": "extra primary precipitation"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "h",
+      "issue": "missed primary net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "h",
+      "issue": "extra supporting net-ionic-equations"
+    },
+    {
+      "questionId": "frq-2005-4-10",
+      "partId": "h",
+      "issue": "missed supporting precipitation"
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "partId": "a-i",
+      "issue": "extra supporting london-dispersion"
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "partId": "a-ii",
+      "issue": "extra supporting london-dispersion"
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "partId": "b-ii",
+      "issue": "extra supporting atomic-radius"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "partId": "a",
+      "issue": "missed supporting molecular-polarity"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "partId": "b",
+      "issue": "missed primary imf-properties"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "partId": "b",
+      "issue": "extra supporting imf-properties"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "partId": "c",
+      "issue": "extra supporting imf-properties"
+    },
+    {
+      "questionId": "frq-2008-6-65",
+      "partId": "d",
+      "issue": "missed primary imf-properties"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "a",
+      "issue": "extra primary le-chatelier"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "a",
+      "issue": "extra supporting free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "a",
+      "issue": "extra supporting endo-exothermic"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "b",
+      "issue": "extra primary equilibrium-expression"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "b",
+      "issue": "extra supporting free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "b",
+      "issue": "extra supporting endo-exothermic"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "c",
+      "issue": "extra primary equilibrium-expression"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "c",
+      "issue": "extra primary le-chatelier"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "c",
+      "issue": "missed primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "c",
+      "issue": "extra supporting free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "c",
+      "issue": "extra supporting endo-exothermic"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "e",
+      "issue": "extra primary entropy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "e",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "e",
+      "issue": "extra supporting gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "e",
+      "issue": "extra supporting ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-i",
+      "issue": "extra primary thermodynamic-kinetic-control"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-i",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-i",
+      "issue": "extra supporting gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-i",
+      "issue": "extra supporting ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "extra primary thermodynamic-kinetic-control"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "extra primary entropy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "missed primary hess-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "extra supporting gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-ii",
+      "issue": "extra supporting ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "extra primary thermodynamic-kinetic-control"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "extra primary entropy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "missed primary ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "extra supporting hess-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "extra supporting gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "extra supporting ideal-gas-law"
+    },
+    {
+      "questionId": "frq-2009-5-325",
+      "partId": "f-iii",
+      "issue": "missed supporting free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "c-i",
+      "issue": "missed supporting enthalpy-of-formation"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "c-ii",
+      "issue": "extra supporting entropy"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "d-ii",
+      "issue": "extra primary gibbs-free-energy"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "d-ii",
+      "issue": "missed primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "d-ii",
+      "issue": "missed primary reaction-quotient"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "partId": "d-ii",
+      "issue": "extra supporting reaction-quotient"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "partId": "a",
+      "issue": "extra primary reaction-mechanisms"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "partId": "a",
+      "issue": "missed primary catalysis"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "partId": "a",
+      "issue": "missed supporting reaction-mechanisms"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "partId": "b",
+      "issue": "extra supporting elementary-steps"
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "partId": "e",
+      "issue": "extra supporting london-dispersion"
+    },
+    {
+      "questionId": "frq-2024-6-2126",
+      "partId": "b",
+      "issue": "extra supporting electrochemical-cells"
+    },
+    {
+      "questionId": "mcq-1994-63-691",
+      "partId": "stem",
+      "issue": "extra supporting rate-law"
+    },
+    {
+      "questionId": "mcq-2002-48-760",
+      "partId": "stem",
+      "issue": "extra supporting ion-dipole"
+    },
+    {
+      "questionId": "mcq-2008-4-31",
+      "partId": "stem",
+      "issue": "extra supporting titration-analysis"
+    },
+    {
+      "questionId": "mcq-2008-44-39",
+      "partId": "stem",
+      "issue": "extra supporting electrochemical-cells"
+    },
+    {
+      "questionId": "mcq-2008-6-31",
+      "partId": "stem",
+      "issue": "extra supporting buffers"
+    },
+    {
+      "questionId": "mcq-2014-24-1450",
+      "partId": "stem",
+      "issue": "extra supporting endo-exothermic"
+    },
+    {
+      "questionId": "mcq-2014-29-1453",
+      "partId": "stem",
+      "issue": "missed primary free-energy-equilibrium"
+    },
+    {
+      "questionId": "mcq-2014-29-1453",
+      "partId": "stem",
+      "issue": "extra supporting k-magnitude"
+    },
+    {
+      "questionId": "mcq-2014-47-190",
+      "partId": "stem",
+      "issue": "extra supporting electrochemical-cells"
+    },
+    {
+      "questionId": "mcq-2014-47-190",
+      "partId": "stem",
+      "issue": "extra supporting reaction-quotient"
+    },
+    {
+      "questionId": "mcq-2018-38-1920",
+      "partId": "stem",
+      "issue": "missed supporting hess-law"
+    },
+    {
+      "questionId": "mcq-2022-38-1648",
+      "partId": "stem",
+      "issue": "extra supporting bond-order"
+    },
+    {
+      "questionId": "mcq-2022-38-1648",
+      "partId": "stem",
+      "issue": "missed supporting atomic-radius"
+    },
+    {
+      "questionId": "mcq-2024-56-2109",
+      "partId": "stem",
+      "issue": "extra primary precipitation"
+    },
+    {
+      "questionId": "mcq-2024-56-2109",
+      "partId": "stem",
+      "issue": "extra supporting net-ionic-equations"
+    },
+    {
+      "questionId": "mcq-2024-56-2109",
+      "partId": "stem",
+      "issue": "missed supporting precipitation"
+    }
+  ],
+  "strata": {
+    "agree": {
+      "referenceQuestions": 25,
+      "compared": 25,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 0.976,
+        "recall": 0.953,
+        "tp": 41,
+        "fp": 1,
+        "fn": 2
+      },
+      "supporting": {
+        "precision": 0.8,
+        "recall": 0.941,
+        "tp": 16,
+        "fp": 4,
+        "fn": 1
+      },
+      "anyRole": {
+        "precision": 0.935,
+        "recall": 0.967,
+        "tp": 58,
+        "fp": 4,
+        "fn": 2
+      },
+      "roleSwaps": 1,
+      "ignoredConceptMentions": 0,
+      "referenceKind": "model-adjudicated blind (claude-opus-5-5, prompt adjudicator.blind.v1, no proposals seen); NOT human-verified"
+    },
+    "non-agree": {
+      "referenceQuestions": 20,
+      "compared": 19,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 0.75,
+        "recall": 0.797,
+        "tp": 51,
+        "fp": 17,
+        "fn": 13
+      },
+      "supporting": {
+        "precision": 0.245,
+        "recall": 0.542,
+        "tp": 13,
+        "fp": 40,
+        "fn": 11
+      },
+      "anyRole": {
+        "precision": 0.62,
+        "recall": 0.852,
+        "tp": 75,
+        "fp": 46,
+        "fn": 13
+      },
+      "roleSwaps": 11,
+      "ignoredConceptMentions": 0,
+      "referenceKind": "model-adjudicated blind (claude-opus-5-5, prompt adjudicator.blind.v1, no proposals seen); NOT human-verified"
+    }
+  }
+}

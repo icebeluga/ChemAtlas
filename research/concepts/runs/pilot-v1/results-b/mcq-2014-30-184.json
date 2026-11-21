@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2014-30-184",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows only choices A-D; the stem (rate of the forward reaction as it progresses toward equilibrium) and the PCl5 stimulus are visible on the page context."
+  },
+  "officialTopics": {
+    "primary": "7.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Must describe how the forward rate behaves as a reaction starting from only reactant approaches equilibrium, ending at a constant nonzero rate equal to the reverse rate."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

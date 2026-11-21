@@ -1,0 +1,57 @@
+{
+  "questionId": "mcq-2016-37-1070",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crops cut off the right half of the stimulus (including the ΔH° = -610 kJ/mol value) and omit choices A-D; page context shows the full stimulus, stem and choice table."
+  },
+  "officialTopics": {
+    "primary": "4.5",
+    "additional": [
+      "6.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "limiting-reactant",
+          "evidence": "Must recognize that doubling S does not change the SO2 yield, so Na2O2 limits both trials."
+        },
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must scale ΔH° = -610 kJ/mol rxn to the 0.10 mol Na2O2 that reacts (0.05 mol rxn) to get q."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "removed supporting reaction-stoichiometry",
+        "reason": "Converting 0.10 mol Na2O2 to moles of reaction with the 2:1 coefficient is a routine mole-ratio step inside the limiting-reactant and ΔH-scaling calculation."
+      }
+    ]
+  }
+}

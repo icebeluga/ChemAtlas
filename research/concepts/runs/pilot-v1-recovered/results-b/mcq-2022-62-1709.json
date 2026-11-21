@@ -1,0 +1,113 @@
+{
+  "questionId": "mcq-2022-62-1709",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Item is a free-response question from a scoring-guide page: page 209 crop shows table, graph and parts (a),(b); continuation page 210 shows (c),(d). Scoring guide content visible below the question was ignored."
+  },
+  "officialTopics": {
+    "primary": "6.4",
+    "additional": [
+      "6.1",
+      "5.5",
+      "4.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must apply q = mc delta T with total mixture mass, given specific heat and temperature change."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "collision-model",
+          "evidence": "Must explain the slowing temperature change through fewer reactant particles, so lower collision frequency and slower reaction."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Temperature drop in the mixture shows the reaction absorbs heat from the surroundings."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "heat-transfer",
+          "evidence": "Must state the direction of heat flow between system and surroundings consistent with the graph."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must reason how halving the NaHCO3 changes the heat absorbed and hence the temperature change in the same calorimeter."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Heat absorbed scales with the amount of NaHCO3 that reacts (citric acid in excess)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,299 @@
+{
+  "questionId": "frq-2008-3-59",
+  "type": "FRQ",
+  "exam": "2008 AP Chemistry FRQ",
+  "year": "2008",
+  "number": 3,
+  "text": "3. Answer the following questions related to chemical reactions involving nitrogen monoxide, NO(g).\n\n  The reaction between solid copper and nitric acid to form copper(II) ion, nitrogen monoxide gas, and water is\n   represented by the following equation.\n\n        3 Cu(s) + 2 NO3−(aq) + 8 H+(aq) → 3 Cu2+(aq) + 2 NO(g) + 4 H2O(l)       E ° = +0.62 V\n\n    (a) Using the information above and in the table below, calculate the standard reduction potential, E °, for the\n       reduction of NO3 − in acidic solution.\n\n                                                                        Standard Reduction\n                                    Half-Reaction\n                                                                                        Potential, E °\n\n                            Cu2+(aq) + 2 e −→ Cu(s)                     +0.34 V\n\n            NO3 −(aq) + 4 H+(aq) + 3 e −→ NO(g) + 2 H2O(l)              ?\n\n\n   (b) Calculate the value of the standard free energy change, ΔG °, for the overall reaction between solid copper\n      and nitric acid.\n\n    (c) Predict whether the value of the standard entropy change, ΔS °, for the overall reaction is greater than 0, less\n       than 0, or equal to 0. Justify your prediction.\n\n\n   Nitrogen monoxide gas, a product of the reaction above, can react with oxygen to produce nitrogen dioxide gas,\n   as represented below.\n\n                                  2 NO(g) + O2(g) → 2 NO2(g)\n\n\n\n\n\n                           © 2008 The College Board. All rights reserved.\n          Visit apcentral.collegeboard.com (for AP professionals) and www.collegeboard.com/apstudents (for students and parents).\n\n2008 AP CHEMISTRY FREE RESPONSE QUESTIONS\n\n\nA rate study of the reaction yielded the data recorded in the table below.\n\n\n                                                                                          Initial Rate of\n                           Initial Concentration    Initial Concentration\n      Experiment                                                Formation of NO2\n                        of NO (mol L−1)        of O2 (mol L−1)                                                                 (mol L−1 s−1)\n\n           1              0.0200               0.0300               8.52 × 10−2\n           2              0.0200               0.0900               2.56 × 10−1\n           3              0.0600               0.0300               7.67 × 10−1\n\n\n(d) Determine the order of the reaction with respect to each of the following reactants. Give details of your\n    reasoning, clearly explaining or showing how you arrived at your answers.\n\n        (i) NO\n\n       (ii) O2\n\n(e) Write the expression for the rate law for the reaction as determined from the experimental data.\n\n(f) Determine the value of the rate constant for the reaction, clearly indicating the units.\n\n\n\n\n                 S T O P\n            If you finish before time is called, you may check your work on this part only.\n         Do not turn to the other part of the test until you are told to do so.\n\n\n\n\n\n                         © 2008 The College Board. All rights reserved.\n      Visit apcentral.collegeboard.com (for AP professionals) and www.collegeboard.com/apstudents (for students and parents).",
+  "regions": [
+    {
+      "page": 59,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 59,
+        "compiledPage": 59
+      }
+    },
+    {
+      "page": 60,
+      "rect": [
+        20,
+        40,
+        592,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 60,
+        "compiledPage": 60
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "9.9"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "9.9"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "9.1"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "5.2"
+      ]
+    },
+    {
+      "partId": "e",
+      "label": "(e)",
+      "catalogTopics": [
+        "5.2"
+      ]
+    },
+    {
+      "partId": "f",
+      "label": "(f)",
+      "catalogTopics": [
+        "5.2"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.2",
+    "secondary": [
+      "9.9",
+      "9.1"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "db430dc099c8abfd",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2008-3-59-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 59,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2008-3-59-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 59,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2008-3-59-r2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 60,
+      "rect": [
+        20,
+        40,
+        592,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2008-3-59-page2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 60,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "cell-potential",
+      "name": "Cell potential and free energy",
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "term-in-text",
+        "linked-from:entropy"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:entropy"
+      ]
+    },
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "nernst-nonstandard",
+      "name": "Cell potential under nonstandard conditions",
+      "definition": "Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.",
+      "include": "Tag when the effect of concentration on cell potential must be predicted or explained.",
+      "exclude": "Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "reaction-rate",
+      "name": "Reaction rates",
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "particulate-states",
+      "name": "Particle model of solids, liquids and gases",
+      "definition": "Describing the arrangement, spacing and motion of particles in solids, liquids and gases, and recognizing phase changes as physical changes.",
+      "include": "Tag when particle arrangement or motion across phases must be described, drawn or interpreted.",
+      "exclude": "Phase diagrams are not assessed; do not tag energy calculations for phase changes (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "mechanism-rate-law",
+      "name": "Mechanisms and rate laws",
+      "definition": "Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.",
+      "include": "Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.",
+      "exclude": "Do not tag experimental order determination with no mechanism.",
+      "whyCandidate": [
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "redox-half-reactions",
+      "name": "Redox half-reactions and balancing",
+      "definition": "Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.",
+      "include": "Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.",
+      "exclude": "Do not tag simple oxidation-number assignment (tag oxidation-numbers).",
+      "whyCandidate": [
+        "linked-from:cell-potential"
+      ]
+    }
+  ]
+}

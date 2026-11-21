@@ -1,0 +1,58 @@
+{
+  "questionId": "mcq-2024-56-2109",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Scanned page; crop shows the particle diagram, key, stem and choices A-D legibly."
+  },
+  "officialTopics": {
+    "primary": "4.3",
+    "additional": [
+      "4.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "reaction-representations",
+          "evidence": "Must match the ion counts and 1:1 positive:negative ratios in the before/after particle diagrams to a balanced equation, ruling out the 2:1 salt choices."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must recognize which choice actually forms a solid precipitate (e.g. BaCl2 and MnS(aq) as written do not match a precipitate)."
+        }
+      ],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "particulate-diagram",
+        "chemical-equation"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "moved supporting precipitation to contextual",
+        "reason": "The ion ratios in the diagram (1:1 in both reactant boxes) eliminate every choice except one, and the products are already labeled (s) or (aq), so no solubility prediction is needed; the precipitate only appears in the diagram."
+      }
+    ]
+  }
+}

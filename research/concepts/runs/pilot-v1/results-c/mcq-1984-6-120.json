@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-1984-6-120",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop r1 shows the shared answer list A-E (HF, CO2, Al(OH)3, NH3, H2O2); crop r2 shows item 6. Both page-context images show the same page."
+  },
+  "officialTopics": {
+    "primary": "",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "descriptive-chemistry",
+          "evidence": "Must recall from descriptive chemistry which listed substance is used extensively to make fertilizers; this industrial-use recall is not part of the current CED."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

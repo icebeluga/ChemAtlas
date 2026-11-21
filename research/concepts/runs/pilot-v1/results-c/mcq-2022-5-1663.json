@@ -1,0 +1,108 @@
+{
+  "questionId": "mcq-2022-5-1663",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows equation, data table, temperature vs time graph and parts (a)-(d); matches page. Packet type is FRQ despite mcq id."
+  },
+  "officialTopics": {
+    "primary": "6.4",
+    "additional": [
+      "6.1",
+      "5.5",
+      "6.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must apply q = mc(delta T) with the 44.40 g mixture mass, 4.22 J/(g C) and the 19.9 to 3.2 C temperature change."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "collision-model",
+          "evidence": "Must explain that as reactants are consumed, collisions between reactant particles become less frequent, so the reaction and the temperature change slow."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must infer from the falling temperature the direction of heat flow between the reacting system and the surroundings."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "justify"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must reason that halving the NaHCO3 (citric acid in excess) changes the heat absorbed, since heat scales with the amount reacting."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must connect the smaller q to a smaller temperature change through q = mc(delta T) for a nearly equal mixture mass."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

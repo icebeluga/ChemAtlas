@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2018-14-1911",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cuts the first line of the stem; page context shows the full stem and choices A-D. The shared stimulus for questions 14-17 is on the previous page and not shown, but the item is answerable from the stem alone (liquid CH3OH entering an evacuated vessel vaporizes)."
+  },
+  "officialTopics": {
+    "primary": "4.4",
+    "additional": [
+      "3.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "physical-chemical-change",
+          "evidence": "Must classify vaporization of CH3OH as a physical change in which molecular identity is unchanged."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must recognize that vaporization overcomes intermolecular attractions rather than breaking covalent bonds, to reject choices A-C."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "classify",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

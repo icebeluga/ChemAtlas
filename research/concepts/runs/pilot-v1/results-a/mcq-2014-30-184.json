@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2014-30-184",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop starts at 'rate of the forward reaction' and omits the stem start ('As the reaction progresses toward equilibrium, the') and the shared stimulus (PCl5 <=> PCl3 + Cl2, figures of initial and equilibrium states); both visible on the page context. Choices A-D complete." },
+  "officialTopics": { "primary": "7.1", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "dynamic-equilibrium", "evidence": "Must know that as PCl5 is consumed the forward rate falls until it equals the reverse rate at a constant nonzero value, rejecting the choices of zero or unchanged rate." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["predict"],
+      "representations": ["chemical-equation"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

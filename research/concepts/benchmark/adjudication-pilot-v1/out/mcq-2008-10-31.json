@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-10-31",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["entropy"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Third-law recall about absolute entropy; other listed quantities are distractors only."
+}

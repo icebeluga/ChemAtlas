@@ -1,0 +1,51 @@
+{
+  "questionId": "frq-2005-1-6",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "equilibrium-expression"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": [
+        "ph-poh"
+      ]
+    },
+    "c-i": {
+      "primary": [
+        "molarity"
+      ],
+      "supporting": []
+    },
+    "c-ii": {
+      "primary": [
+        "henderson-hasselbalch"
+      ],
+      "supporting": []
+    },
+    "d-i": {
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": []
+    },
+    "d-ii": {
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": []
+    },
+    "e": {
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Part d split into printed (i)/(ii); e compares acids by Ka values, which the reference assigns to weak-acid-equilibrium, not acid-strength-structure."
+}

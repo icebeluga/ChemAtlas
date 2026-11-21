@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2016-9-1056",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "none", "notes": "Crop shows the pH versus volume-of-base titration curve and question 9 with choices A-D; matches page." },
+  "officialTopics": { "primary": "8.5", "additional": ["8.1"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "titration-curves", "evidence": "Must read the curve's initial pH, buffer region and equivalence-point pH to identify the acid and base types titrated." }],
+      "supporting": [{ "conceptId": "strong-weak-acids", "evidence": "Must connect an equivalence point above pH 7 and a gradual buffer region to a weak acid whose conjugate base is basic, versus a strong acid." }],
+      "contextual": [],
+      "actions": ["interpret", "classify"],
+      "representations": ["titration-curve"],
+      "skills": ["graph-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

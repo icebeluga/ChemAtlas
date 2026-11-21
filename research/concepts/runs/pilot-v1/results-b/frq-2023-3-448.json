@@ -1,0 +1,196 @@
+{
+ "questionId": "frq-2023-3-448",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "analyzed",
+  "cropIssue": "none",
+  "notes": "Four crops show parts a-g with both data tables; complete."
+ },
+ "officialTopics": {
+  "primary": "5.5",
+  "additional": [
+   "4.2",
+   "5.2",
+   "4.5",
+   "6.4",
+   "6.6"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "a",
+   "primary": [
+    {
+     "conceptId": "net-ionic-equations",
+     "evidence": "Must write net ionic equation keeping solid CaCO3 intact and omitting spectator Cl-."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "b",
+   "primary": [
+    {
+     "conceptId": "collision-model",
+     "evidence": "Must use trends for concentration and particle size to show trial 5 time is out of line."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "reaction-rate",
+     "evidence": "Needs relation between reaction time and rate."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "explain",
+    "evaluate-error"
+   ],
+   "representations": [
+    "table",
+    "experimental-data"
+   ],
+   "skills": [
+    "graph-analysis"
+   ]
+  },
+  {
+   "partId": "c",
+   "primary": [
+    {
+     "conceptId": "collision-model",
+     "evidence": "Smaller chunks expose more surface area, giving more frequent collisions and faster reaction."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "explain"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "d",
+   "primary": [
+    {
+     "conceptId": "rate-law",
+     "evidence": "Must judge order in HCl from how time changes when concentration changes."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "reaction-rate",
+     "evidence": "Must infer rate from reaction time."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "justify",
+    "evaluate-error"
+   ],
+   "representations": [
+    "table",
+    "experimental-data"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "e",
+   "primary": [
+    {
+     "conceptId": "reaction-stoichiometry",
+     "evidence": "Must use 2:1 HCl to CaCO3 to find HCl consumed and remaining."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "molarity",
+     "evidence": "Must convert remaining moles of HCl to molarity at 50.0 mL."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "f",
+   "primary": [
+    {
+     "conceptId": "endo-exothermic",
+     "evidence": "Temperature of solution rises, indicating heat released to the solution."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "justify",
+    "interpret"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "g-i",
+   "primary": [
+    {
+     "conceptId": "calorimetry",
+     "evidence": "Must apply q = mc delta T with given mass, specific heat and temperature change."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "g-ii",
+   "primary": [
+    {
+     "conceptId": "enthalpy-of-reaction",
+     "evidence": "Must convert q to kJ per mole of reaction with correct sign."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "mole-conversions",
+     "evidence": "Must convert 1.00 g CaCO3 to moles to scale q per mole."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

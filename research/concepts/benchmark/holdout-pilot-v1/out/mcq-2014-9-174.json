@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2014-9-174",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "heat-transfer"
+      ],
+      "supporting": [
+        "calorimetry"
+      ]
+    }
+  },
+  "notes": "Energy lost by metal equals energy gained by water is the key; rejecting the heat-capacity distractor relies on q=mcΔT reasoning."
+}

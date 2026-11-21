@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2018-34-1205",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows full stem and choices but omits the beaker diagram of saturated CuSO4(aq) over CuSO4 crystals; the diagram is visible on the page context."
+  },
+  "officialTopics": {
+    "primary": "7.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "solubility-product",
+          "evidence": "Must reason that a saturated solution in contact with excess solid at constant temperature keeps a fixed ion concentration set by the solubility equilibrium, so evaporating water causes more solid to precipitate rather than raising [SO4 2-]."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "apparatus-diagram",
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

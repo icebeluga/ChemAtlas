@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2014-22-180",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "weak-acid-equilibrium"
+      ],
+      "supporting": [
+        "ph-poh"
+      ]
+    }
+  },
+  "notes": "Kb of a weak base gives [OH-]; converting pOH to pH is a non-trivial step that separates choice D from A."
+}

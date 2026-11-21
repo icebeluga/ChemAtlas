@@ -1,0 +1,22 @@
+{
+  "questionId": "mcq-2024-33-2094",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "wrong-question", "notes": "Catalog text withheld (it was printed Questions 31-32). The question image (page 2095, printed -21-) shows printed Question 33: C2H5Cl decomposition, a table of initial concentration, initial rate and half-life for two trials, and choices A-D. Legible." },
+  "officialTopics": { "primary": "5.3", "additional": ["5.2"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        { "conceptId": "integrated-rate-laws", "evidence": "Must know that a first-order half-life is independent of initial concentration when comparing the half-lives of the two trials." },
+        { "conceptId": "rate-law", "evidence": "Must predict how the initial rate of a first-order reaction responds to doubling [C2H5Cl]0 from 1.0 M to 2.0 M." }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["predict", "interpret"],
+      "representations": ["table", "chemical-equation"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

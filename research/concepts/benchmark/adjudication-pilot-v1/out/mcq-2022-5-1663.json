@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-2022-5-1663",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["calorimetry"], "supporting": [] },
+    "b": { "primary": ["collision-model"], "supporting": [] },
+    "c": { "primary": ["endo-exothermic"], "supporting": [] },
+    "d": { "primary": ["enthalpy-of-reaction"], "supporting": ["calorimetry"] }
+  },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "d makes calorimetry primary when the point is heat scaling with the amount of NaHCO3 reacting; also adds reaction-rate (b), heat-transfer (c) and limiting-reactant (d), where excess citric acid is stated." },
+  "notes": "Excess citric acid is given, so limiting-reactant is excluded by its 'obvious excess stated' rule; despite the mcq id this is a 4-part FRQ."
+}

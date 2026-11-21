@@ -1,0 +1,98 @@
+{
+  "questionId": "mcq-2002-38-614",
+  "type": "MCQ",
+  "exam": "2002 AP Chemistry MCQ",
+  "year": "2002",
+  "number": 38,
+  "text": "have a negativevalue?                              measuredby meansof a spectrophotometer.Which\n                                                                of the following would ensurethat correct values            I.  2 Fe203(s) -+ 4 Fe(s) + 3 O?(g)                                                           are obtainedfor the measuredabsorbance?\n           II.  Mg2+ + 2 OH- + Mg(OH)&)                                                                                                                I.  There must be enoughsamplein the tube\n          III.  H?(g) + GH&)   + GH&)                                 to cover the entire light path.\n                                                                                                               II.  The instrumentmust be periodically reset    (A)  I only\n                                                            using a standard.    (B)  I and II only\n                                                                                                              III.  The solutionmustbe saturated.    (C)  I and III only\n    (D)  II and III only                                         (A)  I only\n    (E)   I,  II, and III                                             (B)  II only\n                                                                (C)  I and II only\n36.          Zn(s) + Cu2+4  Zn*+ + Cu(s)                   (D)  II and III only\n                                                                   (E)  I,  II, and III\n   An electrolytic cell basedon the reaction repre-\n    sentedabovewas constructedfrom zinc and copper     39. Samplesof F2 gas and Xe gasare mixed in a\n     half-cells. The observedvoltage was found to be            containerof fixed volume. The initial partial pres-\n    1.00 volt insteadof the standardcell potential, E”,          sure of the F2 gasis 8.0 atmospheresand that of\n    of 1.10 volts. Which of the following could correctly        the Xe gas is 1.7 atmospheres.When all of the Xe\n    accountfor this observation?                        gas reacted,forming a solid compound,the pres-\n                                                        sure of the unreactedF2 gas was 4.6 atmospheres.    (A) The copper electrode was larger than the zinc\n                                                   The temperatureremainedconstant.What is the          electrode.\n                                                         formula of the compound?    (B) The Zn” electrolyte was Zn(N03)2, while the\n          Cu’+ electrolyte was CuS04.                          (A) XeF\n    (C) The Zn” solutionwas more concentratedthan          (B) XeF3\n          the Cu” solution.                                    (C) XeF4\n    (D) The solutionsin the half-cells had different             (D) XeF6\n         volumes.                                              (E) XeFs\n    (E) The salt bridge containedKC1 as the elec-\n            trolyte.\n\n37. A sampleof 3.30 gramsof an ideal gas at 15O.O”C\n   and 1.25 atmospherespressurehas a volume of\n    2.00 liters. What is the molar massof the gas?\n   The gas constant,R, is 0.0821 (L      l atm)/(mol    l K).\n    (A)  0.0218 gram/mole\n    (B)  16.2   grams/mole\n    (C) 37.0   grams/mole\n    (D) 45.8    grams/mole\n    (E) 71.6    grams/mole",
+  "regions": [
+    {
+      "page": 614,
+      "rect": [
+        20,
+        40,
+        584,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 14,
+        "compiledPage": 614
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Question number not located in extracted text; full source page retained for visual review."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "question-number-not-confirmed",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "fb717e0ad68ae637",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-38-614-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 14,
+      "rect": [
+        20,
+        40,
+        584,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2002-38-614-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 14,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "beer-lambert",
+      "name": "Beer-Lambert law and spectrophotometry",
+      "definition": "Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.",
+      "include": "Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.",
+      "exclude": "Do not tag general spectroscopy questions without an absorbance-concentration relationship.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

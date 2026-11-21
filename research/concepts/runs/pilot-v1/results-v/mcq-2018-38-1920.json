@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2018-38-1920",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows stem and choices A-D but omits the three given reactions with their ΔG° values (Reactions 1-3), which sit just above the crop; recovered from page context."
+  },
+  "officialTopics": {
+    "primary": "6.9",
+    "additional": [
+      "9.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "hess-law",
+          "evidence": "Must scale Reactions 2 and 3 by 2 and add them to Reaction 1 so intermediates NO and NO2 cancel, summing their ΔG° values because ΔG is a state function."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Taxonomy gap: hess-law is defined for ΔH, but here the same equation manipulation is applied to ΔG°. coupled-reactions literally mentions adding free energies but is about driving an unfavorable process, which is not the point here.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

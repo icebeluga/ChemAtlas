@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-11-31",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["activation-energy"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "over-tagged", "reason": "Adds collision-model; the item only asks which quantity is found from rates at several temperatures, with no particle-level explanation required." },
+  "notes": "Recall of the experimental route to Ea; no Arrhenius calculation or collision reasoning is needed."
+}

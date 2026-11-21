@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2014-21-1450",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["le-chatelier"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "over-tagged", "reason": "Adds endo-exothermic; the sign ΔH < 0 is given, not determined from evidence." },
+  "notes": "Temperature effect on K for a reaction stated to be exothermic is le-chatelier alone."
+}

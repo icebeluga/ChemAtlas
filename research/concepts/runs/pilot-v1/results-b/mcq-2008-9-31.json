@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2008-9-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows item 9 only; choices A-E (NH3, BH3, H2, H2S, HBr) are in the stimulus image."
+  },
+  "officialTopics": {
+    "primary": "3.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "kinetic-molecular-theory",
+          "evidence": "Must relate effusion rate to molecular speed, which decreases with molar mass, so the heaviest gas is slowest."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,54 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows question 52 with choices A-D; matches page."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": [
+      "8.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must reason about the two successive ionizations of diprotic H2C2O4, with the second much smaller than the first, to order H3O+, HC2O4- and C2O4^2-."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "The stem states that H2C2O4 is a weak acid."
+        }
+      ],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "moved supporting strong-weak-acids to contextual",
+        "reason": "The acid is already identified as weak, and its partial ionization is part of the weak-acid equilibrium reasoning the primary concept covers; no strong/weak classification is required."
+      }
+    ]
+  }
+}

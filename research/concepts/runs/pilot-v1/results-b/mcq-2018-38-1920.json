@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2018-38-1920",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows only the target reaction and choices; the three reactions with dG values are on page context and legible."
+  },
+  "officialTopics": {
+    "primary": "9.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "coupled-reactions",
+          "evidence": "Must reverse, scale and add the three reactions with their dG values to obtain dG of the target reaction."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "derive"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

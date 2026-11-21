@@ -1,0 +1,68 @@
+{
+  "questionId": "frq-2005-4-10",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "net-ionic-equations"
+      ],
+      "supporting": [
+        "reaction-types"
+      ]
+    },
+    "b": {
+      "primary": [
+        "descriptive-chemistry"
+      ],
+      "supporting": [
+        "net-ionic-equations"
+      ]
+    },
+    "c": {
+      "primary": [
+        "balanced-equations"
+      ],
+      "supporting": [
+        "reaction-types"
+      ]
+    },
+    "d": {
+      "primary": [
+        "net-ionic-equations"
+      ],
+      "supporting": [
+        "strong-weak-acids"
+      ]
+    },
+    "e": {
+      "primary": [
+        "balanced-equations"
+      ],
+      "supporting": [
+        "ionic-formulas"
+      ]
+    },
+    "f": {
+      "primary": [
+        "descriptive-chemistry"
+      ],
+      "supporting": []
+    },
+    "g": {
+      "primary": [
+        "net-ionic-equations",
+        "descriptive-chemistry"
+      ],
+      "supporting": []
+    },
+    "h": {
+      "primary": [
+        "net-ionic-equations"
+      ],
+      "supporting": [
+        "precipitation"
+      ]
+    }
+  },
+  "notes": "Hydroxo-complex formation (b), Lewis adduct BF3-NH3 (f) and acidic-anhydride behavior of SO3 (g) are recall-based descriptive chemistry beyond the current CED."
+}

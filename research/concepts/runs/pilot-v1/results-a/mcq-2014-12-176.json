@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2014-12-176",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop clips the right edge of the stem ('...but becomes favored as'); full stem, ΔH°/ΔS° table and choices A-D visible on page context." },
+  "officialTopics": { "primary": "9.3", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "gibbs-free-energy", "evidence": "Must use the signs of ΔH° and ΔS° in ΔG° = ΔH° - TΔS° to find the reaction that becomes favorable only at high temperature (both positive)." }],
+      "supporting": [],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["table", "chemical-equation"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

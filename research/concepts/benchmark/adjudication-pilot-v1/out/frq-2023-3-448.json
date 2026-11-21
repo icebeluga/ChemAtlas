@@ -1,0 +1,17 @@
+{
+  "questionId": "frq-2023-3-448",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["net-ionic-equations"], "supporting": [] },
+    "b": { "primary": ["reaction-rate"], "supporting": [] },
+    "c": { "primary": ["collision-model"], "supporting": [] },
+    "d": { "primary": ["rate-law"], "supporting": [] },
+    "e": { "primary": ["reaction-stoichiometry"], "supporting": ["molarity"] },
+    "f": { "primary": ["endo-exothermic"], "supporting": [] },
+    "g-i": { "primary": ["calorimetry"], "supporting": [] },
+    "g-ii": { "primary": ["enthalpy-of-reaction"], "supporting": ["calorimetry"] }
+  },
+  "verdictX": { "label": "wrong-primary", "reason": "b makes collision-model primary though (b) asks only for a data-based argument about factors affecting rate (particle reasoning is (c)); also adds reaction-rate to d and mole-conversions instead of calorimetry to g-ii." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Catalog groups b-d and e-g; reference uses the printed parts. Converting reaction time to rate is treated as routine in (d)."
+}

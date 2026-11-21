@@ -1,0 +1,169 @@
+{
+  "questionId": "mcq-2022-38-1648",
+  "type": "MCQ",
+  "exam": "2022 AP Chemistry MCQ",
+  "year": "2022",
+  "number": 38,
+  "text": "Molecule  Bond Dissociation Energy (kJ/mol)\n        Br2       193\n          I2        151\n\n38. The table above shows the bond dissociation energies for\n    Br2 and I2 at 298K. Which of the following correctly\n    shows the potential energy as a function of internuclear\n    distance for two bromine atoms and two iodine atoms?\n\n\n\n\n\n    (A)\n\n\n\n\n\n     (B)\n\n\n\n\n\n     (C)\n\n\n\n\n\n    (D)",
+  "regions": [
+    {
+      "page": 1648,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 148,
+        "compiledPage": 1648
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "2.2",
+        "6.7"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "2.2",
+    "secondary": [
+      "6.7"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "bc3a8ff5f0cafbf9",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-38-1648-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 148,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-38-1648-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 148,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:bond-potential-energy",
+        "linked-from:bond-order"
+      ]
+    },
+    {
+      "conceptId": "bond-order",
+      "name": "Bond order, length and strength",
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:bond-potential-energy",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:bond-order",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "solution-representations",
+      "name": "Particle representations of solutions",
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "linked-from:bond-order",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "sigma-pi-bonds",
+      "name": "Sigma and pi bonds",
+      "definition": "Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.",
+      "include": "Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.",
+      "exclude": "Do not tag simple bond-order comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "resonance",
+      "name": "Resonance and delocalization",
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "whyCandidate": [
+        "linked-from:bond-order"
+      ]
+    }
+  ]
+}

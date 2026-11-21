@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-8-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows only the Q8 stem; stimulus image gives choices A-E (NH3, BH3, H2, H2S, HBr)."
+  },
+  "officialTopics": {
+    "primary": "8.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "Must identify HBr as the strong acid that ionizes completely, versus the weak acid/base or non-electrolytes."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

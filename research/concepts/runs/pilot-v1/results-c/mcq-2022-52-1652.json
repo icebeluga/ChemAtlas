@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-D; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must reason about the extent of the first and much smaller second ionization of a weak diprotic acid to rank H2C2O4, HC2O4-, C2O4^2- and H3O+."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

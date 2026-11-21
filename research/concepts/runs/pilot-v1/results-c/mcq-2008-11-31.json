@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2008-11-31",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows stem; shared stimulus lists quantities A-E; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "5.5",
+    "additional": [
+      "5.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "collision-model",
+          "evidence": "Must know that the temperature dependence of rate reflects the fraction of collisions with energy at least Ea, so rates at two temperatures yield Ea."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "activation-energy",
+          "evidence": "Must know which listed quantity is extracted from that temperature dependence of rate."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Boundary between collision-model and activation-energy as primary; Arrhenius-based determination is recall-level."
+}

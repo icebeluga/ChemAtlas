@@ -1,0 +1,120 @@
+{
+  "questionId": "mcq-2008-25-34",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 25,
+  "text": "25.  The pressure, in atm, exerted by 1.85 mol of an\n     ideal gas placed in a 3.00 L container at\n     35.00 C is given by which of the following\n     expressions?\n\n            ( 1.85) ( 0.0821) (308)\n    A)                   atm                 3.00\n              (1.85) ( 35.0)\n    B)              atm            ( 0.0821) (3.00)\n                 3.00    C)                   atm            ( 1.85) ( 0.0821) (308)\n            ( 1.85) ( 8.314) ( 308)\n    D)                  atm                3.00\n              (3.00) ( 1.85)\n    E)              atm            ( 0.0821) (35.0)",
+  "regions": [
+    {
+      "page": 34,
+      "rect": [
+        0,
+        55,
+        612,
+        298.483154296875
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 34,
+        "compiledPage": 34
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "3.4"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "3.4",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "0a52b90b8a34fb1e",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-25-34-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 34,
+      "rect": [
+        0,
+        55,
+        612,
+        298.483154296875
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-25-34-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 34,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:partial-pressures"
+      ]
+    },
+    {
+      "conceptId": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:ideal-gas-law"
+      ]
+    },
+    {
+      "conceptId": "kinetic-molecular-theory",
+      "name": "Kinetic molecular theory",
+      "definition": "Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.",
+      "include": "Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.",
+      "exclude": "Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:ideal-gas-law"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:ideal-gas-law"
+      ]
+    }
+  ]
+}

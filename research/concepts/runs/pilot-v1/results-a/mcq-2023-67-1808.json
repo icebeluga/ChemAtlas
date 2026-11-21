@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2023-67-1808",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "partial",
+    "diagramStatus": "partially-readable",
+    "cropIssue": "missing-content",
+    "notes": "Scoring-guide page shows the Ni(ClO4)2 spectrophotometry stem, absorbance spectrum, parts (a) and (b), and a standard curve that belongs to a later part; the continuation page with the remaining part(s) is not provided. Catalog lists only a single stem part."
+  },
+  "officialTopics": {
+    "primary": "3.13",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Multi-part FRQ-style item catalogued as a single-stem MCQ; later parts missing. Source is a scoring-guide page."
+}

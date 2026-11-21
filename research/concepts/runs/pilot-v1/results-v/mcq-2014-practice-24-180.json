@@ -1,0 +1,56 @@
+{
+  "questionId": "mcq-2014-practice-24-180",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "no-crop",
+    "notes": "Full-page image only; Q24 (overall equation, two-step mechanism with fast reversible step 1 and slow step 2, choices A-D) is fully legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+    "primary": "5.8",
+    "additional": [
+      "5.9",
+      "5.4"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "mechanism-rate-law",
+          "evidence": "Must derive the rate law from slow step 2 and use the fast pre-equilibrium of step 1 to replace intermediate N2O2 with [NO]^2."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "elementary-steps",
+          "evidence": "Choice A refers to the molecularity of step 1."
+        }
+      ],
+      "actions": [
+        "derive",
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": [
+      {
+        "partId": "stem",
+        "change": "moved supporting elementary-steps to contextual",
+        "reason": "Molecularity only rejects one distractor; the correct choice is identified by deriving the rate law from the fast pre-equilibrium and slow step, which the primary concept covers."
+      }
+    ]
+  }
+}

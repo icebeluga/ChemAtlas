@@ -1,0 +1,116 @@
+{
+  "questionId": "frq-2008-6-65",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows Question 6 parts (a)-(d) with pyridine/benzene and dimethyl ether/ethanol structures; matches page context."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": [
+      "3.10",
+      "3.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "solubility-polarity",
+          "evidence": "Must explain why pyridine dissolves in water while benzene does not, discussing both."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Explanation requires that the N lone pair in pyridine accepts hydrogen bonds from water, which nonpolar benzene cannot."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "molecular-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must account for the higher boiling point of ethanol than dimethyl ether."
+        },
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must identify that ethanol has an O-H that hydrogen bonds while dimethyl ether has no H on O."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "molecular-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "solid-types",
+          "evidence": "Must explain the melting points by SO2 being a molecular solid (weak intermolecular forces) and SiO2 a covalent-network solid (covalent bonds broken)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "london-dispersion",
+          "evidence": "Must argue Cl2 has a larger, more polarizable electron cloud and stronger dispersion forces than HCl."
+        },
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must account for the boiling-point difference from intermolecular force strength."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "dipole-dipole",
+          "evidence": "Must address that HCl has dipole-dipole forces yet still boils lower, so these are outweighed by the dispersion difference."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

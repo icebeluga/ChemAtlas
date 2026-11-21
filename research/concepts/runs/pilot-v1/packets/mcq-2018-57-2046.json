@@ -1,0 +1,75 @@
+{
+  "questionId": "mcq-2018-57-2046",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 57,
+  "text": "57. Which of the following is true for the process\n    represented above at 327°C and 1 atm? (The\n   normal melting point of Pb(s) is 327°C.)\n\n   (A) ΔH = 0\n    (B) TΔS = 0\n    (C) ΔS < 0\n   (D) ΔH = TΔG\n    (E) ΔH = TΔS",
+  "regions": [
+    {
+      "page": 2046,
+      "rect": [
+        306,
+        392.529296875,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 246,
+        "compiledPage": 2046
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "92fdb8dd6bd038bf",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-57-2046-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 246,
+      "rect": [
+        306,
+        392.529296875,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-57-2046-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 246,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

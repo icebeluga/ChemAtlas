@@ -1,0 +1,75 @@
+{
+ "questionId": "mcq-2002-6-606",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2002-6-606.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop r1 shows the phase diagram and choices; r2 shows Q6 stem. Complete."
+  },
+  "officialTopics": {
+   "primary": "3.3",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "particulate-states",
+      "evidence": "Must read the phase diagram: at 1.1 atm cooling from 110 C to 40 C crosses the gas-liquid boundary, a phase change."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "interpret"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "sawImage": true,
+   "status": "complete",
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Two crops: shared phase diagram with choices A-E (left axis label slightly clipped) and stem 6; page context shows both complete."
+  },
+  "officialTopics": {
+   "primary": "3.3",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "particulate-states",
+      "evidence": "Must read that cooling from 110 °C to 40 °C at 1.1 atm crosses from the gas region into the liquid region and name that phase change as condensation."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "interpret",
+     "identify"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   }
+  ]
+ }
+}

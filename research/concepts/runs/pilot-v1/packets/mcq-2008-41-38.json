@@ -1,0 +1,165 @@
+{
+  "questionId": "mcq-2008-41-38",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version A",
+  "year": "2008",
+  "number": 41,
+  "text": "A particle diagram shows H₂(g) and N₂(g) in a closed container. Determine which of five particle-diagram choices represents the products and any excess reactants after N₂(g) + 3 H₂(g) → 2 NH₃(g) proceeds as far as possible.",
+  "regions": [
+    {
+      "page": 38,
+      "rect": null,
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 38,
+        "compiledPage": 38
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "4.5",
+        "4.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "4.5",
+    "secondary": [
+      "4.3"
+    ],
+    "status": "classified",
+    "method": "Original source page visually reviewed; cross-checked against the 2008 exam answer key and diagnostic guide; mapped to current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "The five answer choices are diagrams; the original full page is retained as the authoritative display."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "diagram-content",
+      "refers-to-visual-content",
+      "choices-not-in-text",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "4077fc69f8d677e2",
+  "images": [
+    {
+      "kind": "full-page",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-41-38-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 38,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-representations",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-representations",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "solution-representations",
+      "name": "Particle representations of solutions",
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

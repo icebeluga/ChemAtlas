@@ -1,0 +1,130 @@
+{
+  "questionId": "mcq-1984-72-131",
+  "type": "MCQ",
+  "exam": "1984 AP Chemistry MCQ · Version indicated in source",
+  "year": "1984",
+  "number": 72,
+  "text": "72. A compound is heated to produce a gas whose\n     molecular weight is to be determined. The gas is\n     collected by displacing water in a water-filled flask\n     inverted in a trough of water. Which of the\n     following is necessary to calculate the molecular\n     weight of the gas, but does NOT need to be\n    measured during the experiment?\n\n    A)  Mass of the compound used in the experiment\n    B)  Temperature of the water in the trough\n    C)  Vapor pressure of the water\n    D)  Barometric pressure\n    E)  Volume of water displaced from the flask",
+  "regions": [
+    {
+      "page": 131,
+      "rect": [
+        306,
+        55,
+        612,
+        251.33633422851562
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 131,
+        "compiledPage": 131
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "3.4"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "3.4",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "3641768076d26e38",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-72-131-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 131,
+      "rect": [
+        306,
+        55,
+        612,
+        251.33633422851562
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1984-72-131-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 131,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:partial-pressures"
+      ]
+    },
+    {
+      "conceptId": "partial-pressures",
+      "name": "Partial pressures and mole fraction",
+      "definition": "Dalton's law: the total pressure of a gas mixture is the sum of partial pressures, and each partial pressure equals mole fraction times total pressure.",
+      "include": "Tag when partial pressures or mole fractions of gases must be calculated or reasoned about.",
+      "exclude": "Do not tag Kp expressions where partial pressures are given directly and only substituted (tag equilibrium-constant-calculation).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:ideal-gas-law"
+      ]
+    },
+    {
+      "conceptId": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "kinetic-molecular-theory",
+      "name": "Kinetic molecular theory",
+      "definition": "Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.",
+      "include": "Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.",
+      "exclude": "Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:ideal-gas-law"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:ideal-gas-law"
+      ]
+    }
+  ]
+}

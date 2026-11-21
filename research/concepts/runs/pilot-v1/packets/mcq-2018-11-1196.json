@@ -1,0 +1,131 @@
+{
+  "questionId": "mcq-2018-11-1196",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 11,
+  "text": "ollowing information.\n\n\n\n\n\n  r the half-reactions associated\n own above are given in the table\n\n\n on        E° (V)\n\n Ag(s)     + 0.80\nÆ Zn(s)    - 0.76\n\n\n       11. What is the value of E° for the cell?\n         (A) 0.04 V\n          (B) 0.84 V\n          (C) 1.56 V\n         (D) 2.36 V",
+  "regions": [
+    {
+      "page": 1196,
+      "rect": [
+        301.67999267578125,
+        55,
+        603.3599853515625,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 296,
+        "compiledPage": 1196
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "9.9"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "9.9",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "c8e89c659c569b41",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-11-1196-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 296,
+      "rect": [
+        301.67999267578125,
+        55,
+        603.3599853515625,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-11-1196-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 296,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "cell-potential",
+      "name": "Cell potential and free energy",
+      "definition": "Calculating standard cell potential from reduction potentials, relating a positive E°cell to favorability, and using ΔG° = -nFE°.",
+      "include": "Tag when E°cell must be calculated or compared, reduction potentials used to rank oxidizing ability, or E° related to ΔG° or K.",
+      "exclude": "Do not tag concentration effects on voltage (tag nernst-nonstandard).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "free-energy-equilibrium",
+      "name": "Free energy and equilibrium",
+      "definition": "Relating ΔG° to K (ΔG° = -RT ln K), recognizing ΔG = 0 at equilibrium, and connecting the sign of ΔG° to whether K is greater or less than 1.",
+      "include": "Tag when K and ΔG° must be interconverted or their signs and magnitudes related.",
+      "exclude": "Do not tag ΔG from ΔH and ΔS alone (tag gibbs-free-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "nernst-nonstandard",
+      "name": "Cell potential under nonstandard conditions",
+      "definition": "Qualitatively predicting how concentrations change cell voltage using Q, concentration cells, and why voltage falls to zero as the cell reaches equilibrium.",
+      "include": "Tag when the effect of concentration on cell potential must be predicted or explained.",
+      "exclude": "Numerical substitution into the Nernst equation alone is insufficient evidence; focus on qualitative meaning.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:cell-potential"
+      ]
+    },
+    {
+      "conceptId": "redox-half-reactions",
+      "name": "Redox half-reactions and balancing",
+      "definition": "Writing oxidation and reduction half-reactions, combining them so electrons cancel, and balancing atoms and charge in redox equations.",
+      "include": "Tag when half-reactions must be written, combined or balanced, or electron stoichiometry in a redox equation is needed.",
+      "exclude": "Do not tag simple oxidation-number assignment (tag oxidation-numbers).",
+      "whyCandidate": [
+        "linked-from:cell-potential"
+      ]
+    }
+  ]
+}

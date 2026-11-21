@@ -1,0 +1,208 @@
+{
+  "questionId": "mcq-2008-13-32",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 13,
+  "text": "13.  True for the evaporation of water at 25°C and 1 atm",
+  "regions": [
+    {
+      "page": 32,
+      "rect": [
+        320,
+        70,
+        580,
+        96
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 32,
+        "compiledPage": 32
+      }
+    }
+  ],
+  "stimulus": [
+    {
+      "id": "stimulus-2008-mcq-12-14-page32",
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 32,
+          "rect": [
+            60,
+            65,
+            300,
+            233
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-12-32",
+        "mcq-2008-13-32",
+        "mcq-2008-14-32"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 32 explicitly labels Questions 12–14; includes the shared enthalpy/entropy answer choices A-E."
+    }
+  ],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "6.5",
+        "9.1"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.5",
+    "secondary": [
+      "9.1"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Compared complete individual crop for Question 13 against original 2008 source page. Common context is linked via stimulus-2008-mcq-12-14-page32; individual stem and choices are separate and complete."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "text-too-short"
+    ]
+  },
+  "contentHash": "758d65c8f5520a8c",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-13-32-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 32,
+      "rect": [
+        320,
+        70,
+        580,
+        96
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-13-32-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 32,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1/images/stimulus-2008-mcq-12-14-page32-1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 32,
+      "rect": [
+        60,
+        65,
+        300,
+        233
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "phase-change-energy",
+      "name": "Energy of phase changes",
+      "definition": "Heat absorbed or released during melting, vaporization, freezing and condensation (q = nΔH), constant temperature during a phase change, and heating or cooling curves.",
+      "include": "Tag when enthalpies of fusion or vaporization, heating curves, or phase-change energy must be used.",
+      "exclude": "Phase diagrams are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:entropy"
+      ]
+    },
+    {
+      "conceptId": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:phase-change-energy"
+      ]
+    },
+    {
+      "conceptId": "particulate-states",
+      "name": "Particle model of solids, liquids and gases",
+      "definition": "Describing the arrangement, spacing and motion of particles in solids, liquids and gases, and recognizing phase changes as physical changes.",
+      "include": "Tag when particle arrangement or motion across phases must be described, drawn or interpreted.",
+      "exclude": "Phase diagrams are not assessed; do not tag energy calculations for phase changes (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:phase-change-energy"
+      ]
+    },
+    {
+      "conceptId": "hydrogen-bonding",
+      "name": "Hydrogen bonding",
+      "definition": "The strong dipole attraction between an H atom bonded to N, O or F and a lone pair on a nearby N, O or F atom.",
+      "include": "Tag when hydrogen bonding must be identified, drawn, or used to explain a property, including identifying donors and acceptors.",
+      "exclude": "Do not tag molecules that contain H and O but no H bonded to N, O or F (a common error).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "linked-from:phase-change-energy"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "linked-from:entropy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "questionId": "mcq-2023-43-1731",
+  "type": "MCQ",
+  "exam": "2023 AP Chemistry MCQ",
+  "year": "2023",
+  "number": 43,
+  "text": "43. A sample of an acid is titrated with 0.10 M NaOH, and the results are shown in the graph. Based on the pH range of the\n    color change given for each indicator, which of the following indicators would be the best choice for the titration?\n\n    (A) Thymol blue; 1.2−2.8\n\n     (B) Congo red; 3.0−5.0\n\n     (C) Phenol red; 6.8−8.2\n\n    (D) Indigo carmine; 11.6−14.0",
+  "regions": [
+    {
+      "page": 1731,
+      "rect": [
+        0,
+        614.5972900390625,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 231,
+        "compiledPage": 1731
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "10a7b146ad5f5783",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2023-43-1731-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 231,
+      "rect": [
+        0,
+        614.5972900390625,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2023-43-1731-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 231,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

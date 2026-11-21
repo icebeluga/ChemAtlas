@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2002-41-759",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["gibbs-free-energy"], "supporting": ["endo-exothermic", "entropy"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Favorability frames the item; ΔH sign from the temperature drop and ΔS sign from gas formation are both required supporting inferences."
+}

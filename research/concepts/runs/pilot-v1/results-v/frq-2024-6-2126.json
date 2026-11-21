@@ -1,0 +1,83 @@
+{
+  "questionId": "frq-2024-6-2126",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows stem, electrolysis cell diagram, reduction-potential table and parts (a)-(c); matches page context. Page footer says GO ON TO THE NEXT PAGE, so a later part may exist on another page; catalog lists only a-c."
+  },
+  "officialTopics": {
+    "primary": "9.8",
+    "additional": [
+      "9.11",
+      "4.9"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "electrochemical-cells",
+          "evidence": "Must recognize Cl- is oxidized at the electrode producing Cl2 and Li+ reduced at the electrode producing Li, so electrons flow in the wire from the Cl2 electrode to the Li electrode."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "cell-diagram"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "redox-half-reactions",
+          "evidence": "Must reverse the Cl2 half-reaction and double the Li+ half-reaction so electrons cancel, giving 2 Li+ + 2 Cl- -> 2 Li + Cl2."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "potential-table",
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "electrolysis-faraday",
+          "evidence": "Must convert 0.18 g Li to moles of electrons (1 e- per Li) and use the Faraday constant and I = q/t over 3200 s to find the current."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Possible continuation page (footer 'GO ON TO THE NEXT PAGE') not included; only parts a-c could be checked.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2016-27-1064",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["bond-angles"], "supporting": ["electron-domains"] } },
+  "verdictX": { "label": "over-tagged", "reason": "Adds molecular-geometry; no shape must be named, the comparison rests on domain counts and lone-pair compression." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Shape naming is not required to rank the angles, so molecular-geometry is left out."
+}

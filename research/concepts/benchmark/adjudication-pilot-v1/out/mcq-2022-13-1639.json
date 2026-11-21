@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2022-13-1639",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["catalysis"], "supporting": [] } },
+  "verdictX": { "label": "over-tagged", "reason": "Adds activation-energy; the lower-barrier pathway is the catalysis explanation itself and no energy profile is used." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Shared stimulus on the previous page is not needed; all distractors test catalyst misconceptions (ΔH, equilibrium, heat)."
+}

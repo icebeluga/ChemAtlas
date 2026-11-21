@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2023-43-1731",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the titration curve; page context shows it (equivalence near 15 mL, steep rise between about pH 6 and 11). Page also carries other questions."
+  },
+  "officialTopics": {
+    "primary": "8.7",
+    "additional": [
+      "8.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "pka-speciation",
+          "evidence": "Must choose an indicator whose color-change range matches the equivalence-point pH."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must read the steep region and equivalence-point pH from the curve for a weak acid titrated with strong base."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "evaluate-procedure"
+      ],
+      "representations": [
+        "titration-curve",
+        "table"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

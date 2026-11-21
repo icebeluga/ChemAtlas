@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2018-11-1196",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop truncated on the left (cell diagram and half-reaction table partly missing); page context shows the Zn/Ag cell and E degrees table."
+  },
+  "officialTopics": {
+    "primary": "9.9",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "cell-potential",
+          "evidence": "Must combine the Ag+/Ag and Zn2+/Zn reduction potentials to get E degrees cell."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "cell-diagram",
+        "potential-table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

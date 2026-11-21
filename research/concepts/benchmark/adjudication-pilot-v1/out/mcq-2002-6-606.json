@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2002-6-606",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["particulate-states"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Legacy phase-diagram reading has no dedicated concept (phase diagrams are excluded from the CED); particulate-states is the closest fit for naming the phase change, flagged for teacher review."
+}

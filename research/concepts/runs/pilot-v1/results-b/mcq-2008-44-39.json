@@ -1,0 +1,45 @@
+{
+ "questionId": "mcq-2008-44-39",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "no-crop",
+  "notes": "Full page shows Q44 equation and choices A-E."
+ },
+ "officialTopics": {
+  "primary": "9.9",
+  "additional": [
+   "9.8"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "stem",
+   "primary": [
+    {
+     "conceptId": "cell-potential",
+     "evidence": "Must tie spontaneous electricity generation to Cl2 being a stronger oxidizing agent so the cell potential is positive."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "electrochemical-cells",
+     "evidence": "Must connect spontaneous redox to a working galvanic cell."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "identify",
+    "explain"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

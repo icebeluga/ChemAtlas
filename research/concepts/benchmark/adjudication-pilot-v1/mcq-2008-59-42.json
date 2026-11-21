@@ -1,0 +1,89 @@
+{
+ "questionId": "mcq-2008-59-42",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2008-59-42.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "no-crop",
+   "notes": "Full-page image (no crop). Question 59 shows the NO2/N2O4 particle diagram with key, the 1.0 L container, equation and choices A-E; legible."
+  },
+  "officialTopics": {
+   "primary": "7.4",
+   "additional": [
+    "7.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "equilibrium-constant-calculation",
+      "evidence": "Must decide whether particle counts in the diagram give enough information to evaluate K for 2 NO2 = N2O4."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "equilibrium-expression",
+      "evidence": "Must write K as [N2O4]/[NO2]^2 to judge what the diagram can establish."
+     }
+    ],
+    "contextual": [
+     {
+      "conceptId": "dynamic-equilibrium",
+      "evidence": "Stated that the mixture is at equilibrium."
+     }
+    ],
+    "actions": [
+     "interpret",
+     "justify"
+    ],
+    "representations": [
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "sawImage": true,
+   "status": "complete",
+   "diagramStatus": "analyzed",
+   "cropIssue": "no-crop",
+   "notes": "Full-page image only; Q59 particle diagram (NO2 and N2O4 in 1.0 L), equation and choices A-E are legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+   "primary": "7.4",
+   "additional": [
+    "7.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "equilibrium-constant-calculation",
+      "evidence": "Must count NO2 and N2O4 particles in the 1.0 L box and substitute into K = [N2O4]/[NO2]^2 to place K relative to 1."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "interpret"
+    ],
+    "representations": [
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ }
+}

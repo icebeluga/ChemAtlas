@@ -1,0 +1,435 @@
+{
+  "questionId": "frq-2017-3-1157",
+  "type": "FRQ",
+  "exam": "2017 AP Chemistry FRQ",
+  "year": "2017",
+  "number": 3,
+  "text": "ORIGINAL PAGE 1157\n3. Answer the following questions about ozone.\n\n(a) The O; molecule has a central oxygen atom bonded to two outer oxygen atoms that are not bonded to one\nanother. In the box below, draw the Lewis electron-dot diagram of the O, molecule. Include all valid\nresonance structures.\n\n(b) Based on the diagram you drew in part (a), what is the shape of the ozone molecule?\n\nOzone decomposes according to the reaction represented below.\n2.0;(g) + 30,(g) AH? =~285 kJ/mol,\n\nxn\n\n(c) The bond enthalpy of the oxygen-oxygen bond in O, is 498 kJ/mol. Based on the enthalpy of the reaction\nrepresented above, what is the average bond enthalpy, in kJ/mol, of an oxygen-oxygen bond in 03 ?\n\nOzone can oxidize HSO, (aq), as represented by the equation below.\nHSO, (aq) + O3(aq) + HSO, (aq) + 02g)\nA solution is prepared in which the initial concentration of HSO, (aq) (6.4 x 104 M) is much larger than that\n\nof O3(aq) (1.0 x 10> M). The concentration of O,(aq) is monitored as the reaction proceeds, and the data\nare plotted in the graph below.\n\n1.0x 10°\n8.0 10°61\n\\\n\n_ 6.0 x 10-% \\\ng ‘\n\n4.0 x 10\"\n\n\\\n2.0 x 10-6 SS\n0 =]\n0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.10\nTime (s)\n\nUnauthorized copying or reuse of|\n\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n\n\nORIGINAL PAGE 1158\n(d) The data are consistent with the following rate law: rate = k,[O3] .\n(i) Based on the graph on the previous page, determine the half-life of the reaction.\n(ii) Determine the value of the rate constant, k,, for the rate law. Include units with your answer.\n\n(iii) Considering the relative concentrations of the reactants, briefly explain why the data in the graph are\nalso consistent with the following rate law: rate = k,[O][HSO ] .\n\n(iv) Briefly describe an experiment that could provide evidence to support the rate law given in part (d)(iii).\n\nUnauthorized copying or reuse of|\n\nany part of this page is illegal. GO ON TO THE NEXT PAGE.\n\n",
+  "regions": [
+    {
+      "page": 1157,
+      "rect": [
+        18,
+        40,
+        577.2000122070312,
+        796.9190063476562
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 257,
+        "compiledPage": 1157
+      }
+    },
+    {
+      "page": 1158,
+      "rect": [
+        18,
+        40,
+        577.2000122070312,
+        796.9190063476562
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 258,
+        "compiledPage": 1158
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "2.6"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "2.7"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "6.7"
+      ]
+    },
+    {
+      "partId": "d-i",
+      "label": "(d)(i)",
+      "catalogTopics": [
+        "5.3"
+      ]
+    },
+    {
+      "partId": "d-ii",
+      "label": "(d)(ii)",
+      "catalogTopics": [
+        "5.2",
+        "5.3"
+      ]
+    },
+    {
+      "partId": "d-iii",
+      "label": "(d)(iii)",
+      "catalogTopics": [
+        "5.2"
+      ]
+    },
+    {
+      "partId": "d-iv",
+      "label": "(d)(iv)",
+      "catalogTopics": [
+        "5.1"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "2.6",
+    "secondary": [
+      "2.7",
+      "6.7",
+      "5.3",
+      "5.2"
+    ],
+    "status": "classified",
+    "method": "Question-part review against current CED; original scan checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "0725ea93f456c9fd",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2017-3-1157-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 257,
+      "rect": [
+        18,
+        40,
+        577.2000122070312,
+        796.9190063476562
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2017-3-1157-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 257,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2017-3-1157-r2.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 258,
+      "rect": [
+        18,
+        40,
+        577.2000122070312,
+        796.9190063476562
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2017-3-1157-page2.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 258,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:reaction-rate",
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "molecular-geometry",
+      "name": "Molecular geometry (VSEPR)",
+      "definition": "Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.",
+      "include": "Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.",
+      "exclude": "Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:electron-domains",
+        "linked-from:bond-angles",
+        "linked-from:hybridization",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:reaction-rate",
+        "linked-from:integrated-rate-laws"
+      ]
+    },
+    {
+      "conceptId": "electron-domains",
+      "name": "Electron-domain counting",
+      "definition": "Counting the electron domains around a central atom, where each lone pair and each bond (single, double or triple) counts as one domain.",
+      "include": "Tag when the answer depends on counting domains, including the rule that a multiple bond is one domain, as a supporting step for geometry or hybridization.",
+      "exclude": "Do not tag when geometry or hybridization is simply recalled for a familiar molecule without domain reasoning being needed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molecular-geometry",
+        "linked-from:bond-angles",
+        "linked-from:hybridization"
+      ]
+    },
+    {
+      "conceptId": "resonance",
+      "name": "Resonance and delocalization",
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:formal-charge"
+      ]
+    },
+    {
+      "conceptId": "hybridization",
+      "name": "Orbital hybridization",
+      "definition": "Assigning sp, sp2 or sp3 hybridization to an atom from its number of electron domains.",
+      "include": "Tag when the hybridization of an atom must be stated or used.",
+      "exclude": "Do not tag geometry-only answers; d-orbital hybridization, drawing hybrid orbitals and molecular-orbital diagrams are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:electron-domains",
+        "linked-from:molecular-geometry",
+        "linked-from:sigma-pi-bonds"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:formal-charge",
+        "linked-from:resonance",
+        "linked-from:electron-domains",
+        "linked-from:sigma-pi-bonds",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "reaction-rate",
+      "name": "Reaction rates",
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:rate-law",
+        "linked-from:integrated-rate-laws"
+      ]
+    },
+    {
+      "conceptId": "bond-angles",
+      "name": "Bond angles",
+      "definition": "Predicting or comparing bond angles from electron-domain geometry, including the compression caused by lone pairs.",
+      "include": "Tag when a bond angle must be estimated, compared or explained.",
+      "exclude": "Do not tag when only a shape name is requested.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molecular-geometry"
+      ]
+    },
+    {
+      "conceptId": "formal-charge",
+      "name": "Formal charge",
+      "definition": "Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.",
+      "include": "Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.",
+      "exclude": "Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:resonance"
+      ]
+    },
+    {
+      "conceptId": "molecular-polarity",
+      "name": "Molecular polarity",
+      "definition": "Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.",
+      "include": "Tag when the student must determine or justify whether a molecule is polar or nonpolar.",
+      "exclude": "Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molecular-geometry"
+      ]
+    },
+    {
+      "conceptId": "sigma-pi-bonds",
+      "name": "Sigma and pi bonds",
+      "definition": "Counting sigma and pi bonds in single, double and triple bonds and explaining restricted rotation about double bonds.",
+      "include": "Tag when sigma and pi bonds must be counted or distinguished, or rotation about a bond is explained.",
+      "exclude": "Do not tag simple bond-order comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:hybridization"
+      ]
+    },
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "bond-order",
+      "name": "Bond order, length and strength",
+      "definition": "Relating the number of shared electron pairs between two atoms (including fractional bond orders from resonance) to bond length and bond strength.",
+      "include": "Tag when bond lengths or bond strengths are compared or explained from single, double, triple or resonance-averaged bonds.",
+      "exclude": "Do not tag when bonds are only counted for a bond-enthalpy calculation (tag bond-enthalpy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:resonance",
+        "linked-from:sigma-pi-bonds",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "bond-polarity",
+      "name": "Bond polarity and partial charges",
+      "definition": "Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.",
+      "include": "Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.",
+      "exclude": "Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "bond-potential-energy",
+      "name": "Bond potential-energy curves",
+      "definition": "Interpreting the potential energy of two atoms as a function of distance: equilibrium bond length at the energy minimum, bond energy as the well depth, and the attractive and repulsive forces that shape the curve.",
+      "include": "Tag when a potential-energy versus internuclear-distance graph is read, drawn or explained.",
+      "exclude": "Do not tag bond-length or bond-strength comparisons that do not involve the energy curve (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "dipole-dipole",
+      "name": "Dipole-dipole attractions",
+      "definition": "Attractions between the permanent dipoles of polar molecules.",
+      "include": "Tag when dipole-dipole forces must be identified or compared.",
+      "exclude": "Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:molecular-polarity"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:bond-enthalpy"
+      ]
+    },
+    {
+      "conceptId": "acid-strength-structure",
+      "name": "Molecular structure and acid strength",
+      "definition": "Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.",
+      "include": "Tag when acid strengths must be ranked or explained from molecular structure.",
+      "exclude": "Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "beer-lambert",
+      "name": "Beer-Lambert law and spectrophotometry",
+      "definition": "Using A = εbc and calibration curves to relate absorbance to concentration, choosing a wavelength, and evaluating spectrophotometry procedures.",
+      "include": "Tag when absorbance data, a calibration curve or the Beer-Lambert relationship must be used.",
+      "exclude": "Do not tag general spectroscopy questions without an absorbance-concentration relationship.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "nuclear-chemistry",
+      "name": "Nuclear chemistry",
+      "definition": "Radioactive decay modes, nuclear equations and nuclear binding energy. Not assessed on the current AP Chemistry exam (first-order half-life math belongs to integrated-rate-laws).",
+      "include": "Tag legacy questions about decay particles, nuclear equations or transmutation.",
+      "exclude": "Do not tag first-order kinetics problems that merely use radioactive decay as context unless nuclear equations are required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "mechanism-rate-law",
+      "name": "Mechanisms and rate laws",
+      "definition": "Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.",
+      "include": "Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.",
+      "exclude": "Do not tag experimental order determination with no mechanism.",
+      "whyCandidate": [
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "oxidation-numbers",
+      "name": "Oxidation numbers",
+      "definition": "Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.",
+      "include": "Tag when oxidation numbers must be assigned or changes in them used.",
+      "exclude": "Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.",
+      "whyCandidate": [
+        "linked-from:formal-charge"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "questionId": "mcq-2016-26-1064",
+  "type": "MCQ",
+  "exam": "2016 AP Chemistry MCQ",
+  "year": "2016",
+  "number": 26,
+  "text": "2 NO2(g) + F2(g)  2 NO2F(g)\n\n26. The rate law for the reaction represented by the\n    equation above is rate = k [NO2][F2]. Which of\n    the following could be the first elementary\n    step of a two-step mechanism for the reaction if\n    the first step is slow and the second step is fast?\n   (A) F2(g)   F(g)\n    (B) NO2(g) + F2(g)  NO2F(g) + F(g)\n    (C) NO2(g) + F(g)  NO2F(g)\n   (D) 2 NO2(g) + F2(g)  2 NO2F(g)\n\n\n\n\n\n  Unauthorized copying or reuse of\n any part of this page is illegal.",
+  "regions": [
+    {
+      "page": 1064,
+      "rect": [
+        0,
+        55,
+        306,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 164,
+        "compiledPage": 1064
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "5.8"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "5.8",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "4852e1c950a1b1ec",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-26-1064-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 164,
+      "rect": [
+        0,
+        55,
+        306,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2016-26-1064-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 164,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "mechanism-rate-law",
+      "name": "Mechanisms and rate laws",
+      "definition": "Deriving the rate law predicted by a mechanism from its slow step, including fast pre-equilibrium steps that eliminate intermediates, and testing mechanisms against experimental rate laws.",
+      "include": "Tag when a rate law must be derived from a mechanism, or a mechanism judged consistent with an observed rate law.",
+      "exclude": "Do not tag experimental order determination with no mechanism.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:rate-law",
+        "linked-from:reaction-mechanisms"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:mechanism-rate-law"
+      ]
+    },
+    {
+      "conceptId": "reaction-mechanisms",
+      "name": "Reaction mechanisms and intermediates",
+      "definition": "Combining elementary steps into an overall equation, and identifying intermediates (formed then consumed) and catalysts (consumed then regenerated).",
+      "include": "Tag when a mechanism's steps must be added or intermediates and catalysts identified.",
+      "exclude": "Do not tag rate-law derivation from the mechanism (tag mechanism-rate-law) unless steps are also combined.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:mechanism-rate-law"
+      ]
+    },
+    {
+      "conceptId": "elementary-steps",
+      "name": "Elementary reactions and molecularity",
+      "definition": "Recognizing that an elementary step's rate law follows directly from its molecularity (unimolecular, bimolecular), unlike an overall reaction.",
+      "include": "Tag when the rate law or molecularity of an elementary step must be written or identified.",
+      "exclude": "Do not tag experimental rate laws for overall reactions (tag rate-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-mechanisms",
+        "linked-from:mechanism-rate-law"
+      ]
+    },
+    {
+      "conceptId": "catalysis",
+      "name": "Catalysis",
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "whyCandidate": [
+        "linked-from:reaction-mechanisms"
+      ]
+    },
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "linked-from:rate-law"
+      ]
+    },
+    {
+      "conceptId": "reaction-rate",
+      "name": "Reaction rates",
+      "definition": "Defining and determining average and instantaneous rates from concentration-time data, and relating rates of reactant loss and product formation through stoichiometry.",
+      "include": "Tag when a rate must be calculated from data or slopes, or rates of different species related.",
+      "exclude": "Do not tag rate-law or order determination (tag rate-law).",
+      "whyCandidate": [
+        "linked-from:rate-law"
+      ]
+    }
+  ]
+}

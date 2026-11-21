@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2008-1-29",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows item 1 only; choices A-E (noble gases ... actinides) are in the stimulus image."
+  },
+  "officialTopics": {
+    "primary": "1.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ionization-energy",
+          "evidence": "Must link difficulty of oxidation (losing electrons) in a period to the highest ionization energy, held by noble gases."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

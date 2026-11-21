@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2008-25-34",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E."
+  },
+  "officialTopics": {
+    "primary": "3.4",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "ideal-gas-law",
+          "evidence": "Must set up P = nRT/V and select the expression using R = 0.0821 L atm/(mol K), and Kelvin temperature for 35.0 C."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,182 @@
+{
+  "questionId": "mcq-2017-30-1137",
+  "type": "MCQ",
+  "exam": "2017 AP Chemistry MCQ",
+  "year": "2017",
+  "number": 30,
+  "text": "30. NH; reacts with BF, to form a single species.\nWhich of the following structural diagrams is the\nmost likely representation of the product of the\nreaction?\n\n(A) H F\n\n° ft ft\n—N—H— i FE\n\nF\n\n(C) H F\n\nUnauthorized copying or reuse of\nany part of this page is illegal.\n\nHalf-Reaction E° (Vv)\nMg?*(aq)+2e7 — Mg(s) | —2.37\ncr*(aq)+3e° > Crs) = 0.74\n\n31. Based on the information in the table above,\nwhich of the following shows the cell potential\nand the Gibbs free energy change for the overall\nreaction that occurs in a standard galvanic cell?\n\nEven (V) AG* (kJ/m0l, xn)\n(A) +1.63 -157\n(B) +1.63 -944\n(C) +5.63 543\n(D) +5.63 —3262\n\nGO ON TO THE NEXT PAGE.\n",
+  "regions": [
+    {
+      "page": 1137,
+      "rect": [
+        20,
+        45,
+        575.2000122070312,
+        796.9190063476562
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 237,
+        "compiledPage": 1137
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "2.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "2.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "adjacent-question-text",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "86fe8340a26a8635",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2017-30-1137-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 237,
+      "rect": [
+        20,
+        45,
+        575.2000122070312,
+        796.9190063476562
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2017-30-1137-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 237,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "electrochemical-cells",
+      "name": "Galvanic and electrolytic cells",
+      "definition": "Identifying the anode (oxidation) and cathode (reduction), electron flow, salt-bridge ion migration and electrode changes in galvanic and electrolytic cells.",
+      "include": "Tag when cell components, half-reactions at each electrode, electron or ion flow, or electrode mass changes must be identified.",
+      "exclude": "Assigning + and - labels to electrodes is not assessed; do not tag voltage calculations alone (tag cell-potential).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "electron-domains",
+      "name": "Electron-domain counting",
+      "definition": "Counting the electron domains around a central atom, where each lone pair and each bond (single, double or triple) counts as one domain.",
+      "include": "Tag when the answer depends on counting domains, including the rule that a multiple bond is one domain, as a supporting step for geometry or hybridization.",
+      "exclude": "Do not tag when geometry or hybridization is simply recalled for a familiar molecule without domain reasoning being needed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "formal-charge",
+      "name": "Formal charge",
+      "definition": "Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.",
+      "include": "Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.",
+      "exclude": "Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "molecular-geometry",
+      "name": "Molecular geometry (VSEPR)",
+      "definition": "Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.",
+      "include": "Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.",
+      "exclude": "Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "hybridization",
+      "name": "Orbital hybridization",
+      "definition": "Assigning sp, sp2 or sp3 hybridization to an atom from its number of electron domains.",
+      "include": "Tag when the hybridization of an atom must be stated or used.",
+      "exclude": "Do not tag geometry-only answers; d-orbital hybridization, drawing hybrid orbitals and molecular-orbital diagrams are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "organic-chemistry",
+      "name": "Organic nomenclature and functional groups",
+      "definition": "Naming organic compounds, identifying functional groups and isomers as a goal in itself. Not assessed on the current AP Chemistry exam.",
+      "include": "Tag legacy questions whose main demand is organic naming, isomer counting or functional-group identification.",
+      "exclude": "Do not tag questions that merely use organic molecules as context for Lewis structures or intermolecular forces.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "ionic-formulas",
+      "name": "Ion charges and ionic formulas",
+      "definition": "Predicting common ion charges from valence electrons and periodic position, and writing charge-neutral ionic formulas.",
+      "include": "Tag when the student predicts an ion's charge, the formula of an ionic compound, or explains ion formation from electron configuration.",
+      "exclude": "Do not tag routine use of a given ionic formula in a calculation.",
+      "whyCandidate": [
+        "linked-from:lewis-structures"
+      ]
+    },
+    {
+      "conceptId": "resonance",
+      "name": "Resonance and delocalization",
+      "definition": "Representing a species with two or more valid Lewis structures, understanding the real structure as a hybrid with delocalized electrons, and the resulting equal or fractional bond orders.",
+      "include": "Tag when resonance structures must be drawn or identified, or when delocalization explains equal bond lengths or stability.",
+      "exclude": "Do not tag isomers (different atom connections) or a single Lewis structure with no alternative arrangement.",
+      "whyCandidate": [
+        "linked-from:lewis-structures"
+      ]
+    }
+  ]
+}

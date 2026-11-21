@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2014-47-190",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cut off at left and lacks the cell descriptions; page context shows half-cells, cells X/Y/Z reactions and Ecell. Q47 stem and choices complete."
+  },
+  "officialTopics": {
+    "primary": "9.10",
+    "additional": [
+      "9.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "nernst-nonstandard",
+          "evidence": "Must predict how raising [Fe2+] from 1.00 to 5.00 M changes cell voltage via Q, in each cell."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electrochemical-cells",
+          "evidence": "Must identify that Fe2+ is a reactant (reduced) in cell Y but a product (Fe oxidized) in cell Z."
+        },
+        {
+          "conceptId": "reaction-quotient",
+          "evidence": "Must see increased [Fe2+] lowers Q in cell Y and raises Q in cell Z."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "explain"
+      ],
+      "representations": [
+        "table",
+        "cell-diagram"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

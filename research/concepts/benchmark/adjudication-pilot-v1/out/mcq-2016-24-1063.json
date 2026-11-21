@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2016-24-1063",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["enthalpy-of-reaction"], "supporting": ["limiting-reactant"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "wrong-primary", "reason": "Swaps roles: the item assesses how heat released scales with the amount reacting; identifying NaOH as limiting is the supporting step." },
+  "notes": "Context is a ΔHrxn experiment, so the heat-amount relationship is the assessed idea."
+}

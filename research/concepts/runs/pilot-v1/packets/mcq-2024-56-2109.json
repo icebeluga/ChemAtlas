@@ -1,0 +1,119 @@
+{
+  "questionId": "mcq-2024-56-2109",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 56,
+  "text": "°° 0, 62 0*0,0\nofl a! 0 0 a [ie O71\n0 A O 09 0 0° (e)\nPrecipiate\nKey\n\n@ Positive ions in aqueous solution\nO Negative ions in aqueous solution\n\n56. Which of the following chemical changes is best represented by the particle diagram shown? (Water molecules\nare omitted for clarity.)\n(A) 2 AgNO,(aq) + Mgl,(aq) — 2 Agl(s) + Mg(NOs), (aq)\n(B) AgNO,(aq) + KCI(ag) > AgCl(s) + KNO3(aq)\n(C) 2 HCI(aq) + Ba(OH), (aq) > BaCl,(s) +2 H,O(!)\n(D) MnSO,(aq) + KS(aq) > MnS(aq) + K,SO,(aq)\n\nthorized copying OF reuse of “35° GO ON TO THE NEXT PAGE,\n‘MY Dart nf thie nana ls Illeana!\n© studocu messages.pdf_cover_qr_code_label\n\nmessages.downloaded_by\n",
+  "regions": [
+    {
+      "page": 2109,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-08.pdf",
+        "localPage": 9,
+        "compiledPage": 2109
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "4.2"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "4.2",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "f5d6e0554111a11f",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-56-2109-r1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 9,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-56-2109-page1.png",
+      "pdf": "public/source/bank-08.pdf",
+      "page": 9,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations"
+      ]
+    },
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "linked-from:net-ionic-equations"
+      ]
+    }
+  ]
+}

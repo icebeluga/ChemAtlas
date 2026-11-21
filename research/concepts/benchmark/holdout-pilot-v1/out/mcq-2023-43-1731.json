@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2023-43-1731",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "pka-speciation"
+      ],
+      "supporting": [
+        "titration-curves"
+      ]
+    }
+  },
+  "notes": "Indicator selection is pka-speciation; reading the equivalence-point pH from the curve is supporting."
+}

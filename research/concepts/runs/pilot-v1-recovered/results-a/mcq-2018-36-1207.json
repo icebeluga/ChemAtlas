@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2018-36-1207",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "missing-content-recovered-from-page", "notes": "Crop shows stem and choices A-D but not the shared stimulus; the stimulus image (preceding page, Questions 35-38) shows the calibration line of gas pressure vs. mass of CaCO3 and the eggshell data table (0.200 g, 0.800 atm before, 0.870 atm after). All legible." },
+  "officialTopics": { "primary": "1.4", "additional": ["3.4"] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "mixture-composition", "evidence": "Must find the mass of CaCO3 in a 0.200 g eggshell mixture and express it as a mass percent of the sample." }],
+      "supporting": [{ "conceptId": "partial-pressures", "evidence": "Must recognize the pressure of gas produced is the increase in total pressure (0.870 - 0.800 atm), not the final total pressure, before using the calibration line." }],
+      "contextual": [],
+      "actions": ["calculate", "interpret"],
+      "representations": ["calibration-curve", "table", "experimental-data"],
+      "skills": ["graph-analysis"]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

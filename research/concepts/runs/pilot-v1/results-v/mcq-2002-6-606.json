@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2002-6-606",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "complete",
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Two crops: shared phase diagram with choices A-E (left axis label slightly clipped) and stem 6; page context shows both complete."
+  },
+  "officialTopics": {
+    "primary": "3.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "particulate-states",
+          "evidence": "Must read that cooling from 110 °C to 40 °C at 1.1 atm crosses from the gas region into the liquid region and name that phase change as condensation."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "identify"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Taxonomy gap: phase diagrams are excluded from particulate-states and no beyond-ap phase-diagram concept exists; tagged particulate-states as the nearest fit.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

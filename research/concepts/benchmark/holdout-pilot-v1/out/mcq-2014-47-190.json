@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-2014-47-190",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "nernst-nonstandard"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Fe2+ is a reactant in Y and a product in Z, so raising it changes Q oppositely; Q reasoning is treated as inside nernst-nonstandard."
+}

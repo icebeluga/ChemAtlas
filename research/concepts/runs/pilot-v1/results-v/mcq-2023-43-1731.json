@@ -1,0 +1,50 @@
+{
+  "questionId": "mcq-2023-43-1731",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows the stem and choices A-D but omits the titration curve (pH versus volume of 0.10 M NaOH) directly above; curve visible and legible on the page context."
+  },
+  "officialTopics": {
+    "primary": "8.7",
+    "additional": [
+      "8.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "pka-speciation",
+          "evidence": "Must choose the indicator whose color-change pH range brackets the equivalence-point pH of the titration."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must locate the steep vertical region of the curve near 15 mL to identify the equivalence-point pH."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "titration-curve"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

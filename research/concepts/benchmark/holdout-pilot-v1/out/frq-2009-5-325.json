@@ -1,0 +1,57 @@
+{
+  "questionId": "frq-2009-5-325",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "equilibrium-expression"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "le-chatelier"
+      ],
+      "supporting": []
+    },
+    "c": {
+      "primary": [
+        "free-energy-equilibrium"
+      ],
+      "supporting": []
+    },
+    "d": {
+      "primary": [
+        "bond-enthalpy"
+      ],
+      "supporting": []
+    },
+    "e": {
+      "primary": [
+        "thermodynamic-kinetic-control"
+      ],
+      "supporting": []
+    },
+    "f-i": {
+      "primary": [
+        "entropy"
+      ],
+      "supporting": []
+    },
+    "f-ii": {
+      "primary": [
+        "hess-law"
+      ],
+      "supporting": []
+    },
+    "f-iii": {
+      "primary": [
+        "ideal-gas-law"
+      ],
+      "supporting": [
+        "free-energy-equilibrium"
+      ]
+    }
+  },
+  "notes": "f-iii: ideal-gas-law primary for pressure falling with fewer gas moles; favorability of Z (negative dG from X and Y, or Q=0<K) is supporting; f split into printed subparts."
+}

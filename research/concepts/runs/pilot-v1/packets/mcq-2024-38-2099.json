@@ -1,0 +1,132 @@
+{
+  "questionId": "mcq-2024-38-2099",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 38,
+  "text": "PHOTOELECTRON SPECTRUM OF SPECIES X\n\n3\ne¢\nEm\nre\n2a\na&\n$s\n2 m | \\ |\n90 80 70 60 50 6 4 2 0\nBinding Energy (MJ/mol)\nPHOTOELECTRON SPECTRUM OF SPECIES Y\n5\n25\n22\n20\nah\nss\n2°| I J\n90 80 70 60 50 6 4 i 0\nBinding Energy (MJ/mol)\n\n38. The complete photoelectron spectra for two species, X and Y, are represented above. One of the species is a\nneutral atom and the other species is a negatively charged ion. Both species have the same electron\nconfiguration. Which of the following can be inferred from the spectra?\n\n(A) X has a larger nuclear charge than Y has; therefore, X is neutral and Y is negatively charged.\n(B) X hasa larger nuclear charge than Y has; therefore, Y is neutral and X is negatively charged.\n(C) X has a smaller nuclear charge than Y has; therefore, X is neutral and Y is negatively charged.\n(D) X has asmaller nuclear charge than Y has; therefore, Y is neutral and X is negatively charged.\n\n[Unauthorized copying or reuse of -25- GO ON TO THE NEXT PAGE.\nany part of this page Is illegal. ii\n\nmessages.pdf_cover_qr_code_label\n© studocu eee eon\n\n",
+  "regions": [
+    {
+      "page": 2099,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 299,
+        "compiledPage": 2099
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "1.6"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "1.6",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2280f72a06eb8b9a",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-38-2099-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 299,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-38-2099-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 299,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "photoelectron-spectroscopy",
+      "name": "Photoelectron spectroscopy (PES)",
+      "definition": "Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.",
+      "include": "Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.",
+      "exclude": "Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "electron-configuration",
+      "name": "Electron configurations and atomic structure",
+      "definition": "Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.",
+      "include": "Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.",
+      "exclude": "Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:photoelectron-spectroscopy"
+      ]
+    },
+    {
+      "conceptId": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:photoelectron-spectroscopy"
+      ]
+    },
+    {
+      "conceptId": "ionization-energy",
+      "name": "Ionization energy",
+      "definition": "Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.",
+      "include": "Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.",
+      "exclude": "Do not tag PES questions unless ionization energy itself is compared outside the spectrum.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:photoelectron-spectroscopy"
+      ]
+    },
+    {
+      "conceptId": "photon-energy",
+      "name": "Photon energy, wavelength and frequency",
+      "definition": "Using E = hν and c = λν to relate photon energy, frequency and wavelength, and connecting photon energy to energy-level differences.",
+      "include": "Tag when photon energy, wavelength or frequency must be calculated or compared.",
+      "exclude": "Do not tag qualitative matching of radiation region to transition type only (tag em-spectrum).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

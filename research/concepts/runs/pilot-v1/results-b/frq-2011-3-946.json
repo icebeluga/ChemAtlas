@@ -1,0 +1,155 @@
+{
+ "questionId": "frq-2011-3-946",
+ "contentCheck": {
+  "status": "complete",
+  "sawImage": true,
+  "diagramStatus": "none",
+  "cropIssue": "none",
+  "notes": "Crop shows all of (a)-(d) with data."
+ },
+ "officialTopics": {
+  "primary": "9.3",
+  "additional": [
+   "7.3",
+   "9.5",
+   "4.1",
+   "4.9"
+  ]
+ },
+ "parts": [
+  {
+   "partId": "a",
+   "primary": [
+    {
+     "conceptId": "balanced-equations",
+     "evidence": "Must write balanced equation for NO + CO to N2 + CO2."
+    },
+    {
+     "conceptId": "oxidation-numbers",
+     "evidence": "Must show C goes from +2 to +4."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation",
+    "justify"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "b",
+   "primary": [
+    {
+     "conceptId": "equilibrium-expression",
+     "evidence": "Must write Kp from partial pressures."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "write-equation"
+   ],
+   "representations": [
+    "chemical-equation"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c-i",
+   "primary": [
+    {
+     "conceptId": "gibbs-free-energy",
+     "evidence": "Must compute delta G from sum of formation free energies of products minus reactants."
+    }
+   ],
+   "supporting": [],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "c-ii",
+   "primary": [
+    {
+     "conceptId": "gibbs-free-energy",
+     "evidence": "Must use delta G = delta H - T delta S to solve for delta S."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "entropy",
+     "evidence": "Result is reaction entropy change with units."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": []
+  },
+  {
+   "partId": "d-i",
+   "primary": [
+    {
+     "conceptId": "free-energy-equilibrium",
+     "evidence": "Must use delta G = delta G naught + RT ln Q with given pressures."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "reaction-quotient",
+     "evidence": "Must build Q from the given partial pressures."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "calculate"
+   ],
+   "representations": [
+    "table"
+   ],
+   "skills": [
+    "logarithms"
+   ]
+  },
+  {
+   "partId": "d-ii",
+   "primary": [
+    {
+     "conceptId": "gibbs-free-energy",
+     "evidence": "Sign of delta G determines the spontaneous direction."
+    }
+   ],
+   "supporting": [
+    {
+     "conceptId": "reaction-quotient",
+     "evidence": "Comparing Q to K shows direction of shift."
+    }
+   ],
+   "contextual": [],
+   "actions": [
+    "predict",
+    "explain"
+   ],
+   "representations": [
+    "text-only"
+   ],
+   "skills": []
+  }
+ ],
+ "answerKeyUsed": false,
+ "needsAttention": false,
+ "uncertainty": ""
+}

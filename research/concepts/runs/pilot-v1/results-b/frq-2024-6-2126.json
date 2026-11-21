@@ -1,0 +1,84 @@
+{
+  "questionId": "frq-2024-6-2126",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows complete question 6 with diagram, potential table and parts (a)-(c)."
+  },
+  "officialTopics": {
+    "primary": "9.11",
+    "additional": [
+      "9.8",
+      "4.9"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "electrochemical-cells",
+          "evidence": "Must give the electron flow direction in the wire of an electrolytic cell, from the anode (Cl2 forming) to the cathode (Li forming)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "cell-diagram"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "redox-half-reactions",
+          "evidence": "Must combine the Li+ reduction and reversed Cl- oxidation half-reactions so electrons cancel (2 Li+ + 2 Cl- gives 2 Li + Cl2)."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electrochemical-cells",
+          "evidence": "Must recognize Cl- is oxidized at the anode and Li+ reduced at the cathode so the table half-reaction for Cl2 is reversed."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "potential-table",
+        "cell-diagram"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "electrolysis-faraday",
+          "evidence": "Must convert 0.18 g Li to moles of electrons and use Q = It over 3200 s to find current."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "cell-diagram"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

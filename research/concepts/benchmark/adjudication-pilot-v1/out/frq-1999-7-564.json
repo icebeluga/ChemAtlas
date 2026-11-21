@@ -1,0 +1,14 @@
+{
+  "questionId": "frq-1999-7-564",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["electron-configuration"], "supporting": [] },
+    "b": { "primary": ["electron-configuration"], "supporting": [] },
+    "c-i": { "primary": ["ionization-energy"], "supporting": ["coulombic-attraction"] },
+    "c-ii": { "primary": ["ionization-energy"], "supporting": ["coulombic-attraction"] },
+    "d": { "primary": ["lewis-structures", "molecular-geometry"], "supporting": ["electron-domains", "molecular-polarity"] }
+  },
+  "verdictX": { "label": "wrong-primary", "reason": "d makes molecular-polarity primary and demotes molecular-geometry, though drawing the structure and sketching the seesaw shape are the main demands and polarity follows from them; tag set otherwise matches." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Part (c) is split into printed subparts (i) and (ii); in (d) polarity is judged supporting because it is justified from the sketched shape."
+}

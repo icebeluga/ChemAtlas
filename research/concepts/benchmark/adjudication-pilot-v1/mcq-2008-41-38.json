@@ -1,0 +1,90 @@
+{
+ "questionId": "mcq-2008-41-38",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2008-41-38.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "no-crop",
+   "notes": "Full page shows Q41 initial diagram, equation and choices A-E."
+  },
+  "officialTopics": {
+   "primary": "4.5",
+   "additional": [
+    "4.3"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "Must count N2 and H2 in the diagram and decide which is limiting and what excess remains using 1:3."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "reaction-representations",
+      "evidence": "Must represent the products and leftover reactant in particle form."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "predict",
+     "represent"
+    ],
+    "representations": [
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "sawImage": true,
+   "status": "complete",
+   "diagramStatus": "analyzed",
+   "cropIssue": "no-crop",
+   "notes": "Full-page image only; Q41 initial particle diagram (3 H2, 3 N2), equation and diagrams A-E are legible. Packet text is a paraphrase."
+  },
+  "officialTopics": {
+   "primary": "4.5",
+   "additional": [
+    "4.3"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "Must recognize that 3 H2 molecules react with only 1 N2, so H2 is limiting and 2 N2 remain in excess."
+     },
+     {
+      "conceptId": "reaction-representations",
+      "evidence": "Must choose the particle diagram that conserves atoms: 2 NH3 molecules plus 2 leftover N2 and no H2."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "interpret",
+     "predict"
+    ],
+    "representations": [
+     "particulate-diagram",
+     "chemical-equation"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ }
+}

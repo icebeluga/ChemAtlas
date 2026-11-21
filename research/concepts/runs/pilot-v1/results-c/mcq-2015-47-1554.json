@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2015-47-1554",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the potential-energy vs internuclear-distance curve with x at the minimum, the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-potential-energy",
+          "evidence": "Must interpret the point x at the energy minimum of the curve in terms of the balance of attractive and repulsive forces between the atoms."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

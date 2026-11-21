@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2018-38-1920",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "coupled-reactions"
+      ],
+      "supporting": [
+        "hess-law"
+      ]
+    }
+  },
+  "notes": "Adding scaled/reversed dG values matches coupled-reactions include rule; hess-law supporting for the state-function equation manipulation, a boundary call."
+}

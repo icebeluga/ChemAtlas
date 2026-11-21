@@ -1,0 +1,113 @@
+{
+  "reference": "research/concepts/benchmark/reference-pilot-v1.json",
+  "conventionsExcluded": 11,
+  "summary": {
+    "referenceQuestions": 40,
+    "compared": 40,
+    "missing": 0,
+    "statusMismatch": 0,
+    "primary": {
+      "precision": 1,
+      "recall": 1,
+      "tp": 74,
+      "fp": 0,
+      "fn": 0
+    },
+    "supporting": {
+      "precision": 1,
+      "recall": 0.857,
+      "tp": 18,
+      "fp": 0,
+      "fn": 3
+    },
+    "anyRole": {
+      "precision": 1,
+      "recall": 0.968,
+      "tp": 92,
+      "fp": 0,
+      "fn": 3
+    },
+    "roleSwaps": 0,
+    "ignoredConceptMentions": 24,
+    "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+  },
+  "errors": [
+    {
+      "questionId": "frq-2023-3-448",
+      "partId": "g-ii",
+      "issue": "missed supporting calorimetry"
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "partId": "stem",
+      "issue": "missed supporting equilibrium-expression"
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "partId": "stem",
+      "issue": "missed supporting elementary-steps"
+    }
+  ],
+  "strata": {
+    "agree": {
+      "referenceQuestions": 15,
+      "compared": 15,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 15,
+        "fp": 0,
+        "fn": 0
+      },
+      "supporting": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "anyRole": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 20,
+        "fp": 0,
+        "fn": 0
+      },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 4,
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    },
+    "non-agree": {
+      "referenceQuestions": 25,
+      "compared": 25,
+      "missing": 0,
+      "statusMismatch": 0,
+      "primary": {
+        "precision": 1,
+        "recall": 1,
+        "tp": 59,
+        "fp": 0,
+        "fn": 0
+      },
+      "supporting": {
+        "precision": 1,
+        "recall": 0.813,
+        "tp": 13,
+        "fp": 0,
+        "fn": 3
+      },
+      "anyRole": {
+        "precision": 1,
+        "recall": 0.96,
+        "tp": 72,
+        "fp": 0,
+        "fn": 3
+      },
+      "roleSwaps": 0,
+      "ignoredConceptMentions": 20,
+      "referenceKind": "model-adjudicated (claude-opus-5-5, prompt adjudicator.v1); NOT human-verified"
+    }
+  }
+}

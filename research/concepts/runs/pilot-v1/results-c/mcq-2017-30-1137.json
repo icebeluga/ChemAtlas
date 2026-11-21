@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2017-30-1137",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "extra-content",
+    "notes": "Crop shows the full stem and structural diagrams A-D but also includes question 31 (half-reaction table and choices) beside it."
+  },
+  "officialTopics": {
+    "primary": "2.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must recognize that the lone pair on N in NH3 bonds to the electron-deficient B in BF3, giving an N-B bond while H and F each keep one bond, to reject structures with two-bonded H or F."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure",
+        "molecular-structure"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "The product is a Lewis acid-base adduct (Lewis theory not assessed); classified by the bonding/valence reasoning in Lewis structures."
+}

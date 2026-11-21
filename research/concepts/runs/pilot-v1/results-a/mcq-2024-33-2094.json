@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2024-33-2094",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "unreadable",
+    "diagramStatus": "none",
+    "cropIssue": "wrong-question",
+    "notes": "Id says Q33, but the crop and page show only printed Q31 (ΔG favorability of 2 PCl3 + O2) and Q32 (gravimetric NaBr error). Q33 is not visible on any provided image, so it cannot be classified."
+  },
+  "officialTopics": {
+    "primary": "9.3",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Wrong-question crop: target Q33 is not on page 2094; the page holds Q31 and Q32. Needs re-cropping or id correction."
+}

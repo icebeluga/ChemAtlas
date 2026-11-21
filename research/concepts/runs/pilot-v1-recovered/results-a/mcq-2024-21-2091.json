@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2024-21-2091",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "none", "cropIssue": "wrong-question", "notes": "Catalog text withheld (it was printed Question 23). The question image (page 2089, printed -15-) shows the equation CO(g) + 2 H2(g) <=> CH3OH(g), dH = -90 kJ/mol, printed Question 21 and choices A-D, all legible." },
+  "officialTopics": { "primary": "7.9", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "le-chatelier", "evidence": "Must predict which change (raising or lowering temperature, adding CH3OH, removing H2) shifts the equilibrium so that the amount of CO decreases." }],
+      "supporting": [{ "conceptId": "endo-exothermic", "evidence": "Must use the negative dH to treat the forward reaction as exothermic, so heat acts as a product when judging the temperature choices." }],
+      "contextual": [],
+      "actions": ["predict"],
+      "representations": ["chemical-equation"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

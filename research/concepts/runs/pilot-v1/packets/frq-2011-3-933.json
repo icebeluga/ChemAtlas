@@ -1,0 +1,356 @@
+{
+  "questionId": "frq-2011-3-933",
+  "type": "FRQ",
+  "exam": "2011 AP Chemistry FRQ",
+  "year": "2011",
+  "number": 3,
+  "text": "3. Answer the following questions about glucose, C6H12O6 , an important biochemical energy source.\n\n    (a) Write the empirical formula of glucose.\n\n   In many organisms, glucose is oxidized to carbon dioxide and water, as represented by the following equation.\n                                C6H12O6(s) + 6 O2(g) → 6 CO2(g) + 6 H2O(l)\n\n  A 2.50 g sample of glucose and an excess of O2(g) were placed in a calorimeter. After the reaction was initiated\n   and proceeded to completion, the total heat released by the reaction was calculated to be 39.0 kJ.\n\n   (b) Calculate the value of ΔH°, in kJ mol−1, for the combustion of glucose.\n\n    (c) When oxygen is not available, glucose can be oxidized by fermentation. In that process, ethanol and carbon\n       dioxide are produced, as represented by the following equation.\n\n               C6H12O6(s) → 2 C2H5OH(l) + 2 CO2(g)     ΔH° = −68.0 kJ mol−1 at 298 K\n\n      The value of the equilibrium constant, Kp , for the reaction at 298 K is 8.9 × 1039.\n\n            (i) Calculate the value of the standard free-energy change, ΔG°, for the reaction at 298 K. Include units\n            with your answer.\n           (ii) Calculate the value of the standard entropy change, ΔS°, in J K−1 mol−1, for the reaction at 298 K.\n\n          (iii) Indicate whether the equilibrium constant for the fermentation reaction increases, decreases, or remains\n             the same if the temperature is increased. Justify your answer.\n\n   (d) Using your answer for part (b) and the information provided in part (c), calculate the value of ΔH° for the\n       following reaction.\n                            C2H5OH(l) + 3 O2(g) → 2 CO2(g) + 3 H2O(l)\n\n\n\n\n\n                  S T O P\n                If you finish before time is called, you may check your work on this part only.\n           Do not turn to the other part of the test until you are told to do so.\n\n\n\n\n\n                                 © 2011 The College Board.",
+  "regions": [
+    {
+      "page": 933,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-04.pdf",
+        "localPage": 33,
+        "compiledPage": 933
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "1.3"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "6.4",
+        "6.1",
+        "4.5"
+      ]
+    },
+    {
+      "partId": "c-onward",
+      "label": "(c onward)",
+      "catalogTopics": [
+        "4.7",
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.4",
+    "secondary": [
+      "1.3",
+      "4.5",
+      "6.1",
+      "4.7"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "3d8256d19253bb7d",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2011-3-933-r1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 33,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2011-3-933-page1.png",
+      "pdf": "public/source/bank-04.pdf",
+      "page": 33,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "reaction-types",
+      "name": "Classifying reactions",
+      "definition": "Recognizing acid-base, redox (including combustion) and precipitation reactions from equations or observations.",
+      "include": "Tag when a reaction must be classified by type or its type is the key to predicting products.",
+      "exclude": "Do not tag when the type is stated and the question asks only for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:oxidation-numbers"
+      ]
+    },
+    {
+      "conceptId": "empirical-formula",
+      "name": "Percent composition and empirical formulas",
+      "definition": "Determining the elemental composition of a pure substance: mass percent, empirical formula from masses or percentages, and molecular formula from empirical formula and molar mass.",
+      "include": "Tag when the student finds or uses mass percent, an empirical formula, or a molecular formula from composition or combustion data.",
+      "exclude": "Do not tag composition of mixtures (use mixture-composition) or simple molar-mass calculation for a known formula.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:endo-exothermic"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "oxidation-numbers",
+      "name": "Oxidation numbers",
+      "definition": "Assigning oxidation numbers to atoms and using changes in oxidation number to identify which species are oxidized and reduced and how many electrons transfer.",
+      "include": "Tag when oxidation numbers must be assigned or changes in them used.",
+      "exclude": "Terms 'oxidizing agent' and 'reducing agent' are not assessed on the current exam; do not confuse with formal charge.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-types"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-types"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:empirical-formula",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "entropy",
+      "name": "Entropy",
+      "definition": "Predicting and explaining the sign of ΔS from dispersal of matter and energy (phase, moles of gas, volume, temperature), and calculating ΔS° from standard molar entropies.",
+      "include": "Tag when the sign or value of an entropy change must be predicted, explained or calculated, or substances ranked by entropy.",
+      "exclude": "Do not tag ΔG sign analysis unless the entropy sign must be determined as part of it (then entropy is supporting).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "heat-transfer",
+      "name": "Heat transfer and thermal equilibrium",
+      "definition": "Heat flows from hotter to colder matter until thermal equilibrium; energy lost by one part equals energy gained by the other; temperature differs from thermal energy.",
+      "include": "Tag when the direction of heat flow, final temperature reasoning, or the particle explanation of heat transfer is required.",
+      "exclude": "Do not tag calorimetry calculations that only use q = mcΔT (tag calorimetry), unless thermal equilibrium itself is reasoned about.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:endo-exothermic",
+        "linked-from:calorimetry"
+      ]
+    },
+    {
+      "conceptId": "mixture-composition",
+      "name": "Composition of mixtures",
+      "definition": "Using measured masses or other quantitative data to determine the relative amounts of components in a mixture and to distinguish mixtures from pure substances.",
+      "include": "Tag when the question requires the mass fraction or percent of a component in a mixture, or a mass balance across mixture components.",
+      "exclude": "Do not tag percent composition of a single pure compound (use empirical-formula) or solution molarity (use molarity).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:empirical-formula"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:precipitation"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "solubility-product",
+      "name": "Solubility equilibria and Ksp",
+      "definition": "Writing Ksp expressions, converting between Ksp and molar solubility using formula stoichiometry, comparing solubilities, and predicting precipitation with Q versus Ksp.",
+      "include": "Tag when Ksp, molar solubility, or a quantitative precipitation test is used.",
+      "exclude": "Do not tag qualitative precipitate prediction from solubility facts (tag precipitation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:precipitation"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "descriptive-chemistry",
+      "name": "Descriptive reaction prediction",
+      "definition": "Recall-based prediction of products for named reaction classes (complex ions, decomposition of specific compounds, flame tests, qualitative analysis schemes) beyond the AP-specified solubility and reaction-type knowledge.",
+      "include": "Tag legacy questions that require memorized descriptive chemistry not supported by the current CED.",
+      "exclude": "Do not tag predictions that follow from current AP reaction-type reasoning.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "linked-from:endo-exothermic",
+        "linked-from:calorimetry"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "linked-from:reaction-types"
+      ]
+    },
+    {
+      "conceptId": "formal-charge",
+      "name": "Formal charge",
+      "definition": "Calculating the formal charge on atoms in a Lewis structure and using formal charges to judge which of several structures best represents a species.",
+      "include": "Tag when formal charges must be calculated, compared, or used to choose the preferred structure, even if the words 'formal charge' do not appear.",
+      "exclude": "Do not tag oxidation numbers (tag oxidation-numbers) or a Lewis structure question whose answer does not depend on formal charge.",
+      "whyCandidate": [
+        "linked-from:oxidation-numbers"
+      ]
+    }
+  ]
+}

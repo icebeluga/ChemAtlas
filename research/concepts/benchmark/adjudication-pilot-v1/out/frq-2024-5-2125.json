@@ -1,0 +1,13 @@
+{
+  "questionId": "frq-2024-5-2125",
+  "contentStatus": "complete",
+  "parts": {
+    "a": { "primary": ["net-ionic-equations"], "supporting": ["precipitation"] },
+    "b": { "primary": ["solution-representations"], "supporting": [] },
+    "c": { "primary": ["ionic-formulas"], "supporting": [] },
+    "d": { "primary": ["electron-configuration"], "supporting": [] }
+  },
+  "verdictX": { "label": "over-tagged", "reason": "Adds net-ionic-equations to (b) (naming spectators is not needed to describe a conductivity-type test) and ionic-formulas to (d) (Mg2+ charge is given by Mg(NO3)2 and the word cation)." },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Part (b) is mostly experimental design; solution-representations (dissolved ions as electrolytes) is the closest concept."
+}

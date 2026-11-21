@@ -1,0 +1,51 @@
+{
+  "questionId": "mcq-2014-33-185",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop starts mid-stem ('equilibrium. Which of the following graphs...'); page context shows the stem start 'Additional Cl2(g) is injected into the system at equilibrium' and graphs A-D. The shared stimulus (PCl5(g) <=> PCl3(g) + Cl2(g), questions 29-33) is on the preceding page, which is not in this packet; it was seen on the page image of packet mcq-2014-30-184 (same source, page 184)."
+  },
+  "officialTopics": {
+    "primary": "7.2",
+    "additional": [
+      "7.9"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Must choose the graph of reverse rate versus time as the disturbed system returns to a new equilibrium where forward and reverse rates are again equal."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "Must recognize that adding the product Cl2 instantly raises the reverse rate, which then declines as the system shifts toward PCl5 to a new level above the original."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph",
+        "chemical-equation"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "The shared stimulus identifying Cl2 as a product is absent from this packet's images; it was taken from another packet's page image of the preceding page. Packet should include the stimulus.",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

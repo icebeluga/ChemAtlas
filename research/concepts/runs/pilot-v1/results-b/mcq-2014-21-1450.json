@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2014-21-1450",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Two crops: r1 shows shared stimulus (equation, dH<0, Kc), r2 shows Q21 stem and choices A-D. Only Q21 classified."
+  },
+  "officialTopics": {
+    "primary": "7.9",
+    "additional": [
+      "6.2"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "Must predict that raising T shifts an exothermic equilibrium toward reactants so Kc decreases (only temperature changes K)."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must use dH < 0 to know the forward reaction releases heat and how added heat affects K."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2022-56-1653",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["ion-dipole"], "supporting": ["solution-representations"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "over-tagged", "reason": "Promotes solution-representations to co-primary and adds bond-polarity, which is a routine prerequisite (knowing water's partial charges)." },
+  "notes": "Water orientation alone fixes the ion charges and a unique choice, so ion size (atomic-radius) is not required."
+}

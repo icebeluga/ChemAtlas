@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2008-1-29",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["ionization-energy"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "'Most difficult to oxidize' means hardest to remove an electron, i.e. the ionization-energy trend; choices come from the shared stimulus."
+}

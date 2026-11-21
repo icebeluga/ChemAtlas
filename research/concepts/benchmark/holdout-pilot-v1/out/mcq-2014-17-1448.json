@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2014-17-1448",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "bond-potential-energy"
+      ],
+      "supporting": [
+        "bond-order"
+      ]
+    }
+  },
+  "notes": "Well depth/position must be matched to N2 triple > O2 double bond strength and H2 shortest bond."
+}

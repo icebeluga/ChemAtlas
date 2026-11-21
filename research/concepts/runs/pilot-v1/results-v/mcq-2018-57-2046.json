@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2018-57-2046",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows stem and choices A-E but omits the Pb(s) <=> Pb(l) equation above the stem; recovered from page context."
+  },
+  "officialTopics": {
+    "primary": "9.3",
+    "additional": [
+      "9.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "Must apply dG = dH - TdS at the melting point to relate dH and TdS."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "Must recognize that solid and liquid are at equilibrium at the normal melting point, so dG = 0."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

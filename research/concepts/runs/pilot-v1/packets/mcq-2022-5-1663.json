@@ -1,0 +1,264 @@
+{
+  "questionId": "mcq-2022-5-1663",
+  "type": "FRQ",
+  "exam": "2022 AP Chemistry FRQ",
+  "year": "2022",
+  "number": 5,
+  "text": "NaHCO3(s)+H3C6H5O7(aq) →NaH2C6H5O7(aq)+H2O(l)+CO2(g)\n\n5. A student conducts a calorimetry experiment in which solid baking soda, NaHCO3, reacts with excess aqueous citric acid,\n  H3C6H5O7, as represented by the equation above. The student places 36.40 g of the H3C6H5O7 solution into a calorimeter\n   and measures the temperature. After 30 seconds, 8.00 g of NaHCO3 is added. The data are recorded in the following table\n   and graph.\n\n                                 Mass of H3C6H5O7(aq)        36.40 g\n                                 Mass of NaHCO3(s)            8.00 g\n                                           Total mass of reaction mixture  44.40 g\n                                                   Initial temperature             19.9 °C\n                                          Final temperature               3.2 °C\n\n\n\n\n\n     (a) Calculate the magnitude of q, in joules, for this mixture using the data in the table. Assume that the reaction mixture\n         in the calorimeter has a specific heat capacity of 4.22 J/(g·°C).\n\n     (b) Based on the collisions that occur between particles, explain why the graph shows temperature changing less rapidly\n        as time progresses in the experiment.\n\n     (c) Make a claim about the flow of heat between the reaction system and the surroundings during this experiment. The\n        claim should be consistent with the data in the graph.\n     (d) The student conducts a second experiment using 36.40 g of H3C6H5O7(aq) at an initial temperature of 19.9 °C.\n       However, the student adds only 4.00 g of NaHCO3(s). Would the temperature change in the second experiment be\n         greater than, less than, or equal to the temperature change in the first experiment? Justify your answer.",
+  "regions": [
+    {
+      "page": 1663,
+      "rect": [
+        30,
+        55,
+        590,
+        615
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 163,
+        "compiledPage": 1663
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "6.4"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "5.5"
+      ]
+    },
+    {
+      "partId": "c",
+      "label": "(c)",
+      "catalogTopics": [
+        "6.1",
+        "6.4"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "6.4",
+        "4.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.4",
+    "secondary": [
+      "6.1",
+      "5.5",
+      "4.5"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Rendered all original-PDF source regions at crop boundaries and visually checked the complete question against the source pages. Required stem, choices or FRQ subparts, equations, tables and diagrams are present; no unrelated neighboring question appears."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "65f261ed2e220267",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-5-1663-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 163,
+      "rect": [
+        30,
+        55,
+        590,
+        615
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-5-1663-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 163,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:endo-exothermic"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "limiting-reactant",
+      "name": "Limiting reactant and yield",
+      "definition": "Identifying the limiting reactant, calculating theoretical yield and excess reactant remaining, and calculating percent yield.",
+      "include": "Tag when the student must decide which reactant limits the reaction, or compute theoretical, actual or percent yield.",
+      "exclude": "Do not tag single-reactant stoichiometry with an obvious excess stated.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "collision-model",
+      "name": "Collision model and temperature effects",
+      "definition": "Explaining rate changes through collision frequency, the fraction of collisions with energy at least Ea (Maxwell-Boltzmann distribution), and correct orientation.",
+      "include": "Tag when a change in rate with temperature, concentration or orientation must be explained at the particle level.",
+      "exclude": "Numerical Arrhenius-equation calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "heat-transfer",
+      "name": "Heat transfer and thermal equilibrium",
+      "definition": "Heat flows from hotter to colder matter until thermal equilibrium; energy lost by one part equals energy gained by the other; temperature differs from thermal energy.",
+      "include": "Tag when the direction of heat flow, final temperature reasoning, or the particle explanation of heat transfer is required.",
+      "exclude": "Do not tag calorimetry calculations that only use q = mcΔT (tag calorimetry), unless thermal equilibrium itself is reasoned about.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:endo-exothermic",
+        "linked-from:calorimetry"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "kinetic-molecular-theory",
+      "name": "Kinetic molecular theory",
+      "definition": "Explaining gas behavior from particle motion: average kinetic energy proportional to absolute temperature, speed depending on molar mass, Maxwell-Boltzmann distributions, and pressure from collisions.",
+      "include": "Tag when particle speed, kinetic energy, collision frequency or a speed distribution must be compared or explained.",
+      "exclude": "Do not tag numerical ideal-gas calculations with no particle-level reasoning; numerical Graham's-law calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:collision-model"
+      ]
+    },
+    {
+      "conceptId": "reaction-representations",
+      "name": "Particle diagrams of reactions",
+      "definition": "Using particle-level drawings of reactants and products that conserve atoms and are consistent with the balanced equation, including showing limiting and excess reactants.",
+      "include": "Tag when a particulate representation of a reaction must be drawn, chosen or interpreted.",
+      "exclude": "Do not tag numerical stoichiometry with no particle representation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:limiting-reactant"
+      ]
+    },
+    {
+      "conceptId": "balanced-equations",
+      "name": "Writing and balancing chemical equations",
+      "definition": "Writing balanced chemical equations from descriptions or observations so that atoms are conserved, with correct formulas, coefficients and phases.",
+      "include": "Tag when the student must write or balance an equation that is not a net ionic or redox half-reaction equation.",
+      "exclude": "Do not tag when a balanced equation is given; use net-ionic-equations or redox-half-reactions for those equation types.",
+      "whyCandidate": [
+        "linked-from:reaction-stoichiometry"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "linked-from:endo-exothermic",
+        "linked-from:calorimetry"
+      ]
+    },
+    {
+      "conceptId": "ideal-gas-law",
+      "name": "Ideal gas law",
+      "definition": "Using PV = nRT and its proportionalities (Boyle, Charles, Avogadro) to calculate or predict gas quantities, including gas density and molar mass.",
+      "include": "Tag when a gas variable must be calculated or a P-V-T-n relationship predicted.",
+      "exclude": "Do not tag partial-pressure reasoning alone (tag partial-pressures) or kinetic-theory explanations (tag kinetic-molecular-theory).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "activation-energy",
+      "name": "Activation energy and energy profiles",
+      "definition": "Reading single- and multi-step reaction energy profiles: activation energy, transition states, intermediates, forward and reverse barriers, the rate-limiting barrier, and overall ΔH.",
+      "include": "Tag when an energy profile must be read, drawn or used, or activation energies compared.",
+      "exclude": "Do not tag simple enthalpy diagrams with no activation barrier (tag endo-exothermic).",
+      "whyCandidate": [
+        "linked-from:collision-model"
+      ]
+    },
+    {
+      "conceptId": "catalysis",
+      "name": "Catalysis",
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "whyCandidate": [
+        "linked-from:collision-model"
+      ]
+    }
+  ]
+}

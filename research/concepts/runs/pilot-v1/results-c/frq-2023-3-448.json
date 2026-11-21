@@ -1,0 +1,188 @@
+{
+  "questionId": "frq-2023-3-448",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Four pages show parts (a)-(g)(ii) with the rate data table and calorimetry temperature table. Catalog parts b-d and e-g refined into individual printed parts."
+  },
+  "officialTopics": {
+    "primary": "5.1",
+    "additional": [
+      "4.2",
+      "5.2",
+      "5.5",
+      "4.5",
+      "6.1",
+      "6.4",
+      "6.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write the net ionic equation, keeping CaCO3 solid and removing Cl- as a spectator."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "reaction-rate",
+          "evidence": "Must compare reaction times across trials, noting higher HCl concentration should shorten the time relative to trial 2, yet trial 5 takes longer."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret",
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "error-analysis"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "collision-model",
+          "evidence": "Must explain that smaller chunks expose more surface area, giving more frequent collisions between HCl and CaCO3 particles."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must use trials with equal particle size but different [HCl] (e.g., 1 vs 4) to show rate depends on [HCl], and evaluate the zero-order claim."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "justify",
+        "interpret"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "reaction-stoichiometry",
+          "evidence": "Must use the 1:2 CaCO3:HCl mole ratio to find HCl consumed by 1.00 g CaCO3."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molarity",
+          "evidence": "Must find initial moles of HCl from 1.00 M x 0.0500 L and convert the remaining moles back to molarity."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Must infer from the rising solution temperature that the direction of heat flow and thus the sign of delta H."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "g-i",
+      "primary": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": "Must apply q = mc(delta T) with 51.0 g, 4.0 J/(g C) and the 21.20 to 21.90 C change."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "g-ii",
+      "primary": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must divide q by moles of CaCO3 reacted (1:1 per mol rxn) and assign the algebraic sign from the direction of heat flow."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Part (b) sits between reaction-rate and collision-model; it is a data-consistency argument rather than a particle-level explanation."
+}

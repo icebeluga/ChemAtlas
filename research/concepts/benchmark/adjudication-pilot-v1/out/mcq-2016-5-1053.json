@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2016-5-1053",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["bond-order"], "supporting": ["lewis-structures"] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Bond multiplicities are not given, so deriving the Lewis structures is a non-trivial supporting step; not bond-enthalpy (no ΔH estimate)."
+}

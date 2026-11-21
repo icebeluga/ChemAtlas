@@ -1,0 +1,109 @@
+{
+  "questionId": "mcq-2024-33-2094",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 33,
+  "text": "2PCI3(g) + O2(g) > 2POCK(s)\n\n31, At 398 K the reaction shown has a AH® of —543 kJ /mol,,, and a AS° of —178 J/(K - mol,,,). The reaction\nis run at both 398 K and 798K, Which of the following correctly identifies the thermodynamic favorability for\nthe reaction at the two temperatures? (Assume that AH° and AS° do not change with temperature.)\n\nAt398K At798K\n\nA| Unfavorable Favorable\nB| Unfavorable Unfavorable\nC| Favorable Favorable\nD| Favorable Unfavorable\n(A) A\n(B) B\n\n() Cc\n() D\n\n32. A student determines the concentration of an NaBr(aq) solution by adding AgNO,(aq) until no more AgBr(s)\nprecipitate is formed. The precipitate is filtered out of the solution and then dried and weighed. The student\nuses the mass of the precipitate to determine the concentration of the NaBr(aq) solution. Which of the\nfollowing could result in the student calculating a concentration of NaBr(aq) that is higher than the actual\n\nconcentration?\n\n(A) The AgBr(s) was not completely dried before being weighed.\n(B) Some of the AgBr(s) fell off the filter paper onto the balance while being weighed.\n(C) An insufficient amount of AgNO,(aq) was added, so some NaBr(aq) was left in solution.\n\n(D) The filter paper had a hole in it, and some of the AgBr(s) precipitate washed through the filter paper.\n\neae ere rea. 2 2205 GO ON TO THE N\n\nmessages.pdf_cover_qr_code_label\n© studocu eee econ\n\n",
+  "regions": [
+    {
+      "page": 2094,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 294,
+        "compiledPage": 2094
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [
+    "Question number was not legible in OCR; source page retained and needs visual verification."
+  ],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "question-number-not-confirmed",
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "47b92b88b02a42be",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-33-2094-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 294,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-33-2094-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 294,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "gibbs-free-energy",
+      "name": "Gibbs free energy and favorability",
+      "definition": "Using ΔG° = ΔH° - TΔS° and the signs of ΔH and ΔS to determine thermodynamic favorability and the temperature at which favorability changes.",
+      "include": "Tag when ΔG must be calculated or its sign reasoned from ΔH and ΔS, or a crossover temperature found.",
+      "exclude": "Do not tag ΔG-K or ΔG-E relationships alone (tag free-energy-equilibrium or cell-potential).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

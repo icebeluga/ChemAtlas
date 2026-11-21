@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "about": "Problems in public/student-questions.json found during the concept pilot. Reported here; the catalog itself has not been changed. Page fixes the pipeline applies are in content-supplements.json. All found by AI reviewers (Claude; GPT-6 where noted), not confirmed by a human.",
+  "issues": [
+    {
+      "questionId": "frq-2003-3-536",
+      "kind": "identity",
+      "detail": "The page is printed as the 2017 AP Chemistry FRQ 3, not 2003.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "kind": "identity",
+      "detail": "The page header reads 2002 AP Chemistry Form B Question 3, not 2011.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "mcq-2024-21-2091",
+      "kind": "wrong-page",
+      "detail": "Catalog page 2091 prints Questions 23-25 (OCR read '23.' as '21.'); printed Question 21 is on page 2089. Supplement applied.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "mcq-2024-33-2094",
+      "kind": "wrong-page",
+      "detail": "Catalog page 2094 prints Questions 31-32; printed Question 33 is on page 2095. Supplement applied.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "mcq-2022-62-1709",
+      "kind": "type",
+      "detail": "Typed MCQ but is a free-response item taken from a scoring-guide page.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "mcq-2023-67-1808",
+      "kind": "type",
+      "detail": "Typed MCQ but is a free-response item taken from a scoring-guide page.",
+      "alsoReportedBy": "GPT-6 independent AI review (2026-11-14)"
+    },
+    {
+      "questionId": "mcq-2018-36-1207",
+      "kind": "unregistered-stimulus",
+      "detail": "Questions 35-38 share an eggshell experiment on page 1206 that is not in research/stimuli.json. Supplement applied for Q36."
+    },
+    {
+      "questionId": "mcq-2014-33-185",
+      "kind": "unregistered-stimulus",
+      "detail": "2014 practice exam Questions 29-33 share a PCl5 equilibrium stimulus on page 184 that is not in research/stimuli.json. Supplement applied for Q33."
+    },
+    {
+      "questionId": null,
+      "kind": "field-consistency",
+      "detail": "572 records have a primaryUnit that is null or disagrees with primaryTopic."
+    },
+    {
+      "questionId": "mcq-2002-38-614",
+      "kind": "ocr-merged-columns",
+      "detail": "OCR text interleaves two page columns and includes another question's text; printed Question 38 is about spectrophotometry. Reported by GPT-6; confirmed by Claude from the catalog text."
+    },
+    {
+      "questionId": "frq-2005-7-13",
+      "kind": "grouped-subparts",
+      "detail": "Printed (i)/(ii) subparts under (a)-(d) are grouped in the catalog's part list. Reported by GPT-6."
+    },
+    {
+      "questionId": "frq-2011-3-946",
+      "kind": "grouped-subparts",
+      "detail": "The catalog groups (c) onward; the page separately asks (c)(i)/(ii) and (d)(i)/(ii). Reported by GPT-6; consistent with the blind adjudicator's part split."
+    },
+    {
+      "questionId": "mcq-2008-44-39",
+      "kind": "paraphrased-text",
+      "detail": "The catalog fullText is a one-line paraphrase, not the printed question text. Found by Claude during the GPT-6 analysis."
+    },
+    {
+      "questionId": "frq-2024-5-2125",
+      "kind": "exam-form",
+      "detail": "Not a typo in the question number: this is a different exam form from the released 2024 FRQs (released Q5, HI equilibrium, is frq-2024-5-476 on bank-02 p176). The bank-08 set (frq-2024-1-2111 … frq-2024-7-2127 and the MCQs from compiled page 2079) is a scanned physical exam booklet with no year or form code on the examined pages; the year comes only from the uploader's title on a document-sharing cover page (bank-07 p278). Layout fits the 2014–2024 format. Most likely an unreleased 2024 form (international or alternate), unconfirmed. Record not changed. Details: docs/concept-classification/source-identity-frq-2024-5-2125.md."
+    },
+    {
+      "questionId": null,
+      "kind": "wrong-source-type",
+      "detail": "bank-08 p28 (compiled page 2128) is the cover of a separate shared document titled \"Unit 1 Progress Check MCQ\" and p59 is headed \"Unit 3 Progress Check: MCQ\" (AP Classroom), yet the 28 catalog records on compiled pages 2129–2159 are labelled as 2024 exam MCQs (mcq-2024-*). Only those two pages were inspected. Found by Claude while checking frq-2024-5-2125; records not changed."
+    },
+    {
+      "questionId": null,
+      "kind": "misparsed-questions",
+      "detail": "frq-2024-1-480, frq-2024-3-480 and frq-2024-5-480 are numbered procedure steps inside released 2024 FRQ 7 (bank-02 p180), parsed as separate questions. Found by Claude from the catalog text; records not changed."
+    },
+    {
+      "questionId": null,
+      "kind": "possible-wrong-year",
+      "detail": "Two further 'frq-2024-*' sets (bank-02 p184–198 and the 'Version J' set on p201–212) use A/B part labels, which suggests the post-2024 exam format. Not verified; flagged for a check."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2016-9-1056",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the titration curve (pH vs volume of base), the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "8.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "titration-curves",
+          "evidence": "Must read the initial pH, the buffer region and the equivalence-point pH above 7 from the curve to identify the acid and base strengths."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "Choices classify the acid and base as strong or weak; the classification follows from the curve reading."
+        }
+      ],
+      "actions": [
+        "interpret",
+        "explain"
+      ],
+      "representations": [
+        "titration-curve"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

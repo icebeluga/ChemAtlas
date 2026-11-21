@@ -1,0 +1,197 @@
+{
+  "questionId": "frq-2011-6-937",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Page 37 shows (a), (b)(i) with given Lewis diagram; continuation page 38 shows (b)(ii) and (c)(i)-(iv) with pressure-time graph. All legible."
+  },
+  "officialTopics": {
+    "primary": "2.7",
+    "additional": [
+      "2.5",
+      "3.1",
+      "3.3",
+      "3.4"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a-i",
+      "primary": [
+        {
+          "conceptId": "hybridization",
+          "evidence": "Asks for the hybridization of the labeled carbon Cw in the given structure."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "electron-domains",
+          "evidence": "Must count three electron domains around Cw (single bond to H, single bond to O, one double bond counting as one domain)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "a-ii",
+      "primary": [
+        {
+          "conceptId": "bond-angles",
+          "evidence": "Asks for a numerical estimate of the H-Cx-O angle and the basis for it."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "molecular-geometry",
+          "evidence": "Must recognize four electron domains around Cx, giving tetrahedral geometry, to justify the estimate."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "explain"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b-i",
+      "primary": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw the complete Lewis diagram of HCOOH, counting valence electrons and placing lone pairs and the C=O double bond."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b-ii",
+      "primary": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must orient a methanoic acid and a water molecule so that an H on O bonds to a lone pair on O of the other molecule."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must draw complete Lewis diagrams of both molecules showing lone pairs that act as acceptors."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "lewis-structure"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-i",
+      "primary": [
+        {
+          "conceptId": "particulate-states",
+          "evidence": "Liquid ethyl methanoate vaporizes into the gas phase, adding gas-phase particles."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "ideal-gas-law",
+          "evidence": "More moles of gas in a rigid container at constant T raises total pressure."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-ii",
+      "primary": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Constant pressure with liquid remaining means the evaporation and condensation rates are equal at the molecular level."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c-iii",
+      "primary": [
+        {
+          "conceptId": "partial-pressures",
+          "evidence": "Must find the vapor partial pressure by subtracting the unchanged argon partial pressure from the total pressure read off the graph (Dalton)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    },
+    {
+      "partId": "c-iv",
+      "primary": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Adding more liquid does not change the equilibrium vapor pressure at fixed temperature because evaporation and condensation rates remain balanced."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "partial-pressures",
+          "evidence": "The question is about the partial pressure of the vapor component after the change."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Parts c-i, c-iii and c-iv have loose concept boundaries (vapor pressure is not a listed concept); chose particulate-states, partial-pressures and dynamic-equilibrium as nearest fits."
+}

@@ -1,0 +1,55 @@
+{
+  "questionId": "mcq-2023-67-1808",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Item is a free-response question from a scoring-guide page: page 8 crop shows absorbance spectrum, parts (a),(b) and standard curve; continuation page 9 shows (c),(d) with two-student calibration graph. Scoring guide answers visible on continuation were ignored."
+  },
+  "officialTopics": {
+    "primary": "3.13",
+    "additional": [
+      "3.7"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "beer-lambert",
+          "evidence": "Parts a, c, d: choose the peak-absorbance wavelength, read concentration from the standard curve, and relate a lower calibration slope to a procedural error."
+        },
+        {
+          "conceptId": "dilution",
+          "evidence": "Part b: use M1V1 = M2V2 to find the stock volume for 250.0 mL of the target concentration."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "justify",
+        "calculate",
+        "interpret",
+        "evaluate-error"
+      ],
+      "representations": [
+        "graph",
+        "spectrum",
+        "text-only",
+        "calibration-curve"
+      ],
+      "skills": [
+        "graph-analysis",
+        "dimensional-analysis",
+        "error-analysis",
+        "experimental-design"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Item is a four-part free response typed as one stem; parts a-d merged into a single part."
+}

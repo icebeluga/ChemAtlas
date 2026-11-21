@@ -1,0 +1,119 @@
+{
+  "questionId": "frq-2009-5-325",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the thermodynamic data table and all of question 5 (a)-(f)."
+  },
+  "officialTopics": {
+    "primary": "7.3",
+    "additional": [
+      "7.9",
+      "9.5",
+      "6.7",
+      "9.4",
+      "6.9",
+      "9.2",
+      "9.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a–c",
+      "primary": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "(a) Must write Kp for X omitting solid carbon."
+        },
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "(b) Must predict how Kp changes with temperature for the endothermic reaction X."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "free-energy-equilibrium",
+          "evidence": "(c) Must relate positive Delta G of +29 kJ/mol to K less than 1."
+        },
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "(b) Positive Delta H sets the direction K changes with temperature."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "bond-enthalpy",
+          "evidence": "Must relate positive Delta H to more energy required to break reactant bonds than released forming product bonds."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "compare",
+        "explain"
+      ],
+      "representations": [
+        "table"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e–f",
+      "primary": [
+        {
+          "conceptId": "thermodynamic-kinetic-control",
+          "evidence": "(e) Must recognize thermodynamic data (Delta G) do not indicate reaction rate."
+        },
+        {
+          "conceptId": "entropy",
+          "evidence": "(f-i) Must predict the sign of Delta S for 2 mol gas becoming 1 mol gas plus a solid."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hess-law",
+          "evidence": "(f-ii) Must obtain Delta H for Z by combining the equations for X and Y (reverse of their sum)."
+        },
+        {
+          "conceptId": "gibbs-free-energy",
+          "evidence": "(f-iii) Must determine that the forward reaction is favored from Delta G for Z."
+        },
+        {
+          "conceptId": "ideal-gas-law",
+          "evidence": "(f-iii) Pressure at fixed T and V tracks total moles of gas, which fall from 2 to 1."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "calculate",
+        "justify",
+        "explain"
+      ],
+      "representations": [
+        "table",
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

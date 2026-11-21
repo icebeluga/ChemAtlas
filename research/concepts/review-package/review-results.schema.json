@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://chematlas.local/schemas/chematlas-ai-review-v1.json",
+  "title": "ChemAtlas independent AI review results",
+  "type": "object",
+  "required": ["format", "reviewer", "questions"],
+  "properties": {
+    "format": { "const": "chematlas-ai-review/v1" },
+    "reviewer": {
+      "type": "object", "required": ["model"],
+      "properties": { "model": { "type": "string", "minLength": 1 }, "interface": { "type": "string" }, "notes": { "type": "string" } }
+    },
+    "reviewedAt": { "type": "string" },
+    "batch": { "type": "string" },
+    "questions": { "type": "array", "items": { "$ref": "#/$defs/question" } },
+    "conventions": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "recommendation", "rationale"],
+        "properties": {
+          "id": { "type": "string" }, "recommendation": { "type": "string" }, "proposedRule": { "type": "string" },
+          "rationale": { "type": "string" }, "confidence": { "enum": ["high", "medium", "low"] }
+        }
+      }
+    },
+    "correctionChecks": {
+      "type": "array",
+      "items": { "type": "object", "required": ["questionId", "result"], "properties": { "questionId": { "type": "string" }, "result": { "enum": ["confirmed", "rejected", "unsure"] }, "note": { "type": "string" } } }
+    },
+    "taxonomyIssues": { "type": "array", "items": { "type": "object", "properties": { "kind": { "type": "string" }, "detail": { "type": "string" }, "conceptIds": { "type": "array", "items": { "type": "string" } }, "questionIds": { "type": "array", "items": { "type": "string" } } } } },
+    "catalogIssues": { "type": "array", "items": { "type": "object", "properties": { "questionId": { "type": ["string", "null"] }, "kind": { "type": "string" }, "detail": { "type": "string" } } } },
+    "packageIssues": { "type": "array", "items": { "type": "object", "properties": { "questionId": { "type": ["string", "null"] }, "detail": { "type": "string" } } } }
+  },
+  "$defs": {
+    "conceptList": { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "uniqueItems": true },
+    "part": {
+      "type": "object", "required": ["primary", "supporting"],
+      "properties": {
+        "primary": { "allOf": [{ "$ref": "#/$defs/conceptList" }, { "minItems": 1, "maxItems": 2 }] },
+        "supporting": { "$ref": "#/$defs/conceptList" },
+        "contextual": { "$ref": "#/$defs/conceptList" },
+        "rationale": { "type": "string" }
+      }
+    },
+    "question": {
+      "type": "object", "required": ["questionId", "contentStatus"],
+      "properties": {
+        "questionId": { "type": "string" },
+        "contentStatus": { "enum": ["complete", "partial", "unreadable", "ambiguous"] },
+        "contentIssues": { "type": "array", "items": { "type": "string" } },
+        "independent": { "type": "object", "properties": { "parts": { "type": "object", "additionalProperties": { "$ref": "#/$defs/part" } } } },
+        "confidence": { "enum": ["high", "medium", "low", ""] },
+        "comparison": {
+          "type": "object",
+          "properties": {
+            "verdict": { "enum": ["agree", "minor-differences", "over-tagged", "under-tagged", "wrong-primary", "wrong-role", "wrong-content-status", ""] },
+            "findings": {
+              "type": "array",
+              "items": {
+                "type": "object", "required": ["partId", "issue", "explanation"],
+                "properties": {
+                  "partId": { "type": "string" }, "conceptId": { "type": "string" },
+                  "issue": { "enum": ["missing", "incorrect", "unnecessary", "wrong-role"] },
+                  "claudeRole": { "enum": ["primary", "supporting", "contextual", "none"] },
+                  "proposedRole": { "enum": ["primary", "supporting", "contextual", "none"] },
+                  "explanation": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "changedMindAfterComparison": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "questionId": "frq-2005-4-10",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the full instructions, example and situations (a)-(h). Legacy reaction-prediction format: write reactants and products in net ionic form; students answer any five."
+  },
+  "officialTopics": {
+    "primary": "4.2",
+    "additional": [
+      "4.7",
+      "4.8"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write Zn + Ni2+ -> Zn2+ + Ni, omitting spectator nitrate ions."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "reaction-types",
+          "evidence": "Must recognize a single-replacement redox reaction to predict the products."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "descriptive-chemistry",
+          "evidence": "Must recall that Al(OH)3 dissolves in concentrated OH- to form the complex ion Al(OH)4-, which is beyond AP reaction-type reasoning."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "reaction-types",
+          "evidence": "Must recognize combustion of a hydrocarbon to predict CO2 and H2O as products."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "organic-chemistry",
+          "evidence": ""
+        }
+      ],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write CaCO3(s) and molecular CH3COOH reacting to give Ca2+, CH3COO-, CO2 and H2O, keeping solid and weak acid un-ionized."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "strong-weak-acids",
+          "evidence": "Must recognize acetic acid as a weak acid so it is written as molecules, not ions."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "reaction-types",
+          "evidence": "Must recognize a direct combination (redox) of Li with N2 to predict a nitride product."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "ionic-formulas",
+          "evidence": "Must use Li+ and N3- charges to write the product formula Li3N."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "descriptive-chemistry",
+          "evidence": "Must predict the Lewis acid-base adduct F3BNH3, which relies on Lewis acid-base chemistry not assessed in the current CED."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "g",
+      "primary": [
+        {
+          "conceptId": "descriptive-chemistry",
+          "evidence": "Must recall that SO3 acts as an acidic oxide and reacts with OH- to form sulfate (or hydrogen sulfate) and water."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must represent NaOH as OH- ions and omit Na+ spectators."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "h",
+      "primary": [
+        {
+          "conceptId": "net-ionic-equations",
+          "evidence": "Must write Pb2+ + I- -> PbI2, omitting Mg2+ and NO3- spectators."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "precipitation",
+          "evidence": "Must identify PbI2 as the precipitate since magnesium nitrate is soluble (nitrate rule)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "write-equation",
+        "predict"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Legacy 'write the reactants and products' format; parts b, f, g rely on descriptive chemistry outside the current CED. Part c also requires knowing ethyne is C2H2 (organic naming, tagged contextual)."
+}

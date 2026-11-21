@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-1984-84-135",
+  "contentCheck": {
+    "sawImage": true,
+    "status": "complete",
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E; matches page context."
+  },
+  "officialTopics": {
+    "primary": "3.8",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "colligative-properties",
+          "evidence": "Must rank boiling-point elevation by total solute particle concentration, i.e. molarity times number of ions per formula unit (0.10 M K2SO4 gives 0.30 M particles)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "compare"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Boiling-point elevation is beyond the current AP course; officialTopics 3.8 chosen only for dissociation into ions."
+}

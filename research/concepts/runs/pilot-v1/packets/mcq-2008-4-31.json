@@ -1,0 +1,228 @@
+{
+  "questionId": "mcq-2008-4-31",
+  "type": "MCQ",
+  "exam": "2008 AP Chemistry MCQ · Version indicated in source",
+  "year": "2008",
+  "number": 4,
+  "text": "Questions 4-6\n\n A solution of a weak monprotic acid is titrated\nwith a solution of a strong base, KOH. Consider\nthe points labeled (A) through (E) on the titration\ncurve that results, as shown below.\n\n4.  The point at which the moles of the added strong\n    base are equal to the moles of the weak acid\n     initially present.",
+  "regions": [
+    {
+      "page": 31,
+      "rect": [
+        32,
+        405,
+        300,
+        454
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 31,
+        "compiledPage": 31
+      }
+    }
+  ],
+  "stimulus": [
+    {
+      "id": "stimulus-2008-mcq-4-6-page31",
+      "sourceDocument": "/source/bank-01.pdf",
+      "regions": [
+        {
+          "page": 31,
+          "rect": [
+            32,
+            65,
+            300,
+            405
+          ]
+        }
+      ],
+      "questionIds": [
+        "mcq-2008-4-31",
+        "mcq-2008-5-31",
+        "mcq-2008-6-31"
+      ],
+      "verificationStatus": "visually_verified",
+      "verificationNote": "Page 31 explicitly labels Questions 4–6; includes weak-acid titration setup and full titration curve with A-E points."
+    }
+  ],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "8.5"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.5",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Compared complete individual crop for Question 4 against original 2008 source page. Common context is linked via stimulus-2008-mcq-4-6-page31; individual stem and choices are separate and complete."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "3156b4edb6046976",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-4-31-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        32,
+        405,
+        300,
+        454
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2008-4-31-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": null
+    },
+    {
+      "kind": "stimulus",
+      "path": "research/concepts/runs/pilot-v1/images/stimulus-2008-mcq-4-6-page31-1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 31,
+      "rect": [
+        32,
+        65,
+        300,
+        405
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "titration-curves",
+      "name": "Acid-base titration curves",
+      "definition": "Interpreting pH titration curves: equivalence-point pH, half-equivalence where pH = pKa, buffer regions, major species along the curve, and polyprotic steps.",
+      "include": "Tag when a titration curve must be read, sketched or used, or the species present at a point in a titration identified.",
+      "exclude": "Numerical species concentrations along polyprotic curves are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "acid-base-mixtures",
+      "name": "Acid-base reactions and mixtures",
+      "definition": "Determining the products, major species and pH after mixing acids and bases, treating strong-reactant reactions as going to completion and handling the remaining excess or conjugate.",
+      "include": "Tag when the composition or pH after mixing an acid and a base must be determined.",
+      "exclude": "Do not tag titration-curve interpretation (tag titration-curves) unless a post-mixing calculation is required.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:titration-curves"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:titration-analysis"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

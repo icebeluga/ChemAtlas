@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2002-67-765",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "3.1",
+    "additional": [
+      "3.3"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "imf-properties",
+          "evidence": "Must recognize that vaporization overcomes intermolecular attractions rather than breaking covalent or ionic bonds."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "hydrogen-bonding",
+          "evidence": "Must know which type of attraction acts between H2O molecules in the liquid."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Borderline between imf-properties and hydrogen-bonding as primary; the question asks which attraction breaks, but the distractors test intermolecular versus intramolecular forces."
+}

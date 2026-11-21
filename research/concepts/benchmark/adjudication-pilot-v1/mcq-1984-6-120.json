@@ -1,0 +1,70 @@
+{
+ "questionId": "mcq-1984-6-120",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-1984-6-120.json",
+ "proposalX": {
+  "contentCheck": {
+   "sawImage": true,
+   "status": "complete",
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Two crops: shared answer list A-E (HF, CO2, Al(OH)3, NH3, H2O2) and stem 6; both match the page context (pages are identical)."
+  },
+  "officialTopics": {
+   "primary": "4.7",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "descriptive-chemistry",
+      "evidence": "Requires recalled industrial knowledge that ammonia is the main feedstock for fertilizers, not reasoning from AP concepts."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "none",
+   "notes": "Two crops: the shared answer list (A-E) and the question 6 stem. Both legible."
+  },
+  "officialTopics": {
+   "primary": "4.1",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "descriptive-chemistry",
+      "evidence": "Requires recalling a memorized industrial use of a listed substance; not derivable from AP reaction or structure principles."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "identify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

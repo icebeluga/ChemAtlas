@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2014-34-186",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop r1 cuts off the right side of the stimulus (the given dH = -437 kJ/mol and the table's dH column); the page context shows them. Crop r2 shows the stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "6.6",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Must reverse the formation reaction of KCl (changing the sign of dH) and scale it to 0.050 mol Cl2, which corresponds to 0.10 mol KCl, to find the heat absorbed or released."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

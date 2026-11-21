@@ -1,0 +1,13 @@
+{
+  "questionId": "mcq-2014-12-176",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "gibbs-free-energy"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Sign analysis of dH and dS for temperature-dependent favorability; entropy signs are given so entropy is not tagged."
+}

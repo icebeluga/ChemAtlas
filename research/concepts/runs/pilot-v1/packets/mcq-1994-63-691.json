@@ -1,0 +1,96 @@
+{
+  "questionId": "mcq-1994-63-691",
+  "type": "MCQ",
+  "exam": "1994 AP Chemistry MCQ",
+  "year": "1994",
+  "number": 63,
+  "text": "63. The graph above shows the resultsof a study of the reaction of X\n               with a large excess of Y to yield 2. The concentrationsof X and\n            Y were measuredover a period of time. According to the results,\n              which of the following can be concluded about the rate law for the\n                reaction under the conditions studied?\n                 (A)  It is zero order in [Xl.\n                 (B)   It is first order in [X].\n                 (C)  It is secondorder in  [Xl.\n                 (D)  It is first order in  [ YJ.\n                 (E) The overall order of the reaction is 2.\n\n\n\n\n\nU~uthorizd    copyin   or reusing\nany part of this pago Bs illoffal.",
+  "regions": [
+    {
+      "page": 691,
+      "rect": [
+        0,
+        487.5679931640625,
+        597,
+        736
+      ],
+      "source": {
+        "pdf": "public/source/bank-03.pdf",
+        "localPage": 91,
+        "compiledPage": 691
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "a49b1f989e1f4b0f",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1994-63-691-r1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 91,
+      "rect": [
+        0,
+        487.5679931640625,
+        597,
+        736
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-1994-63-691-page1.png",
+      "pdf": "public/source/bank-03.pdf",
+      "page": 91,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

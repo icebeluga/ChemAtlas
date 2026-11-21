@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2008-13-32",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop shows only the item line; the shared ΔH/ΔS choice list (A-E) for questions 12-14 is in the stimulus image and on the page."
+  },
+  "officialTopics": {
+    "primary": "6.5",
+    "additional": [
+      "9.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "phase-change-energy",
+          "evidence": "Must know that vaporization of water absorbs heat, so ΔH > 0."
+        },
+        {
+          "conceptId": "entropy",
+          "evidence": "Must predict ΔS > 0 because liquid water becomes gas."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "predict"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

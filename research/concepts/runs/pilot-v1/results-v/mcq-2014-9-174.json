@@ -1,0 +1,47 @@
+{
+  "questionId": "mcq-2014-9-174",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the first line ('A 100 g sample of a metal was heated to 100°C'); page context shows the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "6.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "heat-transfer",
+          "evidence": "Must recognize that in an insulated system the thermal energy lost by the metal equals that gained by the water, even though their temperature changes differ."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "calorimetry",
+          "evidence": ""
+        }
+      ],
+      "actions": [
+        "evaluate-procedure",
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

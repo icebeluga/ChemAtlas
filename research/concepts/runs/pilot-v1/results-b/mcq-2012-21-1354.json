@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2012-21-1354",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop omits the reaction equation (X + 2Y -> Z + 3Q); page context shows it."
+  },
+  "officialTopics": {
+    "primary": "5.1",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "reaction-rate",
+          "evidence": "Must relate the rate of loss of X to the rate of loss of Y using the 1:2 coefficient ratio."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

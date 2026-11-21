@@ -1,0 +1,511 @@
+{
+  "generatedAt": "2026-11-14T14:44:45.184Z",
+  "note": "Found by model classifiers comparing crops with full pages; not human-confirmed. The image-review service was not changed.",
+  "counts": {
+    "wrong-question": 1,
+    "missing-content": 6,
+    "no-crop": 6,
+    "extra-content": 8,
+    "missing-content-recovered-from-page": 24
+  },
+  "rows": [
+    {
+      "questionId": "mcq-2024-33-2094",
+      "cropIssue": "wrong-question",
+      "diagramStatus": "none",
+      "priority": 0,
+      "action": "Re-locate the question: the cited page shows a different question.",
+      "classifierNote": "Id says Q33, but the crop and page show only printed Q31 (ΔG favorability of 2 PCl3 + O2) and Q32 (gravimetric NaBr error). Q33 is not visible on any provided image, so it cannot be classified.",
+      "supplement": {
+        "mode": "replace",
+        "pages": [
+          2095
+        ],
+        "catalogCorrection": "Point mcq-2024-33 at page 2095 and replace its fullText; the current text is printed Questions 31-32."
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "frq-2011-6-937",
+      "cropIssue": "missing-content",
+      "diagramStatus": "analyzed",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Crop and page show parts (a)(i), (a)(ii) and (b)(i) with the ethyl methanoate Lewis diagram, but (b) continues on a following page (the stem also promises kinetic molecular theory) that is not in the packet; remaining parts cannot be seen.",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          938
+        ],
+        "catalogCorrection": null
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "frq-2024-3-2119",
+      "cropIssue": "missing-content",
+      "diagramStatus": "partially-readable",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Crops r1-r3 (pages 10-12 of the scan) show parts (a), (b), (c)(i)-(ii), (d)(i)-(ii) and (e)(i)-(ii) with the C5H10NH partial-pressure graph, all legible. The catalog lists parts f-i and f-ii, but the continuation page carrying part (f) is not in the packet and is not visible on any page context.",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          2122
+        ],
+        "catalogCorrection": null
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-36-1207",
+      "cropIssue": "missing-content",
+      "diagramStatus": "none",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Crop and page show only the stem and choices; the eggshell experiment stimulus (sample mass and measured data) shared by Q35-38 is on an earlier page not included in the packet, so the required data cannot be seen.",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          1206
+        ],
+        "catalogCorrection": null
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2022-62-1709",
+      "cropIssue": "missing-content",
+      "diagramStatus": "partially-readable",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Scoring-guide page shows the shared stem (baking soda + citric acid calorimetry), data table, temperature-time graph and parts (a) and (b) only; catalog parts (c) and (d) are on a continuation page that is not provided.",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          1710
+        ],
+        "catalogCorrection": "This record is typed MCQ but is a free-response item taken from a scoring-guide page; consider re-typing or replacing with the clean question source."
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2023-67-1808",
+      "cropIssue": "missing-content",
+      "diagramStatus": "partially-readable",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Scoring-guide page shows the Ni(ClO4)2 spectrophotometry stem, absorbance spectrum, parts (a) and (b), and a standard curve that belongs to a later part; the continuation page with the remaining part(s) is not provided. Catalog lists only a single stem part.",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          1809
+        ],
+        "catalogCorrection": "This record is typed MCQ but is a free-response item taken from a scoring-guide page; consider re-typing or replacing with the clean question source."
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2024-21-2091",
+      "cropIssue": "missing-content",
+      "diagramStatus": "unreadable",
+      "priority": 1,
+      "action": "Add the missing page or region (continuation page, shared stimulus, cut-off part).",
+      "classifierNote": "Crop and page context are the same scanned page (-17-) showing questions numbered 23 (or 21; scan ambiguous), 24 and 25 about 'Sample 1-4' of acid. The shared stimulus describing the four acid samples (table or diagram, on a preceding page) is not in the packet, so the samples cannot be distinguished. The question number on the page does not clearly match 21.",
+      "supplement": {
+        "mode": "replace",
+        "pages": [
+          2089
+        ],
+        "catalogCorrection": "Point mcq-2024-21 at page 2089 and replace its fullText; the current text is printed Question 23."
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "frq-2020-sample-2-116",
+      "cropIssue": "no-crop",
+      "diagramStatus": "analyzed",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Three full-page images cover the whole question: mechanism and energy diagram (a)-(c), structures/vapor-pressure table and titration data (d)-(f), buret drawing (g) and (h). All legible.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-41-38",
+      "cropIssue": "no-crop",
+      "diagramStatus": "analyzed",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Full-page image only; Q41 initial particle diagram (3 H2, 3 N2), equation and diagrams A-E are legible. Packet text is a paraphrase.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-44-39",
+      "cropIssue": "no-crop",
+      "diagramStatus": "none",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Full-page image only; Q44 (Cl2 + 2 I- -> 2 Cl- + I2, choices A-E) is legible. Packet text is a paraphrase.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-57-41",
+      "cropIssue": "no-crop",
+      "diagramStatus": "analyzed",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Full-page image only; Q57 (H-C≡C-H structure, stem and choices A-E) is fully legible. Packet text is a paraphrase, not the printed stem.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-59-42",
+      "cropIssue": "no-crop",
+      "diagramStatus": "analyzed",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Full-page image only; Q59 particle diagram (NO2 and N2O4 in 1.0 L), equation and choices A-E are legible. Packet text is a paraphrase.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-practice-24-180",
+      "cropIssue": "no-crop",
+      "diagramStatus": "none",
+      "priority": 2,
+      "action": "Draw a crop; only the full page exists.",
+      "classifierNote": "Full-page image only; Q24 (overall equation, two-step mechanism with fast reversible step 1 and slow step 2, choices A-D) is fully legible. Packet text is a paraphrase.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2002-41-759",
+      "cropIssue": "extra-content",
+      "diagramStatus": "none",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop includes the end of the previous question's solubility graph; Q41 stem and choices A-E are complete.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2016-27-1064",
+      "cropIssue": "extra-content",
+      "diagramStatus": "analyzed",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop shows stem and Lewis diagrams A-D (CF4, NF3, SO3, SO2) plus a partial footer; lone pairs legible.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2016-5-1053",
+      "cropIssue": "extra-content",
+      "diagramStatus": "none",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop shows full stem and choices A-D plus a partial footer line.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2017-30-1137",
+      "cropIssue": "extra-content",
+      "diagramStatus": "analyzed",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop is the whole page and also contains Q31 (half-reaction table); Q30 stem and structural diagrams A-D are complete.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2017-42-1144",
+      "cropIssue": "extra-content",
+      "diagramStatus": "none",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop is the whole page: shared stimulus (equation, Kp, three-step mechanism with ΔH values), question 42 with choices A-D, and the neighbouring question 43.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2023-33-1727",
+      "cropIssue": "extra-content",
+      "diagramStatus": "analyzed",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop shows Q33 stem and choices plus the partially cut shared equation; full stimulus with Lewis structures visible on page context. The stimulus is not needed to answer.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2024-19-2088",
+      "cropIssue": "extra-content",
+      "diagramStatus": "none",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop is the whole page and also contains Q20 (NO2 kinetics graph); Q19 stem and choices A-D are complete and legible.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2024-60-2110",
+      "cropIssue": "extra-content",
+      "diagramStatus": "analyzed",
+      "priority": 3,
+      "action": "Tighten the crop; it includes neighbouring questions.",
+      "classifierNote": "Crop is the whole page with Q57-Q60; Q60 (isotope mass/abundance table and choices A-D) is complete and legible. Question number taken from the id since OCR could not read it.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-1994-63-691",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop omits the concentration-time graph above the stem; page context shows it legibly ([X] halves every hour, [Y] constant near 4.00 M).",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2002-38-614",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop is a near-full-page region: it cuts off the first line of the Q38 stem and includes Q35-37 and Q39. Page context shows the complete Q38 stem, statements I-III and choices A-E.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-11-31",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows only the item line; the shared choice list (A-E) for questions 10-11 is in the stimulus image and on the page.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2008-13-32",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows only the item line; the shared ΔH/ΔS choice list (A-E) for questions 12-14 is in the stimulus image and on the page.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2012-21-1354",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop omits the reaction X + 2 Y -> Z + 3 Q above the stem; page context shows it.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-12-176",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop clips the right edge of the stem ('...but becomes favored as'); full stem, ΔH°/ΔS° table and choices A-D visible on page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-15-178",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop omits the start of the stem and the shared titration curve (questions 14-17); page context shows the curve with point U at about 60 mL, past equivalence, and particulate choices A-D.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-22-180",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop starts mid-stem ('value of 4 × 10^-4') and omits 'Caffeine (C8H10N4O2) is a weak base with a Kb'; it also includes the CO2/SO2 Lewis structures belonging to question 23. Full stem and choices A-D visible on page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-24-1450",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows question 24 and choices A-D but omits the shared stimulus for questions 21-24 (CO(g) + 2 H2(g) <=> CH3OH(g), ΔH < 0); stimulus visible on the same page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-29-1453",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows question 29 and choices A-D but omits the three equilibria with K1, K2 and K3 directly above; they are visible on the page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-30-184",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop starts at 'rate of the forward reaction' and omits the stem start ('As the reaction progresses toward equilibrium, the') and the shared stimulus (PCl5 <=> PCl3 + Cl2, figures of initial and equilibrium states); both visible on the page context. Choices A-D complete.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-33-185",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop starts mid-stem ('equilibrium. Which of the following graphs...'); page context shows the stem start 'Additional Cl2(g) is injected into the system at equilibrium' and graphs A-D. The shared stimulus (PCl5(g) <=> PCl3(g) + Cl2(g), questions 29-33) is on the preceding page, which is not in this packet; it was seen on the page image of packet mcq-2014-30-184 (same source, page 184).",
+      "supplement": {
+        "mode": "add",
+        "pages": [
+          184
+        ],
+        "catalogCorrection": "Register a shared stimulus for 2014 practice exam Questions 29-33 in research/stimuli.json (page 184)."
+      },
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-34-186",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crops cut off the right side of the stimulus (ΔH° = -437 kJ/mol rxn and the ΔH° column of the table); page context shows them. Stem and choices complete.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-47-190",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop is the right column only and cuts off the left of the shared stimulus (half-cell descriptions, galvanic cell/half-cell columns and left side of the cell reactions). Page context shows the full stimulus for questions 45-47 and question 47 with choices A-D.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2014-9-174",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop omits the first line ('A 100 g sample of a metal was heated to 100°C'); page context shows the full stem and choices A-D.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2016-24-1063",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop omits the data table (volumes of 0.10 M HCl and NaOH per trial) and cuts the right half of the stem and choices; page context shows everything.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2016-37-1070",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crops cut off the right half of the stimulus (including the ΔH° = -610 kJ/mol value) and omit choices A-D; page context shows the full stimulus, stem and choice table.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-11-1196",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop is the right column only and cuts off the left half of the shared stimulus (Zn half-cell, header, half-reaction labels). Page context shows the full Zn/Ag galvanic cell diagram, the E° table (+0.80 V Ag+/Ag, -0.76 V Zn2+/Zn) and question 11 with choices A-D.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-14-1911",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop cuts the first line of the stem; page context shows the full stem and choices A-D. The shared stimulus for questions 14-17 is on the previous page and not shown, but the item is answerable from the stem alone (liquid CH3OH entering an evacuated vessel vaporizes).",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-34-1205",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop starts at the stem and omits the beaker figure above it (saturated CuSO4(aq) over CuSO4 crystal); figure visible on the page context. Choices A-D complete.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-38-1920",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows stem and choices A-D but omits the three given reactions with their ΔG° values (Reactions 1-3), which sit just above the crop; recovered from page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2018-57-2046",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "none",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows stem and choices A-E but omits the Pb(s) <=> Pb(l) equation above the stem; recovered from page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2022-21-1622",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows stem and choices A-D but omits the shared table of structures and molar masses above Q20; recovered from page context. Source scan has a highlighter mark on a choice, ignored.",
+      "supplement": null,
+      "nowClassifiable": true
+    },
+    {
+      "questionId": "mcq-2023-43-1731",
+      "cropIssue": "missing-content-recovered-from-page",
+      "diagramStatus": "analyzed",
+      "priority": 4,
+      "action": "Extend the crop; the classifier had to read the missing part from the full page.",
+      "classifierNote": "Crop shows the stem and choices A-D but omits the titration curve (pH versus volume of 0.10 M NaOH) directly above; curve visible and legible on the page context.",
+      "supplement": null,
+      "nowClassifiable": true
+    }
+  ]
+}

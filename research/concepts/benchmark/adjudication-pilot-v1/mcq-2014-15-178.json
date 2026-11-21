@@ -1,0 +1,97 @@
+{
+ "questionId": "mcq-2014-15-178",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2014-15-178.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop omits the titration curve and start of stem; page context shows the curve, point U and choices A-D."
+  },
+  "officialTopics": {
+   "primary": "8.5",
+   "additional": [
+    "4.3"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "titration-curves",
+      "evidence": "Must locate point U on the pH curve relative to the equivalence point to decide which species dominate."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must choose the particulate diagram showing correct species and relative counts."
+     },
+     {
+      "conceptId": "acid-base-mixtures",
+      "evidence": "Must reason about what remains after NaOH has reacted with HA."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "interpret"
+    ],
+    "representations": [
+     "titration-curve",
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop omits the start of the stem and the shared titration curve (questions 14-17); page context shows the curve with point U at about 60 mL, past equivalence, and particulate choices A-D."
+  },
+  "officialTopics": {
+   "primary": "8.5",
+   "additional": [
+    "3.8"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "titration-curves",
+      "evidence": "Must locate point U beyond the equivalence point on the curve and identify that excess OH- is present along with A- and Na+."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must pick the particulate diagram whose species match the solution composition at U, distinguishing HA, A-, OH- and Na+."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "interpret"
+    ],
+    "representations": [
+     "titration-curve",
+     "particulate-diagram"
+    ],
+    "skills": [
+     "graph-analysis",
+     "particulate-modeling"
+    ]
+   }
+  ]
+ }
+}

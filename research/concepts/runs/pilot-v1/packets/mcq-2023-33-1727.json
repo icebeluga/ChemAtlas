@@ -1,0 +1,85 @@
+{
+  "questionId": "mcq-2023-33-1727",
+  "type": "MCQ",
+  "exam": "2023 AP Chemistry MCQ",
+  "year": "2023",
+  "number": 33,
+  "text": "on, methane (CH4) and water (H2O) are produced from carbon\n ure.\n\n\n\n\n\n       33. The reaction is catalyzed by solid nickel. Which of\n           the following describes the effect of the catalyst on\n           the reaction?\n\n          (A) The presence of the catalyst results in an overall\n                 reaction that releases less energy.\n\n           (B) The presence of the catalyst results in a reaction\n              pathway that requires a lower activation energy.\n\n           (C) The presence of the catalyst results in an overall\n                 reaction that requires more energy.\n\n          (D) The presence of the catalyst results in a reac-\n                 tion pathway that requires a greater activation\n                energy.",
+  "regions": [
+    {
+      "page": 1727,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 227,
+        "compiledPage": 1727
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "13e3f9251bcdd324",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2023-33-1727-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 227,
+      "rect": [
+        306,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2023-33-1727-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 227,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "catalysis",
+      "name": "Catalysis",
+      "definition": "How catalysts increase rate by providing an alternative mechanism with lower activation energy while being regenerated and leaving ΔH and K unchanged.",
+      "include": "Tag when a catalyst's effect on mechanism, energy profile, rate, ΔH or equilibrium must be identified or explained.",
+      "exclude": "Do not tag intermediates questions without a catalyst.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    }
+  ]
+}

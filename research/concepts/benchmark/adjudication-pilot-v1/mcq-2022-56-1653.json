@@ -1,0 +1,93 @@
+{
+ "questionId": "mcq-2022-56-1653",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2022-56-1653.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows particle diagram with ions X and Y surrounded by water molecules, stem and choices A-D."
+  },
+  "officialTopics": {
+   "primary": "3.1",
+   "additional": [
+    "3.8"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "ion-dipole",
+      "evidence": "Must read the orientation of water molecules (which end faces the ion) around X and Y to decide cation versus anion."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must interpret the particulate diagram of hydrated ions in water."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "identify",
+     "interpret"
+    ],
+    "representations": [
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows the particulate diagram of ions X and Y with water molecules, the stem and choices A-D; atom orientation legible."
+  },
+  "officialTopics": {
+   "primary": "3.8",
+   "additional": [
+    "3.1"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "ion-dipole",
+      "evidence": "Must use the orientation of water molecules around each ion to decide which ion is the anion and which the cation."
+     },
+     {
+      "conceptId": "solution-representations",
+      "evidence": "Must interpret the particulate diagram of hydrated ions."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "bond-polarity",
+      "evidence": "Must know O in water carries the partial negative charge and H the partial positive charge to read the orientation."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "interpret"
+    ],
+    "representations": [
+     "particulate-diagram"
+    ],
+    "skills": [
+     "particulate-modeling"
+    ]
+   }
+  ]
+ }
+}

@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-2022-38-1648",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "bond-potential-energy"
+      ],
+      "supporting": [
+        "atomic-radius"
+      ]
+    }
+  },
+  "notes": "Choosing the curve needs both well depth from the given energies and a longer equilibrium distance for I2 because I atoms are larger."
+}

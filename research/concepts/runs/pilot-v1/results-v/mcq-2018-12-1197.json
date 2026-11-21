@@ -1,0 +1,43 @@
+{
+  "questionId": "mcq-2018-12-1197",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the equation, full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "4.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "reaction-stoichiometry",
+          "evidence": "Must convert 880 g CO2 to 20 mol and apply the 1:2 CO2:LiOH ratio to find the LiOH mass."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

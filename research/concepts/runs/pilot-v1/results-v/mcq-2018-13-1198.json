@@ -1,0 +1,45 @@
+{
+  "questionId": "mcq-2018-13-1198",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop shows the data table ([NO2], ln[NO2], 1/[NO2] vs time), stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "5.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "integrated-rate-laws",
+          "evidence": "Must see that 1/[NO2] rises linearly (by 0.75 L/mol per 100 s) while ln[NO2] does not, indicating second order."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify",
+        "interpret"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

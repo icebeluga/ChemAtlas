@@ -1,0 +1,48 @@
+{
+  "questionId": "mcq-2016-37-1070",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crops are cut off on the right (equation, delta H) and the answer table is missing; page context shows the full equation with dH and the choices table. Classified from page."
+  },
+  "officialTopics": {
+    "primary": "4.5",
+    "additional": [
+      "6.6"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "limiting-reactant",
+          "evidence": "Must compare 7.8 g Na2O2 and 3.2 or 6.4 g S against the 2:1 mole ratio to decide which reactant limits."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "enthalpy-of-reaction",
+          "evidence": "Heat released must be scaled from the given dH per mole of reaction to the moles of reaction that occur."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "identify"
+      ],
+      "representations": [
+        "chemical-equation",
+        "table"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

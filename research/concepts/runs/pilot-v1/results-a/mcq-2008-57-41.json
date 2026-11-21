@@ -1,0 +1,19 @@
+{
+  "questionId": "mcq-2008-57-41",
+  "contentCheck": { "status": "complete", "sawImage": true, "diagramStatus": "analyzed", "cropIssue": "no-crop", "notes": "Full-page image only; Q57 (H-C≡C-H structure, stem and choices A-E) is fully legible. Packet text is a paraphrase, not the printed stem." },
+  "officialTopics": { "primary": "2.7", "additional": [] },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [{ "conceptId": "hybridization", "evidence": "Asks for the hybridization of the carbon atoms in ethyne." }],
+      "supporting": [{ "conceptId": "electron-domains", "evidence": "Must count two electron domains on each C because the C≡C triple bond counts as one domain, giving sp." }],
+      "contextual": [],
+      "actions": ["identify"],
+      "representations": ["molecular-structure"],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

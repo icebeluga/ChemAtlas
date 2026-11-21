@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2017-30-1137",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["lewis-structures"], "supporting": [] } },
+  "verdictX": { "label": "correct", "reason": "" },
+  "verdictY": { "label": "correct", "reason": "" },
+  "notes": "Lewis acid-base theory is outside AP, but the item is answerable from N's lone pair and B's incomplete octet, i.e. Lewis structure reasoning."
+}

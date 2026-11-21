@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2016-5-1053",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows the full stem and choices A-D."
+  },
+  "officialTopics": {
+    "primary": "2.2",
+    "additional": [
+      "2.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "bond-order",
+          "evidence": "Must rank bond enthalpies of N2, O2 and F2 from their bond orders (triple, double, single)."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "lewis-structures",
+          "evidence": "Must determine the bonding in each diatomic molecule (not shown) from valence electrons to obtain the bond orders."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

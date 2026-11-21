@@ -1,0 +1,176 @@
+{
+  "questionId": "mcq-2014-34-186",
+  "type": "MCQ",
+  "exam": "2014 AP Chemistry MCQ",
+  "year": "2014",
+  "number": 34,
+  "text": "Questions 34-38\n\n                               1\n                           K(s) +    Cl2(g) Æ KCl(s)                               2\n\n  The elements K and Cl react directly to form the comp\ninformation above and the table below to answer the questi\n\n\n                                          Process\n\n                                       K(s) → K(g)\n\n                                 K(g) → K+(g) +\n                                        Cl2(g) → 2 Cl(g)\n                                     Cl(g) + e− → Cl−(\n                                K+(g) + Cl−(g) → KC\n\n34. How much heat is released or absorbed when\n   0.050 mol of Cl2(g) is formed from KCl(s)?\n\n   (A) 87.4 kJ is released\n    (B) 43.7 kJ is released\n    (C) 43.7 kJ is absorbed\n   (D) 87.4 kJ is absorbed",
+  "regions": [
+    {
+      "page": 186,
+      "rect": [
+        0,
+        53.895626068115234,
+        306,
+        303.9467468261719
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 186,
+        "compiledPage": 186
+      }
+    },
+    {
+      "page": 186,
+      "rect": [
+        0,
+        303.9467468261719,
+        306,
+        398.20977783203125
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 186,
+        "compiledPage": 186
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "6.6"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "6.6",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "07317c197a3940d1",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-34-186-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 186,
+      "rect": [
+        0,
+        53.895626068115234,
+        306,
+        303.9467468261719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-34-186-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 186,
+      "rect": null
+    },
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-34-186-r2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 186,
+      "rect": [
+        0,
+        303.9467468261719,
+        306,
+        398.20977783203125
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2014-34-186-page2.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 186,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "enthalpy-of-reaction",
+      "name": "Enthalpy of reaction",
+      "definition": "The enthalpy change of a reaction as written, its sign, and how it scales with the amount reacting in a thermochemical equation.",
+      "include": "Tag when heat released or absorbed must be calculated from ΔH and an amount of reactant, or ΔH related to a balanced equation.",
+      "exclude": "Do not tag bond-enthalpy, formation-enthalpy or Hess's-law calculations unless ΔH scaling to an amount is also required.",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "bond-enthalpy",
+      "name": "Bond enthalpies",
+      "definition": "Estimating ΔH of a reaction as the energy of bonds broken minus the energy of bonds formed, and explaining energy changes as bond breaking (endothermic) and formation (exothermic).",
+      "include": "Tag when average bond enthalpies are used to estimate ΔH, or bonds broken and formed must be counted.",
+      "exclude": "Do not tag bond-length comparisons (tag bond-order).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "calorimetry",
+      "name": "Calorimetry and specific heat",
+      "definition": "Using q = mcΔT, heat capacity and calorimeter data to determine heat transferred or the enthalpy change of a process, and evaluating calorimetry procedures and errors.",
+      "include": "Tag when calorimetry data or q = mcΔT must be used, or a calorimetry procedure or error analyzed.",
+      "exclude": "Do not tag phase-change heat (q = nΔH) alone (tag phase-change-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "enthalpy-of-formation",
+      "name": "Standard enthalpies of formation",
+      "definition": "Calculating ΔH°rxn as the sum of ΔHf° of products minus reactants, with elements in their standard states assigned zero.",
+      "include": "Tag when ΔHf° values are used or a formation reaction must be identified.",
+      "exclude": "Do not tag Hess's-law manipulations of non-formation equations (tag hess-law).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    },
+    {
+      "conceptId": "hess-law",
+      "name": "Hess's law",
+      "definition": "Finding the enthalpy change of a target reaction by reversing, scaling and adding equations with known ΔH, because enthalpy is a state function.",
+      "include": "Tag when equations must be manipulated and combined to obtain ΔH, or path independence is explained.",
+      "exclude": "Do not tag the analogous manipulation of K values (tag k-manipulation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:enthalpy-of-reaction"
+      ]
+    }
+  ]
+}

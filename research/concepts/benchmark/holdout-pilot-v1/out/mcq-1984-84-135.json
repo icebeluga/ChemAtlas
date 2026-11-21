@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-1984-84-135",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "colligative-properties"
+      ],
+      "supporting": [
+        "solution-representations"
+      ]
+    }
+  },
+  "notes": "Boiling-point elevation requires counting dissolved particles per formula (K2SO4 gives 3 ions vs 0.20 M sucrose)."
+}

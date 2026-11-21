@@ -1,0 +1,164 @@
+{
+  "questionId": "mcq-2022-52-1652",
+  "type": "MCQ",
+  "exam": "2022 AP Chemistry MCQ",
+  "year": "2022",
+  "number": 52,
+  "text": "52. Which of the following identifies the four species that are\n    present in an aqueous solution of the weak acid H2C2O4,\n    from the highest to the lowest concentration at equilib-\n    rium?\n\n    (A) H3O+ > HC2O4– > C2O42−> H2C2O4\n     (B) H3O+ > C2O42−> HC2O 4– > H2C2O4\n     (C) H2C2O4 > HC2O 4– > C2O42−> H3O+\n    (D) H2C2O4 > H3O+ > HC2O4– > C2O42−",
+  "regions": [
+    {
+      "page": 1652,
+      "rect": [
+        306,
+        55,
+        612,
+        194.65963745117188
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 152,
+        "compiledPage": 1652
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "8.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.3",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "1358a1a328c32c0e",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-52-1652-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 152,
+      "rect": [
+        306,
+        55,
+        612,
+        194.65963745117188
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-52-1652-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 152,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "term-in-text",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:strong-weak-acids"
+      ]
+    },
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "acid-strength-structure",
+      "name": "Molecular structure and acid strength",
+      "definition": "Explaining relative acid strength from bond polarity and strength, electronegativity of nearby atoms (oxyacids, inductive effects), and stabilization of the conjugate base by resonance or charge.",
+      "include": "Tag when acid strengths must be ranked or explained from molecular structure.",
+      "exclude": "Do not tag strength ranking from given Ka values only (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "linked-from:strong-weak-acids"
+      ]
+    }
+  ]
+}

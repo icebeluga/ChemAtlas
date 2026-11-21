@@ -1,0 +1,172 @@
+{
+  "questionId": "mcq-2018-34-1205",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 34,
+  "text": "34. The saturated CuSO4(aq) shown above is left\n   uncovered on a lab bench at a constant\n    temperature. As the solution evaporates, 1.0 mL\n   samples of the solution are removed every three\n   days and the [SO4 2] in the samples is measured.\n     It is observed that the [SO4 2] in the solution did\n    not change over time. Which of the following best\n    helps to explain the observation?\n\n   (A) As the solution evaporates, Cu2+(aq) and\n       SO4 2(aq) leave the beaker along with the\n         water molecules.\n    (B) As the solution evaporates, the dissolution of\n        CuSO4(s) in the beaker decreases.\n    (C) The evaporation of water is endothermic, so\n        more CuSO4(s) dissolves exothermically in\n          the solution, which increases the [SO4 2].\n   (D) As water evaporates, more CuSO4(s)\n          precipitates out of the solution in the beaker.",
+  "regions": [
+    {
+      "page": 1205,
+      "rect": [
+        301.67999267578125,
+        344.48480224609375,
+        603.3599853515625,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-05.pdf",
+        "localPage": 5,
+        "compiledPage": 1205
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "7.11"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "7.11",
+    "secondary": [],
+    "status": "classified",
+    "method": "Official question descriptor / rationale crosswalk"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "5035d7f8118a458b",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-34-1205-r1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 5,
+      "rect": [
+        301.67999267578125,
+        344.48480224609375,
+        603.3599853515625,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-34-1205-page1.png",
+      "pdf": "public/source/bank-05.pdf",
+      "page": 5,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "solubility-product",
+      "name": "Solubility equilibria and Ksp",
+      "definition": "Writing Ksp expressions, converting between Ksp and molar solubility using formula stoichiometry, comparing solubilities, and predicting precipitation with Q versus Ksp.",
+      "include": "Tag when Ksp, molar solubility, or a quantitative precipitation test is used.",
+      "exclude": "Do not tag qualitative precipitate prediction from solubility facts (tag precipitation).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "endo-exothermic",
+      "name": "Endothermic and exothermic processes",
+      "definition": "Identifying processes as endothermic or exothermic from temperature observations, the sign of q or ΔH, or energy diagrams, keeping system and surroundings distinct.",
+      "include": "Tag when the direction of heat flow or the sign of ΔH must be determined from evidence or an energy diagram.",
+      "exclude": "Do not tag energy profiles with activation barriers (tag activation-energy).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "common-ion-effect",
+      "name": "Common-ion effect",
+      "definition": "The decrease in solubility of a salt when an ion it shares is already present in solution, predicted qualitatively by Le Châtelier and quantitatively with Ksp.",
+      "include": "Tag when solubility in a solution containing a common ion must be compared or calculated.",
+      "exclude": "Do not tag pH effects on solubility (tag ph-solubility).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:solubility-product"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:solubility-product"
+      ]
+    },
+    {
+      "conceptId": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:solubility-product"
+      ]
+    },
+    {
+      "conceptId": "precipitation",
+      "name": "Precipitation reactions",
+      "definition": "Predicting whether a precipitate forms when solutions are mixed, using the AP-specified solubility facts (all sodium, potassium, ammonium and nitrate salts are soluble) and given data.",
+      "include": "Tag when the student must predict or identify a precipitate qualitatively.",
+      "exclude": "Do not tag quantitative Q versus Ksp precipitation tests (tag solubility-product); rote solubility rules beyond the AP-specified cases are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:solubility-product"
+      ]
+    },
+    {
+      "conceptId": "net-ionic-equations",
+      "name": "Net ionic equations",
+      "definition": "Writing complete and net ionic equations by dissociating strong electrolytes and removing spectator ions, conserving atoms and charge.",
+      "include": "Tag when a net ionic equation must be written or chosen, or spectator ions identified.",
+      "exclude": "Do not tag when the reaction is only described in words and no ionic representation is required.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "ph-solubility",
+      "name": "pH and solubility",
+      "definition": "Qualitatively predicting how pH affects the solubility of salts with basic anions or hydroxides through acid-base reactions that shift the dissolution equilibrium.",
+      "include": "Tag when the effect of pH on a salt's solubility must be predicted or explained.",
+      "exclude": "Numerical solubility as a function of pH is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "reaction-quotient",
+      "name": "Reaction quotient Q versus K",
+      "definition": "Calculating Q for a non-equilibrium mixture and comparing it with K to predict the direction a reaction proceeds.",
+      "include": "Tag when Q must be computed or compared with K to predict direction, including after a disturbance.",
+      "exclude": "Do not tag qualitative Le Châtelier predictions that do not use Q (tag le-chatelier).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    }
+  ]
+}

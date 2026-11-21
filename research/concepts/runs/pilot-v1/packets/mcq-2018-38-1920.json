@@ -1,0 +1,75 @@
+{
+  "questionId": "mcq-2018-38-1920",
+  "type": "MCQ",
+  "exam": "2018 AP Chemistry MCQ",
+  "year": "2018",
+  "number": 38,
+  "text": "38. Based on the values of ΔG° for the three reactions represented above, what is the value of ΔG° for the reaction\n    represented below?\n\n                            4 NH3(g) + 8 O2(g) → 4 HNO 3(aq) + 4 H2O(l)\n\n   (A) −1040 kJ/molrxn\n    (B) −1110 kJ/molrxn\n    (C) −1250 kJ/molrxn\n   (D) −1320 kJ/molrxn",
+  "regions": [
+    {
+      "page": 1920,
+      "rect": [
+        0,
+        301.95501708984375,
+        603.3599853515625,
+        719
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 120,
+        "compiledPage": 1920
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": []
+    }
+  ],
+  "catalogTopics": {
+    "primary": null,
+    "secondary": [],
+    "status": "review",
+    "method": "Awaiting question-content review"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "863886aeacc9efef",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-38-1920-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 120,
+      "rect": [
+        0,
+        301.95501708984375,
+        603.3599853515625,
+        719
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2018-38-1920-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 120,
+      "rect": null
+    }
+  ],
+  "candidates": []
+}

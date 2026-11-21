@@ -1,0 +1,15 @@
+{
+  "questionId": "mcq-1984-72-131",
+  "contentStatus": "complete",
+  "parts": {
+    "stem": {
+      "primary": [
+        "partial-pressures"
+      ],
+      "supporting": [
+        "ideal-gas-law"
+      ]
+    }
+  },
+  "notes": "The key is recognizing the water-vapor correction (Dalton's law) uses a tabulated value; molar mass via PV=nRT is the supporting framework."
+}

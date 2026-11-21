@@ -1,0 +1,296 @@
+{
+  "questionId": "frq-2005-1-6",
+  "type": "FRQ",
+  "exam": "2005 AP Chemistry FRQ",
+  "year": "2005",
+  "number": 1,
+  "text": "2005 AP ® CHEMISTRY FREE-RESPONSE QUESTIONS\n\n                              CHEMISTRY\n                                                Section II\n                                          (Total time—90 minutes)\n\n\n                                               Part A\n                                Time—40 minutes\n               YOU MAY USE YOUR CALCULATOR FOR PART A.\n\n\nCLEARLY SHOW THE METHOD USED AND THE STEPS INVOLVED IN ARRIVING AT YOUR ANSWERS.\nIt is to your advantage to do this, since you may obtain partial credit if you do and you will receive little or no credit if\nyou do not. Attention should be paid to significant figures.\n\nBe sure to write all your answers to the questions on the lined pages following each question in the booklet with the\npink cover. Do NOT write your answers on the green insert.\n\nAnswer Question 1 below. The Section II score weighting for this question is 20 percent.\n\n\n                   HC3H5O2(aq) ←→ C3H5O2 – (aq) + H+(aq)     Ka = 1.34 × 10 – 5\n\n 1. Propanoic acid, HC3H5O2 , ionizes in water according to the equation above.\n\n    (a) Write the equilibrium-constant expression for the reaction.\n\n    (b) Calculate the pH of a 0.265 M solution of propanoic acid.\n\n    (c) A 0.496 g sample of sodium propanoate, NaC3H5O2 , is added to a 50.0 mL sample of a 0.265 M solution\n        of propanoic acid. Assuming that no change in the volume of the solution occurs, calculate each of the\n        following.\n\n             (i) The concentration of the propanoate ion, C3H5O2– (aq), in the solution\n\n            (ii) The concentration of the H+(aq) ion in the solution\n\n   The methanoate ion, HCO2–(aq), reacts with water to form methanoic acid and hydroxide ion, as shown in the\n    following equation.\n\n                     HCO2–(aq) + H2O(l) ←→ HCO2H(aq) + OH–(aq)\n\n    (d) Given that [OH–] is 4.18 × 10– 6 M in a 0.309 M solution of sodium methanoate, calculate each of the\n        following.\n             (i) The value of Kb for the methanoate ion, HCO2 –(aq)\n\n            (ii) The value of Ka for methanoic acid, HCO2H\n\n    (e) Which acid is stronger, propanoic acid or methanoic acid? Justify your answer.\n\n\n\n                             Copyright © 2005 by College Entrance Examination Board. All rights reserved.\n         Visit apcentral.collegeboard.com (for AP professionals) and www.collegeboard.com/apstudents (for AP students and parents).",
+  "regions": [
+    {
+      "page": 6,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ],
+      "source": {
+        "pdf": "public/source/bank-01.pdf",
+        "localPage": 6,
+        "compiledPage": 6
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "a",
+      "label": "(a)",
+      "catalogTopics": [
+        "8.3"
+      ]
+    },
+    {
+      "partId": "b",
+      "label": "(b)",
+      "catalogTopics": [
+        "8.3"
+      ]
+    },
+    {
+      "partId": "c-i",
+      "label": "(c)(i)",
+      "catalogTopics": [
+        "3.7"
+      ]
+    },
+    {
+      "partId": "c-ii",
+      "label": "(c)(ii)",
+      "catalogTopics": [
+        "8.9"
+      ]
+    },
+    {
+      "partId": "d",
+      "label": "(d)",
+      "catalogTopics": [
+        "8.3"
+      ]
+    },
+    {
+      "partId": "e",
+      "label": "(e)",
+      "catalogTopics": [
+        "8.3"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "8.3",
+    "secondary": [
+      "3.7",
+      "8.9"
+    ],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": true,
+    "status": "visually_verified",
+    "note": "Inspected rendered source crop; includes complete question and subparts (a)-(e), equations, and instructions. Contains exam header/footer material retained for context."
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content"
+    ]
+  },
+  "contentHash": "1b37e99673ea1230",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2005-1-6-r1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 6,
+      "rect": [
+        0,
+        55,
+        612,
+        737
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/frq-2005-1-6-page1.png",
+      "pdf": "public/source/bank-01.pdf",
+      "page": 6,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "molarity",
+      "name": "Molarity and solution preparation",
+      "definition": "Calculating and using molar concentration (moles of solute per liter of solution), including preparing a solution of a target concentration.",
+      "include": "Tag when molarity must be calculated, or moles found from molarity and volume as a substantive step.",
+      "exclude": "Molality and percent-by-mass concentrations are not assessed (tag colligative-properties if present); dilution belongs to dilution.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:dilution"
+      ]
+    },
+    {
+      "conceptId": "dilution",
+      "name": "Dilution",
+      "definition": "Relating concentrations and volumes before and after adding solvent, since moles of solute are unchanged (M1V1 = M2V2).",
+      "include": "Tag when a dilution calculation or the effect of dilution on concentration must be determined.",
+      "exclude": "Do not tag mixing two reacting solutions (tag acid-base-mixtures or reaction-stoichiometry).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:molarity"
+      ]
+    },
+    {
+      "conceptId": "henderson-hasselbalch",
+      "name": "Henderson-Hasselbalch equation",
+      "definition": "Calculating buffer pH from pKa and the ratio of conjugate base to acid, or the ratio needed for a target pH, including after small additions.",
+      "include": "Tag when a buffer pH or component ratio must be calculated.",
+      "exclude": "Do not tag qualitative buffer explanations (tag buffers).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "weak-acid-equilibrium",
+      "name": "Weak acid and base equilibria (Ka, Kb)",
+      "definition": "Writing Ka and Kb expressions, calculating pH or K for weak acid and base solutions, percent ionization, and Ka·Kb = Kw for conjugates.",
+      "include": "Tag when Ka, Kb, percent ionization or the pH of a weak acid or base solution must be used or calculated.",
+      "exclude": "Do not tag buffer pH calculations (tag henderson-hasselbalch) or titration-curve reading (tag titration-curves).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "ph-poh",
+      "name": "pH, pOH and Kw",
+      "definition": "Calculating pH and pOH from [H3O+] and [OH-] using logarithms and Kw, including for strong acids and bases, and interpreting the logarithmic scale.",
+      "include": "Tag when pH, pOH, [H3O+] or [OH-] must be calculated or interconverted, or a pH change interpreted on the log scale.",
+      "exclude": "Do not tag weak-acid equilibrium setup (tag weak-acid-equilibrium); pH may be supporting there.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:dilution",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "buffers",
+      "name": "Buffers",
+      "definition": "Identifying buffer components (a weak conjugate acid-base pair) and explaining how they consume added strong acid or base to resist pH change.",
+      "include": "Tag when a buffer must be identified or prepared, or its response to added acid or base explained or written as an equation.",
+      "exclude": "Do not tag pH calculations of a buffer (tag henderson-hasselbalch) unless buffer behavior is also explained.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:henderson-hasselbalch"
+      ]
+    },
+    {
+      "conceptId": "dynamic-equilibrium",
+      "name": "Dynamic equilibrium",
+      "definition": "Understanding equilibrium as equal forward and reverse rates with constant (not necessarily equal) concentrations, and representing it with graphs or particle diagrams.",
+      "include": "Tag when the nature of equilibrium, its representations, or how a system approaches equilibrium must be explained or identified.",
+      "exclude": "Do not tag calculations of K or concentrations (tag the specific equilibrium calculation).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "equilibrium-expression",
+      "name": "Equilibrium constant expressions",
+      "definition": "Writing Kc, Kp and Q expressions from balanced equations, with coefficients as exponents and pure solids and liquids omitted.",
+      "include": "Tag when an equilibrium or reaction-quotient expression must be written or chosen.",
+      "exclude": "Converting between Kc and Kp is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "ice-tables",
+      "name": "Equilibrium concentrations from ICE tables",
+      "definition": "Setting up initial-change-equilibrium tables and solving for equilibrium amounts, including when the small-x approximation is justified.",
+      "include": "Tag when equilibrium concentrations or pressures must be calculated from initial conditions and K (or K from initial and one equilibrium amount via an ICE setup).",
+      "exclude": "Do not tag direct substitution of given equilibrium values (tag equilibrium-constant-calculation). Use weak-acid-equilibrium for acid ionization if that is the primary demand; ice-tables may be supporting.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "mole-conversions",
+      "name": "Moles, molar mass and particle counts",
+      "definition": "Converting among mass, moles and number of particles using molar mass and Avogadro's number, including counting atoms within a formula.",
+      "include": "Tag when the student must perform or reason about a mass-mole-particle conversion that is a substantive step, or the question is about the mole itself.",
+      "exclude": "Do not tag when a mole conversion is an unremarkable first step of a larger stoichiometry, gas or solution calculation already captured by another concept, unless the question isolates it.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:molarity"
+      ]
+    },
+    {
+      "conceptId": "pka-speciation",
+      "name": "pH, pKa and predominant species",
+      "definition": "Comparing pH with pKa to determine whether the protonated or deprotonated form predominates, including indicator color and selection.",
+      "include": "Tag when the predominant form of an acid at a given pH, or an indicator choice or color, must be determined.",
+      "exclude": "Do not tag full Henderson-Hasselbalch calculations unless the comparison of pH and pKa is the point (tag henderson-hasselbalch).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:henderson-hasselbalch"
+      ]
+    },
+    {
+      "conceptId": "strong-weak-acids",
+      "name": "Strong versus weak acids and bases",
+      "definition": "Distinguishing strong acids and bases (complete ionization) from weak ones (partial ionization), and separating acid strength from acid concentration.",
+      "include": "Tag when an acid or base must be classified as strong or weak, or its extent of ionization represented or explained.",
+      "exclude": "Do not tag structure-based strength explanations (tag acid-strength-structure) or Ka calculations (tag weak-acid-equilibrium).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:weak-acid-equilibrium"
+      ]
+    },
+    {
+      "conceptId": "bronsted-lowry",
+      "name": "Brønsted-Lowry acids, bases and conjugate pairs",
+      "definition": "Identifying proton donors and acceptors in a reaction, writing conjugate acid-base pairs, and recognizing amphiprotic species such as water.",
+      "include": "Tag when acids, bases or conjugate pairs must be identified, or a proton-transfer equation written.",
+      "exclude": "Lewis acid-base theory is not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "colligative-properties",
+      "name": "Colligative properties and molality",
+      "definition": "Freezing-point depression, boiling-point elevation, osmotic pressure and vapor-pressure lowering, and molality. Removed from the current AP Chemistry exam.",
+      "include": "Tag legacy questions that require these calculations or explanations.",
+      "exclude": "Never present as current AP exam content.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "solution-representations",
+      "name": "Particle representations of solutions",
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "reaction-stoichiometry",
+      "name": "Reaction stoichiometry",
+      "definition": "Using mole ratios from a balanced equation to relate amounts of reactants and products by mass, moles, solution volume or gas volume.",
+      "include": "Tag when an amount of one substance must be calculated from another through a balanced equation.",
+      "exclude": "Do not tag when the stoichiometry is part of a titration (tag titration-analysis) or electrolysis (tag electrolysis-faraday) unless it is a separate requested calculation.",
+      "whyCandidate": [
+        "linked-from:molarity"
+      ]
+    },
+    {
+      "conceptId": "titration-analysis",
+      "name": "Titration stoichiometry",
+      "definition": "Using the volume of a standard solution needed to reach the equivalence point, together with the balanced equation, to find an unknown amount or concentration; includes equivalence point versus endpoint and buret reading.",
+      "include": "Tag when titration data must be used to find an unknown quantity, or titration procedure and terminology are assessed.",
+      "exclude": "Do not tag pH-curve shape questions (tag titration-curves) unless the equivalence volume is used for a calculation.",
+      "whyCandidate": [
+        "linked-from:molarity"
+      ]
+    }
+  ]
+}

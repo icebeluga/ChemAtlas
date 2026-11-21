@@ -1,0 +1,263 @@
+{
+  "questionId": "mcq-2022-21-1622",
+  "type": "MCQ",
+  "exam": "2022 AP Chemistry MCQ",
+  "year": "2022",
+  "number": 21,
+  "text": "21.  Which of the following statements correctly identifies which compound, pentane or propanoic acid, has the higher\n      boiling point and provides a valid justification?\n\n      (A)  Pentane, because it has greater London dispersion forces than propanoic acid does\n      (B)  Pentane, because it can form more hydrogen bonds per molecule than propanoic acid can\n      (C)  Propanoic acid, because double bonds are harder to break than single bonds\n      (D)  Propanoic acid, because it forms hydrogen bonds, whereas pentane does not",
+  "regions": [
+    {
+      "page": 1622,
+      "rect": [
+        0,
+        544.1129760742188,
+        612,
+        664.68603515625
+      ],
+      "source": {
+        "pdf": "public/source/bank-06.pdf",
+        "localPage": 122,
+        "compiledPage": 1622
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "3.1"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "3.1",
+    "secondary": [],
+    "status": "classified",
+    "method": "Content reviewed against current CED"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "text-sufficient-candidate",
+    "reasons": [
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "178e4e1b1d72ef5d",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-21-1622-r1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 122,
+      "rect": [
+        0,
+        544.1129760742188,
+        612,
+        664.68603515625
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2022-21-1622-page1.png",
+      "pdf": "public/source/bank-06.pdf",
+      "page": 122,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "imf-properties",
+      "name": "Intermolecular forces and physical properties",
+      "definition": "Using the relative strength of intermolecular forces to explain or rank boiling point, melting point, vapor pressure, viscosity, surface tension or enthalpy of vaporization, and distinguishing intermolecular from intramolecular forces.",
+      "include": "Tag when a physical property must be compared or explained in terms of intermolecular attractions; pair with the specific force concept(s) that decide the comparison.",
+      "exclude": "Do not tag chemical reactivity or bond-breaking explanations; boiling does not break covalent bonds.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:london-dispersion",
+        "linked-from:hydrogen-bonding"
+      ]
+    },
+    {
+      "conceptId": "london-dispersion",
+      "name": "London dispersion forces",
+      "definition": "Attractions arising from temporary dipoles, whose strength increases with the number of electrons (polarizability) and with contact surface area.",
+      "include": "Tag when dispersion forces must be identified or compared, especially using polarizability or molecular shape.",
+      "exclude": "Do not tag merely because dispersion forces exist in every substance; tag only when they matter to the answer.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "term-in-text",
+        "linked-from:dipole-dipole",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "dipole-dipole",
+      "name": "Dipole-dipole attractions",
+      "definition": "Attractions between the permanent dipoles of polar molecules.",
+      "include": "Tag when dipole-dipole forces must be identified or compared.",
+      "exclude": "Do not tag hydrogen bonding cases unless the comparison involves dipole-dipole forces specifically.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:london-dispersion",
+        "linked-from:hydrogen-bonding",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "hydrogen-bonding",
+      "name": "Hydrogen bonding",
+      "definition": "The strong dipole attraction between an H atom bonded to N, O or F and a lone pair on a nearby N, O or F atom.",
+      "include": "Tag when hydrogen bonding must be identified, drawn, or used to explain a property, including identifying donors and acceptors.",
+      "exclude": "Do not tag molecules that contain H and O but no H bonded to N, O or F (a common error).",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:dipole-dipole",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "ion-dipole",
+      "name": "Ion-dipole attractions",
+      "definition": "Attractions between ions and polar molecules, such as the orientation of water molecules around dissolved ions.",
+      "include": "Tag when ion-dipole forces or hydration-shell orientation must be identified, drawn or used.",
+      "exclude": "Do not tag ionic bonding within a lattice (tag lattice-energy).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "molecular-polarity",
+      "name": "Molecular polarity",
+      "definition": "Deciding whether a molecule has a net dipole from its bond dipoles and three-dimensional shape.",
+      "include": "Tag when the student must determine or justify whether a molecule is polar or nonpolar.",
+      "exclude": "Do not tag when polarity is stated in the question and only used to compare forces (tag the specific force).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:dipole-dipole",
+        "linked-from:ion-dipole"
+      ]
+    },
+    {
+      "conceptId": "solubility-polarity",
+      "name": "Solubility and 'like dissolves like'",
+      "definition": "Predicting and explaining solubility and miscibility from the relative strength of solute-solute, solvent-solvent and solute-solvent attractions.",
+      "include": "Tag when solubility or miscibility must be predicted or explained from molecular structure and forces.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product) or solubility rules for precipitates (tag precipitation).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:hydrogen-bonding",
+        "linked-from:ion-dipole"
+      ]
+    },
+    {
+      "conceptId": "phase-change-energy",
+      "name": "Energy of phase changes",
+      "definition": "Heat absorbed or released during melting, vaporization, freezing and condensation (q = nΔH), constant temperature during a phase change, and heating or cooling curves.",
+      "include": "Tag when enthalpies of fusion or vaporization, heating curves, or phase-change energy must be used.",
+      "exclude": "Phase diagrams are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:imf-properties"
+      ]
+    },
+    {
+      "conceptId": "bond-polarity",
+      "name": "Bond polarity and partial charges",
+      "definition": "Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.",
+      "include": "Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.",
+      "exclude": "Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "molecular-geometry",
+      "name": "Molecular geometry (VSEPR)",
+      "definition": "Predicting electron-domain geometry and molecular shape from the arrangement of bonding and lone-pair domains around a central atom.",
+      "include": "Tag when a molecular or electron-domain geometry must be named, identified, drawn or used.",
+      "exclude": "Do not tag hybridization-only questions (tag hybridization) or bond-angle questions where shape is given (tag bond-angles).",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "organic-chemistry",
+      "name": "Organic nomenclature and functional groups",
+      "definition": "Naming organic compounds, identifying functional groups and isomers as a goal in itself. Not assessed on the current AP Chemistry exam.",
+      "include": "Tag legacy questions whose main demand is organic naming, isomer counting or functional-group identification.",
+      "exclude": "Do not tag questions that merely use organic molecules as context for Lewis structures or intermolecular forces.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "real-gases",
+      "name": "Deviations from ideal gas behavior",
+      "definition": "Explaining when and why real gases deviate from ideal behavior, through intermolecular attractions at low temperature and particle volume at high pressure.",
+      "include": "Tag when nonideal behavior must be predicted, compared or explained.",
+      "exclude": "Van der Waals equation calculations are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "separation-techniques",
+      "name": "Chromatography and distillation",
+      "definition": "Separating mixture components by differences in intermolecular attractions: paper or column chromatography (stationary versus mobile phase) and distillation by volatility.",
+      "include": "Tag when a separation method is selected, explained or its results (such as a chromatogram) interpreted.",
+      "exclude": "Do not tag filtration of a precipitate as the only step of a gravimetric calculation.",
+      "whyCandidate": [
+        "catalog-topic-related"
+      ]
+    },
+    {
+      "conceptId": "dissolution-thermodynamics",
+      "name": "Thermodynamics of dissolution",
+      "definition": "Explaining whether a salt dissolves through the balance of lattice and hydration interactions (ΔH) and the entropy change (ΔS) of dissolving.",
+      "include": "Tag when the enthalpy, entropy or free energy of dissolution must be explained or predicted.",
+      "exclude": "Do not tag Ksp calculations (tag solubility-product).",
+      "whyCandidate": [
+        "linked-from:ion-dipole"
+      ]
+    },
+    {
+      "conceptId": "lewis-structures",
+      "name": "Lewis structures",
+      "definition": "Drawing or interpreting Lewis electron-dot diagrams: counting total valence electrons, placing bonding and lone pairs, multiple bonds, octet exceptions and polyatomic-ion charges.",
+      "include": "Tag when the student must draw a Lewis structure, or must determine bonding and lone pairs that are not shown in order to answer.",
+      "exclude": "Do not tag when a complete Lewis structure is given and is only read for a later step that is tagged separately, unless reading it requires electron counting.",
+      "whyCandidate": [
+        "linked-from:hydrogen-bonding"
+      ]
+    },
+    {
+      "conceptId": "solution-representations",
+      "name": "Particle representations of solutions",
+      "definition": "Drawing and interpreting particulate diagrams of solutions: dissociation of ionic solutes, strong versus weak electrolytes, relative concentrations, and solute-solvent orientation.",
+      "include": "Tag when a particulate diagram of a solution must be drawn, chosen or interpreted, or electrolytes distinguished by their particles.",
+      "exclude": "Do not tag numerical molarity calculations with no representation.",
+      "whyCandidate": [
+        "linked-from:ion-dipole"
+      ]
+    }
+  ]
+}

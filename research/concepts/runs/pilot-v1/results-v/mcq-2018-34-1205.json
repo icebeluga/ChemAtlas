@@ -1,0 +1,46 @@
+{
+  "questionId": "mcq-2018-34-1205",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop starts at the stem and omits the beaker figure above it (saturated CuSO4(aq) over CuSO4 crystal); figure visible on the page context. Choices A-D complete."
+  },
+  "officialTopics": {
+    "primary": "7.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "solubility-product",
+          "evidence": "Must recognize that a saturated solution in contact with solid has ion concentrations fixed by Ksp at constant temperature, so losing water causes CuSO4(s) to precipitate rather than [SO4^2-] rising."
+        }
+      ],
+      "supporting": [],
+      "contextual": [
+        {
+          "conceptId": "endo-exothermic",
+          "evidence": "Distractor C invokes endothermic evaporation and exothermic dissolution."
+        }
+      ],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "apparatus-diagram"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

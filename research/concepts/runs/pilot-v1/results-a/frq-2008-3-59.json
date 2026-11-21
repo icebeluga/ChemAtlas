@@ -1,0 +1,144 @@
+{
+  "questionId": "frq-2008-3-59",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Two crops show parts (a)-(c) with the half-reaction table and parts (d)-(f) with the rate data table; they match page contexts."
+  },
+  "officialTopics": {
+    "primary": "5.2",
+    "additional": [
+      "9.9",
+      "9.1"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "a",
+      "primary": [
+        {
+          "conceptId": "cell-potential",
+          "evidence": "Must use E°cell = +0.62 V and E°(Cu2+/Cu) = +0.34 V to solve for E° of the NO3- reduction half-reaction."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "potential-table",
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "b",
+      "primary": [
+        {
+          "conceptId": "cell-potential",
+          "evidence": "Must apply ΔG° = -nFE° with E° = +0.62 V for the overall reaction."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "redox-half-reactions",
+          "evidence": "Must determine n = 6 mol electrons transferred from the balanced overall equation (3 Cu each losing 2 e-)."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    },
+    {
+      "partId": "c",
+      "primary": [
+        {
+          "conceptId": "entropy",
+          "evidence": "Must predict the sign of ΔS° by comparing the 10 mol of aqueous ions consumed with the 2 mol of gas and 3 mol of ions produced."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "justify"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "d",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must compare experiments holding one concentration constant to determine the order in NO and in O2."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate",
+        "justify"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "e",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must write rate = k[NO]^2[O2] from the orders found in (d)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "represent"
+      ],
+      "representations": [
+        "experimental-data"
+      ],
+      "skills": []
+    },
+    {
+      "partId": "f",
+      "primary": [
+        {
+          "conceptId": "rate-law",
+          "evidence": "Must calculate k from one experiment's rate and concentrations and derive its units for a third-order rate law."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "table",
+        "experimental-data"
+      ],
+      "skills": [
+        "dimensional-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

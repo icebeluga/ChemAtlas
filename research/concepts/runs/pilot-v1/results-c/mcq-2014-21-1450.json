@@ -1,0 +1,38 @@
+{
+  "questionId": "mcq-2014-21-1450",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crops show the shared equation (delta H < 0, Kc = 14.5) and full question 21 choices A-D; page context confirms."
+  },
+  "officialTopics": {
+    "primary": "7.9",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "le-chatelier",
+          "evidence": "Must predict the effect of raising temperature on K using the given sign of delta H, recognizing that temperature changes K."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "predict",
+        "explain"
+      ],
+      "representations": [
+        "chemical-equation"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

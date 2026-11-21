@@ -1,0 +1,86 @@
+{
+ "questionId": "mcq-2022-21-1622",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2022-21-1622.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop shows stem and choices A-D but omits the shared table of structures and molar masses above Q20; recovered from page context. Source scan has a highlighter mark on a choice, ignored."
+  },
+  "officialTopics": {
+   "primary": "3.1",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "imf-properties",
+      "evidence": "Must decide which compound has the higher boiling point from the relative strength of intermolecular attractions."
+     },
+     {
+      "conceptId": "hydrogen-bonding",
+      "evidence": "Must recognize propanoic acid has an O-H group able to hydrogen bond while pentane has no H bonded to N, O or F."
+     }
+    ],
+    "supporting": [],
+    "contextual": [
+     {
+      "conceptId": "london-dispersion",
+      "evidence": "A distractor cites dispersion forces; the similar molar masses (72 vs 74 g/mol) make it non-decisive."
+     }
+    ],
+    "actions": [
+     "compare",
+     "justify"
+    ],
+    "representations": [
+     "molecular-structure"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "none",
+   "cropIssue": "extra-content",
+   "notes": "Crop shows full stem and choices A-D. One choice is highlighted in the source; the highlight was ignored. The structure table for the question group is only in page context and not needed beyond the compound names."
+  },
+  "officialTopics": {
+   "primary": "3.1",
+   "additional": []
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "imf-properties",
+      "evidence": "Must compare the boiling points of pentane and propanoic acid in terms of intermolecular attractions."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "hydrogen-bonding",
+      "evidence": "Propanoic acid has an O-H group that can hydrogen bond; pentane has only C-H bonds. Must identify this as the deciding force and reject the bond-breaking distractor."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "compare",
+     "justify"
+    ],
+    "representations": [
+     "text-only"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

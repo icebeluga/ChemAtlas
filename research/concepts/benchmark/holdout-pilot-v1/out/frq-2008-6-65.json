@@ -1,0 +1,38 @@
+{
+  "questionId": "frq-2008-6-65",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "solubility-polarity"
+      ],
+      "supporting": [
+        "hydrogen-bonding",
+        "molecular-polarity"
+      ]
+    },
+    "b": {
+      "primary": [
+        "imf-properties",
+        "hydrogen-bonding"
+      ],
+      "supporting": []
+    },
+    "c": {
+      "primary": [
+        "solid-types"
+      ],
+      "supporting": []
+    },
+    "d": {
+      "primary": [
+        "imf-properties",
+        "london-dispersion"
+      ],
+      "supporting": [
+        "dipole-dipole"
+      ]
+    }
+  },
+  "notes": "In (d) dispersion decides the comparison but HCl's dipole-dipole forces must be addressed; in (c) the molecular versus covalent-network classification carries the argument."
+}

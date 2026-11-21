@@ -1,0 +1,8 @@
+{
+  "questionId": "mcq-2018-34-1205",
+  "contentStatus": "complete",
+  "parts": { "stem": { "primary": ["solubility-product"], "supporting": [] } },
+  "verdictX": { "label": "over-tagged", "reason": "Adds dynamic-equilibrium; recognizing the saturated solution as a dissolution equilibrium is inherent to the solubility-equilibrium concept already tagged." },
+  "verdictY": { "label": "correct", "reason": "Contextual endo-exothermic is harmless (distractor only)." },
+  "notes": "Fixed molar solubility of a saturated solution at constant T is a qualitative 7.11 idea; no separate equilibrium-nature tag needed."
+}

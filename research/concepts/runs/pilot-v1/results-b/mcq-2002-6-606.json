@@ -1,0 +1,39 @@
+{
+  "questionId": "mcq-2002-6-606",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "none",
+    "notes": "Crop r1 shows the phase diagram and choices; r2 shows Q6 stem. Complete."
+  },
+  "officialTopics": {
+    "primary": "3.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "particulate-states",
+          "evidence": "Must read the phase diagram: at 1.1 atm cooling from 110 C to 40 C crosses the gas-liquid boundary, a phase change."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "interpret"
+      ],
+      "representations": [
+        "graph"
+      ],
+      "skills": [
+        "graph-analysis"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Phase diagrams are not assessed in the current AP course; no concept fits exactly. Taxonomy gap."
+}

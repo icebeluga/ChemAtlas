@@ -1,0 +1,45 @@
+{
+  "questionId": "frq-2008-3-59",
+  "contentStatus": "complete",
+  "parts": {
+    "a": {
+      "primary": [
+        "cell-potential"
+      ],
+      "supporting": []
+    },
+    "b": {
+      "primary": [
+        "cell-potential"
+      ],
+      "supporting": [
+        "redox-half-reactions"
+      ]
+    },
+    "c": {
+      "primary": [
+        "entropy"
+      ],
+      "supporting": []
+    },
+    "d": {
+      "primary": [
+        "rate-law"
+      ],
+      "supporting": []
+    },
+    "e": {
+      "primary": [
+        "rate-law"
+      ],
+      "supporting": []
+    },
+    "f": {
+      "primary": [
+        "rate-law"
+      ],
+      "supporting": []
+    }
+  },
+  "notes": "Part (b) requires n = 6 electrons from combining the half-reactions; (d)(i) and (d)(ii) test the same concept so kept as one part."
+}

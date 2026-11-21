@@ -1,0 +1,52 @@
+{
+  "questionId": "mcq-2008-59-42",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "analyzed",
+    "cropIssue": "no-crop",
+    "notes": "Full-page image (no crop). Question 59 shows the NO2/N2O4 particle diagram with key, the 1.0 L container, equation and choices A-E; legible."
+  },
+  "officialTopics": {
+    "primary": "7.4",
+    "additional": [
+      "7.5"
+    ]
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "equilibrium-constant-calculation",
+          "evidence": "Must decide whether particle counts in the diagram give enough information to evaluate K for 2 NO2 = N2O4."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "equilibrium-expression",
+          "evidence": "Must write K as [N2O4]/[NO2]^2 to judge what the diagram can establish."
+        }
+      ],
+      "contextual": [
+        {
+          "conceptId": "dynamic-equilibrium",
+          "evidence": "Stated that the mixture is at equilibrium."
+        }
+      ],
+      "actions": [
+        "interpret",
+        "justify"
+      ],
+      "representations": [
+        "particulate-diagram"
+      ],
+      "skills": [
+        "particulate-modeling"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Borderline between K calculation and K magnitude interpretation; also the packet text is a paraphrase while the page shows Version A question 59."
+}

@@ -1,0 +1,220 @@
+{
+ "questionId": "mcq-2022-5-1663",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2022-5-1663.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows equation, data table, temperature-time graph and parts (a)-(d); matches page. Despite the mcq- id this is a 4-part free-response question."
+  },
+  "officialTopics": {
+   "primary": "6.4",
+   "additional": [
+    "5.5",
+    "6.1",
+    "6.6"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must apply q = mcΔT using the 44.40 g total mass, 4.22 J/(g·°C) and the 19.9 to 3.2 °C temperature change from the table."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "collision-model",
+      "evidence": "Must explain the slowing temperature change as fewer reactant particles remaining, so collisions between NaHCO3 and citric acid particles become less frequent."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "explain"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Must infer from the falling temperature on the graph that heat flows from the surroundings into the reaction system (endothermic)."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "justify"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": [
+     "graph-analysis"
+    ]
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must reason that halving the mass of NaHCO3 (the reactant not in excess) halves the moles reacting and therefore the heat absorbed."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must connect the smaller heat absorbed by a nearly equal mass of solution to a smaller temperature change via q = mcΔT."
+     }
+    ],
+    "contextual": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "Citric acid is stated to be in excess, so NaHCO3 limits the reaction."
+     }
+    ],
+    "actions": [
+     "predict",
+     "justify"
+    ],
+    "representations": [
+     "chemical-equation",
+     "experimental-data"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "none",
+   "notes": "Crop shows equation, data table, temperature graph and parts (a)-(d)."
+  },
+  "officialTopics": {
+   "primary": "6.4",
+   "additional": [
+    "5.5",
+    "6.1",
+    "6.3"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "a",
+    "primary": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must apply q = mc delta T using total mass, specific heat and temperature change."
+     }
+    ],
+    "supporting": [],
+    "contextual": [],
+    "actions": [
+     "calculate"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "b",
+    "primary": [
+     {
+      "conceptId": "collision-model",
+      "evidence": "As reactants are consumed collisions become less frequent so temperature changes more slowly."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "reaction-rate",
+      "evidence": "Slowing rate of temperature change reflects decreasing reaction rate."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "explain",
+     "interpret"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "c",
+    "primary": [
+     {
+      "conceptId": "endo-exothermic",
+      "evidence": "Falling temperature shows the reaction absorbs heat."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "heat-transfer",
+      "evidence": "Must state heat flows from surroundings into the system."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "interpret",
+     "justify"
+    ],
+    "representations": [
+     "graph"
+    ],
+    "skills": []
+   },
+   {
+    "partId": "d",
+    "primary": [
+     {
+      "conceptId": "calorimetry",
+      "evidence": "Must compare temperature change when less NaHCO3 reacts, since q depends on amount reacted."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "NaHCO3 is limiting because citric acid is in excess."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "predict",
+     "justify"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

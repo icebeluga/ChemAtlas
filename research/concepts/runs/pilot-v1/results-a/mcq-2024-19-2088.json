@@ -1,0 +1,37 @@
+{
+  "questionId": "mcq-2024-19-2088",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "extra-content",
+    "notes": "Crop is the whole page and also contains Q20 (NO2 kinetics graph); Q19 stem and choices A-D are complete and legible."
+  },
+  "officialTopics": {
+    "primary": "1.7",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "atomic-radius",
+          "evidence": "Must rank radii of ions versus parent atoms and isoelectronic species (e.g. S2- vs O vs F, K+ vs Ar vs Cl) to find the only correct largest-to-smallest order."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "rank"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

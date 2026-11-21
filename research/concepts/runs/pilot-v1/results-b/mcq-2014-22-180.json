@@ -1,0 +1,44 @@
+{
+  "questionId": "mcq-2014-22-180",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "missing-content-recovered-from-page",
+    "notes": "Crop cuts off the beginning of the stem (caffeine is a weak base, Kb 4e-4); page context shows it. Crop also includes part of the next question."
+  },
+  "officialTopics": {
+    "primary": "8.3",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "weak-acid-equilibrium",
+          "evidence": "Must find pH of a 0.01 M weak base solution from Kb = 4e-4."
+        }
+      ],
+      "supporting": [
+        {
+          "conceptId": "ph-poh",
+          "evidence": "Must convert [OH-] to pOH and pH."
+        }
+      ],
+      "contextual": [],
+      "actions": [
+        "calculate"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": [
+        "logarithms"
+      ]
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": ""
+}

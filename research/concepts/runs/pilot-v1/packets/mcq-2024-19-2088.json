@@ -1,0 +1,191 @@
+{
+  "questionId": "mcq-2024-19-2088",
+  "type": "MCQ",
+  "exam": "2024 AP Chemistry MCQ",
+  "year": "2024",
+  "number": 19,
+  "text": "19. Which of the following lists chemical species in\norder from largest to smallest radius?\n\n(A) S>>0>F\n(B) O>07->Ne\n(© K*>Ar>cl\n\n(D) Na>Mg”* > Mg\n\nUnauthorized copying or reuse of\nany part of this page is illegal.\n\n© studocu\n\nNO4( 4) > NO(e) + 3 On(8)\n\n20. The following graph shows data from an\nexperiment in which NO3(g) decomposes as\nrepresented by the equation.\n\n300:\n\n4\n\n250:\n\nlA]\n\n200: 4\n\n421\n150 7\n\nL/[NO}]\n\n100\n\nMy 50 100 150 200 250 300 350\n\nTime (s)\n\nThe graph could be used to support which of the\nfollowing statements?\n\n(A) The half-life of the reaction is constant.\n\n(B) The magnitude of the rate constant, k, is\napproximately 10.\n\n(C) The unit of the rate constant, k, is s~ A\n\n(D) The rate law for the reaction is\n\nrate = k{NO}}°.\n\nmessages.pdf_cover_qr_code_label\nmessages.downloaded_by\n\n",
+  "regions": [
+    {
+      "page": 2088,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ],
+      "source": {
+        "pdf": "public/source/bank-07.pdf",
+        "localPage": 288,
+        "compiledPage": 2088
+      }
+    }
+  ],
+  "stimulus": [],
+  "parts": [
+    {
+      "partId": "stem",
+      "label": "(stem)",
+      "catalogTopics": [
+        "1.7"
+      ]
+    }
+  ],
+  "catalogTopics": {
+    "primary": "1.7",
+    "secondary": [],
+    "status": "classified",
+    "method": "Question-content review against current CED; scanned page checked"
+  },
+  "crop": {
+    "verified": false,
+    "status": "not-reviewed",
+    "note": null
+  },
+  "warnings": [],
+  "legacyConcepts": [],
+  "readiness": {
+    "status": "needs-visual-check",
+    "reasons": [
+      "refers-to-visual-content",
+      "adjacent-question-text",
+      "crop-unverified"
+    ]
+  },
+  "contentHash": "2123b3aa9cf36321",
+  "images": [
+    {
+      "kind": "crop",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-19-2088-r1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 288,
+      "rect": [
+        20,
+        45,
+        575,
+        797
+      ]
+    },
+    {
+      "kind": "page-context",
+      "path": "research/concepts/runs/pilot-v1/images/mcq-2024-19-2088-page1.png",
+      "pdf": "public/source/bank-07.pdf",
+      "page": 288,
+      "rect": null
+    }
+  ],
+  "candidates": [
+    {
+      "conceptId": "coulombic-attraction",
+      "name": "Coulomb's law and effective nuclear charge",
+      "definition": "Explaining atomic and ionic behavior through the electrostatic attraction between charges, which grows with charge magnitude and shrinks with distance, including shielding and effective nuclear charge.",
+      "include": "Tag when the explanation must invoke charge magnitude, distance, shielding or effective nuclear charge to justify a trend or comparison.",
+      "exclude": "Do not tag lattice-energy comparisons already tagged lattice-energy unless the reasoning is explicitly about Coulomb's law at the atomic level; do not tag simple recall of a trend direction.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:atomic-radius",
+        "linked-from:ionization-energy",
+        "linked-from:electronegativity"
+      ]
+    },
+    {
+      "conceptId": "atomic-radius",
+      "name": "Atomic and ionic radius",
+      "definition": "Predicting and explaining the sizes of atoms and ions across periods and down groups, including isoelectronic ions and ions versus their parent atoms.",
+      "include": "Tag when atomic or ionic size is compared, ranked or explained.",
+      "exclude": "Do not tag when ion size is only one input to a lattice-energy argument unless the size comparison itself is asked.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:coulombic-attraction",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "ionization-energy",
+      "name": "Ionization energy",
+      "definition": "Trends in first ionization energy and the pattern of successive ionization energies, including using large jumps to identify valence electrons.",
+      "include": "Tag when first or successive ionization energies are compared, ranked, explained or used to identify an element or group.",
+      "exclude": "Do not tag PES questions unless ionization energy itself is compared outside the spectrum.",
+      "whyCandidate": [
+        "catalog-topic-primary",
+        "linked-from:coulombic-attraction",
+        "linked-from:atomic-radius"
+      ]
+    },
+    {
+      "conceptId": "electronegativity",
+      "name": "Electronegativity trends",
+      "definition": "The tendency of an atom in a bond to attract shared electrons, its periodic trend, and its explanation from nuclear charge and distance.",
+      "include": "Tag when electronegativity values or trends must be compared or explained as the main reasoning.",
+      "exclude": "Do not tag when electronegativity is only used to decide bond polarity (tag bond-polarity) or acid strength (tag acid-strength-structure).",
+      "whyCandidate": [
+        "catalog-topic-primary"
+      ]
+    },
+    {
+      "conceptId": "electron-configuration",
+      "name": "Electron configurations and atomic structure",
+      "definition": "Subatomic particles, isotopes and ion charge, and writing or interpreting ground-state electron configurations of atoms and ions using the Aufbau principle, Hund's rule and the Pauli principle.",
+      "include": "Tag when the student writes, reads or uses an electron configuration, identifies core versus valence electrons, or counts protons, neutrons and electrons.",
+      "exclude": "Do not tag when the configuration is only implied by a periodic-trend explanation that already rests on Coulombic attraction; Aufbau exceptions and quantum-number assignments are not assessed.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:coulombic-attraction",
+        "linked-from:atomic-radius",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "integrated-rate-laws",
+      "name": "Integrated rate laws and half-life",
+      "definition": "Using concentration-versus-time relationships for zero, first and second order reactions, linear plots ([A], ln[A], 1/[A] versus time), rate constants from slopes, and first-order half-life.",
+      "include": "Tag when concentration at a time, half-life, or order from a linear plot must be determined.",
+      "exclude": "Do not tag initial-rate tables (tag rate-law).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "rate-law",
+      "name": "Rate laws and reaction order",
+      "definition": "Determining reaction orders, the overall order, the rate constant and its units from experimental data, typically initial rates, and predicting rate changes when concentrations change.",
+      "include": "Tag when orders, a rate law, k, or a predicted rate change must be determined.",
+      "exclude": "Do not tag mechanism-based rate-law derivation (tag mechanism-rate-law) or integrated-rate-law graphs (tag integrated-rate-laws).",
+      "whyCandidate": [
+        "term-in-text"
+      ]
+    },
+    {
+      "conceptId": "bond-polarity",
+      "name": "Bond polarity and partial charges",
+      "definition": "Using electronegativity difference to decide whether a bond is polar, the direction of its dipole, and which atom carries the partial negative charge.",
+      "include": "Tag when bond dipoles or partial charges on bonded atoms must be identified or compared.",
+      "exclude": "Do not tag whole-molecule polarity questions unless individual bond dipoles are explicitly reasoned about (tag molecular-polarity).",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:electronegativity"
+      ]
+    },
+    {
+      "conceptId": "photoelectron-spectroscopy",
+      "name": "Photoelectron spectroscopy (PES)",
+      "definition": "Reading PES spectra: peak position as binding energy of a subshell, relative peak height as number of electrons, and connecting spectra to electron configuration and nuclear charge.",
+      "include": "Tag when a PES spectrum is given, sketched or predicted, or binding energies of subshells are compared.",
+      "exclude": "Do not tag ionization-energy trend questions that never refer to subshell binding energies or spectra.",
+      "whyCandidate": [
+        "catalog-topic-related",
+        "linked-from:ionization-energy"
+      ]
+    },
+    {
+      "conceptId": "lattice-energy",
+      "name": "Ionic solids and lattice attraction",
+      "definition": "The structure of ionic solids as lattices of alternating cations and anions, and comparing the strength of lattice attraction from ion charge and ion size.",
+      "include": "Tag when ionic compounds are compared by melting point, lattice energy or hardness using ion charge and radius, or the lattice structure is described.",
+      "exclude": "Do not tag classification of a solid as ionic without a lattice-strength argument (tag solid-types).",
+      "whyCandidate": [
+        "linked-from:coulombic-attraction"
+      ]
+    }
+  ]
+}

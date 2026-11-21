@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2022-13-1639",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-D. The shared stimulus (H2O2 decomposition with MnO2) is on the previous page and not shown; it is not needed to answer."
+  },
+  "officialTopics": {
+    "primary": "5.11",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "catalysis",
+          "evidence": "Must explain the faster rate with MnO2 as a catalyst providing a lower activation-energy pathway, rejecting changes to ΔH or equilibrium position."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "explain"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

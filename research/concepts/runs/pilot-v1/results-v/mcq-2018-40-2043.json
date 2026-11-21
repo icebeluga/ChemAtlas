@@ -1,0 +1,41 @@
+{
+  "questionId": "mcq-2018-40-2043",
+  "contentCheck": {
+    "status": "complete",
+    "sawImage": true,
+    "diagramStatus": "none",
+    "cropIssue": "none",
+    "notes": "Crop shows full stem and choices A-E. Nuclear decay is beyond the current AP course; official topic 1.5 is the nearest related topic."
+  },
+  "officialTopics": {
+    "primary": "1.5",
+    "additional": []
+  },
+  "parts": [
+    {
+      "partId": "stem",
+      "primary": [
+        {
+          "conceptId": "nuclear-chemistry",
+          "evidence": "Must identify the particle emitted when 39Ca becomes 39K (mass number unchanged, atomic number down by one, i.e. positron emission)."
+        }
+      ],
+      "supporting": [],
+      "contextual": [],
+      "actions": [
+        "identify"
+      ],
+      "representations": [
+        "text-only"
+      ],
+      "skills": []
+    }
+  ],
+  "answerKeyUsed": false,
+  "needsAttention": false,
+  "uncertainty": "",
+  "verifier": {
+    "prompt": "verifier.v1",
+    "changes": []
+  }
+}

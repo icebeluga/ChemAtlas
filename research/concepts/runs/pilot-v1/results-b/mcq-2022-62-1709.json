@@ -1,0 +1,18 @@
+{
+  "questionId": "mcq-2022-62-1709",
+  "contentCheck": {
+    "status": "partial",
+    "sawImage": true,
+    "diagramStatus": "partially-readable",
+    "cropIssue": "missing-content",
+    "notes": "Only parts (a) and (b) with the data table and temperature graph are visible (this is a scoring-guide page); parts (c) and (d) are not shown on the crop or page context, so parts left empty."
+  },
+  "officialTopics": {
+    "primary": "6.4",
+    "additional": []
+  },
+  "parts": [],
+  "answerKeyUsed": false,
+  "needsAttention": true,
+  "uncertainty": "Catalog lists parts a-d but only a and b are visible; continuation page missing."
+}

@@ -1,0 +1,87 @@
+{
+ "questionId": "mcq-2016-24-1063",
+ "packet": "research/concepts/runs/pilot-v1/packets/mcq-2016-24-1063.json",
+ "proposalX": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop omits the data table (volumes of 0.10 M HCl and NaOH per trial) and cuts the right half of the stem and choices; page context shows everything."
+  },
+  "officialTopics": {
+   "primary": "6.6",
+   "additional": [
+    "4.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Must recognize that heat released is proportional to the moles of acid and base that actually react."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "Must see that 50 mL of 0.10 M NaOH limits both trials, so the extra HCl in trial 2 does not react and Y = X."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "compare",
+     "explain"
+    ],
+    "representations": [
+     "table",
+     "experimental-data"
+    ],
+    "skills": []
+   }
+  ]
+ },
+ "proposalY": {
+  "contentCheck": {
+   "status": "complete",
+   "sawImage": true,
+   "diagramStatus": "analyzed",
+   "cropIssue": "missing-content-recovered-from-page",
+   "notes": "Crop is cut off on the right; page context shows the table and complete stem and choices."
+  },
+  "officialTopics": {
+   "primary": "6.6",
+   "additional": [
+    "4.5"
+   ]
+  },
+  "parts": [
+   {
+    "partId": "stem",
+    "primary": [
+     {
+      "conceptId": "limiting-reactant",
+      "evidence": "Must see that NaOH is limiting in both trials so moles reacting and heat released are the same."
+     }
+    ],
+    "supporting": [
+     {
+      "conceptId": "enthalpy-of-reaction",
+      "evidence": "Heat released scales with moles of reaction, not total volume."
+     }
+    ],
+    "contextual": [],
+    "actions": [
+     "predict",
+     "justify"
+    ],
+    "representations": [
+     "table"
+    ],
+    "skills": []
+   }
+  ]
+ }
+}

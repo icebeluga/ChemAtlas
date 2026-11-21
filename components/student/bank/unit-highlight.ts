@@ -86,7 +86,7 @@ export function connectUnitAccordion(row: HTMLElement) {
       const expansion = Math.max(0, (card.width - card.base) / Math.max(1, card.peak - card.base));
       const visible = card.width >= 200 ? Math.min(1, (card.width - 160) / 40) : 0;
       card.title.style.opacity = `${visible}`;
-      card.button.toggleAttribute("data-accordion-dark", expansion > .15 || card.button.getAttribute("aria-pressed") === "true");
+      card.button.toggleAttribute("data-accordion-dark", expansion > .15 || card.button.hasAttribute("data-selected"));
     });
   }
 
@@ -116,6 +116,8 @@ export function connectUnitAccordion(row: HTMLElement) {
 
   function move(event: PointerEvent) {
     if (!hover.matches || !["mouse", "pen"].includes(event.pointerType)) return;
+    // The utility must stay under the pointer; it does not retarget the accordion.
+    if ((event.target as Element).closest(".ca-unit-focus")) return;
     // Layout can dispatch boundary events as cards resize. Never retarget on
     // those events, nor on an unchanged coordinate; only real pointer movement.
     if (event.clientX === previousX && event.clientY === previousY) return;
@@ -129,10 +131,12 @@ export function connectUnitAccordion(row: HTMLElement) {
   const leave = () => { previousX = previousY = NaN; if (cards.length) choose(-1); };
   function focus(event: FocusEvent) {
     const button = (event.target as HTMLElement).closest<HTMLElement>(".ca-unit");
-    if (!button?.matches(":focus-visible") || !hover.matches) return;
+    if (!button || !(event.target as HTMLElement).matches(".ca-unit-select:focus-visible") || !hover.matches) return;
     prepare(); choose(cards.findIndex(card => card.button === button), true);
   }
-  const blur = () => { if (!row.matches(":hover")) stop(); };
+  const blur = (event: FocusEvent) => {
+    if (!row.matches(":hover") && !row.contains(event.relatedTarget as Node | null)) stop();
+  };
   row.addEventListener("pointermove", move); row.addEventListener("pointerleave", leave);
   row.addEventListener("focusin", focus); row.addEventListener("focusout", blur);
   window.addEventListener("resize", stop); window.addEventListener("scroll", stop, true);

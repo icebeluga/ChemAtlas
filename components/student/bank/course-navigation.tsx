@@ -3,9 +3,10 @@
 import { useId, useLayoutEffect, useRef, useState, useEffect } from "react";
 import { Popover } from "@base-ui/react/popover";
 import { Collapsible } from "@base-ui/react/collapsible";
-import { ChevronDown, ChevronUp, ChevronsDown, X } from "lucide-react";
+import { ChevronDown, ChevronsDown, X } from "lucide-react";
 import type { Catalog } from "@/components/student/hooks/use-catalog";
 import { connectUnitAccordion, resetUnitAccordion } from "./unit-highlight";
+import { UnitFocusControl } from "./unit-focus-control";
 
 type Counts = { byTopic: Map<string, number>; byUnit: Map<string, number>; max: number };
 type Props = {
@@ -41,7 +42,7 @@ export function CourseNavigation(props: Props) {
     // a useful navigation control rather than dropping it to the document.
     requestAnimationFrame(() => browse.current?.focus({ preventScroll: true }));
   }
-  const cards = <CourseCards {...props} unit={activeUnit?.id ?? unit} overlay={overlayLocation}
+  const cards = <CourseCards {...props} unit={activeUnit?.id ?? unit} overlay={overlayLocation} tooltipContainer={host}
     onUnit={next => onFilters({ unit: !overlayLocation && unit === next ? "all" : next, topic: "all" })}
     onTopic={selectTopic} onCollapse={() => { onFocus(true); requestAnimationFrame(() => browse.current?.focus({ preventScroll: true })); }} />;
 
@@ -85,9 +86,13 @@ export function CourseNavigation(props: Props) {
             finalFocus={() => document.getElementById(triggerId ?? "") ?? browse.current ?? true}
             initialFocus={() => (reveal.current === "topics"
               ? popup.current?.querySelector<HTMLElement>('.ca-topics .ca-topic[aria-pressed="true"]') ?? popup.current?.querySelector<HTMLElement>('.ca-topics .ca-topic')
-              : popup.current?.querySelector<HTMLElement>('.ca-unit[aria-pressed="true"]')) ?? true}>
+              : popup.current?.querySelector<HTMLElement>('.ca-unit-select[aria-pressed="true"]')) ?? true}>
             <header className="ca-browser-header"><Popover.Title>Browse units and topics</Popover.Title>
-              <Popover.Close className="ca-icon" aria-label="Close navigation browser"><X size={16} aria-hidden="true" /></Popover.Close>
+              <div className="ca-browser-header-actions">
+                <UnitFocusControl label={activeUnit ? `View all Unit ${number} questions` : "View all questions"}
+                  onActivate={() => selectTopic("all")} container={host} unit={activeUnit?.id} placement={activeUnit ? "mobile" : "header"} />
+                <Popover.Close className="ca-icon" aria-label="Close navigation browser"><X size={16} aria-hidden="true" /></Popover.Close>
+              </div>
             </header>
             {overlayLocation && cards}
           </Popover.Popup>
@@ -97,8 +102,8 @@ export function CourseNavigation(props: Props) {
   </nav>;
 }
 
-type CardsProps = Props & { overlay: boolean; onUnit: (unit: string) => void; onTopic: (topic: string) => void; onCollapse: () => void };
-function CourseCards({ catalog, counts, total, unit, topic, overlay, onUnit, onTopic, onCollapse }: CardsProps) {
+type CardsProps = Props & { overlay: boolean; onUnit: (unit: string) => void; onTopic: (topic: string) => void; onCollapse: () => void; tooltipContainer: React.RefObject<HTMLElement | null> };
+function CourseCards({ catalog, counts, total, unit, topic, overlay, onUnit, onTopic, onCollapse, tooltipContainer }: CardsProps) {
   const activeUnit = catalog.units.find(u => u.id === unit);
   const number = activeUnit ? catalog.units.indexOf(activeUnit) + 1 : 0;
   const units = useRef<HTMLDivElement>(null), band = useRef<HTMLDivElement>(null), sheet = useRef<HTMLDialogElement>(null);
@@ -127,32 +132,35 @@ function CourseCards({ catalog, counts, total, unit, topic, overlay, onUnit, onT
     observer.observe(element); return () => observer.disconnect();
   }, [activeUnit]);
   function chooseTopic(id: string) { sheet.current?.close(); onTopic(id); }
+  const focusLabel = overlay ? `View all Unit ${number} questions` : "Focus on this unit";
+  const focusUnit = overlay ? () => onTopic("all") : onCollapse;
   return <div className="ca-navigation-cards" data-overlay={overlay ? "" : undefined}>
     <h2 className="ca-sr">Browse by unit</h2>
     <div className="ca-units" ref={units}>
-      <button type="button" className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} aria-pressed={unit === "all"}
-        onClick={() => { resetUnitAccordion(units.current); onUnit("all"); }}>
+      <div className="ca-unit is-all" style={{ "--i": 0 } as React.CSSProperties} data-selected={unit === "all" ? "" : undefined}>
+        <button type="button" className="ca-unit-select" aria-pressed={unit === "all"} aria-label={`All units, ${total} questions`}
+          onClick={() => { resetUnitAccordion(units.current); onUnit("all"); }}>
         <b>All</b><span>{total ? total.toLocaleString() : ""}</span><span className="ca-sr">units</span>
         <i className="ca-unit-highlight" aria-hidden="true"><b><span className="ca-unit-number">All</span></b><span>{total ? total.toLocaleString() : ""}</span></i>
-      </button>
-      {catalog.units.map((u, i) => <button type="button" key={u.id} className="ca-unit" data-u={u.id} style={{ "--i": i + 1 } as React.CSSProperties}
-        aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
+        </button>
+      </div>
+      {catalog.units.map((u, i) => <div key={u.id} className="ca-unit" data-u={u.id} data-selected={unit === u.id ? "" : undefined} style={{ "--i": i + 1 } as React.CSSProperties}>
+        <button type="button" className="ca-unit-select" aria-pressed={unit === u.id} aria-label={`Unit ${i + 1}, ${u.name}, ${counts.byUnit.get(u.id) ?? 0} questions`}
         onClick={() => { resetUnitAccordion(units.current); onUnit(u.id); }}>
         <b>{i + 1}<small>{counts.byUnit.get(u.id) ?? 0}</small></b>{unit === u.id && <span>{u.name}</span>}
         <i className="ca-heat" aria-hidden="true">{u.topics.map(([key]) => <i key={key} style={{ "--d": density(counts.byTopic.get(key) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
         <i className="ca-unit-highlight" aria-hidden="true"><b><span className="ca-unit-number">{i + 1}</span><small>{counts.byUnit.get(u.id) ?? 0}</small></b><span>{u.name}</span>
           <i className="ca-heat">{u.topics.map(([key]) => <i key={key} style={{ "--d": density(counts.byTopic.get(key) ?? 0, counts.max) } as React.CSSProperties} />)}</i>
         </i>
-      </button>)}
+        </button>
+        {unit === u.id && <UnitFocusControl label={focusLabel} onActivate={focusUnit} container={tooltipContainer} />}
+      </div>)}
     </div>
     <div className="ca-unit-line" data-u={activeUnit?.id}>
       <b>{activeUnit ? `Unit ${number}: ${activeUnit.name}` : "All nine units"}</b>
+      {activeUnit && !overlay && <UnitFocusControl label={focusLabel} onActivate={focusUnit} container={tooltipContainer} unit={activeUnit.id} placement="mobile" />}
       {activeUnit && <button type="button" className="ca-btn is-quiet ca-topic-open" aria-haspopup="dialog" onClick={() => sheet.current?.showModal()}>All topics <ChevronDown size={15} aria-hidden="true" /></button>}
     </div>
-    {(activeUnit || overlay) && <div className="ca-navigation-actions">
-      {overlay ? <button type="button" className="ca-study-unit" onClick={() => onTopic("all")}>{activeUnit ? `All Unit ${number} questions` : "All questions"}</button> : <span />}
-      {!overlay && <button type="button" className="ca-collapse-navigation" onClick={onCollapse}><ChevronUp size={14} aria-hidden="true" /> Focus on this unit</button>}
-    </div>}
     <div className="ca-topics-wrap" data-open={activeUnit ? "" : undefined}>
       <div className="ca-topics" ref={band} data-u={activeUnit?.id}>
         {[activeUnit?.topics.slice(0, split || Math.ceil(activeUnit.topics.length / 2)), activeUnit?.topics.slice(split || Math.ceil(activeUnit.topics.length / 2))].map((row, index) => <div className="ca-topic-row" key={index}>

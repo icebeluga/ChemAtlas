@@ -1,5 +1,19 @@
 # ChemAtlas — Codex continuation handoff
 
+## Latest update — integrated unit focus utilities (November 20, 2026)
+
+This targeted round starts from clean `fc143a112c429b0ffb890e39f870336cd99fe2f7` on `codex/student-ui-improvements`, continuing draft PR #9. Approved main remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`. Read the final Git head and PR CI for the resulting candidate SHA. Preserve all earlier work and independent worktrees.
+
+- The selected expanded unit card now contains a discreet four-corner `Scan` icon, below the count and above the segments. `UnitFocusControl` shares the 16 px icon, unit-colored transparent treatment, keyboard focus, and portaled tooltip between both views. It uses the installed Base UI tooltip; no new dependency.
+- Main label: **Focus on this unit**, invoking the original visibility-only collapse callback. Browser label: **View all Unit N questions**, invoking the original all-topic callback, retaining the unit/other filters and closing the panel. These behaviors deliberately remain distinct. The no-unit browser action remains available as **View all questions** in its existing header.
+- The former text-action strips are removed completely. Topics follow cards without a replacement row. Card names retain the shared centered face, symmetric gutters, typography, dimensions, colors, segments and hover width-allocation algorithm.
+- Each `.ca-unit` is now a layout wrapper with two **sibling native buttons**: `.ca-unit-select` (original selection action and metadata) and `.ca-unit-focus`. This avoids nested interactive controls. `aria-pressed` belongs to the selector, while the wrapper uses `data-selected` for visual styling. The selector's pseudo-element preserves the full-card hit area. Update selectors accordingly in future tests.
+- Hovering the utility does not retarget the width animation; keyboard focus moving within the row does not stop/restart it. Compressed cards hide the utility when insufficient width remains; keyboard focusing the selected unit expands it before reaching the utility. No animation timings or width-allocation formulas changed.
+- **Owner-approved mobile accommodation:** on phones (<=700 px), keep compact 30–40 px unit cards and counts unchanged; place the same icon beside the existing full-name caption in the main view, and in the existing Browse-panel header. No new row. Wide touch tablets use the centered selected face and card utility. Do not force the utility into tiny phone cards.
+- Local before/after navigation screenshots and 108 geometry/color comparisons are under ignored `outputs/unit-focus/`; browser evidence and touch screenshots are under `test-results/pages/`. Keep protected question/PDF content out of public PR attachments. Checks are logged as `outputs/unit-focus-*.log`; final handoff/PR reports exact results. The persistent fixture preview must be refreshed/stamped at the final candidate, verified, and kept running for owner review.
+- The local comparison found no card width/height, relative title bounds, palette, name or segment-count differences in 108 before/after combinations. Both desktop navigation views reclaim exactly 26 px. TypeScript, changed-file lint, 109 Node and 52 Python tests pass; full lint has four pre-existing warnings. All 30 Pages scenarios have passing results (one older wrapper-attribute assertion was adapted and rerun after the initial full pass). Final CI should rerun the complete suite against the pushed head.
+- No catalog/classification/auth/backend/Worker configuration/deployment workflow changes, merge, or deployment are authorized. The earlier light/dark, adaptive navigation, centered-title and student functionality requirements remain current.
+
 ## Latest update — unit title alignment (November 20, 2026)
 
 This targeted round starts from clean `478e789a668b4b91d6871b9ff5b35d78bf8a2933` on the same branch/PR #9, with approved main still `b05c06eaf113a91edcf95f3eea50dc4dec738492`.

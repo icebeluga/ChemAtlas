@@ -22,8 +22,8 @@ after(async () => {
   await fixture?.close();
   await writeFile("test-results/pages/results.json", JSON.stringify(evidence, null, 2));
 });
-async function open(width = 1440) {
-  const context = await browser.newContext({ viewport: { width, height: 1000 }, reducedMotion: "reduce", acceptDownloads: true });
+async function open(width = 1440, options = {}) {
+  const context = await browser.newContext({ viewport: { width, height: 1000 }, reducedMotion: "reduce", acceptDownloads: true, ...options });
   await context.route("**/*", route => {
     const url = new URL(route.request().url());
     if (["127.0.0.1", "localhost"].includes(url.hostname) || ["blob:", "data:"].includes(url.protocol)) return route.continue();
@@ -297,7 +297,7 @@ test("compact units and two intrinsic-width topic rows keep the document fitted 
     await page.setViewportSize({width,height:900});
     for(let unit=1;unit<=9;unit++){
       await page.getByRole("button",{name:new RegExp("^Unit "+unit+",")}).click();
-      assert.equal(await page.locator(".ca-unit[data-u]>span").count(),1);
+      assert.equal(await page.locator(".ca-unit[data-u]>.ca-unit-select>span").count(),1);
       await page.waitForFunction(() => [...document.querySelectorAll(".ca-topic-row")].filter(row=>row.children.length).every(row=>
         Math.abs(row.lastElementChild.getBoundingClientRect().right-row.getBoundingClientRect().right)<=1));
       const geometry=await page.locator(".ca-topic-row").evaluateAll(rows=>rows.filter(row=>row.children.length).map(row=>{
@@ -592,7 +592,7 @@ test('horizontal unit accordion shares space without changing height, filters or
         const content=await card.evaluate(el=>{
           const face=el.querySelector('.ca-unit-highlight'),name=face.querySelector(':scope>span'),r=name.getBoundingClientRect();
           const range=document.createRange();range.selectNodeContents(name);const text=range.getBoundingClientRect();
-          return{dark:el.hasAttribute('data-accordion-dark'),nameFits:text.left>=r.left-1&&text.right<=r.right+1&&text.bottom<=r.bottom+1&&text.top>=r.top-1,
+          return{dark:el.closest('.ca-unit').hasAttribute('data-accordion-dark'),nameFits:text.left>=r.left-1&&text.right<=r.right+1&&text.bottom<=r.bottom+1&&text.top>=r.top-1,
             visible:Number(name.style.opacity)>.99,segments:face.querySelectorAll('.ca-heat i').length};
         });
         assert.ok(content.dark&&content.nameFits&&content.visible&&content.segments>0,JSON.stringify({unit,width,content}));
@@ -684,7 +684,7 @@ test('adaptive navigation moves from initial browsing to unit, focus and overlay
     await page.screenshot({path:'test-results/pages/adaptive-3-focus.png'});
     await browse.click();
     const overlay=page.getByRole('dialog',{name:'Browse units and topics',exact:true});await overlay.waitFor();
-    assert.equal(await overlay.locator('.ca-unit[data-u="u7"]').getAttribute('aria-pressed'),'true');
+    assert.equal(await overlay.locator('.ca-unit[data-u="u7"] .ca-unit-select').getAttribute('aria-pressed'),'true');
     assert.equal(await overlay.locator('.ca-topic[aria-pressed="true"]').count(),1);
     assert.deepEqual(await page.locator('.ca-work').boundingBox(),focused,'overlay floats without moving workspace');
     await page.screenshot({path:'test-results/pages/adaptive-4-overlay.png'});
@@ -694,7 +694,7 @@ test('adaptive navigation moves from initial browsing to unit, focus and overlay
     assert.equal(new URL(page.url()).searchParams.get('topic'),'2.1');await focusSettled(page);
     await page.getByRole('button',{name:/^Browse topic 2.1/}).click();await overlay.waitFor();
     assert.ok(await overlay.locator('.ca-topic[aria-pressed="true"]').evaluate(el=>el===document.activeElement),'topic breadcrumb focuses selected topic');
-    await overlay.getByRole('button',{name:'All Unit 2 questions',exact:true}).click();await overlay.waitFor({state:'hidden'});
+    await overlay.getByRole('button',{name:'View all Unit 2 questions',exact:true}).click();await overlay.waitFor({state:'hidden'});
     assert.equal(new URL(page.url()).searchParams.get('topic'),null);
     assert.match(await page.locator('.ca-list-title').innerText(),/Compound Structure and Properties/);
     await page.getByRole('button',{name:'Reveal navigation browser',exact:true}).click();await overlay.waitFor();
@@ -983,6 +983,11 @@ test('expanded unit names share centered hover and selected alignment in both th
             await card.click();assert.equal(new URL(page.url()).searchParams.get('unit'),`u${unit}`);
             await page.mouse.move(0,700);await settleAccordion(page);
             const selected=await alignment(card);assertAlignment(selected,`${theme}/${view}/${width}/u${unit}/selected`);
+            const utility=card.locator('.ca-unit-focus');
+            assert.equal(await utility.getAttribute('aria-label'),view==='inline'?'Focus on this unit':`View all Unit ${unit} questions`);
+            const control=await utility.boundingBox();
+            assert.ok(control&&control.x>=selected.text.right-1&&control.y>=selected.count.bottom-1&&control.y+control.height<=selected.heat.y+1,'utility clears full title, count and segments');
+            assert.equal(await card.locator('button button').count(),0,'selector and utility are sibling native buttons');
             await card.hover();await settleAccordion(page);const both=await alignment(card);assertAlignment(both,`${theme}/${view}/${width}/u${unit}/selected-hover`);
             if(unit===6&&width===1440)await page.locator('.ca-units').screenshot({path:`test-results/pages/unit-name-${theme}-${view}.png`});
           }
@@ -995,10 +1000,90 @@ test('expanded unit names share centered hover and selected alignment in both th
     const four=page.locator('.ca-unit[data-u="u4"]');const box=await four.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+12);
     // Activate the intended card during motion. The pointer hit-testing cases
     // above separately cover which changing rectangle a physical click reaches.
-    await four.evaluate(el=>el.click());await page.waitForFunction(()=>new URL(location.href).searchParams.get('unit')==='u4');
+    await four.locator('.ca-unit-select').evaluate(el=>el.click());await page.waitForFunction(()=>new URL(location.href).searchParams.get('unit')==='u4');
     await page.mouse.move(0,700);await settleAccordion(page);
-    await page.waitForFunction(()=>{const title=document.querySelector('.ca-unit[data-u="u4"][aria-pressed="true"] .ca-unit-highlight>span');return title&&Number(getComputedStyle(title).opacity)>.99});
+    await page.waitForFunction(()=>{const title=document.querySelector('.ca-unit[data-u="u4"][data-selected] .ca-unit-highlight>span');return title&&Number(getComputedStyle(title).opacity)>.99});
     assertAlignment(await alignment(four),'fast click selected');
     assert.deepEqual(errors,[]);evidence.push({scenario:'unit-name-alignment',result:'all nine units x two views x both themes x 1440/1280/768: same centered face for hover/selected/both; full titles clear number/count/segments; hover leaves filters unchanged; fast click resets corner offsets'});
+  }finally{await context.close()}
+});
+
+test('integrated unit utilities preserve distinct focus and whole-unit actions across all units and themes',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    await login(page);await bankReady(page);
+    for(const theme of ['light','dark']){
+      if(theme==='dark')await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).click();
+      for(let unit=1;unit<=9;unit++){
+        await page.goto(fixture.origin);await bankReady(page);
+        await page.getByRole('button',{name:new RegExp(`^Unit ${unit},`)}).click();await page.mouse.move(0,700);await settleAccordion(page);
+        assert.equal(await page.locator('.ca-navigation-actions,.ca-collapse-navigation,.ca-study-unit').count(),0,'old action strip is removed, without a placeholder');
+        const icon=page.getByRole('button',{name:'Focus on this unit',exact:true});
+        const rowBefore=await accordionGeometry(page),url=page.url();
+        await icon.hover();await page.getByRole('tooltip',{name:'Focus on this unit',exact:true}).waitFor();
+        assert.deepEqual(await accordionGeometry(page),rowBefore,'hovering utility does not retarget or move cards');
+        await icon.click();await focusSettled(page);
+        assert.equal(page.url(),url,'main focus action changes visibility only and never selects/deselects the unit');
+        await page.getByRole('button',{name:'Browse',exact:true}).click();
+        const overlay=page.getByRole('dialog',{name:'Browse units and topics'});await overlay.waitFor();
+        assert.equal(await overlay.getByRole('button',{name:new RegExp(`^Unit ${unit},`)}).getAttribute('aria-pressed'),'true');
+        await overlay.locator('.ca-topic').first().click();await overlay.waitFor({state:'hidden'});
+        assert.ok(new URL(page.url()).searchParams.get('topic'),'a specific topic is applied');
+        await page.getByRole('button',{name:'Browse',exact:true}).click();await overlay.waitFor();
+        const all=overlay.getByRole('button',{name:`View all Unit ${unit} questions`,exact:true});
+        const filtered=new URL(page.url());await all.click();await overlay.waitFor({state:'hidden'});
+        const whole=new URL(page.url());filtered.searchParams.delete('topic');
+        assert.equal(whole.href,filtered.href,'browser utility clears only the topic using the original callback');
+        assert.equal(whole.searchParams.get('unit'),`u${unit}`);
+        assert.equal(await page.getByRole('button',{name:'Browse',exact:true}).count(),1,'whole-unit study remains focused');
+      }
+    }
+    // Keyboard navigation reaches two separate controls without changing geometry.
+    await page.goto(fixture.origin);await bankReady(page);const selector=page.getByRole('button',{name:/^Unit 9,/});
+    await selector.click();await page.mouse.move(0,700);await selector.focus();await settleAccordion(page);
+    const geometry=await accordionGeometry(page);await page.keyboard.press('Tab');
+    const utility=page.getByRole('button',{name:'Focus on this unit',exact:true});
+    assert.equal(await utility.evaluate(el=>el===document.activeElement),true);
+    await page.getByRole('tooltip',{name:'Focus on this unit',exact:true}).waitFor();
+    assert.deepEqual(await accordionGeometry(page),geometry,'tabbing to utility leaves the expanded card in place');
+    assert.equal(await utility.evaluate(el=>getComputedStyle(el).outlineStyle),'solid');
+    await page.keyboard.press('Enter');await focusSettled(page);
+    await page.getByRole('button',{name:'Browse',exact:true}).click();
+    const all=page.getByRole('button',{name:'View all Unit 9 questions',exact:true});await all.focus();await page.keyboard.press('Space');
+    await page.getByRole('dialog',{name:'Browse units and topics'}).waitFor({state:'hidden'});
+    // All-catalog action is retained in the existing browser header.
+    await page.goto(fixture.origin);await bankReady(page);await page.getByRole('button',{name:/^Unit 1,/}).click();
+    await page.getByRole('button',{name:'Focus on this unit',exact:true}).click();await page.getByRole('button',{name:'Browse',exact:true}).click();
+    await page.getByRole('button',{name:/^All units,/}).click();
+    await page.getByRole('button',{name:'View all questions',exact:true}).click();
+    assert.equal(new URL(page.url()).searchParams.get('unit'),null);
+    assert.deepEqual(errors,[]);evidence.push({scenario:'integrated-focus-actions',result:'all nine units x both themes: hover tooltip and stationary utility geometry; distinct original callbacks; no parent selection, strips, or nested buttons; keyboard Tab/Enter/Space, focus tooltip/outline; all-catalog fallback retained'});
+  }finally{await context.close()}
+});
+
+test('integrated unit utilities use the approved compact caption and header on touch phones',async()=>{
+  const {context,page,errors}=await open(390,{hasTouch:true,isMobile:true,viewport:{width:390,height:844}});
+  try{
+    await login(page);await bankReady(page);
+    for(const theme of ['light','dark']){
+      if(theme==='dark')await page.getByRole('button',{name:'Switch to dark mode.',exact:true}).tap();
+      for(const width of [390,320,768]){
+        await page.setViewportSize({width,height:844});await page.goto(fixture.origin);await bankReady(page);
+        await page.getByRole('button',{name:/^Unit 9,/}).tap();
+        const focus=page.getByRole('button',{name:'Focus on this unit',exact:true});
+        assert.equal(await focus.evaluate(el=>!!el.closest(innerWidth<=700?'.ca-unit-line':'.ca-unit')),true);
+        assert.equal(await page.locator('.ca-unit-focus.is-card:visible').count(),width<=700?0:1);
+        const before=page.url();await focus.tap();await focusSettled(page);assert.equal(page.url(),before);
+        await page.getByRole('button',{name:'Browse',exact:true}).tap();
+        const overlay=page.getByRole('dialog',{name:'Browse units and topics'});await overlay.waitFor();
+        const all=overlay.getByRole('button',{name:'View all Unit 9 questions',exact:true});
+        assert.equal(await all.evaluate(el=>!!el.closest(innerWidth<=700?'.ca-browser-header':'.ca-unit')),true);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+        await page.screenshot({path:`test-results/pages/unit-focus-touch-${theme}-${width}.png`});
+        await all.tap();await overlay.waitFor({state:'hidden'});
+        assert.equal(new URL(page.url()).searchParams.get('unit'),'u9');
+      }
+    }
+    assert.deepEqual(errors,[]);evidence.push({scenario:'integrated-focus-touch',result:'320/390 phone caption and browser-header fallback, 768 touch-tablet card utility, both themes; compact cards and counts retained; tap actions and no horizontal overflow'});
   }finally{await context.close()}
 });

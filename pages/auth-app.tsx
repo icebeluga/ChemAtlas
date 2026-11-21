@@ -4,9 +4,10 @@ import type { Session } from "@supabase/supabase-js";
 import { authorizeSession, contentResponse, getStimuli, isApproved, passwordSetupRequested, resetAuthorization, setStimuli, sitePath, supabase } from "../lib/content-supabase";
 import type { StimulusDocument } from "../lib/content-types";
 import { ThemeToggle } from "../components/student/theme-toggle";
+import { BrandMark } from "../components/student/brand-mark";
 
 function AuthHeader() {
-  return <header className="ca-auth-header"><span className="ca-auth-brand">ChemAtlas</span>
+  return <header className="ca-auth-header"><span className="ca-auth-brand"><BrandMark /></span>
     <div className="ca-auth-header-actions"><ThemeToggle /><span className="ca-auth-access"><LockKeyhole size={18} aria-hidden="true" />Student access</span></div>
   </header>;
 }
@@ -19,10 +20,10 @@ class StudentAppBoundary extends Component<{ children: ReactNode; onSignOut: () 
   render() {
     if (!this.state.failed) return this.props.children;
     return <main className="ca-auth-shell"><AuthHeader /><section className="ca-auth-card" aria-labelledby="load-error-title">
-      <div className="ca-auth-mark">ChemAtlas</div>
-      <h1 id="load-error-title">ChemAtlas could not open</h1>
+      <div className="ca-auth-mark"><BrandMark /></div>
+      <h1 id="load-error-title">Blueberry could not open</h1>
       <p role="alert">The application could not finish loading. Reload to try again. Your session and saved progress will stay in this browser.</p>
-      <button className="primary" onClick={() => location.reload()}>Reload ChemAtlas</button>
+      <button className="primary" onClick={() => location.reload()}>Reload Blueberry</button>
       <button className="ca-auth-text" onClick={this.props.onSignOut}>Log out</button>
     </section></main>;
   }
@@ -150,7 +151,7 @@ export function AuthApp() {
 
   if (access.phase === "ready" && !passwordSetup) return <div className="ca-pages-student">
     <StudentAppBoundary key={access.user} onSignOut={() => void logout()}>
-      <Suspense fallback={<div className="ca-auth-loading"><p role="status">Opening ChemAtlas…</p><button className="ca-auth-text" onClick={() => void logout()}>Log out</button></div>}>
+      <Suspense fallback={<div className="ca-auth-loading"><p role="status">Opening Blueberry…</p><button className="ca-auth-text" onClick={() => void logout()}>Log out</button></div>}>
         <ChemAtlas onSignOut={() => void logout()} />
       </Suspense>
     </StudentAppBoundary>
@@ -159,7 +160,7 @@ export function AuthApp() {
   return <main className="ca-auth-shell">
     <AuthHeader />
     <section className="ca-auth-card" aria-labelledby="auth-title">
-    <p className="ca-auth-eyebrow">CHEMATLAS / STUDENT PORTAL</p>
+    <p className="ca-auth-eyebrow">BLUEBERRY / STUDENT PORTAL</p>
     <h1 id="auth-title">{passwordSetup && signedIn ? "Set your password" : access.phase === "pending" ? "Approval required" : "Welcome back"}</h1>
     {access.phase === "checking" ? <p role="status">Checking your access…</p> : <>
       {access.phase === "pending" ? <p>Your account is signed in. The owner must approve it before questions and PDFs are available.</p>
@@ -184,5 +185,5 @@ export function AuthApp() {
     </>}
     {message && <p role="status">{message}</p>}
     <div className="ca-auth-footnote"><ShieldCheck size={26} aria-hidden="true" /><div><b>Access is limited to approved students.</b><p>Worksheets and progress are saved in this browser.</p><small>Use a personal browser profile on shared devices.</small></div></div>
-  </section><footer className="ca-auth-footer">ChemAtlas · AP Chemistry practice studio</footer></main>;
+  </section><footer className="ca-auth-footer">Blueberry · AP Chemistry practice studio</footer></main>;
 }

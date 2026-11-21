@@ -489,7 +489,7 @@ test("the signed historical build's untitled revision can stay archived without 
   await archived.locator("summary").click();
   await archived.getByText("Untitled worksheet kept archived without importing", { exact: true }).waitFor();
   const saved = await downloadSource(page, sourceDownload(archived));
-  assert.equal(saved.name, `chematlas-legacy-${legacyId(untitled)}.json`);
+  assert.equal(saved.name, `blueberry-legacy-${legacyId(untitled)}.json`);
   assert.equal(saved.text, untitled);
   assert.deepEqual(await currentRecord(page), committed);
 
@@ -515,7 +515,7 @@ test("legacy JSON downloads reconstruct isolated UTF-16 code units without weake
   const archived = await openLegacySnapshot(page, malformed);
   const exported = await downloadSource(page, sourceDownload(archived));
   assert.deepEqual(JSON.parse(exported.text), { format: "chematlas-legacy-source-utf16-code-units-v1", source: malformed });
-  assert.equal(exported.name, `chematlas-legacy-${legacyId(malformed)}.utf16-source.json`);
+  assert.equal(exported.name, `blueberry-legacy-${legacyId(malformed)}.utf16-source.json`);
   assert.ok(exported.text.includes("\\ud800") && exported.text.includes("\\udc00"));
 
   const initial = await currentRecord(page);
@@ -531,7 +531,7 @@ test("legacy JSON downloads reconstruct isolated UTF-16 code units without weake
   const valid = collection([draft("legacy-valid", "Historic 🧪", [entry(frq)])]);
   await writer.evaluate(([key, raw]) => localStorage.setItem(key, raw), [key, valid]);
   const validDownload = await downloadSource(page, sourceDownload(await openLegacySnapshot(page, valid)));
-  assert.equal(validDownload.name, `chematlas-legacy-${legacyId(valid)}.json`);
+  assert.equal(validDownload.name, `blueberry-legacy-${legacyId(valid)}.json`);
   assert.equal(validDownload.text, valid);
   if (!await menu.evaluate(element => element.open)) await menu.locator("summary").click();
   await input.setInputFiles({ name: validDownload.name, mimeType: "application/json", buffer: Buffer.from(validDownload.text) });

@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { Search } from "lucide-react";
 import { sitePath } from "#student-content";
 import { ThemeToggle } from "./theme-toggle";
+import { BrandMark } from "./brand-mark";
 
 type Props = {
   current: "bank" | "worksheet" | "other";
@@ -33,7 +34,7 @@ export function AppTopBar({ current, worksheetCount, inert, onBank, search, onSi
   }, [search, inert]);
 
   return <header className="ca-bar" inert={inert}>
-    <span className="ca-mark">ChemAtlas</span>
+    <span className="ca-mark"><BrandMark /></span>
     <nav className="ca-nav" aria-label="Main navigation">
       <button type="button" aria-current={current === "bank" ? "page" : undefined} onClick={onBank}>Question bank</button>
       <a href={sitePath("practice-builder")} aria-current={current === "worksheet" ? "page" : undefined}>

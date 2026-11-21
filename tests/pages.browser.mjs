@@ -80,12 +80,12 @@ test("a failed student application download shows recovery and reload preserves 
   try {
     await context.route(chunk, route => route.abort());
     await login(page);
-    await page.getByRole("heading", { name: "ChemAtlas could not open", exact: true }).waitFor();
+    await page.getByRole("heading", { name: "Blueberry could not open", exact: true }).waitFor();
     assert.equal(await page.getByRole("button", { name: "Log out", exact: true }).count(), 1);
     assert.equal(await page.evaluate(() => !!localStorage.getItem("chematlas-supabase-auth-v1")), true);
     const signIns = fixture.logs.filter(log => log.path === "/auth/v1/token").length;
     await context.unroute(chunk);
-    await page.getByRole("button", { name: "Reload ChemAtlas", exact: true }).click();
+    await page.getByRole("button", { name: "Reload Blueberry", exact: true }).click();
     await bankReady(page);
     assert.equal(fixture.logs.filter(log => log.path === "/auth/v1/token").length, signIns);
     evidence.push({ scenario: "application-load-recovery", result: "failed application download shows recovery; reload restores the bank without another sign-in" });
@@ -204,7 +204,7 @@ test("progress export and confirmed import round trip without native browser dia
     assert.deepEqual(await snapshot(), imported);
     await page.getByRole("navigation", { name: "Main navigation" }).getByLabel("2 selected", { exact: true }).waitFor();
     await input.setInputFiles({ name: "invalid.json", mimeType: "application/json", buffer: Buffer.from('{"format":"unsupported"}') });
-    await page.getByRole("status").filter({ hasText: "Unsupported ChemAtlas progress export format or version." }).waitFor();
+    await page.getByRole("status").filter({ hasText: "Unsupported Blueberry progress export format or version." }).waitFor();
     assert.deepEqual(await snapshot(), imported);
     assert.equal(await confirmation.isVisible(), false);
     assert.deepEqual(errors, []);
@@ -257,15 +257,15 @@ test("revocation removes the visible app on access recheck", async () => {
   } finally { await fixture.revoke(false); await context.close(); }
 });
 
-test("the supplied login identity, password visibility and ChemAtlas tab identity work on desktop and phone", async () => {
+test("the supplied login identity, password visibility and Blueberry tab identity work on desktop and phone", async () => {
   const {context,page,errors}=await open();
   try {
-    assert.equal(await page.title(),"ChemAtlas");
-    const icon=await page.locator('link[rel="icon"]').getAttribute("href");
-    assert.equal(icon,"/ChemAtlas/favicon.png");
-    assert.deepEqual(await (await page.request.get(new URL(icon,fixture.origin).href)).body(),await readFile("public/favicon.png"));
+    assert.equal(await page.title(),"Blueberry");
+    const icon=await page.locator('link[rel="icon"][type="image/svg+xml"]').getAttribute("href");
+    assert.equal(icon,"/ChemAtlas/favicon.svg");
+    assert.deepEqual(await (await page.request.get(new URL(icon,fixture.origin).href)).body(),await readFile("public/favicon.svg"));
     await page.getByRole("heading",{name:"Welcome back",exact:true}).waitFor();
-    assert.equal(await page.locator(".ca-auth-header").innerText(), "ChemAtlas\nStudent access");
+    assert.equal(await page.locator(".ca-auth-header").innerText(), "Blueberry\nStudent access");
     assert.equal(await page.locator(".ca-auth-subtitle").count(), 0);
     const password=page.getByLabel("Password",{exact:true});
     await password.fill("fixture-password");
@@ -285,7 +285,7 @@ test("the supplied login identity, password visibility and ChemAtlas tab identit
     await signOut.press("Enter");
     await page.getByRole("heading",{name:"Welcome back",exact:true}).waitFor();
     assert.deepEqual(errors,[]);
-    evidence.push({scenario:"login-reference",result:"supplied favicon bytes; ChemAtlas title; password visibility; 320px keyboard sign-out"});
+    evidence.push({scenario:"login-reference",result:"canonical favicon bytes; Blueberry title; password visibility; 320px keyboard sign-out"});
   }finally{await context.close()}
 });
 
@@ -390,7 +390,7 @@ test("Pages navigation preserves the document, authorized catalog and drafts, in
     await page.getByRole("navigation",{name:"Main navigation"}).getByRole("link",{name:/Practice builder/}).click();
     await page.getByRole("heading",{name:/Practice builder/i}).waitFor();
     const elapsed=Date.now()-began;
-    assert.equal(await page.title(),"ChemAtlas");
+    assert.equal(await page.title(),"Blueberry");
     assert.equal(await page.locator(".ca-b-item").count(),1);
     await page.getByRole("button",{name:"Question bank",exact:true}).click();
     await bankReady(page);
@@ -902,7 +902,16 @@ test('builder theme changes preserve generated document bytes and print appearan
     await page.locator('.worksheet-paper canvas[data-painted]').waitFor();
     const paper=await page.locator('.worksheet-paper canvas').first().evaluate(el=>({background:getComputedStyle(el).backgroundColor,filter:getComputedStyle(el).filter}));
     assert.deepEqual(paper,{background:'rgb(255, 255, 255)',filter:'none'});
-    const printColors=async()=>{await page.emulateMedia({media:'print'});await page.waitForFunction(()=>matchMedia('print').matches&&!matchMedia('screen').matches);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));return page.locator('.ca-build').evaluate(el=>({color:getComputedStyle(el).color,background:getComputedStyle(el).backgroundColor}))};
+    const printColors=async()=>{
+      await page.emulateMedia({media:'print'});
+      // Chromium can report the media switch before recalculating inherited
+      // custom properties. Wait for the screen-only role to leave the cascade.
+      await page.waitForFunction(()=>matchMedia('print').matches&&!matchMedia('screen').matches&&
+        !getComputedStyle(document.documentElement).getPropertyValue('--theme-background').trim());
+      // Exercise the actual print renderer before sampling inherited colors.
+      await page.pdf();
+      return page.locator('.ca-build').evaluate(el=>({color:getComputedStyle(el).color,background:getComputedStyle(el).backgroundColor}));
+    };
     const darkPrint=await printColors();await page.emulateMedia({media:'screen'});
     await page.getByRole('button',{name:'Switch to light mode.',exact:true}).click();
     assert.deepEqual(await printColors(),darkPrint,'dark styling is screen-only, so print appearance remains identical');await page.emulateMedia({media:'screen'});
@@ -1085,5 +1094,49 @@ test('integrated unit utilities use the approved compact caption and header on t
       }
     }
     assert.deepEqual(errors,[]);evidence.push({scenario:'integrated-focus-touch',result:'320/390 phone caption and browser-header fallback, 768 touch-tablet card utility, both themes; compact cards and counts retained; tap actions and no horizontal overflow'});
+  }finally{await context.close()}
+});
+
+test('Blueberry branding and install icons are public, proportional and scoped to the existing Pages path',async()=>{
+  const {context,page,errors}=await open();
+  try{
+    assert.equal(await page.title(),'Blueberry');
+    assert.equal(await page.locator('.ca-brand').innerText(),'Blueberry');
+    const logo=page.locator('.ca-brand-logo');await logo.evaluate(image=>image.decode());
+    assert.deepEqual(await logo.evaluate(image=>({src:new URL(image.src).pathname,width:image.naturalWidth,height:image.naturalHeight,fit:getComputedStyle(image).objectFit})),{src:'/ChemAtlas/blueberry.svg',width:272,height:250,fit:'contain'});
+    const touch=await page.locator('link[rel="apple-touch-icon"]').getAttribute('href');
+    assert.equal(touch,'/ChemAtlas/apple-touch-icon.png');
+    assert.equal(await page.locator('meta[name="apple-mobile-web-app-title"]').getAttribute('content'),'Blueberry');
+    const manifestPath=await page.locator('link[rel="manifest"]').getAttribute('href');
+    assert.equal(manifestPath,'/ChemAtlas/site.webmanifest');
+    const manifestResponse=await page.request.get(new URL(manifestPath,fixture.origin).href);
+    assert.match(manifestResponse.headers()['content-type'],/application\/manifest\+json/);
+    const manifest=await manifestResponse.json();assert.equal(manifest.name,'Blueberry');assert.equal(manifest.short_name,'Blueberry');
+    for(const icon of manifest.icons){const url=new URL(icon.src,new URL(manifestPath,fixture.origin));assert.ok(url.pathname.startsWith('/ChemAtlas/'));const response=await page.request.get(url.href);assert.equal(response.status(),200);assert.match(response.headers()['content-type'],/image\/png/)}
+    for(const name of ['favicon.svg','favicon.png','favicon.ico','favicon-16.png','favicon-32.png','favicon-48.png','apple-touch-icon.png'])assert.equal((await page.request.get(new URL(name,fixture.origin).href)).status(),200);
+    // Check the actual decoded application-icon pixels, including safe masking margins.
+    const geometry=await page.evaluate(async()=>{
+      const result=[];
+      for(const name of ['apple-touch-icon.png','app-icon-192.png','app-icon-512.png','app-icon-maskable-192.png','app-icon-maskable-512.png']){
+        const image=new Image();image.src=new URL(name,location.href).href;await image.decode();
+        const size=image.naturalWidth,canvas=document.createElement('canvas');canvas.width=canvas.height=size;
+        const ctx=canvas.getContext('2d');ctx.drawImage(image,0,0);const data=ctx.getImageData(0,0,size,size).data;
+        let maxRadius=0,transparent=false,minX=size,maxX=0;
+        for(let y=0;y<size;y++)for(let x=0;x<size;x++){const i=(y*size+x)*4;if(data[i+3]!==255)transparent=true;if(Math.max(Math.abs(data[i]-245),Math.abs(data[i+1]-246),Math.abs(data[i+2]-250))>3){maxRadius=Math.max(maxRadius,Math.hypot(x+.5-size/2,y+.5-size/2));minX=Math.min(minX,x);maxX=Math.max(maxX,x)}}
+        result.push({name,size,square:image.naturalHeight===size,transparent,corner:[...data.slice(0,4)],maxRadius,width:maxX-minX+1});
+      }
+      return result;
+    });
+    for(const icon of geometry){assert.ok(icon.square&&!icon.transparent);assert.deepEqual(icon.corner,[245,246,250,255]);if(icon.name.includes('maskable'))assert.ok(icon.maxRadius<=icon.size*.4+1,'all foreground stays inside the maskable safe circle');else assert.ok(icon.width>icon.size*.7,'logo occupies a substantial area without stretching')}
+    assert.equal(await page.evaluate(async()=>('serviceWorker'in navigator)?(await navigator.serviceWorker.getRegistrations()).length:0),0);
+    await login(page);await bankReady(page);assert.equal(await page.title(),'Blueberry');
+    assert.equal(await page.locator('.ca-mark').innerText(),'Blueberry');
+    assert.doesNotMatch(await page.locator('body').innerText(),/ChemAtlas/i);
+    await page.getByRole('navigation',{name:'Main navigation'}).getByRole('link',{name:/Practice builder/}).click();await page.locator('.ca-build').waitFor();
+    assert.equal(await page.title(),'Blueberry');assert.doesNotMatch(await page.locator('body').innerText(),/ChemAtlas/i);
+    await page.reload();await page.locator('.ca-build').waitFor();assert.equal(await page.title(),'Blueberry');
+    assert.equal(new URL(page.url()).pathname,'/ChemAtlas/practice-builder/');
+    const missing=await page.request.get(new URL('404.html',fixture.origin).href);assert.match(await missing.text(),/<title>Blueberry<\/title>/);
+    assert.deepEqual(errors,[]);evidence.push({scenario:'blueberry-branding',result:'same master SVG and exact title on login/bank/builder; anonymous public SVG/PNG/ICO/touch/manifest paths and MIME types; 180/192/512 opaque icons, maskable safe zones, substantial proportional logo; unchanged Pages path; no service worker'});
   }finally{await context.close()}
 });

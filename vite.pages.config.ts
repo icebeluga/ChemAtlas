@@ -3,11 +3,11 @@ import react from "@vitejs/plugin-react";
 import { fileURLToPath } from "node:url";
 import { readFileSync } from "node:fs";
 import { validateSupabaseConfig } from "./lib/supabase-config.mjs";
+import { brandingAssets } from "./lib/branding-assets.mjs";
 
 const root = fileURLToPath(new URL(".", import.meta.url));
 const publicAssets = [
-  { name: "favicon.svg", type: "image/svg+xml" },
-  { name: "favicon.png", type: "image/png" },
+  ...brandingAssets,
   { name: "pdf.worker.min.mjs", type: "text/javascript" },
 ];
 export default defineConfig(({ mode }) => {
@@ -40,7 +40,7 @@ export default defineConfig(({ mode }) => {
           this.emitFile({ type: "asset", fileName: name, source: readFileSync(`${root}public/${name}`) });
         }
         this.emitFile({ type: "asset", fileName: ".nojekyll", source: "" });
-        this.emitFile({ type: "asset", fileName: "404.html", source: "<!doctype html><html lang=\"en\"><meta charset=\"utf-8\"><title>Not found</title><h1>Page not found</h1><a href=\"/ChemAtlas/\">Return to ChemAtlas</a></html>" });
+        this.emitFile({ type: "asset", fileName: "404.html", source: "<!doctype html><html lang=\"en\"><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><title>Blueberry</title><link rel=\"icon\" type=\"image/svg+xml\" href=\"/ChemAtlas/favicon.svg\"><h1>Page not found</h1><a href=\"/ChemAtlas/\">Return to Blueberry</a></html>" });
       },
     }, {
       name: "reject-private-pages-imports",

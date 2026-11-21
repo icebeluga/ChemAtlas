@@ -1,5 +1,17 @@
 # ChemAtlas — Codex continuation handoff
 
+## Latest update — Blueberry branding (November 20, 2026)
+
+The website's user-facing name is now **Blueberry**. This branding-only round starts from clean `1a072fed83d46705e98ab2df494d920e66f16bae` on the same `codex/student-ui-improvements` branch / draft PR #9. Approved main remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`; inspect Git/PR CI for the final head. The repository and `/ChemAtlas/` deployment URL are deliberately unchanged.
+
+- `public/blueberry.svg` is the single canonical artwork from the supplied two-berry/two-leaf reference. All PNG/ICO variants are derived by `node scripts/generate-brand-icons.mjs`; `favicon.svg` is identical to the master. Preserve circular berry geometry, colors and proportions across both themes.
+- `BrandMark` and `app/branding.css` provide only shared wordmark/logo alignment. Login design, navbar heights, typography, layout, animations, topics, themes, PDF and worksheet behavior are retained. Header/form/search/list/PDF geometry matches the baseline, and bank/builder content screenshots match exactly at desktop/phone widths. One masked phone login comparison has only a nine-pixel, one-channel-level border antialias variation.
+- Both Pages entries use the exact title Blueberry, SVG/PNG/ICO favicon links, the 180 px Apple Touch Icon and a relative-path manifest with regular/maskable 192/512 icons. Public assets are explicitly enumerated by `lib/branding-assets.mjs` and checked by the artifact gate. There is no service worker/offline/new PWA functionality.
+- User-facing loading/error/footer/progress prose and exported recovery/progress filenames use Blueberry. Keep internal component/export identifiers, `chematlas-*` storage/auth/event/format keys, Supabase bucket/project, environment variables, database schema, paths and release/archive history unchanged. Worksheets currently have no old brand, so their content/layout/generator stays unchanged.
+- See `docs/student-ui-improvements/BLUEBERRY.md` for the palette, generated assets, complete file-purpose list, maintenance command and validation scope. Before/after evidence remains local/ignored under `outputs/blueberry/`; checks use `outputs/blueberry-*.log`. Refresh/stamp the owned preview at the final validated commit and leave it available for review.
+- Existing phone inline topic labels are crowded (also visible in earlier theme screenshots); the readable All topics sheet and Browse panel remain. This is not changed by the targeted branding scope. Physical iPhone/Safari home-screen installation is not claimed; verify the public Apple icon and metadata locally and leave device review to the owner.
+- No merge, deployment, production auth/data/infrastructure/configuration changes, new login features, or unrelated redesign are authorized. All earlier approved behavior below remains current.
+
 ## Latest update — integrated unit focus utilities (November 20, 2026)
 
 This targeted round starts from clean `fc143a112c429b0ffb890e39f870336cd99fe2f7` on `codex/student-ui-improvements`, continuing draft PR #9. Approved main remains `b05c06eaf113a91edcf95f3eea50dc4dec738492`. Read the final Git head and PR CI for the resulting candidate SHA. Preserve all earlier work and independent worktrees.

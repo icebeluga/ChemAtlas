@@ -319,7 +319,7 @@ export function PracticeBuilder({ questions, topics, files, progress, backup, sa
             </>)}
             <span className="ca-b-state" role="status">{current && `PDF ready${current.count > 0 ? ` · ${current.count} ${current.count === 1 ? "page" : "pages"}` : ""}`}</span>
           </div>
-          {!!draft.entries.length && <p className="ca-b-note">This is the PDF itself, made by the same generator as the download.{fallbackCount > 0 && <> {fallbackCount} of {draft.entries.length} question{draft.entries.length === 1 ? " has" : "s have"} no reviewed print layout. Full source pages can include neighbouring questions or printed answers. Check before sharing.</>}{!hasAnswers && " This worksheet has no verified answer key."}</p>}
+          {!!draft.entries.length && <p className="ca-b-note">This is the PDF itself, made by the same generator as the download.{fallbackCount > 0 && <> {fallbackCount} of {draft.entries.length} question{draft.entries.length === 1 ? " has" : "s have"} no reviewed print layout. Full source pages can include neighbouring questions or printed answers. Verify all subparts, figures, and continuation pages before sharing.</>}{!hasAnswers && " This worksheet has no verified answer key."}</p>}
           {!draft.entries.length && <div className="ca-empty"><b>Nothing to preview yet</b>Add questions and the worksheet PDF appears here.<p>This worksheet has no verified answer key.</p></div>}
           {generating && <p className="ca-b-freshness" role="status">{stale ? "Updating…" : "Generating the PDF…"}</p>}
           {failure && <div className="ca-b-freshness" data-error="">

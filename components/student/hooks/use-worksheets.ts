@@ -243,7 +243,7 @@ function createWorksheetStore() {
     if (!connection) return;
     try {
       const raw = await readLegacySnapshot(await connection, id);
-      downloadLegacySource(raw, `chematlas-legacy-${id}`);
+      downloadLegacySource(raw, `blueberry-legacy-${id}`);
     } catch {
       legacyMessage = "This archived legacy snapshot could not be downloaded. Try again.";
       publishLegacy();
@@ -438,7 +438,7 @@ export function downloadLegacySource(source: string, filename: string) {
   downloadWorksheetData(file.text, file.filename);
 }
 
-export function downloadWorksheetBackup(backup: Backup, filename = "chematlas-worksheets.json") {
+export function downloadWorksheetBackup(backup: Backup, filename = "blueberry-worksheets.json") {
   downloadWorksheetData(JSON.stringify(backup, null, 2), filename);
 }
 

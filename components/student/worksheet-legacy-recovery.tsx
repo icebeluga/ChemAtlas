@@ -47,7 +47,7 @@ export function WorksheetLegacyRecovery({ legacy, legacyError, legacyMessage, le
       {legacyMessage && <p role="status">{legacyMessage}</p>}
       {!!unarchived?.length && <p>These observations are available only in this tab until archival succeeds.</p>}
       {unarchived?.map(({ source, raw }, index) => <button key={`${source}-${index}`} type="button" className="ca-btn"
-        onClick={() => downloadLegacySource(raw, `chematlas-unarchived-${source}-${index + 1}`)}>Download unarchived {legacySourceLabels[source]} {index + 1}</button>)}
+        onClick={() => downloadLegacySource(raw, `blueberry-unarchived-${source}-${index + 1}`)}>Download unarchived {legacySourceLabels[source]} {index + 1}</button>)}
       {(snapshots.length > 0 || !!unarchived?.length) && <p>Source downloads use UTF-8. A .utf16-source.json file wraps the source in a JSON object to preserve its original UTF-16 code units.</p>}
       {legacyError && !legacyUnavailable && <button type="button" className="ca-btn" onClick={() => { void retryLegacyArchive(); }}>Retry legacy archive</button>}
       {outstanding.map(snapshot => {

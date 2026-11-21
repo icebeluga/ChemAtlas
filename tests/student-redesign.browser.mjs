@@ -116,7 +116,8 @@ for (const width of [1440, 390]) {
     const results = page.getByRole("list", { name: "Results" });
     const openButtons = results.locator("button.ca-row-open");
     await openButtons.nth(2).waitFor();
-    const filter = page.getByRole("checkbox", { name: "Reviewed print layout only" });
+    await page.getByRole("group", { name: "Question type" }).getByRole("button", { name: "MCQ", exact: true }).click();
+    const filter = page.getByRole("button", { name: "Clear filters", exact: true });
     await filter.focus();
     assert.ok(await focus(filter));
     assert.equal(await results.locator(".ca-row-open[tabindex='0']").count(), 1);
@@ -184,12 +185,12 @@ test("desktop Next and Previous keep focus in the question controls", async (t) 
 test("Question Bank shortcuts affect the focused feature and leave other controls alone", async (t) => {
   const page = await openPage(1440, "/?view=detail&question=mcq-2008-1-29&unit=u1");
   t.after(() => page.close());
-  const more = page.getByRole("button", { name: "More", exact: true });
+  const bankControl = page.getByRole("button", { name: "Question bank", exact: true });
   const dock = page.getByRole("complementary", { name: "Worksheet" });
   const added = dock.getByRole("button", { name: /^Worksheet question/ });
   const crop = page.getByRole("button", { name: "Question crop", exact: true });
   await crop.waitFor();
-  await more.focus();
+  await bankControl.focus();
   await page.keyboard.press("a");
   await page.keyboard.press("f");
   assert.equal(await added.count(), 0);
@@ -212,11 +213,12 @@ test("printable shortcuts leave question disclosures, toolbar buttons, and list 
   const added = page.getByRole("complementary", { name: "Worksheet" })
     .getByRole("button", { name: /^Worksheet question/ });
   const questionUrl = page.url();
+  await page.locator(".ca-details>summary").click();
   const controls = [
     page.locator(".ca-parts-box summary"),
     page.getByRole("button", { name: "Fit width", exact: true }),
     page.getByRole("button", { name: "Next question", exact: true }),
-    page.getByRole("checkbox", { name: "Reviewed print layout only" }),
+    page.getByRole("combobox", { name: "Exam year" }),
     page.locator(".ca-rows button.ca-add").first(),
   ];
   for (const control of controls) {
@@ -257,94 +259,39 @@ test("printable shortcuts leave the phone topic dialog and search input alone", 
   assert.equal(await page.getByRole("complementary", { name: "Worksheet" }).getByRole("button").count(), 0);
 });
 
-test("More uses normal Tab order and returns focus when closed with Escape or a destination", async (t) => {
+test("navigation removes More and catalog tools while preserving direct student destinations", async (t) => {
   const page = await openPage(1440);
   t.after(() => page.close());
   await page.locator("button.ca-row-open").first().waitFor();
-  const more = page.getByRole("button", { name: "More", exact: true });
-  const sessions = page.getByRole("button", { name: "Practice sessions", exact: true });
-  const progress = page.getByRole("button", { name: "Progress", exact: true });
-
-  await more.press("Enter");
-  await sessions.waitFor();
-  assert.equal(await more.getAttribute("aria-expanded"), "true");
-  assert.ok(await focus(more));
-  await page.keyboard.press("Tab");
-  assert.ok(await focus(sessions));
-  await page.keyboard.press("Tab");
-  assert.ok(await focus(progress));
-  await page.keyboard.press("Escape");
-  await sessions.waitFor({ state: "hidden" });
-  assert.ok(await focus(more));
-
-  await more.press("Space");
-  await sessions.waitFor();
-  await page.keyboard.press("Tab");
-  await page.keyboard.press("Tab");
-  await page.keyboard.press("Enter");
-  await page.waitForURL(url => url.searchParams.get("view") === "progress");
-  await progress.waitFor({ state: "hidden" });
-  assert.ok(await focus(more));
-
-  await more.press("Enter");
-  await sessions.waitFor();
-  await page.getByRole("link", { name: /Practice builder/ }).focus();
-  await sessions.waitFor({ state: "hidden" });
-  assert.equal(await more.getAttribute("aria-expanded"), "false");
-
-  await page.setViewportSize({ width: 320, height: 600 });
-  await more.press("Enter");
-  await sessions.waitFor();
-  assert.ok(await page.locator(".ca-menu").evaluate(el => {
-    const box = el.getBoundingClientRect();
-    return box.left >= 0 && box.right <= innerWidth;
-  }));
+  assert.equal(await page.getByRole("button", { name: "More", exact: true }).count(), 0);
+  assert.equal(await page.locator(".ca-menu").count(), 0);
+  for (const name of ["Review queue", "Source page audit", "Legacy content", "Manage test banks"]) {
+    assert.equal(await page.getByRole("navigation", { name: "Main navigation" }).getByText(name, { exact: true }).count(), 0);
+  }
+  await page.getByRole("link", { name: "Progress", exact: true }).click();
+  await page.getByRole("heading", { name: "Progress & patterns", exact: true }).waitFor();
+  await page.getByRole("button", { name: "Question bank", exact: true }).click();
+  await page.getByRole("link", { name: "Practice sessions", exact: true }).click();
+  await page.getByRole("heading", { name: "Practice sessions", exact: true }).waitFor();
 });
 
-test("More destinations stay reachable across Question Bank and Practice Builder widths", async (t) => {
-  for (const [path, heading] of [["/", "Browse by unit"], ["/practice-builder", "Practice Builder"]]) {
+test("primary navigation and scroll panes fit desktop, tablet, narrow and short viewports", async (t) => {
+  for (const path of ["/", "/practice-builder"]) {
     const page = await openPage(320, path);
     t.after(() => page.close());
-    await page.getByRole("heading", { name: heading, exact: true }).waitFor();
-    const more = page.getByRole("button", { name: "More", exact: true });
-    const menu = page.locator(".ca-menu");
-    const destinations = menu.getByRole("button");
-
-    for (const width of [320, 360, 375, 390, 700, 768, 1440]) {
-      await page.setViewportSize({ width, height: width === 1440 ? 900 : width === 768 ? 700 : 600 });
-      await more.press("Enter");
-      await menu.waitFor();
-      assert.equal(await destinations.count(), 6);
-      const bounds = await menu.evaluate(element => {
-        const { left, right, top, bottom } = element.getBoundingClientRect();
-        const unreachable = [...element.querySelectorAll("button")].filter(button => {
-          const box = button.getBoundingClientRect();
-          const target = document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2);
-          return button.disabled || !box.width || !box.height || !button.contains(target) ||
-            box.left < left || box.right > right || box.top < top || box.bottom > bottom;
-        }).map(button => button.textContent.trim());
-        return { left, right, top, bottom, width: innerWidth, height: innerHeight, unreachable,
-          fitsContent: element.scrollWidth <= element.clientWidth && element.scrollHeight <= element.clientHeight };
-      });
-      const at = `${path} at ${width}px`;
-      assert.ok(bounds.left >= 0 && bounds.right <= bounds.width && bounds.top >= 0 && bounds.bottom <= bounds.height,
-        `${at} menu bounds ${JSON.stringify(bounds)}`);
-      assert.ok(bounds.fitsContent, `${at} menu content fits without clipping`);
-      assert.deepEqual(bounds.unreachable, [], `${at} all destinations are reachable`);
-
-      await page.keyboard.press("Tab");
-      assert.ok(await focus(destinations.first()), `${at} Tab enters the menu`);
-      await page.keyboard.press("Escape");
-      await menu.waitFor({ state: "hidden" });
-      assert.ok(await focus(more), `${at} Escape restores focus`);
+    await page.getByRole("heading", { name: path === "/" ? "Browse by unit" : "Practice Builder", exact: true }).waitFor();
+    for (const [width,height] of [[320,600],[390,844],[700,600],[768,700],[1440,900],[844,390]]) {
+      await page.setViewportSize({width,height});
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1 &&
+        document.documentElement.scrollHeight <= innerHeight + 1), path+" fits "+width+"x"+height);
+      for (const control of [page.getByRole("button",{name:"Question bank",exact:true}),
+        page.getByRole("navigation",{name:"Main navigation"}).getByRole("link",{name:/Practice builder/})]) {
+        assert.ok(await control.evaluate(el => {
+          const r=el.getBoundingClientRect();
+          return r.width>0 && r.left>=0 && r.right<=innerWidth && r.top>=0 && r.bottom<=innerHeight;
+        }));
+      }
     }
-
-    await page.setViewportSize({ width: 320, height: 600 });
-    await more.click();
-    await menu.waitFor();
-    await page.locator(".ca-mark").click();
-    await menu.waitFor({ state: "hidden" });
-    assert.equal(await more.getAttribute("aria-expanded"), "false");
   }
 });
 
@@ -556,8 +503,8 @@ test("the last real worksheet preview remains visible during an update and a fai
 test("the unit palette and selected phone topic have legible colours in the browser", async (t) => {
   const page = await openPage(390, "/?view=library&unit=u3&topic=3.4");
   t.after(() => page.close());
-  await page.getByRole("button", { name: "3.4", exact: true }).click();
-  const active = page.getByRole("dialog", { name: "Topics" }).getByRole("button", { name: /3.4 Ideal Gas Law/ });
+  await page.getByRole("button", { name: /^Browse topic 3.4/ }).click();
+  const active = page.getByRole("dialog", { name: "Browse units and topics" }).locator(".ca-topic").filter({ hasText: "3.4" });
   const colors = await active.evaluate(button => {
     const ctx = document.createElement("canvas").getContext("2d");
     const luminance = color => {
@@ -578,7 +525,7 @@ test("the unit palette and selected phone topic have legible colours in the brow
       const tint = luminance(style.getPropertyValue("--tint"));
       return [ratio(deep, tint), ratio(1, deep), ratio(deep, 1)];
     });
-    const topic = ratio(luminance(getComputedStyle(button.querySelector(".ca-code")).color), luminance(getComputedStyle(button).backgroundColor));
+    const topic = ratio(luminance(getComputedStyle(button.querySelector("b")).color), luminance(getComputedStyle(button).backgroundColor));
     return { units, topic };
   });
   assert.equal(colors.units.length, 9);
@@ -678,7 +625,9 @@ test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", 
   const page = await openPage(390, "/?view=detail&question=mcq-2008-1-29");
   t.after(() => page.close());
   await waitForQuestionCanvases(page, 1);
+  await page.locator(".ca-details>summary").click();
   await page.getByText(/Check the worksheet PDF for the final layout/).waitFor();
+  await page.locator(".ca-details>summary").click();
   await page.getByRole("button", { name: "Question crop", exact: true }).click();
   await page.getByText("Shared with neighbouring questions", { exact: true }).waitFor();
   await waitForQuestionCanvases(page, 2);
@@ -694,7 +643,16 @@ test("shared-stimulus crops and multipage FRQs fit and draw in the phone pane", 
   await waitForQuestionCanvases(page, 1);
   assert.match(await page.locator(".ca-viewport canvas").getAttribute("aria-label"), /page 9$/);
   await page.getByRole("button", { name: "Fit page", exact: true }).click();
-  await page.waitForFunction(() => document.querySelector(".ca-viewport")?.clientHeight > 300);
+  // Focus Mode keeps its 48px navigation available above the phone pane.
+  // Assert usable space and the actual Fit page result, rather than the old
+  // pre-breadcrumb height (which also varies with platform font metrics).
+  await page.waitForFunction(() => {
+    const frame = document.querySelector(".ca-viewport");
+    const canvas = frame?.querySelector("canvas");
+    return frame?.clientHeight >= 240 && canvas?.style.visibility === "visible"
+      && canvas.getBoundingClientRect().height <= frame.clientHeight + 2
+      && frame.scrollHeight <= frame.clientHeight + 4;
+  });
   await waitForQuestionCanvases(page, 1);
 });
 

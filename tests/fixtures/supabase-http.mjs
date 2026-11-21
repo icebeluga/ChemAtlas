@@ -46,7 +46,7 @@ export async function startFixture({ artifactDirectory = "dist-pages" } = {}) {
   }
   const api = createServer(async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", "http://127.0.0.1:4173");
-    res.setHeader("Access-Control-Allow-Headers", "authorization,apikey,content-type,x-client-info,accept,range,cache-control,prefer,x-supabase-api-version");
+    res.setHeader("Access-Control-Allow-Headers", "authorization,apikey,content-type,x-client-info,accept,range,cache-control,prefer,x-supabase-api-version,accept-profile,content-profile,x-retry-count");
     res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,POST,PUT,PATCH,DELETE,OPTIONS");
     res.setHeader("Access-Control-Expose-Headers", "Content-Length,Content-Range,Accept-Ranges");
     res.setHeader("Cache-Control", "private, no-store");
@@ -108,7 +108,7 @@ export async function startFixture({ artifactDirectory = "dist-pages" } = {}) {
     const name = path.slice("/ChemAtlas/".length) + (path.endsWith("/") ? "index.html" : "");
     try {
       const bytes = await readFile(resolve(artifactDirectory, name));
-      const mime = { ".html": "text/html", ".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml" }[extname(name)] ?? "application/octet-stream";
+      const mime = { ".html": "text/html", ".js": "text/javascript", ".mjs": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".png": "image/png", ".ico": "image/x-icon", ".webmanifest": "application/manifest+json" }[extname(name)] ?? "application/octet-stream";
       res.writeHead(200, { "Content-Type": mime }); res.end(bytes);
     } catch { res.writeHead(404); res.end("Not found"); }
   });

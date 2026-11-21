@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { test } from "node:test";
 import { fork } from "node:child_process";
 import { once } from "node:events";
+import { brandingAssets } from "../lib/branding-assets.mjs";
 
 test("Pages development serves the PDF worker and favicon without exposing protected public assets", { timeout: 30_000 }, async () => {
   const config = {
@@ -25,7 +26,7 @@ test("Pages development serves the PDF worker and favicon without exposing prote
         else reject(new Error("Pages test server could not start"));
       });
     });
-    for (const [name, type] of [["pdf.worker.min.mjs", "text/javascript"], ["favicon.svg", "image/svg+xml"]]) {
+    for (const { name, type } of [{ name: "pdf.worker.min.mjs", type: "text/javascript" }, ...brandingAssets]) {
       const response = await fetch(`${origin}${name}?v=regression`);
       assert.equal(response.status, 200);
       assert.equal(response.headers.get("content-type"), type);

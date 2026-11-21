@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { appendFileSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { createPublicKey, verify } from "node:crypto";
 import { spawnSync } from "node:child_process";
+import { validateStudentAccessPolicies } from "./cloudflare-student-access-policies.mjs";
 
 const workerName = "chematlas-student-private";
 const hostname = `${workerName}.chematlas-hub.workers.dev`;
@@ -210,13 +211,7 @@ async function productionSettings({ requireAssets = false } = {}) {
     "The signed student redirect Worker ID does not match the Cloudflare Worker API.");
   const { app, coverage } = await resolveAccessApplication(apps, existing.id, login);
   const policies = await list(`/access/apps/${encodeURIComponent(app.id)}/policies`, "student Access policies");
-  assert.ok(policies.length > 0 && policies.every(({ decision }) => ["allow", "deny"].includes(decision)),
-    "Student Access policy contains a bypass, service authentication, or an unsupported decision.");
-  const allow = policies.filter(({ decision }) => decision === "allow");
-  assert.ok(allow.length > 0 && allow.every(({ include }) => Array.isArray(include) && include.length > 0
-    && include.every((rule) => Object.keys(rule).length === 1
-      && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rule.email?.email ?? ""))),
-  "Could not verify a student email allowlist.");
+  validateStudentAccessPolicies(policies, { applicationId: app.id, coverage });
 
   const bindings = settings.result.bindings;
   assert.ok(Array.isArray(bindings), "Could not inspect live Worker bindings.");
